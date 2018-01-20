@@ -1,2 +1,1 @@
-# myfinance
-MyFinance App
+# MyFinance App

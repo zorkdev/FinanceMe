@@ -8,22 +8,44 @@
 
 /* Begin PBXBuildFile section */
 		9A5AE5762012A8AB00B25081 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A5AE5752012A8AB00B25081 /* AppDelegate.swift */; };
-		9A5AE5782012A8AC00B25081 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A5AE5772012A8AC00B25081 /* ViewController.swift */; };
+		9A5AE5782012A8AC00B25081 /* BalanceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A5AE5772012A8AC00B25081 /* BalanceViewController.swift */; };
 		9A5AE57B2012A8AC00B25081 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9A5AE5792012A8AC00B25081 /* Main.storyboard */; };
 		9A5AE57D2012A8AC00B25081 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9A5AE57C2012A8AC00B25081 /* Assets.xcassets */; };
 		9A5AE5802012A8AC00B25081 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9A5AE57E2012A8AC00B25081 /* LaunchScreen.storyboard */; };
 		9A5AE58A2012B42A00B25081 /* config.json in Resources */ = {isa = PBXBuildFile; fileRef = 9A5AE5892012B42A00B25081 /* config.json */; };
+		9A5AE5922012B97500B25081 /* Balance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A5AE5912012B97500B25081 /* Balance.swift */; };
+		9A5AE5952012BE0500B25081 /* AuthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A5AE5942012BE0500B25081 /* AuthManager.swift */; };
+		9A5AE5972012BF5E00B25081 /* Token.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A5AE5962012BF5E00B25081 /* Token.swift */; };
+		9A5AE59A2012C0D000B25081 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A5AE5992012C0D000B25081 /* NetworkManager.swift */; };
+		9A5AE59C2012C45700B25081 /* ErrorModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A5AE59B2012C45700B25081 /* ErrorModel.swift */; };
+		9A5AE5A02012C8A400B25081 /* BalanceBusinessLogic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A5AE59F2012C8A400B25081 /* BalanceBusinessLogic.swift */; };
+		9A5AE5A22012C99A00B25081 /* BalanceViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A5AE5A12012C99A00B25081 /* BalanceViewModel.swift */; };
+		9A5AE5A42012CA7700B25081 /* Formatters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A5AE5A32012CA7700B25081 /* Formatters.swift */; };
+		9A5AE5A62012CCFC00B25081 /* StarlingAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A5AE5A52012CCFC00B25081 /* StarlingAPI.swift */; };
+		9A5AE5AA2012D4A400B25081 /* Dictionary+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A5AE5A92012D4A400B25081 /* Dictionary+Helpers.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		9A5AE5722012A8AB00B25081 /* MyFinance.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyFinance.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9A5AE5752012A8AB00B25081 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		9A5AE5772012A8AC00B25081 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		9A5AE5772012A8AC00B25081 /* BalanceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BalanceViewController.swift; sourceTree = "<group>"; };
 		9A5AE57A2012A8AC00B25081 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		9A5AE57C2012A8AC00B25081 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9A5AE57F2012A8AC00B25081 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9A5AE5812012A8AC00B25081 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		9A5AE5892012B42A00B25081 /* config.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = config.json; sourceTree = SOURCE_ROOT; };
+		9A5AE5892012B42A00B25081 /* config.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = config.json; path = MyFinance/Application/config.json; sourceTree = SOURCE_ROOT; };
+		9A5AE5912012B97500B25081 /* Balance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Balance.swift; sourceTree = "<group>"; };
+		9A5AE5942012BE0500B25081 /* AuthManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthManager.swift; sourceTree = "<group>"; };
+		9A5AE5962012BF5E00B25081 /* Token.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Token.swift; sourceTree = "<group>"; };
+		9A5AE5992012C0D000B25081 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		9A5AE59B2012C45700B25081 /* ErrorModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorModel.swift; sourceTree = "<group>"; };
+		9A5AE59F2012C8A400B25081 /* BalanceBusinessLogic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BalanceBusinessLogic.swift; sourceTree = "<group>"; };
+		9A5AE5A12012C99A00B25081 /* BalanceViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BalanceViewModel.swift; sourceTree = "<group>"; };
+		9A5AE5A32012CA7700B25081 /* Formatters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Formatters.swift; sourceTree = "<group>"; };
+		9A5AE5A52012CCFC00B25081 /* StarlingAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarlingAPI.swift; sourceTree = "<group>"; };
+		9A5AE5A72012CEE700B25081 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = SOURCE_ROOT; };
+		9A5AE5A82012CF1400B25081 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = SOURCE_ROOT; };
+		9A5AE5A92012D4A400B25081 /* Dictionary+Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Dictionary+Helpers.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +78,91 @@
 		9A5AE5742012A8AB00B25081 /* MyFinance */ = {
 			isa = PBXGroup;
 			children = (
-				9A5AE5752012A8AB00B25081 /* AppDelegate.swift */,
-				9A5AE5772012A8AC00B25081 /* ViewController.swift */,
-				9A5AE57E2012A8AC00B25081 /* LaunchScreen.storyboard */,
-				9A5AE5792012A8AC00B25081 /* Main.storyboard */,
-				9A5AE57C2012A8AC00B25081 /* Assets.xcassets */,
-				9A5AE5892012B42A00B25081 /* config.json */,
-				9A5AE5812012A8AC00B25081 /* Info.plist */,
+				9A5AE58C2012B8F000B25081 /* Application */,
+				9A5AE58B2012B8DC00B25081 /* Model */,
+				9A5AE58D2012B91300B25081 /* View */,
+				9A5AE58E2012B92C00B25081 /* Controller */,
+				9A5AE58F2012B94200B25081 /* ViewModel */,
+				9A5AE5932012BDDB00B25081 /* Business */,
+				9A5AE5982012C0B400B25081 /* Platform */,
+				9A5AE5902012B95A00B25081 /* Resources */,
 			);
 			path = MyFinance;
+			sourceTree = "<group>";
+		};
+		9A5AE58B2012B8DC00B25081 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				9A5AE59B2012C45700B25081 /* ErrorModel.swift */,
+				9A5AE5962012BF5E00B25081 /* Token.swift */,
+				9A5AE5912012B97500B25081 /* Balance.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		9A5AE58C2012B8F000B25081 /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				9A5AE5752012A8AB00B25081 /* AppDelegate.swift */,
+				9A5AE5812012A8AC00B25081 /* Info.plist */,
+				9A5AE5892012B42A00B25081 /* config.json */,
+				9A5AE5A82012CF1400B25081 /* .gitignore */,
+				9A5AE5A72012CEE700B25081 /* README.md */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		9A5AE58D2012B91300B25081 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				9A5AE57E2012A8AC00B25081 /* LaunchScreen.storyboard */,
+				9A5AE5792012A8AC00B25081 /* Main.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		9A5AE58E2012B92C00B25081 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				9A5AE5772012A8AC00B25081 /* BalanceViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		9A5AE58F2012B94200B25081 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				9A5AE5A12012C99A00B25081 /* BalanceViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		9A5AE5902012B95A00B25081 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				9A5AE57C2012A8AC00B25081 /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		9A5AE5932012BDDB00B25081 /* Business */ = {
+			isa = PBXGroup;
+			children = (
+				9A5AE5A52012CCFC00B25081 /* StarlingAPI.swift */,
+				9A5AE5A32012CA7700B25081 /* Formatters.swift */,
+				9A5AE59F2012C8A400B25081 /* BalanceBusinessLogic.swift */,
+			);
+			path = Business;
+			sourceTree = "<group>";
+		};
+		9A5AE5982012C0B400B25081 /* Platform */ = {
+			isa = PBXGroup;
+			children = (
+				9A5AE5942012BE0500B25081 /* AuthManager.swift */,
+				9A5AE5992012C0D000B25081 /* NetworkManager.swift */,
+				9A5AE5A92012D4A400B25081 /* Dictionary+Helpers.swift */,
+			);
+			path = Platform;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -140,8 +238,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9A5AE5782012A8AC00B25081 /* ViewController.swift in Sources */,
+				9A5AE59A2012C0D000B25081 /* NetworkManager.swift in Sources */,
+				9A5AE5782012A8AC00B25081 /* BalanceViewController.swift in Sources */,
+				9A5AE5A42012CA7700B25081 /* Formatters.swift in Sources */,
+				9A5AE5972012BF5E00B25081 /* Token.swift in Sources */,
+				9A5AE5A22012C99A00B25081 /* BalanceViewModel.swift in Sources */,
+				9A5AE5952012BE0500B25081 /* AuthManager.swift in Sources */,
+				9A5AE5922012B97500B25081 /* Balance.swift in Sources */,
+				9A5AE59C2012C45700B25081 /* ErrorModel.swift in Sources */,
 				9A5AE5762012A8AB00B25081 /* AppDelegate.swift in Sources */,
+				9A5AE5A62012CCFC00B25081 /* StarlingAPI.swift in Sources */,
+				9A5AE5A02012C8A400B25081 /* BalanceBusinessLogic.swift in Sources */,
+				9A5AE5AA2012D4A400B25081 /* Dictionary+Helpers.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -280,7 +388,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 29MN2WH3Q3;
-				INFOPLIST_FILE = MyFinance/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/MyFinance/Application/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.attilanemet.MyFinance;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -295,7 +403,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 29MN2WH3Q3;
-				INFOPLIST_FILE = MyFinance/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/MyFinance/Application/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.attilanemet.MyFinance;
 				PRODUCT_NAME = "$(TARGET_NAME)";
