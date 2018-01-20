@@ -38,7 +38,7 @@ class TransactionsBusinessLogic {
                 completion(AppError.unknownError, nil)
                 return
             }
-            
+
             completion(nil, halResponse.embedded.transactions)
         }
     }

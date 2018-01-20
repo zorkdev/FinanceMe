@@ -1,7 +1,7 @@
 import Foundation
 
 struct Balance: Codable {
-    
+
     let clearedBalance: Double
     let effectiveBalance: Double
     let pendingTransactions: Double

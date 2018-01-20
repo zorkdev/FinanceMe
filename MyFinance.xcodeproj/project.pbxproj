@@ -7,12 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		22AB5A716AF69A3C30C526B3 /* Pods_MyFinance.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FBD616E33767A57E45EB175A /* Pods_MyFinance.framework */; };
 		9A5AE5762012A8AB00B25081 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A5AE5752012A8AB00B25081 /* AppDelegate.swift */; };
 		9A5AE5782012A8AC00B25081 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A5AE5772012A8AC00B25081 /* HomeViewController.swift */; };
 		9A5AE57B2012A8AC00B25081 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9A5AE5792012A8AC00B25081 /* Main.storyboard */; };
 		9A5AE57D2012A8AC00B25081 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9A5AE57C2012A8AC00B25081 /* Assets.xcassets */; };
 		9A5AE5802012A8AC00B25081 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9A5AE57E2012A8AC00B25081 /* LaunchScreen.storyboard */; };
-		9A5AE58A2012B42A00B25081 /* config.json in Resources */ = {isa = PBXBuildFile; fileRef = 9A5AE5892012B42A00B25081 /* config.json */; };
 		9A5AE5922012B97500B25081 /* Balance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A5AE5912012B97500B25081 /* Balance.swift */; };
 		9A5AE5952012BE0500B25081 /* AuthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A5AE5942012BE0500B25081 /* AuthManager.swift */; };
 		9A5AE5972012BF5E00B25081 /* Token.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A5AE5962012BF5E00B25081 /* Token.swift */; };
@@ -30,9 +30,13 @@
 		9AD3EE2720139FDC0083F8FE /* HALResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AD3EE2620139FDC0083F8FE /* HALResponse.swift */; };
 		9AD3EE292013A7FE0083F8FE /* SpendingBusinessLogic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AD3EE282013A7FE0083F8FE /* SpendingBusinessLogic.swift */; };
 		9AD3EE2B2013AD2A0083F8FE /* Date+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AD3EE2A2013AD2A0083F8FE /* Date+Helpers.swift */; };
+		9AD3EE2D2013B64C0083F8FE /* config.json in Resources */ = {isa = PBXBuildFile; fileRef = 9AD3EE2C2013B64C0083F8FE /* config.json */; };
+		9AD3EE2F2013B6640083F8FE /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 9AD3EE2E2013B6640083F8FE /* Podfile */; };
+		9AD3EE312013B7BF0083F8FE /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = 9AD3EE302013B7BF0083F8FE /* .swiftlint.yml */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		657896AC39A3CD1FA90830E2 /* Pods-MyFinance.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyFinance.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MyFinance/Pods-MyFinance.debug.xcconfig"; sourceTree = "<group>"; };
 		9A5AE5722012A8AB00B25081 /* MyFinance.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyFinance.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9A5AE5752012A8AB00B25081 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9A5AE5772012A8AC00B25081 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
@@ -40,7 +44,6 @@
 		9A5AE57C2012A8AC00B25081 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9A5AE57F2012A8AC00B25081 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9A5AE5812012A8AC00B25081 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		9A5AE5892012B42A00B25081 /* config.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = config.json; path = MyFinance/Application/config.json; sourceTree = SOURCE_ROOT; };
 		9A5AE5912012B97500B25081 /* Balance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Balance.swift; sourceTree = "<group>"; };
 		9A5AE5942012BE0500B25081 /* AuthManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthManager.swift; sourceTree = "<group>"; };
 		9A5AE5962012BF5E00B25081 /* Token.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Token.swift; sourceTree = "<group>"; };
@@ -60,6 +63,11 @@
 		9AD3EE2620139FDC0083F8FE /* HALResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HALResponse.swift; sourceTree = "<group>"; };
 		9AD3EE282013A7FE0083F8FE /* SpendingBusinessLogic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpendingBusinessLogic.swift; sourceTree = "<group>"; };
 		9AD3EE2A2013AD2A0083F8FE /* Date+Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Helpers.swift"; sourceTree = "<group>"; };
+		9AD3EE2C2013B64C0083F8FE /* config.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = config.json; sourceTree = SOURCE_ROOT; };
+		9AD3EE2E2013B6640083F8FE /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9AD3EE302013B7BF0083F8FE /* .swiftlint.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .swiftlint.yml; sourceTree = SOURCE_ROOT; };
+		C49F06F9156F2CB30EC7BDDD /* Pods-MyFinance.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyFinance.release.xcconfig"; path = "Pods/Target Support Files/Pods-MyFinance/Pods-MyFinance.release.xcconfig"; sourceTree = "<group>"; };
+		FBD616E33767A57E45EB175A /* Pods_MyFinance.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyFinance.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,17 +75,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				22AB5A716AF69A3C30C526B3 /* Pods_MyFinance.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6A8339920FDEA889B7701045 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FBD616E33767A57E45EB175A /* Pods_MyFinance.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		9A5AE5692012A8AB00B25081 = {
 			isa = PBXGroup;
 			children = (
 				9A5AE5742012A8AB00B25081 /* MyFinance */,
 				9A5AE5732012A8AB00B25081 /* Products */,
+				B68A00CB2E7F1881222650B9 /* Pods */,
+				6A8339920FDEA889B7701045 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -121,7 +140,9 @@
 			children = (
 				9A5AE5752012A8AB00B25081 /* AppDelegate.swift */,
 				9A5AE5812012A8AC00B25081 /* Info.plist */,
-				9A5AE5892012B42A00B25081 /* config.json */,
+				9AD3EE2C2013B64C0083F8FE /* config.json */,
+				9AD3EE2E2013B6640083F8FE /* Podfile */,
+				9AD3EE302013B7BF0083F8FE /* .swiftlint.yml */,
 				9A5AE5A82012CF1400B25081 /* .gitignore */,
 				9A5AE5A72012CEE700B25081 /* README.md */,
 			);
@@ -194,6 +215,15 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
+		B68A00CB2E7F1881222650B9 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				657896AC39A3CD1FA90830E2 /* Pods-MyFinance.debug.xcconfig */,
+				C49F06F9156F2CB30EC7BDDD /* Pods-MyFinance.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -201,9 +231,13 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 9A5AE5842012A8AC00B25081 /* Build configuration list for PBXNativeTarget "MyFinance" */;
 			buildPhases = (
+				6C277E91235BF3232ED07A23 /* [CP] Check Pods Manifest.lock */,
 				9A5AE56E2012A8AB00B25081 /* Sources */,
 				9A5AE56F2012A8AB00B25081 /* Frameworks */,
 				9A5AE5702012A8AB00B25081 /* Resources */,
+				F67C6BD98D47F6864C27F74D /* [CP] Embed Pods Frameworks */,
+				FB2ED961C165C2677C806A07 /* [CP] Copy Pods Resources */,
+				9AD3EE322013B7EB0083F8FE /* SwiftLint */,
 			);
 			buildRules = (
 			);
@@ -253,14 +287,84 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9AD3EE312013B7BF0083F8FE /* .swiftlint.yml in Resources */,
+				9AD3EE2F2013B6640083F8FE /* Podfile in Resources */,
 				9A5AE5802012A8AC00B25081 /* LaunchScreen.storyboard in Resources */,
-				9A5AE58A2012B42A00B25081 /* config.json in Resources */,
+				9AD3EE2D2013B64C0083F8FE /* config.json in Resources */,
 				9A5AE57D2012A8AC00B25081 /* Assets.xcassets in Resources */,
 				9A5AE57B2012A8AC00B25081 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		6C277E91235BF3232ED07A23 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MyFinance-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9AD3EE322013B7EB0083F8FE /* SwiftLint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = SwiftLint;
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/SwiftLint/swiftlint\"";
+		};
+		F67C6BD98D47F6864C27F74D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-MyFinance/Pods-MyFinance-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/PromiseKit/PromiseKit.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PromiseKit.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MyFinance/Pods-MyFinance-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FB2ED961C165C2677C806A07 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MyFinance/Pods-MyFinance-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		9A5AE56E2012A8AB00B25081 /* Sources */ = {
@@ -420,6 +524,7 @@
 		};
 		9A5AE5852012A8AC00B25081 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 657896AC39A3CD1FA90830E2 /* Pods-MyFinance.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -435,6 +540,7 @@
 		};
 		9A5AE5862012A8AC00B25081 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C49F06F9156F2CB30EC7BDDD /* Pods-MyFinance.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

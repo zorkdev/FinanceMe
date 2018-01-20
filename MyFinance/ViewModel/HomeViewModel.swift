@@ -24,7 +24,7 @@ class HomeViewModel {
     }
 
     func getBalance() {
-        balanceBusinessLogic.getBalance { [weak self] error, balance in
+        balanceBusinessLogic.getBalance { [weak self] _, balance in
             guard let balance = balance else { return }
             let balanceString = Formatters.format(amount: balance.effectiveBalance)
             self?.delegate?.set(balance: balanceString)
@@ -32,7 +32,7 @@ class HomeViewModel {
     }
 
     func getSpending() {
-        spendingBusinessLogic.getSpendingThisWeek { [weak self] error, spending in
+        spendingBusinessLogic.getSpendingThisWeek { [weak self] _, spending in
             guard let spending = spending else { return }
             let spendingString = Formatters.format(amount: spending)
             self?.delegate?.set(spending: spendingString)
