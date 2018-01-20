@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="M4Y-Lb-cyx">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Today View Controller-->
+        <scene sceneID="cwh-vc-ff4">
+            <objects>
+                <viewController id="M4Y-Lb-cyx" customClass="TodayViewController" customModule="MyFinanceExtension" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" simulatedAppContext="notificationCenter" id="S3S-Oj-5AN">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="100"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="012-Vf-Y3Q">
+                                <rect key="frame" x="16" y="21.5" width="288" height="57.5"/>
+                                <subviews>
+                                    <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JX9-HX-uX9">
+                                        <rect key="frame" x="0.0" y="0.0" width="288" height="43"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="BC4-WE-5b9">
+                                            <rect key="frame" x="0.0" y="0.0" width="288" height="43"/>
+                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                            <subviews>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="top" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="£0.00" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="140" translatesAutoresizingMaskIntoConstraints="NO" id="GcN-lo-r42">
+                                                    <rect key="frame" x="0.0" y="0.0" width="144" height="43"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="light" pointSize="36"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="top" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="£0.00" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="140" translatesAutoresizingMaskIntoConstraints="NO" id="M4R-fw-obk">
+                                                    <rect key="frame" x="144" y="0.0" width="144" height="43"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="light" pointSize="36"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="M4R-fw-obk" secondAttribute="trailing" id="2sy-Zh-wb9"/>
+                                                <constraint firstAttribute="bottom" secondItem="GcN-lo-r42" secondAttribute="bottom" id="6ro-IG-V0k"/>
+                                                <constraint firstItem="GcN-lo-r42" firstAttribute="leading" secondItem="BC4-WE-5b9" secondAttribute="leading" id="9Wh-o8-h9s"/>
+                                                <constraint firstAttribute="bottom" secondItem="M4R-fw-obk" secondAttribute="bottom" id="D3K-3C-6DL"/>
+                                                <constraint firstItem="M4R-fw-obk" firstAttribute="width" secondItem="GcN-lo-r42" secondAttribute="width" id="J4Z-l0-qdY"/>
+                                                <constraint firstItem="GcN-lo-r42" firstAttribute="top" secondItem="BC4-WE-5b9" secondAttribute="top" id="VIH-fu-vJa"/>
+                                                <constraint firstItem="M4R-fw-obk" firstAttribute="leading" secondItem="GcN-lo-r42" secondAttribute="trailing" id="XvZ-hv-Cye"/>
+                                                <constraint firstItem="M4R-fw-obk" firstAttribute="top" secondItem="BC4-WE-5b9" secondAttribute="top" id="oUM-hd-6FD"/>
+                                            </constraints>
+                                        </view>
+                                        <vibrancyEffect>
+                                            <blurEffect style="extraLight"/>
+                                        </vibrancyEffect>
+                                    </visualEffectView>
+                                    <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RYy-PZ-IPx">
+                                        <rect key="frame" x="0.0" y="43" width="288" height="15"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="Hn0-EN-veC">
+                                            <rect key="frame" x="0.0" y="0.0" width="288" height="15"/>
+                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                            <subviews>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="top" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="AVAILABLE" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="140" translatesAutoresizingMaskIntoConstraints="NO" id="oCW-Bq-l7t">
+                                                    <rect key="frame" x="0.0" y="0.0" width="144" height="14.5"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="light" pointSize="12"/>
+                                                    <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="top" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SPENT" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="140" translatesAutoresizingMaskIntoConstraints="NO" id="3PP-LU-0jO">
+                                                    <rect key="frame" x="144" y="0.0" width="144" height="14.5"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="light" pointSize="12"/>
+                                                    <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="3PP-LU-0jO" firstAttribute="width" secondItem="oCW-Bq-l7t" secondAttribute="width" id="1aV-mf-oFN"/>
+                                                <constraint firstAttribute="bottom" secondItem="oCW-Bq-l7t" secondAttribute="bottom" id="26g-PW-mqL"/>
+                                                <constraint firstItem="3PP-LU-0jO" firstAttribute="leading" secondItem="oCW-Bq-l7t" secondAttribute="trailing" id="Kdv-mb-29S"/>
+                                                <constraint firstItem="3PP-LU-0jO" firstAttribute="top" secondItem="Hn0-EN-veC" secondAttribute="top" id="MOD-NR-Kas"/>
+                                                <constraint firstItem="oCW-Bq-l7t" firstAttribute="top" secondItem="Hn0-EN-veC" secondAttribute="top" id="MUf-sg-a6C"/>
+                                                <constraint firstItem="oCW-Bq-l7t" firstAttribute="leading" secondItem="Hn0-EN-veC" secondAttribute="leading" id="Wz0-ze-jEZ"/>
+                                                <constraint firstAttribute="trailing" secondItem="3PP-LU-0jO" secondAttribute="trailing" id="adP-W1-cMa"/>
+                                                <constraint firstAttribute="bottom" secondItem="3PP-LU-0jO" secondAttribute="bottom" id="pLW-9z-Eeq"/>
+                                            </constraints>
+                                        </view>
+                                        <vibrancyEffect>
+                                            <blurEffect style="extraLight"/>
+                                        </vibrancyEffect>
+                                    </visualEffectView>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="JX9-HX-uX9" secondAttribute="trailing" id="C6n-Wx-UO0"/>
+                                    <constraint firstItem="RYy-PZ-IPx" firstAttribute="top" secondItem="JX9-HX-uX9" secondAttribute="bottom" id="FXX-Ig-jEO"/>
+                                    <constraint firstItem="RYy-PZ-IPx" firstAttribute="leading" secondItem="012-Vf-Y3Q" secondAttribute="leading" id="FsE-aQ-vVC"/>
+                                    <constraint firstItem="JX9-HX-uX9" firstAttribute="top" secondItem="012-Vf-Y3Q" secondAttribute="top" id="N9J-2B-2hI"/>
+                                    <constraint firstAttribute="trailing" secondItem="RYy-PZ-IPx" secondAttribute="trailing" id="O9R-j7-xAc"/>
+                                    <constraint firstAttribute="bottom" secondItem="RYy-PZ-IPx" secondAttribute="bottom" id="eR5-fG-uuH"/>
+                                    <constraint firstItem="JX9-HX-uX9" firstAttribute="leading" secondItem="012-Vf-Y3Q" secondAttribute="leading" id="yTj-EV-wLd"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="012-Vf-Y3Q" firstAttribute="leading" secondItem="ssy-KU-ocm" secondAttribute="leading" constant="16" id="l0t-3J-Jpz"/>
+                            <constraint firstItem="ssy-KU-ocm" firstAttribute="trailing" secondItem="012-Vf-Y3Q" secondAttribute="trailing" constant="16" id="ma1-hq-j2L"/>
+                            <constraint firstItem="012-Vf-Y3Q" firstAttribute="centerY" secondItem="S3S-Oj-5AN" secondAttribute="centerY" id="nTP-w4-z32"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="ssy-KU-ocm"/>
+                    </view>
+                    <extendedEdge key="edgesForExtendedLayout"/>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="320" height="100"/>
+                    <connections>
+                        <outlet property="balanceLabel" destination="GcN-lo-r42" id="cad-ck-Fcj"/>
+                        <outlet property="primaryVibrancyEffectView" destination="JX9-HX-uX9" id="jrV-qX-0kB"/>
+                        <outlet property="secondaryVibrancyEffectView" destination="RYy-PZ-IPx" id="eeq-DG-Zhe"/>
+                        <outlet property="spendingLabel" destination="M4R-fw-obk" id="Hko-sK-Gkb"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vXp-U4-Rya" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="80" y="84.557721139430285"/>
+        </scene>
+    </scenes>
+</document>
