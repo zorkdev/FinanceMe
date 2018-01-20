@@ -52,7 +52,7 @@ class NetworkManager {
 
     func performRequest(method: HTTPMethod,
                         url: URL,
-                        parameters: [String: Any]? = nil,
+                        parameters: JSON? = nil,
                         body: Data? = nil,
                         completion: @escaping (Error?, Data?) -> Void) {
 
@@ -61,7 +61,6 @@ class NetworkManager {
             return
         }
 
-        var url = url
         var request = URLRequest(url: url)
         request.httpMethod = method.rawValue
         request.setValue(Constants.authHeaderValue(token),
@@ -77,7 +76,7 @@ class NetworkManager {
                 completion(AppError.urlQueryInvalid, nil)
                 return
             }
-            url = urlWithParameters
+            request.url = urlWithParameters
         }
 
         if let body = body {
@@ -98,7 +97,13 @@ class NetworkManager {
                     return
                 }
 
-                completion(error, data)
+                guard let data = data else {
+                    completion(AppError.unknownError, nil)
+                    return
+                }
+
+                //print(data.prettyPrinted)
+                completion(nil, data)
             }
         }
         task.resume()

@@ -15,8 +15,7 @@ class AuthManager {
         guard let configURL = Bundle.main.url(forResource: Constants.configFilename,
                                               withExtension: Constants.configExtension),
             let data = try? Data(contentsOf: configURL),
-            let token = try? JSONDecoder().decode(Token.self,
-                                                  from: data) else { return nil }
+            let token = JSONCoder.shared.decode(Token.self, from: data) else { return nil }
 
         return token
     }

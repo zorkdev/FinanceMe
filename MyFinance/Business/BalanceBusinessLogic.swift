@@ -11,13 +11,16 @@ class BalanceBusinessLogic {
         NetworkManager.shared.performRequest(method: .get, url: url) { error, data in
             if let error = error {
                 completion(error, nil)
+                return
             }
 
-            if let data = data,
-                let balance = try? JSONDecoder().decode(Balance.self, from: data) {
-                completion(nil, balance)
+            guard let data = data,
+                let balance = JSONCoder.shared.decode(Balance.self, from: data) else {
+                completion(AppError.unknownError, nil)
+                return
             }
-            completion(AppError.unknownError, nil)
+
+            completion(nil, balance)
         }
     }
 
