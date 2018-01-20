@@ -28,24 +28,49 @@ class NetworkManager {
                         parameters: JSON? = nil,
                         body: Data? = nil) -> Promise<Data> {
 
-        guard let token = AuthManager.shared.token?.token else {
-            return Promise(error: AppError.tokenNotFound)
-        }
+        let request = createRequest(method: method,
+                                    url: url,
+                                    parameters: parameters,
+                                    body: body)
+        printRequest(request)
 
+        return URLSession.shared.dataTask(with: request).then { data in
+            self.printResponse(data)
+            return Promise(value: data)
+
+        }.recover { error -> Promise<Data> in
+            self.printResponse(error)
+
+            if let urlError = error as? PMKURLError,
+                let apiError = APIError(urlError: urlError) {
+                return Promise(error: apiError)
+
+            } else {
+                return Promise(error: error)
+            }
+        }
+    }
+
+    private func createRequest(method: HTTPMethod,
+                               url: URL,
+                               parameters: JSON?,
+                               body: Data?) -> URLRequest {
         var request = URLRequest(url: url)
+
         request.httpMethod = method.rawValue
-        request.setValue(Constants.authHeaderValue(token),
-                         forHTTPHeaderField: Constants.authHeaderKey)
+
         request.setValue(Constants.contentValue,
                          forHTTPHeaderField: Constants.contentKey)
         request.setValue(Constants.encodingValue,
                          forHTTPHeaderField: Constants.encodingKey)
 
-        if let parameters = parameters {
-            let urlString = url.absoluteString + parameters.urlQuery
-            guard let urlWithParameters = URL(string: urlString) else {
-                return Promise(error: AppError.urlQueryInvalid)
-            }
+        if let token = AuthManager.shared.token?.token {
+            request.setValue(Constants.authHeaderValue(token),
+                             forHTTPHeaderField: Constants.authHeaderKey)
+        }
+
+        if let parameters = parameters,
+            let urlWithParameters = URL(string: url.absoluteString + parameters.urlQuery) {
             request.url = urlWithParameters
         }
 
@@ -53,17 +78,50 @@ class NetworkManager {
             request.httpBody = body
         }
 
-        return URLSession.shared.dataTask(with: request).then { data in
-            //print(data.prettyPrinted)
-            return Promise(value: data)
-        }.recover { error -> Promise<Data> in
-            if let urlError = error as? PMKURLError,
-                let apiError = APIError(urlError: urlError) {
-                return Promise(error: apiError)
-            } else {
-                return Promise(error: error)
-            }
-        }
+        return request
+    }
+
+}
+
+// MARK: - Debug prints
+
+extension NetworkManager {
+
+    func printRequest(_ request: URLRequest) {
+        print(
+            """
+            ********** API Request **********
+            \((request.httpMethod ?? "") + " " + (request.url?.absoluteString ?? ""))
+            --- Headers ---
+            \(request.allHTTPHeaderFields?.prettyPrinted ?? "nil")
+            ---- Body -----
+            \(request.httpBody?.prettyPrinted ?? "nil")
+            *********************************
+
+            """
+        )
+    }
+
+    func printResponse(_ data: Data) {
+        print(
+            """
+            ********** API Response *********
+            \(data.prettyPrinted)
+            *********************************
+
+            """
+        )
+    }
+
+    func printResponse(_ error: Error) {
+        print(
+            """
+            ********** API Error ***********
+            \(error)
+            *********************************
+
+            """
+        )
     }
 
 }

@@ -1,10 +1,5 @@
 class TransactionsBusinessLogic {
 
-    struct Constants {
-        static let fromKey = "from"
-        static let toKey = "to"
-    }
-
     func getTransactions(from: Date? = nil,
                          to: Date? = nil) -> Promise<[Transaction]> {
         guard let url = StarlingAPI.getTransactions.url else {
@@ -14,11 +9,11 @@ class TransactionsBusinessLogic {
         var parameters = JSON()
 
         if let from = from {
-            parameters[Constants.fromKey] = Formatters.apiDate.string(from: from)
+            parameters[StarlingParameters.from.rawValue] = Formatters.apiDate.string(from: from)
         }
 
         if let to = to {
-            parameters[Constants.toKey] = Formatters.apiDate.string(from: to)
+            parameters[StarlingParameters.to.rawValue] = Formatters.apiDate.string(from: to)
         }
 
         return NetworkManager.shared.performRequest(method: .get,
@@ -26,7 +21,7 @@ class TransactionsBusinessLogic {
                                                     parameters: parameters).then { data in
             guard let halResponse = JSONCoder.shared.decode(HALResponse<TransactionList>.self,
                                                             from: data) else {
-                return Promise(error: AppError.unknownError)
+                return Promise(error: AppError.jsonParsingError)
             }
 
             return Promise(value: halResponse.embedded.transactions)

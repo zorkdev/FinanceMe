@@ -1,9 +1,9 @@
 enum AppError: Error {
 
     case unknownError
-    case tokenNotFound
     case apiPathInvalid
     case urlQueryInvalid
+    case jsonParsingError
 
 }
 
@@ -17,10 +17,11 @@ enum APIError: Int, Error {
 
     init?(urlError: PMKURLError) {
         guard case let .badResponse(_, _, response) = urlError,
-            let statusCode = (response as? HTTPURLResponse)?.statusCode,
-            let apiError = APIError(rawValue: statusCode) else {
+            let urlResponse = response as? HTTPURLResponse,
+            let apiError = APIError(rawValue: urlResponse.statusCode) else {
                 return nil
         }
+
         self = apiError
     }
 

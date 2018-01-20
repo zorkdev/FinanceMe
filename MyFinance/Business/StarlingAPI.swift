@@ -8,3 +8,10 @@ enum StarlingAPI: String {
         return URL(string: StarlingAPI.baseURL + rawValue)
     }
 }
+
+enum StarlingParameters: String {
+
+    case from
+    case to
+
+}

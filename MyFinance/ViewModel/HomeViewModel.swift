@@ -25,6 +25,8 @@ class HomeViewModel {
         balanceBusinessLogic.getBalance().then { balance -> Void in
             let balanceString = Formatters.format(amount: balance.effectiveBalance)
             self.delegate?.set(balance: balanceString)
+        }.catch { error in
+            print(error)
         }
     }
 
@@ -32,6 +34,8 @@ class HomeViewModel {
         spendingBusinessLogic.getSpendingThisWeek().then { spending -> Void in
             let spendingString = Formatters.format(amount: spending)
             self.delegate?.set(spending: spendingString)
+        }.catch { error in
+            print(error)
         }
     }
 
