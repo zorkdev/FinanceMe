@@ -1,5 +1,3 @@
-import Foundation
-
 enum StarlingAPI: String {
     private static let baseURL = "https://api.starlingbank.com/api/v1/"
 

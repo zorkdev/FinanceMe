@@ -1,5 +1,3 @@
-import Foundation
-
 typealias JSON = [String: Any]
 
 class JSONCoder {

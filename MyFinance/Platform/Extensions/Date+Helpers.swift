@@ -1,5 +1,3 @@
-import Foundation
-
 extension Date {
 
     private var calendar: Calendar {

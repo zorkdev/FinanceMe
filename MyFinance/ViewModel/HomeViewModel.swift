@@ -1,5 +1,3 @@
-import Foundation
-
 protocol HomeViewModelDelegate: class {
 
     func set(balance: String)
@@ -24,18 +22,16 @@ class HomeViewModel {
     }
 
     func getBalance() {
-        balanceBusinessLogic.getBalance { [weak self] _, balance in
-            guard let balance = balance else { return }
+        balanceBusinessLogic.getBalance().then { balance -> Void in
             let balanceString = Formatters.format(amount: balance.effectiveBalance)
-            self?.delegate?.set(balance: balanceString)
+            self.delegate?.set(balance: balanceString)
         }
     }
 
     func getSpending() {
-        spendingBusinessLogic.getSpendingThisWeek { [weak self] _, spending in
-            guard let spending = spending else { return }
+        spendingBusinessLogic.getSpendingThisWeek().then { spending -> Void in
             let spendingString = Formatters.format(amount: spending)
-            self?.delegate?.set(spending: spendingString)
+            self.delegate?.set(spending: spendingString)
         }
     }
 

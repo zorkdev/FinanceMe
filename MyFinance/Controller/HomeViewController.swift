@@ -1,5 +1,3 @@
-import UIKit
-
 class HomeViewController: UIViewController {
 
     @IBOutlet weak var balanceLabel: UILabel!

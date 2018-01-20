@@ -1,26 +1,16 @@
-import Foundation
-
 class BalanceBusinessLogic {
 
-    func getBalance(completion: @escaping (Error?, Balance?) -> Void) {
+    func getBalance() -> Promise<Balance> {
         guard let url = StarlingAPI.getBalance.url else {
-            completion(AppError.apiPathInvalid, nil)
-            return
+            return Promise(error: AppError.apiPathInvalid)
         }
 
-        NetworkManager.shared.performRequest(method: .get, url: url) { error, data in
-            if let error = error {
-                completion(error, nil)
-                return
+        return NetworkManager.shared.performRequest(method: .get, url: url).then { data in
+            guard let balance = JSONCoder.shared.decode(Balance.self, from: data) else {
+                return Promise(error: AppError.unknownError)
             }
 
-            guard let data = data,
-                let balance = JSONCoder.shared.decode(Balance.self, from: data) else {
-                completion(AppError.unknownError, nil)
-                return
-            }
-
-            completion(nil, balance)
+            return Promise(value: balance)
         }
     }
 

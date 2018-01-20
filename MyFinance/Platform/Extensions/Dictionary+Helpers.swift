@@ -1,5 +1,3 @@
-import Foundation
-
 extension Dictionary {
 
     var urlQuery: String {

@@ -1,5 +1,3 @@
-import Foundation
-
 class AuthManager {
 
     private struct Constants {

@@ -1,5 +1,3 @@
-import Foundation
-
 class TransactionsBusinessLogic {
 
     struct Constants {
@@ -8,11 +6,9 @@ class TransactionsBusinessLogic {
     }
 
     func getTransactions(from: Date? = nil,
-                         to: Date? = nil,
-                         completion: @escaping (Error?, [Transaction]?) -> Void) {
+                         to: Date? = nil) -> Promise<[Transaction]> {
         guard let url = StarlingAPI.getTransactions.url else {
-            completion(AppError.apiPathInvalid, nil)
-            return
+            return Promise(error: AppError.apiPathInvalid)
         }
 
         var parameters = JSON()
@@ -25,21 +21,15 @@ class TransactionsBusinessLogic {
             parameters[Constants.toKey] = Formatters.apiDate.string(from: to)
         }
 
-        NetworkManager.shared.performRequest(method: .get,
-                                             url: url,
-                                             parameters: parameters) { error, data in
-            if let error = error {
-                completion(error, nil)
-                return
+        return NetworkManager.shared.performRequest(method: .get,
+                                                    url: url,
+                                                    parameters: parameters).then { data in
+            guard let halResponse = JSONCoder.shared.decode(HALResponse<TransactionList>.self,
+                                                            from: data) else {
+                return Promise(error: AppError.unknownError)
             }
 
-            guard let data = data,
-                let halResponse = JSONCoder.shared.decode(HALResponse<TransactionList>.self, from: data) else {
-                completion(AppError.unknownError, nil)
-                return
-            }
-
-            completion(nil, halResponse.embedded.transactions)
+            return Promise(value: halResponse.embedded.transactions)
         }
     }
 

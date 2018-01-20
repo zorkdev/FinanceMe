@@ -1,5 +1,3 @@
-import Foundation
-
 enum TransactionDirection: String, Codable {
 
     case none = "NONE"

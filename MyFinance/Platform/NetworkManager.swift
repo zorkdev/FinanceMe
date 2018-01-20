@@ -1,5 +1,3 @@
-import Foundation
-
 class NetworkManager {
 
     enum HTTPMethod: String {
@@ -7,31 +5,6 @@ class NetworkManager {
         case get = "GET"
         case put = "PUT"
         case delete = "DELETE"
-    }
-
-    enum HTTPStatus: Int {
-        case ok = 200
-        case accepted = 202
-        case badRequest = 400
-        case unauthorized = 401
-        case forbidden = 403
-        case notFound = 404
-        case serverError = 500
-
-        var isError: Bool {
-            switch self {
-            case .ok, .accepted: return false
-            default: return true
-            }
-        }
-
-        init?(response: URLResponse?) {
-            guard let statusCode = (response as? HTTPURLResponse)?.statusCode,
-                let status = NetworkManager.HTTPStatus(rawValue: statusCode) else {
-                    return nil
-            }
-            self = status
-        }
     }
 
     private struct Constants {
@@ -53,12 +26,10 @@ class NetworkManager {
     func performRequest(method: HTTPMethod,
                         url: URL,
                         parameters: JSON? = nil,
-                        body: Data? = nil,
-                        completion: @escaping (Error?, Data?) -> Void) {
+                        body: Data? = nil) -> Promise<Data> {
 
         guard let token = AuthManager.shared.token?.token else {
-            completion(AppError.tokenNotFound, nil)
-            return
+            return Promise(error: AppError.tokenNotFound)
         }
 
         var request = URLRequest(url: url)
@@ -73,8 +44,7 @@ class NetworkManager {
         if let parameters = parameters {
             let urlString = url.absoluteString + parameters.urlQuery
             guard let urlWithParameters = URL(string: urlString) else {
-                completion(AppError.urlQueryInvalid, nil)
-                return
+                return Promise(error: AppError.urlQueryInvalid)
             }
             request.url = urlWithParameters
         }
@@ -83,30 +53,17 @@ class NetworkManager {
             request.httpBody = body
         }
 
-        let task = URLSession.shared.dataTask(with: request) { data, response, error in
-            DispatchQueue.main.async {
-                if let error = error {
-                    completion(error, nil)
-                    return
-                }
-
-                if let status = NetworkManager.HTTPStatus(response: response),
-                    status.isError {
-                    let apiError = APIError(status: status)
-                    completion(apiError, nil)
-                    return
-                }
-
-                guard let data = data else {
-                    completion(AppError.unknownError, nil)
-                    return
-                }
-
-                //print(data.prettyPrinted)
-                completion(nil, data)
+        return URLSession.shared.dataTask(with: request).then { data in
+            //print(data.prettyPrinted)
+            return Promise(value: data)
+        }.recover { error -> Promise<Data> in
+            if let urlError = error as? PMKURLError,
+                let apiError = APIError(urlError: urlError) {
+                return Promise(error: apiError)
+            } else {
+                return Promise(error: error)
             }
         }
-        task.resume()
     }
 
 }

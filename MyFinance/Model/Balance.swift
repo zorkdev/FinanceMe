@@ -1,5 +1,3 @@
-import Foundation
-
 struct Balance: Codable {
 
     let clearedBalance: Double
