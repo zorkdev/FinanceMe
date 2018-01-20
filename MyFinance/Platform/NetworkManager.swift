@@ -17,6 +17,21 @@ class NetworkManager {
         case forbidden = 403
         case notFound = 404
         case serverError = 500
+
+        var isError: Bool {
+            switch self {
+            case .ok, .accepted: return false
+            default: return true
+            }
+        }
+
+        init?(response: URLResponse?) {
+            guard let statusCode = (response as? HTTPURLResponse)?.statusCode,
+                let status = NetworkManager.HTTPStatus(rawValue: statusCode) else {
+                    return nil
+            }
+            self = status
+        }
     }
 
     private struct Constants {
@@ -71,17 +86,19 @@ class NetworkManager {
 
         let task = URLSession.shared.dataTask(with: request) { data, response, error in
             DispatchQueue.main.async {
-                if error != nil {
-                    guard let statusCode = (response as? HTTPURLResponse)?.statusCode,
-                        let status = NetworkManager.HTTPStatus(rawValue: statusCode) else {
-                        completion(AppError.unknownError, nil)
-                        return
-                    }
+                if let error = error {
+                    completion(error, nil)
+                    return
+                }
+
+                if let status = NetworkManager.HTTPStatus(response: response),
+                    status.isError {
                     let apiError = APIError(status: status)
                     completion(apiError, nil)
-                } else {
-                    completion(nil, data)
+                    return
                 }
+
+                completion(error, data)
             }
         }
         task.resume()
