@@ -1,5 +1,7 @@
 extension Date {
 
+    static let weeksInMonth = 52.0 / 12.0
+
     private var calendar: Calendar {
         return Calendar.autoupdatingCurrent
     }

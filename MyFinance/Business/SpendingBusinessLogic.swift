@@ -19,7 +19,7 @@ struct SpendingBusinessLogic {
     }()
 
     var weeklyLimit: Double {
-        return limit / 4.3
+        return limit / Date.weeksInMonth
     }
 
     func getAllowanceThisWeek() -> Promise<Double> {
