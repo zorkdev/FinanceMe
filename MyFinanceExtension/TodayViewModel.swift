@@ -11,12 +11,12 @@ struct TodayDisplayModel {
 
     func amountAttributedString(from string: String) -> NSAttributedString {
         let attributedString = NSMutableAttributedString(string: string, attributes:
-            [NSAttributedStringKey.font: UIFont.systemFont(ofSize: 36, weight: .light)])
+            [NSAttributedStringKey.font: UIFont.systemFont(ofSize: 40, weight: .light)])
         attributedString.addAttributes(
-            [NSAttributedStringKey.font: UIFont.systemFont(ofSize: 16, weight: .light)],
+            [NSAttributedStringKey.font: UIFont.systemFont(ofSize: 16, weight: .regular)],
             range: NSRange(location: 0, length: 1))
         attributedString.addAttributes(
-            [NSAttributedStringKey.font: UIFont.systemFont(ofSize: 16, weight: .light)],
+            [NSAttributedStringKey.font: UIFont.systemFont(ofSize: 16, weight: .regular)],
             range: NSRange(location: string.count - 3, length: 3))
 
         return attributedString
