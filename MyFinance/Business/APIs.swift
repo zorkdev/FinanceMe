@@ -20,8 +20,9 @@ enum StarlingParameters: String {
 }
 
 enum ZorkdevAPI: String {
-    private static let baseURL = "http://localhost:8080/api/"
+    private static let baseURL = "https://zorkdev.herokuapp.com/api/"
 
+    case getUser = "users/me"
     case getTransactions = "transactions"
 
     var url: URL? {

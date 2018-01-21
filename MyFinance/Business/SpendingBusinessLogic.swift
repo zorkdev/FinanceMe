@@ -1,33 +1,19 @@
-struct SpendingBusinessLogic {
+class SpendingBusinessLogic {
 
     private struct Constants {
         static let travelNarrative = "TfL"
     }
 
     private let transactionsBusinessLogic = TransactionsBusinessLogic()
+    private let userBusinessLogic = UserBusinessLogic()
 
-    let limit: Double = {
-        let regularInboundSum = ConfigManager.shared.config.regularInbound
-            .flatMap({ $0.value })
-            .reduce(0, +)
+    var user: User?
 
-        let regularOutboundSum = ConfigManager.shared.config.regularOutbound
-            .flatMap({ $0.value })
-            .reduce(0, +)
-
-        let inboundSum = ConfigManager.shared.config.inbound
-            .flatMap({ $0.value })
-            .reduce(0, +)
-
-        let outboundSum = ConfigManager.shared.config.outbound
-            .flatMap({ $0.value })
-            .reduce(0, +)
-
-        let endOfMonthBalance = ConfigManager.shared.config.endOfMonthBalance
-        let carryOver = endOfMonthBalance < 0 ? endOfMonthBalance : 0
-
-        return regularInboundSum + inboundSum - regularOutboundSum - outboundSum + carryOver
-    }()
+    var limit: Double {
+        guard let user = user else { return 0 }
+        let carryOver = user.endOfMonthBalance < 0 ? user.endOfMonthBalance : 0
+        return user.spendingLimit + carryOver
+    }
 
     var weeklyLimit: Double {
         return limit / Date().weeksInMonth
@@ -42,29 +28,21 @@ struct SpendingBusinessLogic {
         let from = now.oneMonthAgo
         let to = now.endOfWeek
 
-        return transactionsBusinessLogic.getTransactions(from: from, to: to).then { transactions in
-//            let dateString = "2018-01-21T10:27:02.335Z"
-//            let date = Formatters.apiDateTime.date(from: dateString) ?? Date()
-//            let transaction = Transaction(id: "123",
-//                                          currency: "GBP",
-//                                          amount: -1000.00,
-//                                          direction: .outbound,
-//                                          created: date,
-//                                          narrative: "Test",
-//                                          source: .masterCard,
-//                                          balance: 0)
-//            var transactions = transactions
-//            transactions.append(transaction)
+        return userBusinessLogic.getCurrentUser()
+            .then { user in
+                self.user = user
+            }.then {
+                self.transactionsBusinessLogic.getTransactions(from: from, to: to)
+            }.then { transactions in
+                let spending = self.calculateSpendingThisWeek(from: transactions)
+                let travel = self.calculateRemainingTravelSpending(transactions: transactions,
+                                                                   from: from,
+                                                                   to: now)
+                let carryOver = self.calculateCarryOverFromPreviousWeeks(from: transactions)
+                let weeklyLimit = self.calculateWeeklyLimit(with: carryOver)
+                let remainingAllowance = weeklyLimit - spending - travel
 
-            let spending = self.calculateSpendingThisWeek(from: transactions)
-            let travel = self.calculateRemainingTravelSpending(transactions: transactions,
-                                                               from: from,
-                                                               to: now)
-            let carryOver = self.calculateCarryOverFromPreviousWeeks(from: transactions)
-            let weeklyLimit = self.calculateWeeklyLimit(with: carryOver)
-            let remainingAllowance = weeklyLimit - spending - travel
-
-            return Promise(value: remainingAllowance)
+                return Promise(value: remainingAllowance)
         }
     }
 
@@ -77,8 +55,9 @@ struct SpendingBusinessLogic {
     }
 
     func calculateCarryOverFromPreviousWeeks(from transactions: [Transaction]) -> Double {
+        guard let user = user else { return 0 }
         let now = Date()
-        let payday = now.next(day: ConfigManager.shared.config.payday,
+        let payday = now.next(day: user.payday,
                               direction: .backward)
         guard payday.isThisWeek == false else { return 0 }
         let daysSincePayday = now.numberOfDays(from: payday)
@@ -93,8 +72,9 @@ struct SpendingBusinessLogic {
     }
 
     func calculateWeeklyLimit(with carryOver: Double) -> Double {
+        guard let user = user else { return 0 }
         guard carryOver < 0 else { return weeklyLimit }
-        let nextPayday = Date().next(day: ConfigManager.shared.config.payday,
+        let nextPayday = Date().next(day: user.payday,
                                      direction: .forward)
         let startOfWeek = Date().startOfWeek
         let numberOfDays = Double(nextPayday.numberOfDays(from: startOfWeek))

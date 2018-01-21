@@ -24,7 +24,7 @@ class HomeViewModel {
     func viewDidLoad() {
         getBalance()
         getSpending()
-        getExternalTransactions()
+        //getExternalTransactions()
     }
 
     func getBalance() {
