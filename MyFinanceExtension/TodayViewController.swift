@@ -21,12 +21,12 @@ class TodayViewController: UIViewController {
 
 extension TodayViewController: TodayViewModelDelegate {
 
-    func set(balance: String) {
-        balanceLabel.text = balance
+    func set(balance: NSAttributedString) {
+        balanceLabel.attributedText = balance
     }
 
-    func set(allowance: String) {
-        allowanceLabel.text = allowance
+    func set(allowance: NSAttributedString) {
+        allowanceLabel.attributedText = allowance
     }
 
 }
