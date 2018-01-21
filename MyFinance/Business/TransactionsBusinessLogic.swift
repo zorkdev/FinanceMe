@@ -1,4 +1,4 @@
-class TransactionsBusinessLogic {
+struct TransactionsBusinessLogic {
 
     func getTransactions(from: Date? = nil,
                          to: Date? = nil) -> Promise<[Transaction]> {

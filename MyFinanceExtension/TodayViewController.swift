@@ -5,7 +5,7 @@ class TodayViewController: UIViewController {
     @IBOutlet weak var primaryVibrancyEffectView: UIVisualEffectView!
     @IBOutlet weak var secondaryVibrancyEffectView: UIVisualEffectView!
     @IBOutlet weak var balanceLabel: UILabel!
-    @IBOutlet weak var spendingLabel: UILabel!
+    @IBOutlet weak var allowanceLabel: UILabel!
 
     var viewModel: TodayViewModel!
 
@@ -25,8 +25,8 @@ extension TodayViewController: TodayViewModelDelegate {
         balanceLabel.text = balance
     }
 
-    func set(spending: String) {
-        spendingLabel.text = spending
+    func set(allowance: String) {
+        allowanceLabel.text = allowance
     }
 
 }

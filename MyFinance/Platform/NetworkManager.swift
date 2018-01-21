@@ -64,10 +64,9 @@ class NetworkManager {
         request.setValue(Constants.encodingValue,
                          forHTTPHeaderField: Constants.encodingKey)
 
-        if let token = AuthManager.shared.token?.token {
-            request.setValue(Constants.authHeaderValue(token),
-                             forHTTPHeaderField: Constants.authHeaderKey)
-        }
+        let token = ConfigManager.shared.config.token
+        request.setValue(Constants.authHeaderValue(token),
+                         forHTTPHeaderField: Constants.authHeaderKey)
 
         if let parameters = parameters,
             let urlWithParameters = URL(string: url.absoluteString + parameters.urlQuery) {
@@ -88,6 +87,7 @@ class NetworkManager {
 extension NetworkManager {
 
     func printRequest(_ request: URLRequest) {
+        guard ConfigManager.shared.isLoggingEnabled else { return }
         print(
             """
             ********** API Request **********
@@ -103,6 +103,7 @@ extension NetworkManager {
     }
 
     func printResponse(_ data: Data) {
+        guard ConfigManager.shared.isLoggingEnabled else { return }
         print(
             """
             ********** API Response *********
@@ -114,6 +115,7 @@ extension NetworkManager {
     }
 
     func printResponse(_ error: Error) {
+        guard ConfigManager.shared.isLoggingEnabled else { return }
         print(
             """
             ********** API Error ***********

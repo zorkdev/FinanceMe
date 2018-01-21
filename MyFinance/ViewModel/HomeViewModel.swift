@@ -1,7 +1,7 @@
 protocol HomeViewModelDelegate: class {
 
     func set(balance: String)
-    func set(spending: String)
+    func set(allowance: String)
 
 }
 
@@ -31,9 +31,9 @@ class HomeViewModel {
     }
 
     func getSpending() {
-        spendingBusinessLogic.getSpendingThisWeek().then { spending -> Void in
-            let spendingString = Formatters.format(amount: spending)
-            self.delegate?.set(spending: spendingString)
+        spendingBusinessLogic.getAllowanceThisWeek().then { allowance -> Void in
+            let allowanceString = Formatters.format(amount: allowance)
+            self.delegate?.set(allowance: allowanceString)
         }.catch { error in
             print(error)
         }

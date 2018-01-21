@@ -16,4 +16,14 @@ extension Date {
                              to: startOfWeek) ?? Date()
     }
 
+    var oneMonthAgo: Date {
+        return calendar.date(byAdding: .month,
+                             value: -1,
+                             to: self) ?? Date()
+    }
+
+    func numberOfDays(from: Date) -> Int {
+        return calendar.dateComponents([.day], from: from, to: self).day ?? 0
+    }
+
 }

@@ -65,7 +65,7 @@
                                                     <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="top" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SPENT" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="140" translatesAutoresizingMaskIntoConstraints="NO" id="3PP-LU-0jO">
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="top" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ALLOWANCE" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="140" translatesAutoresizingMaskIntoConstraints="NO" id="3PP-LU-0jO">
                                                     <rect key="frame" x="144" y="0.0" width="144" height="14.5"/>
                                                     <fontDescription key="fontDescription" type="system" weight="light" pointSize="12"/>
                                                     <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -111,10 +111,10 @@
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="320" height="100"/>
                     <connections>
+                        <outlet property="allowanceLabel" destination="M4R-fw-obk" id="hUH-ac-zTU"/>
                         <outlet property="balanceLabel" destination="GcN-lo-r42" id="cad-ck-Fcj"/>
                         <outlet property="primaryVibrancyEffectView" destination="JX9-HX-uX9" id="jrV-qX-0kB"/>
                         <outlet property="secondaryVibrancyEffectView" destination="RYy-PZ-IPx" id="eeq-DG-Zhe"/>
-                        <outlet property="spendingLabel" destination="M4R-fw-obk" id="Hko-sK-Gkb"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vXp-U4-Rya" userLabel="First Responder" sceneMemberID="firstResponder"/>

@@ -1,4 +1,4 @@
-class BalanceBusinessLogic {
+struct BalanceBusinessLogic {
 
     func getBalance() -> Promise<Balance> {
         guard let url = StarlingAPI.getBalance.url else {

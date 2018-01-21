@@ -1,7 +1,7 @@
 class HomeViewController: UIViewController {
 
     @IBOutlet weak var balanceLabel: UILabel!
-    @IBOutlet weak var spendingLabel: UILabel!
+    @IBOutlet weak var allowanceLabel: UILabel!
 
     var viewModel: HomeViewModel!
 
@@ -19,8 +19,8 @@ extension HomeViewController: HomeViewModelDelegate {
         balanceLabel.text = balance
     }
 
-    func set(spending: String) {
-        spendingLabel.text = spending
+    func set(allowance: String) {
+        allowanceLabel.text = allowance
     }
 
 }
