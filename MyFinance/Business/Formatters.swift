@@ -25,4 +25,13 @@ struct Formatters {
         return formatter
     }()
 
+    static let currencyPlusSign: NumberFormatter = {
+        let formatter = NumberFormatter()
+        formatter.numberStyle = .currency
+        formatter.positivePrefix = formatter.plusSign + formatter.currencySymbol
+        formatter.negativePrefix = formatter.currencySymbol
+
+        return formatter
+    }()
+
 }

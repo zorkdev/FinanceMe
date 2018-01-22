@@ -34,7 +34,7 @@ class TodayViewModel {
     let balanceBusinessLogic = BalanceBusinessLogic()
     let spendingBusinessLogic = SpendingBusinessLogic()
 
-    var displayModel = TodayDisplayModel()
+    let displayModel = TodayDisplayModel()
 
     weak var delegate: TodayViewModelDelegate?
 
@@ -43,33 +43,33 @@ class TodayViewModel {
     }
 
     func viewDidLoad() {
-        setDefaultAmounts()
+        setupDefaults()
         updateData()
     }
 
-    func setDefaultAmounts() {
-        let attributedString = self.displayModel
-            .amountAttributedString(from: displayModel.defaultAmount)
-        self.delegate?.set(balance: attributedString)
-        self.delegate?.set(allowance: attributedString)
+    func setupDefaults() {
+        let balanceAttributedString = createAttributedString(from: DataManager.shared.balance)
+        let allowanceAttributedString = createAttributedString(from: DataManager.shared.allowance)
+        delegate?.set(balance: balanceAttributedString)
+        delegate?.set(allowance: allowanceAttributedString)
+    }
+
+    func createAttributedString(from amount: Double) -> NSAttributedString {
+        let currencyString = Formatters.currency
+            .string(from: NSNumber(value: amount)) ?? displayModel.defaultAmount
+        return displayModel.amountAttributedString(from: currencyString)
     }
 
     func getBalance() -> Promise<Void> {
         return balanceBusinessLogic.getBalance().then { balance -> Void in
-            let balanceString = Formatters.currency
-                .string(from: NSNumber(value: balance.effectiveBalance)) ??
-                self.displayModel.defaultAmount
-            let balanceAttributedString = self.displayModel.amountAttributedString(from: balanceString)
+            let balanceAttributedString = self.createAttributedString(from: balance.effectiveBalance)
             self.delegate?.set(balance: balanceAttributedString)
         }
     }
 
     func getAllowance() -> Promise<Void> {
         return spendingBusinessLogic.calculateAllowanceThisWeek().then { allowance -> Void in
-            let allowanceString = Formatters.currency
-                .string(from: NSNumber(value: allowance)) ??
-                self.displayModel.defaultAmount
-            let allowanceAttributedString = self.displayModel.amountAttributedString(from: allowanceString)
+            let allowanceAttributedString = self.createAttributedString(from: allowance)
             self.delegate?.set(allowance: allowanceAttributedString)
         }
     }

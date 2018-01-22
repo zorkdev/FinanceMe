@@ -41,6 +41,7 @@ class SpendingBusinessLogic {
                 let carryOver = self.calculateCarryOverFromPreviousWeeks(from: transactions)
                 let weeklyLimit = self.calculateWeeklyLimit(with: carryOver)
                 let remainingAllowance = weeklyLimit - spending - travel
+                DataManager.shared.allowance = remainingAllowance
 
                 return Promise(value: remainingAllowance)
         }

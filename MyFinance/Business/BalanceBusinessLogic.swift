@@ -12,6 +12,8 @@ struct BalanceBusinessLogic {
                 return Promise(error: AppError.jsonParsingError)
             }
 
+            DataManager.shared.balance = balance.effectiveBalance
+
             return Promise(value: balance)
         }
     }

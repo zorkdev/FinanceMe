@@ -16,7 +16,6 @@
 		9A5AE5922012B97500B25081 /* Balance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A5AE5912012B97500B25081 /* Balance.swift */; };
 		9A5AE5952012BE0500B25081 /* ConfigManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A5AE5942012BE0500B25081 /* ConfigManager.swift */; };
 		9A5AE5972012BF5E00B25081 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A5AE5962012BF5E00B25081 /* Config.swift */; };
-		9A5AE59A2012C0D000B25081 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A5AE5992012C0D000B25081 /* NetworkManager.swift */; };
 		9A5AE59C2012C45700B25081 /* Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A5AE59B2012C45700B25081 /* Error.swift */; };
 		9A5AE5A02012C8A400B25081 /* BalanceBusinessLogic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A5AE59F2012C8A400B25081 /* BalanceBusinessLogic.swift */; };
 		9A5AE5A22012C99A00B25081 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A5AE5A12012C99A00B25081 /* HomeViewModel.swift */; };
@@ -61,6 +60,9 @@
 		9AD3EE5A2013DD0A0083F8FE /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A5AE5992012C0D000B25081 /* NetworkManager.swift */; };
 		9AD3EE5B2013DD0D0083F8FE /* ConfigManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A5AE5942012BE0500B25081 /* ConfigManager.swift */; };
 		9AD3EE5C2013DD120083F8FE /* config.json in Resources */ = {isa = PBXBuildFile; fileRef = 9AD3EE2C2013B64C0083F8FE /* config.json */; };
+		9ADE54C1201568D90039D774 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ADE54C0201568D90039D774 /* DataManager.swift */; };
+		9ADE54C2201568D90039D774 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ADE54C0201568D90039D774 /* DataManager.swift */; };
+		9ADE54C3201570B40039D774 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A5AE5992012C0D000B25081 /* NetworkManager.swift */; };
 		FD305ACDE07231FF5EC551FB /* Pods_MyFinanceExtension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DDA4BA8DDECA7088DB8650F /* Pods_MyFinanceExtension.framework */; };
 /* End PBXBuildFile section */
 
@@ -133,6 +135,7 @@
 		9AD3EE412013D9A10083F8FE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9AD3EE4A2013DC5E0083F8FE /* TodayViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayViewModel.swift; sourceTree = "<group>"; };
 		9AD3EE5D2013DD360083F8FE /* Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Bridging-Header.h"; sourceTree = "<group>"; };
+		9ADE54C0201568D90039D774 /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 		C49F06F9156F2CB30EC7BDDD /* Pods-MyFinance.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyFinance.release.xcconfig"; path = "Pods/Target Support Files/Pods-MyFinance/Pods-MyFinance.release.xcconfig"; sourceTree = "<group>"; };
 		FBD616E33767A57E45EB175A /* Pods_MyFinance.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyFinance.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -285,6 +288,7 @@
 				9AD3EE1F2013965D0083F8FE /* JSONCoder.swift */,
 				9A5AE5992012C0D000B25081 /* NetworkManager.swift */,
 				9A5AE5942012BE0500B25081 /* ConfigManager.swift */,
+				9ADE54C0201568D90039D774 /* DataManager.swift */,
 			);
 			path = Platform;
 			sourceTree = "<group>";
@@ -537,11 +541,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9ADE54C3201570B40039D774 /* NetworkManager.swift in Sources */,
 				9A872985201662E100C1E9BE /* ExternalTransactionsBusinessLogic.swift in Sources */,
-				9A5AE59A2012C0D000B25081 /* NetworkManager.swift in Sources */,
 				9AD3EE232013985B0083F8FE /* TransactionsBusinessLogic.swift in Sources */,
 				9A5AE5782012A8AC00B25081 /* HomeViewController.swift in Sources */,
 				9A5AE5A42012CA7700B25081 /* Formatters.swift in Sources */,
+				9ADE54C1201568D90039D774 /* DataManager.swift in Sources */,
 				9AD3EE292013A7FE0083F8FE /* SpendingBusinessLogic.swift in Sources */,
 				9A5AE5972012BF5E00B25081 /* Config.swift in Sources */,
 				9A872E122016719100C1E9BE /* UserBusinessLogic.swift in Sources */,
@@ -585,6 +590,7 @@
 				9AD3EE4C2013DCE10083F8FE /* Error.swift in Sources */,
 				9AD3EE4F2013DCE80083F8FE /* Balance.swift in Sources */,
 				9AD3EE4B2013DC5E0083F8FE /* TodayViewModel.swift in Sources */,
+				9ADE54C2201568D90039D774 /* DataManager.swift in Sources */,
 				9AD3EE532013DCF60083F8FE /* BalanceBusinessLogic.swift in Sources */,
 				9A872986201662E100C1E9BE /* ExternalTransactionsBusinessLogic.swift in Sources */,
 			);
