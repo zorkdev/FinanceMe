@@ -50,7 +50,8 @@ class SpendingBusinessLogic {
     func calculateSpendingThisWeek(from transactions: [Transaction]) -> Double {
         let transactionsThisWeek = transactions
             .filter({ $0.created >= Date().startOfWeek &&
-                      $0.created < Date().endOfWeek })
+                      $0.created < Date().endOfWeek &&
+                      $0.narrative != Constants.travelNarrative })
 
         return calculateSpending(from: transactionsThisWeek)
     }
