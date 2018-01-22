@@ -7,16 +7,21 @@ protocol TodayViewModelDelegate: class {
 
 struct TodayDisplayModel {
 
-    let defaultAmount = Formatters.format(amount: 0)
+    let defaultAmount = "£0.00"
 
     func amountAttributedString(from string: String) -> NSAttributedString {
+        let isNegative = string.first == "-"
+        let color = isNegative ? UIColor.red : UIColor.darkText
+
         let attributedString = NSMutableAttributedString(string: string, attributes:
-            [NSAttributedStringKey.font: UIFont.systemFont(ofSize: 40, weight: .light)])
+            [.font: UIFont.systemFont(ofSize: 40, weight: .light),
+             .foregroundColor: color])
+        let length = isNegative ? 2 : 1
         attributedString.addAttributes(
-            [NSAttributedStringKey.font: UIFont.systemFont(ofSize: 16, weight: .regular)],
-            range: NSRange(location: 0, length: 1))
+            [.font: UIFont.systemFont(ofSize: 16, weight: .regular)],
+            range: NSRange(location: 0, length: length))
         attributedString.addAttributes(
-            [NSAttributedStringKey.font: UIFont.systemFont(ofSize: 16, weight: .regular)],
+            [.font: UIFont.systemFont(ofSize: 16, weight: .regular)],
             range: NSRange(location: string.count - 3, length: 3))
 
         return attributedString
@@ -51,15 +56,19 @@ class TodayViewModel {
 
     func getBalance() -> Promise<Void> {
         return balanceBusinessLogic.getBalance().then { balance -> Void in
-            let balanceString = Formatters.format(amount: balance.effectiveBalance)
+            let balanceString = Formatters.currency
+                .string(from: NSNumber(value: balance.effectiveBalance)) ??
+                self.displayModel.defaultAmount
             let balanceAttributedString = self.displayModel.amountAttributedString(from: balanceString)
             self.delegate?.set(balance: balanceAttributedString)
         }
     }
 
     func getAllowance() -> Promise<Void> {
-        return spendingBusinessLogic.getAllowanceThisWeek().then { allowance -> Void in
-            let allowanceString = Formatters.format(amount: allowance)
+        return spendingBusinessLogic.calculateAllowanceThisWeek().then { allowance -> Void in
+            let allowanceString = Formatters.currency
+                .string(from: NSNumber(value: allowance)) ??
+                self.displayModel.defaultAmount
             let allowanceAttributedString = self.displayModel.amountAttributedString(from: allowanceString)
             self.delegate?.set(allowance: allowanceAttributedString)
         }

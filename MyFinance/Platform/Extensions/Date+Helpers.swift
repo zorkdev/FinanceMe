@@ -1,9 +1,13 @@
 extension Date {
 
-    static let weeksInMonth = 52.0 / 12.0
+    static let daysInWeek = 7
 
     private var calendar: Calendar {
         return Calendar.autoupdatingCurrent
+    }
+
+    var isThisWeek: Bool {
+        return calendar.isDate(self, equalTo: Date(), toGranularity: .weekOfYear)
     }
 
     var startOfWeek: Date {
@@ -22,6 +26,24 @@ extension Date {
         return calendar.date(byAdding: .month,
                              value: -1,
                              to: self) ?? Date()
+    }
+
+    var daysInMonth: Int {
+        return calendar.range(of: .day, in: .month, for: self)?.count ?? 0
+    }
+
+    var weeksInMonth: Double {
+        return Double(daysInMonth) / Double(Date.daysInWeek)
+    }
+
+    func next(day: Int, direction: Calendar.SearchDirection) -> Date {
+        var dateComponents = DateComponents()
+        dateComponents.day = day
+        return calendar.nextDate(after: self,
+                                 matching: dateComponents,
+                                 matchingPolicy: Calendar.MatchingPolicy.strict,
+                                 repeatedTimePolicy: Calendar.RepeatedTimePolicy.first,
+                                 direction: direction) ?? Date()
     }
 
     func numberOfDays(from: Date) -> Int {

@@ -16,7 +16,8 @@ struct TransactionsBusinessLogic {
             parameters[StarlingParameters.to.rawValue] = Formatters.apiDate.string(from: to)
         }
 
-        return NetworkManager.shared.performRequest(method: .get,
+        return NetworkManager.shared.performRequest(api: .starling,
+                                                    method: .get,
                                                     url: url,
                                                     parameters: parameters).then { data in
             guard let halResponse = JSONCoder.shared.decode(HALResponse<TransactionList>.self,

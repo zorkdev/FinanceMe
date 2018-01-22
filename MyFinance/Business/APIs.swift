@@ -1,3 +1,8 @@
+enum API {
+    case starling
+    case zorkdev
+}
+
 enum StarlingAPI: String {
     private static let baseURL = "https://api.starlingbank.com/api/v1/"
 
@@ -10,8 +15,16 @@ enum StarlingAPI: String {
 }
 
 enum StarlingParameters: String {
-
     case from
     case to
+}
 
+enum ZorkdevAPI: String {
+    private static let baseURL = "http://localhost:8080/api/"
+
+    case getTransactions = "transactions"
+
+    var url: URL? {
+        return URL(string: ZorkdevAPI.baseURL + rawValue)
+    }
 }

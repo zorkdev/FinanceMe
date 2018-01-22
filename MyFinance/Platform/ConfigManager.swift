@@ -8,7 +8,7 @@ class ConfigManager {
 
     static let shared = ConfigManager()
 
-    let isLoggingEnabled = false
+    let isLoggingEnabled = true
 
     var config: Config
 

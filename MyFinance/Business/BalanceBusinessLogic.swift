@@ -5,7 +5,9 @@ struct BalanceBusinessLogic {
             return Promise(error: AppError.apiPathInvalid)
         }
 
-        return NetworkManager.shared.performRequest(method: .get, url: url).then { data in
+        return NetworkManager.shared.performRequest(api: .starling,
+                                                    method: .get,
+                                                    url: url).then { data in
             guard let balance = JSONCoder.shared.decode(Balance.self, from: data) else {
                 return Promise(error: AppError.jsonParsingError)
             }

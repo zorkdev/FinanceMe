@@ -23,12 +23,14 @@ class NetworkManager {
 
     private init() {}
 
-    func performRequest(method: HTTPMethod,
+    func performRequest(api: API,
+                        method: HTTPMethod,
                         url: URL,
                         parameters: JSON? = nil,
                         body: Data? = nil) -> Promise<Data> {
 
-        let request = createRequest(method: method,
+        let request = createRequest(api: api,
+                                    method: method,
                                     url: url,
                                     parameters: parameters,
                                     body: body)
@@ -51,7 +53,8 @@ class NetworkManager {
         }
     }
 
-    private func createRequest(method: HTTPMethod,
+    private func createRequest(api: API,
+                               method: HTTPMethod,
                                url: URL,
                                parameters: JSON?,
                                body: Data?) -> URLRequest {
@@ -64,7 +67,13 @@ class NetworkManager {
         request.setValue(Constants.encodingValue,
                          forHTTPHeaderField: Constants.encodingKey)
 
-        let token = ConfigManager.shared.config.token
+        let token: String
+
+        switch api {
+        case .starling: token = ConfigManager.shared.config.starlingToken
+        case .zorkdev: token = ConfigManager.shared.config.zorkdevToken
+        }
+
         request.setValue(Constants.authHeaderValue(token),
                          forHTTPHeaderField: Constants.authHeaderKey)
 

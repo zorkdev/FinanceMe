@@ -18,8 +18,11 @@ struct Formatters {
         return formatter
     }()
 
-    static func format(amount: Double) -> String {
-        return String(format: "£%.2f", amount)
-    }
+    static let currency: NumberFormatter = {
+        let formatter = NumberFormatter()
+        formatter.numberStyle = .currency
+
+        return formatter
+    }()
 
 }
