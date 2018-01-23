@@ -10,22 +10,26 @@ extension Date {
         return calendar.isDate(self, equalTo: Date(), toGranularity: .weekOfYear)
     }
 
+    var startOfDay: Date {
+        return calendar.startOfDay(for: self)
+    }
+
     var startOfWeek: Date {
         let dateComponents = calendar.dateComponents([.yearForWeekOfYear, .weekOfYear],
                                                      from: self)
-        return calendar.date(from: dateComponents) ?? Date()
+        return calendar.date(from: dateComponents) ?? self
     }
 
     var endOfWeek: Date {
         return calendar.date(byAdding: .weekOfYear,
                              value: 1,
-                             to: startOfWeek) ?? Date()
+                             to: startOfWeek) ?? self
     }
 
     var oneMonthAgo: Date {
         return calendar.date(byAdding: .month,
                              value: -1,
-                             to: self) ?? Date()
+                             to: self) ?? self
     }
 
     var daysInMonth: Int {
@@ -36,6 +40,10 @@ extension Date {
         return Double(daysInMonth) / Double(Date.daysInWeek)
     }
 
+    var dayBefore: Date {
+        return calendar.date(byAdding: .day, value: -1, to: self) ?? self
+    }
+
     func next(day: Int, direction: Calendar.SearchDirection) -> Date {
         var dateComponents = DateComponents()
         dateComponents.day = day
@@ -43,11 +51,11 @@ extension Date {
                                  matching: dateComponents,
                                  matchingPolicy: Calendar.MatchingPolicy.strict,
                                  repeatedTimePolicy: Calendar.RepeatedTimePolicy.first,
-                                 direction: direction) ?? Date()
+                                 direction: direction) ?? self
     }
 
     func numberOfDays(from: Date) -> Int {
-        return calendar.dateComponents([.day], from: from, to: self).day ?? 0
+        return calendar.dateComponents([.day], from: from.startOfDay, to: self.startOfDay).day ?? 0
     }
 
 }

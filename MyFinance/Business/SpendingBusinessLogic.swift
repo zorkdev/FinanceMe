@@ -25,7 +25,7 @@ class SpendingBusinessLogic {
 
     func calculateAllowanceThisWeek() -> Promise<Double> {
         let now = Date()
-        let from = now.oneMonthAgo
+        let from = now.oneMonthAgo.startOfDay
         let to = now.endOfWeek
 
         return userBusinessLogic.getCurrentUser()
@@ -50,8 +50,9 @@ class SpendingBusinessLogic {
     func calculateSpendingThisWeek(from transactions: [Transaction]) -> Double {
         let transactionsThisWeek = transactions
             .filter({ $0.created >= Date().startOfWeek &&
-                      $0.created < Date().endOfWeek &&
-                      $0.narrative != Constants.travelNarrative })
+                      $0.created < Date().endOfWeek })
+            .filter({ !($0.narrative == Constants.travelNarrative &&
+                      $0.created > Date().startOfDay) })
 
         return calculateSpending(from: transactionsThisWeek)
     }
@@ -96,13 +97,15 @@ class SpendingBusinessLogic {
     func calculateRemainingTravelSpending(transactions: [Transaction],
                                           from: Date,
                                           to: Date) -> Double {
-        let numberOfDays = Double(to.numberOfDays(from: from))
+        let dayBefore = to.dayBefore.startOfDay
+        let numberOfDays = Double(dayBefore.numberOfDays(from: from))
         let dailyTravelSpending = abs(transactions
-            .filter({ $0.narrative == Constants.travelNarrative })
+            .filter({ $0.narrative == Constants.travelNarrative &&
+                      $0.created < dayBefore })
             .flatMap({ $0.amount })
             .reduce(0, +) / numberOfDays)
 
-        let remainingDays = Double(to.endOfWeek.numberOfDays(from: Date()))
+        let remainingDays = Double(to.endOfWeek.numberOfDays(from: Date().startOfDay))
 
         return remainingDays * dailyTravelSpending
     }
