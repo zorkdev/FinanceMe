@@ -13,6 +13,8 @@ struct UserBusinessLogic {
                     return Promise(error: AppError.jsonParsingError)
                 }
 
+                DataManager.shared.allowance = user.allowance
+
                 return Promise(value: user)
         }
     }
