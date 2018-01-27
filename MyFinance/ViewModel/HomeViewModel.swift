@@ -35,7 +35,7 @@ struct HomeDisplayModel {
 class HomeViewModel {
 
     let balanceBusinessLogic = BalanceBusinessLogic()
-    let spendingBusinessLogic = SpendingBusinessLogic()
+    let userBusinessLogic = UserBusinessLogic()
     let externalTransactionsBusinessLogic = ExternalTransactionsBusinessLogic()
 
     let displayModel = HomeDisplayModel()
@@ -51,7 +51,7 @@ class HomeViewModel {
     func viewDidLoad() {
         setupDefaults()
         getBalance()
-        getSpending()
+        getUser()
         getExternalTransactions()
     }
 
@@ -77,9 +77,9 @@ class HomeViewModel {
         }
     }
 
-    func getSpending() {
-        spendingBusinessLogic.calculateAllowanceThisWeek().then { allowance -> Void in
-            let allowanceAttributedString = self.createAttributedString(from: allowance)
+    func getUser() {
+        userBusinessLogic.getCurrentUser().then { user -> Void in
+            let allowanceAttributedString = self.createAttributedString(from: user.allowance)
             self.delegate?.set(allowance: allowanceAttributedString)
         }.catch { error in
             print(error)

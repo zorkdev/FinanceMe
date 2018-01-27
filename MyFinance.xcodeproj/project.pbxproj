@@ -33,7 +33,6 @@
 		9AD3EE232013985B0083F8FE /* TransactionsBusinessLogic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AD3EE222013985B0083F8FE /* TransactionsBusinessLogic.swift */; };
 		9AD3EE2520139BA40083F8FE /* Data+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AD3EE2420139BA40083F8FE /* Data+Helpers.swift */; };
 		9AD3EE2720139FDC0083F8FE /* HALResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AD3EE2620139FDC0083F8FE /* HALResponse.swift */; };
-		9AD3EE292013A7FE0083F8FE /* SpendingBusinessLogic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AD3EE282013A7FE0083F8FE /* SpendingBusinessLogic.swift */; };
 		9AD3EE2B2013AD2A0083F8FE /* Date+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AD3EE2A2013AD2A0083F8FE /* Date+Helpers.swift */; };
 		9AD3EE2D2013B64C0083F8FE /* config.json in Resources */ = {isa = PBXBuildFile; fileRef = 9AD3EE2C2013B64C0083F8FE /* config.json */; };
 		9AD3EE2F2013B6640083F8FE /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 9AD3EE2E2013B6640083F8FE /* Podfile */; };
@@ -52,7 +51,6 @@
 		9AD3EE522013DCF30083F8FE /* Formatters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A5AE5A32012CA7700B25081 /* Formatters.swift */; };
 		9AD3EE532013DCF60083F8FE /* BalanceBusinessLogic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A5AE59F2012C8A400B25081 /* BalanceBusinessLogic.swift */; };
 		9AD3EE542013DCF90083F8FE /* TransactionsBusinessLogic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AD3EE222013985B0083F8FE /* TransactionsBusinessLogic.swift */; };
-		9AD3EE552013DCFB0083F8FE /* SpendingBusinessLogic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AD3EE282013A7FE0083F8FE /* SpendingBusinessLogic.swift */; };
 		9AD3EE562013DD010083F8FE /* Dictionary+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A5AE5A92012D4A400B25081 /* Dictionary+Helpers.swift */; };
 		9AD3EE572013DD040083F8FE /* Date+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AD3EE2A2013AD2A0083F8FE /* Date+Helpers.swift */; };
 		9AD3EE582013DD060083F8FE /* Data+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AD3EE2420139BA40083F8FE /* Data+Helpers.swift */; };
@@ -122,7 +120,6 @@
 		9AD3EE222013985B0083F8FE /* TransactionsBusinessLogic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionsBusinessLogic.swift; sourceTree = "<group>"; };
 		9AD3EE2420139BA40083F8FE /* Data+Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Data+Helpers.swift"; sourceTree = "<group>"; };
 		9AD3EE2620139FDC0083F8FE /* HALResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HALResponse.swift; sourceTree = "<group>"; };
-		9AD3EE282013A7FE0083F8FE /* SpendingBusinessLogic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpendingBusinessLogic.swift; sourceTree = "<group>"; };
 		9AD3EE2A2013AD2A0083F8FE /* Date+Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Helpers.swift"; sourceTree = "<group>"; };
 		9AD3EE2C2013B64C0083F8FE /* config.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = config.json; sourceTree = SOURCE_ROOT; };
 		9AD3EE2E2013B6640083F8FE /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
@@ -276,7 +273,6 @@
 				9AD3EE222013985B0083F8FE /* TransactionsBusinessLogic.swift */,
 				9A872E112016719100C1E9BE /* UserBusinessLogic.swift */,
 				9A872984201662E100C1E9BE /* ExternalTransactionsBusinessLogic.swift */,
-				9AD3EE282013A7FE0083F8FE /* SpendingBusinessLogic.swift */,
 			);
 			path = Business;
 			sourceTree = "<group>";
@@ -547,7 +543,6 @@
 				9A5AE5782012A8AC00B25081 /* HomeViewController.swift in Sources */,
 				9A5AE5A42012CA7700B25081 /* Formatters.swift in Sources */,
 				9ADE54C1201568D90039D774 /* DataManager.swift in Sources */,
-				9AD3EE292013A7FE0083F8FE /* SpendingBusinessLogic.swift in Sources */,
 				9A5AE5972012BF5E00B25081 /* Config.swift in Sources */,
 				9A872E122016719100C1E9BE /* UserBusinessLogic.swift in Sources */,
 				9AD3EE2520139BA40083F8FE /* Data+Helpers.swift in Sources */,
@@ -580,7 +575,6 @@
 				9AD3EE512013DCF00083F8FE /* APIs.swift in Sources */,
 				9AD3EE562013DD010083F8FE /* Dictionary+Helpers.swift in Sources */,
 				9A872E102016719100C1E9BE /* User.swift in Sources */,
-				9AD3EE552013DCFB0083F8FE /* SpendingBusinessLogic.swift in Sources */,
 				9AD3EE522013DCF30083F8FE /* Formatters.swift in Sources */,
 				9AD3EE4E2013DCE50083F8FE /* Config.swift in Sources */,
 				9AD3EE5A2013DD0A0083F8FE /* NetworkManager.swift in Sources */,

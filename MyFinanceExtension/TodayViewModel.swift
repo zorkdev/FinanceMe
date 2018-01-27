@@ -32,7 +32,7 @@ struct TodayDisplayModel {
 class TodayViewModel {
 
     let balanceBusinessLogic = BalanceBusinessLogic()
-    let spendingBusinessLogic = SpendingBusinessLogic()
+    let userBusinessLogic = UserBusinessLogic()
 
     let displayModel = TodayDisplayModel()
 
@@ -67,15 +67,15 @@ class TodayViewModel {
         }
     }
 
-    func getAllowance() -> Promise<Void> {
-        return spendingBusinessLogic.calculateAllowanceThisWeek().then { allowance -> Void in
-            let allowanceAttributedString = self.createAttributedString(from: allowance)
+    func getUser() -> Promise<Void> {
+        return userBusinessLogic.getCurrentUser().then { user -> Void in
+            let allowanceAttributedString = self.createAttributedString(from: user.allowance)
             self.delegate?.set(allowance: allowanceAttributedString)
         }
     }
 
     @discardableResult func updateData() -> Promise<Void> {
-        return when(fulfilled: getBalance(), getAllowance())
+        return when(fulfilled: getBalance(), getUser())
     }
 
 }
