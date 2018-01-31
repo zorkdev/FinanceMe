@@ -1,3 +1,8 @@
+#if os(macOS)
+import Cocoa
+import PromiseKit
+#endif
+
 enum AppError: Error {
 
     case unknownError

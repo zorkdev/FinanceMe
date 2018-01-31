@@ -1,3 +1,8 @@
+#if os(macOS)
+    import Cocoa
+    import PromiseKit
+#endif
+
 struct Formatters {
 
     static let apiDate: DateFormatter = {

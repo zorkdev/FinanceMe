@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1B91366A7F4BE4E58DC69B29 /* Pods_MyFinance_macOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18E272BE0EF275A986DCD73A /* Pods_MyFinance_macOS.framework */; };
 		22AB5A716AF69A3C30C526B3 /* Pods_MyFinance.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FBD616E33767A57E45EB175A /* Pods_MyFinance.framework */; };
 		9A5AE5762012A8AB00B25081 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A5AE5752012A8AB00B25081 /* AppDelegate.swift */; };
 		9A5AE5782012A8AC00B25081 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A5AE5772012A8AC00B25081 /* HomeViewController.swift */; };
@@ -22,6 +23,56 @@
 		9A5AE5A42012CA7700B25081 /* Formatters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A5AE5A32012CA7700B25081 /* Formatters.swift */; };
 		9A5AE5A62012CCFC00B25081 /* APIs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A5AE5A52012CCFC00B25081 /* APIs.swift */; };
 		9A5AE5AA2012D4A400B25081 /* Dictionary+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A5AE5A92012D4A400B25081 /* Dictionary+Helpers.swift */; };
+		9A740ECE201E245200D40943 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A740ECD201E245200D40943 /* AppDelegate.swift */; };
+		9A740ED0201E245200D40943 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A740ECF201E245200D40943 /* ViewController.swift */; };
+		9A740ED2201E245200D40943 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9A740ED1201E245200D40943 /* Assets.xcassets */; };
+		9A740ED5201E245200D40943 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9A740ED3201E245200D40943 /* Main.storyboard */; };
+		9A740EE0201E247D00D40943 /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AD3EE392013D9A10083F8FE /* NotificationCenter.framework */; };
+		9A740EE3201E247D00D40943 /* TodayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A740EE2201E247D00D40943 /* TodayViewController.swift */; };
+		9A740EE6201E247D00D40943 /* TodayViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9A740EE4201E247D00D40943 /* TodayViewController.xib */; };
+		9A740EEA201E247D00D40943 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9A740EE8201E247D00D40943 /* InfoPlist.strings */; };
+		9A740EEE201E247D00D40943 /* MyFinanceExtension-macOS.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 9A740EDF201E247D00D40943 /* MyFinanceExtension-macOS.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		9A740EF4201E272500D40943 /* TodayViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AD3EE4A2013DC5E0083F8FE /* TodayViewModel.swift */; };
+		9A740EF5201E277F00D40943 /* Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A5AE59B2012C45700B25081 /* Error.swift */; };
+		9A740EF6201E278000D40943 /* Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A5AE59B2012C45700B25081 /* Error.swift */; };
+		9A740EF7201E278300D40943 /* HALResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AD3EE2620139FDC0083F8FE /* HALResponse.swift */; };
+		9A740EF8201E278300D40943 /* HALResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AD3EE2620139FDC0083F8FE /* HALResponse.swift */; };
+		9A740EF9201E278600D40943 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A5AE5962012BF5E00B25081 /* Config.swift */; };
+		9A740EFA201E278700D40943 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A5AE5962012BF5E00B25081 /* Config.swift */; };
+		9A740EFB201E278900D40943 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A872E0E2016719100C1E9BE /* User.swift */; };
+		9A740EFC201E278900D40943 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A872E0E2016719100C1E9BE /* User.swift */; };
+		9A740EFD201E278C00D40943 /* Balance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A5AE5912012B97500B25081 /* Balance.swift */; };
+		9A740EFE201E278C00D40943 /* Balance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A5AE5912012B97500B25081 /* Balance.swift */; };
+		9A740EFF201E278F00D40943 /* Transaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AD3EE1D20138F6C0083F8FE /* Transaction.swift */; };
+		9A740F00201E279000D40943 /* Transaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AD3EE1D20138F6C0083F8FE /* Transaction.swift */; };
+		9A740F01201E293C00D40943 /* APIs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A5AE5A52012CCFC00B25081 /* APIs.swift */; };
+		9A740F02201E293D00D40943 /* APIs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A5AE5A52012CCFC00B25081 /* APIs.swift */; };
+		9A740F03201E296500D40943 /* Formatters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A5AE5A32012CA7700B25081 /* Formatters.swift */; };
+		9A740F04201E296600D40943 /* Formatters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A5AE5A32012CA7700B25081 /* Formatters.swift */; };
+		9A740F05201E296C00D40943 /* BalanceBusinessLogic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A5AE59F2012C8A400B25081 /* BalanceBusinessLogic.swift */; };
+		9A740F06201E296D00D40943 /* BalanceBusinessLogic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A5AE59F2012C8A400B25081 /* BalanceBusinessLogic.swift */; };
+		9A740F07201E297500D40943 /* TransactionsBusinessLogic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AD3EE222013985B0083F8FE /* TransactionsBusinessLogic.swift */; };
+		9A740F08201E297500D40943 /* TransactionsBusinessLogic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AD3EE222013985B0083F8FE /* TransactionsBusinessLogic.swift */; };
+		9A740F09201E297B00D40943 /* UserBusinessLogic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A872E112016719100C1E9BE /* UserBusinessLogic.swift */; };
+		9A740F0A201E297C00D40943 /* UserBusinessLogic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A872E112016719100C1E9BE /* UserBusinessLogic.swift */; };
+		9A740F0B201E298100D40943 /* ExternalTransactionsBusinessLogic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A872984201662E100C1E9BE /* ExternalTransactionsBusinessLogic.swift */; };
+		9A740F0C201E298200D40943 /* ExternalTransactionsBusinessLogic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A872984201662E100C1E9BE /* ExternalTransactionsBusinessLogic.swift */; };
+		9A740F0D201E298D00D40943 /* Dictionary+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A5AE5A92012D4A400B25081 /* Dictionary+Helpers.swift */; };
+		9A740F0E201E298E00D40943 /* Dictionary+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A5AE5A92012D4A400B25081 /* Dictionary+Helpers.swift */; };
+		9A740F0F201E299600D40943 /* Date+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AD3EE2A2013AD2A0083F8FE /* Date+Helpers.swift */; };
+		9A740F10201E299600D40943 /* Date+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AD3EE2A2013AD2A0083F8FE /* Date+Helpers.swift */; };
+		9A740F11201E299C00D40943 /* Data+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AD3EE2420139BA40083F8FE /* Data+Helpers.swift */; };
+		9A740F12201E299D00D40943 /* Data+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AD3EE2420139BA40083F8FE /* Data+Helpers.swift */; };
+		9A740F13201E29A300D40943 /* JSONCoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AD3EE1F2013965D0083F8FE /* JSONCoder.swift */; };
+		9A740F14201E29A300D40943 /* JSONCoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AD3EE1F2013965D0083F8FE /* JSONCoder.swift */; };
+		9A740F15201E29A900D40943 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A5AE5992012C0D000B25081 /* NetworkManager.swift */; };
+		9A740F16201E29A900D40943 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A5AE5992012C0D000B25081 /* NetworkManager.swift */; };
+		9A740F17201E29AE00D40943 /* ConfigManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A5AE5942012BE0500B25081 /* ConfigManager.swift */; };
+		9A740F18201E29AF00D40943 /* ConfigManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A5AE5942012BE0500B25081 /* ConfigManager.swift */; };
+		9A740F19201E29B400D40943 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ADE54C0201568D90039D774 /* DataManager.swift */; };
+		9A740F1A201E29B500D40943 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ADE54C0201568D90039D774 /* DataManager.swift */; };
+		9A740F1B201E2BCE00D40943 /* config.json in Resources */ = {isa = PBXBuildFile; fileRef = 9AD3EE2C2013B64C0083F8FE /* config.json */; };
+		9A740F1C201E2BCF00D40943 /* config.json in Resources */ = {isa = PBXBuildFile; fileRef = 9AD3EE2C2013B64C0083F8FE /* config.json */; };
 		9A872985201662E100C1E9BE /* ExternalTransactionsBusinessLogic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A872984201662E100C1E9BE /* ExternalTransactionsBusinessLogic.swift */; };
 		9A872986201662E100C1E9BE /* ExternalTransactionsBusinessLogic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A872984201662E100C1E9BE /* ExternalTransactionsBusinessLogic.swift */; };
 		9A872E0F2016719100C1E9BE /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A872E0E2016719100C1E9BE /* User.swift */; };
@@ -61,10 +112,18 @@
 		9ADE54C1201568D90039D774 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ADE54C0201568D90039D774 /* DataManager.swift */; };
 		9ADE54C2201568D90039D774 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ADE54C0201568D90039D774 /* DataManager.swift */; };
 		9ADE54C3201570B40039D774 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A5AE5992012C0D000B25081 /* NetworkManager.swift */; };
+		A7E70FDECF2732D8138872FF /* Pods_MyFinanceExtension_macOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0613BC2F22CEB669D68D23C1 /* Pods_MyFinanceExtension_macOS.framework */; };
 		FD305ACDE07231FF5EC551FB /* Pods_MyFinanceExtension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DDA4BA8DDECA7088DB8650F /* Pods_MyFinanceExtension.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		9A740EEC201E247D00D40943 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9A5AE56A2012A8AB00B25081 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9A740EDE201E247D00D40943;
+			remoteInfo = "MyFinanceExtension-macOS";
+		};
 		9AD3EE422013D9A10083F8FE /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 9A5AE56A2012A8AB00B25081 /* Project object */;
@@ -75,6 +134,17 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
+		9A740EF2201E247D00D40943 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				9A740EEE201E247D00D40943 /* MyFinanceExtension-macOS.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		9AD3EE482013D9A10083F8FE /* Embed App Extensions */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -89,10 +159,14 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		0613BC2F22CEB669D68D23C1 /* Pods_MyFinanceExtension_macOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyFinanceExtension_macOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		18E272BE0EF275A986DCD73A /* Pods_MyFinance_macOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyFinance_macOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1DDA4BA8DDECA7088DB8650F /* Pods_MyFinanceExtension.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyFinanceExtension.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D12856044DE82C2924693FD /* Pods-MyFinanceExtension.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyFinanceExtension.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MyFinanceExtension/Pods-MyFinanceExtension.debug.xcconfig"; sourceTree = "<group>"; };
 		300147042264DD560CDF6466 /* Pods-MyFinanceExtension.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyFinanceExtension.release.xcconfig"; path = "Pods/Target Support Files/Pods-MyFinanceExtension/Pods-MyFinanceExtension.release.xcconfig"; sourceTree = "<group>"; };
+		5A25FB183210480050D71829 /* Pods-MyFinanceExtension-macOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyFinanceExtension-macOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-MyFinanceExtension-macOS/Pods-MyFinanceExtension-macOS.release.xcconfig"; sourceTree = "<group>"; };
 		657896AC39A3CD1FA90830E2 /* Pods-MyFinance.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyFinance.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MyFinance/Pods-MyFinance.debug.xcconfig"; sourceTree = "<group>"; };
+		74049B79C623546C08393954 /* Pods-MyFinance-macOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyFinance-macOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MyFinance-macOS/Pods-MyFinance-macOS.debug.xcconfig"; sourceTree = "<group>"; };
 		9A5AE5722012A8AB00B25081 /* MyFinance.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyFinance.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9A5AE5752012A8AB00B25081 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9A5AE5772012A8AC00B25081 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
@@ -112,6 +186,19 @@
 		9A5AE5A72012CEE700B25081 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = SOURCE_ROOT; };
 		9A5AE5A82012CF1400B25081 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = SOURCE_ROOT; };
 		9A5AE5A92012D4A400B25081 /* Dictionary+Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Dictionary+Helpers.swift"; sourceTree = "<group>"; };
+		9A740ECB201E245200D40943 /* MyFinance-macOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "MyFinance-macOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		9A740ECD201E245200D40943 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		9A740ECF201E245200D40943 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		9A740ED1201E245200D40943 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		9A740ED4201E245200D40943 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		9A740ED6201E245200D40943 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9A740EDF201E247D00D40943 /* MyFinanceExtension-macOS.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "MyFinanceExtension-macOS.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		9A740EE2201E247D00D40943 /* TodayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayViewController.swift; sourceTree = "<group>"; };
+		9A740EE5201E247D00D40943 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/TodayViewController.xib; sourceTree = "<group>"; };
+		9A740EE7201E247D00D40943 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9A740EE9201E247D00D40943 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		9A740F1D201E2D8700D40943 /* MyFinanceExtension-macOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "MyFinanceExtension-macOS.entitlements"; sourceTree = "<group>"; };
+		9A740F1E201E2DAA00D40943 /* MyFinance-macOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "MyFinance-macOS.entitlements"; sourceTree = "<group>"; };
 		9A872984201662E100C1E9BE /* ExternalTransactionsBusinessLogic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExternalTransactionsBusinessLogic.swift; sourceTree = "<group>"; };
 		9A872E0E2016719100C1E9BE /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		9A872E112016719100C1E9BE /* UserBusinessLogic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserBusinessLogic.swift; sourceTree = "<group>"; };
@@ -133,7 +220,9 @@
 		9AD3EE4A2013DC5E0083F8FE /* TodayViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayViewModel.swift; sourceTree = "<group>"; };
 		9AD3EE5D2013DD360083F8FE /* Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Bridging-Header.h"; sourceTree = "<group>"; };
 		9ADE54C0201568D90039D774 /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
+		AD2A187BD7CC65C7F408B8B3 /* Pods-MyFinanceExtension-macOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyFinanceExtension-macOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MyFinanceExtension-macOS/Pods-MyFinanceExtension-macOS.debug.xcconfig"; sourceTree = "<group>"; };
 		C49F06F9156F2CB30EC7BDDD /* Pods-MyFinance.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyFinance.release.xcconfig"; path = "Pods/Target Support Files/Pods-MyFinance/Pods-MyFinance.release.xcconfig"; sourceTree = "<group>"; };
+		E7A907976CB05B5A1334B46A /* Pods-MyFinance-macOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyFinance-macOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-MyFinance-macOS/Pods-MyFinance-macOS.release.xcconfig"; sourceTree = "<group>"; };
 		FBD616E33767A57E45EB175A /* Pods_MyFinance.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyFinance.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -143,6 +232,23 @@
 			buildActionMask = 2147483647;
 			files = (
 				22AB5A716AF69A3C30C526B3 /* Pods_MyFinance.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9A740EC8201E245200D40943 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1B91366A7F4BE4E58DC69B29 /* Pods_MyFinance_macOS.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9A740EDC201E247D00D40943 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9A740EE0201E247D00D40943 /* NotificationCenter.framework in Frameworks */,
+				A7E70FDECF2732D8138872FF /* Pods_MyFinanceExtension_macOS.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -164,6 +270,8 @@
 				FBD616E33767A57E45EB175A /* Pods_MyFinance.framework */,
 				9AD3EE392013D9A10083F8FE /* NotificationCenter.framework */,
 				1DDA4BA8DDECA7088DB8650F /* Pods_MyFinanceExtension.framework */,
+				18E272BE0EF275A986DCD73A /* Pods_MyFinance_macOS.framework */,
+				0613BC2F22CEB669D68D23C1 /* Pods_MyFinanceExtension_macOS.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -173,6 +281,8 @@
 			children = (
 				9A5AE5742012A8AB00B25081 /* MyFinance */,
 				9AD3EE3B2013D9A10083F8FE /* MyFinanceExtension */,
+				9A740ECC201E245200D40943 /* MyFinance-macOS */,
+				9A740EE1201E247D00D40943 /* MyFinanceExtension-macOS */,
 				9A5AE5732012A8AB00B25081 /* Products */,
 				B68A00CB2E7F1881222650B9 /* Pods */,
 				6A8339920FDEA889B7701045 /* Frameworks */,
@@ -184,6 +294,8 @@
 			children = (
 				9A5AE5722012A8AB00B25081 /* MyFinance.app */,
 				9AD3EE382013D9A10083F8FE /* MyFinanceExtension.appex */,
+				9A740ECB201E245200D40943 /* MyFinance-macOS.app */,
+				9A740EDF201E247D00D40943 /* MyFinanceExtension-macOS.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -289,6 +401,31 @@
 			path = Platform;
 			sourceTree = "<group>";
 		};
+		9A740ECC201E245200D40943 /* MyFinance-macOS */ = {
+			isa = PBXGroup;
+			children = (
+				9A740F1E201E2DAA00D40943 /* MyFinance-macOS.entitlements */,
+				9A740ECD201E245200D40943 /* AppDelegate.swift */,
+				9A740ECF201E245200D40943 /* ViewController.swift */,
+				9A740ED1201E245200D40943 /* Assets.xcassets */,
+				9A740ED3201E245200D40943 /* Main.storyboard */,
+				9A740ED6201E245200D40943 /* Info.plist */,
+			);
+			path = "MyFinance-macOS";
+			sourceTree = "<group>";
+		};
+		9A740EE1201E247D00D40943 /* MyFinanceExtension-macOS */ = {
+			isa = PBXGroup;
+			children = (
+				9A740F1D201E2D8700D40943 /* MyFinanceExtension-macOS.entitlements */,
+				9A740EE2201E247D00D40943 /* TodayViewController.swift */,
+				9A740EE4201E247D00D40943 /* TodayViewController.xib */,
+				9A740EE7201E247D00D40943 /* Info.plist */,
+				9A740EE8201E247D00D40943 /* InfoPlist.strings */,
+			);
+			path = "MyFinanceExtension-macOS";
+			sourceTree = "<group>";
+		};
 		9AD3EE212013966E0083F8FE /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
@@ -318,6 +455,10 @@
 				C49F06F9156F2CB30EC7BDDD /* Pods-MyFinance.release.xcconfig */,
 				2D12856044DE82C2924693FD /* Pods-MyFinanceExtension.debug.xcconfig */,
 				300147042264DD560CDF6466 /* Pods-MyFinanceExtension.release.xcconfig */,
+				74049B79C623546C08393954 /* Pods-MyFinance-macOS.debug.xcconfig */,
+				E7A907976CB05B5A1334B46A /* Pods-MyFinance-macOS.release.xcconfig */,
+				AD2A187BD7CC65C7F408B8B3 /* Pods-MyFinanceExtension-macOS.debug.xcconfig */,
+				5A25FB183210480050D71829 /* Pods-MyFinanceExtension-macOS.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -347,6 +488,47 @@
 			productName = MyFinance;
 			productReference = 9A5AE5722012A8AB00B25081 /* MyFinance.app */;
 			productType = "com.apple.product-type.application";
+		};
+		9A740ECA201E245200D40943 /* MyFinance-macOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9A740EDA201E245200D40943 /* Build configuration list for PBXNativeTarget "MyFinance-macOS" */;
+			buildPhases = (
+				6D183F4DCB25A005174AF45F /* [CP] Check Pods Manifest.lock */,
+				9A740EC7201E245200D40943 /* Sources */,
+				9A740EC8201E245200D40943 /* Frameworks */,
+				9A740EC9201E245200D40943 /* Resources */,
+				9A740EF2201E247D00D40943 /* Embed App Extensions */,
+				4132988D3D6D1950CA11CEFB /* [CP] Embed Pods Frameworks */,
+				5BB9634CB7064E9067B98140 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				9A740EED201E247D00D40943 /* PBXTargetDependency */,
+			);
+			name = "MyFinance-macOS";
+			productName = "MyFinance-macOS";
+			productReference = 9A740ECB201E245200D40943 /* MyFinance-macOS.app */;
+			productType = "com.apple.product-type.application";
+		};
+		9A740EDE201E247D00D40943 /* MyFinanceExtension-macOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9A740EEF201E247D00D40943 /* Build configuration list for PBXNativeTarget "MyFinanceExtension-macOS" */;
+			buildPhases = (
+				98A007E94FA61452F6201B1C /* [CP] Check Pods Manifest.lock */,
+				9A740EDB201E247D00D40943 /* Sources */,
+				9A740EDC201E247D00D40943 /* Frameworks */,
+				9A740EDD201E247D00D40943 /* Resources */,
+				D717AF95ECF393AE43842392 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "MyFinanceExtension-macOS";
+			productName = "MyFinanceExtension-macOS";
+			productReference = 9A740EDF201E247D00D40943 /* MyFinanceExtension-macOS.appex */;
+			productType = "com.apple.product-type.app-extension";
 		};
 		9AD3EE372013D9A10083F8FE /* MyFinanceExtension */ = {
 			isa = PBXNativeTarget;
@@ -381,6 +563,24 @@
 						CreatedOnToolsVersion = 9.2;
 						ProvisioningStyle = Automatic;
 					};
+					9A740ECA201E245200D40943 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Sandbox = {
+								enabled = 1;
+							};
+						};
+					};
+					9A740EDE201E247D00D40943 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Sandbox = {
+								enabled = 1;
+							};
+						};
+					};
 					9AD3EE372013D9A10083F8FE = {
 						CreatedOnToolsVersion = 9.2;
 						ProvisioningStyle = Automatic;
@@ -402,6 +602,8 @@
 			targets = (
 				9A5AE5712012A8AB00B25081 /* MyFinance */,
 				9AD3EE372013D9A10083F8FE /* MyFinanceExtension */,
+				9A740ECA201E245200D40943 /* MyFinance-macOS */,
+				9A740EDE201E247D00D40943 /* MyFinanceExtension-macOS */,
 			);
 		};
 /* End PBXProject section */
@@ -417,6 +619,26 @@
 				9AD3EE2D2013B64C0083F8FE /* config.json in Resources */,
 				9A5AE57D2012A8AC00B25081 /* Assets.xcassets in Resources */,
 				9A5AE57B2012A8AC00B25081 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9A740EC9201E245200D40943 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9A740ED2201E245200D40943 /* Assets.xcassets in Resources */,
+				9A740ED5201E245200D40943 /* Main.storyboard in Resources */,
+				9A740F1B201E2BCE00D40943 /* config.json in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9A740EDD201E247D00D40943 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9A740EE6201E247D00D40943 /* TodayViewController.xib in Resources */,
+				9A740EEA201E247D00D40943 /* InfoPlist.strings in Resources */,
+				9A740F1C201E2BCF00D40943 /* config.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -450,6 +672,24 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		4132988D3D6D1950CA11CEFB /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-MyFinance-macOS/Pods-MyFinance-macOS-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/PromiseKit.root-CorePromise-Foundation-QuartzCore/PromiseKit.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PromiseKit.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MyFinance-macOS/Pods-MyFinance-macOS-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		45879BEBAFDAD5001899AD83 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -463,6 +703,21 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MyFinanceExtension/Pods-MyFinanceExtension-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5BB9634CB7064E9067B98140 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MyFinance-macOS/Pods-MyFinance-macOS-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		6C277E91235BF3232ED07A23 /* [CP] Check Pods Manifest.lock */ = {
@@ -483,6 +738,42 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		6D183F4DCB25A005174AF45F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MyFinance-macOS-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		98A007E94FA61452F6201B1C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MyFinanceExtension-macOS-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
 		9AD3EE322013B7EB0083F8FE /* SwiftLint */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -497,6 +788,21 @@
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/SwiftLint/swiftlint\"";
 		};
+		D717AF95ECF393AE43842392 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MyFinanceExtension-macOS/Pods-MyFinanceExtension-macOS-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		F67C6BD98D47F6864C27F74D /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -504,7 +810,7 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-MyFinance/Pods-MyFinance-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/PromiseKit/PromiseKit.framework",
+				"${BUILT_PRODUCTS_DIR}/PromiseKit.default-CorePromise/PromiseKit.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
@@ -562,6 +868,62 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		9A740EC7201E245200D40943 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9A740F15201E29A900D40943 /* NetworkManager.swift in Sources */,
+				9A740EF7201E278300D40943 /* HALResponse.swift in Sources */,
+				9A740F13201E29A300D40943 /* JSONCoder.swift in Sources */,
+				9A740F17201E29AE00D40943 /* ConfigManager.swift in Sources */,
+				9A740F07201E297500D40943 /* TransactionsBusinessLogic.swift in Sources */,
+				9A740ED0201E245200D40943 /* ViewController.swift in Sources */,
+				9A740F09201E297B00D40943 /* UserBusinessLogic.swift in Sources */,
+				9A740EFF201E278F00D40943 /* Transaction.swift in Sources */,
+				9A740EFB201E278900D40943 /* User.swift in Sources */,
+				9A740EF9201E278600D40943 /* Config.swift in Sources */,
+				9A740F19201E29B400D40943 /* DataManager.swift in Sources */,
+				9A740F11201E299C00D40943 /* Data+Helpers.swift in Sources */,
+				9A740EF6201E278000D40943 /* Error.swift in Sources */,
+				9A740F0B201E298100D40943 /* ExternalTransactionsBusinessLogic.swift in Sources */,
+				9A740F0F201E299600D40943 /* Date+Helpers.swift in Sources */,
+				9A740EFD201E278C00D40943 /* Balance.swift in Sources */,
+				9A740F01201E293C00D40943 /* APIs.swift in Sources */,
+				9A740F03201E296500D40943 /* Formatters.swift in Sources */,
+				9A740F05201E296C00D40943 /* BalanceBusinessLogic.swift in Sources */,
+				9A740ECE201E245200D40943 /* AppDelegate.swift in Sources */,
+				9A740F0D201E298D00D40943 /* Dictionary+Helpers.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9A740EDB201E247D00D40943 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9A740F16201E29A900D40943 /* NetworkManager.swift in Sources */,
+				9A740EF8201E278300D40943 /* HALResponse.swift in Sources */,
+				9A740F14201E29A300D40943 /* JSONCoder.swift in Sources */,
+				9A740F18201E29AF00D40943 /* ConfigManager.swift in Sources */,
+				9A740F08201E297500D40943 /* TransactionsBusinessLogic.swift in Sources */,
+				9A740EF4201E272500D40943 /* TodayViewModel.swift in Sources */,
+				9A740F0A201E297C00D40943 /* UserBusinessLogic.swift in Sources */,
+				9A740F00201E279000D40943 /* Transaction.swift in Sources */,
+				9A740EFC201E278900D40943 /* User.swift in Sources */,
+				9A740EFA201E278700D40943 /* Config.swift in Sources */,
+				9A740F1A201E29B500D40943 /* DataManager.swift in Sources */,
+				9A740F12201E299D00D40943 /* Data+Helpers.swift in Sources */,
+				9A740EF5201E277F00D40943 /* Error.swift in Sources */,
+				9A740F0C201E298200D40943 /* ExternalTransactionsBusinessLogic.swift in Sources */,
+				9A740F10201E299600D40943 /* Date+Helpers.swift in Sources */,
+				9A740EFE201E278C00D40943 /* Balance.swift in Sources */,
+				9A740F02201E293D00D40943 /* APIs.swift in Sources */,
+				9A740F04201E296600D40943 /* Formatters.swift in Sources */,
+				9A740F06201E296D00D40943 /* BalanceBusinessLogic.swift in Sources */,
+				9A740EE3201E247D00D40943 /* TodayViewController.swift in Sources */,
+				9A740F0E201E298E00D40943 /* Dictionary+Helpers.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		9AD3EE342013D9A10083F8FE /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -593,6 +955,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		9A740EED201E247D00D40943 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 9A740EDE201E247D00D40943 /* MyFinanceExtension-macOS */;
+			targetProxy = 9A740EEC201E247D00D40943 /* PBXContainerItemProxy */;
+		};
 		9AD3EE432013D9A10083F8FE /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 9AD3EE372013D9A10083F8FE /* MyFinanceExtension */;
@@ -615,6 +982,30 @@
 				9A5AE57F2012A8AC00B25081 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		9A740ED3201E245200D40943 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9A740ED4201E245200D40943 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		9A740EE4201E247D00D40943 /* TodayViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9A740EE5201E247D00D40943 /* Base */,
+			);
+			name = TodayViewController.xib;
+			sourceTree = "<group>";
+		};
+		9A740EE8201E247D00D40943 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9A740EE9201E247D00D40943 /* en */,
+			);
+			name = InfoPlist.strings;
 			sourceTree = "<group>";
 		};
 		9AD3EE3E2013D9A10083F8FE /* MainInterface.storyboard */ = {
@@ -771,6 +1162,88 @@
 			};
 			name = Release;
 		};
+		9A740ED8201E245200D40943 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 74049B79C623546C08393954 /* Pods-MyFinance-macOS.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "MyFinance-macOS/MyFinance-macOS.entitlements";
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 29MN2WH3Q3;
+				INFOPLIST_FILE = "MyFinance-macOS/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.attilanemet.MyFinance-macOS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_VERSION = 4.0;
+			};
+			name = Debug;
+		};
+		9A740ED9201E245200D40943 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E7A907976CB05B5A1334B46A /* Pods-MyFinance-macOS.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "MyFinance-macOS/MyFinance-macOS.entitlements";
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 29MN2WH3Q3;
+				INFOPLIST_FILE = "MyFinance-macOS/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.attilanemet.MyFinance-macOS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_VERSION = 4.0;
+			};
+			name = Release;
+		};
+		9A740EF0201E247D00D40943 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = AD2A187BD7CC65C7F408B8B3 /* Pods-MyFinanceExtension-macOS.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = "MyFinanceExtension-macOS/MyFinanceExtension-macOS.entitlements";
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 29MN2WH3Q3;
+				INFOPLIST_FILE = "MyFinanceExtension-macOS/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @executable_path/../../../../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.attilanemet.MyFinance-macOS.MyFinanceExtension-macOS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+			};
+			name = Debug;
+		};
+		9A740EF1201E247D00D40943 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5A25FB183210480050D71829 /* Pods-MyFinanceExtension-macOS.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = "MyFinanceExtension-macOS/MyFinanceExtension-macOS.entitlements";
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 29MN2WH3Q3;
+				INFOPLIST_FILE = "MyFinanceExtension-macOS/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @executable_path/../../../../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.attilanemet.MyFinance-macOS.MyFinanceExtension-macOS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+			};
+			name = Release;
+		};
 		9AD3EE462013D9A10083F8FE /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 2D12856044DE82C2924693FD /* Pods-MyFinanceExtension.debug.xcconfig */;
@@ -822,6 +1295,24 @@
 			buildConfigurations = (
 				9A5AE5852012A8AC00B25081 /* Debug */,
 				9A5AE5862012A8AC00B25081 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9A740EDA201E245200D40943 /* Build configuration list for PBXNativeTarget "MyFinance-macOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9A740ED8201E245200D40943 /* Debug */,
+				9A740ED9201E245200D40943 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9A740EEF201E247D00D40943 /* Build configuration list for PBXNativeTarget "MyFinanceExtension-macOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9A740EF0201E247D00D40943 /* Debug */,
+				9A740EF1201E247D00D40943 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

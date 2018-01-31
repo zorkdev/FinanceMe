@@ -1,3 +1,8 @@
+#if os(macOS)
+    import Cocoa
+    import PromiseKit
+#endif
+
 extension Date {
 
     static let daysInWeek = 7
