@@ -1,18 +1,18 @@
 import NotificationCenter
 
-class TodayViewController: NSViewController {
+class TodayViewController: UIViewController {
 
-    @IBOutlet weak var balanceLabel: NSTextField!
-    @IBOutlet weak var allowanceLabel: NSTextField!
+    @IBOutlet weak var primaryVibrancyEffectView: UIVisualEffectView!
+    @IBOutlet weak var secondaryVibrancyEffectView: UIVisualEffectView!
+    @IBOutlet weak var balanceLabel: UILabel!
+    @IBOutlet weak var allowanceLabel: UILabel!
 
     var viewModel: TodayViewModel!
 
-    override var nibName: NSNib.Name? {
-        return NSNib.Name("TodayViewController")
-    }
-
     override func viewDidLoad() {
         super.viewDidLoad()
+        primaryVibrancyEffectView.effect = UIVibrancyEffect.widgetPrimary()
+        secondaryVibrancyEffectView.effect = UIVibrancyEffect.widgetSecondary()
         viewModel = TodayViewModel(delegate: self, displayModel: TodayDisplayModel())
         viewModel.viewDidLoad()
     }
@@ -22,17 +22,11 @@ class TodayViewController: NSViewController {
 extension TodayViewController: TodayViewModelDelegate {
 
     func set(balance: NSAttributedString) {
-        balanceLabel.attributedStringValue = balance
+        balanceLabel.attributedText = balance
     }
 
     func set(allowance: NSAttributedString) {
-        let allowanceTemp = NSMutableAttributedString(attributedString: allowance)
-        let paragraphStyle = NSMutableParagraphStyle()
-        paragraphStyle.alignment = .right
-        allowanceTemp.addAttributes(
-            [NSAttributedStringKey.paragraphStyle: paragraphStyle],
-            range: NSRange(location: 0, length: allowance.length))
-        allowanceLabel.attributedStringValue = allowanceTemp
+        allowanceLabel.attributedText = allowance
     }
 
 }

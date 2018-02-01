@@ -9,20 +9,62 @@
 /* Begin PBXBuildFile section */
 		1B91366A7F4BE4E58DC69B29 /* Pods_MyFinance_macOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18E272BE0EF275A986DCD73A /* Pods_MyFinance_macOS.framework */; };
 		22AB5A716AF69A3C30C526B3 /* Pods_MyFinance.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FBD616E33767A57E45EB175A /* Pods_MyFinance.framework */; };
+		8B68FCB6C23A94B7764A1EE8 /* Pods_MyFinanceKit_macOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 44AC3487225BC41D05828D87 /* Pods_MyFinanceKit_macOS.framework */; };
+		9A4F55342023C7A900DBF68F /* MyFinanceKit_iOS.h in Headers */ = {isa = PBXBuildFile; fileRef = 9A4F55322023C7A900DBF68F /* MyFinanceKit_iOS.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9A4F55372023C7A900DBF68F /* MyFinanceKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A4F55302023C7A900DBF68F /* MyFinanceKit.framework */; };
+		9A4F55382023C7A900DBF68F /* MyFinanceKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9A4F55302023C7A900DBF68F /* MyFinanceKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		9A4F55492023C7BE00DBF68F /* MyFinanceKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A4F55422023C7BE00DBF68F /* MyFinanceKit.framework */; };
+		9A4F554A2023C7BE00DBF68F /* MyFinanceKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9A4F55422023C7BE00DBF68F /* MyFinanceKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		9A4F55502023C95300DBF68F /* JSONCoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AD3EE1F2013965D0083F8FE /* JSONCoder.swift */; };
+		9A4F55512023C95300DBF68F /* JSONCoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AD3EE1F2013965D0083F8FE /* JSONCoder.swift */; };
+		9A4F55522023C95B00DBF68F /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A5AE5992012C0D000B25081 /* NetworkManager.swift */; };
+		9A4F55532023C95B00DBF68F /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A5AE5992012C0D000B25081 /* NetworkManager.swift */; };
+		9A4F55542023C96100DBF68F /* ConfigManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A5AE5942012BE0500B25081 /* ConfigManager.swift */; };
+		9A4F55552023C96200DBF68F /* ConfigManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A5AE5942012BE0500B25081 /* ConfigManager.swift */; };
+		9A4F55562023C96700DBF68F /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ADE54C0201568D90039D774 /* DataManager.swift */; };
+		9A4F55572023C96700DBF68F /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ADE54C0201568D90039D774 /* DataManager.swift */; };
+		9A4F55592023C96E00DBF68F /* Dictionary+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A5AE5A92012D4A400B25081 /* Dictionary+Helpers.swift */; };
+		9A4F555A2023C97300DBF68F /* Date+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AD3EE2A2013AD2A0083F8FE /* Date+Helpers.swift */; };
+		9A4F555B2023C97300DBF68F /* Date+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AD3EE2A2013AD2A0083F8FE /* Date+Helpers.swift */; };
+		9A4F55602023C97A00DBF68F /* Dictionary+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A5AE5A92012D4A400B25081 /* Dictionary+Helpers.swift */; };
+		9A4F55612023C98200DBF68F /* Data+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AD3EE2420139BA40083F8FE /* Data+Helpers.swift */; };
+		9A4F55622023C98200DBF68F /* Data+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AD3EE2420139BA40083F8FE /* Data+Helpers.swift */; };
+		9A4F55632023CAA100DBF68F /* Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A5AE59B2012C45700B25081 /* Error.swift */; };
+		9A4F55642023CAA200DBF68F /* Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A5AE59B2012C45700B25081 /* Error.swift */; };
+		9A4F55652023CAA700DBF68F /* HALResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AD3EE2620139FDC0083F8FE /* HALResponse.swift */; };
+		9A4F55662023CAA800DBF68F /* HALResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AD3EE2620139FDC0083F8FE /* HALResponse.swift */; };
+		9A4F55672023CAAD00DBF68F /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A5AE5962012BF5E00B25081 /* Config.swift */; };
+		9A4F55682023CAAD00DBF68F /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A5AE5962012BF5E00B25081 /* Config.swift */; };
+		9A4F55692023CAB300DBF68F /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A872E0E2016719100C1E9BE /* User.swift */; };
+		9A4F556A2023CAB300DBF68F /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A872E0E2016719100C1E9BE /* User.swift */; };
+		9A4F556B2023CAB900DBF68F /* Balance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A5AE5912012B97500B25081 /* Balance.swift */; };
+		9A4F556C2023CAB900DBF68F /* Balance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A5AE5912012B97500B25081 /* Balance.swift */; };
+		9A4F556D2023CABF00DBF68F /* Transaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AD3EE1D20138F6C0083F8FE /* Transaction.swift */; };
+		9A4F556E2023CABF00DBF68F /* Transaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AD3EE1D20138F6C0083F8FE /* Transaction.swift */; };
+		9A4F556F2023CAC700DBF68F /* APIs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A5AE5A52012CCFC00B25081 /* APIs.swift */; };
+		9A4F55702023CAC800DBF68F /* APIs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A5AE5A52012CCFC00B25081 /* APIs.swift */; };
+		9A4F55712023CACC00DBF68F /* Formatters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A5AE5A32012CA7700B25081 /* Formatters.swift */; };
+		9A4F55722023CACD00DBF68F /* Formatters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A5AE5A32012CA7700B25081 /* Formatters.swift */; };
+		9A4F55732023CAD300DBF68F /* BalanceBusinessLogic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A5AE59F2012C8A400B25081 /* BalanceBusinessLogic.swift */; };
+		9A4F55742023CAD300DBF68F /* BalanceBusinessLogic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A5AE59F2012C8A400B25081 /* BalanceBusinessLogic.swift */; };
+		9A4F55752023CAD800DBF68F /* TransactionsBusinessLogic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AD3EE222013985B0083F8FE /* TransactionsBusinessLogic.swift */; };
+		9A4F55762023CAD900DBF68F /* TransactionsBusinessLogic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AD3EE222013985B0083F8FE /* TransactionsBusinessLogic.swift */; };
+		9A4F55772023CADE00DBF68F /* UserBusinessLogic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A872E112016719100C1E9BE /* UserBusinessLogic.swift */; };
+		9A4F55782023CADE00DBF68F /* UserBusinessLogic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A872E112016719100C1E9BE /* UserBusinessLogic.swift */; };
+		9A4F55792023CAE400DBF68F /* ExternalTransactionsBusinessLogic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A872984201662E100C1E9BE /* ExternalTransactionsBusinessLogic.swift */; };
+		9A4F557A2023CAE400DBF68F /* ExternalTransactionsBusinessLogic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A872984201662E100C1E9BE /* ExternalTransactionsBusinessLogic.swift */; };
+		9A4F557B2023CE2100DBF68F /* MyFinanceKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A4F55302023C7A900DBF68F /* MyFinanceKit.framework */; };
+		9A4F557C2023CE2C00DBF68F /* MyFinanceKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A4F55422023C7BE00DBF68F /* MyFinanceKit.framework */; };
+		9A4F557E2023D06F00DBF68F /* TodayViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AD3EE4A2013DC5E0083F8FE /* TodayViewModel.swift */; };
+		9A4F557F2023D07000DBF68F /* TodayViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AD3EE4A2013DC5E0083F8FE /* TodayViewModel.swift */; };
+		9A4F55812023D0C900DBF68F /* TodayDisplayModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A4F55802023D0C900DBF68F /* TodayDisplayModel.swift */; };
+		9A4F55832023D10E00DBF68F /* TodayDisplayModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A4F55822023D10E00DBF68F /* TodayDisplayModel.swift */; };
 		9A5AE5762012A8AB00B25081 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A5AE5752012A8AB00B25081 /* AppDelegate.swift */; };
 		9A5AE5782012A8AC00B25081 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A5AE5772012A8AC00B25081 /* HomeViewController.swift */; };
 		9A5AE57B2012A8AC00B25081 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9A5AE5792012A8AC00B25081 /* Main.storyboard */; };
 		9A5AE57D2012A8AC00B25081 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9A5AE57C2012A8AC00B25081 /* Assets.xcassets */; };
 		9A5AE5802012A8AC00B25081 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9A5AE57E2012A8AC00B25081 /* LaunchScreen.storyboard */; };
-		9A5AE5922012B97500B25081 /* Balance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A5AE5912012B97500B25081 /* Balance.swift */; };
-		9A5AE5952012BE0500B25081 /* ConfigManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A5AE5942012BE0500B25081 /* ConfigManager.swift */; };
-		9A5AE5972012BF5E00B25081 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A5AE5962012BF5E00B25081 /* Config.swift */; };
-		9A5AE59C2012C45700B25081 /* Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A5AE59B2012C45700B25081 /* Error.swift */; };
-		9A5AE5A02012C8A400B25081 /* BalanceBusinessLogic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A5AE59F2012C8A400B25081 /* BalanceBusinessLogic.swift */; };
 		9A5AE5A22012C99A00B25081 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A5AE5A12012C99A00B25081 /* HomeViewModel.swift */; };
-		9A5AE5A42012CA7700B25081 /* Formatters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A5AE5A32012CA7700B25081 /* Formatters.swift */; };
-		9A5AE5A62012CCFC00B25081 /* APIs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A5AE5A52012CCFC00B25081 /* APIs.swift */; };
-		9A5AE5AA2012D4A400B25081 /* Dictionary+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A5AE5A92012D4A400B25081 /* Dictionary+Helpers.swift */; };
 		9A740ECE201E245200D40943 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A740ECD201E245200D40943 /* AppDelegate.swift */; };
 		9A740ED0201E245200D40943 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A740ECF201E245200D40943 /* ViewController.swift */; };
 		9A740ED2201E245200D40943 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9A740ED1201E245200D40943 /* Assets.xcassets */; };
@@ -32,59 +74,8 @@
 		9A740EE6201E247D00D40943 /* TodayViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9A740EE4201E247D00D40943 /* TodayViewController.xib */; };
 		9A740EEA201E247D00D40943 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9A740EE8201E247D00D40943 /* InfoPlist.strings */; };
 		9A740EEE201E247D00D40943 /* MyFinanceExtension-macOS.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 9A740EDF201E247D00D40943 /* MyFinanceExtension-macOS.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		9A740EF4201E272500D40943 /* TodayViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AD3EE4A2013DC5E0083F8FE /* TodayViewModel.swift */; };
-		9A740EF5201E277F00D40943 /* Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A5AE59B2012C45700B25081 /* Error.swift */; };
-		9A740EF6201E278000D40943 /* Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A5AE59B2012C45700B25081 /* Error.swift */; };
-		9A740EF7201E278300D40943 /* HALResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AD3EE2620139FDC0083F8FE /* HALResponse.swift */; };
-		9A740EF8201E278300D40943 /* HALResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AD3EE2620139FDC0083F8FE /* HALResponse.swift */; };
-		9A740EF9201E278600D40943 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A5AE5962012BF5E00B25081 /* Config.swift */; };
-		9A740EFA201E278700D40943 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A5AE5962012BF5E00B25081 /* Config.swift */; };
-		9A740EFB201E278900D40943 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A872E0E2016719100C1E9BE /* User.swift */; };
-		9A740EFC201E278900D40943 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A872E0E2016719100C1E9BE /* User.swift */; };
-		9A740EFD201E278C00D40943 /* Balance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A5AE5912012B97500B25081 /* Balance.swift */; };
-		9A740EFE201E278C00D40943 /* Balance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A5AE5912012B97500B25081 /* Balance.swift */; };
-		9A740EFF201E278F00D40943 /* Transaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AD3EE1D20138F6C0083F8FE /* Transaction.swift */; };
-		9A740F00201E279000D40943 /* Transaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AD3EE1D20138F6C0083F8FE /* Transaction.swift */; };
-		9A740F01201E293C00D40943 /* APIs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A5AE5A52012CCFC00B25081 /* APIs.swift */; };
-		9A740F02201E293D00D40943 /* APIs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A5AE5A52012CCFC00B25081 /* APIs.swift */; };
-		9A740F03201E296500D40943 /* Formatters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A5AE5A32012CA7700B25081 /* Formatters.swift */; };
-		9A740F04201E296600D40943 /* Formatters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A5AE5A32012CA7700B25081 /* Formatters.swift */; };
-		9A740F05201E296C00D40943 /* BalanceBusinessLogic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A5AE59F2012C8A400B25081 /* BalanceBusinessLogic.swift */; };
-		9A740F06201E296D00D40943 /* BalanceBusinessLogic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A5AE59F2012C8A400B25081 /* BalanceBusinessLogic.swift */; };
-		9A740F07201E297500D40943 /* TransactionsBusinessLogic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AD3EE222013985B0083F8FE /* TransactionsBusinessLogic.swift */; };
-		9A740F08201E297500D40943 /* TransactionsBusinessLogic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AD3EE222013985B0083F8FE /* TransactionsBusinessLogic.swift */; };
-		9A740F09201E297B00D40943 /* UserBusinessLogic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A872E112016719100C1E9BE /* UserBusinessLogic.swift */; };
-		9A740F0A201E297C00D40943 /* UserBusinessLogic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A872E112016719100C1E9BE /* UserBusinessLogic.swift */; };
-		9A740F0B201E298100D40943 /* ExternalTransactionsBusinessLogic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A872984201662E100C1E9BE /* ExternalTransactionsBusinessLogic.swift */; };
-		9A740F0C201E298200D40943 /* ExternalTransactionsBusinessLogic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A872984201662E100C1E9BE /* ExternalTransactionsBusinessLogic.swift */; };
-		9A740F0D201E298D00D40943 /* Dictionary+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A5AE5A92012D4A400B25081 /* Dictionary+Helpers.swift */; };
-		9A740F0E201E298E00D40943 /* Dictionary+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A5AE5A92012D4A400B25081 /* Dictionary+Helpers.swift */; };
-		9A740F0F201E299600D40943 /* Date+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AD3EE2A2013AD2A0083F8FE /* Date+Helpers.swift */; };
-		9A740F10201E299600D40943 /* Date+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AD3EE2A2013AD2A0083F8FE /* Date+Helpers.swift */; };
-		9A740F11201E299C00D40943 /* Data+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AD3EE2420139BA40083F8FE /* Data+Helpers.swift */; };
-		9A740F12201E299D00D40943 /* Data+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AD3EE2420139BA40083F8FE /* Data+Helpers.swift */; };
-		9A740F13201E29A300D40943 /* JSONCoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AD3EE1F2013965D0083F8FE /* JSONCoder.swift */; };
-		9A740F14201E29A300D40943 /* JSONCoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AD3EE1F2013965D0083F8FE /* JSONCoder.swift */; };
-		9A740F15201E29A900D40943 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A5AE5992012C0D000B25081 /* NetworkManager.swift */; };
-		9A740F16201E29A900D40943 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A5AE5992012C0D000B25081 /* NetworkManager.swift */; };
-		9A740F17201E29AE00D40943 /* ConfigManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A5AE5942012BE0500B25081 /* ConfigManager.swift */; };
-		9A740F18201E29AF00D40943 /* ConfigManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A5AE5942012BE0500B25081 /* ConfigManager.swift */; };
-		9A740F19201E29B400D40943 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ADE54C0201568D90039D774 /* DataManager.swift */; };
-		9A740F1A201E29B500D40943 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ADE54C0201568D90039D774 /* DataManager.swift */; };
 		9A740F1B201E2BCE00D40943 /* config.json in Resources */ = {isa = PBXBuildFile; fileRef = 9AD3EE2C2013B64C0083F8FE /* config.json */; };
 		9A740F1C201E2BCF00D40943 /* config.json in Resources */ = {isa = PBXBuildFile; fileRef = 9AD3EE2C2013B64C0083F8FE /* config.json */; };
-		9A872985201662E100C1E9BE /* ExternalTransactionsBusinessLogic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A872984201662E100C1E9BE /* ExternalTransactionsBusinessLogic.swift */; };
-		9A872986201662E100C1E9BE /* ExternalTransactionsBusinessLogic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A872984201662E100C1E9BE /* ExternalTransactionsBusinessLogic.swift */; };
-		9A872E0F2016719100C1E9BE /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A872E0E2016719100C1E9BE /* User.swift */; };
-		9A872E102016719100C1E9BE /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A872E0E2016719100C1E9BE /* User.swift */; };
-		9A872E122016719100C1E9BE /* UserBusinessLogic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A872E112016719100C1E9BE /* UserBusinessLogic.swift */; };
-		9A872E132016719100C1E9BE /* UserBusinessLogic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A872E112016719100C1E9BE /* UserBusinessLogic.swift */; };
-		9AD3EE1E20138F6C0083F8FE /* Transaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AD3EE1D20138F6C0083F8FE /* Transaction.swift */; };
-		9AD3EE202013965D0083F8FE /* JSONCoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AD3EE1F2013965D0083F8FE /* JSONCoder.swift */; };
-		9AD3EE232013985B0083F8FE /* TransactionsBusinessLogic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AD3EE222013985B0083F8FE /* TransactionsBusinessLogic.swift */; };
-		9AD3EE2520139BA40083F8FE /* Data+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AD3EE2420139BA40083F8FE /* Data+Helpers.swift */; };
-		9AD3EE2720139FDC0083F8FE /* HALResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AD3EE2620139FDC0083F8FE /* HALResponse.swift */; };
-		9AD3EE2B2013AD2A0083F8FE /* Date+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AD3EE2A2013AD2A0083F8FE /* Date+Helpers.swift */; };
 		9AD3EE2D2013B64C0083F8FE /* config.json in Resources */ = {isa = PBXBuildFile; fileRef = 9AD3EE2C2013B64C0083F8FE /* config.json */; };
 		9AD3EE2F2013B6640083F8FE /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 9AD3EE2E2013B6640083F8FE /* Podfile */; };
 		9AD3EE312013B7BF0083F8FE /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = 9AD3EE302013B7BF0083F8FE /* .swiftlint.yml */; };
@@ -92,31 +83,27 @@
 		9AD3EE3D2013D9A10083F8FE /* TodayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AD3EE3C2013D9A10083F8FE /* TodayViewController.swift */; };
 		9AD3EE402013D9A10083F8FE /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9AD3EE3E2013D9A10083F8FE /* MainInterface.storyboard */; };
 		9AD3EE442013D9A10083F8FE /* MyFinanceExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 9AD3EE382013D9A10083F8FE /* MyFinanceExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		9AD3EE4B2013DC5E0083F8FE /* TodayViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AD3EE4A2013DC5E0083F8FE /* TodayViewModel.swift */; };
-		9AD3EE4C2013DCE10083F8FE /* Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A5AE59B2012C45700B25081 /* Error.swift */; };
-		9AD3EE4D2013DCE30083F8FE /* HALResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AD3EE2620139FDC0083F8FE /* HALResponse.swift */; };
-		9AD3EE4E2013DCE50083F8FE /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A5AE5962012BF5E00B25081 /* Config.swift */; };
-		9AD3EE4F2013DCE80083F8FE /* Balance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A5AE5912012B97500B25081 /* Balance.swift */; };
-		9AD3EE502013DCEA0083F8FE /* Transaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AD3EE1D20138F6C0083F8FE /* Transaction.swift */; };
-		9AD3EE512013DCF00083F8FE /* APIs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A5AE5A52012CCFC00B25081 /* APIs.swift */; };
-		9AD3EE522013DCF30083F8FE /* Formatters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A5AE5A32012CA7700B25081 /* Formatters.swift */; };
-		9AD3EE532013DCF60083F8FE /* BalanceBusinessLogic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A5AE59F2012C8A400B25081 /* BalanceBusinessLogic.swift */; };
-		9AD3EE542013DCF90083F8FE /* TransactionsBusinessLogic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AD3EE222013985B0083F8FE /* TransactionsBusinessLogic.swift */; };
-		9AD3EE562013DD010083F8FE /* Dictionary+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A5AE5A92012D4A400B25081 /* Dictionary+Helpers.swift */; };
-		9AD3EE572013DD040083F8FE /* Date+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AD3EE2A2013AD2A0083F8FE /* Date+Helpers.swift */; };
-		9AD3EE582013DD060083F8FE /* Data+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AD3EE2420139BA40083F8FE /* Data+Helpers.swift */; };
-		9AD3EE592013DD080083F8FE /* JSONCoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AD3EE1F2013965D0083F8FE /* JSONCoder.swift */; };
-		9AD3EE5A2013DD0A0083F8FE /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A5AE5992012C0D000B25081 /* NetworkManager.swift */; };
-		9AD3EE5B2013DD0D0083F8FE /* ConfigManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A5AE5942012BE0500B25081 /* ConfigManager.swift */; };
 		9AD3EE5C2013DD120083F8FE /* config.json in Resources */ = {isa = PBXBuildFile; fileRef = 9AD3EE2C2013B64C0083F8FE /* config.json */; };
-		9ADE54C1201568D90039D774 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ADE54C0201568D90039D774 /* DataManager.swift */; };
-		9ADE54C2201568D90039D774 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ADE54C0201568D90039D774 /* DataManager.swift */; };
-		9ADE54C3201570B40039D774 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A5AE5992012C0D000B25081 /* NetworkManager.swift */; };
 		A7E70FDECF2732D8138872FF /* Pods_MyFinanceExtension_macOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0613BC2F22CEB669D68D23C1 /* Pods_MyFinanceExtension_macOS.framework */; };
+		C39F9FF8E4FC4A4BD5538BE0 /* Pods_MyFinanceKit_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 21B3EE530AA3AECFBE345AC1 /* Pods_MyFinanceKit_iOS.framework */; };
 		FD305ACDE07231FF5EC551FB /* Pods_MyFinanceExtension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DDA4BA8DDECA7088DB8650F /* Pods_MyFinanceExtension.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		9A4F55352023C7A900DBF68F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9A5AE56A2012A8AB00B25081 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9A4F552F2023C7A900DBF68F;
+			remoteInfo = "MyFinanceKit-iOS";
+		};
+		9A4F55472023C7BE00DBF68F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9A5AE56A2012A8AB00B25081 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9A4F55412023C7BE00DBF68F;
+			remoteInfo = "MyFinanceKit-macOS";
+		};
 		9A740EEC201E247D00D40943 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 9A5AE56A2012A8AB00B25081 /* Project object */;
@@ -134,6 +121,28 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
+		9A4F553C2023C7A900DBF68F /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				9A4F55382023C7A900DBF68F /* MyFinanceKit.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9A4F554E2023C7BE00DBF68F /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				9A4F554A2023C7BE00DBF68F /* MyFinanceKit.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		9A740EF2201E247D00D40943 /* Embed App Extensions */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -160,15 +169,27 @@
 
 /* Begin PBXFileReference section */
 		0613BC2F22CEB669D68D23C1 /* Pods_MyFinanceExtension_macOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyFinanceExtension_macOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		09C82B2A82B999F2CE14A81D /* Pods-MyFinanceKit-macOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyFinanceKit-macOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-MyFinanceKit-macOS/Pods-MyFinanceKit-macOS.release.xcconfig"; sourceTree = "<group>"; };
+		17B7B8346066410A945846CC /* Pods-MyFinanceKit-macOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyFinanceKit-macOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MyFinanceKit-macOS/Pods-MyFinanceKit-macOS.debug.xcconfig"; sourceTree = "<group>"; };
 		18E272BE0EF275A986DCD73A /* Pods_MyFinance_macOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyFinance_macOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1DDA4BA8DDECA7088DB8650F /* Pods_MyFinanceExtension.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyFinanceExtension.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		21B3EE530AA3AECFBE345AC1 /* Pods_MyFinanceKit_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyFinanceKit_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D12856044DE82C2924693FD /* Pods-MyFinanceExtension.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyFinanceExtension.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MyFinanceExtension/Pods-MyFinanceExtension.debug.xcconfig"; sourceTree = "<group>"; };
 		300147042264DD560CDF6466 /* Pods-MyFinanceExtension.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyFinanceExtension.release.xcconfig"; path = "Pods/Target Support Files/Pods-MyFinanceExtension/Pods-MyFinanceExtension.release.xcconfig"; sourceTree = "<group>"; };
+		44AC3487225BC41D05828D87 /* Pods_MyFinanceKit_macOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyFinanceKit_macOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5A25FB183210480050D71829 /* Pods-MyFinanceExtension-macOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyFinanceExtension-macOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-MyFinanceExtension-macOS/Pods-MyFinanceExtension-macOS.release.xcconfig"; sourceTree = "<group>"; };
 		657896AC39A3CD1FA90830E2 /* Pods-MyFinance.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyFinance.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MyFinance/Pods-MyFinance.debug.xcconfig"; sourceTree = "<group>"; };
 		74049B79C623546C08393954 /* Pods-MyFinance-macOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyFinance-macOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MyFinance-macOS/Pods-MyFinance-macOS.debug.xcconfig"; sourceTree = "<group>"; };
 		9A4F55052023C3FC00DBF68F /* Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Bridging-Header.h"; sourceTree = "<group>"; };
 		9A4F55062023C4A700DBF68F /* Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Bridging-Header.h"; sourceTree = "<group>"; };
+		9A4F55302023C7A900DBF68F /* MyFinanceKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MyFinanceKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9A4F55322023C7A900DBF68F /* MyFinanceKit_iOS.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyFinanceKit_iOS.h; sourceTree = "<group>"; };
+		9A4F55332023C7A900DBF68F /* Info_iOS.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info_iOS.plist; sourceTree = "<group>"; };
+		9A4F55422023C7BE00DBF68F /* MyFinanceKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MyFinanceKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9A4F55442023C7BE00DBF68F /* MyFinanceKit_macOS.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyFinanceKit_macOS.h; sourceTree = "<group>"; };
+		9A4F55452023C7BE00DBF68F /* Info_macOS.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info_macOS.plist; sourceTree = "<group>"; };
+		9A4F55802023D0C900DBF68F /* TodayDisplayModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayDisplayModel.swift; sourceTree = "<group>"; };
+		9A4F55822023D10E00DBF68F /* TodayDisplayModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayDisplayModel.swift; sourceTree = "<group>"; };
 		9A5AE5722012A8AB00B25081 /* MyFinance.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyFinance.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9A5AE5752012A8AB00B25081 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9A5AE5772012A8AC00B25081 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
@@ -223,16 +244,35 @@
 		9AD3EE5D2013DD360083F8FE /* Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Bridging-Header.h"; sourceTree = "<group>"; };
 		9ADE54C0201568D90039D774 /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 		AD2A187BD7CC65C7F408B8B3 /* Pods-MyFinanceExtension-macOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyFinanceExtension-macOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MyFinanceExtension-macOS/Pods-MyFinanceExtension-macOS.debug.xcconfig"; sourceTree = "<group>"; };
+		ADBD8518395325566C1A293C /* Pods-MyFinanceKit-iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyFinanceKit-iOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-MyFinanceKit-iOS/Pods-MyFinanceKit-iOS.release.xcconfig"; sourceTree = "<group>"; };
+		BFAE274C26F56EC75AF18966 /* Pods-MyFinanceKit-iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyFinanceKit-iOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MyFinanceKit-iOS/Pods-MyFinanceKit-iOS.debug.xcconfig"; sourceTree = "<group>"; };
 		C49F06F9156F2CB30EC7BDDD /* Pods-MyFinance.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyFinance.release.xcconfig"; path = "Pods/Target Support Files/Pods-MyFinance/Pods-MyFinance.release.xcconfig"; sourceTree = "<group>"; };
 		E7A907976CB05B5A1334B46A /* Pods-MyFinance-macOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyFinance-macOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-MyFinance-macOS/Pods-MyFinance-macOS.release.xcconfig"; sourceTree = "<group>"; };
 		FBD616E33767A57E45EB175A /* Pods_MyFinance.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyFinance.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		9A4F552C2023C7A900DBF68F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C39F9FF8E4FC4A4BD5538BE0 /* Pods_MyFinanceKit_iOS.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9A4F553E2023C7BE00DBF68F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8B68FCB6C23A94B7764A1EE8 /* Pods_MyFinanceKit_macOS.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		9A5AE56F2012A8AB00B25081 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9A4F55372023C7A900DBF68F /* MyFinanceKit.framework in Frameworks */,
 				22AB5A716AF69A3C30C526B3 /* Pods_MyFinance.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -241,6 +281,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9A4F55492023C7BE00DBF68F /* MyFinanceKit.framework in Frameworks */,
 				1B91366A7F4BE4E58DC69B29 /* Pods_MyFinance_macOS.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -249,6 +290,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9A4F557C2023CE2C00DBF68F /* MyFinanceKit.framework in Frameworks */,
 				9A740EE0201E247D00D40943 /* NotificationCenter.framework in Frameworks */,
 				A7E70FDECF2732D8138872FF /* Pods_MyFinanceExtension_macOS.framework in Frameworks */,
 			);
@@ -258,6 +300,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9A4F557B2023CE2100DBF68F /* MyFinanceKit.framework in Frameworks */,
 				9AD3EE3A2013D9A10083F8FE /* NotificationCenter.framework in Frameworks */,
 				FD305ACDE07231FF5EC551FB /* Pods_MyFinanceExtension.framework in Frameworks */,
 			);
@@ -274,15 +317,49 @@
 				1DDA4BA8DDECA7088DB8650F /* Pods_MyFinanceExtension.framework */,
 				18E272BE0EF275A986DCD73A /* Pods_MyFinance_macOS.framework */,
 				0613BC2F22CEB669D68D23C1 /* Pods_MyFinanceExtension_macOS.framework */,
+				21B3EE530AA3AECFBE345AC1 /* Pods_MyFinanceKit_iOS.framework */,
+				44AC3487225BC41D05828D87 /* Pods_MyFinanceKit_macOS.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		9A4F55312023C7A900DBF68F /* MyFinanceKit */ = {
+			isa = PBXGroup;
+			children = (
+				9A4F554F2023C8E000DBF68F /* Framework */,
+				9A5AE5982012C0B400B25081 /* Platform */,
+				9A5AE58B2012B8DC00B25081 /* Model */,
+				9A4F557D2023D04700DBF68F /* ViewModel */,
+				9A5AE5932012BDDB00B25081 /* Business */,
+			);
+			path = MyFinanceKit;
+			sourceTree = "<group>";
+		};
+		9A4F554F2023C8E000DBF68F /* Framework */ = {
+			isa = PBXGroup;
+			children = (
+				9A4F55322023C7A900DBF68F /* MyFinanceKit_iOS.h */,
+				9A4F55442023C7BE00DBF68F /* MyFinanceKit_macOS.h */,
+				9A4F55332023C7A900DBF68F /* Info_iOS.plist */,
+				9A4F55452023C7BE00DBF68F /* Info_macOS.plist */,
+			);
+			path = Framework;
+			sourceTree = "<group>";
+		};
+		9A4F557D2023D04700DBF68F /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				9AD3EE4A2013DC5E0083F8FE /* TodayViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		9A5AE5692012A8AB00B25081 = {
 			isa = PBXGroup;
 			children = (
-				9A5AE5742012A8AB00B25081 /* MyFinance */,
-				9AD3EE3B2013D9A10083F8FE /* MyFinanceExtension */,
+				9A4F55312023C7A900DBF68F /* MyFinanceKit */,
+				9A5AE5742012A8AB00B25081 /* MyFinance-iOS */,
+				9AD3EE3B2013D9A10083F8FE /* MyFinanceExtension-iOS */,
 				9A740ECC201E245200D40943 /* MyFinance-macOS */,
 				9A740EE1201E247D00D40943 /* MyFinanceExtension-macOS */,
 				9A5AE5732012A8AB00B25081 /* Products */,
@@ -298,23 +375,22 @@
 				9AD3EE382013D9A10083F8FE /* MyFinanceExtension.appex */,
 				9A740ECB201E245200D40943 /* MyFinance-macOS.app */,
 				9A740EDF201E247D00D40943 /* MyFinanceExtension-macOS.appex */,
+				9A4F55302023C7A900DBF68F /* MyFinanceKit.framework */,
+				9A4F55422023C7BE00DBF68F /* MyFinanceKit.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		9A5AE5742012A8AB00B25081 /* MyFinance */ = {
+		9A5AE5742012A8AB00B25081 /* MyFinance-iOS */ = {
 			isa = PBXGroup;
 			children = (
 				9A5AE58C2012B8F000B25081 /* Application */,
-				9A5AE58B2012B8DC00B25081 /* Model */,
 				9A5AE58D2012B91300B25081 /* View */,
 				9A5AE58E2012B92C00B25081 /* Controller */,
 				9A5AE58F2012B94200B25081 /* ViewModel */,
-				9A5AE5932012BDDB00B25081 /* Business */,
-				9A5AE5982012C0B400B25081 /* Platform */,
 				9A5AE5902012B95A00B25081 /* Resources */,
 			);
-			path = MyFinance;
+			path = "MyFinance-iOS";
 			sourceTree = "<group>";
 		};
 		9A5AE58B2012B8DC00B25081 /* Model */ = {
@@ -422,6 +498,7 @@
 			children = (
 				9A740EE4201E247D00D40943 /* TodayViewController.xib */,
 				9A740EE2201E247D00D40943 /* TodayViewController.swift */,
+				9A4F55822023D10E00DBF68F /* TodayDisplayModel.swift */,
 				9A4F55062023C4A700DBF68F /* Bridging-Header.h */,
 				9A740EE7201E247D00D40943 /* Info.plist */,
 				9A740EE8201E247D00D40943 /* InfoPlist.strings */,
@@ -440,16 +517,16 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
-		9AD3EE3B2013D9A10083F8FE /* MyFinanceExtension */ = {
+		9AD3EE3B2013D9A10083F8FE /* MyFinanceExtension-iOS */ = {
 			isa = PBXGroup;
 			children = (
 				9AD3EE3E2013D9A10083F8FE /* MainInterface.storyboard */,
 				9AD3EE3C2013D9A10083F8FE /* TodayViewController.swift */,
-				9AD3EE4A2013DC5E0083F8FE /* TodayViewModel.swift */,
+				9A4F55802023D0C900DBF68F /* TodayDisplayModel.swift */,
 				9AD3EE5D2013DD360083F8FE /* Bridging-Header.h */,
 				9AD3EE412013D9A10083F8FE /* Info.plist */,
 			);
-			path = MyFinanceExtension;
+			path = "MyFinanceExtension-iOS";
 			sourceTree = "<group>";
 		};
 		B68A00CB2E7F1881222650B9 /* Pods */ = {
@@ -463,13 +540,75 @@
 				E7A907976CB05B5A1334B46A /* Pods-MyFinance-macOS.release.xcconfig */,
 				AD2A187BD7CC65C7F408B8B3 /* Pods-MyFinanceExtension-macOS.debug.xcconfig */,
 				5A25FB183210480050D71829 /* Pods-MyFinanceExtension-macOS.release.xcconfig */,
+				BFAE274C26F56EC75AF18966 /* Pods-MyFinanceKit-iOS.debug.xcconfig */,
+				ADBD8518395325566C1A293C /* Pods-MyFinanceKit-iOS.release.xcconfig */,
+				17B7B8346066410A945846CC /* Pods-MyFinanceKit-macOS.debug.xcconfig */,
+				09C82B2A82B999F2CE14A81D /* Pods-MyFinanceKit-macOS.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
+/* Begin PBXHeadersBuildPhase section */
+		9A4F552D2023C7A900DBF68F /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9A4F55342023C7A900DBF68F /* MyFinanceKit_iOS.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9A4F553F2023C7BE00DBF68F /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
 /* Begin PBXNativeTarget section */
+		9A4F552F2023C7A900DBF68F /* MyFinanceKit-iOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9A4F553B2023C7A900DBF68F /* Build configuration list for PBXNativeTarget "MyFinanceKit-iOS" */;
+			buildPhases = (
+				6945F1038EB83AC1C37DB226 /* [CP] Check Pods Manifest.lock */,
+				9A4F552B2023C7A900DBF68F /* Sources */,
+				9A4F552C2023C7A900DBF68F /* Frameworks */,
+				9A4F552D2023C7A900DBF68F /* Headers */,
+				9A4F552E2023C7A900DBF68F /* Resources */,
+				EF90E046D6E17A3739455024 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "MyFinanceKit-iOS";
+			productName = "MyFinanceKit-iOS";
+			productReference = 9A4F55302023C7A900DBF68F /* MyFinanceKit.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		9A4F55412023C7BE00DBF68F /* MyFinanceKit-macOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9A4F554B2023C7BE00DBF68F /* Build configuration list for PBXNativeTarget "MyFinanceKit-macOS" */;
+			buildPhases = (
+				45B8A505DD493A95B39A1EBE /* [CP] Check Pods Manifest.lock */,
+				9A4F553D2023C7BE00DBF68F /* Sources */,
+				9A4F553E2023C7BE00DBF68F /* Frameworks */,
+				9A4F553F2023C7BE00DBF68F /* Headers */,
+				9A4F55402023C7BE00DBF68F /* Resources */,
+				6927B3B5CA1C6E695C21DCB7 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "MyFinanceKit-macOS";
+			productName = "MyFinanceKit-macOS";
+			productReference = 9A4F55422023C7BE00DBF68F /* MyFinanceKit.framework */;
+			productType = "com.apple.product-type.framework";
+		};
 		9A5AE5712012A8AB00B25081 /* MyFinance */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 9A5AE5842012A8AC00B25081 /* Build configuration list for PBXNativeTarget "MyFinance" */;
@@ -482,11 +621,13 @@
 				FB2ED961C165C2677C806A07 /* [CP] Copy Pods Resources */,
 				9AD3EE322013B7EB0083F8FE /* SwiftLint */,
 				9AD3EE482013D9A10083F8FE /* Embed App Extensions */,
+				9A4F553C2023C7A900DBF68F /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 				9AD3EE432013D9A10083F8FE /* PBXTargetDependency */,
+				9A4F55362023C7A900DBF68F /* PBXTargetDependency */,
 			);
 			name = MyFinance;
 			productName = MyFinance;
@@ -504,11 +645,13 @@
 				9A740EF2201E247D00D40943 /* Embed App Extensions */,
 				4132988D3D6D1950CA11CEFB /* [CP] Embed Pods Frameworks */,
 				5BB9634CB7064E9067B98140 /* [CP] Copy Pods Resources */,
+				9A4F554E2023C7BE00DBF68F /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 				9A740EED201E247D00D40943 /* PBXTargetDependency */,
+				9A4F55482023C7BE00DBF68F /* PBXTargetDependency */,
 			);
 			name = "MyFinance-macOS";
 			productName = "MyFinance-macOS";
@@ -563,6 +706,14 @@
 				LastUpgradeCheck = 0920;
 				ORGANIZATIONNAME = "Attila Nemet";
 				TargetAttributes = {
+					9A4F552F2023C7A900DBF68F = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+					};
+					9A4F55412023C7BE00DBF68F = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+					};
 					9A5AE5712012A8AB00B25081 = {
 						CreatedOnToolsVersion = 9.2;
 						ProvisioningStyle = Automatic;
@@ -608,11 +759,27 @@
 				9AD3EE372013D9A10083F8FE /* MyFinanceExtension */,
 				9A740ECA201E245200D40943 /* MyFinance-macOS */,
 				9A740EDE201E247D00D40943 /* MyFinanceExtension-macOS */,
+				9A4F552F2023C7A900DBF68F /* MyFinanceKit-iOS */,
+				9A4F55412023C7BE00DBF68F /* MyFinanceKit-macOS */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		9A4F552E2023C7A900DBF68F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9A4F55402023C7BE00DBF68F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		9A5AE5702012A8AB00B25081 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -709,6 +876,24 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MyFinanceExtension/Pods-MyFinanceExtension-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		45B8A505DD493A95B39A1EBE /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MyFinanceKit-macOS-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
 		5BB9634CB7064E9067B98140 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -722,6 +907,39 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MyFinance-macOS/Pods-MyFinance-macOS-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6927B3B5CA1C6E695C21DCB7 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MyFinanceKit-macOS/Pods-MyFinanceKit-macOS-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6945F1038EB83AC1C37DB226 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MyFinanceKit-iOS-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 		6C277E91235BF3232ED07A23 /* [CP] Check Pods Manifest.lock */ = {
@@ -807,6 +1025,21 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MyFinanceExtension-macOS/Pods-MyFinanceExtension-macOS-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		EF90E046D6E17A3739455024 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MyFinanceKit-iOS/Pods-MyFinanceKit-iOS-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		F67C6BD98D47F6864C27F74D /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -843,32 +1076,67 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		9A4F552B2023C7A900DBF68F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9A4F55632023CAA100DBF68F /* Error.swift in Sources */,
+				9A4F55762023CAD900DBF68F /* TransactionsBusinessLogic.swift in Sources */,
+				9A4F55522023C95B00DBF68F /* NetworkManager.swift in Sources */,
+				9A4F55652023CAA700DBF68F /* HALResponse.swift in Sources */,
+				9A4F55722023CACD00DBF68F /* Formatters.swift in Sources */,
+				9A4F555A2023C97300DBF68F /* Date+Helpers.swift in Sources */,
+				9A4F55742023CAD300DBF68F /* BalanceBusinessLogic.swift in Sources */,
+				9A4F55562023C96700DBF68F /* DataManager.swift in Sources */,
+				9A4F556E2023CABF00DBF68F /* Transaction.swift in Sources */,
+				9A4F55502023C95300DBF68F /* JSONCoder.swift in Sources */,
+				9A4F55542023C96100DBF68F /* ConfigManager.swift in Sources */,
+				9A4F55702023CAC800DBF68F /* APIs.swift in Sources */,
+				9A4F557E2023D06F00DBF68F /* TodayViewModel.swift in Sources */,
+				9A4F55682023CAAD00DBF68F /* Config.swift in Sources */,
+				9A4F55612023C98200DBF68F /* Data+Helpers.swift in Sources */,
+				9A4F55602023C97A00DBF68F /* Dictionary+Helpers.swift in Sources */,
+				9A4F55782023CADE00DBF68F /* UserBusinessLogic.swift in Sources */,
+				9A4F556C2023CAB900DBF68F /* Balance.swift in Sources */,
+				9A4F556A2023CAB300DBF68F /* User.swift in Sources */,
+				9A4F557A2023CAE400DBF68F /* ExternalTransactionsBusinessLogic.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9A4F553D2023C7BE00DBF68F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9A4F55642023CAA200DBF68F /* Error.swift in Sources */,
+				9A4F55752023CAD800DBF68F /* TransactionsBusinessLogic.swift in Sources */,
+				9A4F55532023C95B00DBF68F /* NetworkManager.swift in Sources */,
+				9A4F55662023CAA800DBF68F /* HALResponse.swift in Sources */,
+				9A4F55712023CACC00DBF68F /* Formatters.swift in Sources */,
+				9A4F555B2023C97300DBF68F /* Date+Helpers.swift in Sources */,
+				9A4F55732023CAD300DBF68F /* BalanceBusinessLogic.swift in Sources */,
+				9A4F55572023C96700DBF68F /* DataManager.swift in Sources */,
+				9A4F556D2023CABF00DBF68F /* Transaction.swift in Sources */,
+				9A4F55512023C95300DBF68F /* JSONCoder.swift in Sources */,
+				9A4F55552023C96200DBF68F /* ConfigManager.swift in Sources */,
+				9A4F556F2023CAC700DBF68F /* APIs.swift in Sources */,
+				9A4F557F2023D07000DBF68F /* TodayViewModel.swift in Sources */,
+				9A4F55672023CAAD00DBF68F /* Config.swift in Sources */,
+				9A4F55622023C98200DBF68F /* Data+Helpers.swift in Sources */,
+				9A4F55592023C96E00DBF68F /* Dictionary+Helpers.swift in Sources */,
+				9A4F55772023CADE00DBF68F /* UserBusinessLogic.swift in Sources */,
+				9A4F556B2023CAB900DBF68F /* Balance.swift in Sources */,
+				9A4F55692023CAB300DBF68F /* User.swift in Sources */,
+				9A4F55792023CAE400DBF68F /* ExternalTransactionsBusinessLogic.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		9A5AE56E2012A8AB00B25081 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9ADE54C3201570B40039D774 /* NetworkManager.swift in Sources */,
-				9A872985201662E100C1E9BE /* ExternalTransactionsBusinessLogic.swift in Sources */,
-				9AD3EE232013985B0083F8FE /* TransactionsBusinessLogic.swift in Sources */,
 				9A5AE5782012A8AC00B25081 /* HomeViewController.swift in Sources */,
-				9A5AE5A42012CA7700B25081 /* Formatters.swift in Sources */,
-				9ADE54C1201568D90039D774 /* DataManager.swift in Sources */,
-				9A5AE5972012BF5E00B25081 /* Config.swift in Sources */,
-				9A872E122016719100C1E9BE /* UserBusinessLogic.swift in Sources */,
-				9AD3EE2520139BA40083F8FE /* Data+Helpers.swift in Sources */,
 				9A5AE5A22012C99A00B25081 /* HomeViewModel.swift in Sources */,
-				9AD3EE1E20138F6C0083F8FE /* Transaction.swift in Sources */,
-				9A5AE5952012BE0500B25081 /* ConfigManager.swift in Sources */,
-				9AD3EE2720139FDC0083F8FE /* HALResponse.swift in Sources */,
-				9AD3EE2B2013AD2A0083F8FE /* Date+Helpers.swift in Sources */,
-				9A5AE5922012B97500B25081 /* Balance.swift in Sources */,
-				9A5AE59C2012C45700B25081 /* Error.swift in Sources */,
 				9A5AE5762012A8AB00B25081 /* AppDelegate.swift in Sources */,
-				9A5AE5A62012CCFC00B25081 /* APIs.swift in Sources */,
-				9AD3EE202013965D0083F8FE /* JSONCoder.swift in Sources */,
-				9A5AE5A02012C8A400B25081 /* BalanceBusinessLogic.swift in Sources */,
-				9A5AE5AA2012D4A400B25081 /* Dictionary+Helpers.swift in Sources */,
-				9A872E0F2016719100C1E9BE /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -876,27 +1144,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9A740F15201E29A900D40943 /* NetworkManager.swift in Sources */,
-				9A740EF7201E278300D40943 /* HALResponse.swift in Sources */,
-				9A740F13201E29A300D40943 /* JSONCoder.swift in Sources */,
-				9A740F17201E29AE00D40943 /* ConfigManager.swift in Sources */,
-				9A740F07201E297500D40943 /* TransactionsBusinessLogic.swift in Sources */,
 				9A740ED0201E245200D40943 /* ViewController.swift in Sources */,
-				9A740F09201E297B00D40943 /* UserBusinessLogic.swift in Sources */,
-				9A740EFF201E278F00D40943 /* Transaction.swift in Sources */,
-				9A740EFB201E278900D40943 /* User.swift in Sources */,
-				9A740EF9201E278600D40943 /* Config.swift in Sources */,
-				9A740F19201E29B400D40943 /* DataManager.swift in Sources */,
-				9A740F11201E299C00D40943 /* Data+Helpers.swift in Sources */,
-				9A740EF6201E278000D40943 /* Error.swift in Sources */,
-				9A740F0B201E298100D40943 /* ExternalTransactionsBusinessLogic.swift in Sources */,
-				9A740F0F201E299600D40943 /* Date+Helpers.swift in Sources */,
-				9A740EFD201E278C00D40943 /* Balance.swift in Sources */,
-				9A740F01201E293C00D40943 /* APIs.swift in Sources */,
-				9A740F03201E296500D40943 /* Formatters.swift in Sources */,
-				9A740F05201E296C00D40943 /* BalanceBusinessLogic.swift in Sources */,
 				9A740ECE201E245200D40943 /* AppDelegate.swift in Sources */,
-				9A740F0D201E298D00D40943 /* Dictionary+Helpers.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -904,27 +1153,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9A740F16201E29A900D40943 /* NetworkManager.swift in Sources */,
-				9A740EF8201E278300D40943 /* HALResponse.swift in Sources */,
-				9A740F14201E29A300D40943 /* JSONCoder.swift in Sources */,
-				9A740F18201E29AF00D40943 /* ConfigManager.swift in Sources */,
-				9A740F08201E297500D40943 /* TransactionsBusinessLogic.swift in Sources */,
-				9A740EF4201E272500D40943 /* TodayViewModel.swift in Sources */,
-				9A740F0A201E297C00D40943 /* UserBusinessLogic.swift in Sources */,
-				9A740F00201E279000D40943 /* Transaction.swift in Sources */,
-				9A740EFC201E278900D40943 /* User.swift in Sources */,
-				9A740EFA201E278700D40943 /* Config.swift in Sources */,
-				9A740F1A201E29B500D40943 /* DataManager.swift in Sources */,
-				9A740F12201E299D00D40943 /* Data+Helpers.swift in Sources */,
-				9A740EF5201E277F00D40943 /* Error.swift in Sources */,
-				9A740F0C201E298200D40943 /* ExternalTransactionsBusinessLogic.swift in Sources */,
-				9A740F10201E299600D40943 /* Date+Helpers.swift in Sources */,
-				9A740EFE201E278C00D40943 /* Balance.swift in Sources */,
-				9A740F02201E293D00D40943 /* APIs.swift in Sources */,
-				9A740F04201E296600D40943 /* Formatters.swift in Sources */,
-				9A740F06201E296D00D40943 /* BalanceBusinessLogic.swift in Sources */,
+				9A4F55832023D10E00DBF68F /* TodayDisplayModel.swift in Sources */,
 				9A740EE3201E247D00D40943 /* TodayViewController.swift in Sources */,
-				9A740F0E201E298E00D40943 /* Dictionary+Helpers.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -932,33 +1162,24 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9AD3EE582013DD060083F8FE /* Data+Helpers.swift in Sources */,
-				9AD3EE5B2013DD0D0083F8FE /* ConfigManager.swift in Sources */,
-				9AD3EE592013DD080083F8FE /* JSONCoder.swift in Sources */,
-				9AD3EE502013DCEA0083F8FE /* Transaction.swift in Sources */,
-				9AD3EE542013DCF90083F8FE /* TransactionsBusinessLogic.swift in Sources */,
-				9AD3EE4D2013DCE30083F8FE /* HALResponse.swift in Sources */,
-				9AD3EE512013DCF00083F8FE /* APIs.swift in Sources */,
-				9AD3EE562013DD010083F8FE /* Dictionary+Helpers.swift in Sources */,
-				9A872E102016719100C1E9BE /* User.swift in Sources */,
-				9AD3EE522013DCF30083F8FE /* Formatters.swift in Sources */,
-				9AD3EE4E2013DCE50083F8FE /* Config.swift in Sources */,
-				9AD3EE5A2013DD0A0083F8FE /* NetworkManager.swift in Sources */,
+				9A4F55812023D0C900DBF68F /* TodayDisplayModel.swift in Sources */,
 				9AD3EE3D2013D9A10083F8FE /* TodayViewController.swift in Sources */,
-				9AD3EE572013DD040083F8FE /* Date+Helpers.swift in Sources */,
-				9A872E132016719100C1E9BE /* UserBusinessLogic.swift in Sources */,
-				9AD3EE4C2013DCE10083F8FE /* Error.swift in Sources */,
-				9AD3EE4F2013DCE80083F8FE /* Balance.swift in Sources */,
-				9AD3EE4B2013DC5E0083F8FE /* TodayViewModel.swift in Sources */,
-				9ADE54C2201568D90039D774 /* DataManager.swift in Sources */,
-				9AD3EE532013DCF60083F8FE /* BalanceBusinessLogic.swift in Sources */,
-				9A872986201662E100C1E9BE /* ExternalTransactionsBusinessLogic.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		9A4F55362023C7A900DBF68F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 9A4F552F2023C7A900DBF68F /* MyFinanceKit-iOS */;
+			targetProxy = 9A4F55352023C7A900DBF68F /* PBXContainerItemProxy */;
+		};
+		9A4F55482023C7BE00DBF68F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 9A4F55412023C7BE00DBF68F /* MyFinanceKit-macOS */;
+			targetProxy = 9A4F55472023C7BE00DBF68F /* PBXContainerItemProxy */;
+		};
 		9A740EED201E247D00D40943 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 9A740EDE201E247D00D40943 /* MyFinanceExtension-macOS */;
@@ -1023,6 +1244,116 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		9A4F55392023C7A900DBF68F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = BFAE274C26F56EC75AF18966 /* Pods-MyFinanceKit-iOS.debug.xcconfig */;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = 29MN2WH3Q3;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "$(SRCROOT)/MyFinanceKit/Framework/Info_iOS.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.attilanemet.MyFinanceKit-iOS";
+				PRODUCT_NAME = MyFinanceKit;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		9A4F553A2023C7A900DBF68F /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = ADBD8518395325566C1A293C /* Pods-MyFinanceKit-iOS.release.xcconfig */;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = 29MN2WH3Q3;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "$(SRCROOT)/MyFinanceKit/Framework/Info_iOS.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.attilanemet.MyFinanceKit-iOS";
+				PRODUCT_NAME = MyFinanceKit;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		9A4F554C2023C7BE00DBF68F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 17B7B8346066410A945846CC /* Pods-MyFinanceKit-macOS.debug.xcconfig */;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = 29MN2WH3Q3;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_VERSION = A;
+				INFOPLIST_FILE = "$(SRCROOT)/MyFinanceKit/Framework/Info_macOS.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.attilanemet.MyFinanceKit-macOS";
+				PRODUCT_NAME = MyFinanceKit;
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		9A4F554D2023C7BE00DBF68F /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 09C82B2A82B999F2CE14A81D /* Pods-MyFinanceKit-macOS.release.xcconfig */;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = 29MN2WH3Q3;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_VERSION = A;
+				INFOPLIST_FILE = "$(SRCROOT)/MyFinanceKit/Framework/Info_macOS.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.attilanemet.MyFinanceKit-macOS";
+				PRODUCT_NAME = MyFinanceKit;
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
 		9A5AE5822012A8AC00B25081 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -1138,11 +1469,11 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 29MN2WH3Q3;
-				INFOPLIST_FILE = "$(SRCROOT)/MyFinance/Application/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/MyFinance-iOS/Application/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.attilanemet.MyFinance;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "MyFinance/Application/Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "MyFinance-iOS/Application/Bridging-Header.h";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -1156,11 +1487,11 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 29MN2WH3Q3;
-				INFOPLIST_FILE = "$(SRCROOT)/MyFinance/Application/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/MyFinance-iOS/Application/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.attilanemet.MyFinance;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "MyFinance/Application/Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "MyFinance-iOS/Application/Bridging-Header.h";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -1258,12 +1589,12 @@
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 29MN2WH3Q3;
-				INFOPLIST_FILE = MyFinanceExtension/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/MyFinanceExtension-iOS/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.attilanemet.MyFinance.MyFinanceExtension;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
-				SWIFT_OBJC_BRIDGING_HEADER = "MyFinanceExtension/Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "MyFinanceExtension-iOS/Bridging-Header.h";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -1275,12 +1606,12 @@
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 29MN2WH3Q3;
-				INFOPLIST_FILE = MyFinanceExtension/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/MyFinanceExtension-iOS/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.attilanemet.MyFinance.MyFinanceExtension;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
-				SWIFT_OBJC_BRIDGING_HEADER = "MyFinanceExtension/Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "MyFinanceExtension-iOS/Bridging-Header.h";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -1289,6 +1620,24 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		9A4F553B2023C7A900DBF68F /* Build configuration list for PBXNativeTarget "MyFinanceKit-iOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9A4F55392023C7A900DBF68F /* Debug */,
+				9A4F553A2023C7A900DBF68F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9A4F554B2023C7BE00DBF68F /* Build configuration list for PBXNativeTarget "MyFinanceKit-macOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9A4F554C2023C7BE00DBF68F /* Debug */,
+				9A4F554D2023C7BE00DBF68F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		9A5AE56D2012A8AB00B25081 /* Build configuration list for PBXProject "MyFinance" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

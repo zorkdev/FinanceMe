@@ -3,5 +3,6 @@
 
 @import Cocoa;
 @import PromiseKit;
+@import MyFinanceKit;
 
 #endif

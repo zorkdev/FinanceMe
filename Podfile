@@ -24,3 +24,13 @@ target 'MyFinanceExtension-macOS' do
     platform :osx, '10.13'
     pods
 end
+
+target 'MyFinanceKit-iOS' do
+    platform :ios, '11.2'
+    pods
+end
+
+target 'MyFinanceKit-macOS' do
+    platform :osx, '10.13'
+    pods
+end
