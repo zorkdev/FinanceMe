@@ -22,7 +22,7 @@ public enum TransactionSource: String, Codable {
     case interestPayment = "INTEREST_PAYMENT"
     case nostroDeposit = "NOSTRO_DEPOSIT"
     case overdraft = "OVERDRAFT"
-    case externelRegularInbound = "EXTERNAL_REGULAR_INBOUND"
+    case externalRegularInbound = "EXTERNAL_REGULAR_INBOUND"
     case externalRegularOutbound = "EXTERNAL_REGULAR_OUTBOUND"
     case externalInbound = "EXTERNAL_INBOUND"
     case externalOutbound = "EXTERNAL_OUTBOUND"

@@ -34,6 +34,10 @@ struct HomeDisplayModel {
 
 class HomeViewModel {
 
+    enum Tab: Int {
+        case transactions = 0, bills
+    }
+
     let balanceBusinessLogic = BalanceBusinessLogic()
     let userBusinessLogic = UserBusinessLogic()
     let externalTransactionsBusinessLogic = ExternalTransactionsBusinessLogic()
@@ -43,6 +47,13 @@ class HomeViewModel {
     weak var delegate: HomeViewModelDelegate?
 
     var externalTransactions = [Transaction]()
+    var filteredTransactions = [Transaction]()
+
+    var currentTab = Tab.transactions {
+        didSet {
+            updateTransactions()
+        }
+    }
 
     init(delegate: HomeViewModelDelegate) {
         self.delegate = delegate
@@ -60,6 +71,32 @@ class HomeViewModel {
         let allowanceAttributedString = createAttributedString(from: DataManager.shared.allowance)
         delegate?.set(balance: balanceAttributedString)
         delegate?.set(allowance: allowanceAttributedString)
+    }
+
+    func segmentedControlValueChanged(value: Int) {
+        guard let tab = Tab(rawValue: value) else { return }
+        currentTab = tab
+    }
+
+    func updateTransactions() {
+        switch currentTab {
+        case .transactions:
+            filteredTransactions = externalTransactions
+                .filter {
+                    $0.source == .externalInbound ||
+                        $0.source == .externalOutbound
+                }
+                .sorted(by: { $0.created > $1.created })
+
+        case .bills:
+            filteredTransactions = externalTransactions
+                .filter {
+                    $0.source == .externalRegularInbound ||
+                        $0.source == .externalRegularOutbound
+                }
+                .sorted(by: { $0.amount > $1.amount })
+        }
+        delegate?.reloadTableView()
     }
 
     func createAttributedString(from amount: Double) -> NSAttributedString {
@@ -88,8 +125,8 @@ class HomeViewModel {
 
     func getExternalTransactions() {
         externalTransactionsBusinessLogic.getExternalTransactions().then { transactions -> Void in
-            self.externalTransactions = transactions.sorted(by: { $0.amount > $1.amount })
-            self.delegate?.reloadTableView()
+            self.externalTransactions = transactions
+            self.updateTransactions()
         }.catch { error in
             print(error)
         }

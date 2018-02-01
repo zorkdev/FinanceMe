@@ -16,6 +16,10 @@ class HomeViewController: UIViewController {
         viewModel.viewDidLoad()
     }
 
+    @IBAction func segmentedControlValueChanged(_ sender: UISegmentedControl) {
+        viewModel.segmentedControlValueChanged(value: sender.selectedSegmentIndex)
+    }
+
 }
 
 extension HomeViewController: HomeViewModelDelegate {
@@ -37,12 +41,12 @@ extension HomeViewController: HomeViewModelDelegate {
 extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return viewModel.externalTransactions.count
+        return viewModel.filteredTransactions.count
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "HomeTableViewCell", for: indexPath)
-        let transaction = viewModel.externalTransactions[indexPath.row]
+        let transaction = viewModel.filteredTransactions[indexPath.row]
         cell.textLabel?.text = transaction.narrative
         cell.detailTextLabel?.text = Formatters.currencyPlusSign.string(from: NSNumber(value: transaction.amount))
 
