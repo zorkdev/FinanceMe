@@ -1,7 +1,3 @@
-#if os(macOS)
-import Cocoa
-#endif
-
 struct Balance: Codable {
 
     let clearedBalance: Double

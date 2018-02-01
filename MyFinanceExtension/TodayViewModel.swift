@@ -1,8 +1,3 @@
-#if os(macOS)
-import Cocoa
-import PromiseKit
-#endif
-
 protocol TodayViewModelDelegate: class {
 
     func set(balance: NSAttributedString)

@@ -1,8 +1,3 @@
-#if os(macOS)
-    import Cocoa
-    import PromiseKit
-#endif
-
 typealias JSON = [String: Any]
 
 class JSONCoder {

@@ -1,7 +1,3 @@
-#if os(macOS)
-import Cocoa
-#endif
-
 struct User: Codable {
 
     let name: String

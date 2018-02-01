@@ -1,8 +1,3 @@
-#if os(macOS)
-    import Cocoa
-    import PromiseKit
-#endif
-
 struct ExternalTransactionsBusinessLogic {
 
     func getExternalTransactions(from: Date? = nil,

@@ -1,7 +1,3 @@
-#if os(macOS)
-import Cocoa
-#endif
-
 enum TransactionDirection: String, Codable {
 
     case none = "NONE"

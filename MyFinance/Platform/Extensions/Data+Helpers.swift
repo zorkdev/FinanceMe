@@ -1,8 +1,3 @@
-#if os(macOS)
-    import Cocoa
-    import PromiseKit
-#endif
-
 extension Data {
 
     var prettyPrinted: String {

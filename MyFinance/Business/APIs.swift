@@ -1,8 +1,3 @@
-#if os(macOS)
-import Cocoa
-import PromiseKit
-#endif
-
 enum API {
     case starling
     case zorkdev
