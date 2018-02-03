@@ -29,6 +29,10 @@ class AddTransactionViewModel: ViewModelType {
         self.dataDelegate = dataDelegate
     }
 
+    func validate(amount: String) -> Bool {
+        return Validators.validate(amount: amount)
+    }
+
     func saveButtonTapped(with displayModel: AddTransactionDisplayModel) {
         let amountString = displayModel.amount
             .components(separatedBy: .whitespaces)

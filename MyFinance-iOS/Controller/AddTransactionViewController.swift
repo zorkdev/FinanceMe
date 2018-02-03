@@ -23,7 +23,9 @@ class AddTransactionViewController: BaseViewController {
     }
 
     private func setupTextFields() {
-        amountField.inputAccessoryView = keyBoardToolbar
+        if UIDevice.current.userInterfaceIdiom == .phone {
+            amountField.inputAccessoryView = keyBoardToolbar
+        }
 
         let createdPicker = UIDatePicker()
         createdPicker.addTarget(self,
@@ -82,6 +84,18 @@ extension AddTransactionViewController: UIPickerViewDelegate, UIPickerViewDataSo
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         selectedSource = row
         sourceField.text = viewModel.pickerViewTitle(for: row, for: component)
+    }
+
+}
+
+extension AddTransactionViewController {
+
+    func textField(_ textField: UITextField,
+                   shouldChangeCharactersIn range: NSRange,
+                   replacementString string: String) -> Bool {
+        guard textField == amountField else { return true }
+        let text = (textField.text ?? "") + string
+        return viewModel.validate(amount: text)
     }
 
 }
