@@ -1,4 +1,4 @@
-class HomeViewController: UIViewController {
+class HomeViewController: BaseViewController {
 
     @IBOutlet private weak var balanceLabel: UILabel!
     @IBOutlet private weak var allowanceLabel: UILabel!

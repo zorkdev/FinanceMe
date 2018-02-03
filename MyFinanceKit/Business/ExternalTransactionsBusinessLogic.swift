@@ -7,7 +7,7 @@ public struct ExternalTransactionsBusinessLogic {
 
     public func getExternalTransactions(from: Date? = nil,
                                         to: Date? = nil) -> Promise<[Transaction]> {
-        guard let url = ZorkdevAPI.getTransactions.url else {
+        guard let url = ZorkdevAPI.transactions.url else {
             return Promise(error: AppError.apiPathInvalid)
         }
 

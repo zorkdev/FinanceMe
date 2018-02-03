@@ -6,7 +6,7 @@ public struct BalanceBusinessLogic {
     public init() {}
 
     public func getBalance() -> Promise<Balance> {
-        guard let url = StarlingAPI.getBalance.url else {
+        guard let url = StarlingAPI.balance.url else {
             return Promise(error: AppError.apiPathInvalid)
         }
 

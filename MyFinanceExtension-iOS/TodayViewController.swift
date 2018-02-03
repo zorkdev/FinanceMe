@@ -1,6 +1,6 @@
 import NotificationCenter
 
-class TodayViewController: UIViewController {
+class TodayViewController: BaseViewController {
 
     @IBOutlet private weak var primaryVibrancyEffectView: UIVisualEffectView!
     @IBOutlet private weak var secondaryVibrancyEffectView: UIVisualEffectView!

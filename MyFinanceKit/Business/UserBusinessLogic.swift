@@ -6,7 +6,7 @@ public struct UserBusinessLogic {
     public init() {}
 
     public func getCurrentUser() -> Promise<User> {
-        guard let url = ZorkdevAPI.getUser.url else {
+        guard let url = ZorkdevAPI.user.url else {
             return Promise(error: AppError.apiPathInvalid)
         }
 

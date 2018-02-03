@@ -27,11 +27,42 @@ public enum TransactionSource: String, Codable {
     case externalInbound = "EXTERNAL_INBOUND"
     case externalOutbound = "EXTERNAL_OUTBOUND"
 
+    public static let externalValues: [TransactionSource] = [.externalOutbound,
+                                                             .externalInbound,
+                                                             .externalRegularOutbound,
+                                                             .externalRegularInbound]
+
+    public var direction: TransactionDirection {
+        switch self {
+        case .internalTransfer,
+             .fasterPaymentsReversal:
+            return .none
+
+        case .directDebit,
+             .directDebitDispute,
+             .masterCard,
+             .fasterPaymentsOut,
+             .overdraft,
+             .externalOutbound,
+             .externalRegularOutbound:
+            return .outbound
+
+        case .directCredit,
+             .fasterPaymentsIn,
+             .stripeFunding,
+             .interestPayment,
+             .nostroDeposit,
+             .externalInbound,
+             .externalRegularInbound:
+            return .inbound
+        }
+    }
+
 }
 
 public struct Transaction: Codable {
 
-    public let id: String
+    public let id: String?
     public let currency: String
     public let amount: Double
     public let direction: TransactionDirection
@@ -39,6 +70,24 @@ public struct Transaction: Codable {
     public let narrative: String
     public let source: TransactionSource
     public let balance: Double
+
+    public init(id: String? = nil,
+                currency: String = "GBP",
+                amount: Double,
+                direction: TransactionDirection,
+                created: Date,
+                narrative: String,
+                source: TransactionSource,
+                balance: Double = 0.0) {
+        self.id = id
+        self.currency = currency
+        self.amount = amount
+        self.direction = direction
+        self.created = created
+        self.narrative = narrative
+        self.source = source
+        self.balance = balance
+    }
 
 }
 

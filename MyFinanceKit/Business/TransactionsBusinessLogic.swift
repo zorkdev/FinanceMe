@@ -7,7 +7,7 @@ public struct TransactionsBusinessLogic {
 
     public func getTransactions(from: Date? = nil,
                                 to: Date? = nil) -> Promise<[Transaction]> {
-        guard let url = StarlingAPI.getTransactions.url else {
+        guard let url = StarlingAPI.transactions.url else {
             return Promise(error: AppError.apiPathInvalid)
         }
 
@@ -31,6 +31,26 @@ public struct TransactionsBusinessLogic {
             }
 
             return Promise(value: halResponse.embedded.transactions)
+        }
+    }
+
+    public func create(transaction: Transaction) -> Promise<Transaction> {
+        guard let url = ZorkdevAPI.transactions.url else {
+            return Promise(error: AppError.apiPathInvalid)
+        }
+
+        let body = JSONCoder.shared.encode(transaction)
+
+        return NetworkManager.shared.performRequest(api: .zorkdev,
+                                                    method: .post,
+                                                    url: url,
+                                                    body: body)
+            .then { data in
+                guard let transaction = JSONCoder.shared.decode(Transaction.self, from: data) else {
+                    return Promise(error: AppError.jsonParsingError)
+                }
+
+                return Promise(value: transaction)
         }
     }
 
