@@ -245,6 +245,7 @@ extension HomeViewModel {
 
     private func delete(transaction: Transaction, section: Int, row: Int?) {
         externalTransactionsBusinessLogic.delete(transaction: transaction).then { _ -> Void in
+            self.getUser()
             self.externalTransactions = self.externalTransactions.filter { $0.id != transaction.id }
             self.updateTransactions()
             switch transaction.source {
@@ -276,6 +277,7 @@ extension HomeViewModel {
 extension HomeViewModel: AddTransactionViewModelDataDelegate {
 
     func didCreate(transaction: Transaction) {
+        getUser()
         externalTransactions.append(transaction)
         updateTransactions()
         (delegate as? HomeViewModelDelegate)?.reloadTableView()

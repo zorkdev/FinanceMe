@@ -2,6 +2,8 @@ import Foundation
 
 public struct Formatters {
 
+    public static let currencySymbol = Locale.current.currencySymbol ?? "£"
+
     public static let apiDate: DateFormatter = {
         let formatter = DateFormatter()
         formatter.timeZone = Foundation.TimeZone(abbreviation: "UTC")

@@ -25,7 +25,7 @@ public protocol TodayDisplayModelType {
 
 public extension TodayDisplayModelType {
 
-    var defaultAmount: String { return "£0.00" }
+    var defaultAmount: String { return "\(Formatters.currencySymbol)0.00" }
 
     func amountAttributedString(from string: String) -> NSAttributedString {
         let isNegative = string.first == "-"

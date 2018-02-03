@@ -35,26 +35,20 @@ public extension TodayPresentable {
         delegate?.set(allowance: allowanceAttributedString)
     }
 
-    func createAttributedString(from amount: Double) -> NSAttributedString {
+    public func createAttributedString(from amount: Double) -> NSAttributedString {
         let currencyString = Formatters.currency
             .string(from: NSNumber(value: amount)) ?? displayModel.defaultAmount
         return displayModel.amountAttributedString(from: currencyString)
     }
 
-}
-
-// MARK: - Private methods
-
-private extension TodayPresentable {
-
-    private func getBalance() -> Promise<Void> {
+    @discardableResult public func getBalance() -> Promise<Void> {
         return BalanceBusinessLogic().getBalance().then { balance -> Void in
             let balanceAttributedString = self.createAttributedString(from: balance.effectiveBalance)
             self.delegate?.set(balance: balanceAttributedString)
         }
     }
 
-    private func getUser() -> Promise<Void> {
+    @discardableResult public func getUser() -> Promise<Void> {
         return UserBusinessLogic().getCurrentUser().then { user -> Void in
             let allowanceAttributedString = self.createAttributedString(from: user.allowance)
             self.delegate?.set(allowance: allowanceAttributedString)

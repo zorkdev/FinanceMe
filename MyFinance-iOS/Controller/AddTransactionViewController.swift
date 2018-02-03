@@ -4,6 +4,7 @@ class AddTransactionViewController: BaseViewController {
     @IBOutlet private weak var narrativeField: UITextField!
     @IBOutlet private weak var sourceField: UITextField!
     @IBOutlet private weak var createdField: UITextField!
+    @IBOutlet private weak var saveButton: UIButton!
 
     private var viewModel: AddTransactionViewModel!
 
@@ -43,11 +44,28 @@ class AddTransactionViewController: BaseViewController {
         sourceField.inputAccessoryView = keyBoardToolbar
         sourceField.tintColor = .clear
         sourceField.text = viewModel.pickerViewTitle(for: selectedSource, for: 0)
+
+        updateSaveButton()
     }
 
     @objc func createdPickerValueChanged(_ sender: UIDatePicker) {
         selectedDate = sender.date
         createdField.text = AddTransactionDisplayModel.dateString(from: selectedDate)
+    }
+
+    func updateSaveButton() {
+        let addTransactionDisplayModel = AddTransactionDisplayModel(amount: amountField.text ?? "",
+                                                                    narrative: narrativeField.text ?? "",
+                                                                    source: selectedSource,
+                                                                    created: selectedDate)
+        let shouldEnable = viewModel.shouldEnableSaveButton(displayModel: addTransactionDisplayModel)
+
+        saveButton.isEnabled = shouldEnable
+
+        UIView.animate(withDuration: AddTransactionDisplayModel.buttonAnimationDuration) {
+            self.saveButton.alpha = shouldEnable ? AddTransactionDisplayModel.buttonEnabledAlpha :
+                                                   AddTransactionDisplayModel.buttonDisabledAlpha
+        }
     }
 
     @IBAction func saveButtonTapped(_ sender: UIButton) {
@@ -90,12 +108,22 @@ extension AddTransactionViewController: UIPickerViewDelegate, UIPickerViewDataSo
 
 extension AddTransactionViewController {
 
+    @IBAction func textFieldValueChanged(_ sender: UITextField) {
+        updateSaveButton()
+    }
+
     func textField(_ textField: UITextField,
                    shouldChangeCharactersIn range: NSRange,
                    replacementString string: String) -> Bool {
-        guard textField == amountField else { return true }
-        let text = (textField.text ?? "") + string
-        return viewModel.validate(amount: text)
+        guard textField == amountField,
+            let originalText = textField.text,
+            let range = Range(range, in: originalText)  else { return true }
+
+        let text = originalText.replacingCharacters(in: range, with: string)
+        textField.text = viewModel.formatted(amount: text, original: originalText)
+        updateSaveButton()
+
+        return false
     }
 
 }

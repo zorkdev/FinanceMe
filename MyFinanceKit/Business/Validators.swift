@@ -9,7 +9,8 @@ public struct Validators {
     }()
 
     public static func validate(amount: String) -> Bool {
-        return amount.range(of: "^(0\\.?|0\\.\\d{0,2}|[1-9]\\d{0,6}|[1-9]\\d{0,6}\\.\\d{0,2})$",
+        let c = Formatters.currencySymbol
+        return amount.range(of: "^(\(c)?0\\.?|\(c)?0\\.\\d{0,2}|\(c)?[1-9]\\d{0,6}|\(c)?[1-9]\\d{0,6}\\.\\d{0,2})$",
                             options: .regularExpression) != nil
     }
 
