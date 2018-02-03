@@ -84,6 +84,15 @@
 		9AD3EE402013D9A10083F8FE /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9AD3EE3E2013D9A10083F8FE /* MainInterface.storyboard */; };
 		9AD3EE442013D9A10083F8FE /* MyFinanceExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 9AD3EE382013D9A10083F8FE /* MyFinanceExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		9AD3EE5C2013DD120083F8FE /* config.json in Resources */ = {isa = PBXBuildFile; fileRef = 9AD3EE2C2013B64C0083F8FE /* config.json */; };
+		9AD96C8F2025138400D37F23 /* HomeDisplayModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AD96C8E2025138400D37F23 /* HomeDisplayModel.swift */; };
+		9AD96C912025275C00D37F23 /* ViewModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AD96C902025275C00D37F23 /* ViewModelType.swift */; };
+		9AD96C922025275C00D37F23 /* ViewModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AD96C902025275C00D37F23 /* ViewModelType.swift */; };
+		9AD96C94202529E100D37F23 /* TodayPresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AD96C93202529E100D37F23 /* TodayPresentable.swift */; };
+		9AD96C95202529E100D37F23 /* TodayPresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AD96C93202529E100D37F23 /* TodayPresentable.swift */; };
+		9AD96C9720252CBF00D37F23 /* HomeCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AD96C9620252CBF00D37F23 /* HomeCellModel.swift */; };
+		9AD96C992025341D00D37F23 /* HomeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AD96C982025341D00D37F23 /* HomeTableViewCell.swift */; };
+		9AD96C9B202534D600D37F23 /* StringRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AD96C9A202534D600D37F23 /* StringRepresentable.swift */; };
+		9AD96C9C202534D600D37F23 /* StringRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AD96C9A202534D600D37F23 /* StringRepresentable.swift */; };
 		A7E70FDECF2732D8138872FF /* Pods_MyFinanceExtension_macOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0613BC2F22CEB669D68D23C1 /* Pods_MyFinanceExtension_macOS.framework */; };
 		C39F9FF8E4FC4A4BD5538BE0 /* Pods_MyFinanceKit_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 21B3EE530AA3AECFBE345AC1 /* Pods_MyFinanceKit_iOS.framework */; };
 		FD305ACDE07231FF5EC551FB /* Pods_MyFinanceExtension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DDA4BA8DDECA7088DB8650F /* Pods_MyFinanceExtension.framework */; };
@@ -242,6 +251,12 @@
 		9AD3EE412013D9A10083F8FE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9AD3EE4A2013DC5E0083F8FE /* TodayViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayViewModel.swift; sourceTree = "<group>"; };
 		9AD3EE5D2013DD360083F8FE /* Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Bridging-Header.h"; sourceTree = "<group>"; };
+		9AD96C8E2025138400D37F23 /* HomeDisplayModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeDisplayModel.swift; sourceTree = "<group>"; };
+		9AD96C902025275C00D37F23 /* ViewModelType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelType.swift; sourceTree = "<group>"; };
+		9AD96C93202529E100D37F23 /* TodayPresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayPresentable.swift; sourceTree = "<group>"; };
+		9AD96C9620252CBF00D37F23 /* HomeCellModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCellModel.swift; sourceTree = "<group>"; };
+		9AD96C982025341D00D37F23 /* HomeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableViewCell.swift; sourceTree = "<group>"; };
+		9AD96C9A202534D600D37F23 /* StringRepresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringRepresentable.swift; sourceTree = "<group>"; };
 		9ADE54C0201568D90039D774 /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 		AD2A187BD7CC65C7F408B8B3 /* Pods-MyFinanceExtension-macOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyFinanceExtension-macOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MyFinanceExtension-macOS/Pods-MyFinanceExtension-macOS.debug.xcconfig"; sourceTree = "<group>"; };
 		ADBD8518395325566C1A293C /* Pods-MyFinanceKit-iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyFinanceKit-iOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-MyFinanceKit-iOS/Pods-MyFinanceKit-iOS.release.xcconfig"; sourceTree = "<group>"; };
@@ -349,6 +364,8 @@
 		9A4F557D2023D04700DBF68F /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				9AD96C902025275C00D37F23 /* ViewModelType.swift */,
+				9AD96C93202529E100D37F23 /* TodayPresentable.swift */,
 				9AD3EE4A2013DC5E0083F8FE /* TodayViewModel.swift */,
 			);
 			path = ViewModel;
@@ -426,6 +443,7 @@
 			children = (
 				9A5AE57E2012A8AC00B25081 /* LaunchScreen.storyboard */,
 				9A5AE5792012A8AC00B25081 /* Main.storyboard */,
+				9AD96C982025341D00D37F23 /* HomeTableViewCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -442,6 +460,8 @@
 			isa = PBXGroup;
 			children = (
 				9A5AE5A12012C99A00B25081 /* HomeViewModel.swift */,
+				9AD96C8E2025138400D37F23 /* HomeDisplayModel.swift */,
+				9AD96C9620252CBF00D37F23 /* HomeCellModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -475,6 +495,7 @@
 				9A5AE5992012C0D000B25081 /* NetworkManager.swift */,
 				9A5AE5942012BE0500B25081 /* ConfigManager.swift */,
 				9ADE54C0201568D90039D774 /* DataManager.swift */,
+				9AD96C9A202534D600D37F23 /* StringRepresentable.swift */,
 			);
 			path = Platform;
 			sourceTree = "<group>";
@@ -1087,6 +1108,8 @@
 				9A4F55722023CACD00DBF68F /* Formatters.swift in Sources */,
 				9A4F555A2023C97300DBF68F /* Date+Helpers.swift in Sources */,
 				9A4F55742023CAD300DBF68F /* BalanceBusinessLogic.swift in Sources */,
+				9AD96C9B202534D600D37F23 /* StringRepresentable.swift in Sources */,
+				9AD96C94202529E100D37F23 /* TodayPresentable.swift in Sources */,
 				9A4F55562023C96700DBF68F /* DataManager.swift in Sources */,
 				9A4F556E2023CABF00DBF68F /* Transaction.swift in Sources */,
 				9A4F55502023C95300DBF68F /* JSONCoder.swift in Sources */,
@@ -1100,6 +1123,7 @@
 				9A4F556C2023CAB900DBF68F /* Balance.swift in Sources */,
 				9A4F556A2023CAB300DBF68F /* User.swift in Sources */,
 				9A4F557A2023CAE400DBF68F /* ExternalTransactionsBusinessLogic.swift in Sources */,
+				9AD96C912025275C00D37F23 /* ViewModelType.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1114,6 +1138,8 @@
 				9A4F55712023CACC00DBF68F /* Formatters.swift in Sources */,
 				9A4F555B2023C97300DBF68F /* Date+Helpers.swift in Sources */,
 				9A4F55732023CAD300DBF68F /* BalanceBusinessLogic.swift in Sources */,
+				9AD96C9C202534D600D37F23 /* StringRepresentable.swift in Sources */,
+				9AD96C95202529E100D37F23 /* TodayPresentable.swift in Sources */,
 				9A4F55572023C96700DBF68F /* DataManager.swift in Sources */,
 				9A4F556D2023CABF00DBF68F /* Transaction.swift in Sources */,
 				9A4F55512023C95300DBF68F /* JSONCoder.swift in Sources */,
@@ -1127,6 +1153,7 @@
 				9A4F556B2023CAB900DBF68F /* Balance.swift in Sources */,
 				9A4F55692023CAB300DBF68F /* User.swift in Sources */,
 				9A4F55792023CAE400DBF68F /* ExternalTransactionsBusinessLogic.swift in Sources */,
+				9AD96C922025275C00D37F23 /* ViewModelType.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1134,9 +1161,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9AD96C992025341D00D37F23 /* HomeTableViewCell.swift in Sources */,
 				9A5AE5782012A8AC00B25081 /* HomeViewController.swift in Sources */,
+				9AD96C8F2025138400D37F23 /* HomeDisplayModel.swift in Sources */,
 				9A5AE5A22012C99A00B25081 /* HomeViewModel.swift in Sources */,
 				9A5AE5762012A8AB00B25081 /* AppDelegate.swift in Sources */,
+				9AD96C9720252CBF00D37F23 /* HomeCellModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1301,7 +1331,7 @@
 			baseConfigurationReference = 17B7B8346066410A945846CC /* Pods-MyFinanceKit-macOS.debug.xcconfig */;
 			buildSettings = {
 				APPLICATION_EXTENSION_API_ONLY = YES;
-				CODE_SIGN_IDENTITY = "Mac Developer";
+				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
@@ -1330,7 +1360,7 @@
 			baseConfigurationReference = 09C82B2A82B999F2CE14A81D /* Pods-MyFinanceKit-macOS.release.xcconfig */;
 			buildSettings = {
 				APPLICATION_EXTENSION_API_ONLY = YES;
-				CODE_SIGN_IDENTITY = "Mac Developer";
+				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;

@@ -1,0 +1,3 @@
+class HomeTableViewCell: UITableViewCell, StringRepresentable {
+
+}

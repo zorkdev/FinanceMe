@@ -2,12 +2,12 @@ import NotificationCenter
 
 class TodayViewController: UIViewController {
 
-    @IBOutlet weak var primaryVibrancyEffectView: UIVisualEffectView!
-    @IBOutlet weak var secondaryVibrancyEffectView: UIVisualEffectView!
-    @IBOutlet weak var balanceLabel: UILabel!
-    @IBOutlet weak var allowanceLabel: UILabel!
+    @IBOutlet private weak var primaryVibrancyEffectView: UIVisualEffectView!
+    @IBOutlet private weak var secondaryVibrancyEffectView: UIVisualEffectView!
+    @IBOutlet private weak var balanceLabel: UILabel!
+    @IBOutlet private weak var allowanceLabel: UILabel!
 
-    var viewModel: TodayViewModel!
+    private var viewModel: TodayViewModel!
 
     override func viewDidLoad() {
         super.viewDidLoad()

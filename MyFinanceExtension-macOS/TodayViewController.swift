@@ -2,13 +2,13 @@ import NotificationCenter
 
 class TodayViewController: NSViewController {
 
-    @IBOutlet weak var balanceLabel: NSTextField!
-    @IBOutlet weak var allowanceLabel: NSTextField!
+    @IBOutlet private weak var balanceLabel: NSTextField!
+    @IBOutlet private weak var allowanceLabel: NSTextField!
 
-    var viewModel: TodayViewModel!
+    private var viewModel: TodayViewModel!
 
     override var nibName: NSNib.Name? {
-        return NSNib.Name("TodayViewController")
+        return NSNib.Name(String(describing: TodayViewController.self))
     }
 
     override func viewDidLoad() {

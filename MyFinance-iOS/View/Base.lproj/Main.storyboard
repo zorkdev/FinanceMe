@@ -75,7 +75,7 @@
                                         <rect key="frame" x="95" y="80" width="185" height="29"/>
                                         <segments>
                                             <segment title="Transactions"/>
-                                            <segment title="Bills"/>
+                                            <segment title="Regulars"/>
                                         </segments>
                                         <color key="tintColor" white="0.94695982005861068" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <connections>
@@ -225,7 +225,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="24c-tr-Dus" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="836" y="75"/>
+            <point key="canvasLocation" x="1431" y="90"/>
         </scene>
     </scenes>
 </document>

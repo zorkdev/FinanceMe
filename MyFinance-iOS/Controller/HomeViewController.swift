@@ -1,10 +1,10 @@
 class HomeViewController: UIViewController {
 
-    @IBOutlet weak var balanceLabel: UILabel!
-    @IBOutlet weak var allowanceLabel: UILabel!
-    @IBOutlet weak var tableView: UITableView!
+    @IBOutlet private weak var balanceLabel: UILabel!
+    @IBOutlet private weak var allowanceLabel: UILabel!
+    @IBOutlet private weak var tableView: UITableView!
 
-    var viewModel: HomeViewModel!
+    private var viewModel: HomeViewModel!
 
     override var preferredStatusBarStyle: UIStatusBarStyle {
         return .lightContent
@@ -38,17 +38,16 @@ extension HomeViewController: HomeViewModelDelegate {
 
 }
 
-extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
+extension HomeViewController: UITableViewDataSource {
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return viewModel.filteredTransactions.count
+        return viewModel.cellModels.count
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "HomeTableViewCell", for: indexPath)
-        let transaction = viewModel.filteredTransactions[indexPath.row]
-        cell.textLabel?.text = transaction.narrative
-        cell.detailTextLabel?.text = Formatters.currencyPlusSign.string(from: NSNumber(value: transaction.amount))
+        let cell = tableView.dequeueReusableCell(withIdentifier: HomeTableViewCell.string, for: indexPath)
+        let cellModel = viewModel.cellModels[indexPath.row]
+        cell.set(homeCellModel: cellModel)
 
         return cell
     }

@@ -1,7 +1,5 @@
 struct TodayDisplayModel: TodayDisplayModelType {
 
-    let defaultAmount = "£0.00"
-
     func amountAttributedString(from string: String) -> NSAttributedString {
         let isNegative = string.first == "-"
         let color = isNegative ? UIColor.red : UIColor.darkText
