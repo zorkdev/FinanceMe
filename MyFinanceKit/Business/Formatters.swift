@@ -28,6 +28,20 @@ public struct Formatters {
         return formatter
     }()
 
+    public static let dateWithoutYear: DateFormatter = {
+        let formatter = DateFormatter()
+        formatter.dateFormat = "EEEE, d MMMM"
+
+        return formatter
+    }()
+
+    public static let dateWithYear: DateFormatter = {
+        let formatter = DateFormatter()
+        formatter.dateFormat = "EEEE, d MMMM yyyy"
+
+        return formatter
+    }()
+
     public static let currency: NumberFormatter = {
         let formatter = NumberFormatter()
         formatter.numberStyle = .currency
@@ -43,5 +57,18 @@ public struct Formatters {
 
         return formatter
     }()
+
+    public static func formatRelative(date: Date) -> String {
+        switch date {
+        case _ where date.isToday:
+            return "Today"
+        case _ where date.isYesterday:
+            return "Yesterday"
+        case _ where date.isThisYear:
+            return dateWithoutYear.string(from: date)
+        default:
+            return dateWithYear.string(from: date)
+        }
+    }
 
 }

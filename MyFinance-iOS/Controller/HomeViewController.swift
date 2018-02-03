@@ -53,8 +53,19 @@ extension HomeViewController: HomeViewModelDelegate {
         regularsTableView.reloadData()
     }
 
-    func delete(at index: Int, from tab: HomeViewModel.Tab) {
-        let indexPath = IndexPath(row: index, section: 0)
+    func delete(from tab: HomeViewModel.Tab, section: Int) {
+        let indexSet = IndexSet(integer: section)
+
+        switch tab {
+        case .transactions:
+            transactionsTableView.deleteSections(indexSet, with: .automatic)
+        case .bills:
+            regularsTableView.deleteSections(indexSet, with: .automatic)
+        }
+    }
+
+    func delete(from tab: HomeViewModel.Tab, section: Int, row: Int) {
+        let indexPath = IndexPath(row: row, section: section)
 
         switch tab {
         case .transactions:
@@ -100,32 +111,60 @@ extension HomeViewController: UIScrollViewDelegate {
 
 extension HomeViewController: UITableViewDataSource {
 
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    func numberOfSections(in tableView: UITableView) -> Int {
         switch tableView {
         case transactionsTableView:
-            return viewModel.normalCellModels.count
+            return viewModel.numberOfSections(in: .transactions)
         case regularsTableView:
-            return viewModel.regularCellModels.count
+            return viewModel.numberOfSections(in: .bills)
         default: return 0
         }
+    }
+
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        let tab: HomeViewModel.Tab
+        switch tableView {
+        case transactionsTableView:
+            tab = .transactions
+        case regularsTableView:
+            tab = .bills
+        default: return 0
+        }
+
+        return viewModel.numberOfRows(in: tab, in: section)
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: HomeTableViewCell.string, for: indexPath)
 
-        let cellModel: HomeCellModel
-
+        let tab: HomeViewModel.Tab
         switch tableView {
         case transactionsTableView:
-            cellModel = viewModel.normalCellModels[indexPath.row]
+            tab = .transactions
         case regularsTableView:
-            cellModel = viewModel.regularCellModels[indexPath.row]
+            tab = .bills
         default: return cell
         }
 
+        guard let cellModel = viewModel.cellModel(for: tab,
+                                        section: indexPath.section,
+                                        row: indexPath.row) else { return cell }
         cell.set(homeCellModel: cellModel)
 
         return cell
+    }
+
+    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        let tab: HomeViewModel.Tab
+        switch tableView {
+        case transactionsTableView:
+            tab = .transactions
+        case regularsTableView:
+            tab = .bills
+        default: return nil
+        }
+
+        return viewModel.header(for: tab, section: section)
     }
 
     func tableView(_ tableView: UITableView,
@@ -133,13 +172,18 @@ extension HomeViewController: UITableViewDataSource {
                    forRowAt indexPath: IndexPath) {
         guard editingStyle == .delete else { return }
 
+        let tab: HomeViewModel.Tab
         switch tableView {
         case transactionsTableView:
-            viewModel.delete(at: indexPath.row, from: .transactions)
+            tab = .transactions
         case regularsTableView:
-            viewModel.delete(at: indexPath.row, from: .bills)
+            tab = .bills
         default: return
         }
+
+        viewModel.delete(from: tab,
+                         section: indexPath.section,
+                         row: indexPath.row)
     }
 
 }

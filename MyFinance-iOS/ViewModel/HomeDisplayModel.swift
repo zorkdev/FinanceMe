@@ -5,4 +5,16 @@ struct HomeDisplayModel: TodayDisplayModelType {
     let largeFontSize: CGFloat = 40
     let smallFontSize: CGFloat = 16
 
+    static let regularInboundSectionTitle = "Incoming"
+    static let regularOutboundSectionTitle = "Outgoing"
+
+    struct DeleteAlert {
+
+        static let title = "Are you sure?"
+        static let message = "The transaction will be deleted."
+        static let confirmButtonTitle = "Delete"
+        static let cancelButtonTitle = "Cancel"
+
+    }
+
 }

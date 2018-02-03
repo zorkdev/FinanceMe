@@ -35,17 +35,17 @@ public extension TodayPresentable {
         delegate?.set(allowance: allowanceAttributedString)
     }
 
+    func createAttributedString(from amount: Double) -> NSAttributedString {
+        let currencyString = Formatters.currency
+            .string(from: NSNumber(value: amount)) ?? displayModel.defaultAmount
+        return displayModel.amountAttributedString(from: currencyString)
+    }
+
 }
 
 // MARK: - Private methods
 
 private extension TodayPresentable {
-
-    private func createAttributedString(from amount: Double) -> NSAttributedString {
-        let currencyString = Formatters.currency
-            .string(from: NSNumber(value: amount)) ?? displayModel.defaultAmount
-        return displayModel.amountAttributedString(from: currencyString)
-    }
 
     private func getBalance() -> Promise<Void> {
         return BalanceBusinessLogic().getBalance().then { balance -> Void in

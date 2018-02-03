@@ -1,6 +1,12 @@
 import UIKit
 
-open class BaseViewController: UIViewController {}
+open class BaseViewController: UIViewController {
+
+    private struct Constants {
+        static let keyboardToolbarDoneButtonTitle = "Done"
+    }
+
+}
 
 extension BaseViewController: Dismissable {
 
@@ -31,7 +37,7 @@ extension BaseViewController {
         toolBar.isTranslucent = true
         toolBar.barTintColor = ColorPalette.secondary
         toolBar.tintColor = Color.white
-        let doneButton = UIBarButtonItem(title: "Done",
+        let doneButton = UIBarButtonItem(title: Constants.keyboardToolbarDoneButtonTitle,
                                          style: .done,
                                          target: self,
                                          action: #selector(doneTapped))

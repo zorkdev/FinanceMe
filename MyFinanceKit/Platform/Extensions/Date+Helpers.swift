@@ -1,6 +1,6 @@
 import Foundation
 
-extension Date {
+public extension Date {
 
     static let daysInWeek = 7
 
@@ -8,8 +8,20 @@ extension Date {
         return Calendar.autoupdatingCurrent
     }
 
+    var isToday: Bool {
+        return calendar.isDateInToday(self)
+    }
+
+    var isYesterday: Bool {
+        return calendar.isDateInYesterday(self)
+    }
+
     var isThisWeek: Bool {
         return calendar.isDate(self, equalTo: Date(), toGranularity: .weekOfYear)
+    }
+
+    var isThisYear: Bool {
+        return calendar.isDate(self, equalTo: Date(), toGranularity: .year)
     }
 
     var startOfDay: Date {
@@ -44,6 +56,10 @@ extension Date {
 
     var dayBefore: Date {
         return calendar.date(byAdding: .day, value: -1, to: self) ?? self
+    }
+
+    func isInSameDay(as date: Date) -> Bool {
+        return calendar.isDate(self, equalTo: date, toGranularity: .day)
     }
 
     func next(day: Int, direction: Calendar.SearchDirection) -> Date {
