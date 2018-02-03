@@ -20,6 +20,14 @@ public struct Formatters {
         return formatter
     }()
 
+    public static let dateTime: DateFormatter = {
+        let formatter = DateFormatter()
+        formatter.dateStyle = .medium
+        formatter.timeStyle = .short
+
+        return formatter
+    }()
+
     public static let currency: NumberFormatter = {
         let formatter = NumberFormatter()
         formatter.numberStyle = .currency

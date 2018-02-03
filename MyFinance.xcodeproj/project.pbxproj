@@ -77,6 +77,8 @@
 		9A740F1C201E2BCF00D40943 /* config.json in Resources */ = {isa = PBXBuildFile; fileRef = 9AD3EE2C2013B64C0083F8FE /* config.json */; };
 		9A9666812025EAF5000F8A42 /* TodayDisplayModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A9666802025EAF5000F8A42 /* TodayDisplayModelType.swift */; };
 		9A9666822025EAF5000F8A42 /* TodayDisplayModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A9666802025EAF5000F8A42 /* TodayDisplayModelType.swift */; };
+		9A96668720260E7B000F8A42 /* ColorPalette.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A96668620260E7B000F8A42 /* ColorPalette.swift */; };
+		9A96668820260E7B000F8A42 /* ColorPalette.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A96668620260E7B000F8A42 /* ColorPalette.swift */; };
 		9AD3EE2D2013B64C0083F8FE /* config.json in Resources */ = {isa = PBXBuildFile; fileRef = 9AD3EE2C2013B64C0083F8FE /* config.json */; };
 		9AD3EE2F2013B6640083F8FE /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 9AD3EE2E2013B6640083F8FE /* Podfile */; };
 		9AD3EE312013B7BF0083F8FE /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = 9AD3EE302013B7BF0083F8FE /* .swiftlint.yml */; };
@@ -239,6 +241,7 @@
 		9A872E0E2016719100C1E9BE /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		9A872E112016719100C1E9BE /* UserBusinessLogic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserBusinessLogic.swift; sourceTree = "<group>"; };
 		9A9666802025EAF5000F8A42 /* TodayDisplayModelType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayDisplayModelType.swift; sourceTree = "<group>"; };
+		9A96668620260E7B000F8A42 /* ColorPalette.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorPalette.swift; sourceTree = "<group>"; };
 		9AD3EE1D20138F6C0083F8FE /* Transaction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Transaction.swift; sourceTree = "<group>"; };
 		9AD3EE1F2013965D0083F8FE /* JSONCoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONCoder.swift; sourceTree = "<group>"; };
 		9AD3EE222013985B0083F8FE /* TransactionsBusinessLogic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionsBusinessLogic.swift; sourceTree = "<group>"; };
@@ -353,7 +356,7 @@
 				9A4F554F2023C8E000DBF68F /* Framework */,
 				9A5AE5982012C0B400B25081 /* Platform */,
 				9A5AE58B2012B8DC00B25081 /* Model */,
-				9AD96CA120253A1400D37F23 /* Controller */,
+				9A96668520260E4D000F8A42 /* UI */,
 				9A4F557D2023D04700DBF68F /* ViewModel */,
 				9A5AE5932012BDDB00B25081 /* Business */,
 			);
@@ -538,6 +541,15 @@
 				9A740F1D201E2D8700D40943 /* MyFinanceExtension-macOS.entitlements */,
 			);
 			path = "MyFinanceExtension-macOS";
+			sourceTree = "<group>";
+		};
+		9A96668520260E4D000F8A42 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				9AD96CA120253A1400D37F23 /* Controller */,
+				9A96668620260E7B000F8A42 /* ColorPalette.swift */,
+			);
+			path = UI;
 			sourceTree = "<group>";
 		};
 		9AD3EE212013966E0083F8FE /* Extensions */ = {
@@ -1142,6 +1154,7 @@
 				9A4F55682023CAAD00DBF68F /* Config.swift in Sources */,
 				9A4F55612023C98200DBF68F /* Data+Helpers.swift in Sources */,
 				9A4F55602023C97A00DBF68F /* Dictionary+Helpers.swift in Sources */,
+				9A96668720260E7B000F8A42 /* ColorPalette.swift in Sources */,
 				9A4F55782023CADE00DBF68F /* UserBusinessLogic.swift in Sources */,
 				9AD96CA620253CC300D37F23 /* BaseViewController.swift in Sources */,
 				9A4F556C2023CAB900DBF68F /* Balance.swift in Sources */,
@@ -1165,6 +1178,7 @@
 				9A4F55732023CAD300DBF68F /* BalanceBusinessLogic.swift in Sources */,
 				9AD96C9C202534D600D37F23 /* StringRepresentable.swift in Sources */,
 				9AD96C95202529E100D37F23 /* TodayPresentable.swift in Sources */,
+				9A96668820260E7B000F8A42 /* ColorPalette.swift in Sources */,
 				9A4F55572023C96700DBF68F /* DataManager.swift in Sources */,
 				9A4F556D2023CABF00DBF68F /* Transaction.swift in Sources */,
 				9A4F55512023C95300DBF68F /* JSONCoder.swift in Sources */,

@@ -5,6 +5,10 @@ struct AddTransactionDisplayModel {
     let source: Int
     let created: Date
 
+    static func dateString(from date: Date) -> String {
+        return Formatters.dateTime.string(from: date)
+    }
+
 }
 
 protocol AddTransactionViewModelDataDelegate: class {
@@ -15,7 +19,7 @@ protocol AddTransactionViewModelDataDelegate: class {
 
 class AddTransactionViewModel: ViewModelType {
 
-    private let transactionsBusinessLogic = TransactionsBusinessLogic()
+    private let externalTransactionsBusinessLogic = ExternalTransactionsBusinessLogic()
 
     private weak var delegate: Dismissable?
     private weak var dataDelegate: AddTransactionViewModelDataDelegate?
@@ -42,7 +46,7 @@ class AddTransactionViewModel: ViewModelType {
     }
 
     private func save(transaction: Transaction) {
-        transactionsBusinessLogic.create(transaction: transaction)
+        externalTransactionsBusinessLogic.create(transaction: transaction)
             .then { transaction -> Void in
                 self.dataDelegate?.didCreate(transaction: transaction)
                 self.delegate?.dismiss(self)
@@ -64,7 +68,7 @@ extension AddTransactionViewModel {
     }
 
     func pickerViewTitle(for row: Int, for component: Int) -> String? {
-        return TransactionSource.externalValues[row].rawValue
+        return TransactionSource.externalValues[row].displayString
     }
 
 }

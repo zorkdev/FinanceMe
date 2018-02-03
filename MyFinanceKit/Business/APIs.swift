@@ -21,13 +21,22 @@ enum StarlingParameters: String {
     case to
 }
 
-enum ZorkdevAPI: String {
+enum ZorkdevAPI {
     private static let baseURL = "https://zorkdev.herokuapp.com/api/"
 
-    case user = "users/me"
-    case transactions = "transactions"
+    case user
+    case transactions
+    case transaction(String)
+
+    private var path: String {
+        switch self {
+        case .user: return "users/me"
+        case .transactions: return "transactions"
+        case .transaction(let id): return "transactions/\(id)"
+        }
+    }
 
     var url: URL? {
-        return URL(string: ZorkdevAPI.baseURL + rawValue)
+        return URL(string: ZorkdevAPI.baseURL + path)
     }
 }

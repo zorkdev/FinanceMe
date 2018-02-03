@@ -2,10 +2,13 @@ class AddTransactionViewController: BaseViewController {
 
     @IBOutlet private weak var amountField: UITextField!
     @IBOutlet private weak var narrativeField: UITextField!
-    @IBOutlet private weak var sourcePicker: UIPickerView!
-    @IBOutlet private weak var datePicker: UIDatePicker!
+    @IBOutlet private weak var sourceField: UITextField!
+    @IBOutlet private weak var createdField: UITextField!
 
     private var viewModel: AddTransactionViewModel!
+
+    private var selectedSource = 0
+    private var selectedDate = Date()
 
     weak var dataDelegate: AddTransactionViewModelDataDelegate?
 
@@ -16,6 +19,33 @@ class AddTransactionViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         viewModel = AddTransactionViewModel(delegate: self, dataDelegate: dataDelegate)
+        setupTextFields()
+    }
+
+    private func setupTextFields() {
+        amountField.inputAccessoryView = keyBoardToolbar
+
+        let createdPicker = UIDatePicker()
+        createdPicker.addTarget(self,
+                                action: #selector(createdPickerValueChanged(_:)),
+                                for: .valueChanged)
+        createdField.inputView = createdPicker
+        createdField.inputAccessoryView = keyBoardToolbar
+        createdField.tintColor = .clear
+        createdField.text = AddTransactionDisplayModel.dateString(from: selectedDate)
+
+        let sourcePicker = UIPickerView()
+        sourcePicker.delegate = self
+        sourcePicker.dataSource = self
+        sourceField.inputView = sourcePicker
+        sourceField.inputAccessoryView = keyBoardToolbar
+        sourceField.tintColor = .clear
+        sourceField.text = viewModel.pickerViewTitle(for: selectedSource, for: 0)
+    }
+
+    @objc func createdPickerValueChanged(_ sender: UIDatePicker) {
+        selectedDate = sender.date
+        createdField.text = AddTransactionDisplayModel.dateString(from: selectedDate)
     }
 
     @IBAction func saveButtonTapped(_ sender: UIButton) {
@@ -26,11 +56,10 @@ class AddTransactionViewController: BaseViewController {
             narrative.components(separatedBy: .whitespaces)
                 .joined() != "" else { return }
 
-        let source = sourcePicker.selectedRow(inComponent: 0)
         let addTransactionDisplayModel = AddTransactionDisplayModel(amount: amount,
                                                                     narrative: narrative,
-                                                                    source: source,
-                                                                    created: datePicker.date)
+                                                                    source: selectedSource,
+                                                                    created: selectedDate)
         viewModel.saveButtonTapped(with: addTransactionDisplayModel)
     }
 
@@ -48,6 +77,11 @@ extension AddTransactionViewController: UIPickerViewDelegate, UIPickerViewDataSo
 
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
         return viewModel.pickerViewTitle(for: row, for: component)
+    }
+
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        selectedSource = row
+        sourceField.text = viewModel.pickerViewTitle(for: row, for: component)
     }
 
 }

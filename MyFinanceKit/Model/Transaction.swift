@@ -32,6 +32,16 @@ public enum TransactionSource: String, Codable {
                                                              .externalRegularOutbound,
                                                              .externalRegularInbound]
 
+    public var displayString: String {
+        switch self {
+        case .externalOutbound: return "Outgoing"
+        case .externalInbound: return "Incoming"
+        case .externalRegularOutbound: return "Regular Outgoing"
+        case .externalRegularInbound: return "Regular Incoming"
+        default: return rawValue
+        }
+    }
+
     public var direction: TransactionDirection {
         switch self {
         case .internalTransfer,
