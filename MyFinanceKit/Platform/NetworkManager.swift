@@ -13,6 +13,7 @@ class NetworkManager {
     private struct Constants {
         static let authHeaderKey = "Authorization"
         static let contentKey = "Accept"
+        static let contentTypeKey = "Content-Type"
         static let contentValue = "application/json"
         static let encodingKey = "Accept-Encoding"
         static let encodingValue = "gzip, deflate"
@@ -69,6 +70,11 @@ class NetworkManager {
                          forHTTPHeaderField: Constants.contentKey)
         request.setValue(Constants.encodingValue,
                          forHTTPHeaderField: Constants.encodingKey)
+
+        if body != nil {
+            request.setValue(Constants.contentValue,
+                             forHTTPHeaderField: Constants.contentTypeKey)
+        }
 
         let token: String
 
