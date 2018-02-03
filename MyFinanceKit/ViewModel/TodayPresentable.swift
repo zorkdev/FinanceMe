@@ -1,18 +1,4 @@
-import Foundation
 import PromiseKit
-
-public protocol TodayDisplayModelType {
-
-    var defaultAmount: String { get }
-    func amountAttributedString(from string: String) -> NSAttributedString
-
-}
-
-public extension TodayDisplayModelType {
-
-    var defaultAmount: String { return "£0.00" }
-
-}
 
 public protocol TodayViewModelDelegate: class {
 

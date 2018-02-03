@@ -7,20 +7,22 @@ struct AddTransactionDisplayModel {
 
 }
 
-protocol AddTransactionViewModelDelegate: Dismissable {}
+protocol AddTransactionViewModelDataDelegate: class {
+
+    func didCreate(transaction: Transaction)
+
+}
 
 class AddTransactionViewModel: ViewModelType {
 
     private let transactionsBusinessLogic = TransactionsBusinessLogic()
 
-    private weak var delegate: AddTransactionViewModelDelegate?
+    private weak var delegate: Dismissable?
+    private weak var dataDelegate: AddTransactionViewModelDataDelegate?
 
-    init(delegate: AddTransactionViewModelDelegate) {
+    init(delegate: Dismissable, dataDelegate: AddTransactionViewModelDataDelegate?) {
         self.delegate = delegate
-    }
-
-    func viewDidLoad() {
-
+        self.dataDelegate = dataDelegate
     }
 
     func saveButtonTapped(with displayModel: AddTransactionDisplayModel) {
@@ -40,10 +42,12 @@ class AddTransactionViewModel: ViewModelType {
     }
 
     private func save(transaction: Transaction) {
-        transactionsBusinessLogic.create(transaction: transaction).then { _ in
-            self.delegate?.dismiss(self)
-        }.catch { error in
-            print(error)
+        transactionsBusinessLogic.create(transaction: transaction)
+            .then { transaction -> Void in
+                self.dataDelegate?.didCreate(transaction: transaction)
+                self.delegate?.dismiss(self)
+            }.catch { error in
+                print(error)
         }
     }
 

@@ -66,7 +66,6 @@
 		9A5AE5802012A8AC00B25081 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9A5AE57E2012A8AC00B25081 /* LaunchScreen.storyboard */; };
 		9A5AE5A22012C99A00B25081 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A5AE5A12012C99A00B25081 /* HomeViewModel.swift */; };
 		9A740ECE201E245200D40943 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A740ECD201E245200D40943 /* AppDelegate.swift */; };
-		9A740ED0201E245200D40943 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A740ECF201E245200D40943 /* ViewController.swift */; };
 		9A740ED2201E245200D40943 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9A740ED1201E245200D40943 /* Assets.xcassets */; };
 		9A740ED5201E245200D40943 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9A740ED3201E245200D40943 /* Main.storyboard */; };
 		9A740EE0201E247D00D40943 /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AD3EE392013D9A10083F8FE /* NotificationCenter.framework */; };
@@ -76,6 +75,8 @@
 		9A740EEE201E247D00D40943 /* MyFinanceExtension-macOS.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 9A740EDF201E247D00D40943 /* MyFinanceExtension-macOS.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		9A740F1B201E2BCE00D40943 /* config.json in Resources */ = {isa = PBXBuildFile; fileRef = 9AD3EE2C2013B64C0083F8FE /* config.json */; };
 		9A740F1C201E2BCF00D40943 /* config.json in Resources */ = {isa = PBXBuildFile; fileRef = 9AD3EE2C2013B64C0083F8FE /* config.json */; };
+		9A9666812025EAF5000F8A42 /* TodayDisplayModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A9666802025EAF5000F8A42 /* TodayDisplayModelType.swift */; };
+		9A9666822025EAF5000F8A42 /* TodayDisplayModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A9666802025EAF5000F8A42 /* TodayDisplayModelType.swift */; };
 		9AD3EE2D2013B64C0083F8FE /* config.json in Resources */ = {isa = PBXBuildFile; fileRef = 9AD3EE2C2013B64C0083F8FE /* config.json */; };
 		9AD3EE2F2013B6640083F8FE /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 9AD3EE2E2013B6640083F8FE /* Podfile */; };
 		9AD3EE312013B7BF0083F8FE /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = 9AD3EE302013B7BF0083F8FE /* .swiftlint.yml */; };
@@ -224,7 +225,6 @@
 		9A5AE5A92012D4A400B25081 /* Dictionary+Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Dictionary+Helpers.swift"; sourceTree = "<group>"; };
 		9A740ECB201E245200D40943 /* MyFinance-macOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "MyFinance-macOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9A740ECD201E245200D40943 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		9A740ECF201E245200D40943 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		9A740ED1201E245200D40943 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9A740ED4201E245200D40943 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		9A740ED6201E245200D40943 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -238,6 +238,7 @@
 		9A872984201662E100C1E9BE /* ExternalTransactionsBusinessLogic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExternalTransactionsBusinessLogic.swift; sourceTree = "<group>"; };
 		9A872E0E2016719100C1E9BE /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		9A872E112016719100C1E9BE /* UserBusinessLogic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserBusinessLogic.swift; sourceTree = "<group>"; };
+		9A9666802025EAF5000F8A42 /* TodayDisplayModelType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayDisplayModelType.swift; sourceTree = "<group>"; };
 		9AD3EE1D20138F6C0083F8FE /* Transaction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Transaction.swift; sourceTree = "<group>"; };
 		9AD3EE1F2013965D0083F8FE /* JSONCoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONCoder.swift; sourceTree = "<group>"; };
 		9AD3EE222013985B0083F8FE /* TransactionsBusinessLogic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionsBusinessLogic.swift; sourceTree = "<group>"; };
@@ -374,6 +375,7 @@
 			isa = PBXGroup;
 			children = (
 				9AD96C902025275C00D37F23 /* ViewModelType.swift */,
+				9A9666802025EAF5000F8A42 /* TodayDisplayModelType.swift */,
 				9AD96C93202529E100D37F23 /* TodayPresentable.swift */,
 				9AD3EE4A2013DC5E0083F8FE /* TodayViewModel.swift */,
 			);
@@ -516,7 +518,6 @@
 			children = (
 				9A740ED3201E245200D40943 /* Main.storyboard */,
 				9A740ECD201E245200D40943 /* AppDelegate.swift */,
-				9A740ECF201E245200D40943 /* ViewController.swift */,
 				9A4F55052023C3FC00DBF68F /* Bridging-Header.h */,
 				9A740ED1201E245200D40943 /* Assets.xcassets */,
 				9A740ED6201E245200D40943 /* Info.plist */,
@@ -1135,6 +1136,7 @@
 				9A4F55502023C95300DBF68F /* JSONCoder.swift in Sources */,
 				9AD96CA320253A3E00D37F23 /* Dismissable.swift in Sources */,
 				9A4F55542023C96100DBF68F /* ConfigManager.swift in Sources */,
+				9A9666812025EAF5000F8A42 /* TodayDisplayModelType.swift in Sources */,
 				9A4F55702023CAC800DBF68F /* APIs.swift in Sources */,
 				9A4F557E2023D06F00DBF68F /* TodayViewModel.swift in Sources */,
 				9A4F55682023CAAD00DBF68F /* Config.swift in Sources */,
@@ -1153,6 +1155,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9A9666822025EAF5000F8A42 /* TodayDisplayModelType.swift in Sources */,
 				9A4F55642023CAA200DBF68F /* Error.swift in Sources */,
 				9A4F55752023CAD800DBF68F /* TransactionsBusinessLogic.swift in Sources */,
 				9A4F55532023C95B00DBF68F /* NetworkManager.swift in Sources */,
@@ -1198,7 +1201,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9A740ED0201E245200D40943 /* ViewController.swift in Sources */,
 				9A740ECE201E245200D40943 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

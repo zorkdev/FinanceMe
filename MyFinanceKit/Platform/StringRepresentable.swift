@@ -11,3 +11,15 @@ public extension StringRepresentable {
     }
 
 }
+
+#if os(macOS)
+    import Cocoa
+
+    extension NSViewController: StringRepresentable {}
+
+#elseif os(iOS)
+    import UIKit
+
+    extension UIViewController: StringRepresentable {}
+    extension UITableViewCell: StringRepresentable {}
+#endif

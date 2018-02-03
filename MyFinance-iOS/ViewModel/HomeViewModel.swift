@@ -92,3 +92,12 @@ extension HomeViewModel {
     }
 
 }
+
+extension HomeViewModel: AddTransactionViewModelDataDelegate {
+
+    func didCreate(transaction: Transaction) {
+        externalTransactions.append(transaction)
+        updateTransactions()
+    }
+
+}

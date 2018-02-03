@@ -20,6 +20,11 @@ class HomeViewController: BaseViewController {
         viewModel.segmentedControlValueChanged(value: sender.selectedSegmentIndex)
     }
 
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let addTransactionViewController = segue.destination as? AddTransactionViewController else { return }
+        addTransactionViewController.dataDelegate = viewModel
+    }
+
 }
 
 extension HomeViewController: HomeViewModelDelegate {

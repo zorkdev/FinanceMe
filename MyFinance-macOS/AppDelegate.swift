@@ -1,4 +1,2 @@
 @NSApplicationMain
-class AppDelegate: NSObject, NSApplicationDelegate {
-
-}
+class AppDelegate: NSObject, NSApplicationDelegate {}

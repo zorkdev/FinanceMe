@@ -7,13 +7,15 @@ class AddTransactionViewController: BaseViewController {
 
     private var viewModel: AddTransactionViewModel!
 
+    weak var dataDelegate: AddTransactionViewModelDataDelegate?
+
     override var preferredStatusBarStyle: UIStatusBarStyle {
         return .lightContent
     }
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        viewModel = AddTransactionViewModel(delegate: self)
+        viewModel = AddTransactionViewModel(delegate: self, dataDelegate: dataDelegate)
     }
 
     @IBAction func saveButtonTapped(_ sender: UIButton) {
@@ -49,5 +51,3 @@ extension AddTransactionViewController: UIPickerViewDelegate, UIPickerViewDataSo
     }
 
 }
-
-extension AddTransactionViewController: AddTransactionViewModelDelegate {}

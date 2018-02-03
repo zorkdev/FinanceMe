@@ -1,3 +1,1 @@
-class HomeTableViewCell: UITableViewCell, StringRepresentable {
-
-}
+class HomeTableViewCell: UITableViewCell {}

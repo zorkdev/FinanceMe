@@ -8,7 +8,7 @@ class TodayViewController: NSViewController {
     private var viewModel: TodayViewModel!
 
     override var nibName: NSNib.Name? {
-        return NSNib.Name(String(describing: TodayViewController.self))
+        return NSNib.Name(TodayViewController.string)
     }
 
     override func viewDidLoad() {

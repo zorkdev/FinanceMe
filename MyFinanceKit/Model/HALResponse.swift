@@ -1,5 +1,3 @@
-import Foundation
-
 struct HALResponse<T: Codable>: Codable {
 
     enum CodingKeys: String, CodingKey {
