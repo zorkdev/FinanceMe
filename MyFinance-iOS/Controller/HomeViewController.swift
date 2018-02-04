@@ -11,7 +11,7 @@ class HomeViewController: BaseViewController {
     @IBOutlet private weak var tabIndicator: UIView!
     @IBOutlet private weak var scrollView: UIScrollView!
 
-    private var viewModel: HomeViewModel!
+    private var viewModel: HomeViewModelType!
 
     private let transactionsRefreshControl = UIRefreshControl()
     private let regularsRefreshControl = UIRefreshControl()
@@ -36,25 +36,21 @@ class HomeViewController: BaseViewController {
         viewModel.viewDidLoad()
     }
 
-    @objc func updateData(_ sender: UIRefreshControl) {
-        viewModel.updateData().then { _ -> Void in
-            self.transactionsRefreshControl.endRefreshing()
-            self.regularsRefreshControl.endRefreshing()
-            self.balanceRefreshControl.endRefreshing()
-        }
+    @objc private func updateData(_ sender: UIRefreshControl) {
+        viewModel.refreshTapped()
     }
 
-    @IBAction func transactionsButtonTapped(_ sender: UIButton) {
+    @IBAction private func transactionsButtonTapped(_ sender: UIButton) {
         let offset = transactionsTableView.frame.origin
         scrollView.setContentOffset(offset, animated: true)
     }
 
-    @IBAction func regularsButtonTapped(_ sender: UIButton) {
+    @IBAction private func regularsButtonTapped(_ sender: UIButton) {
         let offset = regularsTableView.frame.origin
         scrollView.setContentOffset(offset, animated: true)
     }
 
-    @IBAction func balanceButtonTapped(_ sender: UIButton) {
+    @IBAction private func balanceButtonTapped(_ sender: UIButton) {
         let offset = balanceTableView.frame.origin
         scrollView.setContentOffset(offset, animated: true)
     }
@@ -80,6 +76,12 @@ extension HomeViewController: HomeViewModelDelegate {
         transactionsTableView.reloadData()
         regularsTableView.reloadData()
         balanceTableView.reloadData()
+    }
+
+    func endRefreshing() {
+        self.transactionsRefreshControl.endRefreshing()
+        self.regularsRefreshControl.endRefreshing()
+        self.balanceRefreshControl.endRefreshing()
     }
 
     func delete(from tab: HomeViewModel.Tab, section: Int) {
@@ -172,7 +174,8 @@ extension HomeViewController: UITableViewDataSource {
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: HomeTableViewCell.string, for: indexPath)
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: HomeTableViewCell.string, for: indexPath)
+            as? HomeTableViewCell else { return UITableViewCell() }
 
         let tab: HomeViewModel.Tab
         switch tableView {

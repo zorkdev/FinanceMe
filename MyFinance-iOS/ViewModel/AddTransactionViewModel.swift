@@ -1,27 +1,21 @@
-struct AddTransactionDisplayModel {
-
-    static let buttonEnabledAlpha: CGFloat = 1.0
-    static let buttonDisabledAlpha: CGFloat = 0.5
-    static let buttonAnimationDuration = 0.2
-
-    let amount: String
-    let narrative: String
-    let source: Int
-    let created: Date
-
-    static func dateString(from date: Date) -> String {
-        return Formatters.dateTime.string(from: date)
-    }
-
-}
-
 protocol AddTransactionViewModelDataDelegate: class {
 
     func didCreate(transaction: Transaction)
 
 }
 
-class AddTransactionViewModel: ViewModelType {
+protocol AddTransactionViewModelType: ViewModelType {
+
+    func shouldEnableSaveButton(displayModel: AddTransactionDisplayModel) -> Bool
+    func saveButtonTapped(with displayModel: AddTransactionDisplayModel)
+    func formatted(amount: String, original: String) -> String
+    func numberOfComponentsInPickerView() -> Int
+    func pickerViewNumberOfRowsIn(component: Int) -> Int
+    func pickerViewTitle(for row: Int, for component: Int) -> String?
+
+}
+
+class AddTransactionViewModel {
 
     private let externalTransactionsBusinessLogic = ExternalTransactionsBusinessLogic()
 
@@ -33,12 +27,31 @@ class AddTransactionViewModel: ViewModelType {
         self.dataDelegate = dataDelegate
     }
 
+}
+
+// MARK: Interface
+
+extension AddTransactionViewModel: AddTransactionViewModelType {
+
     func shouldEnableSaveButton(displayModel: AddTransactionDisplayModel) -> Bool {
         guard let amount = createAmount(from: displayModel.amount),
             amount != 0,
             displayModel.narrative.components(separatedBy: .whitespaces).joined() != "" else { return false }
 
         return  true
+    }
+
+    func saveButtonTapped(with displayModel: AddTransactionDisplayModel) {
+        guard let amountAbs = createAmount(from: displayModel.amount) else { return }
+        let source = TransactionSource.externalValues[displayModel.source]
+        let amount = source.direction == .inbound ? amountAbs : -amountAbs
+
+        let transaction = Transaction(amount: amount,
+                                      direction: source.direction,
+                                      created: displayModel.created,
+                                      narrative: displayModel.narrative,
+                                      source: source)
+        save(transaction: transaction)
     }
 
     func formatted(amount: String, original: String) -> String {
@@ -53,21 +66,26 @@ class AddTransactionViewModel: ViewModelType {
         return validate(amount: amountTemp) ? amountTemp : original
     }
 
-    func validate(amount: String) -> Bool {
-        return Validators.validate(amount: amount)
+    func numberOfComponentsInPickerView() -> Int {
+        return 1
     }
 
-    func saveButtonTapped(with displayModel: AddTransactionDisplayModel) {
-        guard let amountAbs = createAmount(from: displayModel.amount) else { return }
-        let source = TransactionSource.externalValues[displayModel.source]
-        let amount = source.direction == .inbound ? amountAbs : -amountAbs
+    func pickerViewNumberOfRowsIn(component: Int) -> Int {
+        return TransactionSource.externalValues.count
+    }
 
-        let transaction = Transaction(amount: amount,
-                                      direction: source.direction,
-                                      created: displayModel.created,
-                                      narrative: displayModel.narrative,
-                                      source: source)
-        save(transaction: transaction)
+    func pickerViewTitle(for row: Int, for component: Int) -> String? {
+        return TransactionSource.externalValues[row].displayString
+    }
+
+}
+
+// MARK: - Private methods
+
+extension AddTransactionViewModel {
+
+    private func validate(amount: String) -> Bool {
+        return Validators.validate(amount: amount)
     }
 
     private func createAmount(from: String) -> Double? {
@@ -87,22 +105,6 @@ class AddTransactionViewModel: ViewModelType {
             }.catch { error in
                 print(error)
         }
-    }
-
-}
-
-extension AddTransactionViewModel {
-
-    func numberOfComponentsInPickerView() -> Int {
-        return 1
-    }
-
-    func pickerViewNumberOfRowsIn(component: Int) -> Int {
-        return TransactionSource.externalValues.count
-    }
-
-    func pickerViewTitle(for row: Int, for component: Int) -> String? {
-        return TransactionSource.externalValues[row].displayString
     }
 
 }

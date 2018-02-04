@@ -82,6 +82,8 @@
 		9A740EEE201E247D00D40943 /* MyFinanceExtension-macOS.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 9A740EDF201E247D00D40943 /* MyFinanceExtension-macOS.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		9A740F1B201E2BCE00D40943 /* config.json in Resources */ = {isa = PBXBuildFile; fileRef = 9AD3EE2C2013B64C0083F8FE /* config.json */; };
 		9A740F1C201E2BCF00D40943 /* config.json in Resources */ = {isa = PBXBuildFile; fileRef = 9AD3EE2C2013B64C0083F8FE /* config.json */; };
+		9A8561722027730F00A26F12 /* HomeCellDisplayModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A8561712027730F00A26F12 /* HomeCellDisplayModel.swift */; };
+		9A856176202774F300A26F12 /* AddTransactionDisplayModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A856175202774F300A26F12 /* AddTransactionDisplayModel.swift */; };
 		9A9666812025EAF5000F8A42 /* TodayDisplayModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A9666802025EAF5000F8A42 /* TodayDisplayModelType.swift */; };
 		9A9666822025EAF5000F8A42 /* TodayDisplayModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A9666802025EAF5000F8A42 /* TodayDisplayModelType.swift */; };
 		9A96668720260E7B000F8A42 /* ColorPalette.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A96668620260E7B000F8A42 /* ColorPalette.swift */; };
@@ -248,6 +250,8 @@
 		9A740EE9201E247D00D40943 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		9A740F1D201E2D8700D40943 /* MyFinanceExtension-macOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "MyFinanceExtension-macOS.entitlements"; sourceTree = "<group>"; };
 		9A740F1E201E2DAA00D40943 /* MyFinance-macOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "MyFinance-macOS.entitlements"; sourceTree = "<group>"; };
+		9A8561712027730F00A26F12 /* HomeCellDisplayModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCellDisplayModel.swift; sourceTree = "<group>"; };
+		9A856175202774F300A26F12 /* AddTransactionDisplayModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTransactionDisplayModel.swift; sourceTree = "<group>"; };
 		9A872984201662E100C1E9BE /* ExternalTransactionsBusinessLogic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExternalTransactionsBusinessLogic.swift; sourceTree = "<group>"; };
 		9A872E0E2016719100C1E9BE /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		9A872E112016719100C1E9BE /* UserBusinessLogic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserBusinessLogic.swift; sourceTree = "<group>"; };
@@ -429,6 +433,7 @@
 				9A5AE58C2012B8F000B25081 /* Application */,
 				9A5AE58D2012B91300B25081 /* View */,
 				9A5AE58E2012B92C00B25081 /* Controller */,
+				9A856170202772EF00A26F12 /* DisplayModel */,
 				9A5AE58F2012B94200B25081 /* ViewModel */,
 				9A5AE5902012B95A00B25081 /* Resources */,
 			);
@@ -468,9 +473,8 @@
 		9A5AE58D2012B91300B25081 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				9A5AE57E2012A8AC00B25081 /* LaunchScreen.storyboard */,
-				9A5AE5792012A8AC00B25081 /* Main.storyboard */,
-				9AD96C982025341D00D37F23 /* HomeTableViewCell.swift */,
+				9A8561732027733900A26F12 /* Storyboard */,
+				9A8561742027734C00A26F12 /* TableView */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -488,7 +492,6 @@
 			isa = PBXGroup;
 			children = (
 				9A5AE5A12012C99A00B25081 /* HomeViewModel.swift */,
-				9AD96C8E2025138400D37F23 /* HomeDisplayModel.swift */,
 				9AD96C9620252CBF00D37F23 /* HomeCellModel.swift */,
 				9AD96CA7202544A600D37F23 /* AddTransactionViewModel.swift */,
 			);
@@ -556,6 +559,33 @@
 				9A740F1D201E2D8700D40943 /* MyFinanceExtension-macOS.entitlements */,
 			);
 			path = "MyFinanceExtension-macOS";
+			sourceTree = "<group>";
+		};
+		9A856170202772EF00A26F12 /* DisplayModel */ = {
+			isa = PBXGroup;
+			children = (
+				9AD96C8E2025138400D37F23 /* HomeDisplayModel.swift */,
+				9A8561712027730F00A26F12 /* HomeCellDisplayModel.swift */,
+				9A856175202774F300A26F12 /* AddTransactionDisplayModel.swift */,
+			);
+			path = DisplayModel;
+			sourceTree = "<group>";
+		};
+		9A8561732027733900A26F12 /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				9A5AE57E2012A8AC00B25081 /* LaunchScreen.storyboard */,
+				9A5AE5792012A8AC00B25081 /* Main.storyboard */,
+			);
+			path = Storyboard;
+			sourceTree = "<group>";
+		};
+		9A8561742027734C00A26F12 /* TableView */ = {
+			isa = PBXGroup;
+			children = (
+				9AD96C982025341D00D37F23 /* HomeTableViewCell.swift */,
+			);
+			path = TableView;
 			sourceTree = "<group>";
 		};
 		9A96668520260E4D000F8A42 /* UI */ = {
@@ -1230,8 +1260,10 @@
 				9AD96CA8202544A600D37F23 /* AddTransactionViewModel.swift in Sources */,
 				9A5AE5A22012C99A00B25081 /* HomeViewModel.swift in Sources */,
 				9A5AE5762012A8AB00B25081 /* AppDelegate.swift in Sources */,
+				9A8561722027730F00A26F12 /* HomeCellDisplayModel.swift in Sources */,
 				9AD96CA0202539E500D37F23 /* AddTransactionViewController.swift in Sources */,
 				9AD96C9720252CBF00D37F23 /* HomeCellModel.swift in Sources */,
+				9A856176202774F300A26F12 /* AddTransactionDisplayModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -1,6 +1,9 @@
+import NotificationCenter
+
 protocol HomeViewModelDelegate: TodayViewModelDelegate {
 
     func reloadTableView()
+    func endRefreshing()
     func delete(from tab: HomeViewModel.Tab, section: Int)
     func delete(from tab: HomeViewModel.Tab, section: Int, row: Int)
     func showAlert(with title: String,
@@ -11,7 +14,18 @@ protocol HomeViewModelDelegate: TodayViewModelDelegate {
 
 }
 
-class HomeViewModel: TodayPresentable {
+protocol HomeViewModelType: ViewModelType, AddTransactionViewModelDataDelegate {
+
+    func numberOfSections(in tab: HomeViewModel.Tab) -> Int
+    func numberOfRows(in tab: HomeViewModel.Tab, in section: Int) -> Int
+    func cellModel(for tab: HomeViewModel.Tab, section: Int, row: Int) -> HomeCellModel?
+    func header(for tab: HomeViewModel.Tab, section: Int) -> String?
+    func delete(from tab: HomeViewModel.Tab, section: Int, row: Int)
+    func refreshTapped()
+
+}
+
+class HomeViewModel {
 
     enum Tab: Int {
         case transactions = 0, bills, balances
@@ -39,22 +53,34 @@ class HomeViewModel: TodayPresentable {
     private var normalTransactions = [Transaction]()
     private var regularTransactions = [Transaction]()
 
+    private var normalCellModels = [Date: [HomeCellModel]]()
+    private var regularCellModels = [RegularsSection: [HomeCellModel]]()
+    private var balanceCellModels = [Date: [HomeCellModel]]()
+
     let displayModel: TodayDisplayModelType = HomeDisplayModel()
 
     weak var delegate: TodayViewModelDelegate?
 
-    var normalCellModels = [Date: [HomeCellModel]]()
-    var regularCellModels = [RegularsSection: [HomeCellModel]]()
-    var balanceCellModels = [Date: [HomeCellModel]]()
-
     init(delegate: HomeViewModelDelegate) {
         self.delegate = delegate
+
+        NotificationCenter.default.addObserver(
+            self,
+            selector: #selector(handleShouldReloadNotification),
+            name: .UIApplicationWillEnterForeground,
+            object: nil
+        )
     }
 
-    func viewDidLoad() {
-        setupDefaults()
-        updateData()
+    deinit {
+        NotificationCenter.default.removeObserver(self)
     }
+
+}
+
+// MARK: - TodayPresentable
+
+extension HomeViewModel: TodayPresentable {
 
     func setupDefaults() {
         let balanceAttributedString = createAttributedString(from: DataManager.shared.balance)
@@ -74,6 +100,20 @@ class HomeViewModel: TodayPresentable {
                     getUser(),
                     getExternalTransactions(),
                     getEndOfMonthSummaries())
+            .then { _ in
+                (self.delegate as? HomeViewModelDelegate)?.endRefreshing()
+        }
+    }
+
+}
+
+// MARK: - Interface
+
+extension HomeViewModel: HomeViewModelType {
+
+    func viewDidLoad() {
+        setupDefaults()
+        updateData()
     }
 
     func numberOfSections(in tab: Tab) -> Int {
@@ -174,11 +214,19 @@ class HomeViewModel: TodayPresentable {
                        cancelActionTitle: HomeDisplayModel.DeleteAlert.cancelButtonTitle)
     }
 
+    func refreshTapped() {
+        updateData()
+    }
+
 }
 
 // MARK: - Private methods
 
 extension HomeViewModel {
+
+    @objc private func handleShouldReloadNotification() {
+        updateData()
+    }
 
     private func updateBalances() {
         endOfMonthSummaries = endOfMonthSummaries
@@ -231,7 +279,7 @@ extension HomeViewModel {
                 .string(from: NSNumber(value: endOfMonthSummary.balance))
                 ?? displayModel.defaultAmount
             let detailColor = endOfMonthSummary.balance > 0 ?
-                HomeCellModel.positiveColor : HomeCellModel.negativeBalanceColor
+                HomeCellDisplayModel.positiveColor : HomeCellDisplayModel.negativeBalanceColor
             let cellModel = HomeCellModel(title: title,
                                           detail: detail,
                                           detailColor: detailColor)
@@ -255,7 +303,7 @@ extension HomeViewModel {
                 .string(from: NSNumber(value: transaction.amount))
                 ?? displayModel.defaultAmount
             let detailColor = transaction.amount > 0 ?
-                HomeCellModel.positiveColor : HomeCellModel.negativeColor
+                HomeCellDisplayModel.positiveColor : HomeCellDisplayModel.negativeColor
             let cellModel = HomeCellModel(title: title,
                                           detail: detail,
                                           detailColor: detailColor)
@@ -274,7 +322,7 @@ extension HomeViewModel {
                 .string(from: NSNumber(value: transaction.amount))
                 ?? displayModel.defaultAmount
             let detailColor = transaction.amount > 0 ?
-                HomeCellModel.positiveColor : HomeCellModel.negativeColor
+                HomeCellDisplayModel.positiveColor : HomeCellDisplayModel.negativeColor
             let cellModel = HomeCellModel(title: title,
                                           detail: detail,
                                           detailColor: detailColor)
@@ -298,6 +346,8 @@ extension HomeViewModel {
     }
 
 }
+
+// MARK: - Business methods
 
 extension HomeViewModel {
 

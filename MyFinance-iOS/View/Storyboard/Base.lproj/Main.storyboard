@@ -32,7 +32,7 @@
                                                         <rect key="frame" x="0.0" y="0.0" width="375" height="523"/>
                                                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                                         <prototypes>
-                                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="HomeTableViewCell" textLabel="WdT-63-8J4" detailTextLabel="EvZ-ye-Dm6" rowHeight="60" style="IBUITableViewCellStyleValue1" id="cYO-BF-ixi">
+                                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="HomeTableViewCell" textLabel="WdT-63-8J4" detailTextLabel="EvZ-ye-Dm6" rowHeight="60" style="IBUITableViewCellStyleValue1" id="cYO-BF-ixi" customClass="HomeTableViewCell" customModule="MyFinance" customModuleProvider="target">
                                                                 <rect key="frame" x="0.0" y="55.5" width="375" height="60"/>
                                                                 <autoresizingMask key="autoresizingMask"/>
                                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="cYO-BF-ixi" id="ws4-6q-eGY">
@@ -66,7 +66,7 @@
                                                         <rect key="frame" x="375" y="0.0" width="375" height="523"/>
                                                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                                         <prototypes>
-                                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="HomeTableViewCell" textLabel="DwZ-Sr-fLN" detailTextLabel="PoR-xu-yLP" rowHeight="60" style="IBUITableViewCellStyleValue1" id="qtQ-it-jbt">
+                                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="HomeTableViewCell" textLabel="DwZ-Sr-fLN" detailTextLabel="PoR-xu-yLP" rowHeight="60" style="IBUITableViewCellStyleValue1" id="qtQ-it-jbt" customClass="HomeTableViewCell" customModule="MyFinance" customModuleProvider="target">
                                                                 <rect key="frame" x="0.0" y="55.5" width="375" height="60"/>
                                                                 <autoresizingMask key="autoresizingMask"/>
                                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="qtQ-it-jbt" id="nuS-Yl-YM4">
@@ -100,7 +100,7 @@
                                                         <rect key="frame" x="750" y="0.0" width="375" height="523"/>
                                                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                                         <prototypes>
-                                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="HomeTableViewCell" textLabel="CAh-FL-Xqu" detailTextLabel="X6b-fi-RTo" rowHeight="60" style="IBUITableViewCellStyleValue1" id="G6D-s3-ji0">
+                                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="HomeTableViewCell" textLabel="CAh-FL-Xqu" detailTextLabel="X6b-fi-RTo" rowHeight="60" style="IBUITableViewCellStyleValue1" id="G6D-s3-ji0" customClass="HomeTableViewCell" customModule="MyFinance" customModuleProvider="target">
                                                                 <rect key="frame" x="0.0" y="55.5" width="375" height="60"/>
                                                                 <autoresizingMask key="autoresizingMask"/>
                                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="G6D-s3-ji0" id="Qd9-NO-7pe">

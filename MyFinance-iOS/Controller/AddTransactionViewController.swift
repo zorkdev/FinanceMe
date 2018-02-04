@@ -6,7 +6,7 @@ class AddTransactionViewController: BaseViewController {
     @IBOutlet private weak var createdField: UITextField!
     @IBOutlet private weak var saveButton: UIButton!
 
-    private var viewModel: AddTransactionViewModel!
+    private var viewModel: AddTransactionViewModelType!
 
     private let createdPicker = UIDatePicker()
     private var selectedSource = 0
@@ -48,12 +48,7 @@ class AddTransactionViewController: BaseViewController {
         updateSaveButton()
     }
 
-    @objc func createdPickerValueChanged(_ sender: UIDatePicker) {
-        selectedDate = sender.date
-        createdField.text = AddTransactionDisplayModel.dateString(from: selectedDate)
-    }
-
-    func updateSaveButton() {
+    private func updateSaveButton() {
         let addTransactionDisplayModel = AddTransactionDisplayModel(amount: amountField.text ?? "",
                                                                     narrative: narrativeField.text ?? "",
                                                                     source: selectedSource,
@@ -68,7 +63,12 @@ class AddTransactionViewController: BaseViewController {
         }
     }
 
-    @IBAction func saveButtonTapped(_ sender: UIButton) {
+    @objc private func createdPickerValueChanged(_ sender: UIDatePicker) {
+        selectedDate = sender.date
+        createdField.text = AddTransactionDisplayModel.dateString(from: selectedDate)
+    }
+
+    @IBAction private func saveButtonTapped(_ sender: UIButton) {
         guard let amount = amountField.text,
             amount.components(separatedBy: .whitespaces)
                 .joined() != "",
@@ -108,18 +108,18 @@ extension AddTransactionViewController: UIPickerViewDelegate, UIPickerViewDataSo
 
 extension AddTransactionViewController {
 
-    @IBAction func textFieldValueChanged(_ sender: UITextField) {
+    @IBAction private func textFieldValueChanged(_ sender: UITextField) {
         updateSaveButton()
     }
 
-    func textFieldShouldBeginEditing(_ textField: UITextField) -> Bool {
+    private func textFieldShouldBeginEditing(_ textField: UITextField) -> Bool {
         createdPicker.maximumDate = Date()
         return true
     }
 
-    func textField(_ textField: UITextField,
-                   shouldChangeCharactersIn range: NSRange,
-                   replacementString string: String) -> Bool {
+    private func textField(_ textField: UITextField,
+                           shouldChangeCharactersIn range: NSRange,
+                           replacementString string: String) -> Bool {
         guard textField == amountField,
             let originalText = textField.text,
             let range = Range(range, in: originalText)  else { return true }
