@@ -13,14 +13,35 @@ class HomeViewController: BaseViewController {
 
     private var viewModel: HomeViewModel!
 
+    private let transactionsRefreshControl = UIRefreshControl()
+    private let regularsRefreshControl = UIRefreshControl()
+    private let balanceRefreshControl = UIRefreshControl()
+
     override var preferredStatusBarStyle: UIStatusBarStyle {
         return .lightContent
     }
 
     override func viewDidLoad() {
         super.viewDidLoad()
+
+        transactionsTableView.refreshControl = transactionsRefreshControl
+        regularsTableView.refreshControl = regularsRefreshControl
+        balanceTableView.refreshControl = balanceRefreshControl
+
+        transactionsRefreshControl.addTarget(self, action: #selector(updateData(_:)), for: .valueChanged)
+        regularsRefreshControl.addTarget(self, action: #selector(updateData(_:)), for: .valueChanged)
+        balanceRefreshControl.addTarget(self, action: #selector(updateData(_:)), for: .valueChanged)
+
         viewModel = HomeViewModel(delegate: self)
         viewModel.viewDidLoad()
+    }
+
+    @objc func updateData(_ sender: UIRefreshControl) {
+        viewModel.updateData().then { _ -> Void in
+            self.transactionsRefreshControl.endRefreshing()
+            self.regularsRefreshControl.endRefreshing()
+            self.balanceRefreshControl.endRefreshing()
+        }
     }
 
     @IBAction func transactionsButtonTapped(_ sender: UIButton) {

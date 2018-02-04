@@ -54,8 +54,6 @@ class HomeViewModel: TodayPresentable {
     func viewDidLoad() {
         setupDefaults()
         updateData()
-        getExternalTransactions()
-        getEndOfMonthSummaries()
     }
 
     func setupDefaults() {
@@ -69,6 +67,13 @@ class HomeViewModel: TodayPresentable {
         endOfMonthSummaries = DataManager.shared.endOfMonthSummaries
         updateBalances()
         (delegate as? HomeViewModelDelegate)?.reloadTableView()
+    }
+
+    @discardableResult func updateData() -> Promise<Void> {
+        return when(fulfilled: getBalance(),
+                    getUser(),
+                    getExternalTransactions(),
+                    getEndOfMonthSummaries())
     }
 
     func numberOfSections(in tab: Tab) -> Int {
@@ -291,13 +296,13 @@ extension HomeViewModel {
 
 extension HomeViewModel {
 
-    private func getExternalTransactions() {
-        externalTransactionsBusinessLogic.getExternalTransactions().then { transactions -> Void in
+    private func getExternalTransactions() -> Promise<Void> {
+        return externalTransactionsBusinessLogic.getExternalTransactions().then { transactions -> Void in
             self.externalTransactions = transactions
             self.updateTransactions()
             (self.delegate as? HomeViewModelDelegate)?.reloadTableView()
-            }.catch { error in
-                print(error)
+        }.catch { error in
+            print(error)
         }
     }
 
@@ -330,8 +335,8 @@ extension HomeViewModel {
         }
     }
 
-    private func getEndOfMonthSummaries() {
-        endOfMonthSummaryBusinessLogic.getEndOfMonthSummaries().then { endOfMonthSummaries -> Void in
+    private func getEndOfMonthSummaries() -> Promise<Void> {
+        return endOfMonthSummaryBusinessLogic.getEndOfMonthSummaries().then { endOfMonthSummaries -> Void in
             self.endOfMonthSummaries = endOfMonthSummaries
             self.updateBalances()
             (self.delegate as? HomeViewModelDelegate)?.reloadTableView()
