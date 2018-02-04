@@ -221,7 +221,12 @@ extension HomeViewModel {
         balanceCellModels = [:]
 
         for endOfMonthSummary in endOfMonthSummaries {
-            let title = Formatters.month.string(from: endOfMonthSummary.created)
+            var title = Formatters.month.string(from: endOfMonthSummary.created)
+
+            if endOfMonthSummary.created > Date() {
+                title = HomeDisplayModel.currentMonthTitle
+            }
+
             let detail = Formatters.currencyPlusMinusSign
                 .string(from: NSNumber(value: endOfMonthSummary.balance))
                 ?? displayModel.defaultAmount
