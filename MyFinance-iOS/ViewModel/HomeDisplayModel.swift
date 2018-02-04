@@ -13,7 +13,7 @@ struct HomeDisplayModel: TodayDisplayModelType {
 
     static let regularInboundSectionTitle = "Incoming"
     static let regularOutboundSectionTitle = "Outgoing"
-    static let currentMonthTitle = "This month remaining"
+    static let currentMonthTitle = "This month"
 
     struct DeleteAlert {
 
