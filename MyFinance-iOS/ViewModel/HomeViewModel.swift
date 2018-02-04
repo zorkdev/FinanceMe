@@ -18,9 +18,10 @@ protocol HomeViewModelType: ViewModelType, AddTransactionViewModelDataDelegate {
 
     func numberOfSections(in tab: HomeViewModel.Tab) -> Int
     func numberOfRows(in tab: HomeViewModel.Tab, in section: Int) -> Int
-    func cellModel(for tab: HomeViewModel.Tab, section: Int, row: Int) -> HomeCellModel?
+    func cellModel(for tab: HomeViewModel.Tab, section: Int, row: Int) -> HomeCellModelType?
     func header(for tab: HomeViewModel.Tab, section: Int) -> String?
     func delete(from tab: HomeViewModel.Tab, section: Int, row: Int)
+    func height(for tab: HomeViewModel.Tab, section: Int, row: Int) -> CGFloat
     func refreshTapped()
 
 }
@@ -37,6 +38,12 @@ class HomeViewModel {
 
     private let externalTransactionsBusinessLogic = ExternalTransactionsBusinessLogic()
     private let endOfMonthSummaryBusinessLogic = EndOfMonthSummaryBusinessLogic()
+
+    private var currentMonthSummary: CurrentMonthSummary? {
+        didSet {
+            //DataManager.shared.endOfMonthSummaries = endOfMonthSummaries
+        }
+    }
 
     private var endOfMonthSummaries = [EndOfMonthSummary]() {
         didSet {
@@ -56,6 +63,7 @@ class HomeViewModel {
     private var normalCellModels = [Date: [HomeCellModel]]()
     private var regularCellModels = [RegularsSection: [HomeCellModel]]()
     private var balanceCellModels = [Date: [HomeCellModel]]()
+    private var currentMonthCellModels = [HomeCurrentMonthCellModel]()
 
     let displayModel: TodayDisplayModelType = HomeDisplayModel()
 
@@ -99,7 +107,7 @@ extension HomeViewModel: TodayPresentable {
         return when(fulfilled: getBalance(),
                     getUser(),
                     getExternalTransactions(),
-                    getEndOfMonthSummaries())
+                    getEndOfMonthSummaryList())
             .catch { error in
                 (self.delegate as? HomeViewModelDelegate)?.showError(message: error.localizedDescription)
             }.always {
@@ -120,9 +128,13 @@ extension HomeViewModel: HomeViewModelType {
 
     func numberOfSections(in tab: Tab) -> Int {
         switch tab {
-        case .transactions: return normalCellModels.count
-        case .bills: return regularCellModels.count
-        case .balances: return balanceCellModels.count
+        case .transactions:
+            return normalCellModels.count
+        case .bills:
+            return regularCellModels.count
+        case .balances:
+            let currentMonthCount = currentMonthCellModels.isEmpty ? 0 : 1
+            return balanceCellModels.count + currentMonthCount
         }
     }
 
@@ -138,12 +150,18 @@ extension HomeViewModel: HomeViewModelType {
             case .outbound: return regularCellModels[.outbound]?.count ?? 0
             }
         case .balances:
-            let key = balanceCellModels.keys.sorted(by: { $0 > $1 })[section]
+            let modifier = currentMonthCellModels.isEmpty ? 0 : -1
+
+            if section == 0, modifier == -1 {
+                return currentMonthCellModels.count
+            }
+
+            let key = balanceCellModels.keys.sorted(by: { $0 > $1 })[section + modifier]
             return balanceCellModels[key]?.count ?? 0
         }
     }
 
-    func cellModel(for tab: Tab, section: Int, row: Int) -> HomeCellModel? {
+    func cellModel(for tab: Tab, section: Int, row: Int) -> HomeCellModelType? {
         switch tab {
         case .transactions:
             let key = normalCellModels.keys.sorted(by: { $0 > $1 })[section]
@@ -155,7 +173,13 @@ extension HomeViewModel: HomeViewModelType {
             case .outbound: return regularCellModels[.outbound]?[row]
             }
         case .balances:
-            let key = balanceCellModels.keys.sorted(by: { $0 > $1 })[section]
+            let modifier = currentMonthCellModels.isEmpty ? 0 : -1
+
+            if section == 0, modifier == -1 {
+                return currentMonthCellModels[row]
+            }
+
+            let key = balanceCellModels.keys.sorted(by: { $0 > $1 })[section + modifier]
             return balanceCellModels[key]?[row]
         }
     }
@@ -172,7 +196,13 @@ extension HomeViewModel: HomeViewModelType {
             case .outbound: return HomeDisplayModel.regularOutboundSectionTitle
             }
         case .balances:
-            let date = balanceCellModels.keys.sorted(by: { $0 > $1 })[section]
+            let modifier = currentMonthCellModels.isEmpty ? 0 : -1
+
+            if section == 0, modifier == -1 {
+                return HomeDisplayModel.currentMonthTitle
+            }
+
+            let date = balanceCellModels.keys.sorted(by: { $0 > $1 })[section + modifier]
             return Formatters.year.string(from: date)
         }
     }
@@ -214,6 +244,19 @@ extension HomeViewModel: HomeViewModelType {
                                                     section: section,
                                                     row: row) },
                        cancelActionTitle: HomeDisplayModel.DeleteAlert.cancelButtonTitle)
+    }
+
+    func height(for tab: HomeViewModel.Tab, section: Int, row: Int) -> CGFloat {
+        switch tab {
+        case .transactions, .bills:
+            return HomeCellModel.rowHeight
+        case .balances:
+            if section == 0, currentMonthCellModels.isEmpty == false {
+                return HomeCurrentMonthCellModel.rowHeight
+            } else {
+                return HomeCellModel.rowHeight
+            }
+        }
     }
 
     func refreshTapped() {
@@ -268,7 +311,23 @@ extension HomeViewModel {
     }
 
     private func configureBalanceCellModels() {
+        currentMonthCellModels = []
         balanceCellModels = [:]
+
+        if let currentMonthSummary = currentMonthSummary {
+            let allowance = Formatters.currencyPlusMinusSign
+                .string(from: NSNumber(value: currentMonthSummary.allowance))
+                ?? displayModel.defaultAmount
+
+            let forecast = Formatters.currencyPlusMinusSign
+                .string(from: NSNumber(value: currentMonthSummary.forecast))
+                ?? displayModel.defaultAmount
+
+            let homeCurrentMonthCellModel = HomeCurrentMonthCellModel(allowance: allowance,
+                                                               forecast: forecast)
+
+            currentMonthCellModels = [homeCurrentMonthCellModel]
+        }
 
         for endOfMonthSummary in endOfMonthSummaries {
             var title = Formatters.month.string(from: endOfMonthSummary.created)
@@ -394,9 +453,10 @@ extension HomeViewModel {
         }
     }
 
-    private func getEndOfMonthSummaries() -> Promise<Void> {
-        return endOfMonthSummaryBusinessLogic.getEndOfMonthSummaries().then { endOfMonthSummaries -> Void in
-            self.endOfMonthSummaries = endOfMonthSummaries
+    private func getEndOfMonthSummaryList() -> Promise<Void> {
+        return endOfMonthSummaryBusinessLogic.getEndOfMonthSummaryList().then { endOfMonthSummaryList -> Void in
+            self.endOfMonthSummaries = endOfMonthSummaryList.endOfMonthSummaries
+            self.currentMonthSummary = endOfMonthSummaryList.currentMonthSummary
             self.updateBalances()
             (self.delegate as? HomeViewModelDelegate)?.reloadTableView()
         }.catch { error in

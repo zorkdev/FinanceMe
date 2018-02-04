@@ -4,7 +4,7 @@ public struct EndOfMonthSummaryBusinessLogic {
 
     public init() {}
 
-    public func getEndOfMonthSummaries() -> Promise<[EndOfMonthSummary]> {
+    public func getEndOfMonthSummaryList() -> Promise<EndOfMonthSummaryList> {
         guard let url = ZorkdevAPI.endOfMonthSummaries.url else {
             return Promise(error: AppError.apiPathInvalid)
         }
@@ -13,11 +13,11 @@ public struct EndOfMonthSummaryBusinessLogic {
                                                     method: .get,
                                                     url: url)
             .then { data in
-                guard let endOfMonthSummaries = JSONCoder.shared.decode([EndOfMonthSummary].self, from: data) else {
+                guard let endOfMonthSummaryList = JSONCoder.shared.decode(EndOfMonthSummaryList.self, from: data) else {
                     return Promise(error: AppError.jsonParsingError)
                 }
 
-                return Promise(value: endOfMonthSummaries)
+                return Promise(value: endOfMonthSummaryList)
         }
     }
 

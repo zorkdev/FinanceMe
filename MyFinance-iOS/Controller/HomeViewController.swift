@@ -24,6 +24,13 @@ class HomeViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        setupTableViews()
+
+        viewModel = HomeViewModel(delegate: self)
+        viewModel.viewDidLoad()
+    }
+
+    private func setupTableViews() {
         transactionsTableView.refreshControl = transactionsRefreshControl
         regularsTableView.refreshControl = regularsRefreshControl
         balanceTableView.refreshControl = balanceRefreshControl
@@ -32,8 +39,8 @@ class HomeViewController: BaseViewController {
         regularsRefreshControl.addTarget(self, action: #selector(updateData(_:)), for: .valueChanged)
         balanceRefreshControl.addTarget(self, action: #selector(updateData(_:)), for: .valueChanged)
 
-        viewModel = HomeViewModel(delegate: self)
-        viewModel.viewDidLoad()
+        balanceTableView.register(HomeCurrentMonthTableViewCell.nib,
+                                  forCellReuseIdentifier: HomeCurrentMonthTableViewCell.string)
     }
 
     @objc private func updateData(_ sender: UIRefreshControl) {
@@ -144,7 +151,7 @@ extension HomeViewController: UIScrollViewDelegate {
 
 }
 
-extension HomeViewController: UITableViewDataSource {
+extension HomeViewController: UITableViewDataSource, UITableViewDelegate {
 
     func numberOfSections(in tableView: UITableView) -> Int {
         switch tableView {
@@ -174,9 +181,6 @@ extension HomeViewController: UITableViewDataSource {
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: HomeTableViewCell.string, for: indexPath)
-            as? HomeTableViewCell else { return UITableViewCell() }
-
         let tab: HomeViewModel.Tab
         switch tableView {
         case transactionsTableView:
@@ -185,15 +189,31 @@ extension HomeViewController: UITableViewDataSource {
             tab = .bills
         case balanceTableView:
             tab = .balances
-        default: return cell
+        default: return UITableViewCell()
         }
 
         guard let cellModel = viewModel.cellModel(for: tab,
-                                        section: indexPath.section,
-                                        row: indexPath.row) else { return cell }
-        cell.set(homeCellModel: cellModel)
+                                                  section: indexPath.section,
+                                                  row: indexPath.row) else { return UITableViewCell() }
 
-        return cell
+        switch cellModel {
+        case let homeCellModel as HomeCellModel:
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: HomeTableViewCell.string,
+                                                           for: indexPath)
+                as? HomeTableViewCell else { return UITableViewCell() }
+            cell.set(homeCellModel: homeCellModel)
+            return cell
+
+        case let homeCurrentMonthCellModel as HomeCurrentMonthCellModel:
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: HomeCurrentMonthTableViewCell.string,
+                                                           for: indexPath)
+                as? HomeCurrentMonthTableViewCell else { return UITableViewCell() }
+            cell.set(homeCurrentMonthCellModel: homeCurrentMonthCellModel)
+            return cell
+
+        default:
+            return UITableViewCell()
+        }
     }
 
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
@@ -214,6 +234,7 @@ extension HomeViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
         switch tableView {
         case transactionsTableView, regularsTableView: return true
+        case balanceTableView: return false
         default: return false
         }
     }
@@ -229,12 +250,28 @@ extension HomeViewController: UITableViewDataSource {
             tab = .transactions
         case regularsTableView:
             tab = .bills
+        case balanceTableView: return
         default: return
         }
 
         viewModel.delete(from: tab,
                          section: indexPath.section,
                          row: indexPath.row)
+    }
+
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        let tab: HomeViewModel.Tab
+        switch tableView {
+        case transactionsTableView:
+            tab = .transactions
+        case regularsTableView:
+            tab = .bills
+        case balanceTableView:
+            tab = .balances
+        default: return UITableViewAutomaticDimension
+        }
+
+        return viewModel.height(for: tab, section: indexPath.section, row: indexPath.row)
     }
 
 }
