@@ -1,5 +1,3 @@
-import SwiftKeychainWrapper
-
 public class DataManager {
 
     private struct Constants {

@@ -15,8 +15,9 @@ class ConfigManager {
     var config: Config
 
     private init() {
-        guard let configURL = Bundle.main.url(forResource: Constants.configFilename,
-                                              withExtension: Constants.configExtension),
+        let bundle = Bundle(for: ConfigManager.self)
+        guard let configURL = bundle.url(forResource: Constants.configFilename,
+                                         withExtension: Constants.configExtension),
             let data = try? Data(contentsOf: configURL),
             let config = JSONCoder.shared.decode(Config.self, from: data) else {
                 fatalError(Constants.configMissingMessage)

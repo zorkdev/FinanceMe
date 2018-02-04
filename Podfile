@@ -5,16 +5,13 @@ def pods
     pod 'PromiseKit'
 end
 
-def pods_ios
-    pod 'SwiftKeychainWrapper'
-end
-
-target 'MyFinance' do
+target 'MyFinance-iOS' do
     platform :ios, '11.2'
     pods
+    pod 'SwiftMessages'
 end
 
-target 'MyFinanceExtension' do
+target 'MyFinanceExtension-iOS' do
     platform :ios, '11.2'
     pods
 end
@@ -32,7 +29,6 @@ end
 target 'MyFinanceKit-iOS' do
     platform :ios, '11.2'
     pods
-    pods_ios
 end
 
 target 'MyFinanceKit-macOS' do

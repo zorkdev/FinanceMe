@@ -1,6 +1,6 @@
 import NotificationCenter
 
-protocol HomeViewModelDelegate: TodayViewModelDelegate {
+protocol HomeViewModelDelegate: TodayViewModelDelegate, ErrorPresentable {
 
     func reloadTableView()
     func endRefreshing()
@@ -100,7 +100,9 @@ extension HomeViewModel: TodayPresentable {
                     getUser(),
                     getExternalTransactions(),
                     getEndOfMonthSummaries())
-            .then { _ in
+            .catch { error in
+                (self.delegate as? HomeViewModelDelegate)?.showError(message: error.localizedDescription)
+            }.always {
                 (self.delegate as? HomeViewModelDelegate)?.endRefreshing()
         }
     }
@@ -357,7 +359,7 @@ extension HomeViewModel {
             self.updateTransactions()
             (self.delegate as? HomeViewModelDelegate)?.reloadTableView()
         }.catch { error in
-            print(error)
+            (self.delegate as? HomeViewModelDelegate)?.showError(message: error.localizedDescription)
         }
     }
 
@@ -387,6 +389,8 @@ extension HomeViewModel {
                 }
             default: break
             }
+        }.catch { error in
+            (self.delegate as? HomeViewModelDelegate)?.showError(message: error.localizedDescription)
         }
     }
 
@@ -396,7 +400,7 @@ extension HomeViewModel {
             self.updateBalances()
             (self.delegate as? HomeViewModelDelegate)?.reloadTableView()
         }.catch { error in
-            print(error)
+            (self.delegate as? HomeViewModelDelegate)?.showError(message: error.localizedDescription)
         }
     }
 

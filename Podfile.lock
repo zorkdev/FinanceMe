@@ -10,19 +10,19 @@ PODS:
     - PromiseKit/CorePromise
   - PromiseKit/UIKit (4.5.0):
     - PromiseKit/CorePromise
-  - SwiftKeychainWrapper (3.0.1)
   - SwiftLint (0.24.0)
+  - SwiftMessages (4.1.0)
 
 DEPENDENCIES:
   - PromiseKit
-  - SwiftKeychainWrapper
   - SwiftLint
+  - SwiftMessages
 
 SPEC CHECKSUMS:
   PromiseKit: 9c1d9f6d7b65e3951a90bea7f407c56972be5d8e
-  SwiftKeychainWrapper: 38952a3636320ae61bad3513cadd870929de7a4a
   SwiftLint: a014c92b4664e8b13f380f8640a51bb1733778ba
+  SwiftMessages: 1bacc783c8f10bdfdc57c14860cae8a1f1fa6591
 
-PODFILE CHECKSUM: f773b31f2ba8e142c0fe80c2d147cb28af7813fe
+PODFILE CHECKSUM: 171f38643c4f22a915865a19dd3e6caf3941f11d
 
 COCOAPODS: 1.3.1
