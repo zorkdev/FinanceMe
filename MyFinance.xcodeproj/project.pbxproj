@@ -71,6 +71,7 @@
 		9A65B7A1202686A9004165F2 /* EndOfMonthSummary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A65B79F202686A9004165F2 /* EndOfMonthSummary.swift */; };
 		9A65B7A5202690DB004165F2 /* EndOfMonthSummaryBusinessLogic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A65B7A4202690DB004165F2 /* EndOfMonthSummaryBusinessLogic.swift */; };
 		9A65B7A6202690DB004165F2 /* EndOfMonthSummaryBusinessLogic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A65B7A4202690DB004165F2 /* EndOfMonthSummaryBusinessLogic.swift */; };
+		9A65B7AC2026ABBB004165F2 /* AuthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A65B7A72026A9E7004165F2 /* AuthManager.swift */; };
 		9A740ECE201E245200D40943 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A740ECD201E245200D40943 /* AppDelegate.swift */; };
 		9A740ED2201E245200D40943 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9A740ED1201E245200D40943 /* Assets.xcassets */; };
 		9A740ED5201E245200D40943 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9A740ED3201E245200D40943 /* Main.storyboard */; };
@@ -234,6 +235,7 @@
 		9A65B79C202651F3004165F2 /* Validators.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Validators.swift; sourceTree = "<group>"; };
 		9A65B79F202686A9004165F2 /* EndOfMonthSummary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndOfMonthSummary.swift; sourceTree = "<group>"; };
 		9A65B7A4202690DB004165F2 /* EndOfMonthSummaryBusinessLogic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndOfMonthSummaryBusinessLogic.swift; sourceTree = "<group>"; };
+		9A65B7A72026A9E7004165F2 /* AuthManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthManager.swift; sourceTree = "<group>"; };
 		9A740ECB201E245200D40943 /* MyFinance-macOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "MyFinance-macOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9A740ECD201E245200D40943 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9A740ED1201E245200D40943 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -451,6 +453,7 @@
 			isa = PBXGroup;
 			children = (
 				9A5AE5752012A8AB00B25081 /* AppDelegate.swift */,
+				9A65B7A72026A9E7004165F2 /* AuthManager.swift */,
 				9AD3EE332013C9120083F8FE /* Bridging-Header.h */,
 				9A5AE5812012A8AC00B25081 /* Info.plist */,
 				9AD3EE2C2013B64C0083F8FE /* config.json */,
@@ -1221,6 +1224,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9AD96C992025341D00D37F23 /* HomeTableViewCell.swift in Sources */,
+				9A65B7AC2026ABBB004165F2 /* AuthManager.swift in Sources */,
 				9A5AE5782012A8AC00B25081 /* HomeViewController.swift in Sources */,
 				9AD96C8F2025138400D37F23 /* HomeDisplayModel.swift in Sources */,
 				9AD96CA8202544A600D37F23 /* AddTransactionViewModel.swift in Sources */,
