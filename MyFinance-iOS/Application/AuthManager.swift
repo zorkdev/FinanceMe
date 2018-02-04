@@ -5,11 +5,15 @@ class AuthManager {
 
     private struct Constants {
         static let reason = "Please authenticate to unlock this app"
+        static let tryAgainButtonTitle = "Try again"
+        static let tryAgainButtonFont = UIFont.systemFont(ofSize: 26, weight: .bold)
     }
 
     private var window: UIWindow?
+    private var occlusionView: UIView?
+    private var tryAgainButton: UIButton?
 
-    func authenticate() {
+    @objc func authenticate() {
         addOcclusion()
 
         let context = LAContext()
@@ -21,10 +25,31 @@ class AuthManager {
                 DispatchQueue.main.async {
                     if success {
                         self?.removeOcclusion()
+                    } else {
+                        self?.addTryAgainButton()
                     }
                 }
             }
         }
+    }
+
+    func addTryAgainButton() {
+        guard tryAgainButton == nil,
+            let frame = occlusionView?.frame else { return }
+
+        tryAgainButton = UIButton(frame: frame)
+        tryAgainButton?.addTarget(self,
+                                  action: #selector(authenticate),
+                                  for: .touchUpInside)
+        tryAgainButton?.setTitle(Constants.tryAgainButtonTitle, for: .normal)
+        tryAgainButton?.titleLabel?.font = Constants.tryAgainButtonFont
+        guard let tryAgainButton = tryAgainButton else { fatalError() }
+        occlusionView?.addSubview(tryAgainButton)
+    }
+
+    func removeTryAgainButton() {
+        tryAgainButton?.removeFromSuperview()
+        tryAgainButton = nil
     }
 
     func addOcclusion() {
@@ -33,14 +58,12 @@ class AuthManager {
             return
         }
 
-        let frame = window?.frame ?? CGRect(x: 0,
-                                            y: 0,
-                                            width: 10000,
-                                            height: 10000)
-        let occlusionView = UIView(frame: frame)
+        guard let frame = UIApplication.shared.delegate?.window??.frame else { fatalError() }
+
+        occlusionView = UIView(frame: frame)
         let viewController = UIViewController()
         viewController.view = occlusionView
-        occlusionView.backgroundColor = ColorPalette.primary
+        occlusionView?.backgroundColor = ColorPalette.primary
         window = UIWindow(frame: frame)
         window?.windowLevel = UIWindowLevelAlert
         window?.rootViewController = viewController
@@ -48,6 +71,7 @@ class AuthManager {
     }
 
     private func removeOcclusion() {
+        removeTryAgainButton()
         window?.isHidden = true
     }
 
