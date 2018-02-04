@@ -26,7 +26,7 @@ class HomeViewModel: TodayPresentable {
 
     private var endOfMonthSummaries = [EndOfMonthSummary]() {
         didSet {
-            //DataManager.shared.transactions = externalTransactions
+            DataManager.shared.endOfMonthSummaries = endOfMonthSummaries
         }
     }
 
@@ -66,6 +66,8 @@ class HomeViewModel: TodayPresentable {
 
         externalTransactions = DataManager.shared.transactions
         updateTransactions()
+        endOfMonthSummaries = DataManager.shared.endOfMonthSummaries
+        updateBalances()
         (delegate as? HomeViewModelDelegate)?.reloadTableView()
     }
 

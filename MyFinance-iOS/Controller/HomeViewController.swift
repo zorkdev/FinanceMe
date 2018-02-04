@@ -187,6 +187,13 @@ extension HomeViewController: UITableViewDataSource {
         return viewModel.header(for: tab, section: section)
     }
 
+    func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+        switch tableView {
+        case transactionsTableView, regularsTableView: return true
+        default: return false
+        }
+    }
+
     func tableView(_ tableView: UITableView,
                    commit editingStyle: UITableViewCellEditingStyle,
                    forRowAt indexPath: IndexPath) {

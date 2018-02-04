@@ -6,6 +6,7 @@ public class DataManager {
         static let balanceKey = "balance"
         static let allowanceKey = "allowance"
         static let transactionsKey = "transactions"
+        static let endOfMonthSummariesKey = "endOfMonthSummaries"
     }
 
     public static let shared = DataManager()
@@ -39,6 +40,20 @@ public class DataManager {
         set {
             let data = JSONCoder.shared.encode(newValue)
             UserDefaults.standard.set(data, forKey: Constants.transactionsKey)
+        }
+    }
+
+    public var endOfMonthSummaries: [EndOfMonthSummary] {
+        get {
+            guard let data = UserDefaults.standard.data(forKey: Constants.endOfMonthSummariesKey),
+                let endOfMonthSummaries = JSONCoder.shared.decode([EndOfMonthSummary].self, from: data) else {
+                    return []
+            }
+            return endOfMonthSummaries
+        }
+        set {
+            let data = JSONCoder.shared.encode(newValue)
+            UserDefaults.standard.set(data, forKey: Constants.endOfMonthSummariesKey)
         }
     }
 

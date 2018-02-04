@@ -8,7 +8,7 @@ struct HomeCellModel {
     static let negativeBalanceColor = UIColor(red: 209/255.0,
                                               green: 69/255.0,
                                               blue: 58/255.0,
-                                              alpha: 1.0)
+                                              alpha: 1)
 
     let title: String
     let detail: String
