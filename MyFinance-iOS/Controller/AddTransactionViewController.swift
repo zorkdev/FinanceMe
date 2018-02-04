@@ -8,6 +8,7 @@ class AddTransactionViewController: BaseViewController {
 
     private var viewModel: AddTransactionViewModel!
 
+    private let createdPicker = UIDatePicker()
     private var selectedSource = 0
     private var selectedDate = Date()
 
@@ -28,7 +29,6 @@ class AddTransactionViewController: BaseViewController {
             amountField.inputAccessoryView = keyBoardToolbar
         }
 
-        let createdPicker = UIDatePicker()
         createdPicker.addTarget(self,
                                 action: #selector(createdPickerValueChanged(_:)),
                                 for: .valueChanged)
@@ -110,6 +110,11 @@ extension AddTransactionViewController {
 
     @IBAction func textFieldValueChanged(_ sender: UITextField) {
         updateSaveButton()
+    }
+
+    func textFieldShouldBeginEditing(_ textField: UITextField) -> Bool {
+        createdPicker.maximumDate = Date()
+        return true
     }
 
     func textField(_ textField: UITextField,
