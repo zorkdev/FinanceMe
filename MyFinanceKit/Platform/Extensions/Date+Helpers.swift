@@ -34,6 +34,12 @@ public extension Date {
         return calendar.date(from: dateComponents) ?? self
     }
 
+    var startOfYear: Date {
+        let dateComponents = calendar.dateComponents([.year],
+                                                     from: self)
+        return calendar.date(from: dateComponents) ?? self
+    }
+
     var endOfWeek: Date {
         return calendar.date(byAdding: .weekOfYear,
                              value: 1,

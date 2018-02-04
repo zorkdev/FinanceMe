@@ -4,8 +4,10 @@ class HomeViewController: BaseViewController {
     @IBOutlet private weak var allowanceLabel: UILabel!
     @IBOutlet private weak var transactionsTableView: UITableView!
     @IBOutlet private weak var regularsTableView: UITableView!
+    @IBOutlet private weak var balanceTableView: UITableView!
     @IBOutlet private weak var transactionsButton: UIButton!
     @IBOutlet private weak var regularsButton: UIButton!
+    @IBOutlet private weak var balanceButton: UIButton!
     @IBOutlet private weak var tabIndicator: UIView!
     @IBOutlet private weak var scrollView: UIScrollView!
 
@@ -31,6 +33,11 @@ class HomeViewController: BaseViewController {
         scrollView.setContentOffset(offset, animated: true)
     }
 
+    @IBAction func balanceButtonTapped(_ sender: UIButton) {
+        let offset = balanceTableView.frame.origin
+        scrollView.setContentOffset(offset, animated: true)
+    }
+
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let addTransactionViewController = segue.destination as? AddTransactionViewController else { return }
         addTransactionViewController.dataDelegate = viewModel
@@ -51,6 +58,7 @@ extension HomeViewController: HomeViewModelDelegate {
     func reloadTableView() {
         transactionsTableView.reloadData()
         regularsTableView.reloadData()
+        balanceTableView.reloadData()
     }
 
     func delete(from tab: HomeViewModel.Tab, section: Int) {
@@ -61,6 +69,8 @@ extension HomeViewController: HomeViewModelDelegate {
             transactionsTableView.deleteSections(indexSet, with: .automatic)
         case .bills:
             regularsTableView.deleteSections(indexSet, with: .automatic)
+        case .balances:
+            return
         }
     }
 
@@ -72,6 +82,8 @@ extension HomeViewController: HomeViewModelDelegate {
             transactionsTableView.deleteRows(at: [indexPath], with: .automatic)
         case .bills:
             regularsTableView.deleteRows(at: [indexPath], with: .automatic)
+        case .balances:
+            return
         }
     }
 
@@ -96,8 +108,8 @@ extension HomeViewController: UIScrollViewDelegate {
 
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
         guard scrollView == self.scrollView else { return }
-        let offsetRatio = scrollView.contentOffset.x / (scrollView.contentSize.width - regularsTableView.frame.origin.x)
-        let maxX = regularsButton.frame.origin.x
+        let offsetRatio = scrollView.contentOffset.x / balanceTableView.frame.origin.x
+        let maxX = balanceButton.frame.origin.x
         let newX = offsetRatio * maxX
 
         let newFrame = CGRect(x: newX,
@@ -117,6 +129,8 @@ extension HomeViewController: UITableViewDataSource {
             return viewModel.numberOfSections(in: .transactions)
         case regularsTableView:
             return viewModel.numberOfSections(in: .bills)
+        case balanceTableView:
+            return viewModel.numberOfSections(in: .balances)
         default: return 0
         }
     }
@@ -128,6 +142,8 @@ extension HomeViewController: UITableViewDataSource {
             tab = .transactions
         case regularsTableView:
             tab = .bills
+        case balanceTableView:
+            tab = .balances
         default: return 0
         }
 
@@ -143,6 +159,8 @@ extension HomeViewController: UITableViewDataSource {
             tab = .transactions
         case regularsTableView:
             tab = .bills
+        case balanceTableView:
+            tab = .balances
         default: return cell
         }
 
@@ -161,6 +179,8 @@ extension HomeViewController: UITableViewDataSource {
             tab = .transactions
         case regularsTableView:
             tab = .bills
+        case balanceTableView:
+            tab = .balances
         default: return nil
         }
 

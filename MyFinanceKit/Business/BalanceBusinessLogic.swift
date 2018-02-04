@@ -11,14 +11,15 @@ public struct BalanceBusinessLogic {
 
         return NetworkManager.shared.performRequest(api: .starling,
                                                     method: .get,
-                                                    url: url).then { data in
-            guard let balance = JSONCoder.shared.decode(Balance.self, from: data) else {
-                return Promise(error: AppError.jsonParsingError)
-            }
+                                                    url: url)
+            .then { data in
+                guard let balance = JSONCoder.shared.decode(Balance.self, from: data) else {
+                    return Promise(error: AppError.jsonParsingError)
+                }
 
-            DataManager.shared.balance = balance.effectiveBalance
+                DataManager.shared.balance = balance.effectiveBalance
 
-            return Promise(value: balance)
+                return Promise(value: balance)
         }
     }
 

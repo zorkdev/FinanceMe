@@ -14,7 +14,7 @@ protocol HomeViewModelDelegate: TodayViewModelDelegate {
 class HomeViewModel: TodayPresentable {
 
     enum Tab: Int {
-        case transactions = 0, bills
+        case transactions = 0, bills, balances
     }
 
     enum RegularsSection: Int {
@@ -22,6 +22,13 @@ class HomeViewModel: TodayPresentable {
     }
 
     private let externalTransactionsBusinessLogic = ExternalTransactionsBusinessLogic()
+    private let endOfMonthSummaryBusinessLogic = EndOfMonthSummaryBusinessLogic()
+
+    private var endOfMonthSummaries = [EndOfMonthSummary]() {
+        didSet {
+            //DataManager.shared.transactions = externalTransactions
+        }
+    }
 
     private var externalTransactions = [Transaction]() {
         didSet {
@@ -38,6 +45,7 @@ class HomeViewModel: TodayPresentable {
 
     var normalCellModels = [Date: [HomeCellModel]]()
     var regularCellModels = [RegularsSection: [HomeCellModel]]()
+    var balanceCellModels = [Date: [HomeCellModel]]()
 
     init(delegate: HomeViewModelDelegate) {
         self.delegate = delegate
@@ -47,6 +55,7 @@ class HomeViewModel: TodayPresentable {
         setupDefaults()
         updateData()
         getExternalTransactions()
+        getEndOfMonthSummaries()
     }
 
     func setupDefaults() {
@@ -63,7 +72,8 @@ class HomeViewModel: TodayPresentable {
     func numberOfSections(in tab: Tab) -> Int {
         switch tab {
         case .transactions: return normalCellModels.count
-        case .bills: return 2
+        case .bills: return regularCellModels.count
+        case .balances: return balanceCellModels.count
         }
     }
 
@@ -78,6 +88,9 @@ class HomeViewModel: TodayPresentable {
             case .inbound: return regularCellModels[.inbound]?.count ?? 0
             case .outbound: return regularCellModels[.outbound]?.count ?? 0
             }
+        case .balances:
+            let key = balanceCellModels.keys.sorted(by: { $0 > $1 })[section]
+            return balanceCellModels[key]?.count ?? 0
         }
     }
 
@@ -92,6 +105,9 @@ class HomeViewModel: TodayPresentable {
             case .inbound: return regularCellModels[.inbound]?[row]
             case .outbound: return regularCellModels[.outbound]?[row]
             }
+        case .balances:
+            let key = balanceCellModels.keys.sorted(by: { $0 > $1 })[section]
+            return balanceCellModels[key]?[row]
         }
     }
 
@@ -106,6 +122,9 @@ class HomeViewModel: TodayPresentable {
             case .inbound: return HomeDisplayModel.regularInboundSectionTitle
             case .outbound: return HomeDisplayModel.regularOutboundSectionTitle
             }
+        case .balances:
+            let date = balanceCellModels.keys.sorted(by: { $0 > $1 })[section]
+            return Formatters.year.string(from: date)
         }
     }
 
@@ -131,6 +150,9 @@ class HomeViewModel: TodayPresentable {
                     .filter({ $0.source == .externalRegularOutbound })[row]
             }
             shouldDeleteSection = regularCellModels[section]?.count == 1
+
+        case .balances:
+            return
         }
 
         let row = shouldDeleteSection ? nil : row
@@ -150,6 +172,13 @@ class HomeViewModel: TodayPresentable {
 // MARK: - Private methods
 
 extension HomeViewModel {
+
+    private func updateBalances() {
+        endOfMonthSummaries = endOfMonthSummaries
+            .sorted(by: { $0.created > $1.created })
+
+        configureBalanceCellModels()
+    }
 
     private func updateTransactions() {
         normalTransactions = externalTransactions
@@ -179,6 +208,29 @@ extension HomeViewModel {
             })
 
         configureCellModels()
+    }
+
+    private func configureBalanceCellModels() {
+        balanceCellModels = [:]
+
+        for endOfMonthSummary in endOfMonthSummaries {
+            let title = Formatters.month.string(from: endOfMonthSummary.created)
+            let detail = Formatters.currencyPlusMinusSign
+                .string(from: NSNumber(value: endOfMonthSummary.balance))
+                ?? displayModel.defaultAmount
+            let detailColor = endOfMonthSummary.balance > 0 ?
+                HomeCellModel.positiveColor : HomeCellModel.negativeBalanceColor
+            let cellModel = HomeCellModel(title: title,
+                                          detail: detail,
+                                          detailColor: detailColor)
+            let date = endOfMonthSummary.created.startOfYear
+
+            if let existingSection = balanceCellModels[date] {
+                balanceCellModels[date] = existingSection + [cellModel]
+            } else {
+                balanceCellModels[date] = [cellModel]
+            }
+        }
     }
 
     private func configureCellModels() {
@@ -233,13 +285,17 @@ extension HomeViewModel {
         }
     }
 
+}
+
+extension HomeViewModel {
+
     private func getExternalTransactions() {
         externalTransactionsBusinessLogic.getExternalTransactions().then { transactions -> Void in
             self.externalTransactions = transactions
             self.updateTransactions()
             (self.delegate as? HomeViewModelDelegate)?.reloadTableView()
-        }.catch { error in
-            print(error)
+            }.catch { error in
+                print(error)
         }
     }
 
@@ -269,6 +325,16 @@ extension HomeViewModel {
                 }
             default: break
             }
+        }
+    }
+
+    private func getEndOfMonthSummaries() {
+        endOfMonthSummaryBusinessLogic.getEndOfMonthSummaries().then { endOfMonthSummaries -> Void in
+            self.endOfMonthSummaries = endOfMonthSummaries
+            self.updateBalances()
+            (self.delegate as? HomeViewModelDelegate)?.reloadTableView()
+        }.catch { error in
+            print(error)
         }
     }
 

@@ -12,13 +12,13 @@ public struct ExternalTransactionsBusinessLogic {
 
         return NetworkManager.shared.performRequest(api: .zorkdev,
                                                     method: .get,
-                                                    url: url).then { data in
-            guard let transactions = JSONCoder.shared.decode([Transaction].self,
-                                                             from: data) else {
-                return Promise(error: AppError.jsonParsingError)
-            }
+                                                    url: url)
+            .then { data in
+                guard let transactions = JSONCoder.shared.decode([Transaction].self, from: data) else {
+                    return Promise(error: AppError.jsonParsingError)
+                }
 
-            return Promise(value: transactions)
+                return Promise(value: transactions)
         }
     }
 
@@ -45,7 +45,7 @@ public struct ExternalTransactionsBusinessLogic {
     public func delete(transaction: Transaction) -> Promise<Void> {
         guard let id = transaction.id,
             let url = ZorkdevAPI.transaction(id).url else {
-            return Promise(error: AppError.apiPathInvalid)
+                return Promise(error: AppError.apiPathInvalid)
         }
 
         return NetworkManager.shared.performRequest(api: .zorkdev,

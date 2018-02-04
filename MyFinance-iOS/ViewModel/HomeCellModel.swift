@@ -5,6 +5,10 @@ struct HomeCellModel {
                                        green: 184/255.0,
                                        blue: 82/255.0,
                                        alpha: 1)
+    static let negativeBalanceColor = UIColor(red: 209/255.0,
+                                              green: 69/255.0,
+                                              blue: 58/255.0,
+                                              alpha: 1.0)
 
     let title: String
     let detail: String

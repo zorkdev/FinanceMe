@@ -67,6 +67,10 @@
 		9A5AE5A22012C99A00B25081 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A5AE5A12012C99A00B25081 /* HomeViewModel.swift */; };
 		9A65B79D202651F3004165F2 /* Validators.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A65B79C202651F3004165F2 /* Validators.swift */; };
 		9A65B79E202651F3004165F2 /* Validators.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A65B79C202651F3004165F2 /* Validators.swift */; };
+		9A65B7A0202686A9004165F2 /* EndOfMonthSummary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A65B79F202686A9004165F2 /* EndOfMonthSummary.swift */; };
+		9A65B7A1202686A9004165F2 /* EndOfMonthSummary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A65B79F202686A9004165F2 /* EndOfMonthSummary.swift */; };
+		9A65B7A5202690DB004165F2 /* EndOfMonthSummaryBusinessLogic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A65B7A4202690DB004165F2 /* EndOfMonthSummaryBusinessLogic.swift */; };
+		9A65B7A6202690DB004165F2 /* EndOfMonthSummaryBusinessLogic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A65B7A4202690DB004165F2 /* EndOfMonthSummaryBusinessLogic.swift */; };
 		9A740ECE201E245200D40943 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A740ECD201E245200D40943 /* AppDelegate.swift */; };
 		9A740ED2201E245200D40943 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9A740ED1201E245200D40943 /* Assets.xcassets */; };
 		9A740ED5201E245200D40943 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9A740ED3201E245200D40943 /* Main.storyboard */; };
@@ -228,6 +232,8 @@
 		9A5AE5A82012CF1400B25081 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = SOURCE_ROOT; };
 		9A5AE5A92012D4A400B25081 /* Dictionary+Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Dictionary+Helpers.swift"; sourceTree = "<group>"; };
 		9A65B79C202651F3004165F2 /* Validators.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Validators.swift; sourceTree = "<group>"; };
+		9A65B79F202686A9004165F2 /* EndOfMonthSummary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndOfMonthSummary.swift; sourceTree = "<group>"; };
+		9A65B7A4202690DB004165F2 /* EndOfMonthSummaryBusinessLogic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndOfMonthSummaryBusinessLogic.swift; sourceTree = "<group>"; };
 		9A740ECB201E245200D40943 /* MyFinance-macOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "MyFinance-macOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9A740ECD201E245200D40943 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9A740ED1201E245200D40943 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -436,6 +442,7 @@
 				9A872E0E2016719100C1E9BE /* User.swift */,
 				9A5AE5912012B97500B25081 /* Balance.swift */,
 				9AD3EE1D20138F6C0083F8FE /* Transaction.swift */,
+				9A65B79F202686A9004165F2 /* EndOfMonthSummary.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -503,6 +510,7 @@
 				9AD3EE222013985B0083F8FE /* TransactionsBusinessLogic.swift */,
 				9A872E112016719100C1E9BE /* UserBusinessLogic.swift */,
 				9A872984201662E100C1E9BE /* ExternalTransactionsBusinessLogic.swift */,
+				9A65B7A4202690DB004165F2 /* EndOfMonthSummaryBusinessLogic.swift */,
 			);
 			path = Business;
 			sourceTree = "<group>";
@@ -1147,6 +1155,7 @@
 				9A4F55742023CAD300DBF68F /* BalanceBusinessLogic.swift in Sources */,
 				9AD96C9B202534D600D37F23 /* StringRepresentable.swift in Sources */,
 				9A65B79D202651F3004165F2 /* Validators.swift in Sources */,
+				9A65B7A5202690DB004165F2 /* EndOfMonthSummaryBusinessLogic.swift in Sources */,
 				9AD96C94202529E100D37F23 /* TodayPresentable.swift in Sources */,
 				9A4F55562023C96700DBF68F /* DataManager.swift in Sources */,
 				9A4F556E2023CABF00DBF68F /* Transaction.swift in Sources */,
@@ -1159,6 +1168,7 @@
 				9A4F55682023CAAD00DBF68F /* Config.swift in Sources */,
 				9A4F55612023C98200DBF68F /* Data+Helpers.swift in Sources */,
 				9A4F55602023C97A00DBF68F /* Dictionary+Helpers.swift in Sources */,
+				9A65B7A0202686A9004165F2 /* EndOfMonthSummary.swift in Sources */,
 				9A96668720260E7B000F8A42 /* ColorPalette.swift in Sources */,
 				9A4F55782023CADE00DBF68F /* UserBusinessLogic.swift in Sources */,
 				9AD96CA620253CC300D37F23 /* BaseViewController.swift in Sources */,
@@ -1174,6 +1184,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9A9666822025EAF5000F8A42 /* TodayDisplayModelType.swift in Sources */,
+				9A65B7A6202690DB004165F2 /* EndOfMonthSummaryBusinessLogic.swift in Sources */,
 				9A4F55642023CAA200DBF68F /* Error.swift in Sources */,
 				9A4F55752023CAD800DBF68F /* TransactionsBusinessLogic.swift in Sources */,
 				9A4F55532023C95B00DBF68F /* NetworkManager.swift in Sources */,
@@ -1186,6 +1197,7 @@
 				9A96668820260E7B000F8A42 /* ColorPalette.swift in Sources */,
 				9A4F55572023C96700DBF68F /* DataManager.swift in Sources */,
 				9A4F556D2023CABF00DBF68F /* Transaction.swift in Sources */,
+				9A65B7A1202686A9004165F2 /* EndOfMonthSummary.swift in Sources */,
 				9A4F55512023C95300DBF68F /* JSONCoder.swift in Sources */,
 				9A4F55552023C96200DBF68F /* ConfigManager.swift in Sources */,
 				9A4F556F2023CAC700DBF68F /* APIs.swift in Sources */,

@@ -27,12 +27,14 @@ enum ZorkdevAPI {
     case user
     case transactions
     case transaction(String)
+    case endOfMonthSummaries
 
     private var path: String {
         switch self {
         case .user: return "users/me"
         case .transactions: return "transactions"
         case .transaction(let id): return "transactions/\(id)"
+        case .endOfMonthSummaries: return "endOfMonthSummaries"
         }
     }
 

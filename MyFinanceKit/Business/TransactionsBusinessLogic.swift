@@ -23,13 +23,13 @@ public struct TransactionsBusinessLogic {
         return NetworkManager.shared.performRequest(api: .starling,
                                                     method: .get,
                                                     url: url,
-                                                    parameters: parameters).then { data in
-            guard let halResponse = JSONCoder.shared.decode(HALResponse<TransactionList>.self,
-                                                            from: data) else {
-                return Promise(error: AppError.jsonParsingError)
-            }
+                                                    parameters: parameters)
+            .then { data in
+                guard let halResponse = JSONCoder.shared.decode(HALResponse<TransactionList>.self, from: data) else {
+                    return Promise(error: AppError.jsonParsingError)
+                }
 
-            return Promise(value: halResponse.embedded.transactions)
+                return Promise(value: halResponse.embedded.transactions)
         }
     }
 

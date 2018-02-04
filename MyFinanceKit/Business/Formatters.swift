@@ -44,6 +44,20 @@ public struct Formatters {
         return formatter
     }()
 
+    public static let month: DateFormatter = {
+        let formatter = DateFormatter()
+        formatter.dateFormat = "MMMM"
+
+        return formatter
+    }()
+
+    public static let year: DateFormatter = {
+        let formatter = DateFormatter()
+        formatter.dateFormat = "yyyy"
+
+        return formatter
+    }()
+
     public static let currency: NumberFormatter = {
         let formatter = NumberFormatter()
         formatter.numberStyle = .currency
@@ -56,6 +70,15 @@ public struct Formatters {
         formatter.numberStyle = .currency
         formatter.positivePrefix = formatter.plusSign + formatter.currencySymbol
         formatter.negativePrefix = formatter.currencySymbol
+
+        return formatter
+    }()
+
+    public static let currencyPlusMinusSign: NumberFormatter = {
+        let formatter = NumberFormatter()
+        formatter.numberStyle = .currency
+        formatter.positivePrefix = formatter.plusSign + formatter.currencySymbol
+        formatter.negativePrefix = formatter.minusSign + formatter.currencySymbol
 
         return formatter
     }()
