@@ -2,12 +2,18 @@ import Foundation
 
 public struct Formatters {
 
-    public static let currencySymbol = Locale.current.currencySymbol ?? "£"
+    public static let locale = Locale(identifier: "en_GB")
+    public static let apiLocale = Locale(identifier: "en_US_POSIX")
+    public static let apiTimeZone = Foundation.TimeZone(abbreviation: "UTC")
+
+    public static let currencySymbol = {
+        return locale.currencySymbol ?? "£"
+    }()
 
     public static let apiDate: DateFormatter = {
         let formatter = DateFormatter()
-        formatter.timeZone = Foundation.TimeZone(abbreviation: "UTC")
-        formatter.locale = Locale(identifier: "en_US_POSIX")
+        formatter.timeZone = apiTimeZone
+        formatter.locale = apiLocale
         formatter.dateFormat = "yyyy-MM-dd"
 
         return formatter
@@ -15,8 +21,8 @@ public struct Formatters {
 
     public static let apiDateTime: DateFormatter = {
         let formatter = DateFormatter()
-        formatter.timeZone = Foundation.TimeZone(abbreviation: "UTC")
-        formatter.locale = Locale(identifier: "en_US_POSIX")
+        formatter.timeZone = apiTimeZone
+        formatter.locale = apiLocale
         formatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.SSS'Z'"
 
         return formatter
@@ -60,6 +66,7 @@ public struct Formatters {
 
     public static let currency: NumberFormatter = {
         let formatter = NumberFormatter()
+        formatter.locale = locale
         formatter.numberStyle = .currency
 
         return formatter
@@ -67,6 +74,7 @@ public struct Formatters {
 
     public static let currencyPlusSign: NumberFormatter = {
         let formatter = NumberFormatter()
+        formatter.locale = locale
         formatter.numberStyle = .currency
         formatter.positivePrefix = formatter.plusSign + formatter.currencySymbol
         formatter.negativePrefix = formatter.currencySymbol
@@ -76,6 +84,7 @@ public struct Formatters {
 
     public static let currencyPlusMinusSign: NumberFormatter = {
         let formatter = NumberFormatter()
+        formatter.locale = locale
         formatter.numberStyle = .currency
         formatter.positivePrefix = formatter.plusSign + formatter.currencySymbol
         formatter.negativePrefix = formatter.minusSign + formatter.currencySymbol
