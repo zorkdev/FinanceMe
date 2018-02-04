@@ -1,8 +1,12 @@
 use_frameworks!
 
 def pods
-  pod 'SwiftLint'
-  pod 'PromiseKit'
+    pod 'SwiftLint'
+    pod 'PromiseKit'
+end
+
+def pods_ios
+    pod 'SwiftKeychainWrapper'
 end
 
 target 'MyFinance' do
@@ -28,6 +32,7 @@ end
 target 'MyFinanceKit-iOS' do
     platform :ios, '11.2'
     pods
+    pods_ios
 end
 
 target 'MyFinanceKit-macOS' do

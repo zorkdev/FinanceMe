@@ -1114,10 +1114,12 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-MyFinance/Pods-MyFinance-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/PromiseKit.default-CorePromise/PromiseKit.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftKeychainWrapper/SwiftKeychainWrapper.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PromiseKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftKeychainWrapper.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
