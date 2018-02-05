@@ -11,8 +11,10 @@ struct HomeDisplayModel: TodayDisplayModelType {
     let largeFontSize: CGFloat = 40
     let smallFontSize: CGFloat = 16
 
+    static let regularAllowanceSectionTitle = ""
     static let regularInboundSectionTitle = "Incoming"
     static let regularOutboundSectionTitle = "Outgoing"
+    static let monthlyAllowanceTitle = "Monthly Allowance"
     static let currentMonthTitle = "This month"
     static let currentMonthAllowanceTitle = "Allowance"
     static let currentMonthForecastTitle = "Forecast"

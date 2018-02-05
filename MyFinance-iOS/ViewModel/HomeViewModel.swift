@@ -20,6 +20,7 @@ protocol HomeViewModelType: ViewModelType, AddTransactionViewModelDataDelegate {
     func numberOfRows(in tab: HomeViewModel.Tab, in section: Int) -> Int
     func cellModel(for tab: HomeViewModel.Tab, section: Int, row: Int) -> HomeCellModelType?
     func header(for tab: HomeViewModel.Tab, section: Int) -> String?
+    func canEdit(tab: HomeViewModel.Tab, section: Int, row: Int) -> Bool
     func delete(from tab: HomeViewModel.Tab, section: Int, row: Int)
     func height(for tab: HomeViewModel.Tab, section: Int, row: Int) -> CGFloat
     func refreshTapped()
@@ -33,7 +34,7 @@ class HomeViewModel {
     }
 
     enum RegularsSection: Int {
-        case inbound, outbound
+        case allowance, inbound, outbound
     }
 
     private let externalTransactionsBusinessLogic = ExternalTransactionsBusinessLogic()
@@ -149,10 +150,7 @@ extension HomeViewModel: HomeViewModelType {
             return normalCellModels[key]?.count ?? 0
         case .bills:
             guard let section = RegularsSection(rawValue: section) else { return 0 }
-            switch section {
-            case .inbound: return regularCellModels[.inbound]?.count ?? 0
-            case .outbound: return regularCellModels[.outbound]?.count ?? 0
-            }
+            return regularCellModels[section]?.count ?? 0
         case .balances:
             let modifier = (currentMonthCellModels.isEmpty) ? 0 : -1
                 + (chartCellModels.isEmpty ? 0 : -1)
@@ -177,10 +175,7 @@ extension HomeViewModel: HomeViewModelType {
             return normalCellModels[key]?[row]
         case .bills:
             guard let section = RegularsSection(rawValue: section) else { return nil }
-            switch section {
-            case .inbound: return regularCellModels[.inbound]?[row]
-            case .outbound: return regularCellModels[.outbound]?[row]
-            }
+            return regularCellModels[section]?[row]
         case .balances:
             let modifier = (currentMonthCellModels.isEmpty) ? 0 : -1
                 + (chartCellModels.isEmpty ? 0 : -1)
@@ -206,6 +201,7 @@ extension HomeViewModel: HomeViewModelType {
         case .bills:
             guard let section = RegularsSection(rawValue: section) else { return nil }
             switch section {
+            case .allowance: return HomeDisplayModel.regularAllowanceSectionTitle
             case .inbound: return HomeDisplayModel.regularInboundSectionTitle
             case .outbound: return HomeDisplayModel.regularOutboundSectionTitle
             }
@@ -226,6 +222,21 @@ extension HomeViewModel: HomeViewModelType {
         }
     }
 
+    func canEdit(tab: HomeViewModel.Tab, section: Int, row: Int) -> Bool {
+        switch tab {
+        case .transactions:
+            return true
+        case .bills:
+            guard let section = RegularsSection(rawValue: section) else { return false }
+            switch section {
+            case .allowance: return false
+            case .inbound, .outbound: return true
+            }
+        case .balances:
+            return false
+        }
+    }
+
     func delete(from tab: Tab, section: Int, row: Int) {
         let transaction: Transaction
         let shouldDeleteSection: Bool
@@ -240,6 +251,7 @@ extension HomeViewModel: HomeViewModelType {
         case .bills:
             guard let section = RegularsSection(rawValue: section) else { return }
             switch section {
+            case .allowance: return
             case .inbound:
                 transaction = regularTransactions
                     .filter({ $0.source == .externalRegularInbound })[row]
@@ -388,8 +400,12 @@ extension HomeViewModel {
     }
 
     private func configureCellModels() {
+        configureNormalCellModels()
+        configureRegularCellModels()
+    }
+
+    private func configureNormalCellModels() {
         normalCellModels = [:]
-        regularCellModels = [:]
 
         for transaction in normalTransactions {
             let title = transaction.narrative
@@ -409,6 +425,10 @@ extension HomeViewModel {
                 normalCellModels[date] = [cellModel]
             }
         }
+    }
+
+    private func configureRegularCellModels() {
+        regularCellModels = [:]
 
         for transaction in regularTransactions {
             let title = transaction.narrative
@@ -437,6 +457,19 @@ extension HomeViewModel {
             default: continue
             }
         }
+
+        let monthlyAllowance = regularTransactions
+            .flatMap({ $0.amount })
+            .reduce(0, +)
+        let detail = Formatters.currency
+            .string(from: NSNumber(value: monthlyAllowance))
+            ?? displayModel.defaultAmount
+        let detailColor = monthlyAllowance > 0 ?
+            HomeCellDisplayModel.negativeColor : HomeCellDisplayModel.negativeBalanceColor
+        let cellModel = HomeCellModel(title: HomeDisplayModel.monthlyAllowanceTitle,
+                                      detail: detail,
+                                      detailColor: detailColor)
+        regularCellModels[.allowance] = [cellModel]
     }
 
 }

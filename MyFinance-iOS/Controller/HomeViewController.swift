@@ -214,11 +214,8 @@ extension HomeViewController: UITableViewDataSource, UITableViewDelegate {
     }
 
     func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
-        switch tableView {
-        case transactionsTableView, regularsTableView: return true
-        case balanceTableView: return false
-        default: return false
-        }
+        guard let tab = tab(for: tableView) else { return false }
+        return viewModel.canEdit(tab: tab, section: indexPath.section, row: indexPath.row)
     }
 
     func tableView(_ tableView: UITableView,
