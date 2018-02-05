@@ -14,7 +14,12 @@ struct HomeChartCellModel: HomeCellModelType {
         }
     }
 
-    static let rowHeight: CGFloat = 180
+    static var rowHeight: CGFloat {
+        switch UIDevice.current.userInterfaceIdiom {
+        case .pad: return 350
+        default: return 180
+        }
+    }
 
     let data: LineChartData
 
