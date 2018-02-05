@@ -17,7 +17,7 @@ public struct UserBusinessLogic {
                     return Promise(error: AppError.jsonParsingError)
                 }
 
-                DataManager.shared.allowance = user.allowance
+                DataManager.shared.user = user
 
                 return Promise(value: user)
         }

@@ -30,8 +30,9 @@ public extension TodayPresentable {
 
     public func setupDefaults() {
         let balanceAttributedString = createAttributedString(from: DataManager.shared.balance)
-        let allowanceAttributedString = createAttributedString(from: DataManager.shared.allowance)
         delegate?.set(balance: balanceAttributedString)
+        guard let user = DataManager.shared.user else { return }
+        let allowanceAttributedString = createAttributedString(from: user.allowance)
         delegate?.set(allowance: allowanceAttributedString)
     }
 

@@ -41,7 +41,7 @@ class HomeViewModel {
 
     private var currentMonthSummary: CurrentMonthSummary? {
         didSet {
-            //DataManager.shared.endOfMonthSummaries = endOfMonthSummaries
+            DataManager.shared.currentMonthSummary = currentMonthSummary
         }
     }
 
@@ -93,13 +93,15 @@ extension HomeViewModel: TodayPresentable {
 
     func setupDefaults() {
         let balanceAttributedString = createAttributedString(from: DataManager.shared.balance)
-        let allowanceAttributedString = createAttributedString(from: DataManager.shared.allowance)
         delegate?.set(balance: balanceAttributedString)
+        guard let user = DataManager.shared.user else { return }
+        let allowanceAttributedString = createAttributedString(from: user.allowance)
         delegate?.set(allowance: allowanceAttributedString)
 
         externalTransactions = DataManager.shared.transactions
         updateTransactions()
         endOfMonthSummaries = DataManager.shared.endOfMonthSummaries
+        currentMonthSummary = DataManager.shared.currentMonthSummary
         updateBalances()
         (delegate as? HomeViewModelDelegate)?.reloadTableView()
     }
@@ -350,8 +352,9 @@ extension HomeViewModel {
 
             currentMonthCellModels = [homeCurrentMonthCellModel]
 
+            let payday = DataManager.shared.user?.payday ?? 0
             let currentSummary = EndOfMonthSummary(balance: currentMonthSummary.forecast,
-                                                   created: Date().next(day: 20, direction: .forward))
+                                                   created: Date().next(day: payday, direction: .forward))
             var summaries = endOfMonthSummaries + [currentSummary]
             summaries.sort(by: { $0.created < $1.created })
             summaries = Array(summaries.suffix(12))

@@ -1,10 +1,11 @@
 public class DataManager {
 
     private struct Constants {
+        static let userKey = "user"
         static let balanceKey = "balance"
-        static let allowanceKey = "allowance"
         static let transactionsKey = "transactions"
         static let endOfMonthSummariesKey = "endOfMonthSummaries"
+        static let currentMonthSummaryKey = "currentMonthSummary"
     }
 
     public static let shared = DataManager()
@@ -18,12 +19,17 @@ public class DataManager {
         }
     }
 
-    public var allowance: Double {
+    public var user: User? {
         get {
-            return KeychainWrapper.standard.double(forKey: Constants.allowanceKey) ?? 0
+            guard let data = KeychainWrapper.standard.data(forKey: Constants.userKey),
+                let user = JSONCoder.shared.decode(User.self, from: data) else {
+                    return nil
+            }
+            return user
         }
         set {
-            KeychainWrapper.standard.set(newValue, forKey: Constants.allowanceKey)
+            guard let data = JSONCoder.shared.encode(newValue) else { return }
+            KeychainWrapper.standard.set(data, forKey: Constants.userKey)
         }
     }
 
@@ -52,6 +58,20 @@ public class DataManager {
         set {
             guard let data = JSONCoder.shared.encode(newValue) else { return }
             KeychainWrapper.standard.set(data, forKey: Constants.endOfMonthSummariesKey)
+        }
+    }
+
+    public var currentMonthSummary: CurrentMonthSummary? {
+        get {
+            guard let data = KeychainWrapper.standard.data(forKey: Constants.currentMonthSummaryKey),
+                let currentMonthSummary = JSONCoder.shared.decode(CurrentMonthSummary.self, from: data) else {
+                    return nil
+            }
+            return currentMonthSummary
+        }
+        set {
+            guard let data = JSONCoder.shared.encode(newValue) else { return }
+            KeychainWrapper.standard.set(data, forKey: Constants.currentMonthSummaryKey)
         }
     }
 
