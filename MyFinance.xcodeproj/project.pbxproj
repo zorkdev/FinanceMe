@@ -97,6 +97,9 @@
 		9A8561A82027A7FC00A26F12 /* HomeCurrentMonthTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A8561A72027A7FC00A26F12 /* HomeCurrentMonthTableViewCell.swift */; };
 		9A8561AA2027A8A100A26F12 /* HomeCurrentMonthTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9A8561A92027A8A100A26F12 /* HomeCurrentMonthTableViewCell.xib */; };
 		9A8561AD2027AB9A00A26F12 /* UITableViewCell+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A8561AC2027AB9A00A26F12 /* UITableViewCell+Helpers.swift */; };
+		9A8561AF2027BCDA00A26F12 /* HomeChartTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9A8561AE2027BCDA00A26F12 /* HomeChartTableViewCell.xib */; };
+		9A8561B12027BD7600A26F12 /* HomeChartTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A8561B02027BD7600A26F12 /* HomeChartTableViewCell.swift */; };
+		9A8561B32027BF5100A26F12 /* HomeChartCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A8561B22027BF5100A26F12 /* HomeChartCellModel.swift */; };
 		9A9666812025EAF5000F8A42 /* TodayDisplayModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A9666802025EAF5000F8A42 /* TodayDisplayModelType.swift */; };
 		9A9666822025EAF5000F8A42 /* TodayDisplayModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A9666802025EAF5000F8A42 /* TodayDisplayModelType.swift */; };
 		9A96668720260E7B000F8A42 /* ColorPalette.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A96668620260E7B000F8A42 /* ColorPalette.swift */; };
@@ -278,6 +281,9 @@
 		9A8561A72027A7FC00A26F12 /* HomeCurrentMonthTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCurrentMonthTableViewCell.swift; sourceTree = "<group>"; };
 		9A8561A92027A8A100A26F12 /* HomeCurrentMonthTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeCurrentMonthTableViewCell.xib; sourceTree = "<group>"; };
 		9A8561AC2027AB9A00A26F12 /* UITableViewCell+Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableViewCell+Helpers.swift"; sourceTree = "<group>"; };
+		9A8561AE2027BCDA00A26F12 /* HomeChartTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeChartTableViewCell.xib; sourceTree = "<group>"; };
+		9A8561B02027BD7600A26F12 /* HomeChartTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeChartTableViewCell.swift; sourceTree = "<group>"; };
+		9A8561B22027BF5100A26F12 /* HomeChartCellModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeChartCellModel.swift; sourceTree = "<group>"; };
 		9A872984201662E100C1E9BE /* ExternalTransactionsBusinessLogic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExternalTransactionsBusinessLogic.swift; sourceTree = "<group>"; };
 		9A872E0E2016719100C1E9BE /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		9A872E112016719100C1E9BE /* UserBusinessLogic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserBusinessLogic.swift; sourceTree = "<group>"; };
@@ -520,6 +526,7 @@
 				9A5AE5A12012C99A00B25081 /* HomeViewModel.swift */,
 				9AD96C9620252CBF00D37F23 /* HomeCellModel.swift */,
 				9A8561A32027A68F00A26F12 /* HomeCurrentMonthCellModel.swift */,
+				9A8561B22027BF5100A26F12 /* HomeChartCellModel.swift */,
 				9AD96CA7202544A600D37F23 /* AddTransactionViewModel.swift */,
 			);
 			path = ViewModel;
@@ -615,6 +622,8 @@
 				9AD96C982025341D00D37F23 /* HomeTableViewCell.swift */,
 				9A8561A72027A7FC00A26F12 /* HomeCurrentMonthTableViewCell.swift */,
 				9A8561A92027A8A100A26F12 /* HomeCurrentMonthTableViewCell.xib */,
+				9A8561B02027BD7600A26F12 /* HomeChartTableViewCell.swift */,
+				9A8561AE2027BCDA00A26F12 /* HomeChartTableViewCell.xib */,
 			);
 			path = TableView;
 			sourceTree = "<group>";
@@ -962,6 +971,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9A8561AF2027BCDA00A26F12 /* HomeChartTableViewCell.xib in Resources */,
 				9A5AE5802012A8AC00B25081 /* LaunchScreen.storyboard in Resources */,
 				9A8561AA2027A8A100A26F12 /* HomeCurrentMonthTableViewCell.xib in Resources */,
 				9A5AE57D2012A8AC00B25081 /* Assets.xcassets in Resources */,
@@ -1234,11 +1244,13 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-MyFinance-iOS/Pods-MyFinance-iOS-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Charts/Charts.framework",
 				"${BUILT_PRODUCTS_DIR}/PromiseKit.default-CorePromise/PromiseKit.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftMessages/SwiftMessages.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Charts.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PromiseKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftMessages.framework",
 			);
@@ -1350,7 +1362,9 @@
 				9A65B7AC2026ABBB004165F2 /* AuthManager.swift in Sources */,
 				9A5AE5782012A8AC00B25081 /* HomeViewController.swift in Sources */,
 				9AD96C8F2025138400D37F23 /* HomeDisplayModel.swift in Sources */,
+				9A8561B32027BF5100A26F12 /* HomeChartCellModel.swift in Sources */,
 				9AD96CA8202544A600D37F23 /* AddTransactionViewModel.swift in Sources */,
+				9A8561B12027BD7600A26F12 /* HomeChartTableViewCell.swift in Sources */,
 				9A5AE5A22012C99A00B25081 /* HomeViewModel.swift in Sources */,
 				9A8561A62027A71300A26F12 /* HomeCurrentMonthCellDisplayModel.swift in Sources */,
 				9A5AE5762012A8AB00B25081 /* AppDelegate.swift in Sources */,

@@ -5,6 +5,12 @@ public struct EndOfMonthSummary: Codable {
     public let balance: Double
     public let created: Date
 
+    public init(balance: Double,
+                created: Date) {
+        self.balance = balance
+        self.created = created
+    }
+
 }
 
 public struct CurrentMonthSummary: Codable {

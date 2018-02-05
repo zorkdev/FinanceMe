@@ -64,6 +64,7 @@ class HomeViewModel {
     private var regularCellModels = [RegularsSection: [HomeCellModel]]()
     private var balanceCellModels = [Date: [HomeCellModel]]()
     private var currentMonthCellModels = [HomeCurrentMonthCellModel]()
+    private var chartCellModels = [HomeChartCellModel]()
 
     let displayModel: TodayDisplayModelType = HomeDisplayModel()
 
@@ -134,7 +135,8 @@ extension HomeViewModel: HomeViewModelType {
             return regularCellModels.count
         case .balances:
             let currentMonthCount = currentMonthCellModels.isEmpty ? 0 : 1
-            return balanceCellModels.count + currentMonthCount
+            let chartCount = chartCellModels.isEmpty ? 0 : 1
+            return balanceCellModels.count + currentMonthCount + chartCount
         }
     }
 
@@ -150,10 +152,15 @@ extension HomeViewModel: HomeViewModelType {
             case .outbound: return regularCellModels[.outbound]?.count ?? 0
             }
         case .balances:
-            let modifier = currentMonthCellModels.isEmpty ? 0 : -1
+            let modifier = (currentMonthCellModels.isEmpty) ? 0 : -1
+                + (chartCellModels.isEmpty ? 0 : -1)
 
-            if section == 0, modifier == -1 {
+            if section == 0, currentMonthCellModels.isEmpty == false {
                 return currentMonthCellModels.count
+            }
+
+            if section == 1, chartCellModels.isEmpty == false {
+                return chartCellModels.count
             }
 
             let key = balanceCellModels.keys.sorted(by: { $0 > $1 })[section + modifier]
@@ -173,10 +180,15 @@ extension HomeViewModel: HomeViewModelType {
             case .outbound: return regularCellModels[.outbound]?[row]
             }
         case .balances:
-            let modifier = currentMonthCellModels.isEmpty ? 0 : -1
+            let modifier = (currentMonthCellModels.isEmpty) ? 0 : -1
+                + (chartCellModels.isEmpty ? 0 : -1)
 
-            if section == 0, modifier == -1 {
+            if section == 0, currentMonthCellModels.isEmpty == false {
                 return currentMonthCellModels[row]
+            }
+
+            if section == 1, chartCellModels.isEmpty == false {
+                return chartCellModels[row]
             }
 
             let key = balanceCellModels.keys.sorted(by: { $0 > $1 })[section + modifier]
@@ -196,10 +208,15 @@ extension HomeViewModel: HomeViewModelType {
             case .outbound: return HomeDisplayModel.regularOutboundSectionTitle
             }
         case .balances:
-            let modifier = currentMonthCellModels.isEmpty ? 0 : -1
+            let modifier = (currentMonthCellModels.isEmpty) ? 0 : -1
+                + (chartCellModels.isEmpty ? 0 : -1)
 
-            if section == 0, modifier == -1 {
+            if section == 0, currentMonthCellModels.isEmpty == false {
                 return HomeDisplayModel.currentMonthTitle
+            }
+
+            if section == 1, chartCellModels.isEmpty == false {
+                return HomeDisplayModel.chartTitle
             }
 
             let date = balanceCellModels.keys.sorted(by: { $0 > $1 })[section + modifier]
@@ -253,9 +270,13 @@ extension HomeViewModel: HomeViewModelType {
         case .balances:
             if section == 0, currentMonthCellModels.isEmpty == false {
                 return HomeCurrentMonthCellModel.rowHeight
-            } else {
-                return HomeCellModel.rowHeight
             }
+
+            if section == 1, chartCellModels.isEmpty == false {
+                return HomeChartCellModel.rowHeight
+            }
+
+            return HomeCellModel.rowHeight
         }
     }
 
@@ -312,6 +333,7 @@ extension HomeViewModel {
 
     private func configureBalanceCellModels() {
         currentMonthCellModels = []
+        chartCellModels = []
         balanceCellModels = [:]
 
         if let currentMonthSummary = currentMonthSummary {
@@ -327,6 +349,14 @@ extension HomeViewModel {
                                                                forecast: forecast)
 
             currentMonthCellModels = [homeCurrentMonthCellModel]
+
+            let currentSummary = EndOfMonthSummary(balance: currentMonthSummary.forecast,
+                                                   created: Date().next(day: 20, direction: .forward))
+            var summaries = endOfMonthSummaries + [currentSummary]
+            summaries.sort(by: { $0.created < $1.created })
+            summaries = Array(summaries.suffix(12))
+            let homeChartCellModel = HomeChartCellModel(endOfMonthSummaries: summaries)
+            chartCellModels = [homeChartCellModel]
         }
 
         for endOfMonthSummary in endOfMonthSummaries {

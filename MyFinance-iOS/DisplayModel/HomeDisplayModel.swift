@@ -16,6 +16,7 @@ struct HomeDisplayModel: TodayDisplayModelType {
     static let currentMonthTitle = "This month"
     static let currentMonthAllowanceTitle = "Allowance"
     static let currentMonthForecastTitle = "Forecast"
+    static let chartTitle = "Balances"
 
     struct DeleteAlert {
 

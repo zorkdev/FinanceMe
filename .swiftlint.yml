@@ -2,6 +2,6 @@ excluded:
 - Pods
 - MyFinanceKit/Platform/Keychain
 
-file_length: 500
+file_length: 600
 identifier_name:
   min_length: 2

@@ -1,4 +1,5 @@
 use_frameworks!
+inhibit_all_warnings!
 
 def pods
     pod 'SwiftLint'
@@ -9,6 +10,7 @@ target 'MyFinance-iOS' do
     platform :ios, '11.2'
     pods
     pod 'SwiftMessages'
+    pod 'Charts'
 end
 
 target 'MyFinanceExtension-iOS' do

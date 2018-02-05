@@ -57,6 +57,13 @@ public struct Formatters {
         return formatter
     }()
 
+    public static let monthShort: DateFormatter = {
+        let formatter = DateFormatter()
+        formatter.dateFormat = "MMM"
+
+        return formatter
+    }()
+
     public static let year: DateFormatter = {
         let formatter = DateFormatter()
         formatter.dateFormat = "yyyy"
@@ -88,6 +95,15 @@ public struct Formatters {
         formatter.numberStyle = .currency
         formatter.positivePrefix = formatter.plusSign + formatter.currencySymbol
         formatter.negativePrefix = formatter.minusSign + formatter.currencySymbol
+
+        return formatter
+    }()
+
+    public static let currencyNoFractions: NumberFormatter = {
+        let formatter = NumberFormatter()
+        formatter.locale = Formatters.locale
+        formatter.numberStyle = .currency
+        formatter.maximumFractionDigits = 0
 
         return formatter
     }()
