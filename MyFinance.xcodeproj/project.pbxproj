@@ -295,6 +295,8 @@
 		9AAA3D772029077E008881FD /* AuthViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewModel.swift; sourceTree = "<group>"; };
 		9AAA3D7E202925FB008881FD /* AuthDisplayModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthDisplayModel.swift; sourceTree = "<group>"; };
 		9AAA3D802029285C008881FD /* Instantiatable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Instantiatable.swift; sourceTree = "<group>"; };
+		9AAA3D8420293CCA008881FD /* MyFinanceExtension-iOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "MyFinanceExtension-iOS.entitlements"; sourceTree = "<group>"; };
+		9AAA3D8520293CD0008881FD /* MyFinance-iOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "MyFinance-iOS.entitlements"; sourceTree = "<group>"; };
 		9AD3EE1D20138F6C0083F8FE /* Transaction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Transaction.swift; sourceTree = "<group>"; };
 		9AD3EE1F2013965D0083F8FE /* JSONCoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONCoder.swift; sourceTree = "<group>"; };
 		9AD3EE222013985B0083F8FE /* TransactionsBusinessLogic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionsBusinessLogic.swift; sourceTree = "<group>"; };
@@ -472,6 +474,7 @@
 		9A5AE5742012A8AB00B25081 /* MyFinance-iOS */ = {
 			isa = PBXGroup;
 			children = (
+				9AAA3D8520293CD0008881FD /* MyFinance-iOS.entitlements */,
 				9A5AE58C2012B8F000B25081 /* Application */,
 				9AAA3D7920290891008881FD /* UI */,
 				9A5AE5902012B95A00B25081 /* Resources */,
@@ -730,6 +733,7 @@
 		9AD3EE3B2013D9A10083F8FE /* MyFinanceExtension-iOS */ = {
 			isa = PBXGroup;
 			children = (
+				9AAA3D8420293CCA008881FD /* MyFinanceExtension-iOS.entitlements */,
 				9AD3EE3E2013D9A10083F8FE /* MainInterface.storyboard */,
 				9AD3EE3C2013D9A10083F8FE /* TodayViewController.swift */,
 				9A4F55802023D0C900DBF68F /* TodayDisplayModel.swift */,
@@ -943,11 +947,19 @@
 					9A5AE5712012A8AB00B25081 = {
 						CreatedOnToolsVersion = 9.2;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Keychain = {
+								enabled = 1;
+							};
+						};
 					};
 					9A740ECA201E245200D40943 = {
 						CreatedOnToolsVersion = 9.2;
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
+							com.apple.Keychain = {
+								enabled = 1;
+							};
 							com.apple.Sandbox = {
 								enabled = 1;
 							};
@@ -957,6 +969,9 @@
 						CreatedOnToolsVersion = 9.2;
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
+							com.apple.Keychain = {
+								enabled = 1;
+							};
 							com.apple.Sandbox = {
 								enabled = 1;
 							};
@@ -965,6 +980,11 @@
 					9AD3EE372013D9A10083F8FE = {
 						CreatedOnToolsVersion = 9.2;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Keychain = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -1750,6 +1770,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "MyFinance-iOS/MyFinance-iOS.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 29MN2WH3Q3;
 				INFOPLIST_FILE = "$(SRCROOT)/MyFinance-iOS/Application/Info.plist";
@@ -1768,6 +1789,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "MyFinance-iOS/MyFinance-iOS.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 29MN2WH3Q3;
 				INFOPLIST_FILE = "$(SRCROOT)/MyFinance-iOS/Application/Info.plist";
@@ -1870,6 +1892,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = A8B0411C6517F0B6198C67E8 /* Pods-MyFinanceExtension-iOS.debug.xcconfig */;
 			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = "MyFinanceExtension-iOS/MyFinanceExtension-iOS.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 29MN2WH3Q3;
 				INFOPLIST_FILE = "$(SRCROOT)/MyFinanceExtension-iOS/Info.plist";
@@ -1887,6 +1910,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 912C8C9B1823959085F2299C /* Pods-MyFinanceExtension-iOS.release.xcconfig */;
 			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = "MyFinanceExtension-iOS/MyFinanceExtension-iOS.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 29MN2WH3Q3;
 				INFOPLIST_FILE = "$(SRCROOT)/MyFinanceExtension-iOS/Info.plist";
