@@ -57,11 +57,13 @@ extension HomeChartTableViewCell {
         chart.leftAxis.enabled = false
         chart.rightAxis.drawGridLinesEnabled = false
         chart.rightAxis.drawZeroLineEnabled = true
-        chart.xAxis.drawGridLinesEnabled = false
+        chart.xAxis.gridLineDashPhase = 5
+        chart.xAxis.gridLineDashLengths = [5]
         chart.xAxis.labelPosition = .bottom
         chart.xAxis.valueFormatter = HomeChartCellModel.DateValueFormatter()
         chart.rightAxis.valueFormatter = HomeChartCellModel.CurrencyValueFormatter()
         chart.xAxis.setLabelCount(homeChartCellModel.data.entryCount, force: true)
+        chart.rightAxis.setLabelCount(4, force: false)
         chart.xAxis.avoidFirstLastClippingEnabled = true
         chart.isUserInteractionEnabled = false
     }
