@@ -5,6 +5,10 @@ class AuthViewController: BaseViewController {
 
     var viewModel: AuthViewModelType!
 
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
+    }
+
     @IBAction func tryAgainButtonTapped(_ sender: UIButton) {
         viewModel.tryAgainButtonTapped()
     }

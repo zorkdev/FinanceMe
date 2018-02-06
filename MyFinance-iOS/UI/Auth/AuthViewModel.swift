@@ -61,7 +61,7 @@ class AuthViewModel: AuthViewModelType {
         delegate = authViewController
 
         window = UIWindow(frame: frame)
-        window?.windowLevel = UIWindowLevelAlert
+        window?.windowLevel = UIWindowLevelNormal + 1
         window?.rootViewController = authViewController
         window?.makeKeyAndVisible()
     }
