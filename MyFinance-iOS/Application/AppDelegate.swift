@@ -3,20 +3,20 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
-    private let authManager = AuthManager()
+    private let authViewModel = AuthViewModel()
 
     func application(_ application: UIApplication,
                      didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]? = nil) -> Bool {
-        authManager.authenticate()
+        authViewModel.authenticate()
         return true
     }
 
     func applicationWillEnterForeground(_ application: UIApplication) {
-        authManager.authenticate()
+        authViewModel.authenticate()
     }
 
     func applicationDidEnterBackground(_ application: UIApplication) {
-        authManager.addOcclusion()
+        authViewModel.addOcclusion()
     }
 
 }
