@@ -13,7 +13,7 @@ public struct BalanceBusinessLogic {
                                                     method: .get,
                                                     url: url)
             .then { data in
-                guard let balance = JSONCoder.shared.decode(Balance.self, from: data) else {
+                guard let balance = Balance(data: data) else {
                     return Promise(error: AppError.jsonParsingError)
                 }
 

@@ -13,7 +13,7 @@ public struct UserBusinessLogic {
                                                     method: .get,
                                                     url: url)
             .then { data in
-                guard let user = JSONCoder.shared.decode(User.self, from: data) else {
+                guard let user = User(data: data) else {
                     return Promise(error: AppError.jsonParsingError)
                 }
 

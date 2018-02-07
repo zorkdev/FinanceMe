@@ -22,13 +22,13 @@ public class DataManager {
     public var user: User? {
         get {
             guard let data = KeychainWrapper.standard.data(forKey: Constants.userKey),
-                let user = JSONCoder.shared.decode(User.self, from: data) else {
+                let user = User.self(data: data) else {
                     return nil
             }
             return user
         }
         set {
-            guard let data = JSONCoder.shared.encode(newValue) else { return }
+            guard let data = newValue.encoded() else { return }
             KeychainWrapper.standard.set(data, forKey: Constants.userKey)
         }
     }
@@ -36,13 +36,13 @@ public class DataManager {
     public var transactions: [Transaction] {
         get {
             guard let data = KeychainWrapper.standard.data(forKey: Constants.transactionsKey),
-                let transactions = JSONCoder.shared.decode([Transaction].self, from: data) else {
+                let transactions = [Transaction](data: data) else {
                     return []
             }
             return transactions
         }
         set {
-            guard let data = JSONCoder.shared.encode(newValue) else { return }
+            guard let data = newValue.encoded() else { return }
             KeychainWrapper.standard.set(data, forKey: Constants.transactionsKey)
         }
     }
@@ -50,13 +50,13 @@ public class DataManager {
     public var endOfMonthSummaries: [EndOfMonthSummary] {
         get {
             guard let data = KeychainWrapper.standard.data(forKey: Constants.endOfMonthSummariesKey),
-                let endOfMonthSummaries = JSONCoder.shared.decode([EndOfMonthSummary].self, from: data) else {
+                let endOfMonthSummaries = [EndOfMonthSummary](data: data) else {
                     return []
             }
             return endOfMonthSummaries
         }
         set {
-            guard let data = JSONCoder.shared.encode(newValue) else { return }
+            guard let data = newValue.encoded() else { return }
             KeychainWrapper.standard.set(data, forKey: Constants.endOfMonthSummariesKey)
         }
     }
@@ -64,13 +64,13 @@ public class DataManager {
     public var currentMonthSummary: CurrentMonthSummary? {
         get {
             guard let data = KeychainWrapper.standard.data(forKey: Constants.currentMonthSummaryKey),
-                let currentMonthSummary = JSONCoder.shared.decode(CurrentMonthSummary.self, from: data) else {
+                let currentMonthSummary = CurrentMonthSummary(data: data) else {
                     return nil
             }
             return currentMonthSummary
         }
         set {
-            guard let data = JSONCoder.shared.encode(newValue) else { return }
+            guard let data = newValue.encoded() else { return }
             KeychainWrapper.standard.set(data, forKey: Constants.currentMonthSummaryKey)
         }
     }

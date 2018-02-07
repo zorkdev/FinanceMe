@@ -25,7 +25,7 @@ public struct TransactionsBusinessLogic {
                                                     url: url,
                                                     parameters: parameters)
             .then { data in
-                guard let halResponse = JSONCoder.shared.decode(HALResponse<TransactionList>.self, from: data) else {
+                guard let halResponse = HALResponse<TransactionList>(data: data) else {
                     return Promise(error: AppError.jsonParsingError)
                 }
 

@@ -13,7 +13,7 @@ public struct EndOfMonthSummaryBusinessLogic {
                                                     method: .get,
                                                     url: url)
             .then { data in
-                guard let endOfMonthSummaryList = JSONCoder.shared.decode(EndOfMonthSummaryList.self, from: data) else {
+                guard let endOfMonthSummaryList = EndOfMonthSummaryList(data: data) else {
                     return Promise(error: AppError.jsonParsingError)
                 }
 

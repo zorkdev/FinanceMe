@@ -12,14 +12,14 @@ class ConfigManager {
 
     let isLoggingEnabled = true
 
-    var config: Config
+    let config: Config
 
     private init() {
         let bundle = Bundle(for: ConfigManager.self)
         guard let configURL = bundle.url(forResource: Constants.configFilename,
                                          withExtension: Constants.configExtension),
             let data = try? Data(contentsOf: configURL),
-            let config = JSONCoder.shared.decode(Config.self, from: data) else {
+            let config = Config(data: data) else {
                 fatalError(Constants.configMissingMessage)
         }
 
