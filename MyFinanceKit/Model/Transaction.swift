@@ -1,6 +1,4 @@
-import Foundation
-
-public enum TransactionDirection: String, Codable {
+public enum TransactionDirection: String, JSONCodable {
 
     case none = "NONE"
     case outbound = "OUTBOUND"
@@ -8,7 +6,7 @@ public enum TransactionDirection: String, Codable {
 
 }
 
-public enum TransactionSource: String, Codable {
+public enum TransactionSource: String, JSONCodable {
 
     case directCredit = "DIRECT_CREDIT"
     case directDebit = "DIRECT_DEBIT"
@@ -70,7 +68,7 @@ public enum TransactionSource: String, Codable {
 
 }
 
-public struct Transaction: Codable {
+public struct Transaction: JSONCodable {
 
     public let id: String?
     public let currency: String
@@ -101,7 +99,7 @@ public struct Transaction: Codable {
 
 }
 
-struct TransactionList: Codable {
+struct TransactionList: JSONCodable {
 
     let transactions: [Transaction]
 

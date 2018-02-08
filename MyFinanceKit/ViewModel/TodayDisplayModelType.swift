@@ -1,12 +1,7 @@
 #if os(macOS)
-    import Cocoa
-
     public typealias Color = NSColor
     public typealias Font = NSFont
-
 #elseif os(iOS)
-    import UIKit
-
     public typealias Color = UIColor
     public typealias Font = UIFont
 #endif

@@ -1,5 +1,3 @@
-import Foundation
-
 enum API {
     case starling
     case zorkdev

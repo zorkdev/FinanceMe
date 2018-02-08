@@ -1,5 +1,3 @@
-import Foundation
-
 public struct Formatters {
 
     public static let locale = Locale(identifier: "en_GB")

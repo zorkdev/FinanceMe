@@ -1,5 +1,3 @@
-import PromiseKit
-
 public struct UserBusinessLogic {
 
     public init() {}

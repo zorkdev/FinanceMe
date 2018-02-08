@@ -1,5 +1,3 @@
-import PromiseKit
-
 public struct EndOfMonthSummaryBusinessLogic {
 
     public init() {}

@@ -1,5 +1,3 @@
-import Foundation
-
 public struct Validators {
 
     public static func validate(amount: String) -> Bool {

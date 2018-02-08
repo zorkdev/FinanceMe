@@ -1,9 +1,3 @@
-#if os(macOS)
-    import Cocoa
-#elseif os(iOS)
-    import UIKit
-#endif
-
 public struct ColorPalette {
 
     public static let primary = Color(red: 27/255.0,

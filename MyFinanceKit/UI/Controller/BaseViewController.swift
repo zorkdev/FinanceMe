@@ -1,5 +1,3 @@
-import UIKit
-
 open class BaseViewController: UIViewController {
 
     private struct Constants {

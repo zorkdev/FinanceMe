@@ -1,5 +1,3 @@
-import Foundation
-
 class ConfigManager {
 
     private struct Constants {

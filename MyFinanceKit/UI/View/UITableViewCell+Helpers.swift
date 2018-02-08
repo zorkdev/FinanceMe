@@ -1,5 +1,3 @@
-import UIKit
-
 public extension UITableViewCell {
 
     static var nib: UINib {

@@ -1,6 +1,4 @@
-import Foundation
-
-public struct User: Codable {
+public struct User: JSONCodable {
 
     public let name: String
     public let payday: Int

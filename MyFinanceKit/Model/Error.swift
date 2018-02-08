@@ -1,5 +1,3 @@
-import PromiseKit
-
 public enum AppError: Error {
 
     case unknownError

@@ -1,5 +1,3 @@
-import PromiseKit
-
 public protocol TodayViewModelDelegate: class {
 
     func set(balance: NSAttributedString)

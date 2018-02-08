@@ -1,5 +1,3 @@
-import PromiseKit
-
 class NetworkManager {
 
     enum HTTPMethod: String {

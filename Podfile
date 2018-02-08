@@ -31,14 +31,21 @@ end
 target 'MyFinanceKit-iOS' do
     platform :ios, '11.2'
     pods
+    pod 'SwiftKeychainWrapper', :git => 'https://github.com/zorkdev/SwiftKeychainWrapper.git'
 end
 
 target 'MyFinanceKit-macOS' do
     platform :osx, '10.13'
     pods
+    pod 'SwiftKeychainWrapper', :git => 'https://github.com/zorkdev/SwiftKeychainWrapper.git'
 end
 
 target 'MyFinanceKit-iOS-Tests' do
     platform :ios, '11.2'
+    pods
+end
+
+target 'MyFinanceKit-macOS-Tests' do
+    platform :osx, '10.13'
     pods
 end

@@ -1,5 +1,3 @@
-import Foundation
-
 extension Data {
 
     var prettyPrinted: String {
