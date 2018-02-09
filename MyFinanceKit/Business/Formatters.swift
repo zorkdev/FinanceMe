@@ -21,7 +21,7 @@ public struct Formatters {
         let formatter = DateFormatter()
         formatter.timeZone = apiTimeZone
         formatter.locale = apiLocale
-        formatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.SSS'Z'"
+        formatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSX"
 
         return formatter
     }()

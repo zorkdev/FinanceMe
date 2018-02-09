@@ -3,19 +3,10 @@ public struct BalanceBusinessLogic {
     public init() {}
 
     public func getBalance() -> Promise<Balance> {
-        guard let url = StarlingAPI.balance.url else {
-            return Promise(error: AppError.apiPathInvalid)
-        }
-
-        return NetworkManager.shared.performRequest(api: .starling,
-                                                    method: .get,
-                                                    url: url)
-            .then { data in
-                guard let balance = Balance(data: data) else {
-                    return Promise(error: AppError.jsonParsingError)
-                }
-
-                DataManager.shared.balance = balance.effectiveBalance
+        return NetworkService.shared.performRequest(api: .starling(.balance),
+                                                    method: .get)
+            .then { (balance: Balance) in
+                balance.save()
 
                 return Promise(value: balance)
         }

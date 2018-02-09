@@ -1,4 +1,4 @@
-public struct EndOfMonthSummary: JSONCodable {
+public struct EndOfMonthSummary: Storeable {
 
     public let balance: Double
     public let created: Date
@@ -11,7 +11,7 @@ public struct EndOfMonthSummary: JSONCodable {
 
 }
 
-public struct CurrentMonthSummary: JSONCodable {
+public struct CurrentMonthSummary: Storeable {
 
     public let allowance: Double
     public let forecast: Double

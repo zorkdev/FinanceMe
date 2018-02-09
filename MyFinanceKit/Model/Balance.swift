@@ -1,4 +1,4 @@
-public struct Balance: JSONCodable {
+public struct Balance: Storeable {
 
     public let clearedBalance: Double
     public let effectiveBalance: Double

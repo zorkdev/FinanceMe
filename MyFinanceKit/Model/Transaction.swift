@@ -68,7 +68,7 @@ public enum TransactionSource: String, JSONCodable {
 
 }
 
-public struct Transaction: JSONCodable {
+public struct Transaction: Storeable {
 
     public let id: String?
     public let currency: String

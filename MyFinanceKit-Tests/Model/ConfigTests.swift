@@ -21,4 +21,13 @@ class ConfigTests: XCTestCase {
         XCTAssertNotNil(config.encoded())
     }
 
+    func testURLEncodeConfig() {
+        let config = Config(starlingToken: "token",
+                            zorkdevToken: "token")
+
+        print(String(data: config.urlEncoded()!, encoding: .utf8)!)
+
+        XCTAssertNotNil(config.urlEncoded())
+    }
+
 }

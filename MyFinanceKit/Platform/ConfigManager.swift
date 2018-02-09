@@ -8,7 +8,7 @@ class ConfigManager {
 
     static let shared = ConfigManager()
 
-    let isLoggingEnabled = true
+    let isLoggingEnabled = TARGET_OS_SIMULATOR == 1
 
     let config: Config
 

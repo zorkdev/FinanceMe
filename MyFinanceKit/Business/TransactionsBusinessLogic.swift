@@ -2,31 +2,11 @@ public struct TransactionsBusinessLogic {
 
     public init() {}
 
-    public func getTransactions(from: Date? = nil,
-                                to: Date? = nil) -> Promise<[Transaction]> {
-        guard let url = StarlingAPI.transactions.url else {
-            return Promise(error: AppError.apiPathInvalid)
-        }
-
-        var parameters = JSON()
-
-        if let from = from {
-            parameters[StarlingParameters.from.rawValue] = Formatters.apiDate.string(from: from)
-        }
-
-        if let to = to {
-            parameters[StarlingParameters.to.rawValue] = Formatters.apiDate.string(from: to)
-        }
-
-        return NetworkManager.shared.performRequest(api: .starling,
+    public func getTransactions(fromTo: FromToParameters? = nil) -> Promise<[Transaction]> {
+        return NetworkService.shared.performRequest(api: .starling(.transactions),
                                                     method: .get,
-                                                    url: url,
-                                                    parameters: parameters)
-            .then { data in
-                guard let halResponse = HALResponse<TransactionList>(data: data) else {
-                    return Promise(error: AppError.jsonParsingError)
-                }
-
+                                                    parameters: fromTo)
+            .then { (halResponse: HALResponse<TransactionList>) in
                 return Promise(value: halResponse.embedded.transactions)
         }
     }

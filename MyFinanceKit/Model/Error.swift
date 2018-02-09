@@ -5,6 +5,10 @@ public enum AppError: Error {
     case urlQueryInvalid
     case jsonParsingError
 
+    var localizedDescription: String {
+        return "Sorry, something went wrong. Please try again"
+    }
+
 }
 
 public enum APIError: Int, Error {
@@ -14,6 +18,10 @@ public enum APIError: Int, Error {
     case forbidden = 403
     case notFound = 404
     case serverError = 500
+
+    var localizedDescription: String {
+        return "Sorry, something went wrong. Please try again"
+    }
 
     init?(urlError: PMKURLError) {
         guard case let .badResponse(_, _, response) = urlError,

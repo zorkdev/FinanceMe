@@ -42,19 +42,19 @@ class HomeViewModel {
 
     private var currentMonthSummary: CurrentMonthSummary? {
         didSet {
-            DataManager.shared.currentMonthSummary = currentMonthSummary
+            currentMonthSummary?.save()
         }
     }
 
     private var endOfMonthSummaries = [EndOfMonthSummary]() {
         didSet {
-            DataManager.shared.endOfMonthSummaries = endOfMonthSummaries
+            endOfMonthSummaries.save()
         }
     }
 
     private var externalTransactions = [Transaction]() {
         didSet {
-            DataManager.shared.transactions = externalTransactions
+            externalTransactions.save()
         }
     }
 
@@ -93,16 +93,17 @@ class HomeViewModel {
 extension HomeViewModel: TodayPresentable {
 
     func setupDefaults() {
-        let balanceAttributedString = createAttributedString(from: DataManager.shared.balance)
+        guard let balance = Balance.load(),
+            let user = User.load() else { return }
+        let balanceAttributedString = createAttributedString(from: balance.effectiveBalance)
         delegate?.set(balance: balanceAttributedString)
-        guard let user = DataManager.shared.user else { return }
         let allowanceAttributedString = createAttributedString(from: user.allowance)
         delegate?.set(allowance: allowanceAttributedString)
 
-        externalTransactions = DataManager.shared.transactions
+        externalTransactions = Transaction.all()
         updateTransactions()
-        endOfMonthSummaries = DataManager.shared.endOfMonthSummaries
-        currentMonthSummary = DataManager.shared.currentMonthSummary
+        endOfMonthSummaries = EndOfMonthSummary.all()
+        currentMonthSummary = CurrentMonthSummary.load()
         updateBalances()
         (delegate as? HomeViewModelDelegate)?.reloadTableView()
     }
@@ -364,7 +365,7 @@ extension HomeViewModel {
 
             currentMonthCellModels = [homeCurrentMonthCellModel]
 
-            let payday = DataManager.shared.user?.payday ?? 0
+            let payday = User.load()?.payday ?? 0
             let currentSummary = EndOfMonthSummary(balance: currentMonthSummary.forecast,
                                                    created: Date().next(day: payday, direction: .forward))
             var summaries = endOfMonthSummaries + [currentSummary]

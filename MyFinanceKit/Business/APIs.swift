@@ -1,10 +1,34 @@
 enum API {
-    case starling
-    case zorkdev
+
+    case starling(StarlingAPI)
+    case zorkdev(ZorkdevAPI)
+
+    var token: String {
+        switch self {
+        case .starling: return ConfigManager.shared.config.starlingToken
+        case .zorkdev: return ConfigManager.shared.config.zorkdevToken
+        }
+    }
+
+    var url: URL? {
+        switch self {
+        case let .starling(starlingAPI): return starlingAPI.url
+        case let .zorkdev(zorkdevAPI): return zorkdevAPI.url
+        }
+    }
+
 }
 
-enum StarlingAPI: String {
-    private static let baseURL = "https://api.starlingbank.com/api/v1/"
+protocol APIType {
+
+    static var baseURL: String { get }
+    var url: URL? { get }
+
+}
+
+enum StarlingAPI: String, APIType {
+
+    static let baseURL = "https://api.starlingbank.com/api/v1/"
 
     case balance = "accounts/balance"
     case transactions = "transactions"
@@ -12,15 +36,12 @@ enum StarlingAPI: String {
     var url: URL? {
         return URL(string: StarlingAPI.baseURL + rawValue)
     }
+
 }
 
-enum StarlingParameters: String {
-    case from
-    case to
-}
+enum ZorkdevAPI: APIType {
 
-enum ZorkdevAPI {
-    private static let baseURL = "https://zorkdev.herokuapp.com/api/"
+    static let baseURL = "https://zorkdev.herokuapp.com/api/"
 
     case user
     case transactions
@@ -39,4 +60,25 @@ enum ZorkdevAPI {
     var url: URL? {
         return URL(string: ZorkdevAPI.baseURL + path)
     }
+
+}
+
+public struct FromToParameters: JSONCodable {
+
+    public static var decodeDateFormatter: DateFormatter {
+        return Formatters.apiDate
+    }
+
+    public static var encodeDateFormatter: DateFormatter {
+        return Formatters.apiDate
+    }
+
+    public let from: Date?
+    public let to: Date?
+
+    public init(from: Date?, to: Date?) {
+        self.from = from
+        self.to = to
+    }
+
 }

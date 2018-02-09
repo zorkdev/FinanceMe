@@ -1,4 +1,4 @@
-public struct User: JSONCodable {
+public struct User: Storeable {
 
     public let name: String
     public let payday: Int

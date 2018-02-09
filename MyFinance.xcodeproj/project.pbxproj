@@ -18,16 +18,14 @@
 		9A4F55382023C7A900DBF68F /* MyFinanceKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9A4F55302023C7A900DBF68F /* MyFinanceKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		9A4F55492023C7BE00DBF68F /* MyFinanceKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A4F55422023C7BE00DBF68F /* MyFinanceKit.framework */; };
 		9A4F554A2023C7BE00DBF68F /* MyFinanceKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9A4F55422023C7BE00DBF68F /* MyFinanceKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		9A4F55522023C95B00DBF68F /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A5AE5992012C0D000B25081 /* NetworkManager.swift */; };
-		9A4F55532023C95B00DBF68F /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A5AE5992012C0D000B25081 /* NetworkManager.swift */; };
+		9A4F55522023C95B00DBF68F /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A5AE5992012C0D000B25081 /* NetworkService.swift */; };
+		9A4F55532023C95B00DBF68F /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A5AE5992012C0D000B25081 /* NetworkService.swift */; };
 		9A4F55542023C96100DBF68F /* ConfigManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A5AE5942012BE0500B25081 /* ConfigManager.swift */; };
 		9A4F55552023C96200DBF68F /* ConfigManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A5AE5942012BE0500B25081 /* ConfigManager.swift */; };
-		9A4F55562023C96700DBF68F /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ADE54C0201568D90039D774 /* DataManager.swift */; };
-		9A4F55572023C96700DBF68F /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ADE54C0201568D90039D774 /* DataManager.swift */; };
-		9A4F55592023C96E00DBF68F /* Dictionary+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A5AE5A92012D4A400B25081 /* Dictionary+Extensions.swift */; };
+		9A4F55562023C96700DBF68F /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ADE54C0201568D90039D774 /* DataService.swift */; };
+		9A4F55572023C96700DBF68F /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ADE54C0201568D90039D774 /* DataService.swift */; };
 		9A4F555A2023C97300DBF68F /* Date+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AD3EE2A2013AD2A0083F8FE /* Date+Extensions.swift */; };
 		9A4F555B2023C97300DBF68F /* Date+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AD3EE2A2013AD2A0083F8FE /* Date+Extensions.swift */; };
-		9A4F55602023C97A00DBF68F /* Dictionary+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A5AE5A92012D4A400B25081 /* Dictionary+Extensions.swift */; };
 		9A4F55612023C98200DBF68F /* Data+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AD3EE2420139BA40083F8FE /* Data+Extensions.swift */; };
 		9A4F55622023C98200DBF68F /* Data+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AD3EE2420139BA40083F8FE /* Data+Extensions.swift */; };
 		9A4F55632023CAA100DBF68F /* Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A5AE59B2012C45700B25081 /* Error.swift */; };
@@ -111,6 +109,10 @@
 		9A94F8F2202CEA9600AEF61F /* BalanceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A6EF749202B939B006D3420 /* BalanceTests.swift */; };
 		9A94F8F3202CEA9800AEF61F /* TransactionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A6EF75F202BA718006D3420 /* TransactionTests.swift */; };
 		9A94F8F4202CEA9A00AEF61F /* SummaryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A6EF761202BABE0006D3420 /* SummaryTests.swift */; };
+		9A94F8FA202CF23E00AEF61F /* DictionaryExtensionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A94F8F9202CF23E00AEF61F /* DictionaryExtensionsTests.swift */; };
+		9A94F8FB202CF23E00AEF61F /* DictionaryExtensionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A94F8F9202CF23E00AEF61F /* DictionaryExtensionsTests.swift */; };
+		9A94F900202D176200AEF61F /* URLSession+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A94F8FF202D176200AEF61F /* URLSession+Extensions.swift */; };
+		9A94F901202D176200AEF61F /* URLSession+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A94F8FF202D176200AEF61F /* URLSession+Extensions.swift */; };
 		9A9666812025EAF5000F8A42 /* TodayDisplayModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A9666802025EAF5000F8A42 /* TodayDisplayModelType.swift */; };
 		9A9666822025EAF5000F8A42 /* TodayDisplayModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A9666802025EAF5000F8A42 /* TodayDisplayModelType.swift */; };
 		9A96668720260E7B000F8A42 /* ColorPalette.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A96668620260E7B000F8A42 /* ColorPalette.swift */; };
@@ -276,13 +278,12 @@
 		9A5AE5912012B97500B25081 /* Balance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Balance.swift; sourceTree = "<group>"; };
 		9A5AE5942012BE0500B25081 /* ConfigManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigManager.swift; sourceTree = "<group>"; };
 		9A5AE5962012BF5E00B25081 /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
-		9A5AE5992012C0D000B25081 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		9A5AE5992012C0D000B25081 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 		9A5AE59B2012C45700B25081 /* Error.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Error.swift; sourceTree = "<group>"; };
 		9A5AE59F2012C8A400B25081 /* BalanceBusinessLogic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BalanceBusinessLogic.swift; sourceTree = "<group>"; };
 		9A5AE5A12012C99A00B25081 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		9A5AE5A32012CA7700B25081 /* Formatters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Formatters.swift; sourceTree = "<group>"; };
 		9A5AE5A52012CCFC00B25081 /* APIs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIs.swift; sourceTree = "<group>"; };
-		9A5AE5A92012D4A400B25081 /* Dictionary+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Dictionary+Extensions.swift"; sourceTree = "<group>"; };
 		9A65B79C202651F3004165F2 /* Validators.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Validators.swift; sourceTree = "<group>"; };
 		9A65B79F202686A9004165F2 /* Summary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Summary.swift; sourceTree = "<group>"; };
 		9A65B7A4202690DB004165F2 /* EndOfMonthSummaryBusinessLogic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndOfMonthSummaryBusinessLogic.swift; sourceTree = "<group>"; };
@@ -333,6 +334,8 @@
 		9A94F8ED202CE87600AEF61F /* Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Bridging-Header.h"; sourceTree = "<group>"; };
 		9A94F8F7202CEFF100AEF61F /* Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Bridging-Header.h"; sourceTree = "<group>"; };
 		9A94F8F8202CF03E00AEF61F /* Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Bridging-Header.h"; sourceTree = "<group>"; };
+		9A94F8F9202CF23E00AEF61F /* DictionaryExtensionsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DictionaryExtensionsTests.swift; sourceTree = "<group>"; };
+		9A94F8FF202D176200AEF61F /* URLSession+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URLSession+Extensions.swift"; sourceTree = "<group>"; };
 		9A9666802025EAF5000F8A42 /* TodayDisplayModelType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayDisplayModelType.swift; sourceTree = "<group>"; };
 		9A96668620260E7B000F8A42 /* ColorPalette.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorPalette.swift; sourceTree = "<group>"; };
 		9AAA3D7520290621008881FD /* AuthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewController.swift; sourceTree = "<group>"; };
@@ -364,7 +367,7 @@
 		9AD96CA220253A3E00D37F23 /* Dismissable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dismissable.swift; sourceTree = "<group>"; };
 		9AD96CA520253CC300D37F23 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		9AD96CA7202544A600D37F23 /* AddTransactionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTransactionViewModel.swift; sourceTree = "<group>"; };
-		9ADE54C0201568D90039D774 /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
+		9ADE54C0201568D90039D774 /* DataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
 		A8B0411C6517F0B6198C67E8 /* Pods-MyFinanceExtension-iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyFinanceExtension-iOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MyFinanceExtension-iOS/Pods-MyFinanceExtension-iOS.debug.xcconfig"; sourceTree = "<group>"; };
 		AD2A187BD7CC65C7F408B8B3 /* Pods-MyFinanceExtension-macOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyFinanceExtension-macOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MyFinanceExtension-macOS/Pods-MyFinanceExtension-macOS.debug.xcconfig"; sourceTree = "<group>"; };
 		ADBD8518395325566C1A293C /* Pods-MyFinanceKit-iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyFinanceKit-iOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-MyFinanceKit-iOS/Pods-MyFinanceKit-iOS.release.xcconfig"; sourceTree = "<group>"; };
@@ -626,9 +629,9 @@
 			children = (
 				9AD3EE212013966E0083F8FE /* Extensions */,
 				9A6EF752202B980F006D3420 /* JSONCodable.swift */,
-				9A5AE5992012C0D000B25081 /* NetworkManager.swift */,
+				9A5AE5992012C0D000B25081 /* NetworkService.swift */,
 				9A5AE5942012BE0500B25081 /* ConfigManager.swift */,
-				9ADE54C0201568D90039D774 /* DataManager.swift */,
+				9ADE54C0201568D90039D774 /* DataService.swift */,
 				9AD96C9A202534D600D37F23 /* StringRepresentable.swift */,
 			);
 			path = Platform;
@@ -740,6 +743,7 @@
 		9A94F8DB202CE6FF00AEF61F /* Platform */ = {
 			isa = PBXGroup;
 			children = (
+				9A94F8F9202CF23E00AEF61F /* DictionaryExtensionsTests.swift */,
 			);
 			path = Platform;
 			sourceTree = "<group>";
@@ -847,9 +851,9 @@
 		9AD3EE212013966E0083F8FE /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				9A5AE5A92012D4A400B25081 /* Dictionary+Extensions.swift */,
 				9AD3EE2A2013AD2A0083F8FE /* Date+Extensions.swift */,
 				9AD3EE2420139BA40083F8FE /* Data+Extensions.swift */,
+				9A94F8FF202D176200AEF61F /* URLSession+Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -1646,7 +1650,7 @@
 			files = (
 				9A4F55632023CAA100DBF68F /* Error.swift in Sources */,
 				9A4F55762023CAD900DBF68F /* TransactionsBusinessLogic.swift in Sources */,
-				9A4F55522023C95B00DBF68F /* NetworkManager.swift in Sources */,
+				9A4F55522023C95B00DBF68F /* NetworkService.swift in Sources */,
 				9A4F55652023CAA700DBF68F /* HALResponse.swift in Sources */,
 				9A4F55722023CACD00DBF68F /* Formatters.swift in Sources */,
 				9A4F555A2023C97300DBF68F /* Date+Extensions.swift in Sources */,
@@ -1655,7 +1659,7 @@
 				9A65B79D202651F3004165F2 /* Validators.swift in Sources */,
 				9A65B7A5202690DB004165F2 /* EndOfMonthSummaryBusinessLogic.swift in Sources */,
 				9AD96C94202529E100D37F23 /* TodayPresentable.swift in Sources */,
-				9A4F55562023C96700DBF68F /* DataManager.swift in Sources */,
+				9A4F55562023C96700DBF68F /* DataService.swift in Sources */,
 				9A4F556E2023CABF00DBF68F /* Transaction.swift in Sources */,
 				9AD96CA320253A3E00D37F23 /* Dismissable.swift in Sources */,
 				9A4F55542023C96100DBF68F /* ConfigManager.swift in Sources */,
@@ -1665,7 +1669,6 @@
 				9A6EF753202B980F006D3420 /* JSONCodable.swift in Sources */,
 				9A4F55682023CAAD00DBF68F /* Config.swift in Sources */,
 				9A4F55612023C98200DBF68F /* Data+Extensions.swift in Sources */,
-				9A4F55602023C97A00DBF68F /* Dictionary+Extensions.swift in Sources */,
 				9A65B7A0202686A9004165F2 /* Summary.swift in Sources */,
 				9A96668720260E7B000F8A42 /* ColorPalette.swift in Sources */,
 				9A4F55782023CADE00DBF68F /* UserBusinessLogic.swift in Sources */,
@@ -1674,6 +1677,7 @@
 				9A4F556A2023CAB300DBF68F /* User.swift in Sources */,
 				9A4F557A2023CAE400DBF68F /* ExternalTransactionsBusinessLogic.swift in Sources */,
 				9A8561AD2027AB9A00A26F12 /* UITableViewCell+Helpers.swift in Sources */,
+				9A94F900202D176200AEF61F /* URLSession+Extensions.swift in Sources */,
 				9AD96C912025275C00D37F23 /* ViewModelType.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1687,15 +1691,16 @@
 				9A65B7A6202690DB004165F2 /* EndOfMonthSummaryBusinessLogic.swift in Sources */,
 				9A4F55642023CAA200DBF68F /* Error.swift in Sources */,
 				9A4F55752023CAD800DBF68F /* TransactionsBusinessLogic.swift in Sources */,
-				9A4F55532023C95B00DBF68F /* NetworkManager.swift in Sources */,
+				9A4F55532023C95B00DBF68F /* NetworkService.swift in Sources */,
 				9A4F55662023CAA800DBF68F /* HALResponse.swift in Sources */,
 				9A4F55712023CACC00DBF68F /* Formatters.swift in Sources */,
 				9A4F555B2023C97300DBF68F /* Date+Extensions.swift in Sources */,
 				9A4F55732023CAD300DBF68F /* BalanceBusinessLogic.swift in Sources */,
 				9AD96C9C202534D600D37F23 /* StringRepresentable.swift in Sources */,
 				9AD96C95202529E100D37F23 /* TodayPresentable.swift in Sources */,
+				9A94F901202D176200AEF61F /* URLSession+Extensions.swift in Sources */,
 				9A96668820260E7B000F8A42 /* ColorPalette.swift in Sources */,
-				9A4F55572023C96700DBF68F /* DataManager.swift in Sources */,
+				9A4F55572023C96700DBF68F /* DataService.swift in Sources */,
 				9A4F556D2023CABF00DBF68F /* Transaction.swift in Sources */,
 				9A65B7A1202686A9004165F2 /* Summary.swift in Sources */,
 				9A4F55552023C96200DBF68F /* ConfigManager.swift in Sources */,
@@ -1703,7 +1708,6 @@
 				9A4F557F2023D07000DBF68F /* TodayViewModel.swift in Sources */,
 				9A4F55672023CAAD00DBF68F /* Config.swift in Sources */,
 				9A4F55622023C98200DBF68F /* Data+Extensions.swift in Sources */,
-				9A4F55592023C96E00DBF68F /* Dictionary+Extensions.swift in Sources */,
 				9A4F55772023CADE00DBF68F /* UserBusinessLogic.swift in Sources */,
 				9A4F556B2023CAB900DBF68F /* Balance.swift in Sources */,
 				9A4F55692023CAB300DBF68F /* User.swift in Sources */,
@@ -1747,6 +1751,7 @@
 				9A6EF75C202BA68B006D3420 /* UserTests.swift in Sources */,
 				9A6EF757202BA15D006D3420 /* ErrorTests.swift in Sources */,
 				9A6EF75E202BA6A2006D3420 /* HALResponseTests.swift in Sources */,
+				9A94F8FA202CF23E00AEF61F /* DictionaryExtensionsTests.swift in Sources */,
 				9A6EF75A202BA5D0006D3420 /* ConfigTests.swift in Sources */,
 				9A6EF760202BA718006D3420 /* TransactionTests.swift in Sources */,
 				9A6EF762202BABE0006D3420 /* SummaryTests.swift in Sources */,
@@ -1778,6 +1783,7 @@
 				9A94F8F1202CEA9300AEF61F /* UserTests.swift in Sources */,
 				9A94F8EF202CEA8E00AEF61F /* HALResponseTests.swift in Sources */,
 				9A94F8F0202CEA9100AEF61F /* ConfigTests.swift in Sources */,
+				9A94F8FB202CF23E00AEF61F /* DictionaryExtensionsTests.swift in Sources */,
 				9A94F8EE202CEA5400AEF61F /* ErrorTests.swift in Sources */,
 				9A94F8F3202CEA9800AEF61F /* TransactionTests.swift in Sources */,
 				9A94F8F4202CEA9A00AEF61F /* SummaryTests.swift in Sources */,
