@@ -13,7 +13,7 @@
         <!--Today View Controller-->
         <scene sceneID="cwh-vc-ff4">
             <objects>
-                <viewController id="M4Y-Lb-cyx" customClass="TodayViewController" customModule="MyFinanceExtension" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="M4Y-Lb-cyx" customClass="TodayViewController" customModule="MyFinanceExtension_iOS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" simulatedAppContext="notificationCenter" id="S3S-Oj-5AN">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="100"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -87,12 +87,20 @@
                                             <blurEffect style="extraLight"/>
                                         </vibrancyEffect>
                                     </visualEffectView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wfg-hV-TGQ">
+                                        <rect key="frame" x="144" y="28.5" width="0.0" height="0.0"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="36"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
+                                    <constraint firstItem="Wfg-hV-TGQ" firstAttribute="centerY" secondItem="012-Vf-Y3Q" secondAttribute="centerY" id="4uo-x1-fEv"/>
                                     <constraint firstAttribute="trailing" secondItem="JX9-HX-uX9" secondAttribute="trailing" id="C6n-Wx-UO0"/>
                                     <constraint firstItem="RYy-PZ-IPx" firstAttribute="top" secondItem="JX9-HX-uX9" secondAttribute="bottom" id="FXX-Ig-jEO"/>
                                     <constraint firstItem="RYy-PZ-IPx" firstAttribute="leading" secondItem="012-Vf-Y3Q" secondAttribute="leading" id="FsE-aQ-vVC"/>
+                                    <constraint firstItem="Wfg-hV-TGQ" firstAttribute="centerX" secondItem="012-Vf-Y3Q" secondAttribute="centerX" id="Hn2-Le-4RA"/>
                                     <constraint firstItem="JX9-HX-uX9" firstAttribute="top" secondItem="012-Vf-Y3Q" secondAttribute="top" id="N9J-2B-2hI"/>
                                     <constraint firstAttribute="trailing" secondItem="RYy-PZ-IPx" secondAttribute="trailing" id="O9R-j7-xAc"/>
                                     <constraint firstAttribute="bottom" secondItem="RYy-PZ-IPx" secondAttribute="bottom" id="eR5-fG-uuH"/>
@@ -111,6 +119,7 @@
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="320" height="100"/>
                     <connections>
+                        <outlet property="allowanceIconLabel" destination="Wfg-hV-TGQ" id="gV3-QP-W2f"/>
                         <outlet property="allowanceLabel" destination="M4R-fw-obk" id="hUH-ac-zTU"/>
                         <outlet property="balanceLabel" destination="GcN-lo-r42" id="cad-ck-Fcj"/>
                         <outlet property="primaryVibrancyEffectView" destination="JX9-HX-uX9" id="jrV-qX-0kB"/>

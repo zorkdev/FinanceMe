@@ -204,14 +204,22 @@
                                                 <color key="textColor" red="0.96078431369999995" green="0.96078431369999995" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="py7-R4-lSW">
+                                                <rect key="frame" x="171" y="29" width="0.0" height="0.0"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="36"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
                                         </subviews>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstItem="N4m-8L-jE4" firstAttribute="width" secondItem="aLP-fJ-Zas" secondAttribute="width" id="0ZA-zp-yOg"/>
                                             <constraint firstItem="QcH-QI-BvV" firstAttribute="leading" secondItem="ci1-GR-rfy" secondAttribute="trailing" id="AiL-AO-DQl"/>
+                                            <constraint firstItem="py7-R4-lSW" firstAttribute="centerY" secondItem="t7M-TR-zpQ" secondAttribute="centerY" id="GPt-pQ-oVu"/>
                                             <constraint firstAttribute="bottom" secondItem="ci1-GR-rfy" secondAttribute="bottom" id="J5M-Vp-Vav"/>
                                             <constraint firstAttribute="trailing" secondItem="N4m-8L-jE4" secondAttribute="trailing" id="Lgv-Eo-UCb"/>
                                             <constraint firstItem="aLP-fJ-Zas" firstAttribute="leading" secondItem="t7M-TR-zpQ" secondAttribute="leading" id="MaB-7c-eez"/>
+                                            <constraint firstItem="py7-R4-lSW" firstAttribute="centerX" secondItem="t7M-TR-zpQ" secondAttribute="centerX" id="Nju-CM-XVD"/>
                                             <constraint firstAttribute="trailing" secondItem="QcH-QI-BvV" secondAttribute="trailing" id="PiM-qq-m7g"/>
                                             <constraint firstItem="ci1-GR-rfy" firstAttribute="leading" secondItem="t7M-TR-zpQ" secondAttribute="leading" id="YuC-J6-fZj"/>
                                             <constraint firstAttribute="bottom" secondItem="QcH-QI-BvV" secondAttribute="bottom" id="ZPk-Pd-5n7"/>
@@ -368,6 +376,7 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="allowanceIconLabel" destination="py7-R4-lSW" id="Ej4-ql-UA3"/>
                         <outlet property="allowanceLabel" destination="N4m-8L-jE4" id="ekV-m7-p2G"/>
                         <outlet property="balanceButton" destination="yOp-1E-vWM" id="iyv-Oj-Loo"/>
                         <outlet property="balanceLabel" destination="aLP-fJ-Zas" id="lXz-7u-3xt"/>

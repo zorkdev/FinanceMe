@@ -4,6 +4,7 @@ class TodayViewController: NSViewController {
 
     @IBOutlet private weak var balanceLabel: NSTextField!
     @IBOutlet private weak var allowanceLabel: NSTextField!
+    @IBOutlet private weak var allowanceIconLabel: NSTextField!
 
     private var viewModel: TodayViewModel!
 
@@ -33,6 +34,10 @@ extension TodayViewController: TodayViewModelDelegate {
             [NSAttributedStringKey.paragraphStyle: paragraphStyle],
             range: NSRange(location: 0, length: allowance.length))
         allowanceLabel.attributedStringValue = allowanceTemp
+    }
+
+    func set(allowanceIcon: String) {
+        allowanceIconLabel.stringValue = allowanceIcon
     }
 
 }

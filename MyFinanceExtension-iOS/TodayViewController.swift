@@ -6,6 +6,7 @@ class TodayViewController: BaseViewController {
     @IBOutlet private weak var secondaryVibrancyEffectView: UIVisualEffectView!
     @IBOutlet private weak var balanceLabel: UILabel!
     @IBOutlet private weak var allowanceLabel: UILabel!
+    @IBOutlet private weak var allowanceIconLabel: UILabel!
 
     private var viewModel: TodayViewModel!
 
@@ -27,6 +28,10 @@ extension TodayViewController: TodayViewModelDelegate {
 
     func set(allowance: NSAttributedString) {
         allowanceLabel.attributedText = allowance
+    }
+
+    func set(allowanceIcon: String) {
+        allowanceIconLabel.text = allowanceIcon
     }
 
 }

@@ -7,6 +7,7 @@
     <objects>
         <customObject id="-2" userLabel="File's Owner" customClass="TodayViewController" customModule="MyFinanceExtension_macOS">
             <connections>
+                <outlet property="allowanceIconLabel" destination="XfT-Ug-naQ" id="xeE-oG-wXy"/>
                 <outlet property="allowanceLabel" destination="8U3-tG-p98" id="yyQ-Af-v2K"/>
                 <outlet property="balanceLabel" destination="mr2-M7-NPk" id="7j1-Pc-cRQ"/>
                 <outlet property="view" destination="Hz6-mo-xeY" id="0bl-1N-x8E"/>
@@ -31,7 +32,7 @@
                         <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="QSn-Ga-Agw">
                             <rect key="frame" x="-2" y="0.0" width="152" height="14"/>
                             <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="BALANCE" id="qIl-b5-JfM">
-                                <font key="font" metaFont="system" size="11"/>
+                                <font key="font" metaFont="smallSystem"/>
                                 <color key="textColor" red="0.41568627450980389" green="0.41568627450980389" blue="0.41568627450980389" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                             </textFieldCell>
@@ -39,7 +40,7 @@
                         <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="mj1-Rz-dTS">
                             <rect key="frame" x="146" y="0.0" width="152" height="14"/>
                             <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="right" title="ALLOWANCE" id="pBX-RK-ZcO">
-                                <font key="font" metaFont="system" size="11"/>
+                                <font key="font" metaFont="smallSystem"/>
                                 <color key="textColor" red="0.41568627450000001" green="0.41568627450000001" blue="0.41568627450000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                             </textFieldCell>
@@ -52,12 +53,25 @@
                                 <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                             </textFieldCell>
                         </textField>
+                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="XfT-Ug-naQ">
+                            <rect key="frame" x="121" y="-4" width="54" height="39"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="50" id="wMu-LQ-YNq"/>
+                            </constraints>
+                            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="right" id="0qn-KJ-e41">
+                                <font key="font" metaFont="system" size="32"/>
+                                <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                            </textFieldCell>
+                        </textField>
                     </subviews>
                     <constraints>
                         <constraint firstAttribute="bottom" secondItem="QSn-Ga-Agw" secondAttribute="bottom" id="0dp-ZA-9Wr"/>
+                        <constraint firstItem="XfT-Ug-naQ" firstAttribute="centerX" secondItem="8XZ-0m-QNv" secondAttribute="centerX" id="14L-vR-lQ7"/>
                         <constraint firstAttribute="bottom" secondItem="mj1-Rz-dTS" secondAttribute="bottom" id="8aN-2R-JKK"/>
                         <constraint firstItem="mj1-Rz-dTS" firstAttribute="width" secondItem="QSn-Ga-Agw" secondAttribute="width" id="9Nb-yH-6Vw"/>
                         <constraint firstItem="mr2-M7-NPk" firstAttribute="top" secondItem="8XZ-0m-QNv" secondAttribute="top" id="F9b-gT-dCx"/>
+                        <constraint firstItem="XfT-Ug-naQ" firstAttribute="centerY" secondItem="8XZ-0m-QNv" secondAttribute="centerY" id="Jix-fX-8yw"/>
                         <constraint firstAttribute="trailing" secondItem="8U3-tG-p98" secondAttribute="trailing" id="MvH-aV-z4I"/>
                         <constraint firstItem="mj1-Rz-dTS" firstAttribute="top" secondItem="8U3-tG-p98" secondAttribute="bottom" id="Ry1-Sw-1t6"/>
                         <constraint firstItem="8U3-tG-p98" firstAttribute="top" secondItem="8XZ-0m-QNv" secondAttribute="top" id="SWP-MR-lGA"/>

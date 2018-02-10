@@ -124,6 +124,8 @@
 		9AAD3895202F66E500395119 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AAD3894202F66E500395119 /* SettingsViewController.swift */; };
 		9AAD3897202F684E00395119 /* SettingsDisplayModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AAD3896202F684E00395119 /* SettingsDisplayModel.swift */; };
 		9AAD3899202F68C000395119 /* SettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AAD3898202F68C000395119 /* SettingsViewModel.swift */; };
+		9AAD38A1202FA9BC00395119 /* SpendingBusinessLogic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AAD38A0202FA9BC00395119 /* SpendingBusinessLogic.swift */; };
+		9AAD38A2202FA9BC00395119 /* SpendingBusinessLogic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AAD38A0202FA9BC00395119 /* SpendingBusinessLogic.swift */; };
 		9AD3EE3A2013D9A10083F8FE /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AD3EE392013D9A10083F8FE /* NotificationCenter.framework */; };
 		9AD3EE3D2013D9A10083F8FE /* TodayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AD3EE3C2013D9A10083F8FE /* TodayViewController.swift */; };
 		9AD3EE402013D9A10083F8FE /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9AD3EE3E2013D9A10083F8FE /* MainInterface.storyboard */; };
@@ -353,6 +355,7 @@
 		9AAD3894202F66E500395119 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		9AAD3896202F684E00395119 /* SettingsDisplayModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsDisplayModel.swift; sourceTree = "<group>"; };
 		9AAD3898202F68C000395119 /* SettingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewModel.swift; sourceTree = "<group>"; };
+		9AAD38A0202FA9BC00395119 /* SpendingBusinessLogic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpendingBusinessLogic.swift; sourceTree = "<group>"; };
 		9AD3EE1D20138F6C0083F8FE /* Transaction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Transaction.swift; sourceTree = "<group>"; };
 		9AD3EE222013985B0083F8FE /* TransactionsBusinessLogic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionsBusinessLogic.swift; sourceTree = "<group>"; };
 		9AD3EE2420139BA40083F8FE /* Data+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Data+Extensions.swift"; sourceTree = "<group>"; };
@@ -630,6 +633,7 @@
 				9A872E112016719100C1E9BE /* UserBusinessLogic.swift */,
 				9A872984201662E100C1E9BE /* ExternalTransactionsBusinessLogic.swift */,
 				9A65B7A4202690DB004165F2 /* EndOfMonthSummaryBusinessLogic.swift */,
+				9AAD38A0202FA9BC00395119 /* SpendingBusinessLogic.swift */,
 			);
 			path = Business;
 			sourceTree = "<group>";
@@ -1697,6 +1701,7 @@
 				9A65B7A0202686A9004165F2 /* Summary.swift in Sources */,
 				9A96668720260E7B000F8A42 /* ColorPalette.swift in Sources */,
 				9A4F55782023CADE00DBF68F /* UserBusinessLogic.swift in Sources */,
+				9AAD38A1202FA9BC00395119 /* SpendingBusinessLogic.swift in Sources */,
 				9AD96CA620253CC300D37F23 /* BaseViewController.swift in Sources */,
 				9A4F556C2023CAB900DBF68F /* Balance.swift in Sources */,
 				9A4F556A2023CAB300DBF68F /* User.swift in Sources */,
@@ -1721,6 +1726,7 @@
 				9A4F55712023CACC00DBF68F /* Formatters.swift in Sources */,
 				9A4F555B2023C97300DBF68F /* Date+Extensions.swift in Sources */,
 				9A4F55732023CAD300DBF68F /* BalanceBusinessLogic.swift in Sources */,
+				9AAD38A2202FA9BC00395119 /* SpendingBusinessLogic.swift in Sources */,
 				9AD96C9C202534D600D37F23 /* StringRepresentable.swift in Sources */,
 				9AD96C95202529E100D37F23 /* TodayPresentable.swift in Sources */,
 				9A94F901202D176200AEF61F /* URLSession+Extensions.swift in Sources */,

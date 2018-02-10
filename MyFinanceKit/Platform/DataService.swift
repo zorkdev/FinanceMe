@@ -12,7 +12,11 @@ public protocol Storeable: JSONCodable {
 public extension Storeable {
 
     static var dataService: DataService {
-        return KeychainDataService()
+        #if os(iOS)
+            return KeychainDataService()
+        #else
+            return UserDefaultsDataService()
+        #endif
     }
 
     static func load() -> Self? {
@@ -49,6 +53,23 @@ public struct KeychainDataService: DataService {
     public func load<T: JSONDecodable>() -> T? {
         let key = String(describing: T.self)
         guard let data = KeychainWrapper.standard.data(forKey: key) else { return nil }
+
+        return T(data: data)
+    }
+
+}
+
+public struct UserDefaultsDataService: DataService {
+
+    public func save(value: JSONEncodable) {
+        guard let data = value.encoded() else { return }
+        let key = String(describing: type(of: value))
+        UserDefaults.standard.set(data, forKey: key)
+    }
+
+    public func load<T: JSONDecodable>() -> T? {
+        let key = String(describing: T.self)
+        guard let data = UserDefaults.standard.data(forKey: key) else { return nil }
 
         return T(data: data)
     }

@@ -2,6 +2,7 @@ class HomeViewController: BaseViewController {
 
     @IBOutlet private weak var balanceLabel: UILabel!
     @IBOutlet private weak var allowanceLabel: UILabel!
+    @IBOutlet private weak var allowanceIconLabel: UILabel!
     @IBOutlet private weak var transactionsTableView: UITableView!
     @IBOutlet private weak var regularsTableView: UITableView!
     @IBOutlet private weak var balanceTableView: UITableView!
@@ -99,6 +100,10 @@ extension HomeViewController: HomeViewModelDelegate {
 
     func set(allowance: NSAttributedString) {
         allowanceLabel.attributedText = allowance
+    }
+
+    func set(allowanceIcon: String) {
+        allowanceIconLabel.text = allowanceIcon
     }
 
     func reloadTableView() {
