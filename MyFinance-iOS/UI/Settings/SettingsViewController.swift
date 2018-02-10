@@ -107,6 +107,11 @@ extension SettingsViewController: SettingsViewModelDelegate {
     }
 
     func update(editing: Bool) {
+        nameField.textColor = editing ? ColorPalette.secondary : ColorPalette.lightText
+        largeTransactionField.textColor = editing ? ColorPalette.secondary : ColorPalette.lightText
+        paydayField.textColor = editing ? ColorPalette.secondary : ColorPalette.lightText
+        startDateField.textColor = editing ? ColorPalette.secondary : ColorPalette.lightText
+
         nameField.isEnabled = editing
         largeTransactionField.isEnabled = editing
         paydayField.isEnabled = editing

@@ -104,6 +104,7 @@ extension AddTransactionViewModel {
         externalTransactionsBusinessLogic.create(transaction: transaction)
             .then { transaction -> Void in
                 self.dataDelegate?.didCreate(transaction: transaction)
+                self.delegate?.showSuccess(message: AddTransactionDisplayModel.successMessage)
                 self.delegate?.dismiss(self)
             }.catch { error in
                 self.delegate?.showError(message: error.localizedDescription)

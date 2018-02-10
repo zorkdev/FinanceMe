@@ -1,7 +1,14 @@
 open class BaseViewController: UIViewController {
 
     private struct Constants {
-        static let keyboardToolbarDoneButtonTitle = "Done"    }
+        static let keyboardToolbarDoneButtonTitle = "Done"
+    }
+
+    open override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+
+        view.endEditing(true)
+    }
 
 }
 

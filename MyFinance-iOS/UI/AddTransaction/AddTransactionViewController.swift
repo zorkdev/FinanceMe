@@ -46,6 +46,8 @@ class AddTransactionViewController: BaseViewController {
         sourceField.text = viewModel.pickerViewTitle(for: selectedSource, for: 0)
 
         updateSaveButton()
+
+        amountField.becomeFirstResponder()
     }
 
     private func updateSaveButton() {

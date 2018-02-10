@@ -5,6 +5,7 @@ struct SettingsDisplayModel {
     static let buttonAnimationDuration = 0.2
     static let editButtonTitle = "Edit"
     static let cancelButtonTitle = "Cancel"
+    static let successMessage = "Your settings have been updated!"
 
     let name: String
     let largeTransaction: String

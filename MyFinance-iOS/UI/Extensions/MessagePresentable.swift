@@ -15,6 +15,8 @@ private struct MessageConstants {
     static let errorBannerIcons = ["🤔", "😳", "🙄", "😶", "😱"]
     static let errorBannerCloseImage = "close"
 
+    static let successBannerIcon = "😇"
+
     static let spinnerTitle = "Doing some magic... 😬"
 
 }
@@ -42,6 +44,28 @@ public extension MessagePresentable {
 
         var config = SwiftMessages.Config()
         config.preferredStatusBarStyle = .lightContent
+
+        SwiftMessages.show(config: config, view: view)
+    }
+
+    func showSuccess(message: String) {
+        let view = MessageView.viewFromNib(layout: .centeredView)
+        view.configureTheme(.success)
+        view.configureDropShadow()
+
+        let iconText = MessageConstants.successBannerIcon
+
+        view.configureContent(title: message,
+                              body: "",
+                              iconText: iconText)
+
+        view.button?.isHidden = true
+        view.bodyLabel?.isHidden = true
+
+        var config = SwiftMessages.Config()
+        config.preferredStatusBarStyle = .lightContent
+        config.presentationStyle = .center
+        config.duration = .seconds(seconds: 1)
 
         SwiftMessages.show(config: config, view: view)
     }

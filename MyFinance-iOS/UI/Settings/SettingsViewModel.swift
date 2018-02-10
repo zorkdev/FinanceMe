@@ -49,16 +49,7 @@ class SettingsViewModel {
 extension SettingsViewModel: SettingsViewModelType {
 
     func viewDidLoad() {
-        guard let user = User.load(),
-        let largeTransaction = Formatters.currency
-            .string(from: NSNumber(value: user.largeTransaction)) else { return }
-
-        let displayModel = SettingsDisplayModel(name: user.name,
-                                                largeTransaction: largeTransaction,
-                                                payday: "\(user.payday)",
-                                                startDate: user.startDate)
-
-        delegate?.setupDefault(displayModel: displayModel)
+        setupDefaults()
         delegate?.update(editing: isEditing)
     }
 
@@ -73,6 +64,10 @@ extension SettingsViewModel: SettingsViewModelType {
     func editButtonTapped() {
         isEditing = !isEditing
         delegate?.update(editing: isEditing)
+
+        if isEditing == false {
+            setupDefaults()
+        }
     }
 
     func saveButtonTapped(with displayModel: SettingsDisplayModel) {
@@ -120,6 +115,19 @@ extension SettingsViewModel: SettingsViewModelType {
 
 extension SettingsViewModel {
 
+    func setupDefaults() {
+        guard let user = User.load(),
+            let largeTransaction = Formatters.currency
+                .string(from: NSNumber(value: user.largeTransaction)) else { return }
+
+        let displayModel = SettingsDisplayModel(name: user.name,
+                                                largeTransaction: largeTransaction,
+                                                payday: "\(user.payday)",
+            startDate: user.startDate)
+
+        delegate?.setupDefault(displayModel: displayModel)
+    }
+
     private func validate(amount: String) -> Bool {
         return Validators.validate(amount: amount)
     }
@@ -138,6 +146,7 @@ extension SettingsViewModel {
         userBusinessLogic.update(user: user)
             .then { user -> Void in
                 self.dataDelegate?.didUpdate(user: user)
+                self.delegate?.showSuccess(message: SettingsDisplayModel.successMessage)
                 self.delegate?.dismiss(self)
             }.catch { error in
                 self.delegate?.showError(message: error.localizedDescription)
