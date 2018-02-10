@@ -256,12 +256,13 @@
                                                     <action selector="balanceButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="M4J-qp-lfI"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iAu-ie-L8D" userLabel="Settings">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iAu-ie-L8D" userLabel="Settings">
                                                 <rect key="frame" x="321" y="-0.5" width="54" height="50.5"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="54" id="2kX-Ey-QrR"/>
                                                 </constraints>
                                                 <color key="tintColor" red="0.003221878549" green="0.64363974329999996" blue="0.86026746030000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="16" maxY="0.0"/>
                                                 <state key="normal" image="settings">
                                                     <color key="titleColor" red="0.003221878549" green="0.64363974329999996" blue="0.86026746030000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </state>
@@ -722,13 +723,14 @@
                                         <color key="textColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.94901960780000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1uh-w8-x14">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1uh-w8-x14">
                                         <rect key="frame" x="0.0" y="4.5" width="54" height="35"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="35" id="bWe-Oy-ji6"/>
                                             <constraint firstAttribute="width" constant="54" id="qNj-1e-8XR"/>
                                         </constraints>
                                         <color key="tintColor" red="0.003221878549" green="0.64363974329999996" blue="0.86026746030000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <inset key="imageEdgeInsets" minX="16" minY="0.0" maxX="0.0" maxY="0.0"/>
                                         <state key="normal" image="close">
                                             <color key="titleColor" red="0.003221878549" green="0.64363974329999996" blue="0.86026746030000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
@@ -1033,13 +1035,14 @@
                                         <color key="textColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.94901960780000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bAf-sg-fnP">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bAf-sg-fnP" userLabel="Close Button">
                                         <rect key="frame" x="0.0" y="4.5" width="54" height="35"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="35" id="FKO-ur-NfV"/>
                                             <constraint firstAttribute="width" constant="54" id="Vzx-q8-ZEH"/>
                                         </constraints>
                                         <color key="tintColor" red="0.003221878549" green="0.64363974329999996" blue="0.86026746030000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <inset key="imageEdgeInsets" minX="16" minY="0.0" maxX="0.0" maxY="0.0"/>
                                         <state key="normal" image="close">
                                             <color key="titleColor" red="0.003221878549" green="0.64363974329999996" blue="0.86026746030000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
@@ -1047,14 +1050,32 @@
                                             <action selector="dismiss:" destination="RJQ-cl-VlO" eventType="touchUpInside" id="7Sf-9X-1DH"/>
                                         </connections>
                                     </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KYb-ks-n4a">
+                                        <rect key="frame" x="305" y="4.5" width="70" height="35"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="70" id="PaL-5q-fzn"/>
+                                            <constraint firstAttribute="height" constant="35" id="cCn-0W-mf7"/>
+                                        </constraints>
+                                        <color key="tintColor" red="0.003221878549" green="0.64363974329999996" blue="0.86026746030000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <inset key="titleEdgeInsets" minX="0.0" minY="0.0" maxX="16" maxY="0.0"/>
+                                        <state key="normal" title="Edit">
+                                            <color key="titleColor" red="0.003221878549" green="0.64363974329999996" blue="0.86026746030000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="editButtonTapped:" destination="RJQ-cl-VlO" eventType="touchUpInside" id="ai7-KG-885"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="0Vt-qR-m6u"/>
+                                    <constraint firstItem="KYb-ks-n4a" firstAttribute="centerY" secondItem="uRx-n0-qlB" secondAttribute="centerY" id="52V-zc-7FH"/>
                                     <constraint firstItem="bAf-sg-fnP" firstAttribute="leading" secondItem="uRx-n0-qlB" secondAttribute="leading" id="E5j-6v-uV0"/>
+                                    <constraint firstAttribute="trailing" secondItem="KYb-ks-n4a" secondAttribute="trailing" id="Isg-cu-lq1"/>
                                     <constraint firstItem="EkU-A4-o69" firstAttribute="centerX" secondItem="uRx-n0-qlB" secondAttribute="centerX" id="bII-PN-stL"/>
                                     <constraint firstItem="bAf-sg-fnP" firstAttribute="centerY" secondItem="uRx-n0-qlB" secondAttribute="centerY" id="nHF-kJ-yaP"/>
                                     <constraint firstItem="EkU-A4-o69" firstAttribute="centerY" secondItem="uRx-n0-qlB" secondAttribute="centerY" id="t4Y-SD-7KX"/>
+                                    <constraint firstItem="KYb-ks-n4a" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="EkU-A4-o69" secondAttribute="trailing" constant="8" id="tgc-YA-uQX"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -1075,6 +1096,7 @@
                         <viewLayoutGuide key="safeArea" id="6vM-Qy-Rvb"/>
                     </view>
                     <connections>
+                        <outlet property="editButton" destination="KYb-ks-n4a" id="BbB-sL-5X2"/>
                         <outlet property="largeTransactionField" destination="KxM-mL-DIh" id="tfK-uI-7nx"/>
                         <outlet property="nameField" destination="miD-9n-YnY" id="FdR-Tu-3u2"/>
                         <outlet property="paydayField" destination="b9k-uv-RkB" id="J3H-xp-6tN"/>

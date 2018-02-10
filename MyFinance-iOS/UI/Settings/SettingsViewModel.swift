@@ -7,12 +7,14 @@ protocol SettingsViewModelDataDelegate: class {
 protocol SettingsViewModelDelegate: Dismissable {
 
     func setupDefault(displayModel: SettingsDisplayModel)
+    func update(editing: Bool)
 
 }
 
 protocol SettingsViewModelType: ViewModelType {
 
     func shouldEnableSaveButton(displayModel: SettingsDisplayModel) -> Bool
+    func editButtonTapped()
     func saveButtonTapped(with displayModel: SettingsDisplayModel)
     func formatted(amount: String, original: String) -> String
     func numberOfComponentsInPickerView() -> Int
@@ -29,6 +31,8 @@ class SettingsViewModel {
     private let paydayValues: [String] = {
         return Array(1...28).map { "\($0)" }
     }()
+
+    private var isEditing = false
 
     private weak var delegate: SettingsViewModelDelegate?
     private weak var dataDelegate: SettingsViewModelDataDelegate?
@@ -55,6 +59,7 @@ extension SettingsViewModel: SettingsViewModelType {
                                                 startDate: user.startDate)
 
         delegate?.setupDefault(displayModel: displayModel)
+        delegate?.update(editing: isEditing)
     }
 
     func shouldEnableSaveButton(displayModel: SettingsDisplayModel) -> Bool {
@@ -63,6 +68,11 @@ extension SettingsViewModel: SettingsViewModelType {
             displayModel.name.components(separatedBy: .whitespaces).joined() != "" else { return false }
 
         return  true
+    }
+
+    func editButtonTapped() {
+        isEditing = !isEditing
+        delegate?.update(editing: isEditing)
     }
 
     func saveButtonTapped(with displayModel: SettingsDisplayModel) {

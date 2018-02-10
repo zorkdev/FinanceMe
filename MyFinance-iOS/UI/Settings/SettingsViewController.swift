@@ -4,6 +4,7 @@ class SettingsViewController: BaseViewController {
     @IBOutlet private weak var largeTransactionField: UITextField!
     @IBOutlet private weak var paydayField: UITextField!
     @IBOutlet private weak var startDateField: UITextField!
+    @IBOutlet private weak var editButton: UIButton!
     @IBOutlet private weak var saveButton: UIButton!
 
     private var viewModel: SettingsViewModelType!
@@ -85,6 +86,10 @@ class SettingsViewController: BaseViewController {
         viewModel.saveButtonTapped(with: settingsDisplayModel)
     }
 
+    @IBAction func editButtonTapped(_ sender: UIButton) {
+        viewModel.editButtonTapped()
+    }
+
 }
 
 extension SettingsViewController: SettingsViewModelDelegate {
@@ -97,6 +102,21 @@ extension SettingsViewController: SettingsViewModelDelegate {
         paydayPicker.selectRow(selection.row, inComponent: selection.component, animated: false)
         startDateField.text = SettingsDisplayModel.dateString(from: displayModel.startDate)
         startDatePicker.setDate(displayModel.startDate, animated: false)
+    }
+
+    func update(editing: Bool) {
+        nameField.isEnabled = editing
+        largeTransactionField.isEnabled = editing
+        paydayField.isEnabled = editing
+        startDateField.isEnabled = editing
+        saveButton.isHidden = !editing
+        let editButtonTitle = editing ? SettingsDisplayModel.cancelButtonTitle :
+                                        SettingsDisplayModel.editButtonTitle
+        editButton.setTitle(editButtonTitle, for: .normal)
+
+        if editing {
+            nameField.becomeFirstResponder()
+        }
     }
 
 }
