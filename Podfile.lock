@@ -2,6 +2,9 @@ PODS:
   - Charts (3.0.4):
     - Charts/Core (= 3.0.4)
   - Charts/Core (3.0.4)
+  - NVActivityIndicatorView (4.1.1):
+    - NVActivityIndicatorView/Presenter (= 4.1.1)
+  - NVActivityIndicatorView/Presenter (4.1.1)
   - PromiseKit (4.5.0):
     - PromiseKit/Foundation (= 4.5.0)
     - PromiseKit/QuartzCore (= 4.5.0)
@@ -19,6 +22,7 @@ PODS:
 
 DEPENDENCIES:
   - Charts
+  - NVActivityIndicatorView
   - PromiseKit
   - SwiftKeychainWrapper (from `https://github.com/zorkdev/SwiftKeychainWrapper.git`, branch `develop`)
   - SwiftLint
@@ -36,11 +40,12 @@ CHECKOUT OPTIONS:
 
 SPEC CHECKSUMS:
   Charts: 0705898046257443f0afbbc3179f4b67507b6e48
+  NVActivityIndicatorView: 60109b9bf46efc2e71ab81453196ccdfdfeea870
   PromiseKit: 9c1d9f6d7b65e3951a90bea7f407c56972be5d8e
   SwiftKeychainWrapper: 7505f7715d6613b098f9869d591e006ec9829d3b
   SwiftLint: a014c92b4664e8b13f380f8640a51bb1733778ba
   SwiftMessages: 1bacc783c8f10bdfdc57c14860cae8a1f1fa6591
 
-PODFILE CHECKSUM: 066b9b293710f34b20a58ac3550c852b59c23cf6
+PODFILE CHECKSUM: ba3e3caca8e794a524bd254c2c932f81e4122f77
 
 COCOAPODS: 1.3.1

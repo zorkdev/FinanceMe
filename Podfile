@@ -11,6 +11,7 @@ target 'MyFinance-iOS' do
     pods
     pod 'SwiftMessages'
     pod 'Charts'
+    pod 'NVActivityIndicatorView'
 end
 
 target 'MyFinanceExtension-iOS' do

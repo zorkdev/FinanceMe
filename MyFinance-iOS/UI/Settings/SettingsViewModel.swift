@@ -4,7 +4,7 @@ protocol SettingsViewModelDataDelegate: class {
 
 }
 
-protocol SettingsViewModelDelegate: Dismissable, ErrorPresentable {
+protocol SettingsViewModelDelegate: Dismissable, MessagePresentable {
 
     func setupDefault(displayModel: SettingsDisplayModel)
     func update(editing: Bool)
@@ -134,12 +134,15 @@ extension SettingsViewModel {
     }
 
     private func save(user: User) {
+        delegate?.showSpinner()
         userBusinessLogic.update(user: user)
             .then { user -> Void in
                 self.dataDelegate?.didUpdate(user: user)
                 self.delegate?.dismiss(self)
             }.catch { error in
                 self.delegate?.showError(message: error.localizedDescription)
+            }.always {
+                self.delegate?.hideSpinner()
         }
     }
 

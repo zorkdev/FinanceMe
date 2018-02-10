@@ -1,6 +1,6 @@
 import NotificationCenter
 
-protocol HomeViewModelDelegate: TodayViewModelDelegate, ErrorPresentable {
+protocol HomeViewModelDelegate: TodayViewModelDelegate, MessagePresentable {
 
     func reloadTableView()
     func endRefreshing()

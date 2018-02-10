@@ -101,7 +101,9 @@ extension SettingsViewController: SettingsViewModelDelegate {
         let selection = viewModel.pickerViewRowInComponent(for: displayModel.payday)
         paydayPicker.selectRow(selection.row, inComponent: selection.component, animated: false)
         startDateField.text = SettingsDisplayModel.dateString(from: displayModel.startDate)
-        startDatePicker.setDate(displayModel.startDate, animated: false)
+        selectedDate = displayModel.startDate
+        startDatePicker.setDate(selectedDate, animated: false)
+        updateSaveButton()
     }
 
     func update(editing: Bool) {

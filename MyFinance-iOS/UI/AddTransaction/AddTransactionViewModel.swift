@@ -4,7 +4,7 @@ protocol AddTransactionViewModelDataDelegate: class {
 
 }
 
-protocol AddTransactionViewModelDelegate: Dismissable, ErrorPresentable {}
+protocol AddTransactionViewModelDelegate: Dismissable, MessagePresentable {}
 
 protocol AddTransactionViewModelType: ViewModelType {
 
@@ -100,12 +100,15 @@ extension AddTransactionViewModel {
     }
 
     private func save(transaction: Transaction) {
+        delegate?.showSpinner()
         externalTransactionsBusinessLogic.create(transaction: transaction)
             .then { transaction -> Void in
                 self.dataDelegate?.didCreate(transaction: transaction)
                 self.delegate?.dismiss(self)
             }.catch { error in
                 self.delegate?.showError(message: error.localizedDescription)
+            }.always {
+                self.delegate?.hideSpinner()
         }
     }
 

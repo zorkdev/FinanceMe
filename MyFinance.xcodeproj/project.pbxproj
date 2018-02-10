@@ -89,7 +89,7 @@
 		9A740EEE201E247D00D40943 /* MyFinanceExtension-macOS.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 9A740EDF201E247D00D40943 /* MyFinanceExtension-macOS.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		9A8561722027730F00A26F12 /* HomeCellDisplayModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A8561712027730F00A26F12 /* HomeCellDisplayModel.swift */; };
 		9A856176202774F300A26F12 /* AddTransactionDisplayModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A856175202774F300A26F12 /* AddTransactionDisplayModel.swift */; };
-		9A85617D20278FA000A26F12 /* ErrorPresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A8561772027800D00A26F12 /* ErrorPresentable.swift */; };
+		9A85617D20278FA000A26F12 /* MessagePresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A8561772027800D00A26F12 /* MessagePresentable.swift */; };
 		9A856186202791E100A26F12 /* config.json in Resources */ = {isa = PBXBuildFile; fileRef = 9A856185202791E100A26F12 /* config.json */; };
 		9A856187202791E100A26F12 /* config.json in Resources */ = {isa = PBXBuildFile; fileRef = 9A856185202791E100A26F12 /* config.json */; };
 		9A8561A42027A68F00A26F12 /* HomeCurrentMonthCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A8561A32027A68F00A26F12 /* HomeCurrentMonthCellModel.swift */; };
@@ -316,7 +316,7 @@
 		9A740F1E201E2DAA00D40943 /* MyFinance-macOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "MyFinance-macOS.entitlements"; sourceTree = "<group>"; };
 		9A8561712027730F00A26F12 /* HomeCellDisplayModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCellDisplayModel.swift; sourceTree = "<group>"; };
 		9A856175202774F300A26F12 /* AddTransactionDisplayModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTransactionDisplayModel.swift; sourceTree = "<group>"; };
-		9A8561772027800D00A26F12 /* ErrorPresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorPresentable.swift; sourceTree = "<group>"; };
+		9A8561772027800D00A26F12 /* MessagePresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessagePresentable.swift; sourceTree = "<group>"; };
 		9A856185202791E100A26F12 /* config.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = config.json; sourceTree = SOURCE_ROOT; };
 		9A8561882027920600A26F12 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = SOURCE_ROOT; };
 		9A8561892027920D00A26F12 /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text; path = .swiftlint.yml; sourceTree = SOURCE_ROOT; };
@@ -854,7 +854,7 @@
 		9AAA3D7D202908F1008881FD /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				9A8561772027800D00A26F12 /* ErrorPresentable.swift */,
+				9A8561772027800D00A26F12 /* MessagePresentable.swift */,
 				9AAA3D802029285C008881FD /* Instantiatable.swift */,
 			);
 			path = Extensions;
@@ -1632,6 +1632,7 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-MyFinance-iOS/Pods-MyFinance-iOS-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Charts/Charts.framework",
+				"${BUILT_PRODUCTS_DIR}/NVActivityIndicatorView/NVActivityIndicatorView.framework",
 				"${BUILT_PRODUCTS_DIR}/PromiseKit.default-CorePromise/PromiseKit.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftMessages/SwiftMessages.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftKeychainWrapper-iOS/SwiftKeychainWrapper.framework",
@@ -1639,6 +1640,7 @@
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Charts.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/NVActivityIndicatorView.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PromiseKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftMessages.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftKeychainWrapper.framework",
@@ -1759,7 +1761,7 @@
 				9AAD3897202F684E00395119 /* SettingsDisplayModel.swift in Sources */,
 				9A5AE5762012A8AB00B25081 /* AppDelegate.swift in Sources */,
 				9A8561722027730F00A26F12 /* HomeCellDisplayModel.swift in Sources */,
-				9A85617D20278FA000A26F12 /* ErrorPresentable.swift in Sources */,
+				9A85617D20278FA000A26F12 /* MessagePresentable.swift in Sources */,
 				9AAA3D7F202925FC008881FD /* AuthDisplayModel.swift in Sources */,
 				9AD96CA0202539E500D37F23 /* AddTransactionViewController.swift in Sources */,
 				9A8561A82027A7FC00A26F12 /* HomeCurrentMonthTableViewCell.swift in Sources */,
