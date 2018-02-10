@@ -20,26 +20,27 @@ PODS:
 DEPENDENCIES:
   - Charts
   - PromiseKit
-  - SwiftKeychainWrapper (from `https://github.com/zorkdev/SwiftKeychainWrapper.git`)
+  - SwiftKeychainWrapper (from `https://github.com/zorkdev/SwiftKeychainWrapper.git`, branch `develop`)
   - SwiftLint
   - SwiftMessages
 
 EXTERNAL SOURCES:
   SwiftKeychainWrapper:
+    :branch: develop
     :git: https://github.com/zorkdev/SwiftKeychainWrapper.git
 
 CHECKOUT OPTIONS:
   SwiftKeychainWrapper:
-    :commit: a4fbc3c900b4da4d8d79068f0ea753a4fb86d142
+    :commit: 3abf57d639f6179a6be3a552289b0ae3aeb253c4
     :git: https://github.com/zorkdev/SwiftKeychainWrapper.git
 
 SPEC CHECKSUMS:
   Charts: 0705898046257443f0afbbc3179f4b67507b6e48
   PromiseKit: 9c1d9f6d7b65e3951a90bea7f407c56972be5d8e
-  SwiftKeychainWrapper: d8fb65805412c433170fc1699253b089d84e5634
+  SwiftKeychainWrapper: 7505f7715d6613b098f9869d591e006ec9829d3b
   SwiftLint: a014c92b4664e8b13f380f8640a51bb1733778ba
   SwiftMessages: 1bacc783c8f10bdfdc57c14860cae8a1f1fa6591
 
-PODFILE CHECKSUM: 3b62fb141ec511bdc949c12f5f9c32c3e4b86b63
+PODFILE CHECKSUM: 066b9b293710f34b20a58ac3550c852b59c23cf6
 
 COCOAPODS: 1.3.1
