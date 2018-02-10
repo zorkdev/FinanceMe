@@ -1,17 +1,17 @@
-public enum AppError: Error {
+public enum AppError: Error, LocalizedError {
 
     case unknownError
     case apiPathInvalid
     case urlQueryInvalid
     case jsonParsingError
 
-    var localizedDescription: String {
-        return "Sorry, something went wrong. Please try again"
+    public var errorDescription: String? {
+        return "Sorry, something went wrong. Please try again."
     }
 
 }
 
-public enum APIError: Int, Error {
+public enum APIError: Int, Error, LocalizedError {
 
     case badRequest = 400
     case unauthorized = 401
@@ -19,8 +19,8 @@ public enum APIError: Int, Error {
     case notFound = 404
     case serverError = 500
 
-    var localizedDescription: String {
-        return "Sorry, something went wrong. Please try again"
+    public var errorDescription: String? {
+        return "Sorry, something went wrong. Please try again."
     }
 
     init?(urlError: PMKURLError) {

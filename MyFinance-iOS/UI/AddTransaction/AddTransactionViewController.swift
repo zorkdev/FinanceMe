@@ -132,3 +132,5 @@ extension AddTransactionViewController {
     }
 
 }
+
+extension AddTransactionViewController: AddTransactionViewModelDelegate {}

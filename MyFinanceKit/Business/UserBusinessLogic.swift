@@ -12,4 +12,14 @@ public struct UserBusinessLogic {
         }
     }
 
+    public func update(user: User) -> Promise<User> {
+        return NetworkService.shared.performRequest(api: .zorkdev(.user),
+                                                    method: .patch,
+                                                    body: user)
+            .then { (user: User) in
+                user.save()
+                return Promise(value: user)
+        }
+    }
+
 }

@@ -78,8 +78,15 @@ class HomeViewController: BaseViewController {
     }
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        guard let addTransactionViewController = segue.destination as? AddTransactionViewController else { return }
-        addTransactionViewController.dataDelegate = viewModel
+        switch segue.destination {
+        case let addTransactionViewController as AddTransactionViewController:
+            addTransactionViewController.dataDelegate = viewModel
+
+        case let settingsViewController as SettingsViewController:
+            settingsViewController.dataDelegate = viewModel
+
+        default: break
+        }
     }
 
 }

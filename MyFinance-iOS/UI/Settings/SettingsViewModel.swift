@@ -1,10 +1,10 @@
 protocol SettingsViewModelDataDelegate: class {
 
-    func didUpdateUser()
+    func didUpdate(user: User)
 
 }
 
-protocol SettingsViewModelDelegate: Dismissable {
+protocol SettingsViewModelDelegate: Dismissable, ErrorPresentable {
 
     func setupDefault(displayModel: SettingsDisplayModel)
     func update(editing: Bool)
@@ -26,7 +26,7 @@ protocol SettingsViewModelType: ViewModelType {
 
 class SettingsViewModel {
 
-    private let externalTransactionsBusinessLogic = ExternalTransactionsBusinessLogic()
+    private let userBusinessLogic = UserBusinessLogic()
 
     private let paydayValues: [String] = {
         return Array(1...28).map { "\($0)" }
@@ -134,13 +134,13 @@ extension SettingsViewModel {
     }
 
     private func save(user: User) {
-//        externalTransactionsBusinessLogic.create(transaction: transaction)
-//            .then { transaction -> Void in
-//                self.dataDelegate?.didCreate(transaction: transaction)
-//                self.delegate?.dismiss(self)
-//            }.catch { error in
-//                print(error)
-//        }
+        userBusinessLogic.update(user: user)
+            .then { user -> Void in
+                self.dataDelegate?.didUpdate(user: user)
+                self.delegate?.dismiss(self)
+            }.catch { error in
+                self.delegate?.showError(message: error.localizedDescription)
+        }
     }
 
 }

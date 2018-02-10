@@ -14,7 +14,7 @@ protocol HomeViewModelDelegate: TodayViewModelDelegate, ErrorPresentable {
 
 }
 
-protocol HomeViewModelType: ViewModelType, AddTransactionViewModelDataDelegate {
+protocol HomeViewModelType: ViewModelType, AddTransactionViewModelDataDelegate, SettingsViewModelDataDelegate {
 
     func numberOfSections(in tab: HomeViewModel.Tab) -> Int
     func numberOfRows(in tab: HomeViewModel.Tab, in section: Int) -> Int
@@ -538,6 +538,17 @@ extension HomeViewModel: AddTransactionViewModelDataDelegate {
     func didCreate(transaction: Transaction) {
         getUser()
         externalTransactions.append(transaction)
+        updateTransactions()
+        (delegate as? HomeViewModelDelegate)?.reloadTableView()
+    }
+
+}
+
+extension HomeViewModel: SettingsViewModelDataDelegate {
+
+    func didUpdate(user: User) {
+        let allowanceAttributedString = self.createAttributedString(from: user.allowance)
+        self.delegate?.set(allowance: allowanceAttributedString)
         updateTransactions()
         (delegate as? HomeViewModelDelegate)?.reloadTableView()
     }

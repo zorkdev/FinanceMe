@@ -4,6 +4,8 @@ protocol AddTransactionViewModelDataDelegate: class {
 
 }
 
+protocol AddTransactionViewModelDelegate: Dismissable, ErrorPresentable {}
+
 protocol AddTransactionViewModelType: ViewModelType {
 
     func shouldEnableSaveButton(displayModel: AddTransactionDisplayModel) -> Bool
@@ -19,10 +21,10 @@ class AddTransactionViewModel {
 
     private let externalTransactionsBusinessLogic = ExternalTransactionsBusinessLogic()
 
-    private weak var delegate: Dismissable?
+    private weak var delegate: AddTransactionViewModelDelegate?
     private weak var dataDelegate: AddTransactionViewModelDataDelegate?
 
-    init(delegate: Dismissable, dataDelegate: AddTransactionViewModelDataDelegate?) {
+    init(delegate: AddTransactionViewModelDelegate, dataDelegate: AddTransactionViewModelDataDelegate?) {
         self.delegate = delegate
         self.dataDelegate = dataDelegate
     }
@@ -103,7 +105,7 @@ extension AddTransactionViewModel {
                 self.dataDelegate?.didCreate(transaction: transaction)
                 self.delegate?.dismiss(self)
             }.catch { error in
-                print(error)
+                self.delegate?.showError(message: error.localizedDescription)
         }
     }
 
