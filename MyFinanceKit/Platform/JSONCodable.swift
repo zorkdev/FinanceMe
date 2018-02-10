@@ -1,5 +1,9 @@
 public typealias JSONCodable = JSONEncodable & JSONDecodable
 
+extension Array: JSONCodable {}
+extension Dictionary: JSONCodable {}
+extension Optional: JSONCodable {}
+
 public protocol JSONDecodable: Decodable {
 
     static var decodeDateFormatter: DateFormatter { get }
@@ -51,14 +55,50 @@ public extension JSONEncodable {
 
     func urlEncoded() -> [URLQueryItem]? {
         guard let data = self.encoded() else { return nil }
-        let dictionary = [String: String](data: data)
-        let queryItems = dictionary?.map { URLQueryItem(name: $0.key, value: $0.value) }
+        let dictionary = CodableDictionary(data: data)
+        let queryItems = dictionary?.value.map { URLQueryItem(name: $0.key, value: $0.value) }
 
         return queryItems
     }
 
 }
 
-extension Array: JSONCodable {}
-extension Dictionary: JSONCodable {}
-extension Optional: JSONCodable {}
+private struct CodableDictionary: JSONDecodable {
+
+    let value: [String: String]
+
+    private struct CodingKeys: CodingKey {
+        var stringValue: String
+        var intValue: Int?
+
+        init?(stringValue: String) {
+            self.stringValue = stringValue
+        }
+
+        init?(intValue: Int) {
+            self.init(stringValue: "\(intValue)")
+            self.intValue = intValue
+        }
+    }
+
+    init(from decoder: Decoder) throws {
+        var dictionary = [String: String]()
+        let container = try decoder.container(keyedBy: CodingKeys.self)
+
+        for key in container.allKeys {
+            if let string = try? container.decode(String.self, forKey: key) {
+                dictionary[key.stringValue] = string
+            } else if let bool = try? container.decode(Bool.self, forKey: key) {
+                dictionary[key.stringValue] = "\(bool)"
+            } else if let int = try? container.decode(Int.self, forKey: key) {
+                dictionary[key.stringValue] = "\(int)"
+            } else if let double = try? container.decode(Double.self, forKey: key) {
+                dictionary[key.stringValue] = "\(double)"
+            } else {
+                throw AppError.jsonParsingError
+            }
+        }
+        value = dictionary
+    }
+
+}

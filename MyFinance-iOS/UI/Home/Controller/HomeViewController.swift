@@ -35,6 +35,10 @@ class HomeViewController: BaseViewController {
         regularsTableView.refreshControl = regularsRefreshControl
         balanceTableView.refreshControl = balanceRefreshControl
 
+        transactionsTableView.contentInset = HomeDisplayModel.tableViewInsets
+        regularsTableView.contentInset = HomeDisplayModel.tableViewInsets
+        balanceTableView.contentInset = HomeDisplayModel.tableViewInsets
+
         transactionsRefreshControl.addTarget(self, action: #selector(updateData(_:)), for: .valueChanged)
         regularsRefreshControl.addTarget(self, action: #selector(updateData(_:)), for: .valueChanged)
         balanceRefreshControl.addTarget(self, action: #selector(updateData(_:)), for: .valueChanged)
