@@ -121,6 +121,9 @@
 		9AAA3D7F202925FC008881FD /* AuthDisplayModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AAA3D7E202925FB008881FD /* AuthDisplayModel.swift */; };
 		9AAA3D812029285C008881FD /* Instantiatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AAA3D802029285C008881FD /* Instantiatable.swift */; };
 		9AAD388F202F5CAD00395119 /* Pods_MyFinanceExtension_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AAD3890202F5CAD00395119 /* Pods_MyFinanceExtension_iOS.framework */; };
+		9AAD3895202F66E500395119 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AAD3894202F66E500395119 /* SettingsViewController.swift */; };
+		9AAD3897202F684E00395119 /* SettingsDisplayModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AAD3896202F684E00395119 /* SettingsDisplayModel.swift */; };
+		9AAD3899202F68C000395119 /* SettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AAD3898202F68C000395119 /* SettingsViewModel.swift */; };
 		9AD3EE3A2013D9A10083F8FE /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AD3EE392013D9A10083F8FE /* NotificationCenter.framework */; };
 		9AD3EE3D2013D9A10083F8FE /* TodayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AD3EE3C2013D9A10083F8FE /* TodayViewController.swift */; };
 		9AD3EE402013D9A10083F8FE /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9AD3EE3E2013D9A10083F8FE /* MainInterface.storyboard */; };
@@ -347,6 +350,9 @@
 		9AAA3D8520293CD0008881FD /* MyFinance-iOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "MyFinance-iOS.entitlements"; sourceTree = "<group>"; };
 		9AAD3890202F5CAD00395119 /* Pods_MyFinanceExtension_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Pods_MyFinanceExtension_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9AAD3892202F5CBF00395119 /* Pods_MyFinanceKit_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Pods_MyFinanceKit_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9AAD3894202F66E500395119 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		9AAD3896202F684E00395119 /* SettingsDisplayModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsDisplayModel.swift; sourceTree = "<group>"; };
+		9AAD3898202F68C000395119 /* SettingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewModel.swift; sourceTree = "<group>"; };
 		9AD3EE1D20138F6C0083F8FE /* Transaction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Transaction.swift; sourceTree = "<group>"; };
 		9AD3EE222013985B0083F8FE /* TransactionsBusinessLogic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionsBusinessLogic.swift; sourceTree = "<group>"; };
 		9AD3EE2420139BA40083F8FE /* Data+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Data+Extensions.swift"; sourceTree = "<group>"; };
@@ -809,6 +815,7 @@
 				9AAA3D7A2029089E008881FD /* Auth */,
 				9AAA3D7B202908A5008881FD /* Home */,
 				9AAA3D7C202908AB008881FD /* AddTransaction */,
+				9AAD3893202F66C800395119 /* Settings */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -851,6 +858,16 @@
 				9AAA3D802029285C008881FD /* Instantiatable.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		9AAD3893202F66C800395119 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				9AAD3894202F66E500395119 /* SettingsViewController.swift */,
+				9AAD3896202F684E00395119 /* SettingsDisplayModel.swift */,
+				9AAD3898202F68C000395119 /* SettingsViewModel.swift */,
+			);
+			path = Settings;
 			sourceTree = "<group>";
 		};
 		9AD3EE212013966E0083F8FE /* Extensions */ = {
@@ -1728,7 +1745,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				9AD96C992025341D00D37F23 /* HomeTableViewCell.swift in Sources */,
+				9AAD3899202F68C000395119 /* SettingsViewModel.swift in Sources */,
 				9A5AE5782012A8AC00B25081 /* HomeViewController.swift in Sources */,
+				9AAD3895202F66E500395119 /* SettingsViewController.swift in Sources */,
 				9AD96C8F2025138400D37F23 /* HomeDisplayModel.swift in Sources */,
 				9A8561B32027BF5100A26F12 /* HomeChartCellModel.swift in Sources */,
 				9AD96CA8202544A600D37F23 /* AddTransactionViewModel.swift in Sources */,
@@ -1737,6 +1756,7 @@
 				9A8561B12027BD7600A26F12 /* HomeChartTableViewCell.swift in Sources */,
 				9A5AE5A22012C99A00B25081 /* HomeViewModel.swift in Sources */,
 				9A8561A62027A71300A26F12 /* HomeCurrentMonthCellDisplayModel.swift in Sources */,
+				9AAD3897202F684E00395119 /* SettingsDisplayModel.swift in Sources */,
 				9A5AE5762012A8AB00B25081 /* AppDelegate.swift in Sources */,
 				9A8561722027730F00A26F12 /* HomeCellDisplayModel.swift in Sources */,
 				9A85617D20278FA000A26F12 /* ErrorPresentable.swift in Sources */,

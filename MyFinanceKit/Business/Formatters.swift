@@ -26,6 +26,13 @@ public struct Formatters {
         return formatter
     }()
 
+    public static let date: DateFormatter = {
+        let formatter = DateFormatter()
+        formatter.dateStyle = .medium
+
+        return formatter
+    }()
+
     public static let dateTime: DateFormatter = {
         let formatter = DateFormatter()
         formatter.dateStyle = .medium
