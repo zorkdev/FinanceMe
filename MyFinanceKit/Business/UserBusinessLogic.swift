@@ -6,6 +6,7 @@ public struct UserBusinessLogic {
         return NetworkService.shared.performRequest(api: .zorkdev(.user),
                                                     method: .get)
             .then { (user: User) in
+                WatchManager.shared.updateComplication(allowance: user.allowance)
                 user.save()
 
                 return Promise(value: user)
@@ -17,7 +18,9 @@ public struct UserBusinessLogic {
                                                     method: .patch,
                                                     body: user)
             .then { (user: User) in
+                WatchManager.shared.updateComplication(allowance: user.allowance)
                 user.save()
+
                 return Promise(value: user)
         }
     }

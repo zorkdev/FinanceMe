@@ -12,6 +12,16 @@
 		55422EC3F483571E2408D7F4 /* Pods_MyFinanceKit_macOS_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9C22E65EE27E359BD71BEBF /* Pods_MyFinanceKit_macOS_Tests.framework */; };
 		8B68FCB6C23A94B7764A1EE8 /* Pods_MyFinanceKit_macOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 44AC3487225BC41D05828D87 /* Pods_MyFinanceKit_macOS.framework */; };
 		9A2DB564202F54EC0008A4E5 /* UIView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A2DB563202F54EC0008A4E5 /* UIView+Extensions.swift */; };
+		9A3CB7CA202FC657008AF158 /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9A3CB7C8202FC657008AF158 /* Interface.storyboard */; };
+		9A3CB7CC202FC657008AF158 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9A3CB7CB202FC657008AF158 /* Assets.xcassets */; };
+		9A3CB7D3202FC657008AF158 /* MyFinanceExtension-watchOS.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 9A3CB7D2202FC657008AF158 /* MyFinanceExtension-watchOS.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		9A3CB7D8202FC657008AF158 /* InterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A3CB7D7202FC657008AF158 /* InterfaceController.swift */; };
+		9A3CB7DA202FC657008AF158 /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A3CB7D9202FC657008AF158 /* ExtensionDelegate.swift */; };
+		9A3CB7DC202FC657008AF158 /* ComplicationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A3CB7DB202FC657008AF158 /* ComplicationController.swift */; };
+		9A3CB7DE202FC657008AF158 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9A3CB7DD202FC657008AF158 /* Assets.xcassets */; };
+		9A3CB7E2202FC657008AF158 /* MyFinance-watchOS.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 9A3CB7C6202FC657008AF158 /* MyFinance-watchOS.app */; };
+		9A3CB7EE20307A2E008AF158 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A3CB7ED20307A2E008AF158 /* DataManager.swift */; };
+		9A3CB7EF20307D04008AF158 /* WatchManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A3CB7EB203074CD008AF158 /* WatchManager.swift */; };
 		9A4F55342023C7A900DBF68F /* MyFinanceKit_iOS.h in Headers */ = {isa = PBXBuildFile; fileRef = 9A4F55322023C7A900DBF68F /* MyFinanceKit_iOS.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		9A4F55372023C7A900DBF68F /* MyFinanceKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A4F55302023C7A900DBF68F /* MyFinanceKit.framework */; };
 		9A4F55382023C7A900DBF68F /* MyFinanceKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9A4F55302023C7A900DBF68F /* MyFinanceKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -150,6 +160,20 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		9A3CB7D4202FC657008AF158 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9A5AE56A2012A8AB00B25081 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9A3CB7D1202FC657008AF158;
+			remoteInfo = "MyFinance-watchOS Extension";
+		};
+		9A3CB7E0202FC657008AF158 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9A5AE56A2012A8AB00B25081 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9A3CB7C5202FC657008AF158;
+			remoteInfo = "MyFinance-watchOS";
+		};
 		9A4F55352023C7A900DBF68F /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 9A5AE56A2012A8AB00B25081 /* Project object */;
@@ -195,6 +219,28 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
+		9A3CB7E8202FC657008AF158 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				9A3CB7D3202FC657008AF158 /* MyFinanceExtension-watchOS.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9A3CB7EA202FC657008AF158 /* Embed Watch Content */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
+			dstSubfolderSpec = 16;
+			files = (
+				9A3CB7E2202FC657008AF158 /* MyFinance-watchOS.app in Embed Watch Content */,
+			);
+			name = "Embed Watch Content";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		9A4F553C2023C7A900DBF68F /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -264,6 +310,18 @@
 		8A08E3B1273B7D72A834A457 /* Pods-MyFinanceKit-iOS-Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyFinanceKit-iOS-Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MyFinanceKit-iOS-Tests/Pods-MyFinanceKit-iOS-Tests.release.xcconfig"; sourceTree = "<group>"; };
 		912C8C9B1823959085F2299C /* Pods-MyFinanceExtension-iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyFinanceExtension-iOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-MyFinanceExtension-iOS/Pods-MyFinanceExtension-iOS.release.xcconfig"; sourceTree = "<group>"; };
 		9A2DB563202F54EC0008A4E5 /* UIView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extensions.swift"; sourceTree = "<group>"; };
+		9A3CB7C6202FC657008AF158 /* MyFinance-watchOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "MyFinance-watchOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		9A3CB7C9202FC657008AF158 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
+		9A3CB7CB202FC657008AF158 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		9A3CB7CD202FC657008AF158 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9A3CB7D2202FC657008AF158 /* MyFinanceExtension-watchOS.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "MyFinanceExtension-watchOS.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		9A3CB7D7202FC657008AF158 /* InterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterfaceController.swift; sourceTree = "<group>"; };
+		9A3CB7D9202FC657008AF158 /* ExtensionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionDelegate.swift; sourceTree = "<group>"; };
+		9A3CB7DB202FC657008AF158 /* ComplicationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComplicationController.swift; sourceTree = "<group>"; };
+		9A3CB7DD202FC657008AF158 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		9A3CB7DF202FC657008AF158 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9A3CB7EB203074CD008AF158 /* WatchManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchManager.swift; sourceTree = "<group>"; };
+		9A3CB7ED20307A2E008AF158 /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 		9A4F55052023C3FC00DBF68F /* Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Bridging-Header.h"; sourceTree = "<group>"; };
 		9A4F55062023C4A700DBF68F /* Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Bridging-Header.h"; sourceTree = "<group>"; };
 		9A4F55302023C7A900DBF68F /* MyFinanceKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MyFinanceKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -392,6 +450,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		9A3CB7CF202FC657008AF158 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		9A4F552C2023C7A900DBF68F /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -488,6 +553,29 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		9A3CB7C7202FC657008AF158 /* MyFinance-watchOS */ = {
+			isa = PBXGroup;
+			children = (
+				9A3CB7C8202FC657008AF158 /* Interface.storyboard */,
+				9A3CB7CB202FC657008AF158 /* Assets.xcassets */,
+				9A3CB7CD202FC657008AF158 /* Info.plist */,
+			);
+			path = "MyFinance-watchOS";
+			sourceTree = "<group>";
+		};
+		9A3CB7D6202FC657008AF158 /* MyFinanceExtension-watchOS */ = {
+			isa = PBXGroup;
+			children = (
+				9A3CB7D7202FC657008AF158 /* InterfaceController.swift */,
+				9A3CB7D9202FC657008AF158 /* ExtensionDelegate.swift */,
+				9A3CB7ED20307A2E008AF158 /* DataManager.swift */,
+				9A3CB7DB202FC657008AF158 /* ComplicationController.swift */,
+				9A3CB7DD202FC657008AF158 /* Assets.xcassets */,
+				9A3CB7DF202FC657008AF158 /* Info.plist */,
+			);
+			path = "MyFinanceExtension-watchOS";
+			sourceTree = "<group>";
+		};
 		9A4F55312023C7A900DBF68F /* MyFinanceKit */ = {
 			isa = PBXGroup;
 			children = (
@@ -528,6 +616,8 @@
 				9A4F55312023C7A900DBF68F /* MyFinanceKit */,
 				9A5AE5742012A8AB00B25081 /* MyFinance-iOS */,
 				9AD3EE3B2013D9A10083F8FE /* MyFinanceExtension-iOS */,
+				9A3CB7C7202FC657008AF158 /* MyFinance-watchOS */,
+				9A3CB7D6202FC657008AF158 /* MyFinanceExtension-watchOS */,
 				9A740ECC201E245200D40943 /* MyFinance-macOS */,
 				9A740EE1201E247D00D40943 /* MyFinanceExtension-macOS */,
 				9A6EF748202B939B006D3420 /* MyFinanceKit-Tests */,
@@ -548,6 +638,8 @@
 				9A4F55422023C7BE00DBF68F /* MyFinanceKit.framework */,
 				9A6EF747202B939B006D3420 /* MyFinanceKit-iOS-Tests.xctest */,
 				9A94F8E1202CE83100AEF61F /* MyFinanceKit-macOS-Tests.xctest */,
+				9A3CB7C6202FC657008AF158 /* MyFinance-watchOS.app */,
+				9A3CB7D2202FC657008AF158 /* MyFinanceExtension-watchOS.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -646,6 +738,7 @@
 				9A5AE5992012C0D000B25081 /* NetworkService.swift */,
 				9A5AE5942012BE0500B25081 /* ConfigManager.swift */,
 				9ADE54C0201568D90039D774 /* DataService.swift */,
+				9A3CB7EB203074CD008AF158 /* WatchManager.swift */,
 				9AD96C9A202534D600D37F23 /* StringRepresentable.swift */,
 			);
 			path = Platform;
@@ -954,6 +1047,40 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
+		9A3CB7C5202FC657008AF158 /* MyFinance-watchOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9A3CB7E9202FC657008AF158 /* Build configuration list for PBXNativeTarget "MyFinance-watchOS" */;
+			buildPhases = (
+				9A3CB7C4202FC657008AF158 /* Resources */,
+				9A3CB7E8202FC657008AF158 /* Embed App Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				9A3CB7D5202FC657008AF158 /* PBXTargetDependency */,
+			);
+			name = "MyFinance-watchOS";
+			productName = "MyFinance-watchOS";
+			productReference = 9A3CB7C6202FC657008AF158 /* MyFinance-watchOS.app */;
+			productType = "com.apple.product-type.application.watchapp2";
+		};
+		9A3CB7D1202FC657008AF158 /* MyFinanceExtension-watchOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9A3CB7E7202FC657008AF158 /* Build configuration list for PBXNativeTarget "MyFinanceExtension-watchOS" */;
+			buildPhases = (
+				9A3CB7CE202FC657008AF158 /* Sources */,
+				9A3CB7CF202FC657008AF158 /* Frameworks */,
+				9A3CB7D0202FC657008AF158 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "MyFinanceExtension-watchOS";
+			productName = "MyFinance-watchOS Extension";
+			productReference = 9A3CB7D2202FC657008AF158 /* MyFinanceExtension-watchOS.appex */;
+			productType = "com.apple.product-type.watchkit2-extension";
+		};
 		9A4F552F2023C7A900DBF68F /* MyFinanceKit-iOS */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 9A4F553B2023C7A900DBF68F /* Build configuration list for PBXNativeTarget "MyFinanceKit-iOS" */;
@@ -1007,12 +1134,14 @@
 				9AD3EE482013D9A10083F8FE /* Embed App Extensions */,
 				9A4F553C2023C7A900DBF68F /* Embed Frameworks */,
 				9AD3EE322013B7EB0083F8FE /* SwiftLint */,
+				9A3CB7EA202FC657008AF158 /* Embed Watch Content */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 				9AD3EE432013D9A10083F8FE /* PBXTargetDependency */,
 				9A4F55362023C7A900DBF68F /* PBXTargetDependency */,
+				9A3CB7E1202FC657008AF158 /* PBXTargetDependency */,
 			);
 			name = "MyFinance-iOS";
 			productName = MyFinance;
@@ -1134,6 +1263,14 @@
 				LastUpgradeCheck = 0920;
 				ORGANIZATIONNAME = "Attila Nemet";
 				TargetAttributes = {
+					9A3CB7C5202FC657008AF158 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+					};
+					9A3CB7D1202FC657008AF158 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+					};
 					9A4F552F2023C7A900DBF68F = {
 						CreatedOnToolsVersion = 9.2;
 						ProvisioningStyle = Automatic;
@@ -1209,6 +1346,8 @@
 			targets = (
 				9A5AE5712012A8AB00B25081 /* MyFinance-iOS */,
 				9AD3EE372013D9A10083F8FE /* MyFinanceExtension-iOS */,
+				9A3CB7C5202FC657008AF158 /* MyFinance-watchOS */,
+				9A3CB7D1202FC657008AF158 /* MyFinanceExtension-watchOS */,
 				9A740ECA201E245200D40943 /* MyFinance-macOS */,
 				9A740EDE201E247D00D40943 /* MyFinanceExtension-macOS */,
 				9A4F552F2023C7A900DBF68F /* MyFinanceKit-iOS */,
@@ -1220,6 +1359,23 @@
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		9A3CB7C4202FC657008AF158 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9A3CB7CC202FC657008AF158 /* Assets.xcassets in Resources */,
+				9A3CB7CA202FC657008AF158 /* Interface.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9A3CB7D0202FC657008AF158 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9A3CB7DE202FC657008AF158 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		9A4F552E2023C7A900DBF68F /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -1672,6 +1828,17 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		9A3CB7CE202FC657008AF158 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9A3CB7DA202FC657008AF158 /* ExtensionDelegate.swift in Sources */,
+				9A3CB7EE20307A2E008AF158 /* DataManager.swift in Sources */,
+				9A3CB7D8202FC657008AF158 /* InterfaceController.swift in Sources */,
+				9A3CB7DC202FC657008AF158 /* ComplicationController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		9A4F552B2023C7A900DBF68F /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -1701,6 +1868,7 @@
 				9A65B7A0202686A9004165F2 /* Summary.swift in Sources */,
 				9A96668720260E7B000F8A42 /* ColorPalette.swift in Sources */,
 				9A4F55782023CADE00DBF68F /* UserBusinessLogic.swift in Sources */,
+				9A3CB7EF20307D04008AF158 /* WatchManager.swift in Sources */,
 				9AAD38A1202FA9BC00395119 /* SpendingBusinessLogic.swift in Sources */,
 				9AD96CA620253CC300D37F23 /* BaseViewController.swift in Sources */,
 				9A4F556C2023CAB900DBF68F /* Balance.swift in Sources */,
@@ -1837,6 +2005,16 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		9A3CB7D5202FC657008AF158 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 9A3CB7D1202FC657008AF158 /* MyFinanceExtension-watchOS */;
+			targetProxy = 9A3CB7D4202FC657008AF158 /* PBXContainerItemProxy */;
+		};
+		9A3CB7E1202FC657008AF158 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 9A3CB7C5202FC657008AF158 /* MyFinance-watchOS */;
+			targetProxy = 9A3CB7E0202FC657008AF158 /* PBXContainerItemProxy */;
+		};
 		9A4F55362023C7A900DBF68F /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 9A4F552F2023C7A900DBF68F /* MyFinanceKit-iOS */;
@@ -1870,6 +2048,14 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		9A3CB7C8202FC657008AF158 /* Interface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9A3CB7C9202FC657008AF158 /* Base */,
+			);
+			name = Interface.storyboard;
+			sourceTree = "<group>";
+		};
 		9A5AE5792012A8AC00B25081 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -1921,6 +2107,80 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		9A3CB7E3202FC657008AF158 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 29MN2WH3Q3;
+				IBSC_MODULE = MyFinance_watchOS_Extension;
+				INFOPLIST_FILE = "MyFinance-watchOS/Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = com.attilanemet.MyFinance.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 4.2;
+			};
+			name = Debug;
+		};
+		9A3CB7E4202FC657008AF158 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 29MN2WH3Q3;
+				IBSC_MODULE = MyFinance_watchOS_Extension;
+				INFOPLIST_FILE = "MyFinance-watchOS/Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = com.attilanemet.MyFinance.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 4.2;
+			};
+			name = Release;
+		};
+		9A3CB7E5202FC657008AF158 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 29MN2WH3Q3;
+				INFOPLIST_FILE = "$(SRCROOT)/MyFinanceExtension-watchOS/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.attilanemet.MyFinance.watchkitapp.watchkitextension;
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 4.2;
+			};
+			name = Debug;
+		};
+		9A3CB7E6202FC657008AF158 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 29MN2WH3Q3;
+				INFOPLIST_FILE = "$(SRCROOT)/MyFinanceExtension-watchOS/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.attilanemet.MyFinance.watchkitapp.watchkitextension;
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 4.2;
+			};
+			name = Release;
+		};
 		9A4F55392023C7A900DBF68F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = BFAE274C26F56EC75AF18966 /* Pods-MyFinanceKit-iOS.debug.xcconfig */;
@@ -2375,6 +2635,24 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		9A3CB7E7202FC657008AF158 /* Build configuration list for PBXNativeTarget "MyFinanceExtension-watchOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9A3CB7E5202FC657008AF158 /* Debug */,
+				9A3CB7E6202FC657008AF158 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9A3CB7E9202FC657008AF158 /* Build configuration list for PBXNativeTarget "MyFinance-watchOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9A3CB7E3202FC657008AF158 /* Debug */,
+				9A3CB7E4202FC657008AF158 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		9A4F553B2023C7A900DBF68F /* Build configuration list for PBXNativeTarget "MyFinanceKit-iOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
