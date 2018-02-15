@@ -49,6 +49,8 @@ class AuthViewModel: AuthViewModelType {
     }
 
     func addOcclusion() {
+        UIApplication.shared.keyWindow?.endEditing(true)
+
         guard window == nil else {
             window?.isHidden = false
             return
@@ -61,7 +63,7 @@ class AuthViewModel: AuthViewModelType {
         delegate = authViewController
 
         window = UIWindow(frame: frame)
-        window?.windowLevel = UIWindowLevelNormal + 1
+        window?.windowLevel = UIWindowLevelNormal + 2
         window?.rootViewController = authViewController
         window?.makeKeyAndVisible()
     }
