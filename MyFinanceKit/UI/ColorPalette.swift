@@ -1,3 +1,11 @@
+#if os(macOS)
+    public typealias Color = NSColor
+    public typealias Font = NSFont
+#elseif os(iOS) || os(watchOS) || os(tvOS)
+    public typealias Color = UIColor
+    public typealias Font = UIFont
+#endif
+
 public struct ColorPalette {
 
     public static let primary = Color(red: 27/255.0,

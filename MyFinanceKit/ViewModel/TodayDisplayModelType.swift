@@ -1,11 +1,3 @@
-#if os(macOS)
-    public typealias Color = NSColor
-    public typealias Font = NSFont
-#elseif os(iOS)
-    public typealias Color = UIColor
-    public typealias Font = UIFont
-#endif
-
 public protocol TodayDisplayModelType {
 
     var defaultAmount: String { get }

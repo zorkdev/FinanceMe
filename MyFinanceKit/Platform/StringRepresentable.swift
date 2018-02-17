@@ -17,7 +17,7 @@ public extension StringRepresentable {
 
     extension NSViewController: StringRepresentable {}
 
-#elseif os(iOS)
+#elseif os(iOS) || os(tvOS)
     import UIKit
 
     extension UIViewController: StringRepresentable {}

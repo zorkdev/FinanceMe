@@ -33,6 +33,7 @@ extension BaseViewController: UITextFieldDelegate {
 
 }
 
+#if os(iOS)
 extension BaseViewController {
 
     public var keyBoardToolbar: UIToolbar {
@@ -60,3 +61,4 @@ extension BaseViewController {
     }
 
 }
+#endif
