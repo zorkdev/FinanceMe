@@ -5,11 +5,11 @@ public struct UserBusinessLogic {
     public func getCurrentUser() -> Promise<User> {
         return NetworkService.shared.performRequest(api: .zorkdev(.user),
                                                     method: .get)
-            .then { (user: User) in
+            .then { (user: User) -> Promise<User> in
                 WatchManager.shared.updateComplication(allowance: user.allowance)
                 user.save()
 
-                return Promise(value: user)
+                return .value(user)
         }
     }
 
@@ -17,11 +17,11 @@ public struct UserBusinessLogic {
         return NetworkService.shared.performRequest(api: .zorkdev(.user),
                                                     method: .patch,
                                                     body: user)
-            .then { (user: User) in
+            .then { (user: User) -> Promise<User> in
                 WatchManager.shared.updateComplication(allowance: user.allowance)
                 user.save()
 
-                return Promise(value: user)
+                return .value(user)
         }
     }
 

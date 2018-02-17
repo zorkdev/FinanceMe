@@ -45,14 +45,14 @@ public extension TodayPresentable {
     }
 
     @discardableResult public func getBalance() -> Promise<Void> {
-        return BalanceBusinessLogic().getBalance().then { balance -> Void in
+        return BalanceBusinessLogic().getBalance().done { balance in
             let balanceAttributedString = self.createAttributedString(from: balance.effectiveBalance)
             self.delegate?.set(balance: balanceAttributedString)
         }
     }
 
     @discardableResult public func getUser() -> Promise<Void> {
-        return UserBusinessLogic().getCurrentUser().then { user -> Void in
+        return UserBusinessLogic().getCurrentUser().done { user in
             let allowanceAttributedString = self.createAttributedString(from: user.allowance)
             let allowanceIcon = SpendingBusinessLogic().allowanceIcon(for: user)
             self.delegate?.set(allowance: allowanceAttributedString)

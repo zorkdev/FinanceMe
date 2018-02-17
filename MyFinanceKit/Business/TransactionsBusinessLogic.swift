@@ -6,8 +6,8 @@ public struct TransactionsBusinessLogic {
         return NetworkService.shared.performRequest(api: .starling(.transactions),
                                                     method: .get,
                                                     parameters: fromTo)
-            .then { (halResponse: HALResponse<TransactionList>) in
-                return Promise(value: halResponse.embedded.transactions)
+            .then { (halResponse: HALResponse<TransactionList>) -> Promise<[Transaction]> in
+                return .value(halResponse.embedded.transactions)
         }
     }
 

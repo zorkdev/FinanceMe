@@ -23,10 +23,9 @@ public enum APIError: Int, Error, LocalizedError {
         return "Sorry, something went wrong. Please try again."
     }
 
-    init?(urlError: PMKURLError) {
-        guard case let .badResponse(_, _, response) = urlError,
-            let urlResponse = response as? HTTPURLResponse,
-            let apiError = APIError(rawValue: urlResponse.statusCode) else {
+    init?(httpError: PMKHTTPError) {
+        guard case let .badStatusCode(statusCode, _, _) = httpError,
+            let apiError = APIError(rawValue: statusCode) else {
                 return nil
         }
 

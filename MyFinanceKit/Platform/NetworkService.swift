@@ -8,7 +8,7 @@ enum HTTPMethod: String {
 
 protocol NetworkRequestable {
 
-    func perform(request: URLRequest) -> Promise<Data>
+    func perform(request: URLRequest) -> Promise<(data: Data, response: URLResponse)>
 
 }
 
@@ -57,12 +57,12 @@ class NetworkService: NetworkServiceType {
                               method: method,
                               parameters: parameters,
                               body: body)
-            .then { data in
+            .then { data -> Promise<T> in
                 guard let instance = T(data: data) else {
                     return Promise(error: AppError.jsonParsingError)
                 }
 
-                return Promise(value: instance)
+                return .value(instance)
         }
     }
 
@@ -81,19 +81,19 @@ class NetworkService: NetworkServiceType {
 
         printRequest(request)
 
-        return networkService.perform(request: request).then { data in
-            self.printResponse(data)
-            return Promise(value: data)
+        return Promise { seal in
+            networkService.perform(request: request)
+                .done { response in
+                    self.printResponse(response.data)
+                    seal.fulfill(response.data)
 
-        }.recover { error -> Promise<Data> in
-            self.printResponse(error)
-
-            if let urlError = error as? PMKURLError,
-                let apiError = APIError(urlError: urlError) {
-                return Promise(error: apiError)
-
-            } else {
-                return Promise(error: error)
+                }.catch { error in
+                    if let httpError = error as? PMKHTTPError,
+                        let apiError = APIError(httpError: httpError) {
+                        seal.reject(apiError)
+                    } else {
+                        seal.reject(error)
+                    }
             }
         }
     }

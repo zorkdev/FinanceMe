@@ -113,10 +113,10 @@ extension HomeViewModel: TodayPresentable {
                     getUser(),
                     getExternalTransactions(),
                     getEndOfMonthSummaryList())
-            .catch { error in
-                (self.delegate as? HomeViewModelDelegate)?.showError(message: error.localizedDescription)
-            }.always {
+            .ensure {
                 (self.delegate as? HomeViewModelDelegate)?.endRefreshing()
+            }.recover { error in
+                (self.delegate as? HomeViewModelDelegate)?.showError(message: error.localizedDescription)
         }
     }
 
@@ -480,17 +480,16 @@ extension HomeViewModel {
 extension HomeViewModel {
 
     private func getExternalTransactions() -> Promise<Void> {
-        return externalTransactionsBusinessLogic.getExternalTransactions().then { transactions -> Void in
-            self.externalTransactions = transactions
-            self.updateTransactions()
-            (self.delegate as? HomeViewModelDelegate)?.reloadTableView()
-        }.catch { error in
-            (self.delegate as? HomeViewModelDelegate)?.showError(message: error.localizedDescription)
+        return externalTransactionsBusinessLogic.getExternalTransactions()
+            .done { transactions in
+                self.externalTransactions = transactions
+                self.updateTransactions()
+                (self.delegate as? HomeViewModelDelegate)?.reloadTableView()
         }
     }
 
     private func delete(transaction: Transaction, section: Int, row: Int?) {
-        externalTransactionsBusinessLogic.delete(transaction: transaction).then { _ -> Void in
+        externalTransactionsBusinessLogic.delete(transaction: transaction).done {
             self.getUser()
             self.externalTransactions = self.externalTransactions.filter { $0.id != transaction.id }
             self.updateTransactions()
@@ -521,14 +520,13 @@ extension HomeViewModel {
     }
 
     private func getEndOfMonthSummaryList() -> Promise<Void> {
-        return endOfMonthSummaryBusinessLogic.getEndOfMonthSummaryList().then { endOfMonthSummaryList -> Void in
-            self.endOfMonthSummaries = endOfMonthSummaryList.endOfMonthSummaries
-            self.currentMonthSummary = endOfMonthSummaryList.currentMonthSummary
-            self.updateBalances()
-            (self.delegate as? HomeViewModelDelegate)?.reloadTableView()
-        }.catch { error in
-            (self.delegate as? HomeViewModelDelegate)?.showError(message: error.localizedDescription)
-        }
+        return endOfMonthSummaryBusinessLogic.getEndOfMonthSummaryList()
+            .done { endOfMonthSummaryList in
+                self.endOfMonthSummaries = endOfMonthSummaryList.endOfMonthSummaries
+                self.currentMonthSummary = endOfMonthSummaryList.currentMonthSummary
+                self.updateBalances()
+                (self.delegate as? HomeViewModelDelegate)?.reloadTableView()
+            }
     }
 
 }

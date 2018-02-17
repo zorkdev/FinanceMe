@@ -5,10 +5,10 @@ public struct BalanceBusinessLogic {
     public func getBalance() -> Promise<Balance> {
         return NetworkService.shared.performRequest(api: .starling(.balance),
                                                     method: .get)
-            .then { (balance: Balance) in
+            .then { (balance: Balance) -> Promise<Balance> in
                 balance.save()
 
-                return Promise(value: balance)
+                return .value(balance)
         }
     }
 

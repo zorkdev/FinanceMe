@@ -144,13 +144,13 @@ extension SettingsViewModel {
     private func save(user: User) {
         delegate?.showSpinner()
         userBusinessLogic.update(user: user)
-            .then { user -> Void in
+            .done { user in
                 self.dataDelegate?.didUpdate(user: user)
                 self.delegate?.showSuccess(message: SettingsDisplayModel.successMessage)
                 self.delegate?.dismiss(self)
             }.catch { error in
                 self.delegate?.showError(message: error.localizedDescription)
-            }.always {
+            }.finally {
                 self.delegate?.hideSpinner()
         }
     }

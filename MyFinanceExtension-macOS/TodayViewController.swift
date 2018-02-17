@@ -45,7 +45,7 @@ extension TodayViewController: TodayViewModelDelegate {
 extension TodayViewController: NCWidgetProviding {
 
     func widgetPerformUpdate(completionHandler: (@escaping (NCUpdateResult) -> Void)) {
-        viewModel.updateData().then {
+        viewModel.updateData().done {
             completionHandler(.newData)
         }.catch { error in
             print(error)
