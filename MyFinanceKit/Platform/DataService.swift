@@ -20,15 +20,18 @@ public extension Storeable {
     }
 
     static func load() -> Self? {
-        return dataService.load()
+        let key = String(describing: Self.self)
+        return dataService.load(key: key)
     }
 
     static func all() -> [Self] {
-        return dataService.load() ?? []
+        let key = String(describing: [Self].self)
+        return dataService.load(key: key) ?? []
     }
 
     func save() {
-        Self.dataService.save(value: self)
+        let key = String(describing: type(of: self))
+        Self.dataService.save(value: self, key: key)
     }
 
 }
@@ -37,21 +40,21 @@ extension Array: Storeable {}
 
 public protocol DataService {
 
-    func save(value: JSONEncodable)
-    func load<T: JSONDecodable>() -> T?
+    func save(value: JSONEncodable, key: String)
+    func load<T: JSONDecodable>(key: String) -> T?
 
 }
 
 public struct KeychainDataService: DataService {
 
-    public func save(value: JSONEncodable) {
+    public init() {}
+
+    public func save(value: JSONEncodable, key: String) {
         guard let data = value.encoded() else { return }
-        let key = String(describing: type(of: value))
         KeychainWrapper.standard.set(data, forKey: key)
     }
 
-    public func load<T: JSONDecodable>() -> T? {
-        let key = String(describing: T.self)
+    public func load<T: JSONDecodable>(key: String) -> T? {
         guard let data = KeychainWrapper.standard.data(forKey: key) else { return nil }
 
         return T(data: data)
@@ -61,14 +64,14 @@ public struct KeychainDataService: DataService {
 
 public struct UserDefaultsDataService: DataService {
 
-    public func save(value: JSONEncodable) {
+    public init() {}
+
+    public func save(value: JSONEncodable, key: String) {
         guard let data = value.encoded() else { return }
-        let key = String(describing: type(of: value))
         UserDefaults.standard.set(data, forKey: key)
     }
 
-    public func load<T: JSONDecodable>() -> T? {
-        let key = String(describing: T.self)
+    public func load<T: JSONDecodable>(key: String) -> T? {
         guard let data = UserDefaults.standard.data(forKey: key) else { return nil }
 
         return T(data: data)

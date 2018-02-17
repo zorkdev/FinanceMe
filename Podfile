@@ -19,6 +19,16 @@ target 'MyFinanceExtension-iOS' do
     pods
 end
 
+target 'MyFinance-watchOS' do
+    platform :watchos, '4.2'
+    pods
+end
+
+target 'MyFinanceExtension-watchOS' do
+    platform :watchos, '4.2'
+    pods
+end
+
 target 'MyFinance-macOS' do
     platform :osx, '10.13'
     pods
@@ -31,6 +41,12 @@ end
 
 target 'MyFinanceKit-iOS' do
     platform :ios, '11.2'
+    pods
+    pod 'SwiftKeychainWrapper', :git => 'https://github.com/zorkdev/SwiftKeychainWrapper.git', :branch => 'develop'
+end
+
+target 'MyFinanceKit-watchOS' do
+    platform :watchos, '4.2'
     pods
     pod 'SwiftKeychainWrapper', :git => 'https://github.com/zorkdev/SwiftKeychainWrapper.git', :branch => 'develop'
 end

@@ -2,49 +2,38 @@ import WatchConnectivity
 
 public class WatchManager: NSObject {
 
+    private struct Constants {
+        static let allowanceKey = "allowance"
+    }
+
     public static let shared = WatchManager()
 
-    var session: WCSession?
+    private let dataService = KeychainDataService()
+    private var session: WCSession?
 
     override init() {
         super.init()
 
         if WCSession.isSupported() {
             session = WCSession.default
-            session?.delegate = self
             session?.activate()
         }
     }
 
-    func updateComplication(allowance: Double) {
+    func updateComplication() {
         guard session?.activationState == .activated,
             session?.isComplicationEnabled == true,
             let user = User.load(),
-            user.allowance != allowance ||
-                UserDefaults.standard.bool(forKey: "didUpdateComplication") == false,
             let allowanceString = Formatters.currency
-                .string(from: NSNumber(value: allowance)) else { return }
-        let data = ["allowance": allowanceString]
+                .string(from: NSNumber(value: user.allowance)) else { return }
+
+        let previousAllowance: Double? = dataService.load(key: Constants.allowanceKey)
+        guard user.allowance != previousAllowance else { return }
+
+        let data = [Constants.allowanceKey: allowanceString]
         session?.transferCurrentComplicationUserInfo(data)
 
-        UserDefaults.standard.set(true, forKey: "didUpdateComplication")
-    }
-
-}
-
-extension WatchManager: WCSessionDelegate {
-
-    public func session(_ session: WCSession,
-                        activationDidCompleteWith activationState: WCSessionActivationState,
-                        error: Error?) {
-    }
-
-    public func sessionDidBecomeInactive(_ session: WCSession) {
-
-    }
-
-    public func sessionDidDeactivate(_ session: WCSession) {
-
+        dataService.save(value: user.allowance, key: Constants.allowanceKey)
     }
 
 }

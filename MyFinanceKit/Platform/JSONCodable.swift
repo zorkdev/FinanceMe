@@ -3,6 +3,9 @@ public typealias JSONCodable = JSONEncodable & JSONDecodable
 extension Array: JSONCodable {}
 extension Dictionary: JSONCodable {}
 extension Optional: JSONCodable {}
+extension Int: JSONCodable {}
+extension Double: JSONCodable {}
+extension String: JSONCodable {}
 
 public protocol JSONDecodable: Decodable {
 
