@@ -77,3 +77,8 @@ target 'MyFinanceKit-macOS-Tests' do
     platform :osx, '10.13'
     pods
 end
+
+target 'MyFinanceKit-IntegrationTests' do
+    platform :ios, '11.2'
+    pods
+end
