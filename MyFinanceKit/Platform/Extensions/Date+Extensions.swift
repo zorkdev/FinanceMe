@@ -29,29 +29,29 @@ public extension Date {
     var startOfWeek: Date {
         let dateComponents = calendar.dateComponents([.yearForWeekOfYear, .weekOfYear],
                                                      from: self)
-        return calendar.date(from: dateComponents) ?? self
+        return calendar.date(from: dateComponents)!
     }
 
     var startOfYear: Date {
         let dateComponents = calendar.dateComponents([.year],
                                                      from: self)
-        return calendar.date(from: dateComponents) ?? self
+        return calendar.date(from: dateComponents)!
     }
 
     var endOfWeek: Date {
         return calendar.date(byAdding: .weekOfYear,
                              value: 1,
-                             to: startOfWeek) ?? self
+                             to: startOfWeek)!
     }
 
     var oneMonthAgo: Date {
         return calendar.date(byAdding: .month,
                              value: -1,
-                             to: self) ?? self
+                             to: self)!
     }
 
     var daysInMonth: Int {
-        return calendar.range(of: .day, in: .month, for: self)?.count ?? 0
+        return calendar.range(of: .day, in: .month, for: self)!.count
     }
 
     var weeksInMonth: Double {
@@ -59,7 +59,7 @@ public extension Date {
     }
 
     var dayBefore: Date {
-        return calendar.date(byAdding: .day, value: -1, to: self) ?? self
+        return calendar.date(byAdding: .day, value: -1, to: self)!
     }
 
     func isInSameDay(as date: Date) -> Bool {
@@ -73,11 +73,11 @@ public extension Date {
                                  matching: dateComponents,
                                  matchingPolicy: Calendar.MatchingPolicy.strict,
                                  repeatedTimePolicy: Calendar.RepeatedTimePolicy.first,
-                                 direction: direction) ?? self
+                                 direction: direction)!
     }
 
     func numberOfDays(from: Date) -> Int {
-        return calendar.dateComponents([.day], from: from.startOfDay, to: self.startOfDay).day ?? 0
+        return calendar.dateComponents([.day], from: from.startOfDay, to: self.startOfDay).day!
     }
 
 }

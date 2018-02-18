@@ -14,6 +14,14 @@ class ErrorTests: XCTestCase {
                                           httpURLResponse)
     }
 
+    func testAppErrorLocalizedDescription() {
+        XCTAssertNotNil(AppError.apiPathInvalid.localizedDescription)
+    }
+
+    func testApiErrorLocalizedDescription() {
+        XCTAssertNotNil(APIError.badRequest.localizedDescription)
+    }
+
     func testAPIErrorBadRequest() {
         let pmkHTTPError = createPMKHTTPError(with: 400)
         let apiError = APIError(httpError: pmkHTTPError)

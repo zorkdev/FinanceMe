@@ -10,7 +10,7 @@ class TransactionsBusinessLogicTests: XCTestCase {
 
         _ = transactionsBusinessLogic.getTransactions(fromTo: fromTo)
             .done { transactions in
-                XCTAssert(transactions.isEmpty == false)
+                XCTAssertFalse(transactions.isEmpty)
                 newExpectation.fulfill()
         }
 
