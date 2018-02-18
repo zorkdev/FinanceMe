@@ -8,7 +8,7 @@ class UserBusinessLogicTests: XCTestCase {
         let userBusinessLogic = UserBusinessLogic()
 
         _ = userBusinessLogic.getCurrentUser()
-            .done { user in
+            .done { _ in
                 newExpectation.fulfill()
         }
 
@@ -29,5 +29,5 @@ class UserBusinessLogicTests: XCTestCase {
 
         waitForExpectations(timeout: 10.0, handler: nil)
     }
-    
+
 }

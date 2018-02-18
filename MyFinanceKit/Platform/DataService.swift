@@ -1,6 +1,8 @@
 import SwiftKeychainWrapper
 
-public protocol Storeable: JSONCodable {
+public typealias JSONCodableAndStringRepresentable = JSONCodable & StringRepresentable
+
+public protocol Storeable: JSONCodableAndStringRepresentable {
 
     static var dataService: DataService { get }
     static func load() -> Self?
@@ -20,17 +22,17 @@ public extension Storeable {
     }
 
     static func load() -> Self? {
-        let key = String(describing: Self.self)
+        let key = Self.instanceName
         return dataService.load(key: key)
     }
 
     static func all() -> [Self] {
-        let key = String(describing: [Self].self)
+        let key = [Self].instanceName
         return dataService.load(key: key) ?? []
     }
 
     func save() {
-        let key = String(describing: type(of: self))
+        let key = self.instanceName
         Self.dataService.save(value: self, key: key)
     }
 

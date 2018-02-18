@@ -14,12 +14,12 @@ protocol NetworkRequestable {
 
 protocol NetworkServiceType {
 
-    func performRequest<T: JSONDecodable>(api: API,
+    func performRequest<T: JSONDecodable>(api: APIType,
                                           method: HTTPMethod,
                                           parameters: JSONEncodable?,
                                           body: JSONEncodable?) -> Promise<T>
 
-    func performRequest(api: API,
+    func performRequest(api: APIType,
                         method: HTTPMethod,
                         parameters: JSONEncodable?,
                         body: JSONEncodable?) -> Promise<Data>
@@ -49,7 +49,7 @@ class NetworkService: NetworkServiceType {
         networkService = URLSession.shared
     }
 
-    func performRequest<T: JSONDecodable>(api: API,
+    func performRequest<T: JSONDecodable>(api: APIType,
                                           method: HTTPMethod,
                                           parameters: JSONEncodable? = nil,
                                           body: JSONEncodable? = nil) -> Promise<T> {
@@ -66,7 +66,7 @@ class NetworkService: NetworkServiceType {
         }
     }
 
-    func performRequest(api: API,
+    func performRequest(api: APIType,
                         method: HTTPMethod,
                         parameters: JSONEncodable? = nil,
                         body: JSONEncodable? = nil) -> Promise<Data> {
@@ -79,15 +79,22 @@ class NetworkService: NetworkServiceType {
                 return Promise(error: AppError.apiPathInvalid)
         }
 
-        printRequest(request)
+        if ConfigManager.shared.isLoggingEnabled {
+            print(createRequestString(request))
+        }
 
         return Promise { seal in
             networkService.perform(request: request)
                 .done { response in
-                    self.printResponse(response.data)
+                    if ConfigManager.shared.isLoggingEnabled {
+                        print(self.createResponseString(response.data))
+                    }
                     seal.fulfill(response.data)
 
                 }.catch { error in
+                    if ConfigManager.shared.isLoggingEnabled {
+                        print(self.createResponseString(error))
+                    }
                     if let httpError = error as? PMKHTTPError,
                         let apiError = APIError(httpError: httpError) {
                         seal.reject(apiError)
@@ -98,7 +105,7 @@ class NetworkService: NetworkServiceType {
         }
     }
 
-    private func createRequest(api: API,
+    private func createRequest(api: APIType,
                                method: HTTPMethod,
                                parameters: JSONEncodable?,
                                body: JSONEncodable?) -> URLRequest? {
@@ -134,9 +141,8 @@ class NetworkService: NetworkServiceType {
 
 extension NetworkService {
 
-    func printRequest(_ request: URLRequest) {
-        guard ConfigManager.shared.isLoggingEnabled else { return }
-        print(
+    func createRequestString(_ request: URLRequest) -> String {
+        return
             """
             ********** API Request **********
             \((request.httpMethod ?? "") + " " + (request.url?.absoluteString ?? ""))
@@ -147,31 +153,26 @@ extension NetworkService {
             *********************************
 
             """
-        )
     }
 
-    func printResponse(_ data: Data) {
-        guard ConfigManager.shared.isLoggingEnabled else { return }
-        print(
+    func createResponseString(_ data: Data) -> String {
+        return
             """
             ********** API Response *********
             \(data.prettyPrinted)
             *********************************
 
             """
-        )
     }
 
-    func printResponse(_ error: Error) {
-        guard ConfigManager.shared.isLoggingEnabled else { return }
-        print(
+    func createResponseString(_ error: Error) -> String {
+        return
             """
             ********** API Error ***********
             \(error)
             *********************************
 
             """
-        )
     }
 
 }

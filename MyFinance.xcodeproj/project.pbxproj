@@ -99,6 +99,12 @@
 		9A2022A82038EC050012DD51 /* DataExtensionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A2022A62038EC050012DD51 /* DataExtensionsTests.swift */; };
 		9A2022A92038EC0A0012DD51 /* DateExtensionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A2022A32038EBC40012DD51 /* DateExtensionsTests.swift */; };
 		9A2DB564202F54EC0008A4E5 /* UIView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A2DB563202F54EC0008A4E5 /* UIView+Extensions.swift */; };
+		9A3A2B7A203998E80071FBC5 /* URLSessionExtensionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A3A2B79203998E80071FBC5 /* URLSessionExtensionsTests.swift */; };
+		9A3A2B7B203998E80071FBC5 /* URLSessionExtensionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A3A2B79203998E80071FBC5 /* URLSessionExtensionsTests.swift */; };
+		9A3A2B7D20399A020071FBC5 /* StringRepresentableTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A3A2B7C20399A020071FBC5 /* StringRepresentableTests.swift */; };
+		9A3A2B7E20399A020071FBC5 /* StringRepresentableTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A3A2B7C20399A020071FBC5 /* StringRepresentableTests.swift */; };
+		9A3A2B802039A4050071FBC5 /* NetworkServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A3A2B7F2039A4050071FBC5 /* NetworkServiceTests.swift */; };
+		9A3A2B812039A4050071FBC5 /* NetworkServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A3A2B7F2039A4050071FBC5 /* NetworkServiceTests.swift */; };
 		9A3CB7CA202FC657008AF158 /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9A3CB7C8202FC657008AF158 /* Interface.storyboard */; };
 		9A3CB7CC202FC657008AF158 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9A3CB7CB202FC657008AF158 /* Assets.xcassets */; };
 		9A3CB7D3202FC657008AF158 /* MyFinanceExtension-watchOS.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 9A3CB7D2202FC657008AF158 /* MyFinanceExtension-watchOS.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
@@ -476,6 +482,9 @@
 		9A2022A32038EBC40012DD51 /* DateExtensionsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateExtensionsTests.swift; sourceTree = "<group>"; };
 		9A2022A62038EC050012DD51 /* DataExtensionsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataExtensionsTests.swift; sourceTree = "<group>"; };
 		9A2DB563202F54EC0008A4E5 /* UIView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extensions.swift"; sourceTree = "<group>"; };
+		9A3A2B79203998E80071FBC5 /* URLSessionExtensionsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionExtensionsTests.swift; sourceTree = "<group>"; };
+		9A3A2B7C20399A020071FBC5 /* StringRepresentableTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringRepresentableTests.swift; sourceTree = "<group>"; };
+		9A3A2B7F2039A4050071FBC5 /* NetworkServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkServiceTests.swift; sourceTree = "<group>"; };
 		9A3CB7C6202FC657008AF158 /* MyFinance-watchOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "MyFinance-watchOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9A3CB7C9202FC657008AF158 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
 		9A3CB7CB202FC657008AF158 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -871,6 +880,7 @@
 			children = (
 				9A2022A32038EBC40012DD51 /* DateExtensionsTests.swift */,
 				9A2022A62038EC050012DD51 /* DataExtensionsTests.swift */,
+				9A3A2B79203998E80071FBC5 /* URLSessionExtensionsTests.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -1080,6 +1090,8 @@
 				9A2022972038DDD10012DD51 /* Config */,
 				9A94F8DB202CE6FF00AEF61F /* Platform */,
 				9A94F8F9202CF23E00AEF61F /* JSONCodableTests.swift */,
+				9A3A2B7C20399A020071FBC5 /* StringRepresentableTests.swift */,
+				9A3A2B7F2039A4050071FBC5 /* NetworkServiceTests.swift */,
 				9A6EF758202BA59C006D3420 /* Model */,
 			);
 			path = "MyFinanceKit-Tests";
@@ -2838,12 +2850,15 @@
 				9A6EF75C202BA68B006D3420 /* UserTests.swift in Sources */,
 				9A6EF757202BA15D006D3420 /* ErrorTests.swift in Sources */,
 				9A2022A52038EBEE0012DD51 /* DateExtensionsTests.swift in Sources */,
+				9A3A2B7D20399A020071FBC5 /* StringRepresentableTests.swift in Sources */,
+				9A3A2B7A203998E80071FBC5 /* URLSessionExtensionsTests.swift in Sources */,
 				9A2022A72038EC050012DD51 /* DataExtensionsTests.swift in Sources */,
 				9A6EF75E202BA6A2006D3420 /* HALResponseTests.swift in Sources */,
 				9A94F8FA202CF23E00AEF61F /* JSONCodableTests.swift in Sources */,
 				9A6EF75A202BA5D0006D3420 /* ConfigTests.swift in Sources */,
 				9A6EF760202BA718006D3420 /* TransactionTests.swift in Sources */,
 				9A6EF762202BABE0006D3420 /* SummaryTests.swift in Sources */,
+				9A3A2B802039A4050071FBC5 /* NetworkServiceTests.swift in Sources */,
 				9A6EF74A202B939B006D3420 /* BalanceTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -2872,12 +2887,15 @@
 				9A94F8F1202CEA9300AEF61F /* UserTests.swift in Sources */,
 				9A94F8EF202CEA8E00AEF61F /* HALResponseTests.swift in Sources */,
 				9A94F8F0202CEA9100AEF61F /* ConfigTests.swift in Sources */,
+				9A3A2B7E20399A020071FBC5 /* StringRepresentableTests.swift in Sources */,
+				9A3A2B7B203998E80071FBC5 /* URLSessionExtensionsTests.swift in Sources */,
 				9A94F8FB202CF23E00AEF61F /* JSONCodableTests.swift in Sources */,
 				9A94F8EE202CEA5400AEF61F /* ErrorTests.swift in Sources */,
 				9A2022A92038EC0A0012DD51 /* DateExtensionsTests.swift in Sources */,
 				9A94F8F3202CEA9800AEF61F /* TransactionTests.swift in Sources */,
 				9A94F8F4202CEA9A00AEF61F /* SummaryTests.swift in Sources */,
 				9A2022A82038EC050012DD51 /* DataExtensionsTests.swift in Sources */,
+				9A3A2B812039A4050071FBC5 /* NetworkServiceTests.swift in Sources */,
 				9A94F8F2202CEA9600AEF61F /* BalanceTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

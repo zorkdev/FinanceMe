@@ -45,9 +45,9 @@ class HomeViewController: BaseViewController {
         balanceRefreshControl.addTarget(self, action: #selector(updateData(_:)), for: .valueChanged)
 
         balanceTableView.register(HomeCurrentMonthTableViewCell.nib,
-                                  forCellReuseIdentifier: HomeCurrentMonthTableViewCell.string)
+                                  forCellReuseIdentifier: HomeCurrentMonthTableViewCell.instanceName)
         balanceTableView.register(HomeChartTableViewCell.nib,
-                                  forCellReuseIdentifier: HomeChartTableViewCell.string)
+                                  forCellReuseIdentifier: HomeChartTableViewCell.instanceName)
     }
 
     private func tab(for tableView: UITableView) -> HomeViewModel.Tab? {
@@ -199,21 +199,21 @@ extension HomeViewController: UITableViewDataSource, UITableViewDelegate {
 
         switch cellModel {
         case let homeCellModel as HomeCellModel:
-            guard let cell = tableView.dequeueReusableCell(withIdentifier: HomeTableViewCell.string,
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: HomeTableViewCell.instanceName,
                                                            for: indexPath)
                 as? HomeTableViewCell else { return UITableViewCell() }
             cell.set(homeCellModel: homeCellModel)
             return cell
 
         case let homeCurrentMonthCellModel as HomeCurrentMonthCellModel:
-            guard let cell = tableView.dequeueReusableCell(withIdentifier: HomeCurrentMonthTableViewCell.string,
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: HomeCurrentMonthTableViewCell.instanceName,
                                                            for: indexPath)
                 as? HomeCurrentMonthTableViewCell else { return UITableViewCell() }
             cell.set(homeCurrentMonthCellModel: homeCurrentMonthCellModel)
             return cell
 
         case let homeChartCellModel as HomeChartCellModel:
-            guard let cell = tableView.dequeueReusableCell(withIdentifier: HomeChartTableViewCell.string,
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: HomeChartTableViewCell.instanceName,
                                                            for: indexPath)
                 as? HomeChartTableViewCell else { return UITableViewCell() }
             cell.set(homeChartCellModel: homeChartCellModel)

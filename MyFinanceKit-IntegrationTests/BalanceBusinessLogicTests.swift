@@ -8,7 +8,7 @@ class BalanceBusinessLogicTests: XCTestCase {
         let balanceBusinessLogic = BalanceBusinessLogic()
 
         _ = balanceBusinessLogic.getBalance()
-            .done { balance in
+            .done { _ in
                 newExpectation.fulfill()
         }
 

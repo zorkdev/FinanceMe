@@ -8,7 +8,7 @@ class EndOfMonthSummaryBusinessLogicTests: XCTestCase {
         let endOfMonthSummaryBusinessLogic = EndOfMonthSummaryBusinessLogic()
 
         _ = endOfMonthSummaryBusinessLogic.getEndOfMonthSummaryList()
-            .done { endOfMonthSummaryList in
+            .done { _ in
                 newExpectation.fulfill()
         }
 

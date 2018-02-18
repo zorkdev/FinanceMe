@@ -1,5 +1,6 @@
 @testable import MyFinanceKit
 
+//swiftlint:disable nesting
 class JSONCodableTests: XCTestCase {
 
     func testDecode_Success() {

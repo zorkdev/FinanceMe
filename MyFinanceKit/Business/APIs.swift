@@ -1,12 +1,19 @@
-enum API {
+protocol APIType {
+
+    var token: String { get }
+    var url: URL? { get }
+
+}
+
+enum API: APIType {
 
     case starling(StarlingAPI)
     case zorkdev(ZorkdevAPI)
 
     var token: String {
         switch self {
-        case .starling: return ConfigManager.shared.config.starlingToken
-        case .zorkdev: return ConfigManager.shared.config.zorkdevToken
+        case let .starling(starlingAPI): return starlingAPI.token
+        case let .zorkdev(zorkdevAPI): return zorkdevAPI.token
         }
     }
 
@@ -19,22 +26,26 @@ enum API {
 
 }
 
-protocol APIType {
-
-    static var baseURL: String { get }
-    var url: URL? { get }
-
-}
-
-enum StarlingAPI: String, APIType {
+enum StarlingAPI: APIType {
 
     static let baseURL = "https://api.starlingbank.com/api/v1/"
 
-    case balance = "accounts/balance"
-    case transactions = "transactions"
+    case balance
+    case transactions
+
+    private var path: String {
+        switch self {
+        case .balance: return "accounts/balance"
+        case .transactions: return "transactions"
+        }
+    }
+
+    var token: String {
+        return ConfigManager.shared.config.starlingToken
+    }
 
     var url: URL? {
-        return URL(string: StarlingAPI.baseURL + rawValue)
+        return URL(string: StarlingAPI.baseURL + path)
     }
 
 }
@@ -55,6 +66,10 @@ enum ZorkdevAPI: APIType {
         case .transaction(let id): return "transactions/\(id)"
         case .endOfMonthSummaries: return "endOfMonthSummaries"
         }
+    }
+
+    var token: String {
+        return ConfigManager.shared.config.zorkdevToken
     }
 
     var url: URL? {

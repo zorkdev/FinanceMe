@@ -3,7 +3,7 @@ public struct BalanceBusinessLogic {
     public init() {}
 
     public func getBalance() -> Promise<Balance> {
-        return NetworkService.shared.performRequest(api: .starling(.balance),
+        return NetworkService.shared.performRequest(api: API.starling(.balance),
                                                     method: .get)
             .then { (balance: Balance) -> Promise<Balance> in
                 balance.save()

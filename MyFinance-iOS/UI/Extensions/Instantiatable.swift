@@ -13,7 +13,7 @@ extension Instantiatable where Self: UIViewController {
 
     static func instantiate() -> Self {
         guard let viewController = UIStoryboard(name: storyboardId, bundle: bundle)
-            .instantiateViewController(withIdentifier: Self.string) as? Self else {
+            .instantiateViewController(withIdentifier: Self.instanceName) as? Self else {
                 fatalError()
         }
         return viewController
