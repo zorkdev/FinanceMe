@@ -16,6 +16,7 @@ public class WatchManager: NSObject {
 
         if WCSession.isSupported() {
             session = WCSession.default
+            session?.delegate = self
             session?.activate()
         }
     }
@@ -35,5 +36,15 @@ public class WatchManager: NSObject {
 
         dataService.save(value: user.allowance, key: Constants.allowanceKey)
     }
+
+}
+
+extension WatchManager: WCSessionDelegate {
+
+    public func session(_ session: WCSession,
+                        activationDidCompleteWith activationState: WCSessionActivationState,
+                        error: Error?) {}
+    public func sessionDidBecomeInactive(_ session: WCSession) {}
+    public func sessionDidDeactivate(_ session: WCSession) {}
 
 }
