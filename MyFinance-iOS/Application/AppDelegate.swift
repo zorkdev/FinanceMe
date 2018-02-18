@@ -1,14 +1,23 @@
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
+    private var authViewModel: AuthViewModel!
+
     var window: UIWindow?
 
-    private let authViewModel = AuthViewModel()
+    let appState: AppStateiOS
+
+    override init() {
+        appState = AppStateiOS()
+
+        super.init()
+    }
 
     func application(_ application: UIApplication,
                      didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]? = nil) -> Bool {
+        (window?.rootViewController as? BaseViewController)?.appState = appState
+        authViewModel = AuthViewModel(window: window)
         authViewModel.authenticate()
-        _ = WatchManager.shared
         return true
     }
 

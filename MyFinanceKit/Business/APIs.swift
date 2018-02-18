@@ -1,32 +1,32 @@
-protocol APIType {
+public protocol APIType {
 
-    var token: String { get }
     var url: URL? { get }
+    func token(config: Config) -> String
 
 }
 
-enum API: APIType {
+public enum API: APIType {
 
     case starling(StarlingAPI)
     case zorkdev(ZorkdevAPI)
 
-    var token: String {
-        switch self {
-        case let .starling(starlingAPI): return starlingAPI.token
-        case let .zorkdev(zorkdevAPI): return zorkdevAPI.token
-        }
-    }
-
-    var url: URL? {
+    public var url: URL? {
         switch self {
         case let .starling(starlingAPI): return starlingAPI.url
         case let .zorkdev(zorkdevAPI): return zorkdevAPI.url
         }
     }
 
+    public func token(config: Config) -> String {
+        switch self {
+        case let .starling(starlingAPI): return starlingAPI.token(config: config)
+        case let .zorkdev(zorkdevAPI): return zorkdevAPI.token(config: config)
+        }
+    }
+
 }
 
-enum StarlingAPI: APIType {
+public enum StarlingAPI: APIType {
 
     static let baseURL = "https://api.starlingbank.com/api/v1/"
 
@@ -40,17 +40,17 @@ enum StarlingAPI: APIType {
         }
     }
 
-    var token: String {
-        return ConfigManager.shared.config.starlingToken
+    public var url: URL? {
+        return URL(string: StarlingAPI.baseURL + path)
     }
 
-    var url: URL? {
-        return URL(string: StarlingAPI.baseURL + path)
+    public func token(config: Config) -> String {
+        return config.starlingToken
     }
 
 }
 
-enum ZorkdevAPI: APIType {
+public enum ZorkdevAPI: APIType {
 
     static let baseURL = "https://zorkdev.herokuapp.com/api/"
 
@@ -68,12 +68,12 @@ enum ZorkdevAPI: APIType {
         }
     }
 
-    var token: String {
-        return ConfigManager.shared.config.zorkdevToken
+    public var url: URL? {
+        return URL(string: ZorkdevAPI.baseURL + path)
     }
 
-    var url: URL? {
-        return URL(string: ZorkdevAPI.baseURL + path)
+    public func token(config: Config) -> String {
+        return config.zorkdevToken
     }
 
 }

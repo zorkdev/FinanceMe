@@ -4,36 +4,27 @@ public typealias JSONCodableAndStringRepresentable = JSONCodable & StringReprese
 
 public protocol Storeable: JSONCodableAndStringRepresentable {
 
-    static var dataService: DataService { get }
-    static func load() -> Self?
-    static func all() -> [Self]
-    func save()
+    static func load(dataService: DataService) -> Self?
+    static func all(dataService: DataService) -> [Self]
+    func save(dataService: DataService)
 
 }
 
 public extension Storeable {
 
-    static var dataService: DataService {
-        #if os(iOS)
-            return KeychainDataService()
-        #else
-            return UserDefaultsDataService()
-        #endif
-    }
-
-    static func load() -> Self? {
+    static func load(dataService: DataService) -> Self? {
         let key = Self.instanceName
         return dataService.load(key: key)
     }
 
-    static func all() -> [Self] {
+    static func all(dataService: DataService) -> [Self] {
         let key = [Self].instanceName
         return dataService.load(key: key) ?? []
     }
 
-    func save() {
+    func save(dataService: DataService) {
         let key = self.instanceName
-        Self.dataService.save(value: self, key: key)
+        dataService.save(value: self, key: key)
     }
 
 }

@@ -34,7 +34,7 @@
 		9A2022492038D6FD0012DD51 /* URLSession+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A94F8FF202D176200AEF61F /* URLSession+Extensions.swift */; };
 		9A20224A2038D7050012DD51 /* JSONCodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A6EF752202B980F006D3420 /* JSONCodable.swift */; };
 		9A20224B2038D7070012DD51 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A5AE5992012C0D000B25081 /* NetworkService.swift */; };
-		9A20224C2038D70A0012DD51 /* ConfigManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A5AE5942012BE0500B25081 /* ConfigManager.swift */; };
+		9A20224C2038D70A0012DD51 /* ConfigService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A5AE5942012BE0500B25081 /* ConfigService.swift */; };
 		9A20224D2038D70D0012DD51 /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ADE54C0201568D90039D774 /* DataService.swift */; };
 		9A20224E2038D7130012DD51 /* StringRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AD96C9A202534D600D37F23 /* StringRepresentable.swift */; };
 		9A20224F2038D7220012DD51 /* Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A5AE59B2012C45700B25081 /* Error.swift */; };
@@ -62,12 +62,11 @@
 		9A2022662038D8330012DD51 /* Dismissable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AD96CA220253A3E00D37F23 /* Dismissable.swift */; };
 		9A2022672038D83A0012DD51 /* UIView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A2DB563202F54EC0008A4E5 /* UIView+Extensions.swift */; };
 		9A2022682038D8450012DD51 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AD96CA520253CC300D37F23 /* BaseViewController.swift */; };
-		9A20226A2038D8C40012DD51 /* WatchManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A3CB7EB203074CD008AF158 /* WatchManager.swift */; };
 		9A20226B2038D91F0012DD51 /* Data+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AD3EE2420139BA40083F8FE /* Data+Extensions.swift */; };
 		9A20226C2038D9220012DD51 /* URLSession+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A94F8FF202D176200AEF61F /* URLSession+Extensions.swift */; };
 		9A20226D2038D9250012DD51 /* StringRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AD96C9A202534D600D37F23 /* StringRepresentable.swift */; };
 		9A20226E2038D92C0012DD51 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A5AE5992012C0D000B25081 /* NetworkService.swift */; };
-		9A20226F2038D9300012DD51 /* ConfigManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A5AE5942012BE0500B25081 /* ConfigManager.swift */; };
+		9A20226F2038D9300012DD51 /* ConfigService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A5AE5942012BE0500B25081 /* ConfigService.swift */; };
 		9A2022702038D93F0012DD51 /* HALResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AD3EE2620139FDC0083F8FE /* HALResponse.swift */; };
 		9A2022712038D9420012DD51 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A5AE5962012BF5E00B25081 /* Config.swift */; };
 		9A2022722038D9440012DD51 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A872E0E2016719100C1E9BE /* User.swift */; };
@@ -105,6 +104,28 @@
 		9A3A2B7E20399A020071FBC5 /* StringRepresentableTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A3A2B7C20399A020071FBC5 /* StringRepresentableTests.swift */; };
 		9A3A2B802039A4050071FBC5 /* NetworkServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A3A2B7F2039A4050071FBC5 /* NetworkServiceTests.swift */; };
 		9A3A2B812039A4050071FBC5 /* NetworkServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A3A2B7F2039A4050071FBC5 /* NetworkServiceTests.swift */; };
+		9A3A2B832039AEAD0071FBC5 /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A3A2B822039AEAD0071FBC5 /* AppState.swift */; };
+		9A3A2B842039AEB10071FBC5 /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A3A2B822039AEAD0071FBC5 /* AppState.swift */; };
+		9A3A2B852039AEB10071FBC5 /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A3A2B822039AEAD0071FBC5 /* AppState.swift */; };
+		9A3A2B862039AEB10071FBC5 /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A3A2B822039AEAD0071FBC5 /* AppState.swift */; };
+		9A3A2B882039C2350071FBC5 /* ViewControllerType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A3A2B872039C2350071FBC5 /* ViewControllerType.swift */; };
+		9A3A2B892039C2350071FBC5 /* ViewControllerType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A3A2B872039C2350071FBC5 /* ViewControllerType.swift */; };
+		9A3A2B8A2039C2350071FBC5 /* ViewControllerType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A3A2B872039C2350071FBC5 /* ViewControllerType.swift */; };
+		9A3A2B8B2039C2350071FBC5 /* ViewControllerType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A3A2B872039C2350071FBC5 /* ViewControllerType.swift */; };
+		9A3A2B8F2039DA6F0071FBC5 /* AppStateiOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A3A2B8E2039DA6F0071FBC5 /* AppStateiOS.swift */; };
+		9A3A2B902039DB9B0071FBC5 /* WatchService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A3CB7EB203074CD008AF158 /* WatchService.swift */; };
+		9A3A2B92203A26620071FBC5 /* Allowance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A3A2B91203A26620071FBC5 /* Allowance.swift */; };
+		9A3A2B93203A26620071FBC5 /* Allowance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A3A2B91203A26620071FBC5 /* Allowance.swift */; };
+		9A3A2B94203A26620071FBC5 /* Allowance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A3A2B91203A26620071FBC5 /* Allowance.swift */; };
+		9A3A2B95203A26620071FBC5 /* Allowance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A3A2B91203A26620071FBC5 /* Allowance.swift */; };
+		9A3A2B96203A2AD60071FBC5 /* config.json in Resources */ = {isa = PBXBuildFile; fileRef = 9A856185202791E100A26F12 /* config.json */; };
+		9A3A2B97203A2AD60071FBC5 /* config.json in Resources */ = {isa = PBXBuildFile; fileRef = 9A856185202791E100A26F12 /* config.json */; };
+		9A3A2B9A203A2DFC0071FBC5 /* MockNetworkRequestable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A3A2B99203A2DFC0071FBC5 /* MockNetworkRequestable.swift */; };
+		9A3A2B9B203A2DFC0071FBC5 /* MockNetworkRequestable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A3A2B99203A2DFC0071FBC5 /* MockNetworkRequestable.swift */; };
+		9A3A2B9D203A2E940071FBC5 /* MockConfigService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A3A2B9C203A2E940071FBC5 /* MockConfigService.swift */; };
+		9A3A2B9E203A2E940071FBC5 /* MockConfigService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A3A2B9C203A2E940071FBC5 /* MockConfigService.swift */; };
+		9A3A2BA0203A2FC80071FBC5 /* MockAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A3A2B9F203A2FC80071FBC5 /* MockAPI.swift */; };
+		9A3A2BA1203A2FC80071FBC5 /* MockAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A3A2B9F203A2FC80071FBC5 /* MockAPI.swift */; };
 		9A3CB7CA202FC657008AF158 /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9A3CB7C8202FC657008AF158 /* Interface.storyboard */; };
 		9A3CB7CC202FC657008AF158 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9A3CB7CB202FC657008AF158 /* Assets.xcassets */; };
 		9A3CB7D3202FC657008AF158 /* MyFinanceExtension-watchOS.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 9A3CB7D2202FC657008AF158 /* MyFinanceExtension-watchOS.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
@@ -113,7 +134,6 @@
 		9A3CB7DC202FC657008AF158 /* ComplicationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A3CB7DB202FC657008AF158 /* ComplicationController.swift */; };
 		9A3CB7DE202FC657008AF158 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9A3CB7DD202FC657008AF158 /* Assets.xcassets */; };
 		9A3CB7E2202FC657008AF158 /* MyFinance-watchOS.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 9A3CB7C6202FC657008AF158 /* MyFinance-watchOS.app */; };
-		9A3CB7EE20307A2E008AF158 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A3CB7ED20307A2E008AF158 /* DataManager.swift */; };
 		9A4F55342023C7A900DBF68F /* MyFinanceKit_iOS.h in Headers */ = {isa = PBXBuildFile; fileRef = 9A4F55322023C7A900DBF68F /* MyFinanceKit_iOS.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		9A4F55372023C7A900DBF68F /* MyFinanceKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A4F55302023C7A900DBF68F /* MyFinanceKit.framework */; };
 		9A4F55382023C7A900DBF68F /* MyFinanceKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9A4F55302023C7A900DBF68F /* MyFinanceKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -121,8 +141,8 @@
 		9A4F554A2023C7BE00DBF68F /* MyFinanceKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9A4F55422023C7BE00DBF68F /* MyFinanceKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		9A4F55522023C95B00DBF68F /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A5AE5992012C0D000B25081 /* NetworkService.swift */; };
 		9A4F55532023C95B00DBF68F /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A5AE5992012C0D000B25081 /* NetworkService.swift */; };
-		9A4F55542023C96100DBF68F /* ConfigManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A5AE5942012BE0500B25081 /* ConfigManager.swift */; };
-		9A4F55552023C96200DBF68F /* ConfigManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A5AE5942012BE0500B25081 /* ConfigManager.swift */; };
+		9A4F55542023C96100DBF68F /* ConfigService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A5AE5942012BE0500B25081 /* ConfigService.swift */; };
+		9A4F55552023C96200DBF68F /* ConfigService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A5AE5942012BE0500B25081 /* ConfigService.swift */; };
 		9A4F55562023C96700DBF68F /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ADE54C0201568D90039D774 /* DataService.swift */; };
 		9A4F55572023C96700DBF68F /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ADE54C0201568D90039D774 /* DataService.swift */; };
 		9A4F555A2023C97300DBF68F /* Date+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AD3EE2A2013AD2A0083F8FE /* Date+Extensions.swift */; };
@@ -485,6 +505,13 @@
 		9A3A2B79203998E80071FBC5 /* URLSessionExtensionsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionExtensionsTests.swift; sourceTree = "<group>"; };
 		9A3A2B7C20399A020071FBC5 /* StringRepresentableTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringRepresentableTests.swift; sourceTree = "<group>"; };
 		9A3A2B7F2039A4050071FBC5 /* NetworkServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkServiceTests.swift; sourceTree = "<group>"; };
+		9A3A2B822039AEAD0071FBC5 /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
+		9A3A2B872039C2350071FBC5 /* ViewControllerType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerType.swift; sourceTree = "<group>"; };
+		9A3A2B8E2039DA6F0071FBC5 /* AppStateiOS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStateiOS.swift; sourceTree = "<group>"; };
+		9A3A2B91203A26620071FBC5 /* Allowance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Allowance.swift; sourceTree = "<group>"; };
+		9A3A2B99203A2DFC0071FBC5 /* MockNetworkRequestable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockNetworkRequestable.swift; sourceTree = "<group>"; };
+		9A3A2B9C203A2E940071FBC5 /* MockConfigService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockConfigService.swift; sourceTree = "<group>"; };
+		9A3A2B9F203A2FC80071FBC5 /* MockAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockAPI.swift; sourceTree = "<group>"; };
 		9A3CB7C6202FC657008AF158 /* MyFinance-watchOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "MyFinance-watchOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9A3CB7C9202FC657008AF158 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
 		9A3CB7CB202FC657008AF158 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -495,8 +522,7 @@
 		9A3CB7DB202FC657008AF158 /* ComplicationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComplicationController.swift; sourceTree = "<group>"; };
 		9A3CB7DD202FC657008AF158 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9A3CB7DF202FC657008AF158 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		9A3CB7EB203074CD008AF158 /* WatchManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchManager.swift; sourceTree = "<group>"; };
-		9A3CB7ED20307A2E008AF158 /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
+		9A3CB7EB203074CD008AF158 /* WatchService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchService.swift; sourceTree = "<group>"; };
 		9A4F55052023C3FC00DBF68F /* Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Bridging-Header.h"; sourceTree = "<group>"; };
 		9A4F55062023C4A700DBF68F /* Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Bridging-Header.h"; sourceTree = "<group>"; };
 		9A4F55302023C7A900DBF68F /* MyFinanceKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MyFinanceKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -515,7 +541,7 @@
 		9A5AE57F2012A8AC00B25081 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9A5AE5812012A8AC00B25081 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9A5AE5912012B97500B25081 /* Balance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Balance.swift; sourceTree = "<group>"; };
-		9A5AE5942012BE0500B25081 /* ConfigManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigManager.swift; sourceTree = "<group>"; };
+		9A5AE5942012BE0500B25081 /* ConfigService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigService.swift; sourceTree = "<group>"; };
 		9A5AE5962012BF5E00B25081 /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
 		9A5AE5992012C0D000B25081 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 		9A5AE59B2012C45700B25081 /* Error.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Error.swift; sourceTree = "<group>"; };
@@ -885,6 +911,16 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
+		9A3A2B98203A2DDC0071FBC5 /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				9A3A2B99203A2DFC0071FBC5 /* MockNetworkRequestable.swift */,
+				9A3A2B9C203A2E940071FBC5 /* MockConfigService.swift */,
+				9A3A2B9F203A2FC80071FBC5 /* MockAPI.swift */,
+			);
+			path = Mocks;
+			sourceTree = "<group>";
+		};
 		9A3CB7C7202FC657008AF158 /* MyFinance-watchOS */ = {
 			isa = PBXGroup;
 			children = (
@@ -900,7 +936,6 @@
 			children = (
 				9A3CB7D7202FC657008AF158 /* InterfaceController.swift */,
 				9A3CB7D9202FC657008AF158 /* ExtensionDelegate.swift */,
-				9A3CB7ED20307A2E008AF158 /* DataManager.swift */,
 				9A3CB7DB202FC657008AF158 /* ComplicationController.swift */,
 				9A3CB7DD202FC657008AF158 /* Assets.xcassets */,
 				9A3CB7DF202FC657008AF158 /* Info.plist */,
@@ -1004,6 +1039,7 @@
 				9A5AE5912012B97500B25081 /* Balance.swift */,
 				9AD3EE1D20138F6C0083F8FE /* Transaction.swift */,
 				9A65B79F202686A9004165F2 /* Summary.swift */,
+				9A3A2B91203A26620071FBC5 /* Allowance.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -1012,6 +1048,8 @@
 			isa = PBXGroup;
 			children = (
 				9A5AE5752012A8AB00B25081 /* AppDelegate.swift */,
+				9A3A2B8E2039DA6F0071FBC5 /* AppStateiOS.swift */,
+				9A3CB7EB203074CD008AF158 /* WatchService.swift */,
 				9AD3EE332013C9120083F8FE /* Bridging-Header.h */,
 				9A5AE5812012A8AC00B25081 /* Info.plist */,
 				9AAA3D8520293CD0008881FD /* MyFinance-iOS.entitlements */,
@@ -1074,12 +1112,12 @@
 			isa = PBXGroup;
 			children = (
 				9AD3EE212013966E0083F8FE /* Extensions */,
+				9A3A2B822039AEAD0071FBC5 /* AppState.swift */,
 				9AD96C9A202534D600D37F23 /* StringRepresentable.swift */,
 				9A6EF752202B980F006D3420 /* JSONCodable.swift */,
 				9A5AE5992012C0D000B25081 /* NetworkService.swift */,
 				9ADE54C0201568D90039D774 /* DataService.swift */,
-				9A5AE5942012BE0500B25081 /* ConfigManager.swift */,
-				9A3CB7EB203074CD008AF158 /* WatchManager.swift */,
+				9A5AE5942012BE0500B25081 /* ConfigService.swift */,
 			);
 			path = Platform;
 			sourceTree = "<group>";
@@ -1088,6 +1126,7 @@
 			isa = PBXGroup;
 			children = (
 				9A2022972038DDD10012DD51 /* Config */,
+				9A3A2B98203A2DDC0071FBC5 /* Mocks */,
 				9A94F8DB202CE6FF00AEF61F /* Platform */,
 				9A94F8F9202CF23E00AEF61F /* JSONCodableTests.swift */,
 				9A3A2B7C20399A020071FBC5 /* StringRepresentableTests.swift */,
@@ -1335,6 +1374,7 @@
 		9AD96CA120253A1400D37F23 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				9A3A2B872039C2350071FBC5 /* ViewControllerType.swift */,
 				9AD96CA520253CC300D37F23 /* BaseViewController.swift */,
 				9AD96CA220253A3E00D37F23 /* Dismissable.swift */,
 			);
@@ -1846,6 +1886,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9A3A2B96203A2AD60071FBC5 /* config.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1862,6 +1903,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9A3A2B97203A2AD60071FBC5 /* config.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2636,9 +2678,10 @@
 				9A20221B2038CD2A0012DD51 /* Error.swift in Sources */,
 				9A2022192038CD010012DD51 /* Formatters.swift in Sources */,
 				9A2022172038CC350012DD51 /* JSONCodable.swift in Sources */,
-				9A20226F2038D9300012DD51 /* ConfigManager.swift in Sources */,
+				9A20226F2038D9300012DD51 /* ConfigService.swift in Sources */,
 				9A2022832038D9AB0012DD51 /* Dismissable.swift in Sources */,
 				9A20227C2038D9600012DD51 /* EndOfMonthSummaryBusinessLogic.swift in Sources */,
+				9A3A2B842039AEB10071FBC5 /* AppState.swift in Sources */,
 				9A20226B2038D91F0012DD51 /* Data+Extensions.swift in Sources */,
 				9A2022812038D9770012DD51 /* TodayViewModel.swift in Sources */,
 				9A2022752038D94B0012DD51 /* Summary.swift in Sources */,
@@ -2650,7 +2693,9 @@
 				9A20227F2038D9720012DD51 /* TodayDisplayModelType.swift in Sources */,
 				9A2022702038D93F0012DD51 /* HALResponse.swift in Sources */,
 				9A20221A2038CD130012DD51 /* Date+Extensions.swift in Sources */,
+				9A3A2B892039C2350071FBC5 /* ViewControllerType.swift in Sources */,
 				9A2022802038D9750012DD51 /* TodayPresentable.swift in Sources */,
+				9A3A2B93203A26620071FBC5 /* Allowance.swift in Sources */,
 				9A20227D2038D9630012DD51 /* SpendingBusinessLogic.swift in Sources */,
 				9A20226C2038D9220012DD51 /* URLSession+Extensions.swift in Sources */,
 				9A20227E2038D96E0012DD51 /* ViewModelType.swift in Sources */,
@@ -2683,11 +2728,13 @@
 				9A2022652038D8260012DD51 /* TodayViewModel.swift in Sources */,
 				9A2022552038D7320012DD51 /* Summary.swift in Sources */,
 				9A2022562038D7380012DD51 /* APIs.swift in Sources */,
+				9A3A2B8A2039C2350071FBC5 /* ViewControllerType.swift in Sources */,
 				9A2022632038D8200012DD51 /* TodayDisplayModelType.swift in Sources */,
 				9A2022672038D83A0012DD51 /* UIView+Extensions.swift in Sources */,
 				9A2022642038D8240012DD51 /* TodayPresentable.swift in Sources */,
 				9A20224B2038D7070012DD51 /* NetworkService.swift in Sources */,
 				9A20224D2038D70D0012DD51 /* DataService.swift in Sources */,
+				9A3A2B852039AEB10071FBC5 /* AppState.swift in Sources */,
 				9A20225D2038D74A0012DD51 /* EndOfMonthSummaryBusinessLogic.swift in Sources */,
 				9A20224A2038D7050012DD51 /* JSONCodable.swift in Sources */,
 				9A2022472038D6750012DD51 /* Date+Extensions.swift in Sources */,
@@ -2703,10 +2750,11 @@
 				9A2022662038D8330012DD51 /* Dismissable.swift in Sources */,
 				9A20225E2038D74C0012DD51 /* SpendingBusinessLogic.swift in Sources */,
 				9A2022502038D7250012DD51 /* HALResponse.swift in Sources */,
+				9A3A2B94203A26620071FBC5 /* Allowance.swift in Sources */,
 				9A20225F2038D7540012DD51 /* ViewModelType.swift in Sources */,
 				9A20225B2038D7450012DD51 /* UserBusinessLogic.swift in Sources */,
 				9A2022522038D7290012DD51 /* User.swift in Sources */,
-				9A20224C2038D70A0012DD51 /* ConfigManager.swift in Sources */,
+				9A20224C2038D70A0012DD51 /* ConfigService.swift in Sources */,
 				9A20224F2038D7220012DD51 /* Error.swift in Sources */,
 				9A20224E2038D7130012DD51 /* StringRepresentable.swift in Sources */,
 				9A2022572038D73B0012DD51 /* Formatters.swift in Sources */,
@@ -2730,7 +2778,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				9A3CB7DA202FC657008AF158 /* ExtensionDelegate.swift in Sources */,
-				9A3CB7EE20307A2E008AF158 /* DataManager.swift in Sources */,
 				9A3CB7D8202FC657008AF158 /* InterfaceController.swift in Sources */,
 				9A3CB7DC202FC657008AF158 /* ComplicationController.swift in Sources */,
 			);
@@ -2748,6 +2795,7 @@
 				9A4F555A2023C97300DBF68F /* Date+Extensions.swift in Sources */,
 				9A2DB564202F54EC0008A4E5 /* UIView+Extensions.swift in Sources */,
 				9A4F55742023CAD300DBF68F /* BalanceBusinessLogic.swift in Sources */,
+				9A3A2B882039C2350071FBC5 /* ViewControllerType.swift in Sources */,
 				9AD96C9B202534D600D37F23 /* StringRepresentable.swift in Sources */,
 				9A65B79D202651F3004165F2 /* Validators.swift in Sources */,
 				9A65B7A5202690DB004165F2 /* EndOfMonthSummaryBusinessLogic.swift in Sources */,
@@ -2755,7 +2803,7 @@
 				9A4F55562023C96700DBF68F /* DataService.swift in Sources */,
 				9A4F556E2023CABF00DBF68F /* Transaction.swift in Sources */,
 				9AD96CA320253A3E00D37F23 /* Dismissable.swift in Sources */,
-				9A4F55542023C96100DBF68F /* ConfigManager.swift in Sources */,
+				9A4F55542023C96100DBF68F /* ConfigService.swift in Sources */,
 				9A9666812025EAF5000F8A42 /* TodayDisplayModelType.swift in Sources */,
 				9A4F55702023CAC800DBF68F /* APIs.swift in Sources */,
 				9A4F557E2023D06F00DBF68F /* TodayViewModel.swift in Sources */,
@@ -2765,11 +2813,12 @@
 				9A65B7A0202686A9004165F2 /* Summary.swift in Sources */,
 				9A96668720260E7B000F8A42 /* ColorPalette.swift in Sources */,
 				9A4F55782023CADE00DBF68F /* UserBusinessLogic.swift in Sources */,
-				9A20226A2038D8C40012DD51 /* WatchManager.swift in Sources */,
 				9AAD38A1202FA9BC00395119 /* SpendingBusinessLogic.swift in Sources */,
 				9AD96CA620253CC300D37F23 /* BaseViewController.swift in Sources */,
+				9A3A2B92203A26620071FBC5 /* Allowance.swift in Sources */,
 				9A4F556C2023CAB900DBF68F /* Balance.swift in Sources */,
 				9A4F556A2023CAB300DBF68F /* User.swift in Sources */,
+				9A3A2B832039AEAD0071FBC5 /* AppState.swift in Sources */,
 				9A4F557A2023CAE400DBF68F /* ExternalTransactionsBusinessLogic.swift in Sources */,
 				9A8561AD2027AB9A00A26F12 /* UITableViewCell+Extensions.swift in Sources */,
 				9A94F900202D176200AEF61F /* URLSession+Extensions.swift in Sources */,
@@ -2781,6 +2830,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9A3A2B95203A26620071FBC5 /* Allowance.swift in Sources */,
 				9A9666822025EAF5000F8A42 /* TodayDisplayModelType.swift in Sources */,
 				9A6EF754202B980F006D3420 /* JSONCodable.swift in Sources */,
 				9A65B7A6202690DB004165F2 /* EndOfMonthSummaryBusinessLogic.swift in Sources */,
@@ -2799,13 +2849,15 @@
 				9A4F55572023C96700DBF68F /* DataService.swift in Sources */,
 				9A4F556D2023CABF00DBF68F /* Transaction.swift in Sources */,
 				9A65B7A1202686A9004165F2 /* Summary.swift in Sources */,
-				9A4F55552023C96200DBF68F /* ConfigManager.swift in Sources */,
+				9A4F55552023C96200DBF68F /* ConfigService.swift in Sources */,
+				9A3A2B8B2039C2350071FBC5 /* ViewControllerType.swift in Sources */,
 				9A4F556F2023CAC700DBF68F /* APIs.swift in Sources */,
 				9A4F557F2023D07000DBF68F /* TodayViewModel.swift in Sources */,
 				9A4F55672023CAAD00DBF68F /* Config.swift in Sources */,
 				9A4F55622023C98200DBF68F /* Data+Extensions.swift in Sources */,
 				9A4F55772023CADE00DBF68F /* UserBusinessLogic.swift in Sources */,
 				9A4F556B2023CAB900DBF68F /* Balance.swift in Sources */,
+				9A3A2B862039AEB10071FBC5 /* AppState.swift in Sources */,
 				9A4F55692023CAB300DBF68F /* User.swift in Sources */,
 				9A4F55792023CAE400DBF68F /* ExternalTransactionsBusinessLogic.swift in Sources */,
 				9A65B79E202651F3004165F2 /* Validators.swift in Sources */,
@@ -2834,8 +2886,10 @@
 				9A8561722027730F00A26F12 /* HomeCellDisplayModel.swift in Sources */,
 				9A85617D20278FA000A26F12 /* MessagePresentable.swift in Sources */,
 				9AAA3D7F202925FC008881FD /* AuthDisplayModel.swift in Sources */,
+				9A3A2B8F2039DA6F0071FBC5 /* AppStateiOS.swift in Sources */,
 				9AD96CA0202539E500D37F23 /* AddTransactionViewController.swift in Sources */,
 				9A8561A82027A7FC00A26F12 /* HomeCurrentMonthTableViewCell.swift in Sources */,
+				9A3A2B902039DB9B0071FBC5 /* WatchService.swift in Sources */,
 				9AD96C9720252CBF00D37F23 /* HomeCellModel.swift in Sources */,
 				9A856176202774F300A26F12 /* AddTransactionDisplayModel.swift in Sources */,
 				9AAA3D7620290621008881FD /* AuthViewController.swift in Sources */,
@@ -2848,15 +2902,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				9A6EF75C202BA68B006D3420 /* UserTests.swift in Sources */,
+				9A3A2B9D203A2E940071FBC5 /* MockConfigService.swift in Sources */,
 				9A6EF757202BA15D006D3420 /* ErrorTests.swift in Sources */,
 				9A2022A52038EBEE0012DD51 /* DateExtensionsTests.swift in Sources */,
 				9A3A2B7D20399A020071FBC5 /* StringRepresentableTests.swift in Sources */,
 				9A3A2B7A203998E80071FBC5 /* URLSessionExtensionsTests.swift in Sources */,
 				9A2022A72038EC050012DD51 /* DataExtensionsTests.swift in Sources */,
+				9A3A2B9A203A2DFC0071FBC5 /* MockNetworkRequestable.swift in Sources */,
 				9A6EF75E202BA6A2006D3420 /* HALResponseTests.swift in Sources */,
 				9A94F8FA202CF23E00AEF61F /* JSONCodableTests.swift in Sources */,
 				9A6EF75A202BA5D0006D3420 /* ConfigTests.swift in Sources */,
 				9A6EF760202BA718006D3420 /* TransactionTests.swift in Sources */,
+				9A3A2BA0203A2FC80071FBC5 /* MockAPI.swift in Sources */,
 				9A6EF762202BABE0006D3420 /* SummaryTests.swift in Sources */,
 				9A3A2B802039A4050071FBC5 /* NetworkServiceTests.swift in Sources */,
 				9A6EF74A202B939B006D3420 /* BalanceTests.swift in Sources */,
@@ -2885,15 +2942,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				9A94F8F1202CEA9300AEF61F /* UserTests.swift in Sources */,
+				9A3A2B9E203A2E940071FBC5 /* MockConfigService.swift in Sources */,
 				9A94F8EF202CEA8E00AEF61F /* HALResponseTests.swift in Sources */,
 				9A94F8F0202CEA9100AEF61F /* ConfigTests.swift in Sources */,
 				9A3A2B7E20399A020071FBC5 /* StringRepresentableTests.swift in Sources */,
 				9A3A2B7B203998E80071FBC5 /* URLSessionExtensionsTests.swift in Sources */,
 				9A94F8FB202CF23E00AEF61F /* JSONCodableTests.swift in Sources */,
+				9A3A2B9B203A2DFC0071FBC5 /* MockNetworkRequestable.swift in Sources */,
 				9A94F8EE202CEA5400AEF61F /* ErrorTests.swift in Sources */,
 				9A2022A92038EC0A0012DD51 /* DateExtensionsTests.swift in Sources */,
 				9A94F8F3202CEA9800AEF61F /* TransactionTests.swift in Sources */,
 				9A94F8F4202CEA9A00AEF61F /* SummaryTests.swift in Sources */,
+				9A3A2BA1203A2FC80071FBC5 /* MockAPI.swift in Sources */,
 				9A2022A82038EC050012DD51 /* DataExtensionsTests.swift in Sources */,
 				9A3A2B812039A4050071FBC5 /* NetworkServiceTests.swift in Sources */,
 				9A94F8F2202CEA9600AEF61F /* BalanceTests.swift in Sources */,

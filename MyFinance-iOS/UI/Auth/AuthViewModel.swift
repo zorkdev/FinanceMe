@@ -19,9 +19,14 @@ class AuthViewModel: AuthViewModelType {
         static let reason = "Please authenticate to unlock this app"
     }
 
+    private var appWindow: UIWindow?
     private var window: UIWindow?
 
     private weak var delegate: AuthViewModelDelegate?
+
+    init(window: UIWindow?) {
+        appWindow = window
+    }
 
     func tryAgainButtonTapped() {
         authenticate()
@@ -49,14 +54,14 @@ class AuthViewModel: AuthViewModelType {
     }
 
     func addOcclusion() {
-        UIApplication.shared.keyWindow?.endEditing(true)
+        appWindow?.endEditing(true)
 
         guard window == nil else {
             window?.isHidden = false
             return
         }
 
-        guard let frame = UIApplication.shared.delegate?.window??.frame else { fatalError() }
+        guard let frame = appWindow?.frame else { fatalError() }
 
         let authViewController = AuthViewController.instantiate()
         authViewController.viewModel = self

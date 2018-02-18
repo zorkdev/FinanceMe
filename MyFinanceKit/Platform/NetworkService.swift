@@ -1,4 +1,4 @@
-enum HTTPMethod: String {
+public enum HTTPMethod: String {
     case post = "POST"
     case get = "GET"
     case put = "PUT"
@@ -6,13 +6,13 @@ enum HTTPMethod: String {
     case delete = "DELETE"
 }
 
-protocol NetworkRequestable {
+public protocol NetworkRequestable {
 
     func perform(request: URLRequest) -> Promise<(data: Data, response: URLResponse)>
 
 }
 
-protocol NetworkServiceType {
+public protocol NetworkServiceType {
 
     func performRequest<T: JSONDecodable>(api: APIType,
                                           method: HTTPMethod,
@@ -26,7 +26,7 @@ protocol NetworkServiceType {
 
 }
 
-class NetworkService: NetworkServiceType {
+public class NetworkService: NetworkServiceType {
 
     private struct Constants {
         static let authHeaderKey = "Authorization"
@@ -41,18 +41,19 @@ class NetworkService: NetworkServiceType {
         }
     }
 
-    static let shared = NetworkService()
-
     private let networkService: NetworkRequestable
+    private let configService: ConfigService
 
-    private init() {
-        networkService = URLSession.shared
+    public init(networkRequestable: NetworkRequestable,
+                configService: ConfigService) {
+        networkService = networkRequestable
+        self.configService = configService
     }
 
-    func performRequest<T: JSONDecodable>(api: APIType,
-                                          method: HTTPMethod,
-                                          parameters: JSONEncodable? = nil,
-                                          body: JSONEncodable? = nil) -> Promise<T> {
+    public func performRequest<T: JSONDecodable>(api: APIType,
+                                                 method: HTTPMethod,
+                                                 parameters: JSONEncodable? = nil,
+                                                 body: JSONEncodable? = nil) -> Promise<T> {
         return performRequest(api: api,
                               method: method,
                               parameters: parameters,
@@ -66,10 +67,10 @@ class NetworkService: NetworkServiceType {
         }
     }
 
-    func performRequest(api: APIType,
-                        method: HTTPMethod,
-                        parameters: JSONEncodable? = nil,
-                        body: JSONEncodable? = nil) -> Promise<Data> {
+    public func performRequest(api: APIType,
+                               method: HTTPMethod,
+                               parameters: JSONEncodable? = nil,
+                               body: JSONEncodable? = nil) -> Promise<Data> {
 
         guard let request = createRequest(api: api,
                                           method: method,
@@ -79,21 +80,21 @@ class NetworkService: NetworkServiceType {
                 return Promise(error: AppError.apiPathInvalid)
         }
 
-        if ConfigManager.shared.isLoggingEnabled {
-            print(createRequestString(request))
+        if configService.isLoggingEnabled {
+            print(NetworkService.createRequestString(request))
         }
 
         return Promise { seal in
             networkService.perform(request: request)
                 .done { response in
-                    if ConfigManager.shared.isLoggingEnabled {
-                        print(self.createResponseString(response.data))
+                    if self.configService.isLoggingEnabled {
+                        print(NetworkService.createResponseString(response.data))
                     }
                     seal.fulfill(response.data)
 
                 }.catch { error in
-                    if ConfigManager.shared.isLoggingEnabled {
-                        print(self.createResponseString(error))
+                    if self.configService.isLoggingEnabled {
+                        print(NetworkService.createResponseString(error))
                     }
                     if let httpError = error as? PMKHTTPError,
                         let apiError = APIError(httpError: httpError) {
@@ -122,7 +123,7 @@ class NetworkService: NetworkServiceType {
                          forHTTPHeaderField: Constants.contentKey)
         request.setValue(Constants.encodingValue,
                          forHTTPHeaderField: Constants.encodingKey)
-        request.setValue(Constants.authHeaderValue(api.token),
+        request.setValue(Constants.authHeaderValue(api.token(config: configService.config)),
                          forHTTPHeaderField: Constants.authHeaderKey)
 
         if body != nil {
@@ -141,11 +142,11 @@ class NetworkService: NetworkServiceType {
 
 extension NetworkService {
 
-    func createRequestString(_ request: URLRequest) -> String {
+    static func createRequestString(_ request: URLRequest) -> String {
         return
             """
             ********** API Request **********
-            \((request.httpMethod ?? "") + " " + (request.url?.absoluteString ?? ""))
+            \((request.httpMethod!) + " " + (request.url!.absoluteString))
             --- Headers ---
             \(request.allHTTPHeaderFields?.prettyPrinted ?? "nil")
             ---- Body -----
@@ -155,7 +156,7 @@ extension NetworkService {
             """
     }
 
-    func createResponseString(_ data: Data) -> String {
+    static func createResponseString(_ data: Data) -> String {
         return
             """
             ********** API Response *********
@@ -165,7 +166,7 @@ extension NetworkService {
             """
     }
 
-    func createResponseString(_ error: Error) -> String {
+    static func createResponseString(_ error: Error) -> String {
         return
             """
             ********** API Error ***********

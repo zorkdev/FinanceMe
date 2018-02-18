@@ -37,24 +37,24 @@ class HomeViewModel {
         case allowance, inbound, outbound
     }
 
-    private let externalTransactionsBusinessLogic = ExternalTransactionsBusinessLogic()
-    private let endOfMonthSummaryBusinessLogic = EndOfMonthSummaryBusinessLogic()
+    private let externalTransactionsBusinessLogic: ExternalTransactionsBusinessLogic
+    private let endOfMonthSummaryBusinessLogic: EndOfMonthSummaryBusinessLogic
 
     private var currentMonthSummary: CurrentMonthSummary? {
         didSet {
-            currentMonthSummary?.save()
+            currentMonthSummary?.save(dataService: serviceProvider.dataService)
         }
     }
 
     private var endOfMonthSummaries = [EndOfMonthSummary]() {
         didSet {
-            endOfMonthSummaries.save()
+            endOfMonthSummaries.save(dataService: serviceProvider.dataService)
         }
     }
 
     private var externalTransactions = [Transaction]() {
         didSet {
-            externalTransactions.save()
+            externalTransactions.save(dataService: serviceProvider.dataService)
         }
     }
 
@@ -67,12 +67,20 @@ class HomeViewModel {
     private var currentMonthCellModels = [HomeCurrentMonthCellModel]()
     private var chartCellModels = [HomeChartCellModel]()
 
+    let serviceProvider: NetworkDataWatchServiceProvider
+
     let displayModel: TodayDisplayModelType = HomeDisplayModel()
 
-    weak var delegate: TodayViewModelDelegate?
+    weak var delegate: HomeViewModelDelegate?
 
-    init(delegate: HomeViewModelDelegate) {
+    init(serviceProvider: NetworkDataWatchServiceProvider,
+         delegate: HomeViewModelDelegate) {
+        self.serviceProvider = serviceProvider
         self.delegate = delegate
+        self.externalTransactionsBusinessLogic =
+            ExternalTransactionsBusinessLogic(networkService: serviceProvider.networkService)
+        self.endOfMonthSummaryBusinessLogic =
+            EndOfMonthSummaryBusinessLogic(networkService: serviceProvider.networkService)
 
         NotificationCenter.default.addObserver(
             self,
@@ -88,24 +96,22 @@ class HomeViewModel {
 
 }
 
-// MARK: - TodayPresentable
-
-extension HomeViewModel: TodayPresentable {
+extension HomeViewModel {
 
     func setupDefaults() {
-        guard let balance = Balance.load(),
-            let user = User.load() else { return }
+        guard let balance = Balance.load(dataService: serviceProvider.dataService),
+            let user = User.load(dataService: serviceProvider.dataService) else { return }
         let balanceAttributedString = createAttributedString(from: balance.effectiveBalance)
         delegate?.set(balance: balanceAttributedString)
         let allowanceAttributedString = createAttributedString(from: user.allowance)
         delegate?.set(allowance: allowanceAttributedString)
 
-        externalTransactions = Transaction.all()
+        externalTransactions = Transaction.all(dataService: serviceProvider.dataService)
         updateTransactions()
-        endOfMonthSummaries = EndOfMonthSummary.all()
-        currentMonthSummary = CurrentMonthSummary.load()
+        endOfMonthSummaries = EndOfMonthSummary.all(dataService: serviceProvider.dataService)
+        currentMonthSummary = CurrentMonthSummary.load(dataService: serviceProvider.dataService)
         updateBalances()
-        (delegate as? HomeViewModelDelegate)?.reloadTableView()
+        delegate?.reloadTableView()
     }
 
     @discardableResult func updateData() -> Promise<Void> {
@@ -114,9 +120,38 @@ extension HomeViewModel: TodayPresentable {
                     getExternalTransactions(),
                     getEndOfMonthSummaryList())
             .ensure {
-                (self.delegate as? HomeViewModelDelegate)?.endRefreshing()
+                self.delegate?.endRefreshing()
             }.recover { error in
-                (self.delegate as? HomeViewModelDelegate)?.showError(message: error.localizedDescription)
+                self.delegate?.showError(message: error.localizedDescription)
+        }
+    }
+
+    public func createAttributedString(from amount: Double) -> NSAttributedString {
+        let currencyString = Formatters.currency
+            .string(from: NSNumber(value: amount)) ?? displayModel.defaultAmount
+        return displayModel.amountAttributedString(from: currencyString)
+    }
+
+    @discardableResult public func getBalance() -> Promise<Void> {
+        return BalanceBusinessLogic(networkService: serviceProvider.networkService,
+                                    dataService: serviceProvider.dataService)
+            .getBalance().done { balance in
+                let balanceAttributedString = self.createAttributedString(from: balance.effectiveBalance)
+                self.delegate?.set(balance: balanceAttributedString)
+        }
+    }
+
+    @discardableResult public func getUser() -> Promise<Void> {
+        return UserBusinessLogic(networkService: serviceProvider.networkService,
+                                 dataService: serviceProvider.dataService)
+            .getCurrentUser().done { user in
+                let allowanceAttributedString = self.createAttributedString(from: user.allowance)
+                let spendingBusinessLogic =
+                    SpendingBusinessLogic(dataService: self.serviceProvider.dataService)
+                let allowanceIcon = spendingBusinessLogic.allowanceIcon(for: user)
+                self.delegate?.set(allowance: allowanceAttributedString)
+                self.delegate?.set(allowanceIcon: allowanceIcon)
+                self.serviceProvider.watchService.updateComplication()
         }
     }
 
@@ -268,14 +303,13 @@ extension HomeViewModel: HomeViewModelType {
 
         let row = shouldDeleteSection ? nil : row
 
-        (delegate as? HomeViewModelDelegate)?
-            .showAlert(with: HomeDisplayModel.DeleteAlert.title,
-                       message: HomeDisplayModel.DeleteAlert.message,
-                       confirmActionTitle: HomeDisplayModel.DeleteAlert.confirmButtonTitle,
-                       confirmAction: { self.delete(transaction: transaction,
-                                                    section: section,
-                                                    row: row) },
-                       cancelActionTitle: HomeDisplayModel.DeleteAlert.cancelButtonTitle)
+        delegate?.showAlert(with: HomeDisplayModel.DeleteAlert.title,
+                            message: HomeDisplayModel.DeleteAlert.message,
+                            confirmActionTitle: HomeDisplayModel.DeleteAlert.confirmButtonTitle,
+                            confirmAction: { self.delete(transaction: transaction,
+                                                         section: section,
+                                                         row: row) },
+                            cancelActionTitle: HomeDisplayModel.DeleteAlert.cancelButtonTitle)
     }
 
     func height(for tab: HomeViewModel.Tab, section: Int, row: Int) -> CGFloat {
@@ -365,7 +399,7 @@ extension HomeViewModel {
 
             currentMonthCellModels = [homeCurrentMonthCellModel]
 
-            let payday = User.load()?.payday ?? 0
+            let payday = User.load(dataService: serviceProvider.dataService)?.payday ?? 0
             let currentSummary = EndOfMonthSummary(balance: currentMonthSummary.forecast,
                                                    created: Date().next(day: payday, direction: .forward))
             var summaries = endOfMonthSummaries + [currentSummary]
@@ -484,7 +518,7 @@ extension HomeViewModel {
             .done { transactions in
                 self.externalTransactions = transactions
                 self.updateTransactions()
-                (self.delegate as? HomeViewModelDelegate)?.reloadTableView()
+                self.delegate?.reloadTableView()
         }
     }
 
@@ -496,26 +530,26 @@ extension HomeViewModel {
             switch transaction.source {
             case .externalInbound, .externalOutbound:
                 if let row = row {
-                    (self.delegate as? HomeViewModelDelegate)?.delete(from: .transactions,
+                    self.delegate?.delete(from: .transactions,
                                                                       section: section,
                                                                       row: row)
                 } else {
-                    (self.delegate as? HomeViewModelDelegate)?.delete(from: .transactions,
+                    self.delegate?.delete(from: .transactions,
                                                                       section: section)
                 }
             case .externalRegularInbound, .externalRegularOutbound:
                 if let row = row {
-                    (self.delegate as? HomeViewModelDelegate)?.delete(from: .bills,
+                    self.delegate?.delete(from: .bills,
                                                                       section: section,
                                                                       row: row)
                 } else {
-                    (self.delegate as? HomeViewModelDelegate)?.delete(from: .bills,
+                    self.delegate?.delete(from: .bills,
                                                                       section: section)
                 }
             default: break
             }
         }.catch { error in
-            (self.delegate as? HomeViewModelDelegate)?.showError(message: error.localizedDescription)
+            self.delegate?.showError(message: error.localizedDescription)
         }
     }
 
@@ -525,7 +559,7 @@ extension HomeViewModel {
                 self.endOfMonthSummaries = endOfMonthSummaryList.endOfMonthSummaries
                 self.currentMonthSummary = endOfMonthSummaryList.currentMonthSummary
                 self.updateBalances()
-                (self.delegate as? HomeViewModelDelegate)?.reloadTableView()
+                self.delegate?.reloadTableView()
             }
     }
 
@@ -537,7 +571,7 @@ extension HomeViewModel: AddTransactionViewModelDataDelegate {
         getUser()
         externalTransactions.append(transaction)
         updateTransactions()
-        (delegate as? HomeViewModelDelegate)?.reloadTableView()
+        delegate?.reloadTableView()
     }
 
 }
@@ -548,7 +582,8 @@ extension HomeViewModel: SettingsViewModelDataDelegate {
         let allowanceAttributedString = self.createAttributedString(from: user.allowance)
         self.delegate?.set(allowance: allowanceAttributedString)
         updateTransactions()
-        (delegate as? HomeViewModelDelegate)?.reloadTableView()
+        delegate?.reloadTableView()
+        serviceProvider.watchService.updateComplication()
     }
 
 }

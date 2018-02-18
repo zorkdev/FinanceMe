@@ -1,17 +1,13 @@
 import WatchConnectivity
 
-public class WatchManager: NSObject {
+class WatchService: NSObject {
 
-    private struct Constants {
-        static let allowanceKey = "allowance"
-    }
-
-    public static let shared = WatchManager()
-
-    private let dataService = KeychainDataService()
+    private let dataService: DataService
     private var session: WCSession?
 
-    override init() {
+    init(dataService: DataService) {
+        self.dataService = dataService
+
         super.init()
 
         if WCSession.isSupported() {
@@ -24,22 +20,19 @@ public class WatchManager: NSObject {
     func updateComplication() {
         guard session?.activationState == .activated,
             session?.isComplicationEnabled == true,
-            let user = User.load(),
-            let allowanceString = Formatters.currency
-                .string(from: NSNumber(value: user.allowance)) else { return }
+            let user = User.load(dataService: dataService) else { return }
 
-        let previousAllowance: Double? = dataService.load(key: Constants.allowanceKey)
-        guard user.allowance != previousAllowance else { return }
-
-        let data = [Constants.allowanceKey: allowanceString]
+        let previousAllowance: Allowance? = Allowance.load(dataService: dataService)
+        guard user.allowance != previousAllowance?.allowance else { return }
+        let allowance = Allowance(allowance: user.allowance)
+        let data = [Allowance.instanceName: allowance.allowance]
         session?.transferCurrentComplicationUserInfo(data)
-
-        dataService.save(value: user.allowance, key: Constants.allowanceKey)
+        allowance.save(dataService: dataService)
     }
 
 }
 
-extension WatchManager: WCSessionDelegate {
+extension WatchService: WCSessionDelegate {
 
     public func session(_ session: WCSession,
                         activationDidCompleteWith activationState: WCSessionActivationState,

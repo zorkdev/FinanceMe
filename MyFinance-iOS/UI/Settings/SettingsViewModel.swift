@@ -26,7 +26,7 @@ protocol SettingsViewModelType: ViewModelType {
 
 class SettingsViewModel {
 
-    private let userBusinessLogic = UserBusinessLogic()
+    private let userBusinessLogic: UserBusinessLogic
 
     private let paydayValues: [String] = {
         return Array(1...28).map { "\($0)" }
@@ -34,12 +34,19 @@ class SettingsViewModel {
 
     private var isEditing = false
 
+    let networkDataServiceProvider: NetworkDataServiceProvider
+
     private weak var delegate: SettingsViewModelDelegate?
     private weak var dataDelegate: SettingsViewModelDataDelegate?
 
-    init(delegate: SettingsViewModelDelegate, dataDelegate: SettingsViewModelDataDelegate?) {
+    init(networkDataServiceProvider: NetworkDataServiceProvider,
+         delegate: SettingsViewModelDelegate,
+         dataDelegate: SettingsViewModelDataDelegate?) {
+        self.networkDataServiceProvider = networkDataServiceProvider
         self.delegate = delegate
         self.dataDelegate = dataDelegate
+        self.userBusinessLogic = UserBusinessLogic(networkService: networkDataServiceProvider.networkService,
+                                                   dataService: networkDataServiceProvider.dataService)
     }
 
 }
@@ -116,7 +123,7 @@ extension SettingsViewModel: SettingsViewModelType {
 extension SettingsViewModel {
 
     func setupDefaults() {
-        guard let user = User.load(),
+        guard let user = User.load(dataService: networkDataServiceProvider.dataService),
             let largeTransaction = Formatters.currency
                 .string(from: NSNumber(value: user.largeTransaction)) else { return }
 

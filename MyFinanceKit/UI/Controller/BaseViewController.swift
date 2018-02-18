@@ -1,5 +1,7 @@
 open class BaseViewController: UIViewController {
 
+    public var appState: AppState?
+
     private struct Constants {
         static let keyboardToolbarDoneButtonTitle = "Done"
     }
@@ -32,6 +34,8 @@ extension BaseViewController: UITextFieldDelegate {
     }
 
 }
+
+extension BaseViewController: ViewControllerType {}
 
 #if os(iOS)
 extension BaseViewController {

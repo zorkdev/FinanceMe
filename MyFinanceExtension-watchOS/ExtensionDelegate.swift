@@ -1,9 +1,12 @@
 import WatchKit
 import WatchConnectivity
+import MyFinanceKit
 
 class ExtensionDelegate: NSObject, WKExtensionDelegate {
 
     private var session: WCSession?
+
+    let appState = AppState()
 
     override init() {
         super.init()
@@ -24,9 +27,10 @@ extension ExtensionDelegate: WCSessionDelegate {
                  error: Error?) {}
 
     func session(_ session: WCSession, didReceiveUserInfo userInfo: [String: Any] = [:]) {
-        guard let allowance = userInfo[DataManager.Constants.allowanceKey] as? String,
+        guard let allowanceValue = userInfo[Allowance.instanceName] as? Double,
             let activeComplications = CLKComplicationServer.sharedInstance().activeComplications else { return }
-        DataManager.shared.allowance = allowance
+        let allowance = Allowance(allowance: allowanceValue)
+        allowance.save(dataService: appState.dataService)
 
         for complication in activeComplications {
             CLKComplicationServer.sharedInstance().reloadTimeline(for: complication)

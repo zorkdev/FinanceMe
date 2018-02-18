@@ -1,4 +1,11 @@
-class ConfigManager {
+public protocol ConfigService {
+
+    var isLoggingEnabled: Bool { get }
+    var config: Config { get }
+
+}
+
+public class ConfigFileService: ConfigService {
 
     private struct Constants {
         static let configFilename = "config"
@@ -6,14 +13,11 @@ class ConfigManager {
         static let configMissingMessage = "The config file is missing or invalid."
     }
 
-    static let shared = ConfigManager()
+    public let isLoggingEnabled = TARGET_OS_SIMULATOR == 1
+    public let config: Config
 
-    let isLoggingEnabled = TARGET_OS_SIMULATOR == 1
-
-    let config: Config
-
-    private init() {
-        let bundle = Bundle(for: ConfigManager.self)
+    public init() {
+        let bundle = Bundle(for: ConfigFileService.self)
         guard let configURL = bundle.url(forResource: Constants.configFilename,
                                          withExtension: Constants.configExtension),
             let data = try? Data(contentsOf: configURL),

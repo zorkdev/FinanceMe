@@ -1,31 +1,33 @@
 public struct UserBusinessLogic {
 
-    public init() {}
+    private let networkService: NetworkServiceType
+    private let dataService: DataService
+
+    public init(networkService: NetworkServiceType,
+                dataService: DataService) {
+        self.networkService = networkService
+        self.dataService = dataService
+    }
 
     public func getCurrentUser() -> Promise<User> {
-        return NetworkService.shared.performRequest(api: API.zorkdev(.user),
-                                                    method: .get)
+        return networkService.performRequest(api: API.zorkdev(.user),
+                                             method: .get,
+                                             parameters: nil,
+                                             body: nil)
             .then { (user: User) -> Promise<User> in
-                user.save()
-
-                #if os(iOS)
-                    WatchManager.shared.updateComplication()
-                #endif
+                user.save(dataService: self.dataService)
 
                 return .value(user)
         }
     }
 
     public func update(user: User) -> Promise<User> {
-        return NetworkService.shared.performRequest(api: API.zorkdev(.user),
-                                                    method: .patch,
-                                                    body: user)
+        return networkService.performRequest(api: API.zorkdev(.user),
+                                             method: .patch,
+                                             parameters: nil,
+                                             body: user)
             .then { (user: User) -> Promise<User> in
-                user.save()
-
-                #if os(iOS)
-                    WatchManager.shared.updateComplication()
-                #endif
+                user.save(dataService: self.dataService)
 
                 return .value(user)
         }

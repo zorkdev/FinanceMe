@@ -1,17 +1,23 @@
 public struct ExternalTransactionsBusinessLogic {
 
-    public init() {}
+    private let networkService: NetworkServiceType
+
+    public init(networkService: NetworkServiceType) {
+        self.networkService = networkService
+    }
 
     public func getExternalTransactions(fromTo: FromToParameters? = nil) -> Promise<[Transaction]> {
-        return NetworkService.shared.performRequest(api: API.zorkdev(.transactions),
-                                                    method: .get,
-                                                    parameters: fromTo)
+        return networkService.performRequest(api: API.zorkdev(.transactions),
+                                             method: .get,
+                                             parameters: fromTo,
+                                             body: nil)
     }
 
     public func create(transaction: Transaction) -> Promise<Transaction> {
-        return NetworkService.shared.performRequest(api: API.zorkdev(.transactions),
-                                                    method: .post,
-                                                    body: transaction)
+        return networkService.performRequest(api: API.zorkdev(.transactions),
+                                             method: .post,
+                                             parameters: nil,
+                                             body: transaction)
     }
 
     public func delete(transaction: Transaction) -> Promise<Void> {
@@ -19,8 +25,10 @@ public struct ExternalTransactionsBusinessLogic {
             return Promise(error: AppError.apiPathInvalid)
         }
 
-        return NetworkService.shared.performRequest(api: API.zorkdev(.transaction(id)),
-                                                    method: .delete).asVoid()
+        return networkService.performRequest(api: API.zorkdev(.transaction(id)),
+                                             method: .delete,
+                                             parameters: nil,
+                                             body: nil).asVoid()
     }
 
 }

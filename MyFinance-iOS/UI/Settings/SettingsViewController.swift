@@ -22,7 +22,11 @@ class SettingsViewController: BaseViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        viewModel = SettingsViewModel(delegate: self, dataDelegate: dataDelegate)
+
+        guard let appState = appState else { return }
+        viewModel = SettingsViewModel(networkDataServiceProvider: appState,
+                                      delegate: self,
+                                      dataDelegate: dataDelegate)
         setupTextFields()
         viewModel.viewDidLoad()
     }

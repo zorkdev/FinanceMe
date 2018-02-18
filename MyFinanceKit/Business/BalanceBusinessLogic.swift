@@ -1,12 +1,21 @@
 public struct BalanceBusinessLogic {
 
-    public init() {}
+    private let networkService: NetworkServiceType
+    private let dataService: DataService
+
+    public init(networkService: NetworkServiceType,
+                dataService: DataService) {
+        self.networkService = networkService
+        self.dataService = dataService
+    }
 
     public func getBalance() -> Promise<Balance> {
-        return NetworkService.shared.performRequest(api: API.starling(.balance),
-                                                    method: .get)
+        return networkService.performRequest(api: API.starling(.balance),
+                                             method: .get,
+                                             parameters: nil,
+                                             body: nil)
             .then { (balance: Balance) -> Promise<Balance> in
-                balance.save()
+                balance.save(dataService: self.dataService)
 
                 return .value(balance)
         }

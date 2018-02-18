@@ -19,14 +19,21 @@ protocol AddTransactionViewModelType: ViewModelType {
 
 class AddTransactionViewModel {
 
-    private let externalTransactionsBusinessLogic = ExternalTransactionsBusinessLogic()
+    private let externalTransactionsBusinessLogic: ExternalTransactionsBusinessLogic
+
+    let networkServiceProvider: NetworkServiceProvider
 
     private weak var delegate: AddTransactionViewModelDelegate?
     private weak var dataDelegate: AddTransactionViewModelDataDelegate?
 
-    init(delegate: AddTransactionViewModelDelegate, dataDelegate: AddTransactionViewModelDataDelegate?) {
+    init(networkServiceProvider: NetworkServiceProvider,
+         delegate: AddTransactionViewModelDelegate,
+         dataDelegate: AddTransactionViewModelDataDelegate?) {
+        self.networkServiceProvider = networkServiceProvider
         self.delegate = delegate
         self.dataDelegate = dataDelegate
+        self.externalTransactionsBusinessLogic =
+            ExternalTransactionsBusinessLogic(networkService: networkServiceProvider.networkService)
     }
 
 }

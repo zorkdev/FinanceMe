@@ -1,12 +1,14 @@
 import NotificationCenter
 
-class TodayViewController: NSViewController {
+class TodayViewController: NSViewController, ViewControllerType {
 
     @IBOutlet private weak var balanceLabel: NSTextField!
     @IBOutlet private weak var allowanceLabel: NSTextField!
     @IBOutlet private weak var allowanceIconLabel: NSTextField!
 
-    private var viewModel: TodayViewModel!
+    var appState: AppState? = AppState(dataService: UserDefaultsDataService())
+
+    private var viewModel: TodayPresentable!
 
     override var nibName: NSNib.Name? {
         return NSNib.Name(TodayViewController.instanceName)
@@ -14,7 +16,11 @@ class TodayViewController: NSViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        viewModel = TodayViewModel(delegate: self, displayModel: TodayDisplayModel())
+
+        guard let appState = appState else { return }
+        viewModel = TodayViewModel(networkDataServiceProvider: appState,
+                                   delegate: self,
+                                   displayModel: TodayDisplayModel())
         viewModel.viewDidLoad()
     }
 

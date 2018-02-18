@@ -20,7 +20,11 @@ class AddTransactionViewController: BaseViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        viewModel = AddTransactionViewModel(delegate: self, dataDelegate: dataDelegate)
+
+        guard let appState = appState else { return }
+        viewModel = AddTransactionViewModel(networkServiceProvider: appState,
+                                            delegate: self,
+                                            dataDelegate: dataDelegate)
         setupTextFields()
     }
 

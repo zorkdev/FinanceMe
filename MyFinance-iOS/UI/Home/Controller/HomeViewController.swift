@@ -25,9 +25,11 @@ class HomeViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        guard let appState = (UIApplication.shared.delegate as? AppDelegate)?.appState else { return }
+
         setupTableViews()
 
-        viewModel = HomeViewModel(delegate: self)
+        viewModel = HomeViewModel(serviceProvider: appState, delegate: self)
         viewModel.viewDidLoad()
     }
 
@@ -81,9 +83,11 @@ class HomeViewController: BaseViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         switch segue.destination {
         case let addTransactionViewController as AddTransactionViewController:
+            addTransactionViewController.appState = appState
             addTransactionViewController.dataDelegate = viewModel
 
         case let settingsViewController as SettingsViewController:
+            settingsViewController.appState = appState
             settingsViewController.dataDelegate = viewModel
 
         default: break
