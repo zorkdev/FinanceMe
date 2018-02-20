@@ -6,6 +6,7 @@ struct HomeCurrentMonthCellModel: HomeCellModelType {
 
     let allowance: String
     let forecast: String
+    let spending: String
 
 }
 
@@ -18,6 +19,9 @@ extension HomeCurrentMonthTableViewCell {
         forecastLabel.attributedText = homeCurrentMonthCellModel
             .displayModel
             .amountAttributedString(from: homeCurrentMonthCellModel.forecast)
+        spendingLabel.attributedText = homeCurrentMonthCellModel
+            .displayModel
+            .amountAttributedString(from: homeCurrentMonthCellModel.spending)
     }
 
 }

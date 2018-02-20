@@ -201,6 +201,7 @@
 		9A6EF75E202BA6A2006D3420 /* HALResponseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A6EF75D202BA6A2006D3420 /* HALResponseTests.swift */; };
 		9A6EF760202BA718006D3420 /* TransactionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A6EF75F202BA718006D3420 /* TransactionTests.swift */; };
 		9A6EF762202BABE0006D3420 /* SummaryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A6EF761202BABE0006D3420 /* SummaryTests.swift */; };
+		9A6F9FC3203CBCA00040BD50 /* HomeViewModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A6F9FC2203CBCA00040BD50 /* HomeViewModelType.swift */; };
 		9A740ECE201E245200D40943 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A740ECD201E245200D40943 /* AppDelegate.swift */; };
 		9A740ED2201E245200D40943 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9A740ED1201E245200D40943 /* Assets.xcassets */; };
 		9A740ED5201E245200D40943 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9A740ED3201E245200D40943 /* Main.storyboard */; };
@@ -563,6 +564,7 @@
 		9A6EF75D202BA6A2006D3420 /* HALResponseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HALResponseTests.swift; sourceTree = "<group>"; };
 		9A6EF75F202BA718006D3420 /* TransactionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionTests.swift; sourceTree = "<group>"; };
 		9A6EF761202BABE0006D3420 /* SummaryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SummaryTests.swift; sourceTree = "<group>"; };
+		9A6F9FC2203CBCA00040BD50 /* HomeViewModelType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModelType.swift; sourceTree = "<group>"; };
 		9A740ECB201E245200D40943 /* MyFinance-macOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "MyFinance-macOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9A740ECD201E245200D40943 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9A740ED1201E245200D40943 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -1076,6 +1078,7 @@
 		9A5AE58F2012B94200B25081 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				9A6F9FC2203CBCA00040BD50 /* HomeViewModelType.swift */,
 				9A5AE5A12012C99A00B25081 /* HomeViewModel.swift */,
 				9AD96C9620252CBF00D37F23 /* HomeCellModel.swift */,
 				9A8561A32027A68F00A26F12 /* HomeCurrentMonthCellModel.swift */,
@@ -2892,6 +2895,7 @@
 				9A3A2B902039DB9B0071FBC5 /* WatchService.swift in Sources */,
 				9AD96C9720252CBF00D37F23 /* HomeCellModel.swift in Sources */,
 				9A856176202774F300A26F12 /* AddTransactionDisplayModel.swift in Sources */,
+				9A6F9FC3203CBCA00040BD50 /* HomeViewModelType.swift in Sources */,
 				9AAA3D7620290621008881FD /* AuthViewController.swift in Sources */,
 				9A8561A42027A68F00A26F12 /* HomeCurrentMonthCellModel.swift in Sources */,
 			);

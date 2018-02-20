@@ -1,32 +1,5 @@
 import NotificationCenter
 
-protocol HomeViewModelDelegate: TodayViewModelDelegate, MessagePresentable {
-
-    func reloadTableView()
-    func endRefreshing()
-    func delete(from tab: HomeViewModel.Tab, section: Int)
-    func delete(from tab: HomeViewModel.Tab, section: Int, row: Int)
-    func showAlert(with title: String,
-                   message: String,
-                   confirmActionTitle: String,
-                   confirmAction: @escaping () -> Void,
-                   cancelActionTitle: String)
-
-}
-
-protocol HomeViewModelType: ViewModelType, AddTransactionViewModelDataDelegate, SettingsViewModelDataDelegate {
-
-    func numberOfSections(in tab: HomeViewModel.Tab) -> Int
-    func numberOfRows(in tab: HomeViewModel.Tab, in section: Int) -> Int
-    func cellModel(for tab: HomeViewModel.Tab, section: Int, row: Int) -> HomeCellModelType?
-    func header(for tab: HomeViewModel.Tab, section: Int) -> String?
-    func canEdit(tab: HomeViewModel.Tab, section: Int, row: Int) -> Bool
-    func delete(from tab: HomeViewModel.Tab, section: Int, row: Int)
-    func height(for tab: HomeViewModel.Tab, section: Int, row: Int) -> CGFloat
-    func refreshTapped()
-
-}
-
 class HomeViewModel {
 
     enum Tab: Int {
@@ -381,33 +354,12 @@ extension HomeViewModel {
     }
 
     private func configureBalanceCellModels() {
-        currentMonthCellModels = []
-        chartCellModels = []
+        configureCurrentMonthCellModel()
+        configureEndOfMonthSummaryCellModels()
+    }
+
+    private func configureEndOfMonthSummaryCellModels() {
         balanceCellModels = [:]
-
-        if let currentMonthSummary = currentMonthSummary {
-            let allowance = Formatters.currencyPlusMinusSign
-                .string(from: NSNumber(value: currentMonthSummary.allowance))
-                ?? displayModel.defaultAmount
-
-            let forecast = Formatters.currencyPlusMinusSign
-                .string(from: NSNumber(value: currentMonthSummary.forecast))
-                ?? displayModel.defaultAmount
-
-            let homeCurrentMonthCellModel = HomeCurrentMonthCellModel(allowance: allowance,
-                                                               forecast: forecast)
-
-            currentMonthCellModels = [homeCurrentMonthCellModel]
-
-            let payday = User.load(dataService: serviceProvider.dataService)?.payday ?? 0
-            let currentSummary = EndOfMonthSummary(balance: currentMonthSummary.forecast,
-                                                   created: Date().next(day: payday, direction: .forward))
-            var summaries = endOfMonthSummaries + [currentSummary]
-            summaries.sort(by: { $0.created < $1.created })
-            summaries = Array(summaries.suffix(12))
-            let homeChartCellModel = HomeChartCellModel(endOfMonthSummaries: summaries)
-            chartCellModels = [homeChartCellModel]
-        }
 
         for endOfMonthSummary in endOfMonthSummaries {
             var title = Formatters.month.string(from: endOfMonthSummary.created)
@@ -431,6 +383,40 @@ extension HomeViewModel {
             } else {
                 balanceCellModels[date] = [cellModel]
             }
+        }
+    }
+
+    private func configureCurrentMonthCellModel() {
+        currentMonthCellModels = []
+        chartCellModels = []
+
+        if let currentMonthSummary = currentMonthSummary {
+            let allowance = Formatters.currency
+                .string(from: NSNumber(value: currentMonthSummary.allowance))
+                ?? displayModel.defaultAmount
+
+            let forecast = Formatters.currency
+                .string(from: NSNumber(value: currentMonthSummary.forecast))
+                ?? displayModel.defaultAmount
+
+            let spending = Formatters.currency
+                .string(from: NSNumber(value: currentMonthSummary.spending))
+                ?? displayModel.defaultAmount
+
+            let homeCurrentMonthCellModel = HomeCurrentMonthCellModel(allowance: allowance,
+                                                                      forecast: forecast,
+                                                                      spending: spending)
+
+            currentMonthCellModels = [homeCurrentMonthCellModel]
+
+            let payday = User.load(dataService: serviceProvider.dataService)?.payday ?? 0
+            let currentSummary = EndOfMonthSummary(balance: currentMonthSummary.forecast,
+                                                   created: Date().next(day: payday, direction: .forward))
+            var summaries = endOfMonthSummaries + [currentSummary]
+            summaries.sort(by: { $0.created < $1.created })
+            summaries = Array(summaries.suffix(12))
+            let homeChartCellModel = HomeChartCellModel(endOfMonthSummaries: summaries)
+            chartCellModels = [homeChartCellModel]
         }
     }
 

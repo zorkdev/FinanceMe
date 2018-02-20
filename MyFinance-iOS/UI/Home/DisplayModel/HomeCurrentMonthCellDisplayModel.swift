@@ -8,7 +8,7 @@ struct HomeCurrentMonthCellDisplayModel: TodayDisplayModelType {
                               green: 69/255.0,
                               blue: 58/255.0,
                               alpha: 1)
-    let largeFontSize: CGFloat = 34
+    let largeFontSize: CGFloat = 32
     let smallFontSize: CGFloat = 16
 
 }

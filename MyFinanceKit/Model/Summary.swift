@@ -15,6 +15,7 @@ public struct CurrentMonthSummary: Storeable {
 
     public let allowance: Double
     public let forecast: Double
+    public let spending: Double
 
 }
 
