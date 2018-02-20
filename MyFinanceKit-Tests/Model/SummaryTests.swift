@@ -27,7 +27,8 @@ class SummaryTests: XCTestCase {
         """
         {
             "forecast" : -50.12,
-            "allowance" : 100
+            "allowance" : 100,
+            "spending" : -10
         }
         """.data(using: .utf8)!
 
@@ -36,7 +37,8 @@ class SummaryTests: XCTestCase {
 
     func testEncodeCurrentMonthSummary() {
         let currentMonthSummary = CurrentMonthSummary(allowance: 100,
-                                                      forecast: -50.12)
+                                                      forecast: -50.12,
+                                                      spending: -10)
 
         XCTAssertNotNil(currentMonthSummary.encoded())
     }
@@ -47,7 +49,8 @@ class SummaryTests: XCTestCase {
         {
             "currentMonthSummary" : {
                 "forecast": -50.12,
-                "allowance": 100
+                "allowance": 100,
+                "spending" : -10
             },
             "endOfMonthSummaries": [
                 {
@@ -64,7 +67,8 @@ class SummaryTests: XCTestCase {
 
     func testEncodeEndOfMonthSummaryList() {
         let currentMonthSummary = CurrentMonthSummary(allowance: 100,
-                                                      forecast: -50.12)
+                                                      forecast: -50.12,
+                                                      spending: -10)
 
         let endOfMonthSummary = EndOfMonthSummary(balance: 100,
                                                   created: Date())

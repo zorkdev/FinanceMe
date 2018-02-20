@@ -24,6 +24,11 @@ class TodayViewController: UIViewController, ViewControllerType {
         viewModel.viewDidLoad()
     }
 
+    @IBAction func buttonTapped(_ sender: UIButton) {
+        guard let url = URL(string: "myfinance://") else { return }
+        extensionContext?.open(url, completionHandler: nil)
+    }
+
 }
 
 extension TodayViewController: TodayViewModelDelegate {

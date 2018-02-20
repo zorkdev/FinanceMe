@@ -107,11 +107,21 @@
                                     <constraint firstItem="JX9-HX-uX9" firstAttribute="leading" secondItem="012-Vf-Y3Q" secondAttribute="leading" id="yTj-EV-wLd"/>
                                 </constraints>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8ye-a8-qI8">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="100"/>
+                                <connections>
+                                    <action selector="buttonTapped:" destination="M4Y-Lb-cyx" eventType="touchUpInside" id="bHB-S2-4IO"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <constraints>
+                            <constraint firstItem="8ye-a8-qI8" firstAttribute="bottom" secondItem="ssy-KU-ocm" secondAttribute="bottom" id="Eh0-KI-xzT"/>
+                            <constraint firstItem="8ye-a8-qI8" firstAttribute="leading" secondItem="ssy-KU-ocm" secondAttribute="leading" id="PIK-Np-X5S"/>
+                            <constraint firstItem="8ye-a8-qI8" firstAttribute="trailing" secondItem="ssy-KU-ocm" secondAttribute="trailing" id="hYG-Cf-L5Q"/>
                             <constraint firstItem="012-Vf-Y3Q" firstAttribute="leading" secondItem="ssy-KU-ocm" secondAttribute="leading" constant="16" id="l0t-3J-Jpz"/>
                             <constraint firstItem="ssy-KU-ocm" firstAttribute="trailing" secondItem="012-Vf-Y3Q" secondAttribute="trailing" constant="16" id="ma1-hq-j2L"/>
                             <constraint firstItem="012-Vf-Y3Q" firstAttribute="centerY" secondItem="S3S-Oj-5AN" secondAttribute="centerY" id="nTP-w4-z32"/>
+                            <constraint firstItem="8ye-a8-qI8" firstAttribute="top" secondItem="ssy-KU-ocm" secondAttribute="top" id="yCh-J0-SL2"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="ssy-KU-ocm"/>
                     </view>

@@ -1,6 +1,7 @@
 public protocol ConfigService {
 
     var isLoggingEnabled: Bool { get }
+    var urlScheme: String { get }
     var config: Config { get }
 
 }
@@ -14,6 +15,8 @@ public class ConfigFileService: ConfigService {
     }
 
     public let isLoggingEnabled = TARGET_OS_SIMULATOR == 1
+    public let urlScheme = "myfinance://"
+
     public let config: Config
 
     public init() {
