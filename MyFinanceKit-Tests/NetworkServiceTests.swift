@@ -1,6 +1,7 @@
 import PromiseKit
 @testable import MyFinanceKit
 
+//swiftlint:disable nesting
 class NetworkServiceTests: XCTestCase {
 
     let mockNetworkRequestable = MockNetworkRequestable()

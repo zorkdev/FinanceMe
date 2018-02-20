@@ -9,7 +9,7 @@ class AppStateiOS: AppState {
     let watchService: WatchService
 
     init(networkService: NetworkServiceType = NetworkService(networkRequestable: URLSession.shared,
-                                                             configService: ConfigService()),
+                                                             configService: ConfigFileService()),
          dataService: DataService = KeychainDataService(),
          watchService: WatchService = WatchService(dataService: KeychainDataService())) {
         self.watchService = watchService
