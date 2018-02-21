@@ -5,7 +5,8 @@ class UserBusinessLogicTests: XCTestCase {
     func testGetCurrentUser() {
         let newExpectation = expectation(description: "Current user fetched")
 
-        let userBusinessLogic = UserBusinessLogic()
+        let userBusinessLogic = UserBusinessLogic(networkService: appState.networkService,
+                                                  dataService: appState.dataService)
 
         _ = userBusinessLogic.getCurrentUser()
             .done { _ in
@@ -18,7 +19,8 @@ class UserBusinessLogicTests: XCTestCase {
     func testUpdateUser() {
         let newExpectation = expectation(description: "Current user updated")
 
-        let userBusinessLogic = UserBusinessLogic()
+        let userBusinessLogic = UserBusinessLogic(networkService: appState.networkService,
+                                                  dataService: appState.dataService)
 
         _ = userBusinessLogic.getCurrentUser()
             .then { user in

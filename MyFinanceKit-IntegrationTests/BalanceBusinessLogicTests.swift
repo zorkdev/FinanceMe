@@ -5,7 +5,8 @@ class BalanceBusinessLogicTests: XCTestCase {
     func testGetBalance() {
         let newExpectation = expectation(description: "Balance fetched")
 
-        let balanceBusinessLogic = BalanceBusinessLogic()
+        let balanceBusinessLogic = BalanceBusinessLogic(networkService: appState.networkService,
+                                                        dataService: appState.dataService)
 
         _ = balanceBusinessLogic.getBalance()
             .done { _ in

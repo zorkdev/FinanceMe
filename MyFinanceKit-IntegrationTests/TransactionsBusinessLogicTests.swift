@@ -5,7 +5,7 @@ class TransactionsBusinessLogicTests: XCTestCase {
     func testGetTransactions() {
         let newExpectation = expectation(description: "Transactions fetched")
 
-        let transactionsBusinessLogic = TransactionsBusinessLogic()
+        let transactionsBusinessLogic = TransactionsBusinessLogic(networkService: appState.networkService)
         let fromTo = FromToParameters(from: Date().oneMonthAgo, to: Date())
 
         _ = transactionsBusinessLogic.getTransactions(fromTo: fromTo)

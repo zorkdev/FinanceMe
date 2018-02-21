@@ -6,7 +6,7 @@ class ExternalTransactionsBusinessLogicTests: XCTestCase {
     func testGetExternalTransactions() {
         let newExpectation = expectation(description: "External transactions fetched")
 
-        let externalTransactionsBusinessLogic = ExternalTransactionsBusinessLogic()
+        let externalTransactionsBusinessLogic = ExternalTransactionsBusinessLogic(networkService: appState.networkService)
         let fromTo = FromToParameters(from: Date().oneMonthAgo, to: Date())
 
         _ = externalTransactionsBusinessLogic.getExternalTransactions(fromTo: fromTo)
@@ -22,7 +22,7 @@ class ExternalTransactionsBusinessLogicTests: XCTestCase {
         let createdExpectation = expectation(description: "External transaction created")
         let deletedExpectation = expectation(description: "External transaction deleted")
 
-        let externalTransactionsBusinessLogic = ExternalTransactionsBusinessLogic()
+        let externalTransactionsBusinessLogic = ExternalTransactionsBusinessLogic(networkService: appState.networkService)
 
         let transaction = Transaction(amount: -1,
                                       direction: .outbound,
