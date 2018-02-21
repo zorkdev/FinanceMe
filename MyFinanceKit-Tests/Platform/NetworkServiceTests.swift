@@ -4,9 +4,14 @@ import PromiseKit
 //swiftlint:disable nesting
 class NetworkServiceTests: XCTestCase {
 
-    let mockNetworkRequestable = MockNetworkRequestable()
+    var mockNetworkRequestable = MockNetworkRequestable()
     let mockConfigService = MockConfigService()
-    let mockAPI = MockAPI()
+    var mockAPI = MockAPI()
+
+    override func setUp() {
+        mockNetworkRequestable = MockNetworkRequestable()
+        mockAPI = MockAPI()
+    }
 
     func testPerformRequest() {
         let newExpectation = expectation(description: "Network call successful")
@@ -84,6 +89,71 @@ class NetworkServiceTests: XCTestCase {
         waitForExpectations(timeout: 10.0, handler: nil)
     }
 
+    func testPerformRequest_APIPathInvalidFailure() {
+        let newExpectation = expectation(description: "Network call unsuccessful - API path invalid error")
+
+        var mockAPI = MockAPI()
+        mockAPI.url = nil
+
+        let networkService = NetworkService(networkRequestable: mockNetworkRequestable,
+                                            configService: mockConfigService)
+
+        _ = networkService.performRequest(api: mockAPI,
+                                          method: .get,
+                                          parameters: nil,
+                                          body: nil)
+            .catch { error in
+                XCTAssertEqual(error as? AppError, AppError.apiPathInvalid)
+                newExpectation.fulfill()
+        }
+
+        waitForExpectations(timeout: 10.0, handler: nil)
+    }
+
+    func testPerformRequest_PMKHTTPErrorFailure() {
+        let newExpectation = expectation(description: "Network call unsuccessful - PMKHTTPError error")
+
+        mockNetworkRequestable.returnErrorValue = PMKHTTPError.badStatusCode(400, Data(), HTTPURLResponse())
+
+        let networkService = NetworkService(networkRequestable: mockNetworkRequestable,
+                                            configService: mockConfigService)
+
+        _ = networkService.performRequest(api: mockAPI,
+                                          method: .get,
+                                          parameters: nil,
+                                          body: nil)
+            .catch { error in
+                XCTAssertEqual(error as? APIError, APIError.badRequest)
+                newExpectation.fulfill()
+        }
+
+        waitForExpectations(timeout: 10.0, handler: nil)
+    }
+
+    func testPerformRequest_URLErrorFailure() {
+        let newExpectation = expectation(description: "Network call unsuccessful - URLError error")
+
+        let nsError = NSError(domain: NSURLErrorDomain,
+                            code: URLError.notConnectedToInternet.rawValue,
+                            userInfo: nil)
+
+        mockNetworkRequestable.returnErrorValue = nsError
+
+        let networkService = NetworkService(networkRequestable: mockNetworkRequestable,
+                                            configService: mockConfigService)
+
+        _ = networkService.performRequest(api: mockAPI,
+                                          method: .get,
+                                          parameters: nil,
+                                          body: nil)
+            .catch { error in
+                XCTAssertEqual(error as NSError, nsError)
+                newExpectation.fulfill()
+        }
+
+        waitForExpectations(timeout: 10.0, handler: nil)
+    }
+
     func testPerformRequestWithJSONCodable_Success() {
         let newExpectation = expectation(description: "Network call successful")
 
@@ -104,7 +174,7 @@ class NetworkServiceTests: XCTestCase {
                                           method: .get,
                                           parameters: nil,
                                           body: body)
-            .done { (body: Body) in
+            .done { (_: Body) in
                 let request = self.mockNetworkRequestable.lastRequest!
                 let headers = request.allHTTPHeaderFields!
 
@@ -141,7 +211,7 @@ class NetworkServiceTests: XCTestCase {
                                           method: .get,
                                           parameters: nil,
                                           body: body)
-            .done{ (body: Body) in
+            .done { (_: Body) in
                 return
             }.catch { error in
                 XCTAssertEqual(error as? AppError, expectedError)

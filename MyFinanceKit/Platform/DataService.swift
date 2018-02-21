@@ -31,9 +31,13 @@ public extension Storeable {
 
 extension Array: Storeable {}
 
+public enum DataServiceSaveStatus {
+    case success, failure
+}
+
 public protocol DataService {
 
-    func save(value: JSONEncodable, key: String)
+    @discardableResult func save(value: JSONEncodable, key: String) -> DataServiceSaveStatus
     func load<T: JSONDecodable>(key: String) -> T?
 
 }
@@ -42,9 +46,9 @@ public struct KeychainDataService: DataService {
 
     public init() {}
 
-    public func save(value: JSONEncodable, key: String) {
-        guard let data = value.encoded() else { return }
-        KeychainWrapper.standard.set(data, forKey: key)
+    @discardableResult public func save(value: JSONEncodable, key: String) -> DataServiceSaveStatus {
+        guard let data = value.encoded() else { return .failure }
+        return KeychainWrapper.standard.set(data, forKey: key) ? .success : .failure
     }
 
     public func load<T: JSONDecodable>(key: String) -> T? {
@@ -59,9 +63,10 @@ public struct UserDefaultsDataService: DataService {
 
     public init() {}
 
-    public func save(value: JSONEncodable, key: String) {
-        guard let data = value.encoded() else { return }
+    @discardableResult public func save(value: JSONEncodable, key: String) -> DataServiceSaveStatus {
+        guard let data = value.encoded() else { return .failure }
         UserDefaults.standard.set(data, forKey: key)
+        return .success
     }
 
     public func load<T: JSONDecodable>(key: String) -> T? {

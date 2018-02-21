@@ -2,7 +2,7 @@
 
 struct MockAPI: APIType {
 
-    let url: URL? = URL(string: "https://www.apple.com")
+    var url: URL? = URL(string: "https://www.apple.com")
 
     func token(config: Config) -> String {
         return config.starlingToken

@@ -14,8 +14,7 @@ class BalanceTests: XCTestCase {
             "currency": "GBP",
             "availableToSpend": 100
         }
-        """
-        .data(using: .utf8)!
+        """.data(using: .utf8)!
 
         XCTAssertNotNil(Balance(data: jsonData))
     }
