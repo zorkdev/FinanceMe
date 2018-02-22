@@ -115,6 +115,10 @@
 		9A37AB3C203E333900CFEE67 /* AllowanceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A37AB3B203E333900CFEE67 /* AllowanceTests.swift */; };
 		9A37AB3D203E333900CFEE67 /* AllowanceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A37AB3B203E333900CFEE67 /* AllowanceTests.swift */; };
 		9A37AB3F203E386A00CFEE67 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A37AB3E203E386A00CFEE67 /* Config.swift */; };
+		9A37AB43203E3AF000CFEE67 /* BalanceBusinessLogicTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A37AB42203E3AF000CFEE67 /* BalanceBusinessLogicTests.swift */; };
+		9A37AB44203E3AF000CFEE67 /* BalanceBusinessLogicTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A37AB42203E3AF000CFEE67 /* BalanceBusinessLogicTests.swift */; };
+		9A37AB46203E3B5700CFEE67 /* MockNetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A37AB45203E3B5700CFEE67 /* MockNetworkService.swift */; };
+		9A37AB47203E3B5700CFEE67 /* MockNetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A37AB45203E3B5700CFEE67 /* MockNetworkService.swift */; };
 		9A3A2B7A203998E80071FBC5 /* URLSessionExtensionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A3A2B79203998E80071FBC5 /* URLSessionExtensionsTests.swift */; };
 		9A3A2B7B203998E80071FBC5 /* URLSessionExtensionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A3A2B79203998E80071FBC5 /* URLSessionExtensionsTests.swift */; };
 		9A3A2B7D20399A020071FBC5 /* StringRepresentableTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A3A2B7C20399A020071FBC5 /* StringRepresentableTests.swift */; };
@@ -562,6 +566,8 @@
 		9A37AB38203E308D00CFEE67 /* ValidatorsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidatorsTests.swift; sourceTree = "<group>"; };
 		9A37AB3B203E333900CFEE67 /* AllowanceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllowanceTests.swift; sourceTree = "<group>"; };
 		9A37AB3E203E386A00CFEE67 /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
+		9A37AB42203E3AF000CFEE67 /* BalanceBusinessLogicTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BalanceBusinessLogicTests.swift; sourceTree = "<group>"; };
+		9A37AB45203E3B5700CFEE67 /* MockNetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockNetworkService.swift; sourceTree = "<group>"; };
 		9A3A2B79203998E80071FBC5 /* URLSessionExtensionsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionExtensionsTests.swift; sourceTree = "<group>"; };
 		9A3A2B7C20399A020071FBC5 /* StringRepresentableTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringRepresentableTests.swift; sourceTree = "<group>"; };
 		9A3A2B7F2039A4050071FBC5 /* NetworkServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkServiceTests.swift; sourceTree = "<group>"; };
@@ -997,6 +1003,7 @@
 				9A37AB2F203E293F00CFEE67 /* APIsTests.swift */,
 				9A37AB32203E2CAE00CFEE67 /* FormattersTests.swift */,
 				9A37AB38203E308D00CFEE67 /* ValidatorsTests.swift */,
+				9A37AB42203E3AF000CFEE67 /* BalanceBusinessLogicTests.swift */,
 			);
 			path = Business;
 			sourceTree = "<group>";
@@ -1004,6 +1011,7 @@
 		9A3A2B98203A2DDC0071FBC5 /* Mocks */ = {
 			isa = PBXGroup;
 			children = (
+				9A37AB45203E3B5700CFEE67 /* MockNetworkService.swift */,
 				9A3A2B99203A2DFC0071FBC5 /* MockNetworkRequestable.swift */,
 				9A3A2B9C203A2E940071FBC5 /* MockConfigService.swift */,
 				9A3A2B9F203A2FC80071FBC5 /* MockAPI.swift */,
@@ -3063,6 +3071,7 @@
 				9A94F8FA202CF23E00AEF61F /* JSONCodableTests.swift in Sources */,
 				9A6EF75A202BA5D0006D3420 /* ConfigTests.swift in Sources */,
 				9A37AB11203E144900CFEE67 /* MockDataService.swift in Sources */,
+				9A37AB43203E3AF000CFEE67 /* BalanceBusinessLogicTests.swift in Sources */,
 				9A6EF760202BA718006D3420 /* TransactionTests.swift in Sources */,
 				9A3A2BA0203A2FC80071FBC5 /* MockAPI.swift in Sources */,
 				9A37AB33203E2CAE00CFEE67 /* FormattersTests.swift in Sources */,
@@ -3070,6 +3079,7 @@
 				9A3A2B802039A4050071FBC5 /* NetworkServiceTests.swift in Sources */,
 				9A37AB36203E2FCE00CFEE67 /* AppStateTests.swift in Sources */,
 				9A74CD01203E084900CBA082 /* DataServiceTests.swift in Sources */,
+				9A37AB46203E3B5700CFEE67 /* MockNetworkService.swift in Sources */,
 				9A6EF74A202B939B006D3420 /* BalanceTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -3111,6 +3121,7 @@
 				9A2022A92038EC0A0012DD51 /* DateExtensionsTests.swift in Sources */,
 				9A94F8F3202CEA9800AEF61F /* TransactionTests.swift in Sources */,
 				9A37AB12203E144900CFEE67 /* MockDataService.swift in Sources */,
+				9A37AB44203E3AF000CFEE67 /* BalanceBusinessLogicTests.swift in Sources */,
 				9A94F8F4202CEA9A00AEF61F /* SummaryTests.swift in Sources */,
 				9A3A2BA1203A2FC80071FBC5 /* MockAPI.swift in Sources */,
 				9A37AB34203E2CAE00CFEE67 /* FormattersTests.swift in Sources */,
@@ -3118,6 +3129,7 @@
 				9A3A2B812039A4050071FBC5 /* NetworkServiceTests.swift in Sources */,
 				9A37AB37203E2FCE00CFEE67 /* AppStateTests.swift in Sources */,
 				9A74CD02203E084A00CBA082 /* DataServiceTests.swift in Sources */,
+				9A37AB47203E3B5700CFEE67 /* MockNetworkService.swift in Sources */,
 				9A94F8F2202CEA9600AEF61F /* BalanceTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

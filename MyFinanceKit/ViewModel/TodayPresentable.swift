@@ -10,7 +10,7 @@ public protocol TodayPresentable: ViewModelType {
 
     var networkDataServiceProvider: NetworkDataServiceProvider { get }
     var displayModel: TodayDisplayModelType { get }
-    weak var delegate: TodayViewModelDelegate? { get }
+    var delegate: TodayViewModelDelegate? { get }
 
     @discardableResult func updateData() -> Promise<Void>
     func setupDefaults()
