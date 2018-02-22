@@ -1,4 +1,4 @@
-public struct User: Storeable {
+public struct User: Storeable, Equatable {
 
     public let name: String
     public let payday: Int

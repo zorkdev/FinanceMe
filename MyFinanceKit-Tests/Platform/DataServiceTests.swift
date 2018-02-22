@@ -12,6 +12,8 @@ class DataServiceTests: XCTestCase {
     let userDefaultsDataService = UserDefaultsDataService()
 
     override func tearDown() {
+        super.tearDown()
+
         mockDataService = MockDataService()
         _ = KeychainWrapper.standard.removeAllKeys()
         UserDefaults.standard.removePersistentDomain(forName: Bundle.main.bundleIdentifier!)

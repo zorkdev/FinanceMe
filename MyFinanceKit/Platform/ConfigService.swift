@@ -19,13 +19,14 @@ public class ConfigFileService: ConfigService {
 
     public let config: Config
 
-    public init() {
+    public init?(fatalErrorable: FatalErrorable) {
         let bundle = Bundle(for: ConfigFileService.self)
         guard let configURL = bundle.url(forResource: Constants.configFilename,
                                          withExtension: Constants.configExtension),
             let data = try? Data(contentsOf: configURL),
             let config = Config(data: data) else {
-                fatalError(Constants.configMissingMessage)
+                fatalErrorable.fatalError(message: Constants.configMissingMessage)
+                return nil
         }
 
         self.config = config

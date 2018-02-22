@@ -1,4 +1,4 @@
-public enum AppError: Error, LocalizedError {
+public enum AppError: Error, LocalizedError, Equatable {
 
     case unknownError
     case apiPathInvalid
@@ -11,7 +11,7 @@ public enum AppError: Error, LocalizedError {
 
 }
 
-public enum APIError: Int, Error, LocalizedError {
+public enum APIError: Int, Error, LocalizedError, Equatable {
 
     case badRequest = 400
     case unauthorized = 401

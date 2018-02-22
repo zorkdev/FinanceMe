@@ -1,4 +1,4 @@
-public struct Allowance: Storeable {
+public struct Allowance: Storeable, Equatable {
 
     public let allowance: Double
 

@@ -8,14 +8,11 @@ class AppStateiOS: AppState {
 
     let watchService: WatchService
 
-    init(networkService: NetworkServiceType = NetworkService(networkRequestable: URLSession.shared,
-                                                             configService: ConfigFileService()),
-         dataService: DataService = KeychainDataService(),
-         watchService: WatchService = WatchService(dataService: KeychainDataService())) {
-        self.watchService = watchService
-        super.init(networkService: networkService,
-                   dataService: dataService)
+    override init() {
+        self.watchService = WatchService(dataService: KeychainDataService())
+        super.init()
     }
+
 }
 
 extension AppStateiOS: WatchServiceProvider {}

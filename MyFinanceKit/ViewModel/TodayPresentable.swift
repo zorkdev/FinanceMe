@@ -34,8 +34,7 @@ public extension TodayPresentable {
         let balanceAttributedString = createAttributedString(from: balance.effectiveBalance)
         delegate?.set(balance: balanceAttributedString)
         let allowanceAttributedString = createAttributedString(from: user.allowance)
-        let spendingBusinessLogic = SpendingBusinessLogic(dataService: networkDataServiceProvider.dataService)
-        let allowanceIcon = spendingBusinessLogic.allowanceIcon(for: user)
+        let allowanceIcon = SpendingBusinessLogic().allowanceIcon(for: user)
         delegate?.set(allowance: allowanceAttributedString)
         delegate?.set(allowanceIcon: allowanceIcon)
     }
@@ -60,9 +59,7 @@ public extension TodayPresentable {
                                  dataService: networkDataServiceProvider.dataService)
             .getCurrentUser().done { user in
                 let allowanceAttributedString = self.createAttributedString(from: user.allowance)
-                let spendingBusinessLogic =
-                    SpendingBusinessLogic(dataService: self.networkDataServiceProvider.dataService)
-                let allowanceIcon = spendingBusinessLogic.allowanceIcon(for: user)
+                let allowanceIcon = SpendingBusinessLogic().allowanceIcon(for: user)
                 self.delegate?.set(allowance: allowanceAttributedString)
                 self.delegate?.set(allowanceIcon: allowanceIcon)
         }

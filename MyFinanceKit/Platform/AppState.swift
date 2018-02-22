@@ -13,9 +13,16 @@ open class AppState {
     public let networkService: NetworkServiceType
     public let dataService: DataService
 
-    public init(networkService: NetworkServiceType = NetworkService(networkRequestable: URLSession.shared,
-                                                                    configService: ConfigFileService()),
-                dataService: DataService = KeychainDataService()) {
+    public init() {
+        let fatalErrorable = SwiftFatalError()
+        let configService = ConfigFileService(fatalErrorable: fatalErrorable)!
+        networkService = NetworkService(networkRequestable: URLSession.shared,
+                                        configService: configService)
+        dataService = KeychainDataService()
+    }
+
+    public init(networkService: NetworkServiceType,
+                dataService: DataService) {
         self.networkService = networkService
         self.dataService = dataService
     }

@@ -5,7 +5,7 @@ public protocol APIType {
 
 }
 
-public enum API: APIType {
+public enum API: APIType, Equatable {
 
     case starling(StarlingAPI)
     case zorkdev(ZorkdevAPI)
@@ -26,7 +26,7 @@ public enum API: APIType {
 
 }
 
-public enum StarlingAPI: APIType {
+public enum StarlingAPI: APIType, Equatable {
 
     static let baseURL = "https://api.starlingbank.com/api/v1/"
 
@@ -50,7 +50,7 @@ public enum StarlingAPI: APIType {
 
 }
 
-public enum ZorkdevAPI: APIType {
+public enum ZorkdevAPI: APIType, Equatable {
 
     static let baseURL = "https://zorkdev.herokuapp.com/api/"
 
@@ -78,7 +78,7 @@ public enum ZorkdevAPI: APIType {
 
 }
 
-public struct FromToParameters: JSONCodable {
+public struct FromToParameters: JSONCodable, Equatable {
 
     public static var decodeDateFormatter: DateFormatter {
         return Formatters.apiDate

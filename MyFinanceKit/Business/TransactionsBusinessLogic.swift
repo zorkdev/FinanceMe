@@ -8,9 +8,9 @@ public struct TransactionsBusinessLogic {
 
     public func getTransactions(fromTo: FromToParameters? = nil) -> Promise<[Transaction]> {
         return networkService.performRequest(api: API.starling(.transactions),
-                                                    method: .get,
-                                                    parameters: fromTo,
-                                                    body: nil)
+                                             method: .get,
+                                             parameters: fromTo,
+                                             body: nil)
             .then { (halResponse: HALResponse<TransactionList>) -> Promise<[Transaction]> in
                 return .value(halResponse.embedded.transactions)
         }

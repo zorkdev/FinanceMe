@@ -1,16 +1,9 @@
 public struct SpendingBusinessLogic {
 
-    private let dataService: DataService
+    public init() {}
 
-    public init(dataService: DataService) {
-        self.dataService = dataService
-    }
-
-    //swiftlint:disable:next cyclomatic_complexity
     public func allowanceIcon(for user: User) -> String {
-        guard let allowance = User.load(dataService: dataService)?.allowance else { return "" }
-
-        switch allowance {
+        switch user.allowance {
         case -Double.greatestFiniteMagnitude ... -100: return "😱"
         case -100 ... -50: return "😨"
         case -50 ... -20: return "😰"

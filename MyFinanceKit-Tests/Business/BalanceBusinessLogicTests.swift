@@ -30,15 +30,12 @@ class BalanceBusinessLogicTests: XCTestCase {
 
         _ = balanceBusinessLogic.getBalance().done { balance in
 
-            //XCTAssertEqual(mockNetworkService.lastRequest?.api, StarlingAPI.balance)
-
-            XCTAssertEqual(balance.clearedBalance, expectedBalance.clearedBalance)
-            XCTAssertEqual(balance.effectiveBalance, expectedBalance.effectiveBalance)
-            XCTAssertEqual(balance.pendingTransactions, expectedBalance.pendingTransactions)
-            XCTAssertEqual(balance.availableToSpend, expectedBalance.availableToSpend)
-            XCTAssertEqual(balance.acceptedOverdraft, expectedBalance.acceptedOverdraft)
-            XCTAssertEqual(balance.currency, expectedBalance.currency)
-            XCTAssertEqual(balance.amount, expectedBalance.amount)
+            XCTAssertEqual(self.mockNetworkService.lastRequest?.api as? API, .starling(.balance))
+            XCTAssertEqual(self.mockNetworkService.lastRequest?.method, .get)
+            XCTAssertNil(self.mockNetworkService.lastRequest?.parameters)
+            XCTAssertNil(self.mockNetworkService.lastRequest?.body)
+            XCTAssertEqual(balance, expectedBalance)
+            XCTAssertEqual(self.mockDataService.lastSavedValue as? Balance, expectedBalance)
 
             newExpectation.fulfill()
         }

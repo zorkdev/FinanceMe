@@ -9,10 +9,10 @@ class MockNetworkService: NetworkServiceType {
     var returnDataValue: Data?
     var returnErrorValue: Error?
 
-    func performRequest<T>(api: APIType,
-                           method: HTTPMethod,
-                           parameters: JSONEncodable?,
-                           body: JSONEncodable?) -> Promise<T> where T: JSONDecodable {
+    func performRequest<T: JSONDecodable>(api: APIType,
+                                          method: HTTPMethod,
+                                          parameters: JSONEncodable?,
+                                          body: JSONEncodable?) -> Promise<T> {
 
         lastRequest = (api: api, method: method, parameters: parameters, body: body)
 

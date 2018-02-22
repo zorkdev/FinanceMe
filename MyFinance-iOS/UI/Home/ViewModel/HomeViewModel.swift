@@ -119,9 +119,7 @@ extension HomeViewModel {
                                  dataService: serviceProvider.dataService)
             .getCurrentUser().done { user in
                 let allowanceAttributedString = self.createAttributedString(from: user.allowance)
-                let spendingBusinessLogic =
-                    SpendingBusinessLogic(dataService: self.serviceProvider.dataService)
-                let allowanceIcon = spendingBusinessLogic.allowanceIcon(for: user)
+                let allowanceIcon = SpendingBusinessLogic().allowanceIcon(for: user)
                 self.delegate?.set(allowance: allowanceAttributedString)
                 self.delegate?.set(allowanceIcon: allowanceIcon)
                 self.serviceProvider.watchService.updateComplication()

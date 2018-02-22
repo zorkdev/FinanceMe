@@ -3,6 +3,8 @@
 class DateExtensionsTests: XCTestCase {
 
     override func tearDown() {
+        super.tearDown()
+
         NSTimeZone.resetSystemTimeZone()
     }
 

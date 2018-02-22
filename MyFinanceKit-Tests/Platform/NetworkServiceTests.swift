@@ -9,6 +9,8 @@ class NetworkServiceTests: XCTestCase {
     var mockAPI = MockAPI()
 
     override func setUp() {
+        super.setUp()
+
         mockNetworkRequestable = MockNetworkRequestable()
         mockAPI = MockAPI()
     }

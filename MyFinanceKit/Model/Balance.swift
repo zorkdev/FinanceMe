@@ -1,4 +1,4 @@
-public struct Balance: Storeable {
+public struct Balance: Storeable, Equatable {
 
     public let clearedBalance: Double
     public let effectiveBalance: Double
