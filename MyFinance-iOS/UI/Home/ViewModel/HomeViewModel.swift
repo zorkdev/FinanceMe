@@ -480,7 +480,7 @@ extension HomeViewModel {
         }
 
         let monthlyAllowance = regularTransactions
-            .flatMap({ $0.amount })
+            .compactMap({ $0.amount })
             .reduce(0, +)
         let detail = Formatters.currency
             .string(from: NSNumber(value: monthlyAllowance))

@@ -1,8 +1,8 @@
 public typealias JSONCodable = JSONEncodable & JSONDecodable
 
-extension Array: JSONCodable {}
-extension Dictionary: JSONCodable {}
-extension Optional: JSONCodable {}
+extension Array: JSONCodable where Element: JSONCodable {}
+extension Dictionary: JSONCodable where Key: JSONCodable, Value: JSONCodable {}
+extension Optional: JSONCodable where Wrapped: JSONCodable {}
 extension Int: JSONCodable {}
 extension Double: JSONCodable {}
 extension String: JSONCodable {}

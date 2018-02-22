@@ -29,7 +29,7 @@ public extension Storeable {
 
 }
 
-extension Array: Storeable {}
+extension Array: Storeable where Element: JSONCodable {}
 
 public enum DataServiceSaveStatus {
     case success, failure

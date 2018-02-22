@@ -5,10 +5,6 @@ class DataServiceTests: XCTestCase {
 
     struct StubModel: Storeable, Equatable {
         let variable: String
-
-        static func == (lhs: DataServiceTests.StubModel, rhs: DataServiceTests.StubModel) -> Bool {
-            return lhs.variable == rhs.variable
-        }
     }
 
     var mockDataService = MockDataService()
