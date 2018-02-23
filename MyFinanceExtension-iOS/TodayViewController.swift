@@ -10,7 +10,7 @@ class TodayViewController: UIViewController, ViewControllerType {
 
     let appState: AppState! = AppState()
 
-    private var viewModel: TodayViewModel!
+    private var viewModel: TodayPresentable!
 
     override func viewDidLoad() {
         super.viewDidLoad()

@@ -7,7 +7,7 @@ class SettingsViewController: BaseViewController {
     @IBOutlet private weak var editButton: UIButton!
     @IBOutlet private weak var saveButton: UIButton!
 
-    private var viewModel: SettingsViewModel!
+    private var viewModel: SettingsViewModelType!
 
     private let startDatePicker = UIDatePicker()
     private var selectedDate = Date()

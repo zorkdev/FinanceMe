@@ -26,6 +26,9 @@ protocol SettingsViewModelType: ViewModelType {
 
 class SettingsViewModel {
 
+    typealias ServiceProvider = NetworkServiceProvider & DataServiceProvider
+    let serviceProvider: ServiceProvider
+
     private let userBusinessLogic: UserBusinessLogic
 
     private let paydayValues: [String] = {
@@ -33,9 +36,6 @@ class SettingsViewModel {
     }()
 
     private var isEditing = false
-
-    typealias ServiceProvider = NetworkServiceProvider & DataServiceProvider
-    let serviceProvider: ServiceProvider
 
     private weak var delegate: SettingsViewModelDelegate?
     private weak var dataDelegate: SettingsViewModelDataDelegate?

@@ -8,7 +8,7 @@ class TodayViewController: NSViewController, ViewControllerType {
 
     let appState: AppState! = AppStatemacOS()
 
-    private var viewModel: TodayViewModel!
+    private var viewModel: TodayPresentable!
 
     override var nibName: NSNib.Name? {
         return NSNib.Name(TodayViewController.instanceName)

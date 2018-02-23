@@ -12,7 +12,7 @@ class HomeViewController: BaseViewController {
     @IBOutlet private weak var tabIndicator: UIView!
     @IBOutlet private weak var scrollView: UIScrollView!
 
-    private var viewModel: HomeViewModel!
+    private var viewModel: HomeViewModelType!
 
     private let transactionsRefreshControl = UIRefreshControl()
     private let regularsRefreshControl = UIRefreshControl()

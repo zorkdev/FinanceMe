@@ -6,7 +6,7 @@ class AddTransactionViewController: BaseViewController {
     @IBOutlet private weak var createdField: UITextField!
     @IBOutlet private weak var saveButton: UIButton!
 
-    private var viewModel: AddTransactionViewModel!
+    private var viewModel: AddTransactionViewModelType!
 
     private let createdPicker = UIDatePicker()
     private var selectedSource = 0

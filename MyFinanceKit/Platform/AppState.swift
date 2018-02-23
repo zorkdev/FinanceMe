@@ -24,10 +24,3 @@ open class AppState: NetworkServiceProvider, DataServiceProvider {
     }
 
 }
-
-public protocol AppStateConsumer {
-
-    associatedtype ServiceProvider
-    var serviceProvider: ServiceProvider { get }
-
-}

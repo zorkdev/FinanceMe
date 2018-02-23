@@ -6,7 +6,10 @@ public protocol TodayViewModelDelegate: class {
 
 }
 
-public protocol TodayPresentable: ViewModelType where ServiceProvider == NetworkServiceProvider & DataServiceProvider {
+public protocol TodayPresentable: ViewModelType {
+
+    typealias ServiceProvider = NetworkServiceProvider & DataServiceProvider
+    var serviceProvider: ServiceProvider { get }
 
     var displayModel: TodayDisplayModelType { get }
     var delegate: TodayViewModelDelegate? { get }
