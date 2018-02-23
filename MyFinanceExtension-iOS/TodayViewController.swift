@@ -8,17 +8,16 @@ class TodayViewController: UIViewController, ViewControllerType {
     @IBOutlet private weak var allowanceLabel: UILabel!
     @IBOutlet private weak var allowanceIconLabel: UILabel!
 
-    var appState: AppState? = AppState()
+    let appState: AppState! = AppState()
 
-    private var viewModel: TodayPresentable!
+    private var viewModel: TodayViewModel!
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        guard let appState = appState else { return }
         primaryVibrancyEffectView.effect = UIVibrancyEffect.widgetPrimary()
         secondaryVibrancyEffectView.effect = UIVibrancyEffect.widgetSecondary()
-        viewModel = TodayViewModel(networkDataServiceProvider: appState,
+        viewModel = TodayViewModel(serviceProvider: appState,
                                    delegate: self,
                                    displayModel: TodayDisplayModel())
         viewModel.viewDidLoad()

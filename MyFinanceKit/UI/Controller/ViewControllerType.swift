@@ -1,5 +1,5 @@
 public protocol ViewControllerType {
 
-    var appState: AppState? { get set }
+    var appState: AppState! { get }
 
 }

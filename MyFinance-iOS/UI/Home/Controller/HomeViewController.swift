@@ -12,7 +12,7 @@ class HomeViewController: BaseViewController {
     @IBOutlet private weak var tabIndicator: UIView!
     @IBOutlet private weak var scrollView: UIScrollView!
 
-    private var viewModel: HomeViewModelType!
+    private var viewModel: HomeViewModel!
 
     private let transactionsRefreshControl = UIRefreshControl()
     private let regularsRefreshControl = UIRefreshControl()
@@ -25,7 +25,7 @@ class HomeViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        guard let appState = (UIApplication.shared.delegate as? AppDelegate)?.appState else { return }
+        guard let appState = appState as? AppStateiOS else { return }
 
         setupTableViews()
 

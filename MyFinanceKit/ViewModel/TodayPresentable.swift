@@ -6,9 +6,8 @@ public protocol TodayViewModelDelegate: class {
 
 }
 
-public protocol TodayPresentable: ViewModelType {
+public protocol TodayPresentable: ViewModelType where ServiceProvider == NetworkServiceProvider & DataServiceProvider {
 
-    var networkDataServiceProvider: NetworkDataServiceProvider { get }
     var displayModel: TodayDisplayModelType { get }
     var delegate: TodayViewModelDelegate? { get }
 
@@ -29,8 +28,8 @@ public extension TodayPresentable {
     }
 
     public func setupDefaults() {
-        guard let balance = Balance.load(dataService: networkDataServiceProvider.dataService),
-            let user = User.load(dataService: networkDataServiceProvider.dataService) else { return }
+        guard let balance = Balance.load(dataService: serviceProvider.dataService),
+            let user = User.load(dataService: serviceProvider.dataService) else { return }
         let balanceAttributedString = createAttributedString(from: balance.effectiveBalance)
         delegate?.set(balance: balanceAttributedString)
         let allowanceAttributedString = createAttributedString(from: user.allowance)
@@ -46,8 +45,8 @@ public extension TodayPresentable {
     }
 
     @discardableResult public func getBalance() -> Promise<Void> {
-        return BalanceBusinessLogic(networkService: networkDataServiceProvider.networkService,
-                                    dataService: networkDataServiceProvider.dataService)
+        return BalanceBusinessLogic(networkService: serviceProvider.networkService,
+                                    dataService: serviceProvider.dataService)
             .getBalance().done { balance in
             let balanceAttributedString = self.createAttributedString(from: balance.effectiveBalance)
             self.delegate?.set(balance: balanceAttributedString)
@@ -55,8 +54,8 @@ public extension TodayPresentable {
     }
 
     @discardableResult public func getUser() -> Promise<Void> {
-        return UserBusinessLogic(networkService: networkDataServiceProvider.networkService,
-                                 dataService: networkDataServiceProvider.dataService)
+        return UserBusinessLogic(networkService: serviceProvider.networkService,
+                                 dataService: serviceProvider.dataService)
             .getCurrentUser().done { user in
                 let allowanceAttributedString = self.createAttributedString(from: user.allowance)
                 let allowanceIcon = SpendingBusinessLogic().allowanceIcon(for: user)

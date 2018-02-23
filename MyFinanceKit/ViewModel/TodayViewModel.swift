@@ -1,13 +1,13 @@
 public struct TodayViewModel: TodayPresentable {
 
-    public let networkDataServiceProvider: NetworkDataServiceProvider
+    public let serviceProvider: DataServiceProvider & NetworkServiceProvider
     public let displayModel: TodayDisplayModelType
     public weak var delegate: TodayViewModelDelegate?
 
-    public init(networkDataServiceProvider: NetworkDataServiceProvider,
+    public init(serviceProvider: DataServiceProvider & NetworkServiceProvider,
                 delegate: TodayViewModelDelegate,
                 displayModel: TodayDisplayModelType) {
-        self.networkDataServiceProvider = networkDataServiceProvider
+        self.serviceProvider = serviceProvider
         self.delegate = delegate
         self.displayModel = displayModel
     }

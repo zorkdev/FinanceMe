@@ -35,7 +35,8 @@ class BalanceBusinessLogicTests: XCTestCase {
             XCTAssertNil(self.mockNetworkService.lastRequest?.parameters)
             XCTAssertNil(self.mockNetworkService.lastRequest?.body)
             XCTAssertEqual(balance, expectedBalance)
-            XCTAssertEqual(self.mockDataService.lastSavedValue as? Balance, expectedBalance)
+            XCTAssertTrue(self.mockDataService.savedValues
+                .contains(where: { ($0 as? Balance) == expectedBalance }) == true)
 
             newExpectation.fulfill()
         }

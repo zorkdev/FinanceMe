@@ -33,7 +33,8 @@ class UserBusinessLogicTests: XCTestCase {
             XCTAssertNil(self.mockNetworkService.lastRequest?.parameters)
             XCTAssertNil(self.mockNetworkService.lastRequest?.body)
             XCTAssertEqual(user, expectedUser)
-            XCTAssertEqual(self.mockDataService.lastSavedValue as? User, expectedUser)
+            XCTAssertTrue(self.mockDataService.savedValues
+                .contains(where: { ($0 as? User) == expectedUser }) == true)
 
             newExpectation.fulfill()
         }
@@ -62,7 +63,8 @@ class UserBusinessLogicTests: XCTestCase {
             XCTAssertNil(self.mockNetworkService.lastRequest?.parameters)
             XCTAssertEqual(self.mockNetworkService.lastRequest?.body as? User, expectedUser)
             XCTAssertEqual(user, expectedUser)
-            XCTAssertEqual(self.mockDataService.lastSavedValue as? User, expectedUser)
+            XCTAssertTrue(self.mockDataService.savedValues
+                .contains(where: { ($0 as? User) == expectedUser }) == true)
 
             newExpectation.fulfill()
         }

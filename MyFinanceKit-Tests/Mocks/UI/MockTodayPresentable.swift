@@ -2,16 +2,18 @@
 
 class MockTodayPresentable: TodayPresentable {
 
-    var networkDataServiceProvider: NetworkDataServiceProvider
+    typealias ServiceProvider = NetworkServiceProvider & DataServiceProvider
+    var serviceProvider: ServiceProvider
+
     var displayModel: TodayDisplayModelType
 
     //swiftlint:disable:next weak_delegate
     var delegate: TodayViewModelDelegate?
 
-    init(networkDataServiceProvider: NetworkDataServiceProvider,
+    init(serviceProvider: ServiceProvider,
          displayModel: TodayDisplayModelType,
          delegate: TodayViewModelDelegate) {
-        self.networkDataServiceProvider = networkDataServiceProvider
+        self.serviceProvider = serviceProvider
         self.displayModel = displayModel
         self.delegate = delegate
     }

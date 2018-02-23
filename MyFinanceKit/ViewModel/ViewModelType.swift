@@ -1,4 +1,4 @@
-public protocol ViewModelType {
+public protocol ViewModelType: AppStateConsumer {
 
     func viewDidLoad()
 

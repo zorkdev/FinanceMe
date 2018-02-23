@@ -2,7 +2,7 @@
 
 class MockDataService: DataService {
 
-    var lastSavedValue: JSONEncodable?
+    var savedValues = [JSONEncodable]()
     var lastSavedKey: String?
     var saveReturnValue: DataServiceSaveStatus?
 
@@ -10,7 +10,7 @@ class MockDataService: DataService {
     var loadReturnValues = [JSONDecodable]()
 
     func save(value: JSONEncodable, key: String) -> DataServiceSaveStatus {
-        lastSavedValue = value
+        savedValues.append(value)
         lastSavedKey = key
 
         if let saveReturnValue = saveReturnValue {

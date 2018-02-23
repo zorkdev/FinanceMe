@@ -1,6 +1,6 @@
 @testable import MyFinanceKit
 
-struct MockNetworkDataServiceProvider: NetworkDataServiceProvider {
+struct MockAppState: NetworkServiceProvider, DataServiceProvider {
     var dataService: DataService = MockDataService()
     var networkService: NetworkServiceType = MockNetworkService()
 }

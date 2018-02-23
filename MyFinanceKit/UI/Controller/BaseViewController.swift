@@ -1,6 +1,6 @@
 open class BaseViewController: UIViewController {
 
-    public var appState: AppState?
+    public var appState: AppState!
 
     private struct Constants {
         static let keyboardToolbarDoneButtonTitle = "Done"

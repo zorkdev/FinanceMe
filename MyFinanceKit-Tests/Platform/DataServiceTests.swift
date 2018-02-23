@@ -24,8 +24,9 @@ class DataServiceTests: XCTestCase {
 
         stubModel.save(dataService: mockDataService)
 
-        XCTAssertNotNil(mockDataService.lastSavedValue)
-        XCTAssertEqual((mockDataService.lastSavedValue as? StubModel)!, stubModel)
+        XCTAssertFalse(mockDataService.savedValues.isEmpty)
+        XCTAssertTrue(self.mockDataService.savedValues
+            .contains(where: { ($0 as? StubModel) == stubModel }) == true)
         XCTAssertEqual(mockDataService.lastSavedKey, "StubModel")
     }
 

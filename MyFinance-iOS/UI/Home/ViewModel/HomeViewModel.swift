@@ -10,6 +10,9 @@ class HomeViewModel {
         case allowance, inbound, outbound
     }
 
+    typealias ServiceProvider = NetworkServiceProvider & DataServiceProvider & WatchServiceProvider
+    let serviceProvider: ServiceProvider
+
     private let externalTransactionsBusinessLogic: ExternalTransactionsBusinessLogic
     private let endOfMonthSummaryBusinessLogic: EndOfMonthSummaryBusinessLogic
 
@@ -40,13 +43,11 @@ class HomeViewModel {
     private var currentMonthCellModels = [HomeCurrentMonthCellModel]()
     private var chartCellModels = [HomeChartCellModel]()
 
-    let serviceProvider: NetworkDataWatchServiceProvider
-
     let displayModel: TodayDisplayModelType = HomeDisplayModel()
 
     weak var delegate: HomeViewModelDelegate?
 
-    init(serviceProvider: NetworkDataWatchServiceProvider,
+    init(serviceProvider: ServiceProvider,
          delegate: HomeViewModelDelegate) {
         self.serviceProvider = serviceProvider
         self.delegate = delegate

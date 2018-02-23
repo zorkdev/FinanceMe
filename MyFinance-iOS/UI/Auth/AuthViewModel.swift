@@ -7,7 +7,7 @@ protocol AuthViewModelDelegate: class {
 
 }
 
-protocol AuthViewModelType: ViewModelType {
+protocol AuthViewModelType {
 
     func tryAgainButtonTapped()
 

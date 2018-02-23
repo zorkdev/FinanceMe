@@ -3,7 +3,7 @@
 class TodayViewModelTests: XCTestCase {
 
     func testInit() {
-        _ = TodayViewModel(networkDataServiceProvider: MockNetworkDataServiceProvider(),
+        _ = TodayViewModel(serviceProvider: MockAppState(),
                            delegate: MockTodayViewModelDelegate(),
                            displayModel: MockTodayDisplayModel())
     }

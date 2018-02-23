@@ -34,19 +34,20 @@ class SettingsViewModel {
 
     private var isEditing = false
 
-    let networkDataServiceProvider: NetworkDataServiceProvider
+    typealias ServiceProvider = NetworkServiceProvider & DataServiceProvider
+    let serviceProvider: ServiceProvider
 
     private weak var delegate: SettingsViewModelDelegate?
     private weak var dataDelegate: SettingsViewModelDataDelegate?
 
-    init(networkDataServiceProvider: NetworkDataServiceProvider,
+    init(serviceProvider: ServiceProvider,
          delegate: SettingsViewModelDelegate,
          dataDelegate: SettingsViewModelDataDelegate?) {
-        self.networkDataServiceProvider = networkDataServiceProvider
+        self.serviceProvider = serviceProvider
         self.delegate = delegate
         self.dataDelegate = dataDelegate
-        self.userBusinessLogic = UserBusinessLogic(networkService: networkDataServiceProvider.networkService,
-                                                   dataService: networkDataServiceProvider.dataService)
+        self.userBusinessLogic = UserBusinessLogic(networkService: serviceProvider.networkService,
+                                                   dataService: serviceProvider.dataService)
     }
 
 }
@@ -123,7 +124,7 @@ extension SettingsViewModel: SettingsViewModelType {
 extension SettingsViewModel {
 
     func setupDefaults() {
-        guard let user = User.load(dataService: networkDataServiceProvider.dataService),
+        guard let user = User.load(dataService: serviceProvider.dataService),
             let largeTransaction = Formatters.currency
                 .string(from: NSNumber(value: user.largeTransaction)) else { return }
 

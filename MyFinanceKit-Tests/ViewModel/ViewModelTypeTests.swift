@@ -2,7 +2,11 @@
 
 class ViewModelTypeTests: XCTestCase {
 
-    struct ViewModel: ViewModelType {}
+    struct ViewModel: ViewModelType {
+        //swiftlint:disable:next nesting
+        typealias ServiceProvider = NetworkServiceProvider
+        let serviceProvider: ServiceProvider = MockAppState()
+    }
 
     func testViewDidLoad() {
         ViewModel().viewDidLoad()

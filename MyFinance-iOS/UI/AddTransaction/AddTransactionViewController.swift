@@ -6,7 +6,7 @@ class AddTransactionViewController: BaseViewController {
     @IBOutlet private weak var createdField: UITextField!
     @IBOutlet private weak var saveButton: UIButton!
 
-    private var viewModel: AddTransactionViewModelType!
+    private var viewModel: AddTransactionViewModel!
 
     private let createdPicker = UIDatePicker()
     private var selectedSource = 0
@@ -21,8 +21,7 @@ class AddTransactionViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        guard let appState = appState else { return }
-        viewModel = AddTransactionViewModel(networkServiceProvider: appState,
+        viewModel = AddTransactionViewModel(serviceProvider: appState,
                                             delegate: self,
                                             dataDelegate: dataDelegate)
         setupTextFields()

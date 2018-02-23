@@ -6,9 +6,9 @@ class TodayViewController: NSViewController, ViewControllerType {
     @IBOutlet private weak var allowanceLabel: NSTextField!
     @IBOutlet private weak var allowanceIconLabel: NSTextField!
 
-    var appState: AppState? = AppStatemacOS()
+    let appState: AppState! = AppStatemacOS()
 
-    private var viewModel: TodayPresentable!
+    private var viewModel: TodayViewModel!
 
     override var nibName: NSNib.Name? {
         return NSNib.Name(TodayViewController.instanceName)
@@ -17,8 +17,7 @@ class TodayViewController: NSViewController, ViewControllerType {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        guard let appState = appState else { return }
-        viewModel = TodayViewModel(networkDataServiceProvider: appState,
+        viewModel = TodayViewModel(serviceProvider: appState,
                                    delegate: self,
                                    displayModel: TodayDisplayModel())
         viewModel.viewDidLoad()

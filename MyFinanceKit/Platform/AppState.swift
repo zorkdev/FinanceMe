@@ -6,9 +6,7 @@ public protocol DataServiceProvider {
     var dataService: DataService { get }
 }
 
-public typealias NetworkDataServiceProvider = NetworkServiceProvider & DataServiceProvider
-
-open class AppState {
+open class AppState: NetworkServiceProvider, DataServiceProvider {
 
     public let networkService: NetworkServiceType
     public let dataService: DataService
@@ -27,4 +25,9 @@ open class AppState {
 
 }
 
-extension AppState: NetworkDataServiceProvider {}
+public protocol AppStateConsumer {
+
+    associatedtype ServiceProvider
+    var serviceProvider: ServiceProvider { get }
+
+}

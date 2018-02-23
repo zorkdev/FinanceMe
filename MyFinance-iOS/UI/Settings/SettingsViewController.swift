@@ -7,7 +7,7 @@ class SettingsViewController: BaseViewController {
     @IBOutlet private weak var editButton: UIButton!
     @IBOutlet private weak var saveButton: UIButton!
 
-    private var viewModel: SettingsViewModelType!
+    private var viewModel: SettingsViewModel!
 
     private let startDatePicker = UIDatePicker()
     private var selectedDate = Date()
@@ -23,8 +23,7 @@ class SettingsViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        guard let appState = appState else { return }
-        viewModel = SettingsViewModel(networkDataServiceProvider: appState,
+        viewModel = SettingsViewModel(serviceProvider: appState,
                                       delegate: self,
                                       dataDelegate: dataDelegate)
         setupTextFields()
