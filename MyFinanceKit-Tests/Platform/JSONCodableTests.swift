@@ -117,4 +117,20 @@ class JSONCodableTests: XCTestCase {
         XCTAssertNil(urlFormEncoded)
     }
 
+    func testCodableDictionary() {
+        _ = CodableDictionary.CodingKeys.init(intValue: 1)
+
+        let jsonData =
+        """
+        {
+            "key": 10,
+        }
+        """.data(using: .utf8)!
+
+        let codableDictionary = CodableDictionary(data: jsonData)
+
+        XCTAssertNotNil(codableDictionary)
+        XCTAssertEqual(codableDictionary?.value, ["key": "10"])
+    }
+
 }

@@ -31,7 +31,7 @@ class DataServiceTests: XCTestCase {
 
     func testStoreableLoad_Success() {
         let stubModel = StubModel(variable: "value")
-        mockDataService.loadReturnValue = stubModel
+        mockDataService.loadReturnValues = [stubModel]
 
         let loadedItem = StubModel.load(dataService: mockDataService)
 
@@ -42,7 +42,7 @@ class DataServiceTests: XCTestCase {
 
     func testStoreableAll_Success() {
         let stubModels = [StubModel(variable: "value")]
-        mockDataService.loadReturnValue = stubModels
+        mockDataService.loadReturnValues = [stubModels]
 
         let loadedItem = StubModel.all(dataService: mockDataService)
 
@@ -52,7 +52,7 @@ class DataServiceTests: XCTestCase {
     }
 
     func testStoreableAllEmpty_Success() {
-        mockDataService.loadReturnValue = nil
+        mockDataService.loadReturnValues = []
 
         let loadedItem = StubModel.all(dataService: mockDataService)
 

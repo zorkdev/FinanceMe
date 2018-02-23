@@ -14,10 +14,8 @@ open class AppState {
     public let dataService: DataService
 
     public init() {
-        let fatalErrorable = SwiftFatalError()
-        let configService = ConfigFileService(fatalErrorable: fatalErrorable)!
         networkService = NetworkService(networkRequestable: URLSession.shared,
-                                        configService: configService)
+                                        configService: ConfigFileService())
         dataService = KeychainDataService()
     }
 

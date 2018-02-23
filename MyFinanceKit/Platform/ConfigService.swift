@@ -11,7 +11,6 @@ public class ConfigFileService: ConfigService {
     private struct Constants {
         static let configFilename = "config"
         static let configExtension = "json"
-        static let configMissingMessage = "The config file is missing or invalid."
     }
 
     public let isLoggingEnabled = TARGET_OS_SIMULATOR == 1
@@ -19,16 +18,12 @@ public class ConfigFileService: ConfigService {
 
     public let config: Config
 
-    public init?(fatalErrorable: FatalErrorable) {
+    public init() {
         let bundle = Bundle(for: ConfigFileService.self)
-        guard let configURL = bundle.url(forResource: Constants.configFilename,
-                                         withExtension: Constants.configExtension),
-            let data = try? Data(contentsOf: configURL),
-            let config = Config(data: data) else {
-                fatalErrorable.fatalError(message: Constants.configMissingMessage)
-                return nil
-        }
-
+        let configURL = bundle.url(forResource: Constants.configFilename,
+                                   withExtension: Constants.configExtension)!
+        let data = try? Data(contentsOf: configURL)
+        let config = Config(data: data!)!
         self.config = config
     }
 

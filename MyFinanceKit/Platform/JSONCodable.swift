@@ -66,11 +66,11 @@ public extension JSONEncodable {
 
 }
 
-private struct CodableDictionary: JSONDecodable {
+struct CodableDictionary: JSONDecodable {
 
     let value: [String: String]
 
-    private struct CodingKeys: CodingKey {
+    struct CodingKeys: CodingKey {
         var stringValue: String
         var intValue: Int?
 
@@ -78,10 +78,7 @@ private struct CodableDictionary: JSONDecodable {
             self.stringValue = stringValue
         }
 
-        init?(intValue: Int) {
-            self.init(stringValue: "\(intValue)")
-            self.intValue = intValue
-        }
+        init?(intValue: Int) { return nil }
     }
 
     init(from decoder: Decoder) throws {

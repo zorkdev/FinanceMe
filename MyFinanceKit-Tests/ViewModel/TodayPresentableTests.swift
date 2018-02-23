@@ -24,7 +24,7 @@ class TodayPresentableTests: XCTestCase {
                                                     delegate: mockTodayViewModelDelegate!)
     }
 
-    func testSetupDefaults() {
+    func testViewDidLoad() {
         let expectedUser = User(name: "User Name",
                                 payday: 10,
                                 startDate: Date(),
@@ -39,8 +39,13 @@ class TodayPresentableTests: XCTestCase {
                                       currency: "GBP",
                                       amount: 100)
 
+        mockDataService?.loadReturnValues = [expectedUser, expectedBalance]
         mockNetworkService?.returnJSONDecodableValues = [expectedUser, expectedBalance]
         mockTodayPresentable!.viewDidLoad()
+
+        XCTAssertEqual(mockTodayViewModelDelegate?.lastBalance?.string, "£20.00")
+        XCTAssertEqual(mockTodayViewModelDelegate?.lastAllowance?.string, "£100.22")
+        XCTAssertEqual(mockTodayViewModelDelegate?.lastAllowanceIcon, "😇")
     }
 
 }
