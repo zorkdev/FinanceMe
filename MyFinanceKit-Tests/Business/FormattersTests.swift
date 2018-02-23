@@ -26,11 +26,11 @@ class FormattersTests: XCTestCase {
     }
 
     func testDateFormatter() {
-        XCTAssertEqual(Formatters.date.string(from: date), "Jan 7, 2018")
+        XCTAssertEqual(Formatters.date.string(from: date), "7 Jan 2018")
     }
 
     func testDateTimeFormatter() {
-        XCTAssertEqual(Formatters.dateTime.string(from: date), "Jan 7, 2018 at 3:30 PM")
+        XCTAssertEqual(Formatters.dateTime.string(from: date), "7 Jan 2018 at 15:30")
     }
 
     func testDateWithoutYearFormatter() {

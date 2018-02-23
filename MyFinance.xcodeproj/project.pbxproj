@@ -2080,6 +2080,7 @@
 					9A94F8E0202CE83100AEF61F = {
 						CreatedOnToolsVersion = 9.2;
 						ProvisioningStyle = Automatic;
+						TestTargetID = 9A740ECA201E245200D40943;
 					};
 					9AD3EE372013D9A10083F8FE = {
 						CreatedOnToolsVersion = 9.2;
@@ -4138,6 +4139,7 @@
 				SDKROOT = macosx;
 				SWIFT_OBJC_BRIDGING_HEADER = "MyFinanceKit-Tests/Config/macOS/Bridging-Header.h";
 				SWIFT_VERSION = 4.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MyFinance-macOS.app/Contents/MacOS/MyFinance-macOS";
 			};
 			name = Debug;
 		};
@@ -4156,6 +4158,7 @@
 				SDKROOT = macosx;
 				SWIFT_OBJC_BRIDGING_HEADER = "MyFinanceKit-Tests/Config/macOS/Bridging-Header.h";
 				SWIFT_VERSION = 4.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MyFinance-macOS.app/Contents/MacOS/MyFinance-macOS";
 			};
 			name = Release;
 		};

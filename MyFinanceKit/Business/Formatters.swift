@@ -28,15 +28,14 @@ public struct Formatters {
 
     public static let date: DateFormatter = {
         let formatter = DateFormatter()
-        formatter.dateStyle = .medium
+        formatter.dateFormat = "d MMM yyyy"
 
         return formatter
     }()
 
     public static let dateTime: DateFormatter = {
         let formatter = DateFormatter()
-        formatter.dateStyle = .medium
-        formatter.timeStyle = .short
+        formatter.dateFormat = "d MMM yyyy' at 'H:mm"
 
         return formatter
     }()
