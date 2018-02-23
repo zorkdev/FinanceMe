@@ -14,6 +14,8 @@
 		1B91366A7F4BE4E58DC69B29 /* Pods_MyFinance_macOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18E272BE0EF275A986DCD73A /* Pods_MyFinance_macOS.framework */; };
 		55422EC3F483571E2408D7F4 /* Pods_MyFinanceKit_macOS_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9C22E65EE27E359BD71BEBF /* Pods_MyFinanceKit_macOS_Tests.framework */; };
 		8B68FCB6C23A94B7764A1EE8 /* Pods_MyFinanceKit_macOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 44AC3487225BC41D05828D87 /* Pods_MyFinanceKit_macOS.framework */; };
+		9A0E8E53203F988D003A811E /* ViewModelTypeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A0E8E51203F9861003A811E /* ViewModelTypeTests.swift */; };
+		9A0E8E54203F988E003A811E /* ViewModelTypeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A0E8E51203F9861003A811E /* ViewModelTypeTests.swift */; };
 		9A20220C2038CAE00012DD51 /* MyFinanceKit_watchOS.h in Headers */ = {isa = PBXBuildFile; fileRef = 9A20220A2038CAE00012DD51 /* MyFinanceKit_watchOS.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		9A20220F2038CAE00012DD51 /* MyFinanceKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A2022082038CAE00012DD51 /* MyFinanceKit.framework */; };
 		9A2022102038CAE00012DD51 /* MyFinanceKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9A2022082038CAE00012DD51 /* MyFinanceKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -157,6 +159,10 @@
 		9A3CB7DC202FC657008AF158 /* ComplicationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A3CB7DB202FC657008AF158 /* ComplicationController.swift */; };
 		9A3CB7DE202FC657008AF158 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9A3CB7DD202FC657008AF158 /* Assets.xcassets */; };
 		9A3CB7E2202FC657008AF158 /* MyFinance-watchOS.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 9A3CB7C6202FC657008AF158 /* MyFinance-watchOS.app */; };
+		9A42F748203F9CB5005C3185 /* AppStatemacOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A42F747203F9CB5005C3185 /* AppStatemacOS.swift */; };
+		9A42F749203F9CB5005C3185 /* AppStatemacOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A42F747203F9CB5005C3185 /* AppStatemacOS.swift */; };
+		9A42F74B203FA1B4005C3185 /* TodayDisplayModelTypeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A42F74A203FA1B4005C3185 /* TodayDisplayModelTypeTests.swift */; };
+		9A42F74C203FA1B4005C3185 /* TodayDisplayModelTypeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A42F74A203FA1B4005C3185 /* TodayDisplayModelTypeTests.swift */; };
 		9A4F55342023C7A900DBF68F /* MyFinanceKit_iOS.h in Headers */ = {isa = PBXBuildFile; fileRef = 9A4F55322023C7A900DBF68F /* MyFinanceKit_iOS.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		9A4F55372023C7A900DBF68F /* MyFinanceKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A4F55302023C7A900DBF68F /* MyFinanceKit.framework */; };
 		9A4F55382023C7A900DBF68F /* MyFinanceKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9A4F55302023C7A900DBF68F /* MyFinanceKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -237,6 +243,7 @@
 		9A6EF760202BA718006D3420 /* TransactionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A6EF75F202BA718006D3420 /* TransactionTests.swift */; };
 		9A6EF762202BABE0006D3420 /* SummaryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A6EF761202BABE0006D3420 /* SummaryTests.swift */; };
 		9A6F9FC3203CBCA00040BD50 /* HomeViewModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A6F9FC2203CBCA00040BD50 /* HomeViewModelType.swift */; };
+		9A709E1D203F9454003A33FC /* BaseViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A709E1C203F9454003A33FC /* BaseViewControllerTests.swift */; };
 		9A740ECE201E245200D40943 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A740ECD201E245200D40943 /* AppDelegate.swift */; };
 		9A740ED2201E245200D40943 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9A740ED1201E245200D40943 /* Assets.xcassets */; };
 		9A740ED5201E245200D40943 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9A740ED3201E245200D40943 /* Main.storyboard */; };
@@ -276,10 +283,22 @@
 		9A9666822025EAF5000F8A42 /* TodayDisplayModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A9666802025EAF5000F8A42 /* TodayDisplayModelType.swift */; };
 		9A96668720260E7B000F8A42 /* ColorPalette.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A96668620260E7B000F8A42 /* ColorPalette.swift */; };
 		9A96668820260E7B000F8A42 /* ColorPalette.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A96668620260E7B000F8A42 /* ColorPalette.swift */; };
+		9AA1A3DD203FA41C0059EC5A /* TodayPresentableTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AA1A3DC203FA41C0059EC5A /* TodayPresentableTests.swift */; };
+		9AA1A3DE203FA41C0059EC5A /* TodayPresentableTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AA1A3DC203FA41C0059EC5A /* TodayPresentableTests.swift */; };
+		9AA1A3E0203FA4580059EC5A /* MockTodayPresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AA1A3DF203FA4580059EC5A /* MockTodayPresentable.swift */; };
+		9AA1A3E1203FA4580059EC5A /* MockTodayPresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AA1A3DF203FA4580059EC5A /* MockTodayPresentable.swift */; };
 		9AAA3D7620290621008881FD /* AuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AAA3D7520290621008881FD /* AuthViewController.swift */; };
 		9AAA3D782029077E008881FD /* AuthViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AAA3D772029077E008881FD /* AuthViewModel.swift */; };
 		9AAA3D7F202925FC008881FD /* AuthDisplayModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AAA3D7E202925FB008881FD /* AuthDisplayModel.swift */; };
 		9AAA3D812029285C008881FD /* Instantiatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AAA3D802029285C008881FD /* Instantiatable.swift */; };
+		9AAA77CD203F9939000E1323 /* TodayViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AAA77CC203F9939000E1323 /* TodayViewModelTests.swift */; };
+		9AAA77CE203F9939000E1323 /* TodayViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AAA77CC203F9939000E1323 /* TodayViewModelTests.swift */; };
+		9AAA77D0203F9AA5000E1323 /* MockAppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AAA77CF203F9AA5000E1323 /* MockAppState.swift */; };
+		9AAA77D1203F9AA5000E1323 /* MockAppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AAA77CF203F9AA5000E1323 /* MockAppState.swift */; };
+		9AAA77D5203F9B1E000E1323 /* MockTodayViewModelDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AAA77D4203F9B1E000E1323 /* MockTodayViewModelDelegate.swift */; };
+		9AAA77D6203F9B1E000E1323 /* MockTodayViewModelDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AAA77D4203F9B1E000E1323 /* MockTodayViewModelDelegate.swift */; };
+		9AAA77D8203F9B2A000E1323 /* MockTodayDisplayModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AAA77D7203F9B2A000E1323 /* MockTodayDisplayModel.swift */; };
+		9AAA77D9203F9B2A000E1323 /* MockTodayDisplayModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AAA77D7203F9B2A000E1323 /* MockTodayDisplayModel.swift */; };
 		9AAD388F202F5CAD00395119 /* Pods_MyFinanceExtension_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AAD3890202F5CAD00395119 /* Pods_MyFinanceExtension_iOS.framework */; };
 		9AAD3895202F66E500395119 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AAD3894202F66E500395119 /* SettingsViewController.swift */; };
 		9AAD3897202F684E00395119 /* SettingsDisplayModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AAD3896202F684E00395119 /* SettingsDisplayModel.swift */; };
@@ -307,6 +326,9 @@
 		9AD96CA8202544A600D37F23 /* AddTransactionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AD96CA7202544A600D37F23 /* AddTransactionViewModel.swift */; };
 		9ADDE1BA203F818200BCA1DE /* ExternalTransactionsBusinessLogicTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ADDE1B9203F818200BCA1DE /* ExternalTransactionsBusinessLogicTests.swift */; };
 		9ADDE1BB203F818200BCA1DE /* ExternalTransactionsBusinessLogicTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ADDE1B9203F818200BCA1DE /* ExternalTransactionsBusinessLogicTests.swift */; };
+		9AEAD361203F8F9100CB572C /* TableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9AEAD360203F8F9100CB572C /* TableViewCell.xib */; };
+		9AEAD363203F8FA700CB572C /* UITableViewCellTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AEAD362203F8FA700CB572C /* UITableViewCellTests.swift */; };
+		9AEAD365203F908900CB572C /* UIViewExtensionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AEAD364203F908900CB572C /* UIViewExtensionsTests.swift */; };
 		A07B7EB9CD7A8DD636CF7A7D /* Pods_MyFinance_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C00742E35A2D39BB6D61F955 /* Pods_MyFinance_iOS.framework */; };
 		A7E70FDECF2732D8138872FF /* Pods_MyFinanceExtension_macOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0613BC2F22CEB669D68D23C1 /* Pods_MyFinanceExtension_macOS.framework */; };
 		C3688CFF90AE6C071CBD5E46 /* Pods_MyFinanceExtension_watchOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4BD4B39AD0637A850A615FE2 /* Pods_MyFinanceExtension_watchOS.framework */; };
@@ -546,6 +568,7 @@
 		8A08E3B1273B7D72A834A457 /* Pods-MyFinanceKit-iOS-Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyFinanceKit-iOS-Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MyFinanceKit-iOS-Tests/Pods-MyFinanceKit-iOS-Tests.release.xcconfig"; sourceTree = "<group>"; };
 		912C8C9B1823959085F2299C /* Pods-MyFinanceExtension-iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyFinanceExtension-iOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-MyFinanceExtension-iOS/Pods-MyFinanceExtension-iOS.release.xcconfig"; sourceTree = "<group>"; };
 		9583B4C05F05012F0928BCE1 /* Pods-MyFinanceKit-watchOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyFinanceKit-watchOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-MyFinanceKit-watchOS/Pods-MyFinanceKit-watchOS.release.xcconfig"; sourceTree = "<group>"; };
+		9A0E8E51203F9861003A811E /* ViewModelTypeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelTypeTests.swift; sourceTree = "<group>"; };
 		9A2022082038CAE00012DD51 /* MyFinanceKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MyFinanceKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9A20220A2038CAE00012DD51 /* MyFinanceKit_watchOS.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyFinanceKit_watchOS.h; sourceTree = "<group>"; };
 		9A20220B2038CAE00012DD51 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -608,6 +631,8 @@
 		9A3CB7DD202FC657008AF158 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9A3CB7DF202FC657008AF158 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9A3CB7EB203074CD008AF158 /* WatchService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchService.swift; sourceTree = "<group>"; };
+		9A42F747203F9CB5005C3185 /* AppStatemacOS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStatemacOS.swift; sourceTree = "<group>"; };
+		9A42F74A203FA1B4005C3185 /* TodayDisplayModelTypeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayDisplayModelTypeTests.swift; sourceTree = "<group>"; };
 		9A4F55052023C3FC00DBF68F /* Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Bridging-Header.h"; sourceTree = "<group>"; };
 		9A4F55062023C4A700DBF68F /* Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Bridging-Header.h"; sourceTree = "<group>"; };
 		9A4F55302023C7A900DBF68F /* MyFinanceKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MyFinanceKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -654,6 +679,7 @@
 		9A6EF75F202BA718006D3420 /* TransactionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionTests.swift; sourceTree = "<group>"; };
 		9A6EF761202BABE0006D3420 /* SummaryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SummaryTests.swift; sourceTree = "<group>"; };
 		9A6F9FC2203CBCA00040BD50 /* HomeViewModelType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModelType.swift; sourceTree = "<group>"; };
+		9A709E1C203F9454003A33FC /* BaseViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewControllerTests.swift; sourceTree = "<group>"; };
 		9A740ECB201E245200D40943 /* MyFinance-macOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "MyFinance-macOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9A740ECD201E245200D40943 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9A740ED1201E245200D40943 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -695,12 +721,18 @@
 		9A94F8FF202D176200AEF61F /* URLSession+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URLSession+Extensions.swift"; sourceTree = "<group>"; };
 		9A9666802025EAF5000F8A42 /* TodayDisplayModelType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayDisplayModelType.swift; sourceTree = "<group>"; };
 		9A96668620260E7B000F8A42 /* ColorPalette.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorPalette.swift; sourceTree = "<group>"; };
+		9AA1A3DC203FA41C0059EC5A /* TodayPresentableTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayPresentableTests.swift; sourceTree = "<group>"; };
+		9AA1A3DF203FA4580059EC5A /* MockTodayPresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockTodayPresentable.swift; sourceTree = "<group>"; };
 		9AAA3D7520290621008881FD /* AuthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewController.swift; sourceTree = "<group>"; };
 		9AAA3D772029077E008881FD /* AuthViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewModel.swift; sourceTree = "<group>"; };
 		9AAA3D7E202925FB008881FD /* AuthDisplayModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthDisplayModel.swift; sourceTree = "<group>"; };
 		9AAA3D802029285C008881FD /* Instantiatable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Instantiatable.swift; sourceTree = "<group>"; };
 		9AAA3D8420293CCA008881FD /* MyFinanceExtension-iOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "MyFinanceExtension-iOS.entitlements"; sourceTree = "<group>"; };
 		9AAA3D8520293CD0008881FD /* MyFinance-iOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "MyFinance-iOS.entitlements"; sourceTree = "<group>"; };
+		9AAA77CC203F9939000E1323 /* TodayViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayViewModelTests.swift; sourceTree = "<group>"; };
+		9AAA77CF203F9AA5000E1323 /* MockAppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockAppState.swift; sourceTree = "<group>"; };
+		9AAA77D4203F9B1E000E1323 /* MockTodayViewModelDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockTodayViewModelDelegate.swift; sourceTree = "<group>"; };
+		9AAA77D7203F9B2A000E1323 /* MockTodayDisplayModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockTodayDisplayModel.swift; sourceTree = "<group>"; };
 		9AAD3890202F5CAD00395119 /* Pods_MyFinanceExtension_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Pods_MyFinanceExtension_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9AAD3892202F5CBF00395119 /* Pods_MyFinanceKit_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Pods_MyFinanceKit_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9AAD3894202F66E500395119 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
@@ -733,6 +765,9 @@
 		9AD96CA7202544A600D37F23 /* AddTransactionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTransactionViewModel.swift; sourceTree = "<group>"; };
 		9ADDE1B9203F818200BCA1DE /* ExternalTransactionsBusinessLogicTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExternalTransactionsBusinessLogicTests.swift; sourceTree = "<group>"; };
 		9ADE54C0201568D90039D774 /* DataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
+		9AEAD360203F8F9100CB572C /* TableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TableViewCell.xib; sourceTree = "<group>"; };
+		9AEAD362203F8FA700CB572C /* UITableViewCellTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableViewCellTests.swift; sourceTree = "<group>"; };
+		9AEAD364203F908900CB572C /* UIViewExtensionsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtensionsTests.swift; sourceTree = "<group>"; };
 		9BF959DE601445A20C613BBB /* Pods-MyFinance-tvOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyFinance-tvOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MyFinance-tvOS/Pods-MyFinance-tvOS.debug.xcconfig"; sourceTree = "<group>"; };
 		A8B0411C6517F0B6198C67E8 /* Pods-MyFinanceExtension-iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyFinanceExtension-iOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MyFinanceExtension-iOS/Pods-MyFinanceExtension-iOS.debug.xcconfig"; sourceTree = "<group>"; };
 		AD2A187BD7CC65C7F408B8B3 /* Pods-MyFinanceExtension-macOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyFinanceExtension-macOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MyFinanceExtension-macOS/Pods-MyFinanceExtension-macOS.debug.xcconfig"; sourceTree = "<group>"; };
@@ -914,6 +949,17 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		9A0E8E50203F9847003A811E /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				9A0E8E51203F9861003A811E /* ViewModelTypeTests.swift */,
+				9A42F74A203FA1B4005C3185 /* TodayDisplayModelTypeTests.swift */,
+				9AA1A3DC203FA41C0059EC5A /* TodayPresentableTests.swift */,
+				9AAA77CC203F9939000E1323 /* TodayViewModelTests.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 		9A2022152038CAF70012DD51 /* watchOS */ = {
 			isa = PBXGroup;
 			children = (
@@ -1042,6 +1088,8 @@
 		9A3A2B98203A2DDC0071FBC5 /* Mocks */ = {
 			isa = PBXGroup;
 			children = (
+				9AAA77D3203F9B08000E1323 /* UI */,
+				9AAA77CF203F9AA5000E1323 /* MockAppState.swift */,
 				9A37AB45203E3B5700CFEE67 /* MockNetworkService.swift */,
 				9A3A2B99203A2DFC0071FBC5 /* MockNetworkRequestable.swift */,
 				9A3A2B9C203A2E940071FBC5 /* MockConfigService.swift */,
@@ -1264,6 +1312,8 @@
 				9A3A2B98203A2DDC0071FBC5 /* Mocks */,
 				9A94F8DB202CE6FF00AEF61F /* Platform */,
 				9A6EF758202BA59C006D3420 /* Model */,
+				9AEAD35D203F8F0200CB572C /* UI */,
+				9A0E8E50203F9847003A811E /* ViewModel */,
 				9A37AB2E203E292A00CFEE67 /* Business */,
 			);
 			path = "MyFinanceKit-Tests";
@@ -1289,6 +1339,7 @@
 			children = (
 				9A740ED3201E245200D40943 /* Main.storyboard */,
 				9A740ECD201E245200D40943 /* AppDelegate.swift */,
+				9A42F747203F9CB5005C3185 /* AppStatemacOS.swift */,
 				9A4F55052023C3FC00DBF68F /* Bridging-Header.h */,
 				9A740ED1201E245200D40943 /* Assets.xcassets */,
 				9A740ED6201E245200D40943 /* Info.plist */,
@@ -1479,6 +1530,16 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
+		9AAA77D3203F9B08000E1323 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				9AAA77D4203F9B1E000E1323 /* MockTodayViewModelDelegate.swift */,
+				9AAA77D7203F9B2A000E1323 /* MockTodayDisplayModel.swift */,
+				9AA1A3DF203FA4580059EC5A /* MockTodayPresentable.swift */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
 		9AAD3893202F66C800395119 /* Settings */ = {
 			isa = PBXGroup;
 			children = (
@@ -1518,6 +1579,33 @@
 				9A3A2B872039C2350071FBC5 /* ViewControllerType.swift */,
 				9AD96CA520253CC300D37F23 /* BaseViewController.swift */,
 				9AD96CA220253A3E00D37F23 /* Dismissable.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		9AEAD35D203F8F0200CB572C /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				9AEAD35E203F8F2000CB572C /* View */,
+				9AEAD35F203F8F2E00CB572C /* Controller */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		9AEAD35E203F8F2000CB572C /* View */ = {
+			isa = PBXGroup;
+			children = (
+				9AEAD364203F908900CB572C /* UIViewExtensionsTests.swift */,
+				9AEAD362203F8FA700CB572C /* UITableViewCellTests.swift */,
+				9AEAD360203F8F9100CB572C /* TableViewCell.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		9AEAD35F203F8F2E00CB572C /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				9A709E1C203F9454003A33FC /* BaseViewControllerTests.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -2006,7 +2094,6 @@
 					9A94F8E0202CE83100AEF61F = {
 						CreatedOnToolsVersion = 9.2;
 						ProvisioningStyle = Automatic;
-						TestTargetID = 9A740ECA201E245200D40943;
 					};
 					9AD3EE372013D9A10083F8FE = {
 						CreatedOnToolsVersion = 9.2;
@@ -2141,6 +2228,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9AEAD361203F8F9100CB572C /* TableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -3101,24 +3189,35 @@
 				9A57F6CD203F7CAC00CF6897 /* FatalErrorableTests.swift in Sources */,
 				9A6B06EE203F6E4E006FB40E /* EndOfMonthSummaryBusinessLogicTests.swift in Sources */,
 				9A3A2B7D20399A020071FBC5 /* StringRepresentableTests.swift in Sources */,
+				9AAA77CD203F9939000E1323 /* TodayViewModelTests.swift in Sources */,
+				9AEAD365203F908900CB572C /* UIViewExtensionsTests.swift in Sources */,
 				9A3A2B7A203998E80071FBC5 /* URLSessionExtensionsTests.swift in Sources */,
 				9A2022A72038EC050012DD51 /* DataExtensionsTests.swift in Sources */,
 				9A37AB3C203E333900CFEE67 /* AllowanceTests.swift in Sources */,
 				9A6B06F1203F6F51006FB40E /* SpendingBusinessLogicTests.swift in Sources */,
+				9A709E1D203F9454003A33FC /* BaseViewControllerTests.swift in Sources */,
 				9A3A2B9A203A2DFC0071FBC5 /* MockNetworkRequestable.swift in Sources */,
 				9A6B06F9203F76C5006FB40E /* MockFatalError.swift in Sources */,
+				9AA1A3E0203FA4580059EC5A /* MockTodayPresentable.swift in Sources */,
 				9A37AB39203E308D00CFEE67 /* ValidatorsTests.swift in Sources */,
+				9AAA77D5203F9B1E000E1323 /* MockTodayViewModelDelegate.swift in Sources */,
 				9A37AB2C203E22D300CFEE67 /* ConfigFileServiceTests.swift in Sources */,
+				9AAA77D0203F9AA5000E1323 /* MockAppState.swift in Sources */,
 				9A6EF75E202BA6A2006D3420 /* HALResponseTests.swift in Sources */,
 				9A94F8FA202CF23E00AEF61F /* JSONCodableTests.swift in Sources */,
 				9A6EF75A202BA5D0006D3420 /* ConfigTests.swift in Sources */,
+				9A0E8E53203F988D003A811E /* ViewModelTypeTests.swift in Sources */,
 				9A2A88E4203F6CE9002ADA1B /* UserBusinessLogicTests.swift in Sources */,
 				9A37AB11203E144900CFEE67 /* MockDataService.swift in Sources */,
+				9AA1A3DD203FA41C0059EC5A /* TodayPresentableTests.swift in Sources */,
+				9AAA77D8203F9B2A000E1323 /* MockTodayDisplayModel.swift in Sources */,
+				9AEAD363203F8FA700CB572C /* UITableViewCellTests.swift in Sources */,
 				9A37AB43203E3AF000CFEE67 /* BalanceBusinessLogicTests.swift in Sources */,
 				9A6EF760202BA718006D3420 /* TransactionTests.swift in Sources */,
 				9A3A2BA0203A2FC80071FBC5 /* MockAPI.swift in Sources */,
 				9A37AB33203E2CAE00CFEE67 /* FormattersTests.swift in Sources */,
 				9ADDE1BA203F818200BCA1DE /* ExternalTransactionsBusinessLogicTests.swift in Sources */,
+				9A42F74B203FA1B4005C3185 /* TodayDisplayModelTypeTests.swift in Sources */,
 				9ABBAD2F203F6479000A1020 /* TransactionsBusinessLogicTests.swift in Sources */,
 				9A6EF762202BABE0006D3420 /* SummaryTests.swift in Sources */,
 				9A3A2B802039A4050071FBC5 /* NetworkServiceTests.swift in Sources */,
@@ -3134,6 +3233,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9A740ECE201E245200D40943 /* AppDelegate.swift in Sources */,
+				9A42F748203F9CB5005C3185 /* AppStatemacOS.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -3142,6 +3242,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9A4F55832023D10E00DBF68F /* TodayDisplayModel.swift in Sources */,
+				9A42F749203F9CB5005C3185 /* AppStatemacOS.swift in Sources */,
 				9A740EE3201E247D00D40943 /* TodayViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -3151,6 +3252,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				9A94F8F1202CEA9300AEF61F /* UserTests.swift in Sources */,
+				9AAA77D6203F9B1E000E1323 /* MockTodayViewModelDelegate.swift in Sources */,
+				9AAA77D1203F9AA5000E1323 /* MockAppState.swift in Sources */,
 				9A3A2B9E203A2E940071FBC5 /* MockConfigService.swift in Sources */,
 				9A37AB31203E293F00CFEE67 /* APIsTests.swift in Sources */,
 				9A94F8EF202CEA8E00AEF61F /* HALResponseTests.swift in Sources */,
@@ -3163,6 +3266,7 @@
 				9A37AB3D203E333900CFEE67 /* AllowanceTests.swift in Sources */,
 				9A6B06F2203F6F51006FB40E /* SpendingBusinessLogicTests.swift in Sources */,
 				9A3A2B9B203A2DFC0071FBC5 /* MockNetworkRequestable.swift in Sources */,
+				9AA1A3DE203FA41C0059EC5A /* TodayPresentableTests.swift in Sources */,
 				9A6B06FA203F76C5006FB40E /* MockFatalError.swift in Sources */,
 				9A37AB3A203E308D00CFEE67 /* ValidatorsTests.swift in Sources */,
 				9A37AB2D203E22D300CFEE67 /* ConfigFileServiceTests.swift in Sources */,
@@ -3172,17 +3276,22 @@
 				9A2A88E5203F6CE9002ADA1B /* UserBusinessLogicTests.swift in Sources */,
 				9A37AB12203E144900CFEE67 /* MockDataService.swift in Sources */,
 				9A37AB44203E3AF000CFEE67 /* BalanceBusinessLogicTests.swift in Sources */,
+				9AAA77D9203F9B2A000E1323 /* MockTodayDisplayModel.swift in Sources */,
 				9A94F8F4202CEA9A00AEF61F /* SummaryTests.swift in Sources */,
 				9A3A2BA1203A2FC80071FBC5 /* MockAPI.swift in Sources */,
 				9A37AB34203E2CAE00CFEE67 /* FormattersTests.swift in Sources */,
+				9AA1A3E1203FA4580059EC5A /* MockTodayPresentable.swift in Sources */,
 				9ADDE1BB203F818200BCA1DE /* ExternalTransactionsBusinessLogicTests.swift in Sources */,
 				9ABBAD30203F6479000A1020 /* TransactionsBusinessLogicTests.swift in Sources */,
 				9A2022A82038EC050012DD51 /* DataExtensionsTests.swift in Sources */,
 				9A3A2B812039A4050071FBC5 /* NetworkServiceTests.swift in Sources */,
 				9A37AB37203E2FCE00CFEE67 /* AppStateTests.swift in Sources */,
+				9A0E8E54203F988E003A811E /* ViewModelTypeTests.swift in Sources */,
 				9A74CD02203E084A00CBA082 /* DataServiceTests.swift in Sources */,
 				9A37AB47203E3B5700CFEE67 /* MockNetworkService.swift in Sources */,
 				9A94F8F2202CEA9600AEF61F /* BalanceTests.swift in Sources */,
+				9A42F74C203FA1B4005C3185 /* TodayDisplayModelTypeTests.swift in Sources */,
+				9AAA77CE203F9939000E1323 /* TodayViewModelTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -4051,7 +4160,6 @@
 				SDKROOT = macosx;
 				SWIFT_OBJC_BRIDGING_HEADER = "MyFinanceKit-Tests/Config/macOS/Bridging-Header.h";
 				SWIFT_VERSION = 4.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MyFinance-macOS.app/Contents/MacOS/MyFinance-macOS";
 			};
 			name = Debug;
 		};
@@ -4070,7 +4178,6 @@
 				SDKROOT = macosx;
 				SWIFT_OBJC_BRIDGING_HEADER = "MyFinanceKit-Tests/Config/macOS/Bridging-Header.h";
 				SWIFT_VERSION = 4.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MyFinance-macOS.app/Contents/MacOS/MyFinance-macOS";
 			};
 			name = Release;
 		};

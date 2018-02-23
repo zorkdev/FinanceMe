@@ -23,7 +23,7 @@ class BalanceBusinessLogicTests: XCTestCase {
                                       currency: "GBP",
                                       amount: 100)
 
-        mockNetworkService.returnJSONDecodableValue = expectedBalance
+        mockNetworkService.returnJSONDecodableValues = [expectedBalance]
 
         let balanceBusinessLogic = BalanceBusinessLogic(networkService: mockNetworkService,
                                                         dataService: mockDataService)

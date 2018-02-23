@@ -6,7 +6,7 @@ class TodayViewController: NSViewController, ViewControllerType {
     @IBOutlet private weak var allowanceLabel: NSTextField!
     @IBOutlet private weak var allowanceIconLabel: NSTextField!
 
-    var appState: AppState? = AppState(dataService: UserDefaultsDataService())
+    var appState: AppState? = AppStatemacOS()
 
     private var viewModel: TodayPresentable!
 

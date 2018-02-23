@@ -29,7 +29,7 @@ class TransactionsBusinessLogicTests: XCTestCase {
 
         let halResponse = HALResponse(embedded: TransactionList(transactions: expectedTransactions))
 
-        mockNetworkService.returnJSONDecodableValue = halResponse
+        mockNetworkService.returnJSONDecodableValues = [halResponse]
 
         let transactionsBusinessLogic = TransactionsBusinessLogic(networkService: mockNetworkService)
 

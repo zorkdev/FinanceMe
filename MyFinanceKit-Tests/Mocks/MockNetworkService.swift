@@ -5,7 +5,7 @@ class MockNetworkService: NetworkServiceType {
 
     //swiftlint:disable:next large_tuple
     var lastRequest: (api: APIType, method: HTTPMethod, parameters: JSONEncodable?, body: JSONEncodable?)?
-    var returnJSONDecodableValue: JSONDecodable?
+    var returnJSONDecodableValues = [JSONDecodable]()
     var returnDataValue: Data?
     var returnErrorValue: Error?
 
@@ -20,7 +20,8 @@ class MockNetworkService: NetworkServiceType {
             return Promise(error: error)
         }
 
-        if let returnJSONDecodableValue = returnJSONDecodableValue as? T {
+        if let returnJSONDecodableValue = returnJSONDecodableValues.first as? T {
+            returnJSONDecodableValues.removeFirst()
             return .value(returnJSONDecodableValue)
         }
 

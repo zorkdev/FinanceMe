@@ -21,7 +21,7 @@ class UserBusinessLogicTests: XCTestCase {
                                 largeTransaction: 10,
                                 allowance: 100.22)
 
-        mockNetworkService.returnJSONDecodableValue = expectedUser
+        mockNetworkService.returnJSONDecodableValues = [expectedUser]
 
         let userBusinessLogic = UserBusinessLogic(networkService: mockNetworkService,
                                                   dataService: mockDataService)
@@ -50,7 +50,7 @@ class UserBusinessLogicTests: XCTestCase {
                                 largeTransaction: 10,
                                 allowance: 100.22)
 
-        mockNetworkService.returnJSONDecodableValue = expectedUser
+        mockNetworkService.returnJSONDecodableValues = [expectedUser]
 
         let userBusinessLogic = UserBusinessLogic(networkService: mockNetworkService,
                                                   dataService: mockDataService)

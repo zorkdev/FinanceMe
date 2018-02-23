@@ -2,6 +2,77 @@
 
 class FormattersTests: XCTestCase {
 
+    let date: Date = {
+        var components = DateComponents()
+        components.year = 2018
+        components.month = 1
+        components.day = 7
+        components.hour = 15
+        components.minute = 30
+        components.second = 10
+
+        return Calendar.current.date(from: components)!
+    }()
+
+    let positiveAmount = NSNumber(value: 100.0)
+    let negativeAmount = NSNumber(value: -100.0)
+
+    func testAPIDateFormatter() {
+        XCTAssertEqual(Formatters.apiDate.string(from: date), "2018-01-07")
+    }
+
+    func testAPIDateTimeFormatter() {
+        XCTAssertEqual(Formatters.apiDateTime.string(from: date), "2018-01-07T15:30:10.000Z")
+    }
+
+    func testDateFormatter() {
+        XCTAssertEqual(Formatters.date.string(from: date), "Jan 7, 2018")
+    }
+
+    func testDateTimeFormatter() {
+        XCTAssertEqual(Formatters.dateTime.string(from: date), "Jan 7, 2018 at 3:30 PM")
+    }
+
+    func testDateWithoutYearFormatter() {
+        XCTAssertEqual(Formatters.dateWithoutYear.string(from: date), "Sunday, 7 January")
+    }
+
+    func testDateWithYearFormatter() {
+        XCTAssertEqual(Formatters.dateWithYear.string(from: date), "Sunday, 7 January 2018")
+    }
+
+    func testMonthFormatter() {
+        XCTAssertEqual(Formatters.month.string(from: date), "January")
+    }
+
+    func testMonthShortFormatter() {
+        XCTAssertEqual(Formatters.monthShort.string(from: date), "Jan")
+    }
+
+    func testYearFormatter() {
+        XCTAssertEqual(Formatters.year.string(from: date), "2018")
+    }
+
+    func testCurrencyFormatter() {
+        XCTAssertEqual(Formatters.currency.string(from: positiveAmount), "£100.00")
+        XCTAssertEqual(Formatters.currency.string(from: negativeAmount), "-£100.00")
+    }
+
+    func testCurrencyPlusSignFormatter() {
+        XCTAssertEqual(Formatters.currencyPlusSign.string(from: positiveAmount), "+£100.00")
+        XCTAssertEqual(Formatters.currencyPlusSign.string(from: negativeAmount), "£100.00")
+    }
+
+    func testCurrencyPlusMinusSignFormatter() {
+        XCTAssertEqual(Formatters.currencyPlusMinusSign.string(from: positiveAmount), "+£100.00")
+        XCTAssertEqual(Formatters.currencyPlusMinusSign.string(from: negativeAmount), "-£100.00")
+    }
+
+    func testCurrencyNoFractionsFormatter() {
+        XCTAssertEqual(Formatters.currencyNoFractions.string(from: positiveAmount), "£100")
+        XCTAssertEqual(Formatters.currencyNoFractions.string(from: negativeAmount), "-£100")
+    }
+
     func testFormatRelativeToday() {
         let date = Date()
         XCTAssertEqual(Formatters.formatRelative(date: date), "Today")

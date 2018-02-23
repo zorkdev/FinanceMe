@@ -32,9 +32,8 @@ public extension UIView {
         get {
             if let color = layer.shadowColor {
                 return UIColor(cgColor: color)
-            } else {
-                return nil
             }
+            return nil
         }
         set {
             layer.shadowColor = newValue?.cgColor

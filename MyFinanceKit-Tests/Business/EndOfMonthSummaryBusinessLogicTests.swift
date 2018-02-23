@@ -25,7 +25,7 @@ class EndOfMonthSummaryBusinessLogicTests: XCTestCase {
         let expectedEndOfMonthSummaryList = EndOfMonthSummaryList(currentMonthSummary: currentMonthSummary,
                                                                   endOfMonthSummaries: [endOfMonthSummary])
 
-        mockNetworkService.returnJSONDecodableValue = expectedEndOfMonthSummaryList
+        mockNetworkService.returnJSONDecodableValues = [expectedEndOfMonthSummaryList]
 
         let endOfMonthSummaryBusinessLogic = EndOfMonthSummaryBusinessLogic(networkService: mockNetworkService)
 
