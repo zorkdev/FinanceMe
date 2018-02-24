@@ -1,1 +1,1 @@
-class ViewController: UIViewController {}
+class ViewController: BaseViewController {}

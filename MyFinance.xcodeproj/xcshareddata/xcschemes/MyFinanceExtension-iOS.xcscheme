@@ -55,6 +55,16 @@
          </BuildableReference>
       </CodeCoverageTargets>
       <Testables>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "9A65DEFD2041CE7300E8177A"
+               BuildableName = "MyFinance-Tests-iOS.xctest"
+               BlueprintName = "MyFinance-Tests-iOS"
+               ReferencedContainer = "container:MyFinance.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
       <MacroExpansion>
          <BuildableReference
@@ -87,16 +97,26 @@
       debugServiceExtension = "internal"
       allowLocationSimulation = "YES"
       launchAutomaticallySubstyle = "2">
-      <BuildableProductRunnable
-         runnableDebuggingMode = "0">
+      <RemoteRunnable
+         runnableDebuggingMode = "2"
+         BundleIdentifier = "com.apple.springboard">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "9A5AE5712012A8AB00B25081"
-            BuildableName = "MyFinance-iOS.app"
-            BlueprintName = "MyFinance-iOS"
+            BlueprintIdentifier = "9AD3EE372013D9A10083F8FE"
+            BuildableName = "MyFinanceExtension-iOS.appex"
+            BlueprintName = "MyFinanceExtension-iOS"
             ReferencedContainer = "container:MyFinance.xcodeproj">
          </BuildableReference>
-      </BuildableProductRunnable>
+      </RemoteRunnable>
+      <MacroExpansion>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "9AD3EE372013D9A10083F8FE"
+            BuildableName = "MyFinanceExtension-iOS.appex"
+            BlueprintName = "MyFinanceExtension-iOS"
+            ReferencedContainer = "container:MyFinance.xcodeproj">
+         </BuildableReference>
+      </MacroExpansion>
       <AdditionalOptions>
          <AdditionalOption
             key = "NSZombieEnabled"

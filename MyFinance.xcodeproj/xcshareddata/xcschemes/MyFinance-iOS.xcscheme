@@ -42,6 +42,16 @@
          </BuildableReference>
       </CodeCoverageTargets>
       <Testables>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "9A65DEFD2041CE7300E8177A"
+               BuildableName = "MyFinance-Tests-iOS.xctest"
+               BlueprintName = "MyFinance-Tests-iOS"
+               ReferencedContainer = "container:MyFinance.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
       <MacroExpansion>
          <BuildableReference

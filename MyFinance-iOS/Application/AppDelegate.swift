@@ -1,4 +1,3 @@
-@UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     private var authViewModel: AuthViewModel!
@@ -9,9 +8,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication,
                      didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]? = nil) -> Bool {
-        (window?.rootViewController as? BaseViewController)?.appState = appState
+
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let initialViewController = storyboard.instantiateInitialViewController() as? BaseViewController
+        initialViewController?.appState = appState
+        window = UIWindow()
+        window?.rootViewController = initialViewController
+        window?.makeKeyAndVisible()
+
         authViewModel = AuthViewModel(window: window)
         authViewModel.authenticate()
+
         return true
     }
 
