@@ -3,7 +3,7 @@ class AppStatemacOS: AppState {
     override init() {
         let networkService = NetworkService(networkRequestable: URLSession.shared,
                                             configService: ConfigFileService())
-        let dataService = KeychainDataService()
+        let dataService = UserDefaultsDataService()
         super.init(networkService: networkService,
                    dataService: dataService)
     }
