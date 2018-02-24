@@ -78,7 +78,9 @@ extension HomeViewModel {
         let balanceAttributedString = createAttributedString(from: balance.effectiveBalance)
         delegate?.set(balance: balanceAttributedString)
         let allowanceAttributedString = createAttributedString(from: user.allowance)
+        let allowanceIcon = SpendingBusinessLogic().allowanceIcon(for: user)
         delegate?.set(allowance: allowanceAttributedString)
+        delegate?.set(allowanceIcon: allowanceIcon)
 
         externalTransactions = Transaction.all(dataService: serviceProvider.dataService)
         updateTransactions()
