@@ -408,7 +408,7 @@ extension HomeViewModel {
 
             currentMonthCellModels = [homeCurrentMonthCellModel]
 
-            let payday = User.load(dataService: serviceProvider.dataService)?.payday ?? 0
+            let payday = User.load(dataService: serviceProvider.dataService)?.payday ?? 1
             let currentSummary = EndOfMonthSummary(balance: currentMonthSummary.forecast,
                                                    created: Date().next(day: payday, direction: .forward))
             var summaries = endOfMonthSummaries + [currentSummary]

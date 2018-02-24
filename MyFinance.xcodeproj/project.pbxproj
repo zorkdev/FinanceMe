@@ -561,6 +561,7 @@
 		912C8C9B1823959085F2299C /* Pods-MyFinanceExtension-iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyFinanceExtension-iOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-MyFinanceExtension-iOS/Pods-MyFinanceExtension-iOS.release.xcconfig"; sourceTree = "<group>"; };
 		9583B4C05F05012F0928BCE1 /* Pods-MyFinanceKit-watchOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyFinanceKit-watchOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-MyFinanceKit-watchOS/Pods-MyFinanceKit-watchOS.release.xcconfig"; sourceTree = "<group>"; };
 		9A0E8E51203F9861003A811E /* ViewModelTypeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelTypeTests.swift; sourceTree = "<group>"; };
+		9A154C3D2040E2E400932298 /* MyFinanceKit-TestsHost-iOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "MyFinanceKit-TestsHost-iOS.entitlements"; sourceTree = "<group>"; };
 		9A2022082038CAE00012DD51 /* MyFinanceKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MyFinanceKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9A20220A2038CAE00012DD51 /* MyFinanceKit_watchOS.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyFinanceKit_watchOS.h; sourceTree = "<group>"; };
 		9A20220B2038CAE00012DD51 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -714,6 +715,7 @@
 		9AA1A3DF203FA4580059EC5A /* MockTodayPresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockTodayPresentable.swift; sourceTree = "<group>"; };
 		9AA8E42E2040D6B80094FB41 /* MyFinance-tvOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "MyFinance-tvOS.entitlements"; sourceTree = "<group>"; };
 		9AA8E42F2040D6C40094FB41 /* MyFinanceExtension-watchOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "MyFinanceExtension-watchOS.entitlements"; sourceTree = "<group>"; };
+		9AA8E4302040DFEE0094FB41 /* MyFinance-watchOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "MyFinance-watchOS.entitlements"; sourceTree = "<group>"; };
 		9AAA3D7520290621008881FD /* AuthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewController.swift; sourceTree = "<group>"; };
 		9AAA3D772029077E008881FD /* AuthViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewModel.swift; sourceTree = "<group>"; };
 		9AAA3D7E202925FB008881FD /* AuthDisplayModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthDisplayModel.swift; sourceTree = "<group>"; };
@@ -1057,6 +1059,7 @@
 				9A37AB19203E207900CFEE67 /* AppDelegate.swift */,
 				9A37AB22203E207900CFEE67 /* LaunchScreen.storyboard */,
 				9A37AB25203E207900CFEE67 /* Info.plist */,
+				9A154C3D2040E2E400932298 /* MyFinanceKit-TestsHost-iOS.entitlements */,
 			);
 			path = "MyFinanceKit-TestsHost-iOS";
 			sourceTree = "<group>";
@@ -1097,6 +1100,7 @@
 				9A3CB7C8202FC657008AF158 /* Interface.storyboard */,
 				9A3CB7CB202FC657008AF158 /* Assets.xcassets */,
 				9A3CB7CD202FC657008AF158 /* Info.plist */,
+				9AA8E4302040DFEE0094FB41 /* MyFinance-watchOS.entitlements */,
 			);
 			path = "MyFinance-watchOS";
 			sourceTree = "<group>";
@@ -1104,12 +1108,12 @@
 		9A3CB7D6202FC657008AF158 /* MyFinanceExtension-watchOS */ = {
 			isa = PBXGroup;
 			children = (
-				9AA8E42F2040D6C40094FB41 /* MyFinanceExtension-watchOS.entitlements */,
 				9A3CB7D7202FC657008AF158 /* InterfaceController.swift */,
 				9A3CB7D9202FC657008AF158 /* ExtensionDelegate.swift */,
 				9A3CB7DB202FC657008AF158 /* ComplicationController.swift */,
 				9A3CB7DD202FC657008AF158 /* Assets.xcassets */,
 				9A3CB7DF202FC657008AF158 /* Info.plist */,
+				9AA8E42F2040D6C40094FB41 /* MyFinanceExtension-watchOS.entitlements */,
 			);
 			path = "MyFinanceExtension-watchOS";
 			sourceTree = "<group>";
@@ -2031,10 +2035,20 @@
 					9A37AB16203E207900CFEE67 = {
 						CreatedOnToolsVersion = 9.2;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Keychain = {
+								enabled = 1;
+							};
+						};
 					};
 					9A3CB7C5202FC657008AF158 = {
 						CreatedOnToolsVersion = 9.2;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 0;
+							};
+						};
 					};
 					9A3CB7D1202FC657008AF158 = {
 						CreatedOnToolsVersion = 9.2;
@@ -3651,6 +3665,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "MyFinanceKit-TestsHost-iOS/MyFinanceKit-TestsHost-iOS.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 29MN2WH3Q3;
 				INFOPLIST_FILE = "MyFinanceKit-TestsHost-iOS/Info.plist";
@@ -3666,6 +3681,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "MyFinanceKit-TestsHost-iOS/MyFinanceKit-TestsHost-iOS.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 29MN2WH3Q3;
 				INFOPLIST_FILE = "MyFinanceKit-TestsHost-iOS/Info.plist";

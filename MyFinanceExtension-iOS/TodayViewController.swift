@@ -24,7 +24,7 @@ class TodayViewController: UIViewController, ViewControllerType {
     }
 
     @IBAction func buttonTapped(_ sender: UIButton) {
-        guard let url = URL(string: "myfinance://") else { return }
+        guard let url = URL(string: ConfigFileService.Constants.urlScheme) else { return }
         extensionContext?.open(url, completionHandler: nil)
     }
 
