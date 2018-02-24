@@ -1248,7 +1248,6 @@
 				9A5AE5982012C0B400B25081 /* Platform */,
 				9A5AE58B2012B8DC00B25081 /* Model */,
 				9A96668520260E4D000F8A42 /* UI */,
-				9A4F557D2023D04700DBF68F /* ViewModel */,
 				9A5AE5932012BDDB00B25081 /* Business */,
 			);
 			path = MyFinanceKit;
@@ -1615,6 +1614,7 @@
 			children = (
 				9A8561AB2027AB8A00A26F12 /* View */,
 				9AD96CA120253A1400D37F23 /* Controller */,
+				9A4F557D2023D04700DBF68F /* ViewModel */,
 				9A96668620260E7B000F8A42 /* ColorPalette.swift */,
 			);
 			path = UI;
