@@ -68,7 +68,7 @@
       buildConfiguration = "Debug"
       selectedDebuggerIdentifier = ""
       selectedLauncherIdentifier = "Xcode.IDEFoundation.Launcher.PosixSpawn"
-      enableThreadSanitizer = "YES"
+      disableMainThreadChecker = "YES"
       language = "en"
       region = "GB"
       launchStyle = "0"
@@ -89,11 +89,6 @@
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
-         <AdditionalOption
-            key = "NSZombieEnabled"
-            value = "YES"
-            isEnabled = "YES">
-         </AdditionalOption>
       </AdditionalOptions>
    </LaunchAction>
    <ProfileAction
