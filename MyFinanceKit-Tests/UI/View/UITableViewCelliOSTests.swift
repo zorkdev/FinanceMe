@@ -1,11 +1,11 @@
 @testable import MyFinanceKit
 
-class TableViewCell: UITableViewCell {}
+class TableViewCelliOS: UITableViewCell {}
 
 class UITableViewCellExtensionsTests: XCTestCase {
 
     func testNib() {
-        XCTAssertNoThrow(TableViewCell.nib)
+        XCTAssertNoThrow(TableViewCelliOS.nib)
     }
 
 }

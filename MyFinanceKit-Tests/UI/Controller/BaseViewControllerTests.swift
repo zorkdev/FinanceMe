@@ -25,12 +25,4 @@ class BaseViewControllerTests: XCTestCase {
         baseViewController?.textFieldDidEndEditing(UITextField())
     }
 
-    func testKeyboardToolbar() {
-        XCTAssertNotNil(baseViewController?.keyBoardToolbar)
-    }
-
-    func testDoneTapped() {
-        baseViewController?.doneTapped()
-    }
-
 }
