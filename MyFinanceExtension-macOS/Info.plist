@@ -38,5 +38,7 @@
 	</dict>
 	<key>NSHumanReadableCopyright</key>
 	<string>Copyright © 2018 Attila Nemet. All rights reserved.</string>
+	<key>TeamID</key>
+	<string>$(AppIdentifierPrefix)</string>
 </dict>
 </plist>

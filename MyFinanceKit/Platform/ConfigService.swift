@@ -14,6 +14,12 @@ public class ConfigFileService: ConfigService {
 
     public struct Constants {
         public static let urlScheme = "myfinance://"
+        public static let productName = "com.attilanemet.MyFinance"
+
+        public static let accessGroup: String = {
+            //swiftlint:disable:next force_cast
+            return (Bundle.main.infoDictionary!["TeamID"] as! String) + productName
+        }()
     }
 
     public let isLoggingEnabled = TARGET_OS_SIMULATOR == 1

@@ -28,5 +28,7 @@
 	</array>
 	<key>UIUserInterfaceStyle</key>
 	<string>Automatic</string>
+	<key>TeamID</key>
+	<string>$(AppIdentifierPrefix)</string>
 </dict>
 </plist>

@@ -56,5 +56,7 @@
 	<array>
 		<string>UIInterfaceOrientationPortrait</string>
 	</array>
+	<key>TeamID</key>
+	<string>$(AppIdentifierPrefix)</string>
 </dict>
 </plist>

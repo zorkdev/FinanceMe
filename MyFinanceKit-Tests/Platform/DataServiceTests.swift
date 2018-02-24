@@ -15,7 +15,7 @@ class DataServiceTests: XCTestCase {
         super.tearDown()
 
         mockDataService = MockDataService()
-        _ = KeychainWrapper.standard.removeAllKeys()
+        _ = keychainDataService.keychain.removeAllKeys()
         UserDefaults.standard.removePersistentDomain(forName: Bundle.main.bundleIdentifier!)
     }
 

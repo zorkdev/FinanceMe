@@ -112,7 +112,7 @@ public class NetworkService: NetworkServiceType {
                                body: JSONEncodable?) -> URLRequest? {
 
         guard let url = api.url,
-            var urlComponents = URLComponents(url: url, resolvingAgainstBaseURL: true) else { return nil }
+            var urlComponents = URLComponents(url: url, resolvingAgainstBaseURL: false) else { return nil }
 
         urlComponents.queryItems = parameters?.urlEncoded()
 
