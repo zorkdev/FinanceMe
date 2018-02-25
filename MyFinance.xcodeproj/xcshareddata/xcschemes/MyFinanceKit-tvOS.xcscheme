@@ -52,16 +52,6 @@
                ReferencedContainer = "container:MyFinance.xcodeproj">
             </BuildableReference>
          </TestableReference>
-         <TestableReference
-            skipped = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "9AA374D22042205D00B016BB"
-               BuildableName = "MyFinance-Tests-tvOS.xctest"
-               BlueprintName = "MyFinance-Tests-tvOS"
-               ReferencedContainer = "container:MyFinance.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
       </Testables>
       <MacroExpansion>
          <BuildableReference

@@ -1,4 +1,5 @@
 import XCTest
+import MyFinanceKit
 @testable import MyFinance_macOS
 
 class AppStatemacOSTests: XCTestCase {

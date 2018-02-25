@@ -1,7 +1,8 @@
 let isTesting = NSClassFromString("XCTestCase") != nil
 
 NSApplication.shared.delegate = AppDelegate()
-let storyboard = NSStoryboard(name: NSStoryboard.Name("Main"), bundle: nil)
+let storyboard = NSStoryboard(name: NSStoryboard.Name(NSViewController.storyboardId),
+                              bundle: nil)
 let initialController = storyboard.instantiateInitialController() as? NSWindowController
 
 if isTesting == false { initialController?.window?.makeKeyAndOrderFront(nil) }

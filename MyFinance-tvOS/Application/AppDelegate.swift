@@ -7,7 +7,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication,
                      didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]? = nil) -> Bool {
 
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let storyboard = UIStoryboard(name: UIViewController.storyboardId, bundle: nil)
         let initialViewController = storyboard.instantiateInitialViewController() as? BaseViewController
         initialViewController?.appState = appState
         window = UIWindow()
