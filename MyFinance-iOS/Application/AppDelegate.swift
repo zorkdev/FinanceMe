@@ -1,3 +1,5 @@
+import LocalAuthentication
+
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     private var authViewModel: AuthViewModelType!
@@ -17,7 +19,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
         if isTesting == false { window?.makeKeyAndVisible() }
 
-        authViewModel = AuthViewModel(window: window)
+        let authViewController = AuthViewController.instantiate()
+        authViewModel = AuthViewModel(delegate: authViewController,
+                                      window: window,
+                                      viewController: authViewController,
+                                      context: LAContext())
         authViewModel.authenticate()
 
         return true

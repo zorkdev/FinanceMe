@@ -16,6 +16,7 @@
 		55422EC3F483571E2408D7F4 /* Pods_MyFinanceKit_macOS_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9C22E65EE27E359BD71BEBF /* Pods_MyFinanceKit_macOS_Tests.framework */; };
 		688D78BD9ED7EF8F6FE7EC24 /* Pods_MyFinance_Tests_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E05704523C729A976882919 /* Pods_MyFinance_Tests_iOS.framework */; };
 		8B68FCB6C23A94B7764A1EE8 /* Pods_MyFinanceKit_macOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 44AC3487225BC41D05828D87 /* Pods_MyFinanceKit_macOS.framework */; };
+		9A014490204264F800443585 /* AuthViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A01448F204264F800443585 /* AuthViewModelTests.swift */; };
 		9A0E8E53203F988D003A811E /* ViewModelTypeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A0E8E51203F9861003A811E /* ViewModelTypeTests.swift */; };
 		9A0E8E54203F988E003A811E /* ViewModelTypeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A0E8E51203F9861003A811E /* ViewModelTypeTests.swift */; };
 		9A20220C2038CAE00012DD51 /* MyFinanceKit_watchOS.h in Headers */ = {isa = PBXBuildFile; fileRef = 9A20220A2038CAE00012DD51 /* MyFinanceKit_watchOS.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -306,6 +307,8 @@
 		9A8561AF2027BCDA00A26F12 /* HomeChartTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9A8561AE2027BCDA00A26F12 /* HomeChartTableViewCell.xib */; };
 		9A8561B12027BD7600A26F12 /* HomeChartTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A8561B02027BD7600A26F12 /* HomeChartTableViewCell.swift */; };
 		9A8561B32027BF5100A26F12 /* HomeChartCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A8561B22027BF5100A26F12 /* HomeChartCellModel.swift */; };
+		9A88A7F72042602B00421943 /* AuthViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A88A7F62042602B00421943 /* AuthViewControllerTests.swift */; };
+		9A88A7FB204260C300421943 /* MockAuthViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A88A7FA204260C300421943 /* MockAuthViewModel.swift */; };
 		9A94F8E6202CE83100AEF61F /* MyFinanceKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A4F55422023C7BE00DBF68F /* MyFinanceKit.framework */; };
 		9A94F8EE202CEA5400AEF61F /* ErrorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A6EF756202BA15D006D3420 /* ErrorTests.swift */; };
 		9A94F8EF202CEA8E00AEF61F /* HALResponseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A6EF75D202BA6A2006D3420 /* HALResponseTests.swift */; };
@@ -412,9 +415,12 @@
 		9AE7F1682042580B00BA98BD /* InstantiatableTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AB4F12820424DEE008D0F5D /* InstantiatableTests.swift */; };
 		9AE7F1692042580C00BA98BD /* InstantiatableTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AB4F12820424DEE008D0F5D /* InstantiatableTests.swift */; };
 		9AE7F16A2042580C00BA98BD /* InstantiatableTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AB4F12820424DEE008D0F5D /* InstantiatableTests.swift */; };
+		9AE7F16C20425E7700BA98BD /* MessagePresentableTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AE7F16B20425E7700BA98BD /* MessagePresentableTests.swift */; };
 		9AEAD361203F8F9100CB572C /* TableViewCelliOS.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9AEAD360203F8F9100CB572C /* TableViewCelliOS.xib */; };
 		9AEAD363203F8FA700CB572C /* UITableViewCelliOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AEAD362203F8FA700CB572C /* UITableViewCelliOSTests.swift */; };
 		9AEAD365203F908900CB572C /* UIViewExtensionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AEAD364203F908900CB572C /* UIViewExtensionsTests.swift */; };
+		9AEEC8AB204267C200ED7627 /* MockLAContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AEEC8AA204267C200ED7627 /* MockLAContext.swift */; };
+		9AEEC8AD2042696800ED7627 /* MockAuthViewModelDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AEEC8AC2042696800ED7627 /* MockAuthViewModelDelegate.swift */; };
 		A07B7EB9CD7A8DD636CF7A7D /* Pods_MyFinance_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C00742E35A2D39BB6D61F955 /* Pods_MyFinance_iOS.framework */; };
 		A4C17E7ED54DFABE998A8873 /* Pods_MyFinance_Tests_macOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C2C63C31D40DAC096106092E /* Pods_MyFinance_Tests_macOS.framework */; };
 		A7E70FDECF2732D8138872FF /* Pods_MyFinanceExtension_macOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0613BC2F22CEB669D68D23C1 /* Pods_MyFinanceExtension_macOS.framework */; };
@@ -690,6 +696,7 @@
 		8A08E3B1273B7D72A834A457 /* Pods-MyFinanceKit-iOS-Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyFinanceKit-iOS-Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MyFinanceKit-iOS-Tests/Pods-MyFinanceKit-iOS-Tests.release.xcconfig"; sourceTree = "<group>"; };
 		912C8C9B1823959085F2299C /* Pods-MyFinanceExtension-iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyFinanceExtension-iOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-MyFinanceExtension-iOS/Pods-MyFinanceExtension-iOS.release.xcconfig"; sourceTree = "<group>"; };
 		9583B4C05F05012F0928BCE1 /* Pods-MyFinanceKit-watchOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyFinanceKit-watchOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-MyFinanceKit-watchOS/Pods-MyFinanceKit-watchOS.release.xcconfig"; sourceTree = "<group>"; };
+		9A01448F204264F800443585 /* AuthViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewModelTests.swift; sourceTree = "<group>"; };
 		9A0E8E51203F9861003A811E /* ViewModelTypeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelTypeTests.swift; sourceTree = "<group>"; };
 		9A2022082038CAE00012DD51 /* MyFinanceKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MyFinanceKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9A20220A2038CAE00012DD51 /* MyFinanceKit_watchOS.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyFinanceKit_watchOS.h; sourceTree = "<group>"; };
@@ -837,6 +844,8 @@
 		9A872984201662E100C1E9BE /* ExternalTransactionsBusinessLogic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExternalTransactionsBusinessLogic.swift; sourceTree = "<group>"; };
 		9A872E0E2016719100C1E9BE /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		9A872E112016719100C1E9BE /* UserBusinessLogic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserBusinessLogic.swift; sourceTree = "<group>"; };
+		9A88A7F62042602B00421943 /* AuthViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewControllerTests.swift; sourceTree = "<group>"; };
+		9A88A7FA204260C300421943 /* MockAuthViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockAuthViewModel.swift; sourceTree = "<group>"; };
 		9A94F8E1202CE83100AEF61F /* MyFinanceKit-macOS-Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "MyFinanceKit-macOS-Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9A94F8E5202CE83100AEF61F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9A94F8ED202CE87600AEF61F /* Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Bridging-Header.h"; sourceTree = "<group>"; };
@@ -914,9 +923,12 @@
 		9AE7F1602042572700BA98BD /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		9AE7F1622042573C00BA98BD /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		9AE7F1642042576800BA98BD /* TestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestViewController.swift; sourceTree = "<group>"; };
+		9AE7F16B20425E7700BA98BD /* MessagePresentableTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessagePresentableTests.swift; sourceTree = "<group>"; };
 		9AEAD360203F8F9100CB572C /* TableViewCelliOS.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TableViewCelliOS.xib; sourceTree = "<group>"; };
 		9AEAD362203F8FA700CB572C /* UITableViewCelliOSTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableViewCelliOSTests.swift; sourceTree = "<group>"; };
 		9AEAD364203F908900CB572C /* UIViewExtensionsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtensionsTests.swift; sourceTree = "<group>"; };
+		9AEEC8AA204267C200ED7627 /* MockLAContext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockLAContext.swift; sourceTree = "<group>"; };
+		9AEEC8AC2042696800ED7627 /* MockAuthViewModelDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockAuthViewModelDelegate.swift; sourceTree = "<group>"; };
 		9BF959DE601445A20C613BBB /* Pods-MyFinance-tvOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyFinance-tvOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MyFinance-tvOS/Pods-MyFinance-tvOS.debug.xcconfig"; sourceTree = "<group>"; };
 		A8B0411C6517F0B6198C67E8 /* Pods-MyFinanceExtension-iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyFinanceExtension-iOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MyFinanceExtension-iOS/Pods-MyFinanceExtension-iOS.debug.xcconfig"; sourceTree = "<group>"; };
 		AD2A187BD7CC65C7F408B8B3 /* Pods-MyFinanceExtension-macOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyFinanceExtension-macOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MyFinanceExtension-macOS/Pods-MyFinanceExtension-macOS.debug.xcconfig"; sourceTree = "<group>"; };
@@ -1624,6 +1636,56 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		9A88A7F220425FEC00421943 /* Auth */ = {
+			isa = PBXGroup;
+			children = (
+				9A88A7F62042602B00421943 /* AuthViewControllerTests.swift */,
+				9A01448F204264F800443585 /* AuthViewModelTests.swift */,
+			);
+			path = Auth;
+			sourceTree = "<group>";
+		};
+		9A88A7F320425FF900421943 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		9A88A7F420425FFF00421943 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
+		9A88A7F52042600500421943 /* AddTransaction */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = AddTransaction;
+			sourceTree = "<group>";
+		};
+		9A88A7F82042609D00421943 /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				9AC3E71C2042390D00CD29B6 /* MockAppStateiOS.swift */,
+				9AC3E73120423A9200CD29B6 /* MockWCSession.swift */,
+				9AC3E72F20423A8000CD29B6 /* MockWatchService.swift */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		9A88A7F9204260B000421943 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				9A88A7FA204260C300421943 /* MockAuthViewModel.swift */,
+				9AEEC8AC2042696800ED7627 /* MockAuthViewModelDelegate.swift */,
+				9AEEC8AA204267C200ED7627 /* MockLAContext.swift */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
 		9A94F8DB202CE6FF00AEF61F /* Platform */ = {
 			isa = PBXGroup;
 			children = (
@@ -1781,6 +1843,10 @@
 			isa = PBXGroup;
 			children = (
 				9AB4F12720424DDC008D0F5D /* Extensions */,
+				9A88A7F220425FEC00421943 /* Auth */,
+				9A88A7F320425FF900421943 /* Home */,
+				9A88A7F52042600500421943 /* AddTransaction */,
+				9A88A7F420425FFF00421943 /* Settings */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -1788,6 +1854,7 @@
 		9AB4F12720424DDC008D0F5D /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				9AE7F16B20425E7700BA98BD /* MessagePresentableTests.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -1814,9 +1881,8 @@
 		9AC3E71B204238FB00CD29B6 /* iOS */ = {
 			isa = PBXGroup;
 			children = (
-				9AC3E71C2042390D00CD29B6 /* MockAppStateiOS.swift */,
-				9AC3E73120423A9200CD29B6 /* MockWCSession.swift */,
-				9AC3E72F20423A8000CD29B6 /* MockWatchService.swift */,
+				9A88A7F82042609D00421943 /* Application */,
+				9A88A7F9204260B000421943 /* UI */,
 			);
 			path = iOS;
 			sourceTree = "<group>";
@@ -3857,8 +3923,14 @@
 				9AC3E73220423A9200CD29B6 /* MockWCSession.swift in Sources */,
 				9A2860DF20422B8A008FA915 /* AppStateiOSTests.swift in Sources */,
 				9AC3E73620423C7100CD29B6 /* Factory.swift in Sources */,
+				9A014490204264F800443585 /* AuthViewModelTests.swift in Sources */,
 				9AC3E71D2042390D00CD29B6 /* MockAppStateiOS.swift in Sources */,
+				9A88A7FB204260C300421943 /* MockAuthViewModel.swift in Sources */,
 				9AC3E72720423A3F00CD29B6 /* MockConfigService.swift in Sources */,
+				9AE7F16C20425E7700BA98BD /* MessagePresentableTests.swift in Sources */,
+				9AEEC8AB204267C200ED7627 /* MockLAContext.swift in Sources */,
+				9AEEC8AD2042696800ED7627 /* MockAuthViewModelDelegate.swift in Sources */,
+				9A88A7F72042602B00421943 /* AuthViewControllerTests.swift in Sources */,
 				9AC3E72A20423A4200CD29B6 /* MockAPI.swift in Sources */,
 				9AC3E71420422FD600CD29B6 /* WatchServiceTests.swift in Sources */,
 			);

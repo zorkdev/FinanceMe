@@ -1,5 +1,14 @@
 import LocalAuthentication
 
+protocol LAContextType {
+
+    func canEvaluatePolicy(_ policy: LAPolicy, error: NSErrorPointer) -> Bool
+    func evaluatePolicy(_ policy: LAPolicy, localizedReason: String, reply: @escaping (Bool, Error?) -> Void)
+
+}
+
+extension LAContext: LAContextType {}
+
 protocol AuthViewModelDelegate: class {
 
     func updateTryAgain(isHidden: Bool)
@@ -8,6 +17,8 @@ protocol AuthViewModelDelegate: class {
 }
 
 protocol AuthViewModelType: ViewModelType {
+
+    var delegate: AuthViewModelDelegate? { get set }
 
     func authenticate()
     func addOcclusion()
@@ -23,11 +34,19 @@ class AuthViewModel: AuthViewModelType {
 
     private var appWindow: UIWindow?
     private var window: UIWindow?
+    private weak var viewController: UIViewController?
+    private let context: LAContextType
 
-    private weak var delegate: AuthViewModelDelegate?
+    weak var delegate: AuthViewModelDelegate?
 
-    init(window: UIWindow?) {
+    init(delegate: AuthViewModelDelegate,
+         window: UIWindow?,
+         viewController: UIViewController,
+         context: LAContextType) {
+        self.delegate = delegate
         appWindow = window
+        self.viewController = viewController
+        self.context = context
     }
 
     func tryAgainButtonTapped() {
@@ -37,7 +56,6 @@ class AuthViewModel: AuthViewModelType {
     @objc func authenticate() {
         addOcclusion()
 
-        let context = LAContext()
         var error: NSError?
 
         if context.canEvaluatePolicy(.deviceOwnerAuthentication, error: &error) {
@@ -65,13 +83,9 @@ class AuthViewModel: AuthViewModelType {
 
         guard let frame = appWindow?.frame else { fatalError() }
 
-        let authViewController = AuthViewController.instantiate()
-        authViewController.viewModel = self
-        delegate = authViewController
-
         window = UIWindow(frame: frame)
         window?.windowLevel = UIWindowLevelNormal + 2
-        window?.rootViewController = authViewController
+        window?.rootViewController = viewController
         if isTesting == false { window?.makeKeyAndVisible() }
     }
 
