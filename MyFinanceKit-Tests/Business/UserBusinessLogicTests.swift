@@ -15,11 +15,7 @@ class UserBusinessLogicTests: XCTestCase {
     func testGetCurrentUser() {
         let newExpectation = expectation(description: "User fetched")
 
-        let expectedUser = User(name: "User Name",
-                                payday: 10,
-                                startDate: Date(),
-                                largeTransaction: 10,
-                                allowance: 100.22)
+        let expectedUser = Factory.makeUser()
 
         mockNetworkService.returnJSONDecodableValues = [expectedUser]
 
@@ -45,11 +41,7 @@ class UserBusinessLogicTests: XCTestCase {
     func testUpdateUser() {
         let newExpectation = expectation(description: "User updated")
 
-        let expectedUser = User(name: "User Name",
-                                payday: 10,
-                                startDate: Date(),
-                                largeTransaction: 10,
-                                allowance: 100.22)
+        let expectedUser = Factory.makeUser()
 
         mockNetworkService.returnJSONDecodableValues = [expectedUser]
 

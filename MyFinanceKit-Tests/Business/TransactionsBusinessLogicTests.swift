@@ -18,14 +18,7 @@ class TransactionsBusinessLogicTests: XCTestCase {
 
         let expectedFromTo = FromToParameters(from: dayBefore, to: now)
 
-        let expectedTransactions = [Transaction(id: "id",
-                                                currency: "GBP",
-                                                amount: 10.30,
-                                                direction: .inbound,
-                                                created: Date(),
-                                                narrative: "Test",
-                                                source: .fasterPaymentsIn,
-                                                balance: 100)]
+        let expectedTransactions = [Factory.makeTransaction()]
 
         let halResponse = HALResponse(embedded: TransactionList(transactions: expectedTransactions))
 

@@ -26,19 +26,8 @@ class TodayPresentableTests: XCTestCase {
     }
 
     func testViewDidLoad() {
-        let expectedUser = User(name: "User Name",
-                                payday: 10,
-                                startDate: Date(),
-                                largeTransaction: 10,
-                                allowance: 100.22)
-
-        let expectedBalance = Balance(clearedBalance: 100,
-                                      effectiveBalance: 20,
-                                      pendingTransactions: 90.22,
-                                      availableToSpend: 100,
-                                      acceptedOverdraft: 100,
-                                      currency: "GBP",
-                                      amount: 100)
+        let expectedUser = Factory.makeUser()
+        let expectedBalance = Factory.makeBalance()
 
         mockDataService?.loadReturnValues = [expectedUser, expectedBalance]
         mockNetworkService?.returnJSONDecodableValues = [expectedUser, expectedBalance]
@@ -50,19 +39,8 @@ class TodayPresentableTests: XCTestCase {
     }
 
     func testSetupDefaults() {
-        let expectedUser = User(name: "User Name",
-                                payday: 10,
-                                startDate: Date(),
-                                largeTransaction: 10,
-                                allowance: 100.22)
-
-        let expectedBalance = Balance(clearedBalance: 100,
-                                      effectiveBalance: 20,
-                                      pendingTransactions: 90.22,
-                                      availableToSpend: 100,
-                                      acceptedOverdraft: 100,
-                                      currency: "GBP",
-                                      amount: 100)
+        let expectedUser = Factory.makeUser()
+        let expectedBalance = Factory.makeBalance()
 
         mockDataService?.loadReturnValues = [expectedUser, expectedBalance]
         mockTodayPresentable!.setupDefaults()
@@ -73,19 +51,8 @@ class TodayPresentableTests: XCTestCase {
     }
 
     func testUpdateData() {
-        let expectedUser = User(name: "User Name",
-                                payday: 10,
-                                startDate: Date(),
-                                largeTransaction: 10,
-                                allowance: 100.22)
-
-        let expectedBalance = Balance(clearedBalance: 100,
-                                      effectiveBalance: 20,
-                                      pendingTransactions: 90.22,
-                                      availableToSpend: 100,
-                                      acceptedOverdraft: 100,
-                                      currency: "GBP",
-                                      amount: 100)
+        let expectedUser = Factory.makeUser()
+        let expectedBalance = Factory.makeBalance()
 
         mockDataService?.loadReturnValues = [expectedUser, expectedBalance]
         mockNetworkService?.returnJSONDecodableValues = [expectedUser, expectedBalance]
@@ -102,11 +69,7 @@ class TodayPresentableTests: XCTestCase {
     }
 
     func testGetUser() {
-        let expectedUser = User(name: "User Name",
-                                payday: 10,
-                                startDate: Date(),
-                                largeTransaction: 10,
-                                allowance: 100.22)
+        let expectedUser = Factory.makeUser()
 
         mockDataService?.loadReturnValues = [expectedUser]
         mockNetworkService?.returnJSONDecodableValues = [expectedUser]
@@ -120,13 +83,7 @@ class TodayPresentableTests: XCTestCase {
     }
 
     func testGetBalance() {
-        let expectedBalance = Balance(clearedBalance: 100,
-                                      effectiveBalance: 20,
-                                      pendingTransactions: 90.22,
-                                      availableToSpend: 100,
-                                      acceptedOverdraft: 100,
-                                      currency: "GBP",
-                                      amount: 100)
+        let expectedBalance = Factory.makeBalance()
 
         mockDataService?.loadReturnValues = [expectedBalance]
         mockNetworkService?.returnJSONDecodableValues = [expectedBalance]

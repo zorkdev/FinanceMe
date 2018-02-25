@@ -1,9 +1,13 @@
 public protocol NetworkServiceProvider {
+
     var networkService: NetworkServiceType { get }
+
 }
 
 public protocol DataServiceProvider {
+
     var dataService: DataService { get }
+
 }
 
 open class AppState: NetworkServiceProvider, DataServiceProvider {

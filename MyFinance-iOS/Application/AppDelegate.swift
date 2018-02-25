@@ -1,6 +1,6 @@
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
-    private var authViewModel: AuthViewModel!
+    private var authViewModel: AuthViewModelType!
 
     var window: UIWindow?
 
@@ -14,7 +14,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         initialViewController?.appState = appState
         window = UIWindow()
         window?.rootViewController = initialViewController
-        window?.makeKeyAndVisible()
+
+        if isTesting == false { window?.makeKeyAndVisible() }
 
         authViewModel = AuthViewModel(window: window)
         authViewModel.authenticate()

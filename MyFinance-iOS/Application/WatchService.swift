@@ -1,20 +1,41 @@
 import WatchConnectivity
 
-class WatchService: NSObject {
+protocol WCSessionType {
+
+    static func isSupported() -> Bool
+
+    var delegate: WCSessionDelegate? { get set }
+    var activationState: WCSessionActivationState { get }
+    var isComplicationEnabled: Bool { get }
+
+    func activate()
+    func transferCurrentComplicationUserInfo(_ userInfo: [String: Any]) -> WCSessionUserInfoTransfer
+
+}
+
+extension WCSession: WCSessionType {}
+
+protocol WatchServiceType {
+
+    init(wcSession: WCSessionType, dataService: DataService)
+    func updateComplication()
+
+}
+
+class WatchService: NSObject, WatchServiceType {
 
     private let dataService: DataService
-    private var session: WCSession?
+    private var session: WCSessionType?
 
-    init(dataService: DataService) {
+    required init(wcSession: WCSessionType, dataService: DataService) {
+        self.session = wcSession
         self.dataService = dataService
 
         super.init()
 
-        if WCSession.isSupported() {
-            session = WCSession.default
-            session?.delegate = self
-            session?.activate()
-        }
+        self.session?.delegate = self
+
+        if type(of: wcSession).isSupported() { session?.activate() }
     }
 
     func updateComplication() {
@@ -26,7 +47,7 @@ class WatchService: NSObject {
         guard user.allowance != previousAllowance?.allowance else { return }
         let allowance = Allowance(allowance: user.allowance)
         let data = [Allowance.instanceName: allowance.allowance]
-        session?.transferCurrentComplicationUserInfo(data)
+        _ = session?.transferCurrentComplicationUserInfo(data)
         allowance.save(dataService: dataService)
     }
 

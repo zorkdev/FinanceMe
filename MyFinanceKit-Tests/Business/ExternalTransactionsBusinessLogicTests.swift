@@ -18,14 +18,7 @@ class ExternalTransactionsBusinessLogicTests: XCTestCase {
 
         let expectedFromTo = FromToParameters(from: dayBefore, to: now)
 
-        let expectedTransactions = [Transaction(id: "id",
-                                                currency: "GBP",
-                                                amount: 10.30,
-                                                direction: .inbound,
-                                                created: Date(),
-                                                narrative: "Test",
-                                                source: .fasterPaymentsIn,
-                                                balance: 100)]
+        let expectedTransactions = [Factory.makeTransaction()]
 
         mockNetworkService.returnJSONDecodableValues = [expectedTransactions]
 
@@ -48,14 +41,7 @@ class ExternalTransactionsBusinessLogicTests: XCTestCase {
     func testCreateTransaction() {
         let newExpectation = expectation(description: "Transaction created")
 
-        let expectedTransaction = Transaction(id: "id",
-                                              currency: "GBP",
-                                              amount: 10.30,
-                                              direction: .inbound,
-                                              created: Date(),
-                                              narrative: "Test",
-                                              source: .fasterPaymentsIn,
-                                              balance: 100)
+        let expectedTransaction = Factory.makeTransaction()
 
         mockNetworkService.returnJSONDecodableValues = [expectedTransaction]
 
@@ -78,14 +64,7 @@ class ExternalTransactionsBusinessLogicTests: XCTestCase {
     func testDeleteTransaction_Success() {
         let newExpectation = expectation(description: "Transaction deleted")
 
-        let expectedTransaction = Transaction(id: "id",
-                                              currency: "GBP",
-                                              amount: 10.30,
-                                              direction: .inbound,
-                                              created: Date(),
-                                              narrative: "Test",
-                                              source: .fasterPaymentsIn,
-                                              balance: 100)
+        let expectedTransaction = Factory.makeTransaction()
 
         mockNetworkService.returnJSONDecodableValues = [expectedTransaction]
 

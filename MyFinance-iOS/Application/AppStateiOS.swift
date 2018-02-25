@@ -1,13 +1,18 @@
+import WatchConnectivity
+
 protocol WatchServiceProvider {
-    var watchService: WatchService { get }
+
+    var watchService: WatchServiceType { get }
+
 }
 
 class AppStateiOS: AppState {
 
-    let watchService: WatchService
+    let watchService: WatchServiceType
 
     override init() {
-        self.watchService = WatchService(dataService: KeychainDataService())
+        self.watchService = WatchService(wcSession: WCSession.default,
+                                         dataService: KeychainDataService())
         super.init()
     }
 

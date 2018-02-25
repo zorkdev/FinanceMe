@@ -1,4 +1,4 @@
-@testable import MyFinanceKit
+import MyFinanceKit
 
 struct MockTodayDisplayModel: TodayDisplayModelType {
     var positiveColor: Color = .white

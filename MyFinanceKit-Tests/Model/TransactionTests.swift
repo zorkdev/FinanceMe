@@ -21,14 +21,7 @@ class TransactionTests: XCTestCase {
     }
 
     func testEncodeTransaction() {
-        let transaction = Transaction(id: "id",
-                                      currency: "GBP",
-                                      amount: 10.30,
-                                      direction: .inbound,
-                                      created: Date(),
-                                      narrative: "Test",
-                                      source: .fasterPaymentsIn,
-                                      balance: 100)
+        let transaction = Factory.makeTransaction()
 
         XCTAssertNotNil(transaction.encoded())
     }
@@ -56,14 +49,7 @@ class TransactionTests: XCTestCase {
     }
 
     func testEncodeTransactionList() {
-        let transaction = Transaction(id: "id",
-                                      currency: "GBP",
-                                      amount: 10.30,
-                                      direction: .inbound,
-                                      created: Date(),
-                                      narrative: "Test",
-                                      source: .fasterPaymentsIn,
-                                      balance: 100)
+        let transaction = Factory.makeTransaction()
 
         let transactionList = TransactionList(transactions: [transaction])
 

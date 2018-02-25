@@ -1,5 +1,5 @@
 import PromiseKit
-@testable import MyFinanceKit
+import MyFinanceKit
 
 class MockNetworkService: NetworkServiceType {
 

@@ -20,11 +20,7 @@ class UserTests: XCTestCase {
     }
 
     func testEncodeUser() {
-        let user = User(name: "User Name",
-                        payday: 10,
-                        startDate: Date(),
-                        largeTransaction: 10,
-                        allowance: 100.22)
+        let user = Factory.makeUser()
 
         XCTAssertNotNil(user.encoded())
     }

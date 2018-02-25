@@ -9,6 +9,8 @@ protocol AuthViewModelDelegate: class {
 
 protocol AuthViewModelType: ViewModelType {
 
+    func authenticate()
+    func addOcclusion()
     func tryAgainButtonTapped()
 
 }
@@ -70,7 +72,7 @@ class AuthViewModel: AuthViewModelType {
         window = UIWindow(frame: frame)
         window?.windowLevel = UIWindowLevelNormal + 2
         window?.rootViewController = authViewController
-        window?.makeKeyAndVisible()
+        if isTesting == false { window?.makeKeyAndVisible() }
     }
 
     private func removeOcclusion() {

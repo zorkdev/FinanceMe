@@ -1,4 +1,4 @@
-@testable import MyFinanceKit
+import MyFinanceKit
 
 class MockDataService: DataService {
 
