@@ -19,6 +19,7 @@
 		9A014490204264F800443585 /* AuthViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A01448F204264F800443585 /* AuthViewModelTests.swift */; };
 		9A0E8E53203F988D003A811E /* ViewModelTypeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A0E8E51203F9861003A811E /* ViewModelTypeTests.swift */; };
 		9A0E8E54203F988E003A811E /* ViewModelTypeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A0E8E51203F9861003A811E /* ViewModelTypeTests.swift */; };
+		9A1C9F752044C0A0002A21F4 /* WindowType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A1C9F742044C0A0002A21F4 /* WindowType.swift */; };
 		9A20220C2038CAE00012DD51 /* MyFinanceKit_watchOS.h in Headers */ = {isa = PBXBuildFile; fileRef = 9A20220A2038CAE00012DD51 /* MyFinanceKit_watchOS.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		9A20220F2038CAE00012DD51 /* MyFinanceKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A2022082038CAE00012DD51 /* MyFinanceKit.framework */; };
 		9A2022102038CAE00012DD51 /* MyFinanceKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9A2022082038CAE00012DD51 /* MyFinanceKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -64,7 +65,6 @@
 		9A2022632038D8200012DD51 /* TodayDisplayModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A9666802025EAF5000F8A42 /* TodayDisplayModelType.swift */; };
 		9A2022642038D8240012DD51 /* TodayPresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AD96C93202529E100D37F23 /* TodayPresentable.swift */; };
 		9A2022652038D8260012DD51 /* TodayViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AD3EE4A2013DC5E0083F8FE /* TodayViewModel.swift */; };
-		9A2022662038D8330012DD51 /* Dismissable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AD96CA220253A3E00D37F23 /* Dismissable.swift */; };
 		9A2022672038D83A0012DD51 /* UIView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A2DB563202F54EC0008A4E5 /* UIView+Extensions.swift */; };
 		9A2022682038D8450012DD51 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AD96CA520253CC300D37F23 /* BaseViewController.swift */; };
 		9A20226B2038D91F0012DD51 /* Data+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AD3EE2420139BA40083F8FE /* Data+Extensions.swift */; };
@@ -91,7 +91,6 @@
 		9A2022802038D9750012DD51 /* TodayPresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AD96C93202529E100D37F23 /* TodayPresentable.swift */; };
 		9A2022812038D9770012DD51 /* TodayViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AD3EE4A2013DC5E0083F8FE /* TodayViewModel.swift */; };
 		9A2022822038D9820012DD51 /* ColorPalette.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A96668620260E7B000F8A42 /* ColorPalette.swift */; };
-		9A2022832038D9AB0012DD51 /* Dismissable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AD96CA220253A3E00D37F23 /* Dismissable.swift */; };
 		9A20228F2038DCCF0012DD51 /* UserBusinessLogicTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A20228E2038DCCF0012DD51 /* UserBusinessLogicTests.swift */; };
 		9A2022912038DCCF0012DD51 /* MyFinanceKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A4F55302023C7A900DBF68F /* MyFinanceKit.framework */; };
 		9A20229B2038E1C90012DD51 /* BalanceBusinessLogicTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A20229A2038E1C90012DD51 /* BalanceBusinessLogicTests.swift */; };
@@ -136,9 +135,7 @@
 		9A3A2B852039AEB10071FBC5 /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A3A2B822039AEAD0071FBC5 /* AppState.swift */; };
 		9A3A2B862039AEB10071FBC5 /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A3A2B822039AEAD0071FBC5 /* AppState.swift */; };
 		9A3A2B882039C2350071FBC5 /* ViewControllerType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A3A2B872039C2350071FBC5 /* ViewControllerType.swift */; };
-		9A3A2B892039C2350071FBC5 /* ViewControllerType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A3A2B872039C2350071FBC5 /* ViewControllerType.swift */; };
 		9A3A2B8A2039C2350071FBC5 /* ViewControllerType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A3A2B872039C2350071FBC5 /* ViewControllerType.swift */; };
-		9A3A2B8B2039C2350071FBC5 /* ViewControllerType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A3A2B872039C2350071FBC5 /* ViewControllerType.swift */; };
 		9A3A2B8F2039DA6F0071FBC5 /* AppStateiOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A3A2B8E2039DA6F0071FBC5 /* AppStateiOS.swift */; };
 		9A3A2B902039DB9B0071FBC5 /* WatchService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A3CB7EB203074CD008AF158 /* WatchService.swift */; };
 		9A3A2B92203A26620071FBC5 /* Allowance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A3A2B91203A26620071FBC5 /* Allowance.swift */; };
@@ -309,6 +306,11 @@
 		9A8561B32027BF5100A26F12 /* HomeChartCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A8561B22027BF5100A26F12 /* HomeChartCellModel.swift */; };
 		9A88A7F72042602B00421943 /* AuthViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A88A7F62042602B00421943 /* AuthViewControllerTests.swift */; };
 		9A88A7FB204260C300421943 /* MockAuthViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A88A7FA204260C300421943 /* MockAuthViewModel.swift */; };
+		9A9093E52044C36100C87A99 /* WindowType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A1C9F742044C0A0002A21F4 /* WindowType.swift */; };
+		9A9093EA2044C9F800C87A99 /* WindowTypeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A9093E92044C9F800C87A99 /* WindowTypeTests.swift */; };
+		9A9093EB2044C9F800C87A99 /* WindowTypeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A9093E92044C9F800C87A99 /* WindowTypeTests.swift */; };
+		9A9093EF2044CD3100C87A99 /* BaseNavigatorType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A9093EC2044CCB000C87A99 /* BaseNavigatorType.swift */; };
+		9A9093F02044CD3200C87A99 /* BaseNavigatorType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A9093EC2044CCB000C87A99 /* BaseNavigatorType.swift */; };
 		9A94F8E6202CE83100AEF61F /* MyFinanceKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A4F55422023C7BE00DBF68F /* MyFinanceKit.framework */; };
 		9A94F8EE202CEA5400AEF61F /* ErrorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A6EF756202BA15D006D3420 /* ErrorTests.swift */; };
 		9A94F8EF202CEA8E00AEF61F /* HALResponseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A6EF75D202BA6A2006D3420 /* HALResponseTests.swift */; };
@@ -353,7 +355,6 @@
 		9AB4F12C2042500C008D0F5D /* Instantiatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AAA3D802029285C008881FD /* Instantiatable.swift */; };
 		9ABBAD2F203F6479000A1020 /* TransactionsBusinessLogicTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ABBAD2E203F6479000A1020 /* TransactionsBusinessLogicTests.swift */; };
 		9ABBAD30203F6479000A1020 /* TransactionsBusinessLogicTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ABBAD2E203F6479000A1020 /* TransactionsBusinessLogicTests.swift */; };
-		9ABBC4A72041AFCB008B6306 /* Dismissable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AD96CA220253A3E00D37F23 /* Dismissable.swift */; };
 		9ABBC4B12041B00E008B6306 /* MyFinanceKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A2022392038D4990012DD51 /* MyFinanceKit.framework */; };
 		9ABBC4B92041B0DC008B6306 /* MockTodayViewModelDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AAA77D4203F9B1E000E1323 /* MockTodayViewModelDelegate.swift */; };
 		9AC004AF2041DB1E00ABB462 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AC004AE2041DB1E00ABB462 /* main.swift */; };
@@ -400,11 +401,17 @@
 		9AD96C9B202534D600D37F23 /* StringRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AD96C9A202534D600D37F23 /* StringRepresentable.swift */; };
 		9AD96C9C202534D600D37F23 /* StringRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AD96C9A202534D600D37F23 /* StringRepresentable.swift */; };
 		9AD96CA0202539E500D37F23 /* AddTransactionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AD96C9F202539E500D37F23 /* AddTransactionViewController.swift */; };
-		9AD96CA320253A3E00D37F23 /* Dismissable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AD96CA220253A3E00D37F23 /* Dismissable.swift */; };
 		9AD96CA620253CC300D37F23 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AD96CA520253CC300D37F23 /* BaseViewController.swift */; };
 		9AD96CA8202544A600D37F23 /* AddTransactionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AD96CA7202544A600D37F23 /* AddTransactionViewModel.swift */; };
+		9ADC5680204332FD003D8C63 /* MockSettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ADC567F204332FD003D8C63 /* MockSettingsViewModel.swift */; };
+		9ADC5682204334A2003D8C63 /* MockSettingsViewModelDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ADC5681204334A2003D8C63 /* MockSettingsViewModelDelegate.swift */; };
+		9ADC56842043360E003D8C63 /* MockSettingsViewModelDataDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ADC56832043360E003D8C63 /* MockSettingsViewModelDataDelegate.swift */; };
+		9ADC568620433660003D8C63 /* SettingsViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ADC568520433660003D8C63 /* SettingsViewControllerTests.swift */; };
 		9ADDE1BA203F818200BCA1DE /* ExternalTransactionsBusinessLogicTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ADDE1B9203F818200BCA1DE /* ExternalTransactionsBusinessLogicTests.swift */; };
 		9ADDE1BB203F818200BCA1DE /* ExternalTransactionsBusinessLogicTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ADDE1B9203F818200BCA1DE /* ExternalTransactionsBusinessLogicTests.swift */; };
+		9AE4D4452044891800299897 /* Navigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AE4D4442044891800299897 /* Navigator.swift */; };
+		9AE4D44620448BEA00299897 /* ViewControllerType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A3A2B872039C2350071FBC5 /* ViewControllerType.swift */; };
+		9AE4D44720448BEB00299897 /* ViewControllerType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A3A2B872039C2350071FBC5 /* ViewControllerType.swift */; };
 		9AE7F1572042513100BA98BD /* Instantiatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AAA3D802029285C008881FD /* Instantiatable.swift */; };
 		9AE7F15E2042570900BA98BD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9AE7F15D2042570900BA98BD /* Main.storyboard */; };
 		9AE7F1612042572700BA98BD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9AE7F1602042572700BA98BD /* Main.storyboard */; };
@@ -698,6 +705,7 @@
 		9583B4C05F05012F0928BCE1 /* Pods-MyFinanceKit-watchOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyFinanceKit-watchOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-MyFinanceKit-watchOS/Pods-MyFinanceKit-watchOS.release.xcconfig"; sourceTree = "<group>"; };
 		9A01448F204264F800443585 /* AuthViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewModelTests.swift; sourceTree = "<group>"; };
 		9A0E8E51203F9861003A811E /* ViewModelTypeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelTypeTests.swift; sourceTree = "<group>"; };
+		9A1C9F742044C0A0002A21F4 /* WindowType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WindowType.swift; sourceTree = "<group>"; };
 		9A2022082038CAE00012DD51 /* MyFinanceKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MyFinanceKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9A20220A2038CAE00012DD51 /* MyFinanceKit_watchOS.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyFinanceKit_watchOS.h; sourceTree = "<group>"; };
 		9A20220B2038CAE00012DD51 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -846,6 +854,8 @@
 		9A872E112016719100C1E9BE /* UserBusinessLogic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserBusinessLogic.swift; sourceTree = "<group>"; };
 		9A88A7F62042602B00421943 /* AuthViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewControllerTests.swift; sourceTree = "<group>"; };
 		9A88A7FA204260C300421943 /* MockAuthViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockAuthViewModel.swift; sourceTree = "<group>"; };
+		9A9093E92044C9F800C87A99 /* WindowTypeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WindowTypeTests.swift; sourceTree = "<group>"; };
+		9A9093EC2044CCB000C87A99 /* BaseNavigatorType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseNavigatorType.swift; sourceTree = "<group>"; };
 		9A94F8E1202CE83100AEF61F /* MyFinanceKit-macOS-Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "MyFinanceKit-macOS-Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9A94F8E5202CE83100AEF61F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9A94F8ED202CE87600AEF61F /* Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Bridging-Header.h"; sourceTree = "<group>"; };
@@ -914,11 +924,15 @@
 		9AD96C982025341D00D37F23 /* HomeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableViewCell.swift; sourceTree = "<group>"; };
 		9AD96C9A202534D600D37F23 /* StringRepresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringRepresentable.swift; sourceTree = "<group>"; };
 		9AD96C9F202539E500D37F23 /* AddTransactionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTransactionViewController.swift; sourceTree = "<group>"; };
-		9AD96CA220253A3E00D37F23 /* Dismissable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dismissable.swift; sourceTree = "<group>"; };
 		9AD96CA520253CC300D37F23 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		9AD96CA7202544A600D37F23 /* AddTransactionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTransactionViewModel.swift; sourceTree = "<group>"; };
+		9ADC567F204332FD003D8C63 /* MockSettingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockSettingsViewModel.swift; sourceTree = "<group>"; };
+		9ADC5681204334A2003D8C63 /* MockSettingsViewModelDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockSettingsViewModelDelegate.swift; sourceTree = "<group>"; };
+		9ADC56832043360E003D8C63 /* MockSettingsViewModelDataDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockSettingsViewModelDataDelegate.swift; sourceTree = "<group>"; };
+		9ADC568520433660003D8C63 /* SettingsViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewControllerTests.swift; sourceTree = "<group>"; };
 		9ADDE1B9203F818200BCA1DE /* ExternalTransactionsBusinessLogicTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExternalTransactionsBusinessLogicTests.swift; sourceTree = "<group>"; };
 		9ADE54C0201568D90039D774 /* DataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
+		9AE4D4442044891800299897 /* Navigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Navigator.swift; sourceTree = "<group>"; };
 		9AE7F15D2042570900BA98BD /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		9AE7F1602042572700BA98BD /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		9AE7F1622042573C00BA98BD /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
@@ -1444,6 +1458,7 @@
 				9A5AE5752012A8AB00B25081 /* AppDelegate.swift */,
 				9A3A2B8E2039DA6F0071FBC5 /* AppStateiOS.swift */,
 				9A3CB7EB203074CD008AF158 /* WatchService.swift */,
+				9AE4D4442044891800299897 /* Navigator.swift */,
 				9AD3EE332013C9120083F8FE /* Bridging-Header.h */,
 				9A5AE5812012A8AC00B25081 /* Info.plist */,
 				9AAA3D8520293CD0008881FD /* MyFinance-iOS.entitlements */,
@@ -1513,6 +1528,7 @@
 				9A5AE5992012C0D000B25081 /* NetworkService.swift */,
 				9ADE54C0201568D90039D774 /* DataService.swift */,
 				9A5AE5942012BE0500B25081 /* ConfigService.swift */,
+				9A9093EC2044CCB000C87A99 /* BaseNavigatorType.swift */,
 			);
 			path = Platform;
 			sourceTree = "<group>";
@@ -1655,6 +1671,7 @@
 		9A88A7F420425FFF00421943 /* Settings */ = {
 			isa = PBXGroup;
 			children = (
+				9ADC568520433660003D8C63 /* SettingsViewControllerTests.swift */,
 			);
 			path = Settings;
 			sourceTree = "<group>";
@@ -1679,9 +1696,8 @@
 		9A88A7F9204260B000421943 /* UI */ = {
 			isa = PBXGroup;
 			children = (
-				9A88A7FA204260C300421943 /* MockAuthViewModel.swift */,
-				9AEEC8AC2042696800ED7627 /* MockAuthViewModelDelegate.swift */,
-				9AEEC8AA204267C200ED7627 /* MockLAContext.swift */,
+				9ADC567D20432FAB003D8C63 /* Auth */,
+				9ADC567E20432FDC003D8C63 /* Settings */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -1933,13 +1949,33 @@
 		9AD96CA120253A1400D37F23 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				9A1C9F742044C0A0002A21F4 /* WindowType.swift */,
 				9A3A2B872039C2350071FBC5 /* ViewControllerType.swift */,
 				9AD96CA520253CC300D37F23 /* BaseViewController.swift */,
 				9A65DEC72041B36F00E8177A /* BaseViewController+KeyboardToolbar.swift */,
 				9AAA3D802029285C008881FD /* Instantiatable.swift */,
-				9AD96CA220253A3E00D37F23 /* Dismissable.swift */,
 			);
 			path = Controller;
+			sourceTree = "<group>";
+		};
+		9ADC567D20432FAB003D8C63 /* Auth */ = {
+			isa = PBXGroup;
+			children = (
+				9A88A7FA204260C300421943 /* MockAuthViewModel.swift */,
+				9AEEC8AC2042696800ED7627 /* MockAuthViewModelDelegate.swift */,
+				9AEEC8AA204267C200ED7627 /* MockLAContext.swift */,
+			);
+			path = Auth;
+			sourceTree = "<group>";
+		};
+		9ADC567E20432FDC003D8C63 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				9ADC567F204332FD003D8C63 /* MockSettingsViewModel.swift */,
+				9ADC5681204334A2003D8C63 /* MockSettingsViewModelDelegate.swift */,
+				9ADC56832043360E003D8C63 /* MockSettingsViewModelDataDelegate.swift */,
+			);
+			path = Settings;
 			sourceTree = "<group>";
 		};
 		9AE7F158204256D200BA98BD /* View */ = {
@@ -2001,6 +2037,7 @@
 		9AEAD35F203F8F2E00CB572C /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				9A9093E92044C9F800C87A99 /* WindowTypeTests.swift */,
 				9A709E1C203F9454003A33FC /* BaseViewControllerTests.swift */,
 				9A65DEC92041B3BD00E8177A /* BaseViewControllerKeyboardToolbarTests.swift */,
 				9AB4F12820424DEE008D0F5D /* InstantiatableTests.swift */,
@@ -3683,7 +3720,6 @@
 				9A2022192038CD010012DD51 /* Formatters.swift in Sources */,
 				9A2022172038CC350012DD51 /* JSONCodable.swift in Sources */,
 				9A20226F2038D9300012DD51 /* ConfigService.swift in Sources */,
-				9A2022832038D9AB0012DD51 /* Dismissable.swift in Sources */,
 				9A20227C2038D9600012DD51 /* EndOfMonthSummaryBusinessLogic.swift in Sources */,
 				9AE7F1572042513100BA98BD /* Instantiatable.swift in Sources */,
 				9A3A2B842039AEB10071FBC5 /* AppState.swift in Sources */,
@@ -3697,8 +3733,8 @@
 				9A20227B2038D95E0012DD51 /* ExternalTransactionsBusinessLogic.swift in Sources */,
 				9A20227F2038D9720012DD51 /* TodayDisplayModelType.swift in Sources */,
 				9A2022702038D93F0012DD51 /* HALResponse.swift in Sources */,
+				9AE4D44720448BEB00299897 /* ViewControllerType.swift in Sources */,
 				9A20221A2038CD130012DD51 /* Date+Extensions.swift in Sources */,
-				9A3A2B892039C2350071FBC5 /* ViewControllerType.swift in Sources */,
 				9A2022802038D9750012DD51 /* TodayPresentable.swift in Sources */,
 				9A3A2B93203A26620071FBC5 /* Allowance.swift in Sources */,
 				9A20227D2038D9630012DD51 /* SpendingBusinessLogic.swift in Sources */,
@@ -3733,8 +3769,10 @@
 				9A2022682038D8450012DD51 /* BaseViewController.swift in Sources */,
 				9A2022652038D8260012DD51 /* TodayViewModel.swift in Sources */,
 				9A2022552038D7320012DD51 /* Summary.swift in Sources */,
+				9A9093F02044CD3200C87A99 /* BaseNavigatorType.swift in Sources */,
 				9A2022562038D7380012DD51 /* APIs.swift in Sources */,
 				9A3A2B8A2039C2350071FBC5 /* ViewControllerType.swift in Sources */,
+				9A9093E52044C36100C87A99 /* WindowType.swift in Sources */,
 				9A2022632038D8200012DD51 /* TodayDisplayModelType.swift in Sources */,
 				9A2022672038D83A0012DD51 /* UIView+Extensions.swift in Sources */,
 				9A2022642038D8240012DD51 /* TodayPresentable.swift in Sources */,
@@ -3754,7 +3792,6 @@
 				9A2022482038D6F90012DD51 /* Data+Extensions.swift in Sources */,
 				9A2022492038D6FD0012DD51 /* URLSession+Extensions.swift in Sources */,
 				9A2022622038D7770012DD51 /* UITableViewCell+Extensions.swift in Sources */,
-				9A2022662038D8330012DD51 /* Dismissable.swift in Sources */,
 				9A20225E2038D74C0012DD51 /* SpendingBusinessLogic.swift in Sources */,
 				9A2022502038D7250012DD51 /* HALResponse.swift in Sources */,
 				9A3A2B94203A26620071FBC5 /* Allowance.swift in Sources */,
@@ -3796,6 +3833,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9A4F55632023CAA100DBF68F /* Error.swift in Sources */,
+				9A1C9F752044C0A0002A21F4 /* WindowType.swift in Sources */,
 				9A4F55762023CAD900DBF68F /* TransactionsBusinessLogic.swift in Sources */,
 				9A4F55522023C95B00DBF68F /* NetworkService.swift in Sources */,
 				9A4F55652023CAA700DBF68F /* HALResponse.swift in Sources */,
@@ -3810,7 +3848,6 @@
 				9AD96C94202529E100D37F23 /* TodayPresentable.swift in Sources */,
 				9A4F55562023C96700DBF68F /* DataService.swift in Sources */,
 				9A4F556E2023CABF00DBF68F /* Transaction.swift in Sources */,
-				9AD96CA320253A3E00D37F23 /* Dismissable.swift in Sources */,
 				9A4F55542023C96100DBF68F /* ConfigService.swift in Sources */,
 				9A9666812025EAF5000F8A42 /* TodayDisplayModelType.swift in Sources */,
 				9A4F55702023CAC800DBF68F /* APIs.swift in Sources */,
@@ -3824,6 +3861,7 @@
 				9A4F55782023CADE00DBF68F /* UserBusinessLogic.swift in Sources */,
 				9AAD38A1202FA9BC00395119 /* SpendingBusinessLogic.swift in Sources */,
 				9AD96CA620253CC300D37F23 /* BaseViewController.swift in Sources */,
+				9A9093EF2044CD3100C87A99 /* BaseNavigatorType.swift in Sources */,
 				9A3A2B92203A26620071FBC5 /* Allowance.swift in Sources */,
 				9A65DEC82041B36F00E8177A /* BaseViewController+KeyboardToolbar.swift in Sources */,
 				9A4F556C2023CAB900DBF68F /* Balance.swift in Sources */,
@@ -3860,8 +3898,8 @@
 				9A4F55572023C96700DBF68F /* DataService.swift in Sources */,
 				9A4F556D2023CABF00DBF68F /* Transaction.swift in Sources */,
 				9A65B7A1202686A9004165F2 /* Summary.swift in Sources */,
+				9AE4D44620448BEA00299897 /* ViewControllerType.swift in Sources */,
 				9A4F55552023C96200DBF68F /* ConfigService.swift in Sources */,
-				9A3A2B8B2039C2350071FBC5 /* ViewControllerType.swift in Sources */,
 				9A4F556F2023CAC700DBF68F /* APIs.swift in Sources */,
 				9A4F557F2023D07000DBF68F /* TodayViewModel.swift in Sources */,
 				9A4F55672023CAAD00DBF68F /* Config.swift in Sources */,
@@ -3871,7 +3909,6 @@
 				9A3A2B862039AEB10071FBC5 /* AppState.swift in Sources */,
 				9A4F55692023CAB300DBF68F /* User.swift in Sources */,
 				9A4F55792023CAE400DBF68F /* ExternalTransactionsBusinessLogic.swift in Sources */,
-				9ABBC4A72041AFCB008B6306 /* Dismissable.swift in Sources */,
 				9A65B79E202651F3004165F2 /* Validators.swift in Sources */,
 				9AD96C922025275C00D37F23 /* ViewModelType.swift in Sources */,
 			);
@@ -3885,6 +3922,7 @@
 				9AAD3899202F68C000395119 /* SettingsViewModel.swift in Sources */,
 				9A5AE5782012A8AC00B25081 /* HomeViewController.swift in Sources */,
 				9AAD3895202F66E500395119 /* SettingsViewController.swift in Sources */,
+				9AE4D4452044891800299897 /* Navigator.swift in Sources */,
 				9AD96C8F2025138400D37F23 /* HomeDisplayModel.swift in Sources */,
 				9A8561B32027BF5100A26F12 /* HomeChartCellModel.swift in Sources */,
 				9AD96CA8202544A600D37F23 /* AddTransactionViewModel.swift in Sources */,
@@ -3914,14 +3952,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9ADC5682204334A2003D8C63 /* MockSettingsViewModelDelegate.swift in Sources */,
 				9AC3E72420423A3B00CD29B6 /* MockNetworkRequestable.swift in Sources */,
 				9AC3E71E20423A2900CD29B6 /* MockNetworkService.swift in Sources */,
 				9AC3E72120423A3100CD29B6 /* MockAppState.swift in Sources */,
 				9AC3E73020423A8000CD29B6 /* MockWatchService.swift in Sources */,
+				9ADC568620433660003D8C63 /* SettingsViewControllerTests.swift in Sources */,
 				9AC3E7172042349000CD29B6 /* MockDataService.swift in Sources */,
+				9ADC5680204332FD003D8C63 /* MockSettingsViewModel.swift in Sources */,
 				9A65DF012041CE7300E8177A /* AppDelegateTests.swift in Sources */,
 				9AC3E73220423A9200CD29B6 /* MockWCSession.swift in Sources */,
 				9A2860DF20422B8A008FA915 /* AppStateiOSTests.swift in Sources */,
+				9ADC56842043360E003D8C63 /* MockSettingsViewModelDataDelegate.swift in Sources */,
 				9AC3E73620423C7100CD29B6 /* Factory.swift in Sources */,
 				9A014490204264F800443585 /* AuthViewModelTests.swift in Sources */,
 				9AC3E71D2042390D00CD29B6 /* MockAppStateiOS.swift in Sources */,
@@ -3950,6 +3992,7 @@
 				9AAA77CD203F9939000E1323 /* TodayViewModelTests.swift in Sources */,
 				9AEAD365203F908900CB572C /* UIViewExtensionsTests.swift in Sources */,
 				9A3A2B7A203998E80071FBC5 /* URLSessionExtensionsTests.swift in Sources */,
+				9A9093EA2044C9F800C87A99 /* WindowTypeTests.swift in Sources */,
 				9A2022A72038EC050012DD51 /* DataExtensionsTests.swift in Sources */,
 				9A37AB3C203E333900CFEE67 /* AllowanceTests.swift in Sources */,
 				9A6B06F1203F6F51006FB40E /* SpendingBusinessLogicTests.swift in Sources */,
@@ -4115,6 +4158,7 @@
 				9A65DEA62041B23C00E8177A /* AppStateTests.swift in Sources */,
 				9A65DEB12041B25A00E8177A /* TransactionTests.swift in Sources */,
 				9A65DE9E2041B22400E8177A /* MockNetworkService.swift in Sources */,
+				9A9093EB2044C9F800C87A99 /* WindowTypeTests.swift in Sources */,
 				9A65DEBD2041B2A900E8177A /* FormattersTests.swift in Sources */,
 				9A65DEA32041B23500E8177A /* DateExtensionsTests.swift in Sources */,
 				9A65DEAD2041B25000E8177A /* HALResponseTests.swift in Sources */,

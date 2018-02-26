@@ -1,4 +1,8 @@
-public extension UIView {
+#if os(iOS) || os(tvOS)
+public typealias View = UIView
+#endif
+
+public extension View {
 
     @IBInspectable var layerCornerRadius: CGFloat {
         get {
@@ -31,7 +35,7 @@ public extension UIView {
     @IBInspectable var shadowColor: UIColor? {
         get {
             if let color = layer.shadowColor {
-                return UIColor(cgColor: color)
+                return Color(cgColor: color)
             }
             return nil
         }

@@ -4,7 +4,7 @@ protocol AddTransactionViewModelDataDelegate: class {
 
 }
 
-protocol AddTransactionViewModelDelegate: Dismissable, MessagePresentable {}
+protocol AddTransactionViewModelDelegate: ViewModelDelegate & MessagePresentable {}
 
 protocol AddTransactionViewModelType: ViewModelType {
 
@@ -14,12 +14,13 @@ protocol AddTransactionViewModelType: ViewModelType {
     func numberOfComponentsInPickerView() -> Int
     func pickerViewNumberOfRowsIn(component: Int) -> Int
     func pickerViewTitle(for row: Int, for component: Int) -> String?
+    func dismissTapped()
 
 }
 
 class AddTransactionViewModel {
 
-    typealias ServiceProvider = NetworkServiceProvider
+    typealias ServiceProvider = NavigatorProvider & NetworkServiceProvider
     let serviceProvider: ServiceProvider
 
     private let externalTransactionsBusinessLogic: ExternalTransactionsBusinessLogic
@@ -28,10 +29,8 @@ class AddTransactionViewModel {
     private weak var dataDelegate: AddTransactionViewModelDataDelegate?
 
     init(serviceProvider: ServiceProvider,
-         delegate: AddTransactionViewModelDelegate,
          dataDelegate: AddTransactionViewModelDataDelegate?) {
         self.serviceProvider = serviceProvider
-        self.delegate = delegate
         self.dataDelegate = dataDelegate
         self.externalTransactionsBusinessLogic =
             ExternalTransactionsBusinessLogic(networkService: serviceProvider.networkService)
@@ -42,6 +41,11 @@ class AddTransactionViewModel {
 // MARK: Interface
 
 extension AddTransactionViewModel: AddTransactionViewModelType {
+
+    func inject(delegate: ViewModelDelegate) {
+        guard let delegate = delegate as? AddTransactionViewModelDelegate else { return }
+        self.delegate = delegate
+    }
 
     func shouldEnableSaveButton(displayModel: AddTransactionDisplayModel) -> Bool {
         guard let amount = createAmount(from: displayModel.amount),
@@ -88,6 +92,10 @@ extension AddTransactionViewModel: AddTransactionViewModelType {
         return TransactionSource.externalValues[row].displayString
     }
 
+    func dismissTapped() {
+        serviceProvider.navigator.dismiss()
+    }
+
 }
 
 // MARK: - Private methods
@@ -113,7 +121,7 @@ extension AddTransactionViewModel {
             .done { transaction in
                 self.dataDelegate?.didCreate(transaction: transaction)
                 self.delegate?.showSuccess(message: AddTransactionDisplayModel.successMessage)
-                self.delegate?.dismiss(self)
+                self.serviceProvider.navigator.dismiss()
             }.catch { error in
                 self.delegate?.showError(message: error.localizedDescription)
             }.finally {

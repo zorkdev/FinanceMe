@@ -9,8 +9,8 @@ class MockWCSession: WCSessionType {
         return isSupportedValue
     }
 
-    //swiftlint:disable:next weak_delegate
-    var delegate: WCSessionDelegate?
+    weak var delegate: WCSessionDelegate?
+
     var activationState: WCSessionActivationState = .notActivated
     var isComplicationEnabled: Bool = true
 

@@ -1,4 +1,4 @@
-public protocol TodayViewModelDelegate: class {
+public protocol TodayViewModelDelegate: ViewModelDelegate {
 
     func set(balance: NSAttributedString)
     func set(allowance: NSAttributedString)

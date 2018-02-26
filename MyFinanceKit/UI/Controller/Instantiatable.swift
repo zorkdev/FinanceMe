@@ -1,11 +1,3 @@
-#if os(macOS)
-public typealias ViewController = NSViewController
-#elseif os(iOS) || os(tvOS)
-public typealias ViewController = UIViewController
-#elseif os(watchOS)
-public typealias ViewController = WKInterfaceController
-#endif
-
 extension ViewController {
 
     public static let storyboardId = "Main"
@@ -29,8 +21,10 @@ extension Instantiatable where Self: ViewController {
         #if os(iOS) || os(tvOS)
         let viewController = (UIStoryboard(name: storyboardId, bundle: bundle)
             .instantiateViewController(withIdentifier: Self.instanceName) as? Self)!
+
         #elseif os(watchOS)
         let viewController = Self()
+
         #elseif os(macOS)
         let viewController = (NSStoryboard(name: NSStoryboard.Name(storyboardId), bundle: bundle)
             .instantiateController(withIdentifier:

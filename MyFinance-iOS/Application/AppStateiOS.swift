@@ -1,4 +1,11 @@
 import WatchConnectivity
+import LocalAuthentication
+
+protocol NavigatorProvider {
+
+    var navigator: NavigatorType { get }
+
+}
 
 protocol WatchServiceProvider {
 
@@ -6,16 +13,26 @@ protocol WatchServiceProvider {
 
 }
 
+protocol LAContextProvider {
+
+    var laContext: LAContextType { get }
+
+}
+
 class AppStateiOS: AppState {
 
+    let navigator: NavigatorType
     let watchService: WatchServiceType
+    let laContext: LAContextType
 
     override init() {
+        self.navigator = Navigator(window: UIWindow())
         self.watchService = WatchService(wcSession: WCSession.default,
                                          dataService: KeychainDataService())
+        self.laContext = LAContext()
         super.init()
     }
 
 }
 
-extension AppStateiOS: WatchServiceProvider {}
+extension AppStateiOS: NavigatorProvider, WatchServiceProvider, LAContextProvider {}

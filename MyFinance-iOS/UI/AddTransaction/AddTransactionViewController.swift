@@ -21,9 +21,6 @@ class AddTransactionViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        viewModel = AddTransactionViewModel(serviceProvider: appState,
-                                            delegate: self,
-                                            dataDelegate: dataDelegate)
         setupTextFields()
     }
 
@@ -86,6 +83,19 @@ class AddTransactionViewController: BaseViewController {
                                                                     source: selectedSource,
                                                                     created: selectedDate)
         viewModel.saveButtonTapped(with: addTransactionDisplayModel)
+    }
+
+    @IBAction func dismissTapped(_ sender: UIButton) {
+        viewModel.dismissTapped()
+    }
+
+}
+
+extension AddTransactionViewController: ViewModelInjectable {
+
+    func inject(viewModel: ViewModelType) {
+        guard let viewModel = viewModel as? AddTransactionViewModelType else { return }
+        self.viewModel = viewModel
     }
 
 }

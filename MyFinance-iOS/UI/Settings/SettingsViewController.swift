@@ -23,9 +23,6 @@ class SettingsViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        viewModel = SettingsViewModel(serviceProvider: appState,
-                                      delegate: self,
-                                      dataDelegate: dataDelegate)
         setupTextFields()
         viewModel.viewDidLoad()
     }
@@ -91,6 +88,19 @@ class SettingsViewController: BaseViewController {
 
     @IBAction func editButtonTapped(_ sender: UIButton) {
         viewModel.editButtonTapped()
+    }
+
+    @IBAction func dismissTapped(_ sender: UIButton) {
+        viewModel.dismissTapped()
+    }
+
+}
+
+extension SettingsViewController: ViewModelInjectable {
+
+    func inject(viewModel: ViewModelType) {
+        guard let viewModel = viewModel as? SettingsViewModelType else { return }
+        self.viewModel = viewModel
     }
 
 }

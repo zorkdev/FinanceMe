@@ -1,12 +1,12 @@
 import NotificationCenter
 
-class TodayViewController: NSViewController, ViewControllerType {
+class TodayViewController: NSViewController {
 
     @IBOutlet private weak var balanceLabel: NSTextField!
     @IBOutlet private weak var allowanceLabel: NSTextField!
     @IBOutlet private weak var allowanceIconLabel: NSTextField!
 
-    let appState: AppState! = AppStatemacOS()
+    let appState = AppStatemacOS()
 
     private var viewModel: TodayPresentable!
 
@@ -18,8 +18,8 @@ class TodayViewController: NSViewController, ViewControllerType {
         super.viewDidLoad()
 
         viewModel = TodayViewModel(serviceProvider: appState,
-                                   delegate: self,
                                    displayModel: TodayDisplayModel())
+        viewModel.inject(delegate: self)
         viewModel.viewDidLoad()
     }
 

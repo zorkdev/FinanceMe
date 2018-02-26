@@ -10,7 +10,7 @@ class HomeViewModel {
         case allowance, inbound, outbound
     }
 
-    typealias ServiceProvider = NetworkServiceProvider & DataServiceProvider & WatchServiceProvider
+    typealias ServiceProvider = NavigatorProvider & NetworkServiceProvider & DataServiceProvider & WatchServiceProvider
     let serviceProvider: ServiceProvider
 
     private let externalTransactionsBusinessLogic: ExternalTransactionsBusinessLogic
@@ -47,10 +47,8 @@ class HomeViewModel {
 
     weak var delegate: HomeViewModelDelegate?
 
-    init(serviceProvider: ServiceProvider,
-         delegate: HomeViewModelDelegate) {
+    init(serviceProvider: ServiceProvider) {
         self.serviceProvider = serviceProvider
-        self.delegate = delegate
         self.externalTransactionsBusinessLogic =
             ExternalTransactionsBusinessLogic(networkService: serviceProvider.networkService)
         self.endOfMonthSummaryBusinessLogic =
@@ -138,6 +136,11 @@ extension HomeViewModel: HomeViewModelType {
     func viewDidLoad() {
         setupDefaults()
         updateData()
+    }
+
+    func inject(delegate: ViewModelDelegate) {
+        guard let delegate = delegate as? HomeViewModelDelegate else { return }
+        self.delegate = delegate
     }
 
     func numberOfSections(in tab: Tab) -> Int {
@@ -305,6 +308,18 @@ extension HomeViewModel: HomeViewModelType {
 
     func refreshTapped() {
         updateData()
+    }
+
+    func settingsButtonTapped() {
+        let settingsViewModel = SettingsViewModel(serviceProvider: serviceProvider,
+                                                  dataDelegate: self)
+        serviceProvider.navigator.moveTo(scene: .settings, viewModel: settingsViewModel)
+    }
+
+    func addTransactionButtonTapped() {
+        let addTransactionViewModel = AddTransactionViewModel(serviceProvider: serviceProvider,
+                                                              dataDelegate: self)
+        serviceProvider.navigator.moveTo(scene: .addTransaction, viewModel: addTransactionViewModel)
     }
 
 }

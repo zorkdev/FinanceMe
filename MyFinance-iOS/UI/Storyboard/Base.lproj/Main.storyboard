@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14101" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14086"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -15,7 +15,7 @@
         <!--Home View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="HomeViewController" customModule="MyFinance_iOS" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="HomeViewController" id="BYZ-38-t0r" customClass="HomeViewController" customModule="MyFinance_iOS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -275,7 +275,7 @@
                                                     <color key="titleColor" red="0.003221878549" green="0.64363974329999996" blue="0.86026746030000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </state>
                                                 <connections>
-                                                    <segue destination="RJQ-cl-VlO" kind="presentation" modalTransitionStyle="coverVertical" id="Ugd-2X-8ft"/>
+                                                    <action selector="settingsButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="0UR-dO-wr5"/>
                                                 </connections>
                                             </button>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eFU-El-Bbo">
@@ -353,7 +353,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <segue destination="X1Z-5w-jvv" kind="presentation" modalTransitionStyle="coverVertical" id="m1r-Dt-sF0"/>
+                                    <action selector="addTransactionButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="89A-xQ-l7O"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -477,7 +477,7 @@
         <!--Add Transaction View Controller-->
         <scene sceneID="YsZ-3s-Hhz">
             <objects>
-                <viewController id="X1Z-5w-jvv" customClass="AddTransactionViewController" customModule="MyFinance_iOS" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="AddTransactionViewController" id="X1Z-5w-jvv" customClass="AddTransactionViewController" customModule="MyFinance_iOS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="mFQ-0V-ZOX">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -744,7 +744,7 @@
                                             <color key="titleColor" red="0.003221878549" green="0.64363974329999996" blue="0.86026746030000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
                                         <connections>
-                                            <action selector="dismiss:" destination="X1Z-5w-jvv" eventType="touchUpInside" id="9jU-2U-Cde"/>
+                                            <action selector="dismissTapped:" destination="X1Z-5w-jvv" eventType="touchUpInside" id="1WO-yw-0Di"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -789,7 +789,7 @@
         <!--Settings View Controller-->
         <scene sceneID="ivA-mg-zDX">
             <objects>
-                <viewController id="RJQ-cl-VlO" customClass="SettingsViewController" customModule="MyFinance_iOS" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SettingsViewController" id="RJQ-cl-VlO" customClass="SettingsViewController" customModule="MyFinance_iOS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="gHV-ER-uhi">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1056,7 +1056,7 @@
                                             <color key="titleColor" red="0.003221878549" green="0.64363974329999996" blue="0.86026746030000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
                                         <connections>
-                                            <action selector="dismiss:" destination="RJQ-cl-VlO" eventType="touchUpInside" id="7Sf-9X-1DH"/>
+                                            <action selector="dismissTapped:" destination="RJQ-cl-VlO" eventType="touchUpInside" id="XGA-sh-ISX"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KYb-ks-n4a">

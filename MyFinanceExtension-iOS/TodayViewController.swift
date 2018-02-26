@@ -1,6 +1,6 @@
 import NotificationCenter
 
-class TodayViewController: UIViewController, ViewControllerType {
+class TodayViewController: ViewController {
 
     @IBOutlet private weak var primaryVibrancyEffectView: UIVisualEffectView!
     @IBOutlet private weak var secondaryVibrancyEffectView: UIVisualEffectView!
@@ -8,7 +8,7 @@ class TodayViewController: UIViewController, ViewControllerType {
     @IBOutlet private weak var allowanceLabel: UILabel!
     @IBOutlet private weak var allowanceIconLabel: UILabel!
 
-    let appState: AppState! = AppState()
+    let appState = AppState()
 
     private var viewModel: TodayPresentable!
 
@@ -18,8 +18,8 @@ class TodayViewController: UIViewController, ViewControllerType {
         primaryVibrancyEffectView.effect = UIVibrancyEffect.widgetPrimary()
         secondaryVibrancyEffectView.effect = UIVibrancyEffect.widgetSecondary()
         viewModel = TodayViewModel(serviceProvider: appState,
-                                   delegate: self,
                                    displayModel: TodayDisplayModel())
+        viewModel.inject(delegate: self)
         viewModel.viewDidLoad()
     }
 

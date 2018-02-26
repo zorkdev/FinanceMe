@@ -1,6 +1,4 @@
-open class BaseViewController: UIViewController {
-
-    public var appState: AppState!
+open class BaseViewController: ViewController {
 
     struct Constants {
         static let keyboardToolbarDoneButtonTitle = "Done"
@@ -10,14 +8,6 @@ open class BaseViewController: UIViewController {
         super.viewWillDisappear(animated)
 
         view.endEditing(true)
-    }
-
-}
-
-extension BaseViewController: Dismissable {
-
-    @IBAction public func dismiss(_ sender: AnyObject) {
-        dismiss(animated: true, completion: nil)
     }
 
 }
@@ -35,4 +25,15 @@ extension BaseViewController: UITextFieldDelegate {
 
 }
 
-extension BaseViewController: ViewControllerType {}
+extension BaseViewController: ViewControllerType {
+
+    public func present(viewController: ViewControllerType) {
+        guard let viewController = viewController as? BaseViewController else { return }
+        present(viewController, animated: true, completion: nil)
+    }
+
+    public func dismiss() {
+        dismiss(animated: true, completion: nil)
+    }
+
+}

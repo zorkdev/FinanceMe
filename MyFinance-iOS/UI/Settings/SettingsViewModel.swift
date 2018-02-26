@@ -4,7 +4,7 @@ protocol SettingsViewModelDataDelegate: class {
 
 }
 
-protocol SettingsViewModelDelegate: Dismissable, MessagePresentable {
+protocol SettingsViewModelDelegate: ViewModelDelegate & MessagePresentable {
 
     func setupDefault(displayModel: SettingsDisplayModel)
     func update(editing: Bool)
@@ -21,12 +21,13 @@ protocol SettingsViewModelType: ViewModelType {
     func pickerViewNumberOfRowsIn(component: Int) -> Int
     func pickerViewTitle(for row: Int, for component: Int) -> String?
     func pickerViewRowInComponent(for payday: String) -> (row: Int, component: Int)
+    func dismissTapped()
 
 }
 
 class SettingsViewModel {
 
-    typealias ServiceProvider = NetworkServiceProvider & DataServiceProvider
+    typealias ServiceProvider = NavigatorProvider & NetworkServiceProvider & DataServiceProvider
     let serviceProvider: ServiceProvider
 
     private let userBusinessLogic: UserBusinessLogic
@@ -41,10 +42,8 @@ class SettingsViewModel {
     private weak var dataDelegate: SettingsViewModelDataDelegate?
 
     init(serviceProvider: ServiceProvider,
-         delegate: SettingsViewModelDelegate,
          dataDelegate: SettingsViewModelDataDelegate?) {
         self.serviceProvider = serviceProvider
-        self.delegate = delegate
         self.dataDelegate = dataDelegate
         self.userBusinessLogic = UserBusinessLogic(networkService: serviceProvider.networkService,
                                                    dataService: serviceProvider.dataService)
@@ -59,6 +58,11 @@ extension SettingsViewModel: SettingsViewModelType {
     func viewDidLoad() {
         setupDefaults()
         delegate?.update(editing: isEditing)
+    }
+
+    func inject(delegate: ViewModelDelegate) {
+        guard let delegate = delegate as? SettingsViewModelDelegate else { return }
+        self.delegate = delegate
     }
 
     func shouldEnableSaveButton(displayModel: SettingsDisplayModel) -> Bool {
@@ -117,6 +121,10 @@ extension SettingsViewModel: SettingsViewModelType {
         return ((paydayValues.index(of: payday) ?? 0), 0)
     }
 
+    func dismissTapped() {
+        serviceProvider.navigator.dismiss()
+    }
+
 }
 
 // MARK: - Private methods
@@ -155,7 +163,7 @@ extension SettingsViewModel {
             .done { user in
                 self.dataDelegate?.didUpdate(user: user)
                 self.delegate?.showSuccess(message: SettingsDisplayModel.successMessage)
-                self.delegate?.dismiss(self)
+                self.serviceProvider.navigator.dismiss()
             }.catch { error in
                 self.delegate?.showError(message: error.localizedDescription)
             }.finally {

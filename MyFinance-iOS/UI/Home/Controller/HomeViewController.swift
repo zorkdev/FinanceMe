@@ -25,11 +25,7 @@ class HomeViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        guard let appState = appState as? AppStateiOS else { return }
-
         setupTableViews()
-
-        viewModel = HomeViewModel(serviceProvider: appState, delegate: self)
         viewModel.viewDidLoad()
     }
 
@@ -80,18 +76,21 @@ class HomeViewController: BaseViewController {
         scrollView.setContentOffset(offset, animated: true)
     }
 
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        switch segue.destination {
-        case let addTransactionViewController as AddTransactionViewController:
-            addTransactionViewController.appState = appState
-            addTransactionViewController.dataDelegate = viewModel
+    @IBAction func settingsButtonTapped(_ sender: UIButton) {
+        viewModel.settingsButtonTapped()
+    }
 
-        case let settingsViewController as SettingsViewController:
-            settingsViewController.appState = appState
-            settingsViewController.dataDelegate = viewModel
+    @IBAction func addTransactionButtonTapped(_ sender: UIButton) {
+        viewModel.addTransactionButtonTapped()
+    }
 
-        default: break
-        }
+}
+
+extension HomeViewController: ViewModelInjectable {
+
+    func inject(viewModel: ViewModelType) {
+        guard let viewModel = viewModel as? HomeViewModelType else { return }
+        self.viewModel = viewModel
     }
 
 }

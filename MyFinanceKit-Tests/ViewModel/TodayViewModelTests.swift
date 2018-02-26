@@ -4,8 +4,15 @@ class TodayViewModelTests: XCTestCase {
 
     func testInit() {
         _ = TodayViewModel(serviceProvider: MockAppState(),
-                           delegate: MockTodayViewModelDelegate(),
                            displayModel: MockTodayDisplayModel())
+    }
+
+    func testInjection() {
+        let mockDelegate = MockTodayViewModelDelegate()
+        let viewModel = TodayViewModel(serviceProvider: MockAppState(),
+                                       displayModel: MockTodayDisplayModel())
+        viewModel.inject(delegate: mockDelegate)
+        XCTAssertTrue(viewModel.delegate is MockTodayViewModelDelegate)
     }
 
 }

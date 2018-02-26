@@ -6,8 +6,7 @@ class MockAuthViewModel: AuthViewModelType {
     var didCallAddOcclusion = false
     var didCallTryAgainButtonTapped = false
 
-    //swiftlint:disable:next weak_delegate
-    var delegate: AuthViewModelDelegate?
+    weak var delegate: AuthViewModelDelegate?
 
     func authenticate() {
         didCallAuthenticate = true
@@ -20,5 +19,7 @@ class MockAuthViewModel: AuthViewModelType {
     func tryAgainButtonTapped() {
         didCallTryAgainButtonTapped = true
     }
+
+    func inject(delegate: ViewModelDelegate) {}
 
 }

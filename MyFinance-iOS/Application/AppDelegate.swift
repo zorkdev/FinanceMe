@@ -1,29 +1,19 @@
-import LocalAuthentication
-
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
+    private var appState: AppStateiOS!
     private var authViewModel: AuthViewModelType!
 
     var window: UIWindow?
 
-    let appState = AppStateiOS()
-
     func application(_ application: UIApplication,
                      didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]? = nil) -> Bool {
+        appState = AppStateiOS()
 
-        let storyboard = UIStoryboard(name: UIViewController.storyboardId, bundle: nil)
-        let initialViewController = storyboard.instantiateInitialViewController() as? BaseViewController
-        initialViewController?.appState = appState
-        window = UIWindow()
-        window?.rootViewController = initialViewController
+        let homeViewModel = HomeViewModel(serviceProvider: appState)
+        appState.navigator.createNavigationStack(viewModel: homeViewModel)
 
-        if isTesting == false { window?.makeKeyAndVisible() }
-
-        let authViewController = AuthViewController.instantiate()
-        authViewModel = AuthViewModel(delegate: authViewController,
-                                      window: window,
-                                      viewController: authViewController,
-                                      context: LAContext())
+        if authViewModel == nil { authViewModel = AuthViewModel(serviceProvider: appState) }
+        appState.navigator.createAuthStack(viewModel: authViewModel)
         authViewModel.authenticate()
 
         return true

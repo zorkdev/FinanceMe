@@ -9,7 +9,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
         let storyboard = UIStoryboard(name: UIViewController.storyboardId, bundle: nil)
         let initialViewController = storyboard.instantiateInitialViewController() as? BaseViewController
-        initialViewController?.appState = appState
         window = UIWindow()
         window?.rootViewController = initialViewController
         window?.makeKeyAndVisible()

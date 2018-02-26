@@ -20,15 +20,8 @@ public extension StringRepresentable {
 extension Array: StringRepresentable {}
 extension Dictionary: StringRepresentable {}
 extension Optional: StringRepresentable {}
+extension ViewController: StringRepresentable {}
 
-#if os(macOS)
-    import Cocoa
-
-    extension NSViewController: StringRepresentable {}
-
-#elseif os(iOS) || os(tvOS)
-    import UIKit
-
-    extension UIViewController: StringRepresentable {}
+#if os(iOS) || os(tvOS)
     extension UITableViewCell: StringRepresentable {}
 #endif

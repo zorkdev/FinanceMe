@@ -22,5 +22,7 @@ protocol HomeViewModelType: ViewModelType, AddTransactionViewModelDataDelegate, 
     func delete(from tab: HomeViewModel.Tab, section: Int, row: Int)
     func height(for tab: HomeViewModel.Tab, section: Int, row: Int) -> CGFloat
     func refreshTapped()
+    func settingsButtonTapped()
+    func addTransactionButtonTapped()
 
 }

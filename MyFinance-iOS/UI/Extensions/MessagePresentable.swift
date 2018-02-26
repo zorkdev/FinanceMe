@@ -1,7 +1,7 @@
 import SwiftMessages
 import NVActivityIndicatorView
 
-public protocol MessagePresentable where Self: UIViewController {
+public protocol MessagePresentable {
 
     func showError(message: String)
     func showSpinner()

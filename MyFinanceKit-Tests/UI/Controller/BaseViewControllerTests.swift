@@ -16,8 +16,13 @@ class BaseViewControllerTests: XCTestCase {
         baseViewController?.viewWillDisappear(true)
     }
 
+    func testPresent() {
+        let viewController = BaseViewController()
+        baseViewController?.present(viewController: viewController)
+    }
+
     func testDismiss() {
-        baseViewController?.dismiss(self)
+        baseViewController?.dismiss()
     }
 
     func testTextFieldDelegate() {

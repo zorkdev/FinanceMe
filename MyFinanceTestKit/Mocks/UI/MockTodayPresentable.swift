@@ -7,8 +7,7 @@ class MockTodayPresentable: TodayPresentable {
 
     var displayModel: TodayDisplayModelType
 
-    //swiftlint:disable:next weak_delegate
-    var delegate: TodayViewModelDelegate?
+    weak var delegate: TodayViewModelDelegate?
 
     init(serviceProvider: ServiceProvider,
          displayModel: TodayDisplayModelType,
@@ -17,5 +16,7 @@ class MockTodayPresentable: TodayPresentable {
         self.displayModel = displayModel
         self.delegate = delegate
     }
+
+    func inject(delegate: ViewModelDelegate) {}
 
 }

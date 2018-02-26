@@ -1,6 +1,9 @@
-public protocol ViewModelType {
+public protocol ViewModelDelegate: class {}
+
+public protocol ViewModelType: class {
 
     func viewDidLoad()
+    func inject(delegate: ViewModelDelegate)
 
 }
 

@@ -30,6 +30,15 @@ class AuthViewController: BaseViewController {
 
 }
 
+extension AuthViewController: ViewModelInjectable {
+
+    func inject(viewModel: ViewModelType) {
+        guard let viewModel = viewModel as? AuthViewModelType else { return }
+        self.viewModel = viewModel
+    }
+
+}
+
 extension AuthViewController: AuthViewModelDelegate {
 
     func updateTryAgain(isHidden: Bool) {
