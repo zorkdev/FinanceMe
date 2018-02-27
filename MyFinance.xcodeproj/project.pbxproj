@@ -104,6 +104,9 @@
 		9A2860DF20422B8A008FA915 /* AppStateiOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A2860DE20422B8A008FA915 /* AppStateiOSTests.swift */; };
 		9A2A88E4203F6CE9002ADA1B /* UserBusinessLogicTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A2A88E3203F6CE9002ADA1B /* UserBusinessLogicTests.swift */; };
 		9A2A88E5203F6CE9002ADA1B /* UserBusinessLogicTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A2A88E3203F6CE9002ADA1B /* UserBusinessLogicTests.swift */; };
+		9A2BDAA42044D599008EE977 /* MockNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A2BDAA32044D599008EE977 /* MockNavigator.swift */; };
+		9A2BDAA62044D697008EE977 /* MockWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A2BDAA52044D697008EE977 /* MockWindow.swift */; };
+		9A2BDAA72044D697008EE977 /* MockWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A2BDAA52044D697008EE977 /* MockWindow.swift */; };
 		9A2DB564202F54EC0008A4E5 /* UIView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A2DB563202F54EC0008A4E5 /* UIView+Extensions.swift */; };
 		9A37AB11203E144900CFEE67 /* MockDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A37AB10203E144900CFEE67 /* MockDataService.swift */; };
 		9A37AB12203E144900CFEE67 /* MockDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A37AB10203E144900CFEE67 /* MockDataService.swift */; };
@@ -734,6 +737,8 @@
 		9A2860DE20422B8A008FA915 /* AppStateiOSTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStateiOSTests.swift; sourceTree = "<group>"; };
 		9A2860E120422BEC008FA915 /* Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Bridging-Header.h"; sourceTree = "<group>"; };
 		9A2A88E3203F6CE9002ADA1B /* UserBusinessLogicTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserBusinessLogicTests.swift; sourceTree = "<group>"; };
+		9A2BDAA32044D599008EE977 /* MockNavigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockNavigator.swift; sourceTree = "<group>"; };
+		9A2BDAA52044D697008EE977 /* MockWindow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockWindow.swift; sourceTree = "<group>"; };
 		9A2DB563202F54EC0008A4E5 /* UIView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extensions.swift"; sourceTree = "<group>"; };
 		9A37AB10203E144900CFEE67 /* MockDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockDataService.swift; sourceTree = "<group>"; };
 		9A37AB2B203E22D300CFEE67 /* ConfigFileServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigFileServiceTests.swift; sourceTree = "<group>"; };
@@ -1689,6 +1694,7 @@
 				9AC3E71C2042390D00CD29B6 /* MockAppStateiOS.swift */,
 				9AC3E73120423A9200CD29B6 /* MockWCSession.swift */,
 				9AC3E72F20423A8000CD29B6 /* MockWatchService.swift */,
+				9A2BDAA32044D599008EE977 /* MockNavigator.swift */,
 			);
 			path = Application;
 			sourceTree = "<group>";
@@ -1838,6 +1844,7 @@
 		9AAA77D3203F9B08000E1323 /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				9A2BDAA52044D697008EE977 /* MockWindow.swift */,
 				9AAA77D4203F9B1E000E1323 /* MockTodayViewModelDelegate.swift */,
 				9AAA77D7203F9B2A000E1323 /* MockTodayDisplayModel.swift */,
 				9AA1A3DF203FA4580059EC5A /* MockTodayPresentable.swift */,
@@ -3963,6 +3970,7 @@
 				9A65DF012041CE7300E8177A /* AppDelegateTests.swift in Sources */,
 				9AC3E73220423A9200CD29B6 /* MockWCSession.swift in Sources */,
 				9A2860DF20422B8A008FA915 /* AppStateiOSTests.swift in Sources */,
+				9A2BDAA42044D599008EE977 /* MockNavigator.swift in Sources */,
 				9ADC56842043360E003D8C63 /* MockSettingsViewModelDataDelegate.swift in Sources */,
 				9AC3E73620423C7100CD29B6 /* Factory.swift in Sources */,
 				9A014490204264F800443585 /* AuthViewModelTests.swift in Sources */,
@@ -3974,6 +3982,7 @@
 				9AEEC8AD2042696800ED7627 /* MockAuthViewModelDelegate.swift in Sources */,
 				9A88A7F72042602B00421943 /* AuthViewControllerTests.swift in Sources */,
 				9AC3E72A20423A4200CD29B6 /* MockAPI.swift in Sources */,
+				9A2BDAA62044D697008EE977 /* MockWindow.swift in Sources */,
 				9AC3E71420422FD600CD29B6 /* WatchServiceTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -4125,6 +4134,7 @@
 				9AC3E72820423A3F00CD29B6 /* MockConfigService.swift in Sources */,
 				9AC3E71F20423A2B00CD29B6 /* MockNetworkService.swift in Sources */,
 				9AC3E72220423A3200CD29B6 /* MockAppState.swift in Sources */,
+				9A2BDAA72044D697008EE977 /* MockWindow.swift in Sources */,
 				9AC3E72B20423A4300CD29B6 /* MockAPI.swift in Sources */,
 				9AC3E72D20423A4500CD29B6 /* MockDataService.swift in Sources */,
 				9AA374D62042205D00B016BB /* AppDelegateTests.swift in Sources */,

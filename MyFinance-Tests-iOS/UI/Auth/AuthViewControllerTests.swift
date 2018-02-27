@@ -10,9 +10,14 @@ class AuthViewControllerTests: XCTestCase {
         mockAuthViewModel = MockAuthViewModel()
     }
 
+    func testStatusBarStyle() {
+        let authViewController = AuthViewController()
+        XCTAssertTrue(authViewController.preferredStatusBarStyle == .lightContent)
+    }
+
     func testTryAgainButtonTapped() {
         let authViewController = AuthViewController()
-        authViewController.viewModel = mockAuthViewModel
+        authViewController.inject(viewModel: mockAuthViewModel)
         mockAuthViewModel.delegate = authViewController
 
         authViewController.tryAgainButtonTapped(UIButton())
@@ -22,7 +27,7 @@ class AuthViewControllerTests: XCTestCase {
 
     func testUpdate() {
         let authViewController = AuthViewController.instantiate()
-        authViewController.viewModel = mockAuthViewModel
+        authViewController.inject(viewModel: mockAuthViewModel)
         mockAuthViewModel.delegate = authViewController
         _ = authViewController.view
 
@@ -38,6 +43,12 @@ class AuthViewControllerTests: XCTestCase {
         }
 
         waitForExpectations(timeout: 10.0, handler: nil)
+    }
+
+    func testInject() {
+        let authViewController = AuthViewController.instantiate()
+        authViewController.inject(viewModel: mockAuthViewModel)
+        XCTAssertTrue(authViewController.viewModel is MockAuthViewModel)
     }
 
 }

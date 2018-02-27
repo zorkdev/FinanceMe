@@ -10,7 +10,9 @@ public protocol DataServiceProvider {
 
 }
 
-open class AppState: NetworkServiceProvider, DataServiceProvider {
+public protocol AppStateType: NetworkServiceProvider & DataServiceProvider {}
+
+open class AppState: AppStateType {
 
     public let networkService: NetworkServiceType
     public let dataService: DataService

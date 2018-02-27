@@ -19,7 +19,9 @@ protocol LAContextProvider {
 
 }
 
-class AppStateiOS: AppState {
+protocol AppStateiOSType: AppStateType & NavigatorProvider & WatchServiceProvider & LAContextProvider {}
+
+class AppStateiOS: AppState, AppStateiOSType {
 
     let navigator: NavigatorType
     let watchService: WatchServiceType

@@ -1,13 +1,13 @@
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
-    private var appState: AppStateiOS!
-    private var authViewModel: AuthViewModelType!
+    var appState: AppStateiOSType!
+    var authViewModel: AuthViewModelType!
 
     var window: UIWindow?
 
     func application(_ application: UIApplication,
                      didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]? = nil) -> Bool {
-        appState = AppStateiOS()
+        if appState == nil { appState = AppStateiOS() }
 
         let homeViewModel = HomeViewModel(serviceProvider: appState)
         appState.navigator.createNavigationStack(viewModel: homeViewModel)
