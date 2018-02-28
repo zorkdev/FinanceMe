@@ -7,12 +7,12 @@ class SettingsViewController: BaseViewController {
     @IBOutlet private weak var editButton: UIButton!
     @IBOutlet private weak var saveButton: UIButton!
 
-    private var viewModel: SettingsViewModelType!
-
     private let startDatePicker = UIDatePicker()
     private var selectedDate = Date()
 
     private let paydayPicker = UIPickerView()
+
+    var viewModel: SettingsViewModelType!
 
     weak var dataDelegate: SettingsViewModelDataDelegate?
 

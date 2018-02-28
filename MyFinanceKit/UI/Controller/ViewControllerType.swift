@@ -8,8 +8,10 @@ public typealias ViewController = WKInterfaceController
 
 public protocol ViewControllerType: ViewModelDelegate {
 
+    var presented: ViewControllerType? { get }
+
     func present(viewController: ViewControllerType)
-    func dismiss()
+    func dismiss() -> Promise<Void>
 
 }
 

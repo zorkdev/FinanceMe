@@ -6,6 +6,7 @@ class MockSettingsViewModel: SettingsViewModelType {
     var didCallEditButtonTapped = false
     var didCallSaveButtonTapped = false
     var didCallDismissTapped = false
+    var lastInjectValue: ViewModelDelegate?
 
     var shouldEnableSaveButtonReturnValue = false
     var formattedReturnValue = ""
@@ -54,6 +55,8 @@ class MockSettingsViewModel: SettingsViewModelType {
         return pickerViewRowInComponentReturnValue
     }
 
-    func inject(delegate: ViewModelDelegate) {}
+    func inject(delegate: ViewModelDelegate) {
+        lastInjectValue = delegate
+    }
 
 }

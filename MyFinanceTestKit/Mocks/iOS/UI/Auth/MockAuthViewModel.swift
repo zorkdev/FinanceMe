@@ -5,6 +5,7 @@ class MockAuthViewModel: AuthViewModelType {
     var didCallAuthenticate = false
     var didCallAddOcclusion = false
     var didCallTryAgainButtonTapped = false
+    var lastInjectValue: ViewModelDelegate?
 
     weak var delegate: AuthViewModelDelegate?
 
@@ -20,6 +21,8 @@ class MockAuthViewModel: AuthViewModelType {
         didCallTryAgainButtonTapped = true
     }
 
-    func inject(delegate: ViewModelDelegate) {}
+    func inject(delegate: ViewModelDelegate) {
+        lastInjectValue = delegate
+    }
 
 }

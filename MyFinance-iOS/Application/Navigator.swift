@@ -28,10 +28,18 @@ class Navigator: NavigatorType {
     }
 
     func createNavigationStack(viewModel: ViewModelType) {
-        let scene = create(scene: .home, viewModel: viewModel)
-        window?.baseViewController = scene.viewController
+        moveTo(scene: .home, viewModel: viewModel)
         window?.makeKeyAndVisible()
-        viewControllers = [scene.viewController]
+    }
+
+    func createAuthStack(viewModel: AuthViewModelType) {
+        let scene = create(scene: .auth, viewModel: viewModel)
+
+        guard let frame = window?.frame else { fatalError() }
+        authWindow = window?.createWindow(frame: frame)
+        authWindow?.windowLevel = UIWindowLevelStatusBar - 1
+        authWindow?.baseViewController = scene.viewController
+        authWindow?.makeKeyAndVisible()
     }
 
     func moveTo(scene: Scene, viewModel: ViewModelType) {
@@ -46,18 +54,11 @@ class Navigator: NavigatorType {
         viewControllers.append(scene.viewController)
     }
 
-    func createAuthStack(viewModel: AuthViewModelType) {
-        let scene = create(scene: .auth, viewModel: viewModel)
-
-        guard let frame = window?.frame else { fatalError() }
-        authWindow = window?.createWindow(frame: frame)
-        authWindow?.windowLevel = UIWindowLevelStatusBar - 1
-        authWindow?.baseViewController = scene.viewController
-        authWindow?.makeKeyAndVisible()
-    }
-
-    func dismiss() {
-        viewControllers.popLast()?.dismiss()
+    @discardableResult func dismiss() -> Promise<Void> {
+        guard let lastViewController = viewControllers.last else { return Promise(error: AppError.unknownError) }
+        return lastViewController.dismiss().done {
+            self.viewControllers.removeLast()
+        }
     }
 
     func showAuthWindow() {

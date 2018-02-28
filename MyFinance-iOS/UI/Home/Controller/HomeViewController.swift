@@ -12,11 +12,11 @@ class HomeViewController: BaseViewController {
     @IBOutlet private weak var tabIndicator: UIView!
     @IBOutlet private weak var scrollView: UIScrollView!
 
-    private var viewModel: HomeViewModelType!
-
     private let transactionsRefreshControl = UIRefreshControl()
     private let regularsRefreshControl = UIRefreshControl()
     private let balanceRefreshControl = UIRefreshControl()
+
+    var viewModel: HomeViewModelType!
 
     override var preferredStatusBarStyle: UIStatusBarStyle {
         return .lightContent

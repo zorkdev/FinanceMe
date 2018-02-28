@@ -27,13 +27,21 @@ extension BaseViewController: UITextFieldDelegate {
 
 extension BaseViewController: ViewControllerType {
 
-    public func present(viewController: ViewControllerType) {
-        guard let viewController = viewController as? BaseViewController else { return }
-        present(viewController, animated: true, completion: nil)
+    public var presented: ViewControllerType? {
+        return presentedViewController as? ViewControllerType
     }
 
-    public func dismiss() {
-        dismiss(animated: true, completion: nil)
+    public func present(viewController: ViewControllerType) {
+        guard let viewController = viewController as? BaseViewController else { return }
+        present(viewController, animated: true)
+    }
+
+    public func dismiss() -> Promise<Void> {
+        return Promise { seal in
+            dismiss(animated: true) {
+                seal.fulfill(Void())
+            }
+        }
     }
 
 }

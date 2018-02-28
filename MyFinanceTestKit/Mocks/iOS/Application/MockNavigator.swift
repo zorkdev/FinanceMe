@@ -1,3 +1,4 @@
+import PromiseKit
 @testable import MyFinance_iOS
 
 class MockNavigator: NavigatorType {
@@ -24,7 +25,9 @@ class MockNavigator: NavigatorType {
 
     func moveTo(scene: Scene, viewModel: ViewModelType) {}
 
-    func dismiss() {}
+    @discardableResult func dismiss() -> Promise<Void> {
+        return Promise()
+    }
 
     func showAuthWindow() {
         didCallShowAuthWindow = true
