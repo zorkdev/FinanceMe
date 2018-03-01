@@ -1,4 +1,4 @@
-public class TodayViewModel: TodayPresentable {
+open class TodayViewModel: TodayPresentable {
 
     public let serviceProvider: ServiceProvider
     public let displayModel: TodayDisplayModelType

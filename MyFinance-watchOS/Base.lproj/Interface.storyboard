@@ -1,18 +1,53 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="13771" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AgC-eL-Hgc">
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="14101" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AgC-eL-Hgc">
     <device id="watch38" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="watchOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="13756"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14086"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="14031"/>
     </dependencies>
     <scenes>
-        <!--Interface Controller-->
+        <!--Home Interface Controller-->
         <scene sceneID="aou-V4-d1y">
             <objects>
-                <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModule="MyFinanceExtension_watchOS"/>
+                <controller id="AgC-eL-Hgc" customClass="HomeInterfaceController" customModule="MyFinanceExtension_watchOS">
+                    <items>
+                        <group width="1" alignment="center" verticalAlignment="center" layout="vertical" spacing="0.0" id="ksb-53-fc5">
+                            <items>
+                                <group width="1" alignment="center" verticalAlignment="center" layout="vertical" spacing="0.0" id="vmU-oY-OTp">
+                                    <items>
+                                        <label alignment="center" verticalAlignment="center" text="£0.00" textAlignment="center" id="61C-Jz-80e">
+                                            <fontDescription key="font" type="system" weight="light" pointSize="32"/>
+                                        </label>
+                                        <label alignment="center" verticalAlignment="center" text="BALANCE" textAlignment="center" id="Gb1-k1-Gkg">
+                                            <fontDescription key="font" type="system" pointSize="12"/>
+                                        </label>
+                                    </items>
+                                </group>
+                                <label alignment="center" verticalAlignment="center" text=" " id="ipS-ss-YEC">
+                                    <fontDescription key="font" type="system" pointSize="30"/>
+                                </label>
+                                <group width="1" alignment="center" verticalAlignment="center" layout="vertical" spacing="0.0" id="PkN-6g-GCv">
+                                    <items>
+                                        <label alignment="center" verticalAlignment="center" text="£0.00" textAlignment="center" id="7RD-Of-jO1">
+                                            <fontDescription key="font" type="system" weight="light" pointSize="32"/>
+                                        </label>
+                                        <label alignment="center" verticalAlignment="center" text="ALLOWANCE" textAlignment="center" id="NQN-n9-xvk">
+                                            <fontDescription key="font" type="system" pointSize="12"/>
+                                        </label>
+                                    </items>
+                                </group>
+                            </items>
+                        </group>
+                    </items>
+                    <connections>
+                        <outlet property="allowanceIconLabel" destination="ipS-ss-YEC" id="KqE-RN-4t1"/>
+                        <outlet property="allowanceLabel" destination="7RD-Of-jO1" id="2di-ag-q4T"/>
+                        <outlet property="balanceLabel" destination="61C-Jz-80e" id="A5y-SV-x8w"/>
+                    </connections>
+                </controller>
             </objects>
         </scene>
     </scenes>

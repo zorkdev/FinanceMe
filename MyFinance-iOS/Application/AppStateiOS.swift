@@ -36,5 +36,3 @@ class AppStateiOS: AppState, AppStateiOSType {
     }
 
 }
-
-extension AppStateiOS: NavigatorProvider, WatchServiceProvider, LAContextProvider {}

@@ -156,7 +156,7 @@
 		9A3CB7CA202FC657008AF158 /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9A3CB7C8202FC657008AF158 /* Interface.storyboard */; };
 		9A3CB7CC202FC657008AF158 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9A3CB7CB202FC657008AF158 /* Assets.xcassets */; };
 		9A3CB7D3202FC657008AF158 /* MyFinanceExtension-watchOS.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 9A3CB7D2202FC657008AF158 /* MyFinanceExtension-watchOS.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		9A3CB7D8202FC657008AF158 /* InterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A3CB7D7202FC657008AF158 /* InterfaceController.swift */; };
+		9A3CB7D8202FC657008AF158 /* HomeInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A3CB7D7202FC657008AF158 /* HomeInterfaceController.swift */; };
 		9A3CB7DA202FC657008AF158 /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A3CB7D9202FC657008AF158 /* ExtensionDelegate.swift */; };
 		9A3CB7DC202FC657008AF158 /* ComplicationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A3CB7DB202FC657008AF158 /* ComplicationController.swift */; };
 		9A3CB7DE202FC657008AF158 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9A3CB7DD202FC657008AF158 /* Assets.xcassets */; };
@@ -294,6 +294,8 @@
 		9A740EEE201E247D00D40943 /* MyFinanceExtension-macOS.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 9A740EDF201E247D00D40943 /* MyFinanceExtension-macOS.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		9A74CD01203E084900CBA082 /* DataServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A74CCFC203E081F00CBA082 /* DataServiceTests.swift */; };
 		9A74CD02203E084A00CBA082 /* DataServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A74CCFC203E081F00CBA082 /* DataServiceTests.swift */; };
+		9A7649482048A10E00E5587B /* ComplicationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A7649472048A10E00E5587B /* ComplicationService.swift */; };
+		9A76494A2048A21B00E5587B /* AppStatewatchOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A7649492048A21B00E5587B /* AppStatewatchOS.swift */; };
 		9A8561722027730F00A26F12 /* HomeCellDisplayModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A8561712027730F00A26F12 /* HomeCellDisplayModel.swift */; };
 		9A856176202774F300A26F12 /* AddTransactionDisplayModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A856175202774F300A26F12 /* AddTransactionDisplayModel.swift */; };
 		9A85617D20278FA000A26F12 /* MessagePresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A8561772027800D00A26F12 /* MessagePresentable.swift */; };
@@ -414,6 +416,7 @@
 		9ADC568620433660003D8C63 /* SettingsViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ADC568520433660003D8C63 /* SettingsViewControllerTests.swift */; };
 		9ADDE1BA203F818200BCA1DE /* ExternalTransactionsBusinessLogicTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ADDE1B9203F818200BCA1DE /* ExternalTransactionsBusinessLogicTests.swift */; };
 		9ADDE1BB203F818200BCA1DE /* ExternalTransactionsBusinessLogicTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ADDE1B9203F818200BCA1DE /* ExternalTransactionsBusinessLogicTests.swift */; };
+		9AE152D320489D6B003D8ACA /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AE152D220489D6B003D8ACA /* HomeViewModel.swift */; };
 		9AE4D4452044891800299897 /* Navigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AE4D4442044891800299897 /* Navigator.swift */; };
 		9AE4D44620448BEA00299897 /* ViewControllerType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A3A2B872039C2350071FBC5 /* ViewControllerType.swift */; };
 		9AE4D44720448BEB00299897 /* ViewControllerType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A3A2B872039C2350071FBC5 /* ViewControllerType.swift */; };
@@ -767,7 +770,7 @@
 		9A3CB7CB202FC657008AF158 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9A3CB7CD202FC657008AF158 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9A3CB7D2202FC657008AF158 /* MyFinanceExtension-watchOS.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "MyFinanceExtension-watchOS.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
-		9A3CB7D7202FC657008AF158 /* InterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterfaceController.swift; sourceTree = "<group>"; };
+		9A3CB7D7202FC657008AF158 /* HomeInterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeInterfaceController.swift; sourceTree = "<group>"; };
 		9A3CB7D9202FC657008AF158 /* ExtensionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionDelegate.swift; sourceTree = "<group>"; };
 		9A3CB7DB202FC657008AF158 /* ComplicationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComplicationController.swift; sourceTree = "<group>"; };
 		9A3CB7DD202FC657008AF158 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -840,6 +843,8 @@
 		9A740F1D201E2D8700D40943 /* MyFinanceExtension-macOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "MyFinanceExtension-macOS.entitlements"; sourceTree = "<group>"; };
 		9A740F1E201E2DAA00D40943 /* MyFinance-macOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "MyFinance-macOS.entitlements"; sourceTree = "<group>"; };
 		9A74CCFC203E081F00CBA082 /* DataServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataServiceTests.swift; sourceTree = "<group>"; };
+		9A7649472048A10E00E5587B /* ComplicationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComplicationService.swift; sourceTree = "<group>"; };
+		9A7649492048A21B00E5587B /* AppStatewatchOS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStatewatchOS.swift; sourceTree = "<group>"; };
 		9A8561712027730F00A26F12 /* HomeCellDisplayModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCellDisplayModel.swift; sourceTree = "<group>"; };
 		9A856175202774F300A26F12 /* AddTransactionDisplayModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTransactionDisplayModel.swift; sourceTree = "<group>"; };
 		9A8561772027800D00A26F12 /* MessagePresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessagePresentable.swift; sourceTree = "<group>"; };
@@ -941,6 +946,7 @@
 		9ADC568520433660003D8C63 /* SettingsViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewControllerTests.swift; sourceTree = "<group>"; };
 		9ADDE1B9203F818200BCA1DE /* ExternalTransactionsBusinessLogicTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExternalTransactionsBusinessLogicTests.swift; sourceTree = "<group>"; };
 		9ADE54C0201568D90039D774 /* DataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
+		9AE152D220489D6B003D8ACA /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		9AE4D4442044891800299897 /* Navigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Navigator.swift; sourceTree = "<group>"; };
 		9AE7F15D2042570900BA98BD /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		9AE7F1602042572700BA98BD /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
@@ -1344,8 +1350,11 @@
 			isa = PBXGroup;
 			children = (
 				9A3CB7D9202FC657008AF158 /* ExtensionDelegate.swift */,
-				9A3CB7D7202FC657008AF158 /* InterfaceController.swift */,
+				9A7649492048A21B00E5587B /* AppStatewatchOS.swift */,
+				9A7649472048A10E00E5587B /* ComplicationService.swift */,
 				9A3CB7DB202FC657008AF158 /* ComplicationController.swift */,
+				9A3CB7D7202FC657008AF158 /* HomeInterfaceController.swift */,
+				9AE152D220489D6B003D8ACA /* HomeViewModel.swift */,
 				9A3CB7DD202FC657008AF158 /* Assets.xcassets */,
 				9A3CB7DF202FC657008AF158 /* Info.plist */,
 				9AA8E42F2040D6C40094FB41 /* MyFinanceExtension-watchOS.entitlements */,
@@ -3844,8 +3853,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				9A3CB7DA202FC657008AF158 /* ExtensionDelegate.swift in Sources */,
-				9A3CB7D8202FC657008AF158 /* InterfaceController.swift in Sources */,
+				9A76494A2048A21B00E5587B /* AppStatewatchOS.swift in Sources */,
+				9A7649482048A10E00E5587B /* ComplicationService.swift in Sources */,
+				9A3CB7D8202FC657008AF158 /* HomeInterfaceController.swift in Sources */,
 				9A3CB7DC202FC657008AF158 /* ComplicationController.swift in Sources */,
+				9AE152D320489D6B003D8ACA /* HomeViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
