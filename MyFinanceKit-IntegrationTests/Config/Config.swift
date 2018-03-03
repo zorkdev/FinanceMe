@@ -1,14 +1,13 @@
 @testable import MyFinanceKit
 
-let appState = AppState()
-let config = Config()
-
 class Config {
 
     private struct Constants {
         static let configFilename = "config"
         static let configExtension = "json"
     }
+
+    let appState = AppState()
 
     let testCredentials = Credentials(email: "test@test.com",
                                       password: "test")

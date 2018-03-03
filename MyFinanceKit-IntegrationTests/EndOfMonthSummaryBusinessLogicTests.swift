@@ -1,12 +1,12 @@
 @testable import MyFinanceKit
 
-class EndOfMonthSummaryBusinessLogicTests: XCTestCase {
+class EndOfMonthSummaryBusinessLogicTests: IntegrationTestCase {
 
     func testGetEndOfMonthSummaryList() {
-        print(config)
         let newExpectation = expectation(description: "EndOfMonthSummaryList fetched")
 
-        let endOfMonthSummaryBusinessLogic = EndOfMonthSummaryBusinessLogic(networkService: appState.networkService)
+        let endOfMonthSummaryBusinessLogic =
+            EndOfMonthSummaryBusinessLogic(networkService: config.appState.networkService)
 
         _ = endOfMonthSummaryBusinessLogic.getEndOfMonthSummaryList()
             .done { _ in

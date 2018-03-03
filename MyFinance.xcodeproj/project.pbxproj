@@ -21,6 +21,7 @@
 		9A0C474E204B65DB0011D817 /* Credentials.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A0C474C204B65DB0011D817 /* Credentials.swift */; };
 		9A0C474F204B65DB0011D817 /* Credentials.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A0C474C204B65DB0011D817 /* Credentials.swift */; };
 		9A0C4750204B65DB0011D817 /* Credentials.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A0C474C204B65DB0011D817 /* Credentials.swift */; };
+		9A0C4752204B69D90011D817 /* IntegrationTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A0C4751204B69D90011D817 /* IntegrationTestCase.swift */; };
 		9A0E8E53203F988D003A811E /* ViewModelTypeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A0E8E51203F9861003A811E /* ViewModelTypeTests.swift */; };
 		9A0E8E54203F988E003A811E /* ViewModelTypeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A0E8E51203F9861003A811E /* ViewModelTypeTests.swift */; };
 		9A1C9F752044C0A0002A21F4 /* WindowType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A1C9F742044C0A0002A21F4 /* WindowType.swift */; };
@@ -714,6 +715,7 @@
 		9583B4C05F05012F0928BCE1 /* Pods-MyFinanceKit-watchOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyFinanceKit-watchOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-MyFinanceKit-watchOS/Pods-MyFinanceKit-watchOS.release.xcconfig"; sourceTree = "<group>"; };
 		9A01448F204264F800443585 /* AuthViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewModelTests.swift; sourceTree = "<group>"; };
 		9A0C474C204B65DB0011D817 /* Credentials.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Credentials.swift; sourceTree = "<group>"; };
+		9A0C4751204B69D90011D817 /* IntegrationTestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntegrationTestCase.swift; sourceTree = "<group>"; };
 		9A0E8E51203F9861003A811E /* ViewModelTypeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelTypeTests.swift; sourceTree = "<group>"; };
 		9A1C9F742044C0A0002A21F4 /* WindowType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WindowType.swift; sourceTree = "<group>"; };
 		9A2022082038CAE00012DD51 /* MyFinanceKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MyFinanceKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -1274,6 +1276,7 @@
 			isa = PBXGroup;
 			children = (
 				9A37AB3E203E386A00CFEE67 /* Config.swift */,
+				9A0C4751204B69D90011D817 /* IntegrationTestCase.swift */,
 				9A2022992038DDF50012DD51 /* Bridging-Header.h */,
 				9A2022902038DCCF0012DD51 /* Info.plist */,
 			);
@@ -3844,6 +3847,7 @@
 				9A20229F2038E3BE0012DD51 /* ExternalTransactionsBusinessLogicTests.swift in Sources */,
 				9A2022A12038E59E0012DD51 /* EndOfMonthSummaryBusinessLogicTests.swift in Sources */,
 				9A20228F2038DCCF0012DD51 /* UserBusinessLogicTests.swift in Sources */,
+				9A0C4752204B69D90011D817 /* IntegrationTestCase.swift in Sources */,
 				9A20229B2038E1C90012DD51 /* BalanceBusinessLogicTests.swift in Sources */,
 				9A20229D2038E2F60012DD51 /* TransactionsBusinessLogicTests.swift in Sources */,
 				9A37AB3F203E386A00CFEE67 /* Config.swift in Sources */,

@@ -1,12 +1,11 @@
 @testable import MyFinanceKit
 
-class TransactionsBusinessLogicTests: XCTestCase {
+class TransactionsBusinessLogicTests: IntegrationTestCase {
 
     func testGetTransactions() {
-        print(config)
         let newExpectation = expectation(description: "Transactions fetched")
 
-        let transactionsBusinessLogic = TransactionsBusinessLogic(networkService: appState.networkService)
+        let transactionsBusinessLogic = TransactionsBusinessLogic(networkService: config.appState.networkService)
         let fromTo = FromToParameters(from: Date().oneMonthAgo, to: Date())
 
         _ = transactionsBusinessLogic.getTransactions(fromTo: fromTo)

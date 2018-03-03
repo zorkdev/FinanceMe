@@ -1,13 +1,12 @@
 @testable import MyFinanceKit
 
-class UserBusinessLogicTests: XCTestCase {
+class UserBusinessLogicTests: IntegrationTestCase {
 
     func testLogin() {
-        print(config)
         let newExpectation = expectation(description: "User logged in")
 
-        let userBusinessLogic = UserBusinessLogic(networkService: appState.networkService,
-                                                  dataService: appState.dataService)
+        let userBusinessLogic = UserBusinessLogic(networkService: config.appState.networkService,
+                                                  dataService: config.appState.dataService)
 
         _ = userBusinessLogic.getSession(credentials: config.testCredentials)
             .done { _ in
@@ -18,11 +17,10 @@ class UserBusinessLogicTests: XCTestCase {
     }
 
     func testGetCurrentUser() {
-        print(config)
         let newExpectation = expectation(description: "Current user fetched")
 
-        let userBusinessLogic = UserBusinessLogic(networkService: appState.networkService,
-                                                  dataService: appState.dataService)
+        let userBusinessLogic = UserBusinessLogic(networkService: config.appState.networkService,
+                                                  dataService: config.appState.dataService)
 
         _ = userBusinessLogic.getCurrentUser()
             .done { _ in
@@ -33,11 +31,10 @@ class UserBusinessLogicTests: XCTestCase {
     }
 
     func testUpdateUser() {
-        print(config)
         let newExpectation = expectation(description: "Current user updated")
 
-        let userBusinessLogic = UserBusinessLogic(networkService: appState.networkService,
-                                                  dataService: appState.dataService)
+        let userBusinessLogic = UserBusinessLogic(networkService: config.appState.networkService,
+                                                  dataService: config.appState.dataService)
 
         _ = userBusinessLogic.getCurrentUser()
             .then { user in

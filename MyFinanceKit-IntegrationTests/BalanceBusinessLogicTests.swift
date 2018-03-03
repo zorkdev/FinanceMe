@@ -1,13 +1,12 @@
 @testable import MyFinanceKit
 
-class BalanceBusinessLogicTests: XCTestCase {
+class BalanceBusinessLogicTests: IntegrationTestCase {
 
     func testGetBalance() {
-        print(config)
         let newExpectation = expectation(description: "Balance fetched")
 
-        let balanceBusinessLogic = BalanceBusinessLogic(networkService: appState.networkService,
-                                                        dataService: appState.dataService)
+        let balanceBusinessLogic = BalanceBusinessLogic(networkService: config.appState.networkService,
+                                                        dataService: config.appState.dataService)
 
         _ = balanceBusinessLogic.getBalance()
             .done { _ in
