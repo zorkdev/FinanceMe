@@ -10,6 +10,9 @@ class Config {
         static let configExtension = "json"
     }
 
+    let testCredentials = Credentials(email: "test@test.com",
+                                      password: "test")
+
     init() {
         let bundle = Bundle(for: Config.self)
         let configURL = bundle.url(forResource: Constants.configFilename,

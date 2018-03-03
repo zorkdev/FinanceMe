@@ -17,6 +17,10 @@
 		688D78BD9ED7EF8F6FE7EC24 /* Pods_MyFinance_Tests_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E05704523C729A976882919 /* Pods_MyFinance_Tests_iOS.framework */; };
 		8B68FCB6C23A94B7764A1EE8 /* Pods_MyFinanceKit_macOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 44AC3487225BC41D05828D87 /* Pods_MyFinanceKit_macOS.framework */; };
 		9A014490204264F800443585 /* AuthViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A01448F204264F800443585 /* AuthViewModelTests.swift */; };
+		9A0C474D204B65DB0011D817 /* Credentials.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A0C474C204B65DB0011D817 /* Credentials.swift */; };
+		9A0C474E204B65DB0011D817 /* Credentials.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A0C474C204B65DB0011D817 /* Credentials.swift */; };
+		9A0C474F204B65DB0011D817 /* Credentials.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A0C474C204B65DB0011D817 /* Credentials.swift */; };
+		9A0C4750204B65DB0011D817 /* Credentials.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A0C474C204B65DB0011D817 /* Credentials.swift */; };
 		9A0E8E53203F988D003A811E /* ViewModelTypeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A0E8E51203F9861003A811E /* ViewModelTypeTests.swift */; };
 		9A0E8E54203F988E003A811E /* ViewModelTypeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A0E8E51203F9861003A811E /* ViewModelTypeTests.swift */; };
 		9A1C9F752044C0A0002A21F4 /* WindowType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A1C9F742044C0A0002A21F4 /* WindowType.swift */; };
@@ -709,6 +713,7 @@
 		912C8C9B1823959085F2299C /* Pods-MyFinanceExtension-iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyFinanceExtension-iOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-MyFinanceExtension-iOS/Pods-MyFinanceExtension-iOS.release.xcconfig"; sourceTree = "<group>"; };
 		9583B4C05F05012F0928BCE1 /* Pods-MyFinanceKit-watchOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyFinanceKit-watchOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-MyFinanceKit-watchOS/Pods-MyFinanceKit-watchOS.release.xcconfig"; sourceTree = "<group>"; };
 		9A01448F204264F800443585 /* AuthViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewModelTests.swift; sourceTree = "<group>"; };
+		9A0C474C204B65DB0011D817 /* Credentials.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Credentials.swift; sourceTree = "<group>"; };
 		9A0E8E51203F9861003A811E /* ViewModelTypeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelTypeTests.swift; sourceTree = "<group>"; };
 		9A1C9F742044C0A0002A21F4 /* WindowType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WindowType.swift; sourceTree = "<group>"; };
 		9A2022082038CAE00012DD51 /* MyFinanceKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MyFinanceKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -1457,6 +1462,7 @@
 			children = (
 				9A5AE59B2012C45700B25081 /* Error.swift */,
 				9AD3EE2620139FDC0083F8FE /* HALResponse.swift */,
+				9A0C474C204B65DB0011D817 /* Credentials.swift */,
 				9A5AE5962012BF5E00B25081 /* Session.swift */,
 				9A872E0E2016719100C1E9BE /* User.swift */,
 				9A5AE5912012B97500B25081 /* Balance.swift */,
@@ -3748,6 +3754,7 @@
 				9AE7F1572042513100BA98BD /* Instantiatable.swift in Sources */,
 				9A3A2B842039AEB10071FBC5 /* AppState.swift in Sources */,
 				9A20226B2038D91F0012DD51 /* Data+Extensions.swift in Sources */,
+				9A0C474E204B65DB0011D817 /* Credentials.swift in Sources */,
 				9A2022812038D9770012DD51 /* TodayViewModel.swift in Sources */,
 				9A2022752038D94B0012DD51 /* Summary.swift in Sources */,
 				9A2022712038D9420012DD51 /* Session.swift in Sources */,
@@ -3818,6 +3825,7 @@
 				9A2022622038D7770012DD51 /* UITableViewCell+Extensions.swift in Sources */,
 				9A20225E2038D74C0012DD51 /* SpendingBusinessLogic.swift in Sources */,
 				9A2022502038D7250012DD51 /* HALResponse.swift in Sources */,
+				9A0C474F204B65DB0011D817 /* Credentials.swift in Sources */,
 				9A3A2B94203A26620071FBC5 /* Allowance.swift in Sources */,
 				9A20225F2038D7540012DD51 /* ViewModelType.swift in Sources */,
 				9A20225B2038D7450012DD51 /* UserBusinessLogic.swift in Sources */,
@@ -3861,6 +3869,7 @@
 			files = (
 				9A4F55632023CAA100DBF68F /* Error.swift in Sources */,
 				9A1C9F752044C0A0002A21F4 /* WindowType.swift in Sources */,
+				9A0C474D204B65DB0011D817 /* Credentials.swift in Sources */,
 				9A4F55762023CAD900DBF68F /* TransactionsBusinessLogic.swift in Sources */,
 				9A4F55522023C95B00DBF68F /* NetworkService.swift in Sources */,
 				9A4F55652023CAA700DBF68F /* HALResponse.swift in Sources */,
@@ -3915,6 +3924,7 @@
 				9A4F55662023CAA800DBF68F /* HALResponse.swift in Sources */,
 				9AB4F12C2042500C008D0F5D /* Instantiatable.swift in Sources */,
 				9A4F55712023CACC00DBF68F /* Formatters.swift in Sources */,
+				9A0C4750204B65DB0011D817 /* Credentials.swift in Sources */,
 				9A4F555B2023C97300DBF68F /* Date+Extensions.swift in Sources */,
 				9A4F55732023CAD300DBF68F /* BalanceBusinessLogic.swift in Sources */,
 				9AAD38A2202FA9BC00395119 /* SpendingBusinessLogic.swift in Sources */,
