@@ -2,25 +2,30 @@ import PromiseKit
 @testable import MyFinanceKit
 
 //swiftlint:disable nesting
+//swiftlint:disable type_body_length
 class NetworkServiceTests: XCTestCase {
 
     var mockNetworkRequestable = MockNetworkRequestable()
     let mockConfigService = MockConfigService()
+    let mockDataService = MockDataService()
     var mockAPI = MockAPI()
+    let session = Factory.makeSession()
 
     override func setUp() {
         super.setUp()
 
         mockNetworkRequestable = MockNetworkRequestable()
         mockAPI = MockAPI()
+        mockDataService.loadReturnValues = [session]
     }
 
     func testPerformRequest() {
         let newExpectation = expectation(description: "Network call successful")
 
-        let mockToken = mockAPI.token(config: mockConfigService.config)
+        let mockToken = mockAPI.token(session: session)
 
         let networkService = NetworkService(networkRequestable: mockNetworkRequestable,
+                                            dataService: mockDataService,
                                             configService: mockConfigService)
 
         _ = networkService.performRequest(api: mockAPI,
@@ -49,9 +54,10 @@ class NetworkServiceTests: XCTestCase {
     func testPerformRequestWithBodyAndParameters() {
         let newExpectation = expectation(description: "Network call successful")
 
-        let mockToken = mockAPI.token(config: mockConfigService.config)
+        let mockToken = mockAPI.token(session: session)
 
         let networkService = NetworkService(networkRequestable: mockNetworkRequestable,
+                                            dataService: mockDataService,
                                             configService: mockConfigService)
 
         struct Body: JSONEncodable {
@@ -98,6 +104,7 @@ class NetworkServiceTests: XCTestCase {
         mockAPI.url = nil
 
         let networkService = NetworkService(networkRequestable: mockNetworkRequestable,
+                                            dataService: mockDataService,
                                             configService: mockConfigService)
 
         _ = networkService.performRequest(api: mockAPI,
@@ -118,6 +125,7 @@ class NetworkServiceTests: XCTestCase {
         mockNetworkRequestable.returnErrorValue = PMKHTTPError.badStatusCode(400, Data(), HTTPURLResponse())
 
         let networkService = NetworkService(networkRequestable: mockNetworkRequestable,
+                                            dataService: mockDataService,
                                             configService: mockConfigService)
 
         _ = networkService.performRequest(api: mockAPI,
@@ -142,6 +150,7 @@ class NetworkServiceTests: XCTestCase {
         mockNetworkRequestable.returnErrorValue = nsError
 
         let networkService = NetworkService(networkRequestable: mockNetworkRequestable,
+                                            dataService: mockDataService,
                                             configService: mockConfigService)
 
         _ = networkService.performRequest(api: mockAPI,
@@ -159,9 +168,10 @@ class NetworkServiceTests: XCTestCase {
     func testPerformRequestWithJSONCodable_Success() {
         let newExpectation = expectation(description: "Network call successful")
 
-        let mockToken = mockAPI.token(config: mockConfigService.config)
+        let mockToken = mockAPI.token(session: session)
 
         let networkService = NetworkService(networkRequestable: mockNetworkRequestable,
+                                            dataService: mockDataService,
                                             configService: mockConfigService)
 
         struct Body: JSONCodable {
@@ -199,6 +209,7 @@ class NetworkServiceTests: XCTestCase {
         let newExpectation = expectation(description: "Network call unsuccessful - JSON parsing error")
 
         let networkService = NetworkService(networkRequestable: mockNetworkRequestable,
+                                            dataService: mockDataService,
                                             configService: mockConfigService)
 
         struct Body: JSONCodable {

@@ -42,11 +42,14 @@ public class NetworkService: NetworkServiceType {
     }
 
     private let networkService: NetworkRequestable
+    private let dataService: DataService
     private let configService: ConfigService
 
     public init(networkRequestable: NetworkRequestable,
+                dataService: DataService,
                 configService: ConfigService) {
         networkService = networkRequestable
+        self.dataService = dataService
         self.configService = configService
     }
 
@@ -111,7 +114,8 @@ public class NetworkService: NetworkServiceType {
                                parameters: JSONEncodable?,
                                body: JSONEncodable?) -> URLRequest? {
 
-        guard let url = api.url,
+        guard let session = Session.load(dataService: dataService),
+            let url = api.url,
             var urlComponents = URLComponents(url: url, resolvingAgainstBaseURL: false) else { return nil }
 
         urlComponents.queryItems = parameters?.urlEncoded()
@@ -123,7 +127,7 @@ public class NetworkService: NetworkServiceType {
                          forHTTPHeaderField: Constants.contentKey)
         request.setValue(Constants.encodingValue,
                          forHTTPHeaderField: Constants.encodingKey)
-        request.setValue(Constants.authHeaderValue(api.token(config: configService.config)),
+        request.setValue(Constants.authHeaderValue(api.token(session: session)),
                          forHTTPHeaderField: Constants.authHeaderKey)
 
         if body != nil {

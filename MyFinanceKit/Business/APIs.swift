@@ -1,7 +1,7 @@
 public protocol APIType {
 
     var url: URL? { get }
-    func token(config: Config) -> String
+    func token(session: Session) -> String
 
 }
 
@@ -17,10 +17,10 @@ public enum API: APIType, Equatable {
         }
     }
 
-    public func token(config: Config) -> String {
+    public func token(session: Session) -> String {
         switch self {
-        case let .starling(starlingAPI): return starlingAPI.token(config: config)
-        case let .zorkdev(zorkdevAPI): return zorkdevAPI.token(config: config)
+        case let .starling(starlingAPI): return starlingAPI.token(session: session)
+        case let .zorkdev(zorkdevAPI): return zorkdevAPI.token(session: session)
         }
     }
 
@@ -44,8 +44,8 @@ public enum StarlingAPI: APIType, Equatable {
         return URL(string: StarlingAPI.baseURL + path)
     }
 
-    public func token(config: Config) -> String {
-        return config.starlingToken
+    public func token(session: Session) -> String {
+        return session.starlingToken
     }
 
 }
@@ -54,6 +54,7 @@ public enum ZorkdevAPI: APIType, Equatable {
 
     static let baseURL = "https://zorkdev.herokuapp.com/api/"
 
+    case login
     case user
     case transactions
     case transaction(String)
@@ -61,6 +62,7 @@ public enum ZorkdevAPI: APIType, Equatable {
 
     private var path: String {
         switch self {
+        case .login: return "login"
         case .user: return "users/me"
         case .transactions: return "transactions"
         case .transaction(let id): return "transactions/\(id)"
@@ -72,8 +74,8 @@ public enum ZorkdevAPI: APIType, Equatable {
         return URL(string: ZorkdevAPI.baseURL + path)
     }
 
-    public func token(config: Config) -> String {
-        return config.zorkdevToken
+    public func token(session: Session) -> String {
+        return session.zorkdevToken
     }
 
 }
@@ -94,6 +96,18 @@ public struct FromToParameters: JSONCodable, Equatable {
     public init(from: Date?, to: Date?) {
         self.from = from
         self.to = to
+    }
+
+}
+
+public struct CredentialsParameters: JSONCodable, Equatable {
+
+    public let email: String
+    public let password: String
+
+    public init(email: String, password: String) {
+        self.email = email
+        self.password = password
     }
 
 }

@@ -3,6 +3,7 @@
 class TransactionsBusinessLogicTests: XCTestCase {
 
     func testGetTransactions() {
+        print(config)
         let newExpectation = expectation(description: "Transactions fetched")
 
         let transactionsBusinessLogic = TransactionsBusinessLogic(networkService: appState.networkService)

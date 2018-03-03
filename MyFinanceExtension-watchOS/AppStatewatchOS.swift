@@ -14,8 +14,9 @@ class AppStatewatchOS: AppState, AppStatewatchOSType {
     let complicationService: ComplicationServiceType
 
     override init() {
+        let keychainDataService = KeychainDataService(configService: ConfigDefaultService())
         self.complicationService = ComplicationService(wcSession: WCSession.default,
-                                                       dataService: KeychainDataService())
+                                                       dataService: keychainDataService)
         super.init()
     }
 

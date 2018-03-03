@@ -9,6 +9,20 @@ public struct UserBusinessLogic {
         self.dataService = dataService
     }
 
+    public func getLogin(email: String, password: String) -> Promise<Session> {
+        let credentials = CredentialsParameters(email: email, password: password)
+
+        return networkService.performRequest(api: API.zorkdev(.login),
+                                             method: .get,
+                                             parameters: credentials,
+                                             body: nil)
+            .then { (session: Session) -> Promise<Session> in
+                session.save(dataService: self.dataService)
+
+                return .value(session)
+        }
+    }
+
     public func getCurrentUser() -> Promise<User> {
         return networkService.performRequest(api: API.zorkdev(.user),
                                              method: .get,

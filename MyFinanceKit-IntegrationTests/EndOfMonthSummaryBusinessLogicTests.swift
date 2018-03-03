@@ -3,6 +3,7 @@
 class EndOfMonthSummaryBusinessLogicTests: XCTestCase {
 
     func testGetEndOfMonthSummaryList() {
+        print(config)
         let newExpectation = expectation(description: "EndOfMonthSummaryList fetched")
 
         let endOfMonthSummaryBusinessLogic = EndOfMonthSummaryBusinessLogic(networkService: appState.networkService)

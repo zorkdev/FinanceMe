@@ -8,7 +8,7 @@ class DataServiceTests: XCTestCase {
     }
 
     var mockDataService = MockDataService()
-    let keychainDataService = KeychainDataService()
+    let keychainDataService = KeychainDataService(configService: ConfigDefaultService())
     let userDefaultsDataService = UserDefaultsDataService()
 
     override func tearDown() {

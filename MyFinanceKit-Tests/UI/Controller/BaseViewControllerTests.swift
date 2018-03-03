@@ -22,7 +22,7 @@ class BaseViewControllerTests: XCTestCase {
     }
 
     func testDismiss() {
-        baseViewController?.dismiss()
+        _ = baseViewController?.dismiss()
     }
 
     func testTextFieldDelegate() {

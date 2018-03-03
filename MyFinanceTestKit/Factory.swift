@@ -2,6 +2,11 @@
 
 struct Factory {
 
+    static func makeSession() -> Session {
+        return Session(starlingToken: "starlingToken",
+                       zorkdevToken: "zorkdevToken")
+    }
+
     static func makeUser(allowance: Double = 100.22) -> User {
         return User(name: "User Name",
                     payday: 10,

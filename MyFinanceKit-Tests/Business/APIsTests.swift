@@ -2,13 +2,13 @@
 
 class APIsTests: XCTestCase {
 
-    let mockConfigService = MockConfigService()
+    let session = Factory.makeSession()
 
     func testAPIToken() {
-        XCTAssertEqual(API.starling(.balance).token(config: mockConfigService.config),
-                       mockConfigService.config.starlingToken)
-        XCTAssertEqual(API.zorkdev(.user).token(config: mockConfigService.config),
-                       mockConfigService.config.zorkdevToken)
+        XCTAssertEqual(API.starling(.balance).token(session: session),
+                       session.starlingToken)
+        XCTAssertEqual(API.zorkdev(.user).token(session: session),
+                       session.zorkdevToken)
     }
 
     func testAPIURL() {

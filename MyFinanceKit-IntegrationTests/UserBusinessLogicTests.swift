@@ -3,6 +3,7 @@
 class UserBusinessLogicTests: XCTestCase {
 
     func testGetCurrentUser() {
+        print(config)
         let newExpectation = expectation(description: "Current user fetched")
 
         let userBusinessLogic = UserBusinessLogic(networkService: appState.networkService,
@@ -17,6 +18,7 @@ class UserBusinessLogicTests: XCTestCase {
     }
 
     func testUpdateUser() {
+        print(config)
         let newExpectation = expectation(description: "Current user updated")
 
         let userBusinessLogic = UserBusinessLogic(networkService: appState.networkService,

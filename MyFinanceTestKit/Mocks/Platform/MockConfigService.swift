@@ -2,7 +2,9 @@
 
 struct MockConfigService: ConfigService {
 
+    let urlScheme = "urlScheme"
+    let productName = "productName"
+    let accessGroup = "accessGroup"
     let isLoggingEnabled = true
-    let config = Config(starlingToken: "token", zorkdevToken: "token")
 
 }

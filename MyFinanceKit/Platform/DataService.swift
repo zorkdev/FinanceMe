@@ -44,10 +44,12 @@ public protocol DataService {
 
 public struct KeychainDataService: DataService {
 
-    let keychain = KeychainWrapper(serviceName: ConfigFileService.Constants.productName,
-                                   accessGroup: ConfigFileService.Constants.accessGroup)
+    let keychain: KeychainWrapper
 
-    public init() {}
+    public init(configService: ConfigService) {
+        keychain = KeychainWrapper(serviceName: configService.productName,
+                                   accessGroup: configService.accessGroup)
+    }
 
     @discardableResult public func save(value: JSONEncodable, key: String) -> DataServiceSaveStatus {
         guard let data = value.encoded() else { return .failure }

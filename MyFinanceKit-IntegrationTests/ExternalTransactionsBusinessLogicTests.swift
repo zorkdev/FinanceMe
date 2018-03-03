@@ -4,6 +4,7 @@ import PromiseKit
 class ExternalTransactionsBusinessLogicTests: XCTestCase {
 
     func testGetExternalTransactions() {
+        print(config)
         let newExpectation = expectation(description: "External transactions fetched")
 
         let externalTransactionsBusinessLogic =
@@ -20,6 +21,7 @@ class ExternalTransactionsBusinessLogicTests: XCTestCase {
     }
 
     func testCreateDeleteExternalTransaction() {
+        print(config)
         let createdExpectation = expectation(description: "External transaction created")
         let deletedExpectation = expectation(description: "External transaction deleted")
 

@@ -3,6 +3,7 @@
 class BalanceBusinessLogicTests: XCTestCase {
 
     func testGetBalance() {
+        print(config)
         let newExpectation = expectation(description: "Balance fetched")
 
         let balanceBusinessLogic = BalanceBusinessLogic(networkService: appState.networkService,
@@ -11,7 +12,7 @@ class BalanceBusinessLogicTests: XCTestCase {
         _ = balanceBusinessLogic.getBalance()
             .done { _ in
                 newExpectation.fulfill()
-        }
+            }
 
         waitForExpectations(timeout: 10.0, handler: nil)
     }

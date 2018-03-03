@@ -16,17 +16,22 @@ open class AppState: AppStateType {
 
     public let networkService: NetworkServiceType
     public let dataService: DataService
+    public let configService: ConfigService
 
     public init() {
+        configService = ConfigDefaultService()
+        dataService = KeychainDataService(configService: configService)
         networkService = NetworkService(networkRequestable: URLSession.shared,
-                                        configService: ConfigFileService())
-        dataService = KeychainDataService()
+                                        dataService: dataService,
+                                        configService: configService)
     }
 
     public init(networkService: NetworkServiceType,
-                dataService: DataService) {
+                dataService: DataService,
+                configService: ConfigService) {
         self.networkService = networkService
         self.dataService = dataService
+        self.configService = configService
     }
 
 }

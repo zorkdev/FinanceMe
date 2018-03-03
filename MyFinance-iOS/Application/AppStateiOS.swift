@@ -28,9 +28,10 @@ class AppStateiOS: AppState, AppStateiOSType {
     let laContext: LAContextType
 
     override init() {
+        let keychainDataService = KeychainDataService(configService: ConfigDefaultService())
         self.navigator = Navigator(window: UIWindow())
         self.watchService = WatchService(wcSession: WCSession.default,
-                                         dataService: KeychainDataService())
+                                         dataService: keychainDataService)
         self.laContext = LAContext()
         super.init()
     }
