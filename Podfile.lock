@@ -5,14 +5,14 @@ PODS:
   - NVActivityIndicatorView (4.1.1):
     - NVActivityIndicatorView/Presenter (= 4.1.1)
   - NVActivityIndicatorView/Presenter (4.1.1)
-  - PromiseKit (6.1.1):
-    - PromiseKit/CorePromise (= 6.1.1)
-    - PromiseKit/Foundation (= 6.1.1)
-    - PromiseKit/UIKit (= 6.1.1)
-  - PromiseKit/CorePromise (6.1.1)
-  - PromiseKit/Foundation (6.1.1):
+  - PromiseKit (6.2.1):
+    - PromiseKit/CorePromise (= 6.2.1)
+    - PromiseKit/Foundation (= 6.2.1)
+    - PromiseKit/UIKit (= 6.2.1)
+  - PromiseKit/CorePromise (6.2.1)
+  - PromiseKit/Foundation (6.2.1):
     - PromiseKit/CorePromise
-  - PromiseKit/UIKit (6.1.1):
+  - PromiseKit/UIKit (6.2.1):
     - PromiseKit/CorePromise
   - SwiftKeychainWrapper (3.1.0)
   - SwiftLint (0.25.0)
@@ -33,13 +33,13 @@ EXTERNAL SOURCES:
 
 CHECKOUT OPTIONS:
   SwiftKeychainWrapper:
-    :commit: 39ed245e02718f1f4ede2345b075053e75e63f15
+    :commit: 92b1b5906cc73870f5e8d8b2e5b631be3c46c5b5
     :git: https://github.com/zorkdev/SwiftKeychainWrapper.git
 
 SPEC CHECKSUMS:
   Charts: 45cdc985b764c838b35ee47eb1365d15735f6d1a
   NVActivityIndicatorView: 60109b9bf46efc2e71ab81453196ccdfdfeea870
-  PromiseKit: 876f433b87c970f020e04e35dbe68ab21d240498
+  PromiseKit: edaca6f0a7ed73b08c287600537d13867a7fabc7
   SwiftKeychainWrapper: 7505f7715d6613b098f9869d591e006ec9829d3b
   SwiftLint: e14651157288e9e01d6e1a71db7014fb5744a8ea
   SwiftMessages: 1bacc783c8f10bdfdc57c14860cae8a1f1fa6591
