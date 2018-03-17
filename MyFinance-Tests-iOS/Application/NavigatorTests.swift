@@ -54,7 +54,7 @@ class NavigatorTests: XCTestCase {
         let mockSettingsViewModel = MockSettingsViewModel()
 
         navigator.createNavigationStack(viewModel: mockHomeViewModel)
-        navigator.moveTo(scene: .settings, viewModel: mockSettingsViewModel)
+        navigator.moveTo(scene: .settings, viewModel: mockSettingsViewModel, animated: false)
 
         let settingsViewController = window.baseViewController?.presented as? SettingsViewController
         XCTAssertNotNil(settingsViewController)

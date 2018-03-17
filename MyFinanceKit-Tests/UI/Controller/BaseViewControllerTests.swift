@@ -18,7 +18,7 @@ class BaseViewControllerTests: XCTestCase {
 
     func testPresent() {
         let viewController = BaseViewController()
-        baseViewController?.present(viewController: viewController)
+        baseViewController?.present(viewController: viewController, animated: false)
     }
 
     func testDismiss() {

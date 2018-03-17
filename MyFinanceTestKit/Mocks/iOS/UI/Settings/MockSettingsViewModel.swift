@@ -15,6 +15,10 @@ class MockSettingsViewModel: SettingsViewModelType {
     var pickerViewTitleReturnValue: String?
     var pickerViewRowInComponentReturnValue = (row: 0, component: 0)
 
+    var saveButtonTitle: String {
+        return ""
+    }
+
     func viewDidLoad() {
         didCallViewDidLoad = true
     }
@@ -27,7 +31,7 @@ class MockSettingsViewModel: SettingsViewModelType {
         didCallEditButtonTapped = true
     }
 
-    func saveButtonTapped(with displayModel: SettingsDisplayModel) {
+    func saveButtonTapped(with displayModel: SettingsDisplayModel?) {
         didCallSaveButtonTapped = true
     }
 

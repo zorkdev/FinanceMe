@@ -4,6 +4,7 @@ import PromiseKit
 class MockNavigator: NavigatorType {
 
     var didCallCreateNavigationStack = false
+    var didCallPopToRoot = false
     var didCallShowAuthWindow = false
     var didCallHideAuthWindow = false
     var lastViewModel: ViewModelType?
@@ -23,10 +24,14 @@ class MockNavigator: NavigatorType {
         lastAuthViewModelType = viewModel
     }
 
-    func moveTo(scene: Scene, viewModel: ViewModelType) {}
+    func moveTo(scene: Scene, viewModel: ViewModelType, animated: Bool) {}
 
     @discardableResult func dismiss() -> Promise<Void> {
         return Promise()
+    }
+
+    func popToRoot() {
+        didCallPopToRoot = true
     }
 
     func showAuthWindow() {
