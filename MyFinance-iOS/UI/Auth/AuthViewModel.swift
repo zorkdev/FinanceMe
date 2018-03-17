@@ -30,7 +30,7 @@ class AuthViewModel: AuthViewModelType {
         static let reason = "Please authenticate to unlock this app"
     }
 
-    typealias ServiceProvider = NavigatorProvider & LAContextProvider
+    typealias ServiceProvider = NavigatorProvider & DataServiceProvider & LAContextProvider
     let serviceProvider: ServiceProvider
 
     weak var delegate: AuthViewModelDelegate?
@@ -44,6 +44,11 @@ class AuthViewModel: AuthViewModelType {
     }
 
     @objc func authenticate() {
+        guard Session.load(dataService: serviceProvider.dataService) != nil else {
+            removeOcclusion()
+            return
+        }
+
         addOcclusion()
 
         var error: NSError?
@@ -65,6 +70,7 @@ class AuthViewModel: AuthViewModelType {
     }
 
     func addOcclusion() {
+        guard Session.load(dataService: serviceProvider.dataService) != nil else { return }
         serviceProvider.navigator.showAuthWindow()
     }
 

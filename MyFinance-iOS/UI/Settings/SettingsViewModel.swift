@@ -13,9 +13,11 @@ protocol SettingsViewModelDelegate: ViewModelDelegate & MessagePresentable {
 
 protocol SettingsViewModelType: ViewModelType {
 
+    var saveButtonTitle: String { get }
+
     func shouldEnableSaveButton(displayModel: SettingsDisplayModel) -> Bool
     func editButtonTapped()
-    func saveButtonTapped(with displayModel: SettingsDisplayModel)
+    func saveButtonTapped(with displayModel: SettingsDisplayModel?)
     func formatted(amount: String, original: String) -> String
     func numberOfComponentsInPickerView() -> Int
     func pickerViewNumberOfRowsIn(component: Int) -> Int
@@ -55,6 +57,10 @@ class SettingsViewModel {
 
 extension SettingsViewModel: SettingsViewModelType {
 
+    var saveButtonTitle: String {
+        return isEditing ? SettingsDisplayModel.saveButtonTitle : SettingsDisplayModel.logOutButtonTitle
+    }
+
     func viewDidLoad() {
         setupDefaults()
         delegate?.update(editing: isEditing)
@@ -66,9 +72,11 @@ extension SettingsViewModel: SettingsViewModelType {
     }
 
     func shouldEnableSaveButton(displayModel: SettingsDisplayModel) -> Bool {
+        if isEditing {
         guard let largeTransaction = createAmount(from: displayModel.largeTransaction),
             largeTransaction != 0,
             displayModel.name.components(separatedBy: .whitespaces).joined() != "" else { return false }
+        }
 
         return  true
     }
@@ -82,15 +90,22 @@ extension SettingsViewModel: SettingsViewModelType {
         }
     }
 
-    func saveButtonTapped(with displayModel: SettingsDisplayModel) {
-        guard let largeTransaction = createAmount(from: displayModel.largeTransaction),
-            let payday = Int(displayModel.payday) else { return }
+    func saveButtonTapped(with displayModel: SettingsDisplayModel?) {
+        if isEditing {
+            guard let displayModel = displayModel,
+                let largeTransaction = createAmount(from: displayModel.largeTransaction),
+                let payday = Int(displayModel.payday) else { return }
 
-        let user = User(name: displayModel.name,
-                        payday: payday,
-                        startDate: displayModel.startDate,
-                        largeTransaction: largeTransaction)
-        save(user: user)
+            let user = User(name: displayModel.name,
+                            payday: payday,
+                            startDate: displayModel.startDate,
+                            largeTransaction: largeTransaction)
+            save(user: user)
+
+        } else {
+            serviceProvider.dataService.removeAll()
+            serviceProvider.navigator.popToRoot()
+        }
     }
 
     func formatted(amount: String, original: String) -> String {

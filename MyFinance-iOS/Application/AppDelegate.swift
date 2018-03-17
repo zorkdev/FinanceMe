@@ -9,8 +9,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                      didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]? = nil) -> Bool {
         if appState == nil { appState = AppStateiOS() }
 
-        let homeViewModel = HomeViewModel(serviceProvider: appState)
-        appState.navigator.createNavigationStack(viewModel: homeViewModel)
+        let loginViewModel = LoginViewModel(serviceProvider: appState)
+        appState.navigator.createNavigationStack(viewModel: loginViewModel)
 
         if authViewModel == nil { authViewModel = AuthViewModel(serviceProvider: appState) }
         appState.navigator.createAuthStack(viewModel: authViewModel)

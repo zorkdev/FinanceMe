@@ -58,6 +58,7 @@ class SettingsViewController: BaseViewController {
         let shouldEnable = viewModel.shouldEnableSaveButton(displayModel: settingsDisplayModel)
 
         saveButton.isEnabled = shouldEnable
+        saveButton.setTitle(viewModel.saveButtonTitle, for: .normal)
 
         UIView.animate(withDuration: SettingsDisplayModel.buttonAnimationDuration) {
             self.saveButton.alpha = shouldEnable ? SettingsDisplayModel.buttonEnabledAlpha :
@@ -129,10 +130,11 @@ extension SettingsViewController: SettingsViewModelDelegate {
         largeTransactionField.isEnabled = editing
         paydayField.isEnabled = editing
         startDateField.isEnabled = editing
-        saveButton.isHidden = !editing
         let editButtonTitle = editing ? SettingsDisplayModel.cancelButtonTitle :
                                         SettingsDisplayModel.editButtonTitle
         editButton.setTitle(editButtonTitle, for: .normal)
+
+        updateSaveButton()
 
         if editing {
             nameField.becomeFirstResponder()

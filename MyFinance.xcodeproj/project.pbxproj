@@ -22,6 +22,9 @@
 		9A0C474F204B65DB0011D817 /* Credentials.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A0C474C204B65DB0011D817 /* Credentials.swift */; };
 		9A0C4750204B65DB0011D817 /* Credentials.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A0C474C204B65DB0011D817 /* Credentials.swift */; };
 		9A0C4752204B69D90011D817 /* IntegrationTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A0C4751204B69D90011D817 /* IntegrationTestCase.swift */; };
+		9A0C4755204B6B910011D817 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A0C4754204B6B910011D817 /* LoginViewController.swift */; };
+		9A0C4757204B6B9B0011D817 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A0C4756204B6B9B0011D817 /* LoginViewModel.swift */; };
+		9A0C4759204B6C350011D817 /* LoginDisplayModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A0C4758204B6C350011D817 /* LoginDisplayModel.swift */; };
 		9A0E8E53203F988D003A811E /* ViewModelTypeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A0E8E51203F9861003A811E /* ViewModelTypeTests.swift */; };
 		9A0E8E54203F988E003A811E /* ViewModelTypeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A0E8E51203F9861003A811E /* ViewModelTypeTests.swift */; };
 		9A1C9F752044C0A0002A21F4 /* WindowType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A1C9F742044C0A0002A21F4 /* WindowType.swift */; };
@@ -716,6 +719,9 @@
 		9A01448F204264F800443585 /* AuthViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewModelTests.swift; sourceTree = "<group>"; };
 		9A0C474C204B65DB0011D817 /* Credentials.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Credentials.swift; sourceTree = "<group>"; };
 		9A0C4751204B69D90011D817 /* IntegrationTestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntegrationTestCase.swift; sourceTree = "<group>"; };
+		9A0C4754204B6B910011D817 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		9A0C4756204B6B9B0011D817 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		9A0C4758204B6C350011D817 /* LoginDisplayModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginDisplayModel.swift; sourceTree = "<group>"; };
 		9A0E8E51203F9861003A811E /* ViewModelTypeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelTypeTests.swift; sourceTree = "<group>"; };
 		9A1C9F742044C0A0002A21F4 /* WindowType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WindowType.swift; sourceTree = "<group>"; };
 		9A2022082038CAE00012DD51 /* MyFinanceKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MyFinanceKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -1177,6 +1183,16 @@
 				D7F4F7FCB5493D404767A134 /* Pods_MyFinance_Tests_tvOS.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		9A0C4753204B6B770011D817 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				9A0C4754204B6B910011D817 /* LoginViewController.swift */,
+				9A0C4758204B6C350011D817 /* LoginDisplayModel.swift */,
+				9A0C4756204B6B9B0011D817 /* LoginViewModel.swift */,
+			);
+			path = Login;
 			sourceTree = "<group>";
 		};
 		9A0E8E50203F9847003A811E /* ViewModel */ = {
@@ -1816,6 +1832,7 @@
 				9AAA3D7D202908F1008881FD /* Extensions */,
 				9A8561732027733900A26F12 /* Storyboard */,
 				9AAA3D7A2029089E008881FD /* Auth */,
+				9A0C4753204B6B770011D817 /* Login */,
 				9AAA3D7B202908A5008881FD /* Home */,
 				9AAA3D7C202908AB008881FD /* AddTransaction */,
 				9AAD3893202F66C800395119 /* Settings */,
@@ -3959,6 +3976,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9A0C4759204B6C350011D817 /* LoginDisplayModel.swift in Sources */,
+				9A0C4755204B6B910011D817 /* LoginViewController.swift in Sources */,
 				9AD96C992025341D00D37F23 /* HomeTableViewCell.swift in Sources */,
 				9AAD3899202F68C000395119 /* SettingsViewModel.swift in Sources */,
 				9A5AE5782012A8AC00B25081 /* HomeViewController.swift in Sources */,
@@ -3979,6 +3998,7 @@
 				9AAA3D7F202925FC008881FD /* AuthDisplayModel.swift in Sources */,
 				9A3A2B8F2039DA6F0071FBC5 /* AppStateiOS.swift in Sources */,
 				9AD96CA0202539E500D37F23 /* AddTransactionViewController.swift in Sources */,
+				9A0C4757204B6B9B0011D817 /* LoginViewModel.swift in Sources */,
 				9A8561A82027A7FC00A26F12 /* HomeCurrentMonthTableViewCell.swift in Sources */,
 				9A3A2B902039DB9B0071FBC5 /* WatchService.swift in Sources */,
 				9AD96C9720252CBF00D37F23 /* HomeCellModel.swift in Sources */,

@@ -39,6 +39,7 @@ public protocol DataService {
 
     @discardableResult func save(value: JSONEncodable, key: String) -> DataServiceSaveStatus
     func load<T: JSONDecodable>(key: String) -> T?
+    func removeAll()
 
 }
 
@@ -62,6 +63,10 @@ public struct KeychainDataService: DataService {
         return T(data: data)
     }
 
+    public func removeAll() {
+        KeychainWrapper.wipeKeychain()
+    }
+
 }
 
 public struct UserDefaultsDataService: DataService {
@@ -78,6 +83,10 @@ public struct UserDefaultsDataService: DataService {
         guard let data = UserDefaults.standard.data(forKey: key) else { return nil }
 
         return T(data: data)
+    }
+
+    public func removeAll() {
+        UserDefaults.standard.removePersistentDomain(forName: Bundle.main.bundleIdentifier!)
     }
 
 }

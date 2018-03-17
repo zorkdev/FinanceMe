@@ -31,9 +31,9 @@ extension BaseViewController: ViewControllerType {
         return presentedViewController as? ViewControllerType
     }
 
-    public func present(viewController: ViewControllerType) {
+    public func present(viewController: ViewControllerType, animated: Bool) {
         guard let viewController = viewController as? BaseViewController else { return }
-        present(viewController, animated: true)
+        present(viewController, animated: animated)
     }
 
     public func dismiss() -> Promise<Void> {

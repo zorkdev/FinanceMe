@@ -313,13 +313,17 @@ extension HomeViewModel: HomeViewModelType {
     func settingsButtonTapped() {
         let settingsViewModel = SettingsViewModel(serviceProvider: serviceProvider,
                                                   dataDelegate: self)
-        serviceProvider.navigator.moveTo(scene: .settings, viewModel: settingsViewModel)
+        serviceProvider.navigator.moveTo(scene: .settings,
+                                         viewModel: settingsViewModel,
+                                         animated: true)
     }
 
     func addTransactionButtonTapped() {
         let addTransactionViewModel = AddTransactionViewModel(serviceProvider: serviceProvider,
                                                               dataDelegate: self)
-        serviceProvider.navigator.moveTo(scene: .addTransaction, viewModel: addTransactionViewModel)
+        serviceProvider.navigator.moveTo(scene: .addTransaction,
+                                         viewModel: addTransactionViewModel,
+                                         animated: true)
     }
 
 }

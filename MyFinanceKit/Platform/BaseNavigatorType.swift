@@ -6,6 +6,7 @@ public protocol BaseNavigatorType {
     init(window: WindowType)
     func createNavigationStack(viewModel: ViewModelType)
     @discardableResult func dismiss() -> Promise<Void>
+    func popToRoot()
     func inject(viewController: ViewControllerType, viewModel: ViewModelType)
 
 }

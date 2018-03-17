@@ -10,7 +10,7 @@ public protocol ViewControllerType: ViewModelDelegate {
 
     var presented: ViewControllerType? { get }
 
-    func present(viewController: ViewControllerType)
+    func present(viewController: ViewControllerType, animated: Bool)
     func dismiss() -> Promise<Void>
 
 }
