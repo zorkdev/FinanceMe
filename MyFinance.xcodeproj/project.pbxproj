@@ -171,6 +171,7 @@
 		9A42F749203F9CB5005C3185 /* AppStatemacOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A42F747203F9CB5005C3185 /* AppStatemacOS.swift */; };
 		9A42F74B203FA1B4005C3185 /* TodayDisplayModelTypeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A42F74A203FA1B4005C3185 /* TodayDisplayModelTypeTests.swift */; };
 		9A42F74C203FA1B4005C3185 /* TodayDisplayModelTypeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A42F74A203FA1B4005C3185 /* TodayDisplayModelTypeTests.swift */; };
+		9A44C4B5205DA05B00BFC443 /* UITextField+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A44C4B4205DA05B00BFC443 /* UITextField+Extensions.swift */; };
 		9A4F55342023C7A900DBF68F /* MyFinanceKit_iOS.h in Headers */ = {isa = PBXBuildFile; fileRef = 9A4F55322023C7A900DBF68F /* MyFinanceKit_iOS.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		9A4F55372023C7A900DBF68F /* MyFinanceKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A4F55302023C7A900DBF68F /* MyFinanceKit.framework */; };
 		9A4F55382023C7A900DBF68F /* MyFinanceKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9A4F55302023C7A900DBF68F /* MyFinanceKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -788,6 +789,7 @@
 		9A3CB7EB203074CD008AF158 /* WatchService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchService.swift; sourceTree = "<group>"; };
 		9A42F747203F9CB5005C3185 /* AppStatemacOS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStatemacOS.swift; sourceTree = "<group>"; };
 		9A42F74A203FA1B4005C3185 /* TodayDisplayModelTypeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayDisplayModelTypeTests.swift; sourceTree = "<group>"; };
+		9A44C4B4205DA05B00BFC443 /* UITextField+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+Extensions.swift"; sourceTree = "<group>"; };
 		9A4F55052023C3FC00DBF68F /* Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Bridging-Header.h"; sourceTree = "<group>"; };
 		9A4F55062023C4A700DBF68F /* Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Bridging-Header.h"; sourceTree = "<group>"; };
 		9A4F55302023C7A900DBF68F /* MyFinanceKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MyFinanceKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -1874,6 +1876,7 @@
 		9AAA3D7D202908F1008881FD /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				9A44C4B4205DA05B00BFC443 /* UITextField+Extensions.swift */,
 				9A8561772027800D00A26F12 /* MessagePresentable.swift */,
 			);
 			path = Extensions;
@@ -3983,6 +3986,7 @@
 				9A5AE5782012A8AC00B25081 /* HomeViewController.swift in Sources */,
 				9AAD3895202F66E500395119 /* SettingsViewController.swift in Sources */,
 				9AE4D4452044891800299897 /* Navigator.swift in Sources */,
+				9A44C4B5205DA05B00BFC443 /* UITextField+Extensions.swift in Sources */,
 				9AD96C8F2025138400D37F23 /* HomeDisplayModel.swift in Sources */,
 				9A8561B32027BF5100A26F12 /* HomeChartCellModel.swift in Sources */,
 				9AD96CA8202544A600D37F23 /* AddTransactionViewModel.swift in Sources */,

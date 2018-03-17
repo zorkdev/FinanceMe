@@ -527,32 +527,28 @@
                                                             <userDefinedRuntimeAttribute type="color" keyPath="_placeholderLabel.textColor">
                                                                 <color key="value" white="0.953125" alpha="0.5" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="boolean" keyPath="showLeftLabel" value="YES"/>
+                                                            <userDefinedRuntimeAttribute type="string" keyPath="leftLabelText" value="Amount"/>
+                                                            <userDefinedRuntimeAttribute type="color" keyPath="leftLabelTextColor">
+                                                                <color key="value" white="0.94999999999999996" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            </userDefinedRuntimeAttribute>
                                                         </userDefinedRuntimeAttributes>
                                                         <connections>
                                                             <action selector="textFieldValueChanged:" destination="X1Z-5w-jvv" eventType="editingChanged" id="5Es-Iu-hYU"/>
                                                             <outlet property="delegate" destination="X1Z-5w-jvv" id="5CI-S7-UCC"/>
                                                         </connections>
                                                     </textField>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Amount" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RUw-DF-4al">
-                                                        <rect key="frame" x="16" y="20" width="63.5" height="21"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                                        <color key="textColor" white="0.94999999999999996" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
                                                 </subviews>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
-                                                    <constraint firstItem="v0E-qP-8gL" firstAttribute="leading" secondItem="RUw-DF-4al" secondAttribute="leading" id="39m-Ke-q4g"/>
                                                     <constraint firstAttribute="trailing" secondItem="v0E-qP-8gL" secondAttribute="trailing" id="5VS-JE-oWh"/>
-                                                    <constraint firstItem="CaU-3g-9ok" firstAttribute="leading" secondItem="RUw-DF-4al" secondAttribute="leading" id="6RX-KP-lcq"/>
                                                     <constraint firstAttribute="height" constant="60" id="MZV-fa-IN1"/>
                                                     <constraint firstItem="CaU-3g-9ok" firstAttribute="top" secondItem="5bO-ae-T0o" secondAttribute="top" id="Okb-y6-LTC"/>
                                                     <constraint firstAttribute="bottom" secondItem="v0E-qP-8gL" secondAttribute="bottom" id="ekt-8w-eo5"/>
                                                     <constraint firstAttribute="trailing" secondItem="CaU-3g-9ok" secondAttribute="trailing" constant="16" id="hoX-of-OQ9"/>
-                                                    <constraint firstItem="RUw-DF-4al" firstAttribute="centerY" secondItem="5bO-ae-T0o" secondAttribute="centerY" id="jxM-d7-LKk"/>
                                                     <constraint firstItem="v0E-qP-8gL" firstAttribute="leading" secondItem="5bO-ae-T0o" secondAttribute="leading" constant="16" id="mfE-59-FSS"/>
                                                     <constraint firstAttribute="bottom" secondItem="CaU-3g-9ok" secondAttribute="bottom" id="pEA-iQ-fb0"/>
-                                                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="RUw-DF-4al" secondAttribute="trailing" constant="20" symbolic="YES" id="tQj-8C-0KO"/>
+                                                    <constraint firstItem="CaU-3g-9ok" firstAttribute="leading" secondItem="5bO-ae-T0o" secondAttribute="leading" constant="16" id="vf7-Mf-cKj"/>
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Su8-l9-Qzv" userLabel="Narrative">
@@ -575,32 +571,28 @@
                                                             <userDefinedRuntimeAttribute type="color" keyPath="_placeholderLabel.textColor">
                                                                 <color key="value" white="0.9477810330055555" alpha="0.5" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="boolean" keyPath="showLeftLabel" value="YES"/>
+                                                            <userDefinedRuntimeAttribute type="string" keyPath="leftLabelText" value="Description"/>
+                                                            <userDefinedRuntimeAttribute type="color" keyPath="leftLabelTextColor">
+                                                                <color key="value" white="0.94999999999999996" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            </userDefinedRuntimeAttribute>
                                                         </userDefinedRuntimeAttributes>
                                                         <connections>
                                                             <action selector="textFieldValueChanged:" destination="X1Z-5w-jvv" eventType="editingChanged" id="alB-Gj-D9c"/>
                                                             <outlet property="delegate" destination="X1Z-5w-jvv" id="nfD-kE-H0M"/>
                                                         </connections>
                                                     </textField>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RFe-mi-s8z">
-                                                        <rect key="frame" x="16" y="20" width="92.5" height="21"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                                        <color key="textColor" white="0.94999999999999996" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
                                                 </subviews>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
-                                                    <constraint firstItem="RFe-mi-s8z" firstAttribute="centerY" secondItem="Su8-l9-Qzv" secondAttribute="centerY" id="42A-Gh-pTS"/>
                                                     <constraint firstItem="WUn-4H-Sck" firstAttribute="leading" secondItem="Su8-l9-Qzv" secondAttribute="leading" constant="16" id="EEN-yD-gyA"/>
-                                                    <constraint firstItem="CcZ-YI-ajg" firstAttribute="leading" secondItem="RFe-mi-s8z" secondAttribute="leading" id="HFO-tW-EzB"/>
                                                     <constraint firstItem="CcZ-YI-ajg" firstAttribute="top" secondItem="Su8-l9-Qzv" secondAttribute="top" id="IhF-77-GbR"/>
+                                                    <constraint firstItem="CcZ-YI-ajg" firstAttribute="leading" secondItem="Su8-l9-Qzv" secondAttribute="leading" constant="16" id="L5u-7h-cyU"/>
                                                     <constraint firstAttribute="bottom" secondItem="CcZ-YI-ajg" secondAttribute="bottom" id="Xio-Na-2Mw"/>
                                                     <constraint firstAttribute="trailing" secondItem="CcZ-YI-ajg" secondAttribute="trailing" constant="16" id="dn1-ft-uWL"/>
-                                                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="RFe-mi-s8z" secondAttribute="trailing" constant="20" symbolic="YES" id="dy3-1n-oen"/>
                                                     <constraint firstAttribute="height" constant="60" id="eng-oe-LZW"/>
                                                     <constraint firstAttribute="trailing" secondItem="WUn-4H-Sck" secondAttribute="trailing" id="fpa-mN-Mhg"/>
                                                     <constraint firstAttribute="bottom" secondItem="WUn-4H-Sck" secondAttribute="bottom" id="iwb-HG-YzK"/>
-                                                    <constraint firstItem="WUn-4H-Sck" firstAttribute="leading" secondItem="RFe-mi-s8z" secondAttribute="leading" id="ykI-sP-8ES"/>
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zca-Hf-4LE" userLabel="Source">
@@ -623,17 +615,16 @@
                                                             <userDefinedRuntimeAttribute type="color" keyPath="_placeholderLabel.textColor">
                                                                 <color key="value" white="0.94731987849166666" alpha="0.5" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="boolean" keyPath="showLeftLabel" value="YES"/>
+                                                            <userDefinedRuntimeAttribute type="string" keyPath="leftLabelText" value="Category"/>
+                                                            <userDefinedRuntimeAttribute type="color" keyPath="leftLabelTextColor">
+                                                                <color key="value" white="0.94999999999999996" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            </userDefinedRuntimeAttribute>
                                                         </userDefinedRuntimeAttributes>
                                                         <connections>
                                                             <outlet property="delegate" destination="X1Z-5w-jvv" id="4fJ-yY-d4y"/>
                                                         </connections>
                                                     </textField>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Category" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HWY-X6-fAF">
-                                                        <rect key="frame" x="16" y="20" width="74.5" height="21"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                                        <color key="textColor" white="0.94999999999999996" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
                                                 </subviews>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
@@ -642,12 +633,9 @@
                                                     <constraint firstAttribute="bottom" secondItem="BHy-U5-kQv" secondAttribute="bottom" id="Bks-Pm-fr3"/>
                                                     <constraint firstAttribute="bottom" secondItem="byO-Hz-fRw" secondAttribute="bottom" id="Jst-Y6-62O"/>
                                                     <constraint firstItem="BHy-U5-kQv" firstAttribute="top" secondItem="zca-Hf-4LE" secondAttribute="top" id="Ksn-gh-Xlu"/>
-                                                    <constraint firstItem="byO-Hz-fRw" firstAttribute="leading" secondItem="HWY-X6-fAF" secondAttribute="leading" id="P3c-Ja-l3N"/>
-                                                    <constraint firstItem="BHy-U5-kQv" firstAttribute="leading" secondItem="HWY-X6-fAF" secondAttribute="leading" id="QG0-ct-YvM"/>
+                                                    <constraint firstItem="BHy-U5-kQv" firstAttribute="leading" secondItem="zca-Hf-4LE" secondAttribute="leading" constant="16" id="Mxy-dr-V0I"/>
                                                     <constraint firstAttribute="height" constant="60" id="fuP-cq-hxG"/>
                                                     <constraint firstItem="byO-Hz-fRw" firstAttribute="leading" secondItem="zca-Hf-4LE" secondAttribute="leading" constant="16" id="iYI-N7-SoH"/>
-                                                    <constraint firstItem="HWY-X6-fAF" firstAttribute="centerY" secondItem="zca-Hf-4LE" secondAttribute="centerY" id="lM5-cD-KKV"/>
-                                                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="HWY-X6-fAF" secondAttribute="trailing" constant="20" symbolic="YES" id="srg-n1-0zI"/>
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="we6-te-jCX" userLabel="Created">
@@ -670,31 +658,27 @@
                                                             <userDefinedRuntimeAttribute type="color" keyPath="_placeholderLabel.textColor">
                                                                 <color key="value" white="0.94816080731111108" alpha="0.50350492294520544" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="boolean" keyPath="showLeftLabel" value="YES"/>
+                                                            <userDefinedRuntimeAttribute type="string" keyPath="leftLabelText" value="Date"/>
+                                                            <userDefinedRuntimeAttribute type="color" keyPath="leftLabelTextColor">
+                                                                <color key="value" white="0.94999999999999996" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            </userDefinedRuntimeAttribute>
                                                         </userDefinedRuntimeAttributes>
                                                         <connections>
                                                             <outlet property="delegate" destination="X1Z-5w-jvv" id="fhs-ua-NgK"/>
                                                         </connections>
                                                     </textField>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PzR-Cy-F7p">
-                                                        <rect key="frame" x="16" y="20" width="38" height="21"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                                        <color key="textColor" white="0.94999999999999996" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
                                                 </subviews>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstAttribute="bottom" secondItem="PCe-G8-raB" secondAttribute="bottom" id="0Uo-7Q-cpm"/>
                                                     <constraint firstAttribute="height" constant="60" id="E37-CR-WSF"/>
                                                     <constraint firstAttribute="trailing" secondItem="PCe-G8-raB" secondAttribute="trailing" id="IiT-9R-SFC"/>
-                                                    <constraint firstItem="PzR-Cy-F7p" firstAttribute="centerY" secondItem="we6-te-jCX" secondAttribute="centerY" id="NAP-kM-D58"/>
-                                                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="PzR-Cy-F7p" secondAttribute="trailing" constant="20" symbolic="YES" id="SoH-3R-5uD"/>
                                                     <constraint firstAttribute="trailing" secondItem="rA6-dw-LXb" secondAttribute="trailing" constant="16" id="T34-na-Tcz"/>
                                                     <constraint firstAttribute="bottom" secondItem="rA6-dw-LXb" secondAttribute="bottom" id="Z9h-me-8de"/>
                                                     <constraint firstItem="PCe-G8-raB" firstAttribute="leading" secondItem="we6-te-jCX" secondAttribute="leading" constant="16" id="gDD-JQ-L0n"/>
+                                                    <constraint firstItem="rA6-dw-LXb" firstAttribute="leading" secondItem="we6-te-jCX" secondAttribute="leading" constant="16" id="lrp-4k-t25"/>
                                                     <constraint firstItem="rA6-dw-LXb" firstAttribute="top" secondItem="we6-te-jCX" secondAttribute="top" id="rat-fp-wfD"/>
-                                                    <constraint firstItem="rA6-dw-LXb" firstAttribute="leading" secondItem="PzR-Cy-F7p" secondAttribute="leading" id="xPf-WM-XC0"/>
-                                                    <constraint firstItem="PCe-G8-raB" firstAttribute="leading" secondItem="PzR-Cy-F7p" secondAttribute="leading" id="ye4-KP-hDw"/>
                                                 </constraints>
                                             </view>
                                         </subviews>
@@ -839,29 +823,25 @@
                                                             <userDefinedRuntimeAttribute type="color" keyPath="_placeholderLabel.textColor">
                                                                 <color key="value" white="0.953125" alpha="0.5" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="boolean" keyPath="showLeftLabel" value="YES"/>
+                                                            <userDefinedRuntimeAttribute type="string" keyPath="leftLabelText" value="Name"/>
+                                                            <userDefinedRuntimeAttribute type="color" keyPath="leftLabelTextColor">
+                                                                <color key="value" white="0.94999999999999996" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            </userDefinedRuntimeAttribute>
                                                         </userDefinedRuntimeAttributes>
                                                         <connections>
                                                             <action selector="textFieldValueChanged:" destination="RJQ-cl-VlO" eventType="editingChanged" id="6xg-Bv-AMx"/>
                                                             <outlet property="delegate" destination="RJQ-cl-VlO" id="0ku-Qm-6ng"/>
                                                         </connections>
                                                     </textField>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aHo-Zv-St0">
-                                                        <rect key="frame" x="16" y="20" width="48" height="21"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                                        <color key="textColor" white="0.94999999999999996" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
                                                 </subviews>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="aHo-Zv-St0" secondAttribute="trailing" constant="20" symbolic="YES" id="NV2-pL-HH1"/>
-                                                    <constraint firstItem="Mf7-Mn-pGx" firstAttribute="leading" secondItem="aHo-Zv-St0" secondAttribute="leading" id="Sr7-eT-PYh"/>
+                                                    <constraint firstItem="miD-9n-YnY" firstAttribute="leading" secondItem="vjo-dI-O6P" secondAttribute="leading" constant="16" id="4ga-t4-qpm"/>
                                                     <constraint firstAttribute="bottom" secondItem="miD-9n-YnY" secondAttribute="bottom" id="TFS-wb-zOc"/>
-                                                    <constraint firstItem="miD-9n-YnY" firstAttribute="leading" secondItem="aHo-Zv-St0" secondAttribute="leading" id="Xt8-LI-aaU"/>
                                                     <constraint firstAttribute="trailing" secondItem="Mf7-Mn-pGx" secondAttribute="trailing" id="cv4-rI-YHv"/>
                                                     <constraint firstItem="miD-9n-YnY" firstAttribute="top" secondItem="vjo-dI-O6P" secondAttribute="top" id="fpF-ue-qis"/>
                                                     <constraint firstAttribute="trailing" secondItem="miD-9n-YnY" secondAttribute="trailing" constant="16" id="gm7-Z0-NpJ"/>
-                                                    <constraint firstItem="aHo-Zv-St0" firstAttribute="centerY" secondItem="vjo-dI-O6P" secondAttribute="centerY" id="tDa-eZ-8iy"/>
                                                     <constraint firstAttribute="bottom" secondItem="Mf7-Mn-pGx" secondAttribute="bottom" id="u2X-8d-r8s"/>
                                                     <constraint firstAttribute="height" constant="60" id="xKG-cj-AWU"/>
                                                     <constraint firstItem="Mf7-Mn-pGx" firstAttribute="leading" secondItem="vjo-dI-O6P" secondAttribute="leading" constant="16" id="zOy-wa-BKH"/>
@@ -887,32 +867,28 @@
                                                             <userDefinedRuntimeAttribute type="color" keyPath="_placeholderLabel.textColor">
                                                                 <color key="value" white="0.94778103300000005" alpha="0.5" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="boolean" keyPath="showLeftLabel" value="YES"/>
+                                                            <userDefinedRuntimeAttribute type="string" keyPath="leftLabelText" value="Amount Limit"/>
+                                                            <userDefinedRuntimeAttribute type="color" keyPath="leftLabelTextColor">
+                                                                <color key="value" white="0.94999999999999996" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            </userDefinedRuntimeAttribute>
                                                         </userDefinedRuntimeAttributes>
                                                         <connections>
                                                             <action selector="textFieldValueChanged:" destination="RJQ-cl-VlO" eventType="editingChanged" id="EnT-Pb-v5g"/>
                                                             <outlet property="delegate" destination="RJQ-cl-VlO" id="zjf-6B-Ypk"/>
                                                         </connections>
                                                     </textField>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Amount Limit" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ws4-uI-27A">
-                                                        <rect key="frame" x="16" y="20" width="107.5" height="21"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                                        <color key="textColor" white="0.94999999999999996" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
                                                 </subviews>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="ws4-uI-27A" secondAttribute="trailing" constant="20" symbolic="YES" id="1gc-AL-zSJ"/>
                                                     <constraint firstAttribute="bottom" secondItem="KxM-mL-DIh" secondAttribute="bottom" id="B4m-Dh-4dj"/>
                                                     <constraint firstAttribute="height" constant="60" id="F5W-wh-XhI"/>
-                                                    <constraint firstItem="ws4-uI-27A" firstAttribute="centerY" secondItem="Jvv-Sh-koJ" secondAttribute="centerY" id="HpQ-AZ-0YZ"/>
-                                                    <constraint firstItem="KxM-mL-DIh" firstAttribute="leading" secondItem="ws4-uI-27A" secondAttribute="leading" id="IO9-Hg-pSF"/>
                                                     <constraint firstAttribute="trailing" secondItem="x8v-l4-flv" secondAttribute="trailing" id="Jwx-2X-X7l"/>
                                                     <constraint firstItem="x8v-l4-flv" firstAttribute="leading" secondItem="Jvv-Sh-koJ" secondAttribute="leading" constant="16" id="NkC-88-RxW"/>
                                                     <constraint firstItem="KxM-mL-DIh" firstAttribute="top" secondItem="Jvv-Sh-koJ" secondAttribute="top" id="O3d-Ec-i0c"/>
                                                     <constraint firstAttribute="bottom" secondItem="x8v-l4-flv" secondAttribute="bottom" id="T3R-iA-PRg"/>
-                                                    <constraint firstItem="x8v-l4-flv" firstAttribute="leading" secondItem="ws4-uI-27A" secondAttribute="leading" id="bZU-Wd-9H5"/>
                                                     <constraint firstAttribute="trailing" secondItem="KxM-mL-DIh" secondAttribute="trailing" constant="16" id="iad-wn-oXc"/>
+                                                    <constraint firstItem="KxM-mL-DIh" firstAttribute="leading" secondItem="Jvv-Sh-koJ" secondAttribute="leading" constant="16" id="xqB-zk-w8g"/>
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="c1u-LO-MUH" userLabel="Payday">
@@ -935,27 +911,23 @@
                                                             <userDefinedRuntimeAttribute type="color" keyPath="_placeholderLabel.textColor">
                                                                 <color key="value" white="0.94731987849999999" alpha="0.5" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="boolean" keyPath="showLeftLabel" value="YES"/>
+                                                            <userDefinedRuntimeAttribute type="string" keyPath="leftLabelText" value="Payday"/>
+                                                            <userDefinedRuntimeAttribute type="color" keyPath="leftLabelTextColor">
+                                                                <color key="value" white="0.94999999999999996" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            </userDefinedRuntimeAttribute>
                                                         </userDefinedRuntimeAttributes>
                                                         <connections>
                                                             <outlet property="delegate" destination="RJQ-cl-VlO" id="KzJ-Bn-Z5d"/>
                                                         </connections>
                                                     </textField>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Payday" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kdh-H0-6MI">
-                                                        <rect key="frame" x="16" y="20" width="58" height="21"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                                        <color key="textColor" white="0.94999999999999996" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
                                                 </subviews>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="kdh-H0-6MI" secondAttribute="trailing" constant="20" symbolic="YES" id="Cxx-yz-aN1"/>
                                                     <constraint firstItem="gN8-qt-J1x" firstAttribute="leading" secondItem="c1u-LO-MUH" secondAttribute="leading" constant="16" id="GY1-9o-WY0"/>
                                                     <constraint firstAttribute="height" constant="60" id="LYy-yE-AEG"/>
                                                     <constraint firstAttribute="bottom" secondItem="b9k-uv-RkB" secondAttribute="bottom" id="Mhw-N8-Nxa"/>
-                                                    <constraint firstItem="kdh-H0-6MI" firstAttribute="centerY" secondItem="c1u-LO-MUH" secondAttribute="centerY" id="UFd-fi-K52"/>
-                                                    <constraint firstItem="b9k-uv-RkB" firstAttribute="leading" secondItem="kdh-H0-6MI" secondAttribute="leading" id="XuL-YY-iHa"/>
-                                                    <constraint firstItem="gN8-qt-J1x" firstAttribute="leading" secondItem="kdh-H0-6MI" secondAttribute="leading" id="adg-3a-Im4"/>
+                                                    <constraint firstItem="b9k-uv-RkB" firstAttribute="leading" secondItem="c1u-LO-MUH" secondAttribute="leading" constant="16" id="eCd-X7-z6e"/>
                                                     <constraint firstAttribute="trailing" secondItem="gN8-qt-J1x" secondAttribute="trailing" id="iVT-Ze-jIf"/>
                                                     <constraint firstItem="b9k-uv-RkB" firstAttribute="top" secondItem="c1u-LO-MUH" secondAttribute="top" id="pEJ-7K-X38"/>
                                                     <constraint firstAttribute="bottom" secondItem="gN8-qt-J1x" secondAttribute="bottom" id="sf0-0g-yTX"/>
@@ -982,31 +954,27 @@
                                                             <userDefinedRuntimeAttribute type="color" keyPath="_placeholderLabel.textColor">
                                                                 <color key="value" white="0.94816080729999996" alpha="0.50350492290000004" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="boolean" keyPath="showLeftLabel" value="YES"/>
+                                                            <userDefinedRuntimeAttribute type="string" keyPath="leftLabelText" value="Start Date"/>
+                                                            <userDefinedRuntimeAttribute type="color" keyPath="leftLabelTextColor">
+                                                                <color key="value" white="0.94999999999999996" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            </userDefinedRuntimeAttribute>
                                                         </userDefinedRuntimeAttributes>
                                                         <connections>
                                                             <outlet property="delegate" destination="RJQ-cl-VlO" id="EcY-QM-5OS"/>
                                                         </connections>
                                                     </textField>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Start Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mfy-ul-RS9">
-                                                        <rect key="frame" x="16" y="20" width="82.5" height="21"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                                        <color key="textColor" white="0.94999999999999996" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
                                                 </subviews>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="Mfy-ul-RS9" secondAttribute="trailing" constant="20" symbolic="YES" id="JpE-fM-lg0"/>
+                                                    <constraint firstItem="0uB-5y-kBE" firstAttribute="leading" secondItem="P6a-XI-MZO" secondAttribute="leading" constant="16" id="NMR-8a-h77"/>
                                                     <constraint firstAttribute="trailing" secondItem="0uB-5y-kBE" secondAttribute="trailing" constant="16" id="UqI-0L-gvu"/>
                                                     <constraint firstAttribute="height" constant="60" id="agI-jm-S1P"/>
-                                                    <constraint firstItem="Fze-on-Qd5" firstAttribute="leading" secondItem="Mfy-ul-RS9" secondAttribute="leading" id="dIA-Ct-Ihw"/>
                                                     <constraint firstAttribute="bottom" secondItem="Fze-on-Qd5" secondAttribute="bottom" id="lHo-R0-3ZT"/>
                                                     <constraint firstAttribute="bottom" secondItem="0uB-5y-kBE" secondAttribute="bottom" id="qCt-i5-Hi6"/>
                                                     <constraint firstAttribute="trailing" secondItem="Fze-on-Qd5" secondAttribute="trailing" id="tIi-Qf-Wv7"/>
                                                     <constraint firstItem="Fze-on-Qd5" firstAttribute="leading" secondItem="P6a-XI-MZO" secondAttribute="leading" constant="16" id="wSm-D3-bfg"/>
                                                     <constraint firstItem="0uB-5y-kBE" firstAttribute="top" secondItem="P6a-XI-MZO" secondAttribute="top" id="wh2-T2-9Jz"/>
-                                                    <constraint firstItem="Mfy-ul-RS9" firstAttribute="centerY" secondItem="P6a-XI-MZO" secondAttribute="centerY" id="zJH-OG-6tg"/>
-                                                    <constraint firstItem="0uB-5y-kBE" firstAttribute="leading" secondItem="Mfy-ul-RS9" secondAttribute="leading" id="zZX-y8-Ktt"/>
                                                 </constraints>
                                             </view>
                                         </subviews>
@@ -1170,26 +1138,22 @@
                                                             <userDefinedRuntimeAttribute type="color" keyPath="_placeholderLabel.textColor">
                                                                 <color key="value" white="0.953125" alpha="0.5" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="boolean" keyPath="showLeftLabel" value="YES"/>
+                                                            <userDefinedRuntimeAttribute type="string" keyPath="leftLabelText" value="Email"/>
+                                                            <userDefinedRuntimeAttribute type="color" keyPath="leftLabelTextColor">
+                                                                <color key="value" white="0.94999999999999996" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            </userDefinedRuntimeAttribute>
                                                         </userDefinedRuntimeAttributes>
                                                         <connections>
                                                             <action selector="textFieldValueChanged:" destination="e4Y-nq-HK2" eventType="editingChanged" id="H8Z-Hy-f34"/>
                                                             <outlet property="delegate" destination="e4Y-nq-HK2" id="FXu-76-tFz"/>
                                                         </connections>
                                                     </textField>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uvk-Vv-C9N">
-                                                        <rect key="frame" x="16" y="20" width="43.5" height="21"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                                        <color key="textColor" white="0.94999999999999996" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
                                                 </subviews>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstAttribute="bottom" secondItem="l90-cQ-Kia" secondAttribute="bottom" id="3Lm-pA-Ehq"/>
-                                                    <constraint firstItem="uvk-Vv-C9N" firstAttribute="centerY" secondItem="yQp-zO-J3P" secondAttribute="centerY" id="9v0-fA-KMu"/>
-                                                    <constraint firstItem="N0f-AS-f6l" firstAttribute="leading" secondItem="uvk-Vv-C9N" secondAttribute="leading" id="GoF-ou-Onc"/>
-                                                    <constraint firstItem="l90-cQ-Kia" firstAttribute="leading" secondItem="uvk-Vv-C9N" secondAttribute="leading" id="LEe-FE-1Mq"/>
-                                                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="uvk-Vv-C9N" secondAttribute="trailing" constant="20" symbolic="YES" id="M8S-IR-J5B"/>
+                                                    <constraint firstItem="N0f-AS-f6l" firstAttribute="leading" secondItem="yQp-zO-J3P" secondAttribute="leading" constant="16" id="MRc-zw-eE7"/>
                                                     <constraint firstAttribute="height" constant="60" id="VWF-En-AAc"/>
                                                     <constraint firstAttribute="trailing" secondItem="N0f-AS-f6l" secondAttribute="trailing" constant="16" id="aeI-rI-Qvo"/>
                                                     <constraint firstItem="l90-cQ-Kia" firstAttribute="leading" secondItem="yQp-zO-J3P" secondAttribute="leading" constant="16" id="cfY-7p-2y6"/>
@@ -1218,32 +1182,28 @@
                                                             <userDefinedRuntimeAttribute type="color" keyPath="_placeholderLabel.textColor">
                                                                 <color key="value" white="0.94778103300000005" alpha="0.5" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="boolean" keyPath="showLeftLabel" value="YES"/>
+                                                            <userDefinedRuntimeAttribute type="string" keyPath="leftLabelText" value="Password"/>
+                                                            <userDefinedRuntimeAttribute type="color" keyPath="leftLabelTextColor">
+                                                                <color key="value" white="0.94999999999999996" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            </userDefinedRuntimeAttribute>
                                                         </userDefinedRuntimeAttributes>
                                                         <connections>
                                                             <action selector="textFieldValueChanged:" destination="e4Y-nq-HK2" eventType="editingChanged" id="QZP-pc-cQZ"/>
                                                             <outlet property="delegate" destination="e4Y-nq-HK2" id="o2y-yO-iQ7"/>
                                                         </connections>
                                                     </textField>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Password" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SQq-6v-AVj">
-                                                        <rect key="frame" x="16" y="20" width="78" height="21"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                                        <color key="textColor" white="0.94999999999999996" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
                                                 </subviews>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
-                                                    <constraint firstItem="SQq-6v-AVj" firstAttribute="centerY" secondItem="CXe-jw-qe1" secondAttribute="centerY" id="1el-vP-aLo"/>
-                                                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="SQq-6v-AVj" secondAttribute="trailing" constant="20" symbolic="YES" id="BEB-8V-YBQ"/>
+                                                    <constraint firstItem="9fj-Jf-IfJ" firstAttribute="leading" secondItem="CXe-jw-qe1" secondAttribute="leading" constant="16" id="89y-z2-kUB"/>
                                                     <constraint firstAttribute="bottom" secondItem="Uxj-eO-2l5" secondAttribute="bottom" id="DAI-gh-5Pd"/>
                                                     <constraint firstItem="9fj-Jf-IfJ" firstAttribute="top" secondItem="CXe-jw-qe1" secondAttribute="top" id="El9-Ih-v43"/>
-                                                    <constraint firstItem="Uxj-eO-2l5" firstAttribute="leading" secondItem="SQq-6v-AVj" secondAttribute="leading" id="Fky-SX-DZP"/>
                                                     <constraint firstAttribute="height" constant="60" id="HkI-Ek-wyZ"/>
                                                     <constraint firstAttribute="trailing" secondItem="Uxj-eO-2l5" secondAttribute="trailing" id="Jdp-DI-3b0"/>
                                                     <constraint firstAttribute="bottom" secondItem="9fj-Jf-IfJ" secondAttribute="bottom" id="YOF-i1-7j8"/>
                                                     <constraint firstItem="Uxj-eO-2l5" firstAttribute="leading" secondItem="CXe-jw-qe1" secondAttribute="leading" constant="16" id="bOw-Cu-6Em"/>
                                                     <constraint firstAttribute="trailing" secondItem="9fj-Jf-IfJ" secondAttribute="trailing" constant="16" id="dJD-Ja-inI"/>
-                                                    <constraint firstItem="9fj-Jf-IfJ" firstAttribute="leading" secondItem="SQq-6v-AVj" secondAttribute="leading" id="rEX-Yf-yhy"/>
                                                 </constraints>
                                             </view>
                                         </subviews>
