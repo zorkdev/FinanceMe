@@ -83,6 +83,17 @@ public struct Formatters {
         return formatter
     }()
 
+    public static let currencyNoSign: NumberFormatter = {
+        let formatter = NumberFormatter()
+        formatter.locale = locale
+        formatter.numberStyle = .currency
+        formatter.positivePrefix = formatter.currencySymbol
+        formatter.negativePrefix = formatter.currencySymbol
+        formatter.groupingSeparator = ""
+
+        return formatter
+    }()
+
     public static let currencyPlusSign: NumberFormatter = {
         let formatter = NumberFormatter()
         formatter.locale = locale

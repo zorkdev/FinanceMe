@@ -3,7 +3,7 @@ struct AddTransactionDisplayModel {
     static let buttonEnabledAlpha: CGFloat = 1.0
     static let buttonDisabledAlpha: CGFloat = 0.5
     static let buttonAnimationDuration = 0.2
-    static let successMessage = "Your transaction has been added!"
+    static let successMessage = "Your transaction has been saved!"
 
     let amount: String
     let narrative: String

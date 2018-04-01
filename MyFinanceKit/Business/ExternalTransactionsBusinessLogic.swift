@@ -20,6 +20,17 @@ public struct ExternalTransactionsBusinessLogic {
                                              body: transaction)
     }
 
+    public func update(transaction: Transaction) -> Promise<Transaction> {
+        guard let id = transaction.id else {
+            return Promise(error: AppError.apiPathInvalid)
+        }
+
+        return networkService.performRequest(api: API.zorkdev(.transaction(id)),
+                                             method: .put,
+                                             parameters: nil,
+                                             body: transaction)
+    }
+
     public func delete(transaction: Transaction) -> Promise<Void> {
         guard let id = transaction.id else {
             return Promise(error: AppError.apiPathInvalid)

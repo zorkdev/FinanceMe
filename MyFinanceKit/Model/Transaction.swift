@@ -72,11 +72,11 @@ public struct Transaction: Storeable, Equatable {
 
     public let id: String?
     public let currency: String
-    public let amount: Double
-    public let direction: TransactionDirection
-    public let created: Date
-    public let narrative: String
-    public let source: TransactionSource
+    public var amount: Double
+    public var direction: TransactionDirection
+    public var created: Date
+    public var narrative: String
+    public var source: TransactionSource
     public let balance: Double
 
     public init(id: String? = nil,

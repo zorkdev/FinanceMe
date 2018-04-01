@@ -1,10 +1,15 @@
 protocol AddTransactionViewModelDataDelegate: class {
 
     func didCreate(transaction: Transaction)
+    func didUpdate(transaction: Transaction)
 
 }
 
-protocol AddTransactionViewModelDelegate: ViewModelDelegate & MessagePresentable {}
+protocol AddTransactionViewModelDelegate: ViewModelDelegate & MessagePresentable {
+
+    func update(displayModel: AddTransactionDisplayModel)
+
+}
 
 protocol AddTransactionViewModelType: ViewModelType {
 
@@ -20,20 +25,30 @@ protocol AddTransactionViewModelType: ViewModelType {
 
 class AddTransactionViewModel {
 
+    enum State {
+        case add, edit
+    }
+
     typealias ServiceProvider = NavigatorProvider & NetworkServiceProvider
     let serviceProvider: ServiceProvider
 
     private let externalTransactionsBusinessLogic: ExternalTransactionsBusinessLogic
+    private let state: State
+    private let transaction: Transaction?
 
     private weak var delegate: AddTransactionViewModelDelegate?
     private weak var dataDelegate: AddTransactionViewModelDataDelegate?
 
     init(serviceProvider: ServiceProvider,
-         dataDelegate: AddTransactionViewModelDataDelegate?) {
+         dataDelegate: AddTransactionViewModelDataDelegate?,
+         state: State = .add,
+         transaction: Transaction? = nil) {
         self.serviceProvider = serviceProvider
         self.dataDelegate = dataDelegate
         self.externalTransactionsBusinessLogic =
             ExternalTransactionsBusinessLogic(networkService: serviceProvider.networkService)
+        self.state = state
+        self.transaction = transaction
     }
 
 }
@@ -41,6 +56,13 @@ class AddTransactionViewModel {
 // MARK: Interface
 
 extension AddTransactionViewModel: AddTransactionViewModelType {
+
+    func viewDidLoad() {
+        if state == .edit, let transaction = transaction {
+            let displayModel = createDisplayModel(transaction: transaction)
+            delegate?.update(displayModel: displayModel)
+        }
+    }
 
     func inject(delegate: ViewModelDelegate) {
         guard let delegate = delegate as? AddTransactionViewModelDelegate else { return }
@@ -60,12 +82,26 @@ extension AddTransactionViewModel: AddTransactionViewModelType {
         let source = TransactionSource.externalValues[displayModel.source]
         let amount = source.direction == .inbound ? amountAbs : -amountAbs
 
-        let transaction = Transaction(amount: amount,
-                                      direction: source.direction,
-                                      created: displayModel.created,
-                                      narrative: displayModel.narrative,
-                                      source: source)
-        save(transaction: transaction)
+        switch state {
+        case .add:
+            let transaction = Transaction(amount: amount,
+                                          direction: source.direction,
+                                          created: displayModel.created,
+                                          narrative: displayModel.narrative,
+                                          source: source)
+            save(transaction: transaction)
+
+        case .edit:
+            guard var transaction = transaction else { return }
+            transaction.amount = amount
+            transaction.direction = source.direction
+            transaction.created = displayModel.created
+            transaction.narrative = displayModel.narrative
+            transaction.source = source
+
+            update(transaction: transaction)
+        }
+
     }
 
     func formatted(amount: String, original: String) -> String {
@@ -106,6 +142,16 @@ extension AddTransactionViewModel {
         return Validators.validate(amount: amount)
     }
 
+    private func createDisplayModel(transaction: Transaction) -> AddTransactionDisplayModel {
+        let amount = Formatters.currencyNoSign.string(from: NSNumber(value: transaction.amount))!
+        let source = TransactionSource.externalValues.index(of: transaction.source)!
+
+        return AddTransactionDisplayModel(amount: amount,
+                                          narrative: transaction.narrative,
+                                          source: source,
+                                          created: transaction.created)
+    }
+
     private func createAmount(from: String) -> Double? {
         let amountString = from
             .components(separatedBy: .whitespaces)
@@ -120,6 +166,20 @@ extension AddTransactionViewModel {
         externalTransactionsBusinessLogic.create(transaction: transaction)
             .done { transaction in
                 self.dataDelegate?.didCreate(transaction: transaction)
+                self.delegate?.showSuccess(message: AddTransactionDisplayModel.successMessage)
+                self.serviceProvider.navigator.dismiss()
+            }.catch { error in
+                self.delegate?.showError(message: error.localizedDescription)
+            }.finally {
+                self.delegate?.hideSpinner()
+        }
+    }
+
+    private func update(transaction: Transaction) {
+        delegate?.showSpinner()
+        externalTransactionsBusinessLogic.update(transaction: transaction)
+            .done { transaction in
+                self.dataDelegate?.didUpdate(transaction: transaction)
                 self.delegate?.showSuccess(message: AddTransactionDisplayModel.successMessage)
                 self.serviceProvider.navigator.dismiss()
             }.catch { error in

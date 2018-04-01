@@ -17,6 +17,7 @@ class AddTransactionViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        viewModel.viewDidLoad()
         setupTextFields()
     }
 
@@ -96,6 +97,23 @@ extension AddTransactionViewController: ViewModelInjectable {
 
 }
 
+extension AddTransactionViewController: AddTransactionViewModelDelegate {
+
+    func update(displayModel: AddTransactionDisplayModel) {
+        amountField.text = displayModel.amount
+        narrativeField.text = displayModel.narrative
+
+        selectedDate = displayModel.created
+        createdField.text = AddTransactionDisplayModel.dateString(from: selectedDate)
+
+        selectedSource = displayModel.source
+        sourceField.text = viewModel.pickerViewTitle(for: selectedSource, for: 0)
+
+        updateSaveButton()
+    }
+
+}
+
 extension AddTransactionViewController: UIPickerViewDelegate, UIPickerViewDataSource {
 
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
@@ -143,5 +161,3 @@ extension AddTransactionViewController {
     }
 
 }
-
-extension AddTransactionViewController: AddTransactionViewModelDelegate {}

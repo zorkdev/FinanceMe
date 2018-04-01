@@ -235,7 +235,7 @@ extension HomeViewModel: HomeViewModelType {
         }
     }
 
-    func canEdit(tab: HomeViewModel.Tab, section: Int, row: Int) -> Bool {
+    func canEdit(tab: Tab, section: Int, row: Int) -> Bool {
         switch tab {
         case .transactions:
             return true
@@ -248,6 +248,37 @@ extension HomeViewModel: HomeViewModelType {
         case .balances:
             return false
         }
+    }
+
+    func didSelect(tab: Tab, section: Int, row: Int) {
+        let transaction: Transaction
+
+        switch tab {
+        case .transactions:
+            let key = normalCellModels.keys.sorted(by: { $0 > $1 })[section]
+            transaction = normalTransactions
+                .filter({ $0.created.isInSameDay(as: key) })[row]
+
+        case .bills:
+            guard let section = RegularsSection(rawValue: section) else { return }
+            switch section {
+            case .allowance: return
+            case .inbound:
+                transaction = regularTransactions
+                    .filter({ $0.source == .externalRegularInbound })[row]
+            case .outbound:
+                transaction = regularTransactions
+                    .filter({ $0.source == .externalRegularOutbound })[row]
+            }
+
+        case .balances: return
+        }
+
+        let addTransactionViewModel = AddTransactionViewModel(serviceProvider: serviceProvider,
+                                                              dataDelegate: self,
+                                                              state: .edit,
+                                                              transaction: transaction)
+        serviceProvider.navigator.moveTo(scene: .addTransaction, viewModel: addTransactionViewModel)
     }
 
     func delete(from tab: Tab, section: Int, row: Int) {
@@ -289,7 +320,7 @@ extension HomeViewModel: HomeViewModelType {
                             cancelActionTitle: HomeDisplayModel.DeleteAlert.cancelButtonTitle)
     }
 
-    func height(for tab: HomeViewModel.Tab, section: Int, row: Int) -> CGFloat {
+    func height(for tab: Tab, section: Int, row: Int) -> CGFloat {
         switch tab {
         case .transactions, .bills:
             return HomeCellModel.rowHeight
@@ -527,6 +558,7 @@ extension HomeViewModel {
     private func delete(transaction: Transaction, section: Int, row: Int?) {
         externalTransactionsBusinessLogic.delete(transaction: transaction).done {
             self.getUser()
+            self.getEndOfMonthSummaryList()
             self.externalTransactions = self.externalTransactions.filter { $0.id != transaction.id }
             self.updateTransactions()
             switch transaction.source {
@@ -555,7 +587,7 @@ extension HomeViewModel {
         }
     }
 
-    private func getEndOfMonthSummaryList() -> Promise<Void> {
+    @discardableResult private func getEndOfMonthSummaryList() -> Promise<Void> {
         return endOfMonthSummaryBusinessLogic.getEndOfMonthSummaryList()
             .done { endOfMonthSummaryList in
                 self.endOfMonthSummaries = endOfMonthSummaryList.endOfMonthSummaries
@@ -571,7 +603,18 @@ extension HomeViewModel: AddTransactionViewModelDataDelegate {
 
     func didCreate(transaction: Transaction) {
         getUser()
+        getEndOfMonthSummaryList()
         externalTransactions.append(transaction)
+        updateTransactions()
+        delegate?.reloadTableView()
+    }
+
+    func didUpdate(transaction: Transaction) {
+        getUser()
+        getEndOfMonthSummaryList()
+
+        guard let index = externalTransactions.index(where: { $0.id == transaction.id }) else { return }
+        externalTransactions[index] = transaction
         updateTransactions()
         delegate?.reloadTableView()
     }

@@ -5,6 +5,6 @@ disabled_rules:
 - class_delegate_protocol
 - force_cast
 
-file_length: 600
+file_length: 650
 identifier_name:
   min_length: 2

@@ -19,6 +19,7 @@ protocol HomeViewModelType: ViewModelType, AddTransactionViewModelDataDelegate, 
     func cellModel(for tab: HomeViewModel.Tab, section: Int, row: Int) -> HomeCellModelType?
     func header(for tab: HomeViewModel.Tab, section: Int) -> String?
     func canEdit(tab: HomeViewModel.Tab, section: Int, row: Int) -> Bool
+    func didSelect(tab: HomeViewModel.Tab, section: Int, row: Int)
     func delete(from tab: HomeViewModel.Tab, section: Int, row: Int)
     func height(for tab: HomeViewModel.Tab, section: Int, row: Int) -> CGFloat
     func refreshTapped()

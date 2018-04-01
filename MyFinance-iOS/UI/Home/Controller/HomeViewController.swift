@@ -249,4 +249,10 @@ extension HomeViewController: UITableViewDataSource, UITableViewDelegate {
         return viewModel.height(for: tab, section: indexPath.section, row: indexPath.row)
     }
 
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: false)
+        guard let tab = tab(for: tableView) else { return }
+        viewModel.didSelect(tab: tab, section: indexPath.section, row: indexPath.row)
+    }
+
 }
