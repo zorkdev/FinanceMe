@@ -10,7 +10,7 @@ public protocol DataServiceProvider {
 
 }
 
-public protocol AppStateType: NetworkServiceProvider & DataServiceProvider {}
+public protocol AppStateType: class, NetworkServiceProvider & DataServiceProvider {}
 
 open class AppState: AppStateType {
 

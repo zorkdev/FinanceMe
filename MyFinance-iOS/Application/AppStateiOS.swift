@@ -23,7 +23,7 @@ protocol AppStateiOSType: AppStateType & NavigatorProvider & WatchServiceProvide
 
 class AppStateiOS: AppState, AppStateiOSType {
 
-    let navigator: NavigatorType
+    var navigator: NavigatorType
     let watchService: WatchServiceType
     let laContext: LAContextType
 
@@ -34,6 +34,7 @@ class AppStateiOS: AppState, AppStateiOSType {
                                          dataService: keychainDataService)
         self.laContext = LAContext()
         super.init()
+        self.navigator.appState = self
     }
 
 }

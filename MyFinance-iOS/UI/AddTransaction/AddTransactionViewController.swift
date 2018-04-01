@@ -14,10 +14,6 @@ class AddTransactionViewController: BaseViewController {
 
     weak var dataDelegate: AddTransactionViewModelDataDelegate?
 
-    override var preferredStatusBarStyle: UIStatusBarStyle {
-        return .lightContent
-    }
-
     override func viewDidLoad() {
         super.viewDidLoad()
 

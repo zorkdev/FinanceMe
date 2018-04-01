@@ -6,7 +6,6 @@ protocol LoginViewModelDelegate: ViewModelDelegate & MessagePresentable {
 
 protocol LoginViewModelType: ViewModelType {
 
-    func viewDidAppear()
     func shouldEnableLoginButton(displayModel: LoginDisplayModel) -> Bool
     func loginButtonTapped(with displayModel: LoginDisplayModel)
     func validate(email: String) -> Bool
@@ -30,15 +29,9 @@ class LoginViewModel {
 
 }
 
-// MARK: Interface
+// MARK: - Interface
 
 extension LoginViewModel: LoginViewModelType {
-
-    func viewDidAppear() {
-        if Session.load(dataService: serviceProvider.dataService) != nil {
-            moveToHome(animated: false)
-        }
-    }
 
     func inject(delegate: ViewModelDelegate) {
         guard let delegate = delegate as? LoginViewModelDelegate else { return }
@@ -70,14 +63,6 @@ extension LoginViewModel: LoginViewModelType {
 
 extension LoginViewModel {
 
-    private func moveToHome(animated: Bool) {
-        guard let serviceProvider = self.serviceProvider as? HomeViewModel.ServiceProvider else { return }
-        let homeViewModel = HomeViewModel(serviceProvider: serviceProvider)
-        self.serviceProvider.navigator.moveTo(scene: .home,
-                                              viewModel: homeViewModel,
-                                              animated: animated)
-    }
-
     private func validate(fullEmail: String) -> Bool {
         return true
     }
@@ -86,7 +71,7 @@ extension LoginViewModel {
         delegate?.showSpinner()
         userBusinessLogic.getSession(credentials: credentials)
             .done { _ in
-                self.moveToHome(animated: true)
+                self.serviceProvider.navigator.popToRoot()
                 self.delegate?.clearFields()
             }.catch { error in
                 self.delegate?.showError(message: error.localizedDescription)

@@ -10,6 +10,10 @@ public protocol ViewControllerType: ViewModelDelegate {
 
     var presented: ViewControllerType? { get }
 
+    #if os(iOS)
+    var modalTransitionStyle: UIModalTransitionStyle { get set }
+    #endif
+
     func present(viewController: ViewControllerType, animated: Bool)
     func dismiss() -> Promise<Void>
 

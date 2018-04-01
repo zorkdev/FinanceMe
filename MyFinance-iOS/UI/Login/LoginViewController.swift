@@ -6,20 +6,10 @@ class LoginViewController: BaseViewController {
 
     var viewModel: LoginViewModelType!
 
-    override var preferredStatusBarStyle: UIStatusBarStyle {
-        return .lightContent
-    }
-
     override func viewDidLoad() {
         super.viewDidLoad()
 
         updateLoginButton()
-    }
-
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-
-        viewModel.viewDidAppear()
     }
 
     private func updateLoginButton() {

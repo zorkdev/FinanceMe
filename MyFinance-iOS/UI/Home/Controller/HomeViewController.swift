@@ -18,10 +18,6 @@ class HomeViewController: BaseViewController {
 
     var viewModel: HomeViewModelType!
 
-    override var preferredStatusBarStyle: UIStatusBarStyle {
-        return .lightContent
-    }
-
     override func viewDidLoad() {
         super.viewDidLoad()
 

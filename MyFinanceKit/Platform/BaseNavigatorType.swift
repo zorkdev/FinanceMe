@@ -1,10 +1,11 @@
 public protocol BaseNavigatorType {
 
+    var appState: AppStateType! { get set }
     var window: WindowType? { get set }
     var viewControllers: [ViewControllerType] { get set }
 
     init(window: WindowType)
-    func createNavigationStack(viewModel: ViewModelType)
+    func createNavigationStack()
     @discardableResult func dismiss() -> Promise<Void>
     func popToRoot()
     func inject(viewController: ViewControllerType, viewModel: ViewModelType)

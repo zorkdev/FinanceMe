@@ -269,7 +269,7 @@
 		9A65DEC22041B2B500E8177A /* EndOfMonthSummaryBusinessLogicTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A6B06ED203F6E4E006FB40E /* EndOfMonthSummaryBusinessLogicTests.swift */; };
 		9A65DEC32041B2B700E8177A /* ExternalTransactionsBusinessLogicTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ADDE1B9203F818200BCA1DE /* ExternalTransactionsBusinessLogicTests.swift */; };
 		9A65DEC42041B2BA00E8177A /* SpendingBusinessLogicTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A6B06F0203F6F51006FB40E /* SpendingBusinessLogicTests.swift */; };
-		9A65DEC82041B36F00E8177A /* BaseViewController+KeyboardToolbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A65DEC72041B36F00E8177A /* BaseViewController+KeyboardToolbar.swift */; };
+		9A65DEC82041B36F00E8177A /* BaseViewController+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A65DEC72041B36F00E8177A /* BaseViewController+Extensions.swift */; };
 		9A65DECA2041B3BD00E8177A /* BaseViewControllerKeyboardToolbarTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A65DEC92041B3BD00E8177A /* BaseViewControllerKeyboardToolbarTests.swift */; };
 		9A65DECC2041B72600E8177A /* TableViewCelltvOS.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9A65DECB2041B72600E8177A /* TableViewCelltvOS.xib */; };
 		9A65DECE2041B7CA00E8177A /* TableViewCelltvOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A65DECD2041B7CA00E8177A /* TableViewCelltvOSTests.swift */; };
@@ -442,6 +442,8 @@
 		9AEAD365203F908900CB572C /* UIViewExtensionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AEAD364203F908900CB572C /* UIViewExtensionsTests.swift */; };
 		9AEEC8AB204267C200ED7627 /* MockLAContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AEEC8AA204267C200ED7627 /* MockLAContext.swift */; };
 		9AEEC8AD2042696800ED7627 /* MockAuthViewModelDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AEEC8AC2042696800ED7627 /* MockAuthViewModelDelegate.swift */; };
+		9AFC00462071748F00826D33 /* LaunchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AFC00452071748F00826D33 /* LaunchViewController.swift */; };
+		9AFC0048207175BB00826D33 /* LaunchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AFC0047207175BB00826D33 /* LaunchViewModel.swift */; };
 		A07B7EB9CD7A8DD636CF7A7D /* Pods_MyFinance_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C00742E35A2D39BB6D61F955 /* Pods_MyFinance_iOS.framework */; };
 		A4C17E7ED54DFABE998A8873 /* Pods_MyFinance_Tests_macOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C2C63C31D40DAC096106092E /* Pods_MyFinance_Tests_macOS.framework */; };
 		A7E70FDECF2732D8138872FF /* Pods_MyFinanceExtension_macOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0613BC2F22CEB669D68D23C1 /* Pods_MyFinanceExtension_macOS.framework */; };
@@ -819,7 +821,7 @@
 		9A65B79C202651F3004165F2 /* Validators.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Validators.swift; sourceTree = "<group>"; };
 		9A65B79F202686A9004165F2 /* Summary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Summary.swift; sourceTree = "<group>"; };
 		9A65B7A4202690DB004165F2 /* EndOfMonthSummaryBusinessLogic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndOfMonthSummaryBusinessLogic.swift; sourceTree = "<group>"; };
-		9A65DEC72041B36F00E8177A /* BaseViewController+KeyboardToolbar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BaseViewController+KeyboardToolbar.swift"; sourceTree = "<group>"; };
+		9A65DEC72041B36F00E8177A /* BaseViewController+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BaseViewController+Extensions.swift"; sourceTree = "<group>"; };
 		9A65DEC92041B3BD00E8177A /* BaseViewControllerKeyboardToolbarTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewControllerKeyboardToolbarTests.swift; sourceTree = "<group>"; };
 		9A65DECB2041B72600E8177A /* TableViewCelltvOS.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TableViewCelltvOS.xib; sourceTree = "<group>"; };
 		9A65DECD2041B7CA00E8177A /* TableViewCelltvOSTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCelltvOSTests.swift; sourceTree = "<group>"; };
@@ -970,6 +972,8 @@
 		9AEAD364203F908900CB572C /* UIViewExtensionsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtensionsTests.swift; sourceTree = "<group>"; };
 		9AEEC8AA204267C200ED7627 /* MockLAContext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockLAContext.swift; sourceTree = "<group>"; };
 		9AEEC8AC2042696800ED7627 /* MockAuthViewModelDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockAuthViewModelDelegate.swift; sourceTree = "<group>"; };
+		9AFC00452071748F00826D33 /* LaunchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchViewController.swift; sourceTree = "<group>"; };
+		9AFC0047207175BB00826D33 /* LaunchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchViewModel.swift; sourceTree = "<group>"; };
 		9BF959DE601445A20C613BBB /* Pods-MyFinance-tvOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyFinance-tvOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MyFinance-tvOS/Pods-MyFinance-tvOS.debug.xcconfig"; sourceTree = "<group>"; };
 		A8B0411C6517F0B6198C67E8 /* Pods-MyFinanceExtension-iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyFinanceExtension-iOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MyFinanceExtension-iOS/Pods-MyFinanceExtension-iOS.debug.xcconfig"; sourceTree = "<group>"; };
 		AD2A187BD7CC65C7F408B8B3 /* Pods-MyFinanceExtension-macOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyFinanceExtension-macOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MyFinanceExtension-macOS/Pods-MyFinanceExtension-macOS.debug.xcconfig"; sourceTree = "<group>"; };
@@ -1833,6 +1837,7 @@
 			children = (
 				9AAA3D7D202908F1008881FD /* Extensions */,
 				9A8561732027733900A26F12 /* Storyboard */,
+				9AFC00442071747100826D33 /* Launch */,
 				9AAA3D7A2029089E008881FD /* Auth */,
 				9A0C4753204B6B770011D817 /* Login */,
 				9AAA3D7B202908A5008881FD /* Home */,
@@ -2008,7 +2013,7 @@
 				9A1C9F742044C0A0002A21F4 /* WindowType.swift */,
 				9A3A2B872039C2350071FBC5 /* ViewControllerType.swift */,
 				9AD96CA520253CC300D37F23 /* BaseViewController.swift */,
-				9A65DEC72041B36F00E8177A /* BaseViewController+KeyboardToolbar.swift */,
+				9A65DEC72041B36F00E8177A /* BaseViewController+Extensions.swift */,
 				9AAA3D802029285C008881FD /* Instantiatable.swift */,
 			);
 			path = Controller;
@@ -2099,6 +2104,15 @@
 				9AB4F12820424DEE008D0F5D /* InstantiatableTests.swift */,
 			);
 			path = Controller;
+			sourceTree = "<group>";
+		};
+		9AFC00442071747100826D33 /* Launch */ = {
+			isa = PBXGroup;
+			children = (
+				9AFC00452071748F00826D33 /* LaunchViewController.swift */,
+				9AFC0047207175BB00826D33 /* LaunchViewModel.swift */,
+			);
+			path = Launch;
 			sourceTree = "<group>";
 		};
 		B68A00CB2E7F1881222650B9 /* Pods */ = {
@@ -3923,7 +3937,7 @@
 				9AD96CA620253CC300D37F23 /* BaseViewController.swift in Sources */,
 				9A9093EF2044CD3100C87A99 /* BaseNavigatorType.swift in Sources */,
 				9A3A2B92203A26620071FBC5 /* Allowance.swift in Sources */,
-				9A65DEC82041B36F00E8177A /* BaseViewController+KeyboardToolbar.swift in Sources */,
+				9A65DEC82041B36F00E8177A /* BaseViewController+Extensions.swift in Sources */,
 				9A4F556C2023CAB900DBF68F /* Balance.swift in Sources */,
 				9A4F556A2023CAB300DBF68F /* User.swift in Sources */,
 				9A3A2B832039AEAD0071FBC5 /* AppState.swift in Sources */,
@@ -3994,6 +4008,7 @@
 				9A8561B12027BD7600A26F12 /* HomeChartTableViewCell.swift in Sources */,
 				9A5AE5A22012C99A00B25081 /* HomeViewModel.swift in Sources */,
 				9A65DF092041D18500E8177A /* main.swift in Sources */,
+				9AFC00462071748F00826D33 /* LaunchViewController.swift in Sources */,
 				9A8561A62027A71300A26F12 /* HomeCurrentMonthCellDisplayModel.swift in Sources */,
 				9AAD3897202F684E00395119 /* SettingsDisplayModel.swift in Sources */,
 				9A5AE5762012A8AB00B25081 /* AppDelegate.swift in Sources */,
@@ -4009,6 +4024,7 @@
 				9A856176202774F300A26F12 /* AddTransactionDisplayModel.swift in Sources */,
 				9A6F9FC3203CBCA00040BD50 /* HomeViewModelType.swift in Sources */,
 				9AAA3D7620290621008881FD /* AuthViewController.swift in Sources */,
+				9AFC0048207175BB00826D33 /* LaunchViewModel.swift in Sources */,
 				9A8561A42027A68F00A26F12 /* HomeCurrentMonthCellModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

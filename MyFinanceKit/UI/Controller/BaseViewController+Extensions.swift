@@ -1,5 +1,15 @@
 extension BaseViewController {
 
+    open override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
+    }
+
+}
+
+// MARK: - KeyboardToolbar
+
+extension BaseViewController {
+
     public var keyBoardToolbar: UIToolbar {
         let toolBar = UIToolbar()
         toolBar.barStyle = .default

@@ -13,7 +13,6 @@ public struct ConfigDefaultService: ConfigService {
     public let productName = "com.attilanemet.MyFinance"
 
     public let accessGroup: String = {
-        //swiftlint:disable:next force_cast
         return (Bundle.main.infoDictionary!["TeamID"] as! String) + "com.attilanemet.MyFinance"
     }()
 

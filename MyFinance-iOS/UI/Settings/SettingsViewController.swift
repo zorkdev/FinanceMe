@@ -16,10 +16,6 @@ class SettingsViewController: BaseViewController {
 
     weak var dataDelegate: SettingsViewModelDataDelegate?
 
-    override var preferredStatusBarStyle: UIStatusBarStyle {
-        return .lightContent
-    }
-
     override func viewDidLoad() {
         super.viewDidLoad()
 
