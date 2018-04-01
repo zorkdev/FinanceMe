@@ -10,6 +10,7 @@ class LoginViewController: BaseViewController {
         super.viewDidLoad()
 
         updateLoginButton()
+        emailField.becomeFirstResponder()
     }
 
     private func updateLoginButton() {
