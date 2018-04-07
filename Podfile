@@ -1,104 +1,50 @@
 use_frameworks!
 inhibit_all_warnings!
 
-def pods
+abstract_target 'MyFinance' do
     pod 'SwiftLint'
     pod 'PromiseKit'
-end
 
-target 'MyFinance-iOS' do
-    platform :ios, '11.2'
-    pods
-    pod 'SwiftMessages'
-    pod 'Charts'
-    pod 'NVActivityIndicatorView'
-end
+    abstract_target 'iOS' do
+        platform :ios, '11.2'
+        target 'MyFinance-iOS' do
+            pod 'SwiftMessages'
+            pod 'Charts'
+            pod 'NVActivityIndicatorView'
+        end
 
-target 'MyFinanceExtension-iOS' do
-    platform :ios, '11.2'
-    pods
-end
+        target 'MyFinanceExtension-iOS'
+        target 'MyFinanceKit-iOS-Tests'
+        target 'MyFinanceKit-IntegrationTests'
+        target 'MyFinance-Tests-iOS'
+    end
 
-target 'MyFinance-watchOS' do
-    platform :watchos, '4.2'
-    pods
-end
+    abstract_target 'watchOS' do
+        platform :watchos, '4.2'
+        target 'MyFinance-watchOS'
+        target 'MyFinanceExtension-watchOS'
+    end
 
-target 'MyFinanceExtension-watchOS' do
-    platform :watchos, '4.2'
-    pods
-end
+    abstract_target 'tvOS' do
+        platform :tvos, '11.2'
+        target 'MyFinance-tvOS'
+        target 'MyFinanceKit-tvOS-Tests'
+        target 'MyFinance-Tests-tvOS'
+    end
 
-target 'MyFinance-tvOS' do
-    platform :tvos, '11.2'
-    pods
-end
+    abstract_target 'macOS' do
+        platform :osx, '10.13'
+        target 'MyFinance-macOS'
+        target 'MyFinanceExtension-macOS'
+        target 'MyFinanceKit-macOS-Tests'
+        target 'MyFinance-Tests-macOS'
+    end
 
-target 'MyFinance-macOS' do
-    platform :osx, '10.13'
-    pods
-end
-
-target 'MyFinanceExtension-macOS' do
-    platform :osx, '10.13'
-    pods
-end
-
-target 'MyFinanceKit-iOS' do
-    platform :ios, '11.2'
-    pods
-    pod 'SwiftKeychainWrapper', :git => 'https://github.com/zorkdev/SwiftKeychainWrapper.git', :branch => 'develop'
-end
-
-target 'MyFinanceKit-watchOS' do
-    platform :watchos, '4.2'
-    pods
-    pod 'SwiftKeychainWrapper', :git => 'https://github.com/zorkdev/SwiftKeychainWrapper.git', :branch => 'develop'
-end
-
-target 'MyFinanceKit-tvOS' do
-    platform :tvos, '11.2'
-    pods
-    pod 'SwiftKeychainWrapper', :git => 'https://github.com/zorkdev/SwiftKeychainWrapper.git', :branch => 'develop'
-end
-
-target 'MyFinanceKit-macOS' do
-    platform :osx, '10.13'
-    pods
-    pod 'SwiftKeychainWrapper', :git => 'https://github.com/zorkdev/SwiftKeychainWrapper.git', :branch => 'develop'
-end
-
-target 'MyFinanceKit-iOS-Tests' do
-    platform :ios, '11.2'
-    pods
-end
-
-target 'MyFinanceKit-tvOS-Tests' do
-    platform :tvos, '11.2'
-    pods
-end
-
-target 'MyFinanceKit-macOS-Tests' do
-    platform :osx, '10.13'
-    pods
-end
-
-target 'MyFinanceKit-IntegrationTests' do
-    platform :ios, '11.2'
-    pods
-end
-
-target 'MyFinance-Tests-iOS' do
-    platform :ios, '11.2'
-    pods
-end
-
-target 'MyFinance-Tests-tvOS' do
-    platform :tvos, '11.2'
-    pods
-end
-
-target 'MyFinance-Tests-macOS' do
-    platform :osx, '10.13'
-    pods
+    abstract_target 'MyFinanceKit' do
+        pod 'SwiftKeychainWrapper', :git => 'https://github.com/zorkdev/SwiftKeychainWrapper.git', :branch => 'develop'
+        target 'MyFinanceKit-iOS'
+        target 'MyFinanceKit-watchOS'
+        target 'MyFinanceKit-tvOS'
+        target 'MyFinanceKit-macOS'
+    end
 end
