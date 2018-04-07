@@ -37,6 +37,15 @@
             </BuildableReference>
          </TestableReference>
       </Testables>
+      <MacroExpansion>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "9A5AE5712012A8AB00B25081"
+            BuildableName = "MyFinance-iOS.app"
+            BlueprintName = "MyFinance-iOS"
+            ReferencedContainer = "container:MyFinance.xcodeproj">
+         </BuildableReference>
+      </MacroExpansion>
       <AdditionalOptions>
          <AdditionalOption
             key = "NSZombieEnabled"
@@ -58,6 +67,16 @@
       debugDocumentVersioning = "YES"
       debugServiceExtension = "internal"
       allowLocationSimulation = "YES">
+      <BuildableProductRunnable
+         runnableDebuggingMode = "0">
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "9A5AE5712012A8AB00B25081"
+            BuildableName = "MyFinance-iOS.app"
+            BlueprintName = "MyFinance-iOS"
+            ReferencedContainer = "container:MyFinance.xcodeproj">
+         </BuildableReference>
+      </BuildableProductRunnable>
       <AdditionalOptions>
          <AdditionalOption
             key = "NSZombieEnabled"
@@ -72,6 +91,15 @@
       savedToolIdentifier = ""
       useCustomWorkingDirectory = "NO"
       debugDocumentVersioning = "YES">
+      <MacroExpansion>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "9A5AE5712012A8AB00B25081"
+            BuildableName = "MyFinance-iOS.app"
+            BlueprintName = "MyFinance-iOS"
+            ReferencedContainer = "container:MyFinance.xcodeproj">
+         </BuildableReference>
+      </MacroExpansion>
    </ProfileAction>
    <AnalyzeAction
       buildConfiguration = "Debug">
