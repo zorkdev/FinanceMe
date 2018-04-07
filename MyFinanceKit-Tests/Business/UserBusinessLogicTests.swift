@@ -12,6 +12,33 @@ class UserBusinessLogicTests: XCTestCase {
         mockDataService = MockDataService()
     }
 
+    func testGetSession() {
+        let newExpectation = expectation(description: "Session fetched")
+
+        let expectedSession = Factory.makeSession()
+        let credentials = Credentials(email: "test@test.com", password: "test")
+
+        mockNetworkService.returnJSONDecodableValues = [expectedSession]
+
+        let userBusinessLogic = UserBusinessLogic(networkService: mockNetworkService,
+                                                  dataService: mockDataService)
+
+        _ = userBusinessLogic.getSession(credentials: credentials).done { session in
+
+            XCTAssertEqual(self.mockNetworkService.lastRequest?.api as? API, .zorkdev(.login))
+            XCTAssertEqual(self.mockNetworkService.lastRequest?.method, .post)
+            XCTAssertNil(self.mockNetworkService.lastRequest?.parameters)
+            XCTAssertEqual(self.mockNetworkService.lastRequest?.body as? Credentials, credentials)
+            XCTAssertEqual(session, expectedSession)
+            XCTAssertTrue(self.mockDataService.savedValues
+                .contains(where: { ($0 as? Session) == expectedSession }) == true)
+
+            newExpectation.fulfill()
+        }
+
+        waitForExpectations(timeout: 10.0, handler: nil)
+    }
+
     func testGetCurrentUser() {
         let newExpectation = expectation(description: "User fetched")
 

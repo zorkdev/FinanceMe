@@ -58,6 +58,11 @@ class FormattersTests: XCTestCase {
         XCTAssertEqual(Formatters.currency.string(from: negativeAmount), "-£100.00")
     }
 
+    func testCurrencyNoSignFormatter() {
+        XCTAssertEqual(Formatters.currencyNoSign.string(from: positiveAmount), "£100.00")
+        XCTAssertEqual(Formatters.currencyNoSign.string(from: negativeAmount), "£100.00")
+    }
+
     func testCurrencyPlusSignFormatter() {
         XCTAssertEqual(Formatters.currencyPlusSign.string(from: positiveAmount), "+£100.00")
         XCTAssertEqual(Formatters.currencyPlusSign.string(from: negativeAmount), "£100.00")

@@ -119,4 +119,20 @@ class DataServiceTests: XCTestCase {
         XCTAssertNil(loadedItem)
     }
 
+    func testUserDefaultsRemoveAll() {
+        let key = "key"
+        let stubModel = StubModel(variable: "value")
+
+        let saveStatus = userDefaultsDataService.save(value: stubModel, key: key)
+        let retrievedValue: StubModel? = userDefaultsDataService.load(key: key)
+
+        XCTAssertEqual(saveStatus, .success)
+        XCTAssertNotNil(retrievedValue)
+
+        userDefaultsDataService.removeAll()
+        let retrievedAgainValue: StubModel? = userDefaultsDataService.load(key: key)
+
+        XCTAssertNil(retrievedAgainValue)
+    }
+
 }

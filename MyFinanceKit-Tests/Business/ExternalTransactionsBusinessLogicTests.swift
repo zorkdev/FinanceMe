@@ -61,6 +61,53 @@ class ExternalTransactionsBusinessLogicTests: XCTestCase {
         waitForExpectations(timeout: 10.0, handler: nil)
     }
 
+    func testUpdateTransaction_Success() {
+        let newExpectation = expectation(description: "Transaction updated")
+
+        let expectedTransaction = Factory.makeTransaction()
+
+        mockNetworkService.returnJSONDecodableValues = [expectedTransaction]
+
+        let externalTransactionsBusinessLogic = ExternalTransactionsBusinessLogic(networkService: mockNetworkService)
+
+        _ = externalTransactionsBusinessLogic.update(transaction: expectedTransaction).done { transaction in
+
+            XCTAssertEqual(self.mockNetworkService.lastRequest?.api as? API,
+                           .zorkdev(.transaction(expectedTransaction.id!)))
+            XCTAssertEqual(self.mockNetworkService.lastRequest?.method, .put)
+            XCTAssertNil(self.mockNetworkService.lastRequest?.parameters)
+            XCTAssertEqual(self.mockNetworkService.lastRequest?.body as? Transaction, expectedTransaction)
+            XCTAssertEqual(transaction, expectedTransaction)
+
+            newExpectation.fulfill()
+        }
+
+        waitForExpectations(timeout: 10.0, handler: nil)
+    }
+
+    func testUpdateTransaction_Failure() {
+        let newExpectation = expectation(description: "Transaction update failed")
+
+        let expectedTransaction = Transaction(currency: "GBP",
+                                              amount: 10.30,
+                                              direction: .inbound,
+                                              created: Date(),
+                                              narrative: "Test",
+                                              source: .fasterPaymentsIn,
+                                              balance: 100)
+
+        let externalTransactionsBusinessLogic = ExternalTransactionsBusinessLogic(networkService: mockNetworkService)
+
+        _ = externalTransactionsBusinessLogic.update(transaction: expectedTransaction).catch { error in
+
+            XCTAssertEqual(error as? AppError, .apiPathInvalid)
+
+            newExpectation.fulfill()
+        }
+
+        waitForExpectations(timeout: 10.0, handler: nil)
+    }
+
     func testDeleteTransaction_Success() {
         let newExpectation = expectation(description: "Transaction deleted")
 
