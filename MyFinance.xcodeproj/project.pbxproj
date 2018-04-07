@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		055A915AFA3824A7460FD3A8 /* Pods_MyFinance_iOS_MyFinanceKit_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C6892B68EC26AE07C3CA5EC9 /* Pods_MyFinance_iOS_MyFinanceKit_iOS.framework */; };
 		0CEB5B2645D55BB30BF30358 /* Pods_MyFinance_iOS_MyFinance_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB6CB1440466B30927CA9A29 /* Pods_MyFinance_iOS_MyFinance_iOS.framework */; };
-		0F37C32CF241AF44D281D387 /* Pods_MyFinance_MyFinanceKit_MyFinanceKit_macOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 08CEA510E26C7BEE1DB71CC2 /* Pods_MyFinance_MyFinanceKit_MyFinanceKit_macOS.framework */; };
 		303BB4698944490FE9297BF8 /* Pods_MyFinance_tvOS_MyFinance_tvOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F51C2C4D4AC0582B151157AE /* Pods_MyFinance_tvOS_MyFinance_tvOS.framework */; };
 		320F3290B1CE93F3AFA6A5B4 /* Pods_MyFinance_tvOS_MyFinance_Tests_tvOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 45FFBFDFCED8A7B0A3C3C53E /* Pods_MyFinance_tvOS_MyFinance_Tests_tvOS.framework */; };
 		3352ECF8B6D82DDD5F459495 /* Pods_MyFinance_watchOS_MyFinanceExtension_watchOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9990EA6FC7E88C79C350B2C7 /* Pods_MyFinance_watchOS_MyFinanceExtension_watchOS.framework */; };
@@ -470,8 +469,6 @@
 		9AEEC8AD2042696800ED7627 /* MockAuthViewModelDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AEEC8AC2042696800ED7627 /* MockAuthViewModelDelegate.swift */; };
 		9AFC00462071748F00826D33 /* LaunchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AFC00452071748F00826D33 /* LaunchViewController.swift */; };
 		9AFC0048207175BB00826D33 /* LaunchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AFC0047207175BB00826D33 /* LaunchViewModel.swift */; };
-		AD9D5007F8D4B5B4686B4191 /* Pods_MyFinance_MyFinanceKit_MyFinanceKit_tvOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B2B5A93D6FC19C2DF068D3C /* Pods_MyFinance_MyFinanceKit_MyFinanceKit_tvOS.framework */; };
-		AF5FFBE594AE0C2535911743 /* Pods_MyFinance_MyFinanceKit_MyFinanceKit_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F4D45E9CE29394DD3ACD6C2 /* Pods_MyFinance_MyFinanceKit_MyFinanceKit_iOS.framework */; };
 		BBC5A5547D0781C573BFDB13 /* Pods_MyFinance_macOS_MyFinanceKit_macOS_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1AC4539514CBD7EC7BAF1475 /* Pods_MyFinance_macOS_MyFinanceKit_macOS_Tests.framework */; };
 		C242C4EF085B137AD0C67EB4 /* Pods_MyFinance_tvOS_MyFinanceKit_tvOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E71D62F8FA81161772D2548 /* Pods_MyFinance_tvOS_MyFinanceKit_tvOS.framework */; };
 		C41953C68CB3F32F3E400D0E /* Pods_MyFinance_macOS_MyFinance_macOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D12ECA6763403A32015CFB7 /* Pods_MyFinance_macOS_MyFinance_macOS.framework */; };
@@ -480,7 +477,6 @@
 		D3900C47AF95713829627096 /* Pods_MyFinance_macOS_MyFinanceKit_macOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D92DB258D0260909E4D930C /* Pods_MyFinance_macOS_MyFinanceKit_macOS.framework */; };
 		D6DD7D2425CA91649F9A30E0 /* Pods_MyFinance_iOS_MyFinanceKit_IntegrationTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 837E698B1836AE75332FD4D6 /* Pods_MyFinance_iOS_MyFinanceKit_IntegrationTests.framework */; };
 		DC2E7679A0A81641E95B459A /* Pods_MyFinance_macOS_MyFinanceExtension_macOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4AED65AE524543BFC60DA7F2 /* Pods_MyFinance_macOS_MyFinanceExtension_macOS.framework */; };
-		F35643CC532A28F2D54E440C /* Pods_MyFinance_MyFinanceKit_MyFinanceKit_watchOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24D31AF734D7C2594D35D164 /* Pods_MyFinance_MyFinanceKit_MyFinanceKit_watchOS.framework */; };
 		FC2C2720D75238A76F748B1A /* Pods_MyFinance_tvOS_MyFinanceKit_tvOS_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 392542F0F8097B23DFF8BD2E /* Pods_MyFinance_tvOS_MyFinanceKit_tvOS_Tests.framework */; };
 /* End PBXBuildFile section */
 
@@ -1149,7 +1145,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F35643CC532A28F2D54E440C /* Pods_MyFinance_MyFinanceKit_MyFinanceKit_watchOS.framework in Frameworks */,
 				53C320DE596E0DDAA8C9A563 /* Pods_MyFinance_watchOS_MyFinanceKit_watchOS.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1167,7 +1162,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AD9D5007F8D4B5B4686B4191 /* Pods_MyFinance_MyFinanceKit_MyFinanceKit_tvOS.framework in Frameworks */,
 				C242C4EF085B137AD0C67EB4 /* Pods_MyFinance_tvOS_MyFinanceKit_tvOS.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1195,7 +1189,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AF5FFBE594AE0C2535911743 /* Pods_MyFinance_MyFinanceKit_MyFinanceKit_iOS.framework in Frameworks */,
 				055A915AFA3824A7460FD3A8 /* Pods_MyFinance_iOS_MyFinanceKit_iOS.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1204,7 +1197,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0F37C32CF241AF44D281D387 /* Pods_MyFinance_MyFinanceKit_MyFinanceKit_macOS.framework in Frameworks */,
 				D3900C47AF95713829627096 /* Pods_MyFinance_macOS_MyFinanceKit_macOS.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

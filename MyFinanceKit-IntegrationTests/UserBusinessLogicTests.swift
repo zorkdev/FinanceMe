@@ -5,6 +5,8 @@ class UserBusinessLogicTests: IntegrationTestCase {
     func testGetSession() {
         let newExpectation = expectation(description: "User logged in")
 
+        config.appState.dataService.removeAll()
+
         let userBusinessLogic = UserBusinessLogic(networkService: config.appState.networkService,
                                                   dataService: config.appState.dataService)
 
