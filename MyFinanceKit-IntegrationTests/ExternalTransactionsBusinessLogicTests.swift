@@ -19,7 +19,7 @@ class ExternalTransactionsBusinessLogicTests: IntegrationTestCase {
         waitForExpectations(timeout: 10.0, handler: nil)
     }
 
-    func testCreateDeleteExternalTransaction() {
+    func testCreateUpdateDeleteExternalTransaction() {
         let createdExpectation = expectation(description: "External transaction created")
         let deletedExpectation = expectation(description: "External transaction deleted")
 
@@ -33,8 +33,10 @@ class ExternalTransactionsBusinessLogicTests: IntegrationTestCase {
                                       source: .externalOutbound)
 
         _ = externalTransactionsBusinessLogic.create(transaction: transaction)
-            .then { transaction -> Promise<Void> in
+            .then { transaction -> Promise<Transaction> in
                 createdExpectation.fulfill()
+                return externalTransactionsBusinessLogic.update(transaction: transaction)
+            }.then { transaction -> Promise<Void> in
                 return externalTransactionsBusinessLogic.delete(transaction: transaction)
             }.done {
                 deletedExpectation.fulfill()

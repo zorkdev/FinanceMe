@@ -2,7 +2,7 @@
 
 class UserBusinessLogicTests: IntegrationTestCase {
 
-    func testLogin() {
+    func testGetSession() {
         let newExpectation = expectation(description: "User logged in")
 
         let userBusinessLogic = UserBusinessLogic(networkService: config.appState.networkService,
