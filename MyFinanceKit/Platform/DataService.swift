@@ -1,5 +1,3 @@
-import SwiftKeychainWrapper
-
 public typealias JSONCodableAndStringRepresentable = JSONCodable & StringRepresentable
 
 public protocol Storeable: JSONCodableAndStringRepresentable {
@@ -31,41 +29,15 @@ public extension Storeable {
 
 extension Array: Storeable where Element: JSONCodable {}
 
-public enum DataServiceSaveStatus {
+public enum DataServiceStatus {
     case success, failure
 }
 
 public protocol DataService {
 
-    @discardableResult func save(value: JSONEncodable, key: String) -> DataServiceSaveStatus
+    @discardableResult func save(value: JSONEncodable, key: String) -> DataServiceStatus
     func load<T: JSONDecodable>(key: String) -> T?
     func removeAll()
-
-}
-
-public struct KeychainDataService: DataService {
-
-    let keychain: KeychainWrapper
-
-    public init(configService: ConfigService) {
-        keychain = KeychainWrapper(serviceName: configService.productName,
-                                   accessGroup: configService.accessGroup)
-    }
-
-    @discardableResult public func save(value: JSONEncodable, key: String) -> DataServiceSaveStatus {
-        guard let data = value.encoded() else { return .failure }
-        return keychain.set(data, forKey: key) ? .success : .failure
-    }
-
-    public func load<T: JSONDecodable>(key: String) -> T? {
-        guard let data = keychain.data(forKey: key) else { return nil }
-
-        return T(data: data)
-    }
-
-    public func removeAll() {
-        KeychainWrapper.wipeKeychain()
-    }
 
 }
 
@@ -73,7 +45,7 @@ public struct UserDefaultsDataService: DataService {
 
     public init() {}
 
-    @discardableResult public func save(value: JSONEncodable, key: String) -> DataServiceSaveStatus {
+    @discardableResult public func save(value: JSONEncodable, key: String) -> DataServiceStatus {
         guard let data = value.encoded() else { return .failure }
         UserDefaults.standard.set(data, forKey: key)
         return .success

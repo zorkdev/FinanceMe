@@ -1,4 +1,3 @@
-import SwiftKeychainWrapper
 @testable import MyFinanceKit
 
 class DataServiceTests: XCTestCase {
@@ -15,7 +14,7 @@ class DataServiceTests: XCTestCase {
         super.tearDown()
 
         mockDataService = MockDataService()
-        _ = keychainDataService.keychain.removeAllKeys()
+        keychainDataService.removeAll()
         UserDefaults.standard.removePersistentDomain(forName: Bundle.main.bundleIdentifier!)
     }
 
