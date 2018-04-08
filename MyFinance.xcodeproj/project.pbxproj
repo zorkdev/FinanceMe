@@ -115,7 +115,6 @@
 		9A2A88E5203F6CE9002ADA1B /* UserBusinessLogicTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A2A88E3203F6CE9002ADA1B /* UserBusinessLogicTests.swift */; };
 		9A2BDAA42044D599008EE977 /* MockNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A2BDAA32044D599008EE977 /* MockNavigator.swift */; };
 		9A2BDAA62044D697008EE977 /* MockWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A2BDAA52044D697008EE977 /* MockWindow.swift */; };
-		9A2BDAA72044D697008EE977 /* MockWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A2BDAA52044D697008EE977 /* MockWindow.swift */; };
 		9A2DB564202F54EC0008A4E5 /* UIView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A2DB563202F54EC0008A4E5 /* UIView+Extensions.swift */; };
 		9A37AB11203E144900CFEE67 /* MockDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A37AB10203E144900CFEE67 /* MockDataService.swift */; };
 		9A37AB12203E144900CFEE67 /* MockDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A37AB10203E144900CFEE67 /* MockDataService.swift */; };
@@ -4180,7 +4179,6 @@
 				9A85357C20796BFE00704A78 /* MockBaseNavigator.swift in Sources */,
 				9AC3E71F20423A2B00CD29B6 /* MockNetworkService.swift in Sources */,
 				9AC3E72220423A3200CD29B6 /* MockAppState.swift in Sources */,
-				9A2BDAA72044D697008EE977 /* MockWindow.swift in Sources */,
 				9A85358B20796EC400704A78 /* MockViewModel.swift in Sources */,
 				9AC3E72B20423A4300CD29B6 /* MockAPI.swift in Sources */,
 				9AC3E72D20423A4500CD29B6 /* MockDataService.swift in Sources */,
