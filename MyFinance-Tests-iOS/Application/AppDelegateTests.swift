@@ -13,7 +13,7 @@ class AppDelegateTests: XCTestCase {
 
         XCTAssertTrue(appDelegate.application(UIApplication.shared, didFinishLaunchingWithOptions: nil))
         XCTAssertTrue(mockNavigator!.didCallCreateNavigationStack)
-        XCTAssertTrue(mockNavigator!.lastViewModel is HomeViewModelType)
+        XCTAssertNil(mockNavigator!.lastViewModel)
         XCTAssertNotNil(mockNavigator!.lastAuthViewModelType)
         XCTAssertTrue(mockAuthViewModel.didCallAuthenticate)
 

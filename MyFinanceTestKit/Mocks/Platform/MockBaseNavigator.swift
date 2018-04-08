@@ -10,7 +10,6 @@ class MockBaseNavigator: BaseNavigatorType {
     init() {}
 
     required init(window: WindowType) {}
-    func createNavigationStack() {}
     func dismiss() -> Promise<Void> { return .value(Void()) }
     func popToRoot() {}
 

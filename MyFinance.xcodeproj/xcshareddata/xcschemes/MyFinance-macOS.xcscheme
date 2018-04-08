@@ -40,8 +40,25 @@
             BlueprintName = "MyFinance-macOS"
             ReferencedContainer = "container:MyFinance.xcodeproj">
          </BuildableReference>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "9A4F55412023C7BE00DBF68F"
+            BuildableName = "MyFinanceKit.framework"
+            BlueprintName = "MyFinanceKit-macOS"
+            ReferencedContainer = "container:MyFinance.xcodeproj">
+         </BuildableReference>
       </CodeCoverageTargets>
       <Testables>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "9A94F8E0202CE83100AEF61F"
+               BuildableName = "MyFinanceKit-macOS-Tests.xctest"
+               BlueprintName = "MyFinanceKit-macOS-Tests"
+               ReferencedContainer = "container:MyFinance.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
          <TestableReference
             skipped = "NO">
             <BuildableReference

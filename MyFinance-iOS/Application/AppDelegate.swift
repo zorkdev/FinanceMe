@@ -9,7 +9,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                      didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]? = nil) -> Bool {
         if appState == nil { appState = AppStateiOS() }
 
-        appState.navigator.createNavigationStack()
+        appState.navigator.createNavigationStack(scene: .launch, viewModel: nil)
 
         if authViewModel == nil { authViewModel = AuthViewModel(serviceProvider: appState) }
         appState.navigator.createAuthStack(viewModel: authViewModel)

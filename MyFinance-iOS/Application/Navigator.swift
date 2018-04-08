@@ -18,6 +18,7 @@ struct SceneModel {
 
 protocol NavigatorType: BaseNavigatorType {
 
+    func createNavigationStack(scene: Scene, viewModel: ViewModelType?)
     func createAuthStack(viewModel: AuthViewModelType)
     func moveTo(scene: Scene, viewModel: ViewModelType?)
     func showAuthWindow()
@@ -37,8 +38,8 @@ class Navigator: NavigatorType {
         self.window = window
     }
 
-    func createNavigationStack() {
-        moveTo(scene: .launch, viewModel: nil)
+    func createNavigationStack(scene: Scene, viewModel: ViewModelType?) {
+        moveTo(scene: scene, viewModel: viewModel)
         window?.makeKeyAndVisible()
     }
 

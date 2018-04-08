@@ -5,6 +5,7 @@ class AuthViewModelTests: XCTestCase {
     var mockAppStateiOS = MockAppStateiOS()
     var mockNavigator: MockNavigator!
     var mockLAContext: MockLAContext!
+    var mockDataService: MockDataService!
 
     override func setUp() {
         super.setUp()
@@ -12,6 +13,7 @@ class AuthViewModelTests: XCTestCase {
         mockAppStateiOS = MockAppStateiOS()
         mockNavigator = mockAppStateiOS.navigator as? MockNavigator
         mockLAContext = mockAppStateiOS.laContext as? MockLAContext
+        mockDataService = mockAppStateiOS.dataService as? MockDataService
     }
 
     func testTryAgainButtonTapped() {
@@ -42,6 +44,8 @@ class AuthViewModelTests: XCTestCase {
         let mockAuthViewModelDelegate = MockAuthViewModelDelegate()
         mockLAContext.canEvaluatePolicyReturnValue = true
         mockLAContext.evaluatePolicyReturnValue = true
+        mockDataService.loadReturnValues = [Factory.makeSession(),
+                                            Factory.makeSession()]
 
         let authViewModel = AuthViewModel(serviceProvider: mockAppStateiOS)
         authViewModel.delegate = mockAuthViewModelDelegate
@@ -50,6 +54,7 @@ class AuthViewModelTests: XCTestCase {
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
             XCTAssertTrue(mockAuthViewModelDelegate.lastUpdateTryAgainValue == true)
             XCTAssertTrue(mockAuthViewModelDelegate.lastUpdateLogoValue == false)
+            XCTAssertTrue(self.mockNavigator.didCallShowAuthWindow)
             XCTAssertTrue(self.mockNavigator.didCallHideAuthWindow)
 
             newExpectation.fulfill()
@@ -62,8 +67,10 @@ class AuthViewModelTests: XCTestCase {
         let newExpectation = expectation(description: "Authentication failed")
 
         let mockAuthViewModelDelegate = MockAuthViewModelDelegate()
-        mockLAContext.canEvaluatePolicyReturnValue = true
-        mockLAContext.evaluatePolicyReturnValue = false
+        mockLAContext.createCanEvaluatePolicyReturnValue = true
+        mockLAContext.createEvaluatePolicyReturnValue = false
+        mockDataService.loadReturnValues = [Factory.makeSession(),
+                                            Factory.makeSession()]
 
         let authViewModel = AuthViewModel(serviceProvider: mockAppStateiOS)
         authViewModel.delegate = mockAuthViewModelDelegate
@@ -72,6 +79,7 @@ class AuthViewModelTests: XCTestCase {
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
             XCTAssertTrue(mockAuthViewModelDelegate.lastUpdateTryAgainValue == false)
             XCTAssertTrue(mockAuthViewModelDelegate.lastUpdateLogoValue == true)
+            XCTAssertTrue(self.mockNavigator.didCallShowAuthWindow)
             XCTAssertFalse(self.mockNavigator.didCallHideAuthWindow)
 
             newExpectation.fulfill()
@@ -81,6 +89,7 @@ class AuthViewModelTests: XCTestCase {
     }
 
     func testAddOcclusion() {
+        mockDataService.loadReturnValues = [Factory.makeSession()]
         let authViewModel = AuthViewModel(serviceProvider: mockAppStateiOS)
         authViewModel.addOcclusion()
         XCTAssertTrue(mockNavigator.didCallShowAuthWindow)

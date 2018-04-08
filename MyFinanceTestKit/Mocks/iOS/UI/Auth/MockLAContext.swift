@@ -6,8 +6,19 @@ class MockLAContext: LAContextType {
     var canEvaluatePolicyReturnValue = true
     var evaluatePolicyReturnValue = true
 
+    var createCanEvaluatePolicyReturnValue = true
+    var createEvaluatePolicyReturnValue = true
+
+    init() {}
+
+    init(canEvaluatePolicyReturnValue: Bool, evaluatePolicyReturnValue: Bool) {
+        self.canEvaluatePolicyReturnValue = canEvaluatePolicyReturnValue
+        self.evaluatePolicyReturnValue = evaluatePolicyReturnValue
+    }
+
     func createContext() -> LAContextType {
-        return MockLAContext()
+        return MockLAContext(canEvaluatePolicyReturnValue: createCanEvaluatePolicyReturnValue,
+                             evaluatePolicyReturnValue: createEvaluatePolicyReturnValue)
     }
 
     func canEvaluatePolicy(_ policy: LAPolicy, error: NSErrorPointer) -> Bool {

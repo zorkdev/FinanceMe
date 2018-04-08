@@ -10,12 +10,13 @@ class MockNavigator: NavigatorType {
     var lastViewModel: ViewModelType?
     var lastAuthViewModelType: AuthViewModelType?
 
+    weak var appState: AppStateType!
     var window: WindowType?
     var viewControllers = [ViewControllerType]()
 
     required init(window: WindowType) {}
 
-    func createNavigationStack(viewModel: ViewModelType) {
+    func createNavigationStack(scene: Scene, viewModel: ViewModelType?) {
         didCallCreateNavigationStack = true
         lastViewModel = viewModel
     }
@@ -24,7 +25,7 @@ class MockNavigator: NavigatorType {
         lastAuthViewModelType = viewModel
     }
 
-    func moveTo(scene: Scene, viewModel: ViewModelType, animated: Bool) {}
+    func moveTo(scene: Scene, viewModel: ViewModelType?) {}
 
     @discardableResult func dismiss() -> Promise<Void> {
         return Promise()

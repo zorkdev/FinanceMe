@@ -46,6 +46,26 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
+               BlueprintIdentifier = "9A6EF746202B939B006D3420"
+               BuildableName = "MyFinanceKit-iOS-Tests.xctest"
+               BlueprintName = "MyFinanceKit-iOS-Tests"
+               ReferencedContainer = "container:MyFinance.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "9A20228B2038DCCF0012DD51"
+               BuildableName = "MyFinanceKit-IntegrationTests.xctest"
+               BlueprintName = "MyFinanceKit-IntegrationTests"
+               ReferencedContainer = "container:MyFinance.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
                BlueprintIdentifier = "9A65DEFD2041CE7300E8177A"
                BuildableName = "MyFinance-Tests-iOS.xctest"
                BlueprintName = "MyFinance-Tests-iOS"

@@ -341,6 +341,7 @@
 		9A8561B32027BF5100A26F12 /* HomeChartCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A8561B22027BF5100A26F12 /* HomeChartCellModel.swift */; };
 		9A88A7F72042602B00421943 /* AuthViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A88A7F62042602B00421943 /* AuthViewControllerTests.swift */; };
 		9A88A7FB204260C300421943 /* MockAuthViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A88A7FA204260C300421943 /* MockAuthViewModel.swift */; };
+		9A8CD6BC207A433E007EC2F5 /* MockLaunchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A8CD6BB207A433D007EC2F5 /* MockLaunchViewModel.swift */; };
 		9A9093E52044C36100C87A99 /* WindowType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A1C9F742044C0A0002A21F4 /* WindowType.swift */; };
 		9A9093EA2044C9F800C87A99 /* WindowTypeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A9093E92044C9F800C87A99 /* WindowTypeTests.swift */; };
 		9A9093EB2044C9F800C87A99 /* WindowTypeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A9093E92044C9F800C87A99 /* WindowTypeTests.swift */; };
@@ -981,6 +982,7 @@
 		9A872E112016719100C1E9BE /* UserBusinessLogic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserBusinessLogic.swift; sourceTree = "<group>"; };
 		9A88A7F62042602B00421943 /* AuthViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewControllerTests.swift; sourceTree = "<group>"; };
 		9A88A7FA204260C300421943 /* MockAuthViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockAuthViewModel.swift; sourceTree = "<group>"; };
+		9A8CD6BB207A433D007EC2F5 /* MockLaunchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockLaunchViewModel.swift; sourceTree = "<group>"; };
 		9A9093E92044C9F800C87A99 /* WindowTypeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WindowTypeTests.swift; sourceTree = "<group>"; };
 		9A9093EC2044CCB000C87A99 /* BaseNavigatorType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseNavigatorType.swift; sourceTree = "<group>"; };
 		9A94F8E1202CE83100AEF61F /* MyFinanceKit-macOS-Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "MyFinanceKit-macOS-Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -1923,10 +1925,19 @@
 			isa = PBXGroup;
 			children = (
 				9ADC567D20432FAB003D8C63 /* Auth */,
+				9A8CD6BA207A431A007EC2F5 /* Launch */,
 				9AC049732046D84A006CB156 /* Home */,
 				9ADC567E20432FDC003D8C63 /* Settings */,
 			);
 			path = UI;
+			sourceTree = "<group>";
+		};
+		9A8CD6BA207A431A007EC2F5 /* Launch */ = {
+			isa = PBXGroup;
+			children = (
+				9A8CD6BB207A433D007EC2F5 /* MockLaunchViewModel.swift */,
+			);
+			path = Launch;
 			sourceTree = "<group>";
 		};
 		9A94F8DB202CE6FF00AEF61F /* Platform */ = {
@@ -2476,13 +2487,13 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 9A20222F2038D29D0012DD51 /* Build configuration list for PBXNativeTarget "MyFinance-tvOS" */;
 			buildPhases = (
+				9A2022862038DA550012DD51 /* SwiftLint */,
 				132A123BCF3720570D65A649 /* [CP] Check Pods Manifest.lock */,
 				9A20221D2038D29D0012DD51 /* Sources */,
 				9A20221E2038D29D0012DD51 /* Frameworks */,
 				9A20221F2038D29D0012DD51 /* Resources */,
 				9A2022452038D4990012DD51 /* Embed Frameworks */,
 				02AA77CB8F7EABFDA408E4A3 /* [CP] Embed Pods Frameworks */,
-				9A2022862038DA550012DD51 /* SwiftLint */,
 			);
 			buildRules = (
 			);
@@ -2538,11 +2549,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 9A3CB7E9202FC657008AF158 /* Build configuration list for PBXNativeTarget "MyFinance-watchOS" */;
 			buildPhases = (
+				9A2022872038DA770012DD51 /* SwiftLint */,
 				FA7F85745006FC9F5F44B61E /* [CP] Check Pods Manifest.lock */,
 				9A3CB7C4202FC657008AF158 /* Resources */,
 				9A3CB7E8202FC657008AF158 /* Embed App Extensions */,
 				B02D8B61E5FF61F71DDD84BE /* Frameworks */,
-				9A2022872038DA770012DD51 /* SwiftLint */,
 			);
 			buildRules = (
 			);
@@ -2617,6 +2628,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 9A5AE5842012A8AC00B25081 /* Build configuration list for PBXNativeTarget "MyFinance-iOS" */;
 			buildPhases = (
+				9AD3EE322013B7EB0083F8FE /* SwiftLint */,
 				6C277E91235BF3232ED07A23 /* [CP] Check Pods Manifest.lock */,
 				9A5AE56E2012A8AB00B25081 /* Sources */,
 				9A5AE56F2012A8AB00B25081 /* Frameworks */,
@@ -2625,7 +2637,6 @@
 				9AD3EE482013D9A10083F8FE /* Embed App Extensions */,
 				9A4F553C2023C7A900DBF68F /* Embed Frameworks */,
 				9A3CB7EA202FC657008AF158 /* Embed Watch Content */,
-				9AD3EE322013B7EB0083F8FE /* SwiftLint */,
 			);
 			buildRules = (
 			);
@@ -2684,6 +2695,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 9A740EDA201E245200D40943 /* Build configuration list for PBXNativeTarget "MyFinance-macOS" */;
 			buildPhases = (
+				9A85618D202794CE00A26F12 /* SwiftLint */,
 				6D183F4DCB25A005174AF45F /* [CP] Check Pods Manifest.lock */,
 				9A740EC7201E245200D40943 /* Sources */,
 				9A740EC8201E245200D40943 /* Frameworks */,
@@ -2691,7 +2703,6 @@
 				9A740EF2201E247D00D40943 /* Embed App Extensions */,
 				4132988D3D6D1950CA11CEFB /* [CP] Embed Pods Frameworks */,
 				9A4F554E2023C7BE00DBF68F /* Embed Frameworks */,
-				9A85618D202794CE00A26F12 /* SwiftLint */,
 			);
 			buildRules = (
 			);
@@ -4001,6 +4012,7 @@
 				9AC3E73220423A9200CD29B6 /* MockWCSession.swift in Sources */,
 				9A2860DF20422B8A008FA915 /* AppStateiOSTests.swift in Sources */,
 				9A2BDAA42044D599008EE977 /* MockNavigator.swift in Sources */,
+				9A8CD6BC207A433E007EC2F5 /* MockLaunchViewModel.swift in Sources */,
 				9ADC56842043360E003D8C63 /* MockSettingsViewModelDataDelegate.swift in Sources */,
 				9AC3E73620423C7100CD29B6 /* Factory.swift in Sources */,
 				9A014490204264F800443585 /* AuthViewModelTests.swift in Sources */,

@@ -1,6 +1,6 @@
 @testable import MyFinance_iOS
 
-struct MockAppStateiOS: AppStateiOSType {
+class MockAppStateiOS: AppStateiOSType {
 
     var dataService: DataService = MockDataService()
     var networkService: NetworkServiceType = MockNetworkService()

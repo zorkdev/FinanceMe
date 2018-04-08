@@ -19,14 +19,14 @@ class NavigatorTests: XCTestCase {
 
     func testCreateNavigationStack() {
         let navigator = Navigator(window: mockWindow)
-        let mockHomeViewModel = MockHomeViewModel()
+        let mockLaunchViewModel = MockLaunchViewModel()
 
-        navigator.createNavigationStack(viewModel: mockHomeViewModel)
+        navigator.createNavigationStack(scene: .launch, viewModel: mockLaunchViewModel)
 
-        let homeViewController = mockWindow.baseViewController as? HomeViewController
-        XCTAssertNotNil(homeViewController)
-        XCTAssertTrue(homeViewController!.viewModel is MockHomeViewModel)
-        XCTAssertTrue(mockHomeViewModel.lastInjectValue is HomeViewController)
+        let launchViewController = mockWindow.baseViewController as? LaunchViewController
+        XCTAssertNotNil(launchViewController)
+        XCTAssertTrue(launchViewController!.viewModel is MockLaunchViewModel)
+        XCTAssertTrue(mockLaunchViewModel.lastInjectValue is LaunchViewController)
         XCTAssertTrue(mockWindow.didCallMakeKeyAndVisible)
     }
 
@@ -53,8 +53,8 @@ class NavigatorTests: XCTestCase {
         let mockHomeViewModel = MockHomeViewModel()
         let mockSettingsViewModel = MockSettingsViewModel()
 
-        navigator.createNavigationStack(viewModel: mockHomeViewModel)
-        navigator.moveTo(scene: .settings, viewModel: mockSettingsViewModel, animated: false)
+        navigator.createNavigationStack(scene: .home, viewModel: mockHomeViewModel)
+        navigator.moveTo(scene: .settings, viewModel: mockSettingsViewModel)
 
         let settingsViewController = window.baseViewController?.presented as? SettingsViewController
         XCTAssertNotNil(settingsViewController)
@@ -76,13 +76,13 @@ class NavigatorTests: XCTestCase {
         navigator.createAuthStack(viewModel: mockAuthViewModel)
 
         let mockAuthWindow = mockWindow.lastCreateWindow!
-        XCTAssertFalse(mockAuthWindow.isHidden)
-
-        navigator.hideAuthWindow()
         XCTAssertTrue(mockAuthWindow.isHidden)
 
         navigator.showAuthWindow()
         XCTAssertFalse(mockAuthWindow.isHidden)
+
+        navigator.hideAuthWindow()
+        XCTAssertTrue(mockAuthWindow.isHidden)
     }
 
 }

@@ -24,6 +24,8 @@ class MockHomeViewModel: HomeViewModelType {
         return false
     }
 
+    func didSelect(tab: HomeViewModel.Tab, section: Int, row: Int) {}
+
     func delete(from tab: HomeViewModel.Tab, section: Int, row: Int) {}
 
     func height(for tab: HomeViewModel.Tab, section: Int, row: Int) -> CGFloat {
@@ -39,6 +41,7 @@ class MockHomeViewModel: HomeViewModelType {
     }
 
     func didCreate(transaction: Transaction) {}
+    func didUpdate(transaction: Transaction) {}
     func didUpdate(user: User) {}
 
 }
