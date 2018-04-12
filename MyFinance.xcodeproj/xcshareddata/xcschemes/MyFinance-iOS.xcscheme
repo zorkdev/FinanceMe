@@ -40,6 +40,13 @@
             BlueprintName = "MyFinance-iOS"
             ReferencedContainer = "container:MyFinance.xcodeproj">
          </BuildableReference>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "9A4F552F2023C7A900DBF68F"
+            BuildableName = "MyFinanceKit.framework"
+            BlueprintName = "MyFinanceKit-iOS"
+            ReferencedContainer = "container:MyFinance.xcodeproj">
+         </BuildableReference>
       </CodeCoverageTargets>
       <Testables>
          <TestableReference

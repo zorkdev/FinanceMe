@@ -7,14 +7,12 @@ class DataServiceTests: XCTestCase {
     }
 
     var mockDataService = MockDataService()
-    let keychainDataService = KeychainDataService(configService: ConfigDefaultService())
     let userDefaultsDataService = UserDefaultsDataService()
 
     override func tearDown() {
         super.tearDown()
 
         mockDataService = MockDataService()
-        keychainDataService.removeAll()
         UserDefaults.standard.removePersistentDomain(forName: Bundle.main.bundleIdentifier!)
     }
 
@@ -59,35 +57,6 @@ class DataServiceTests: XCTestCase {
         XCTAssertNotNil(loadedItem)
         XCTAssertEqual(loadedItem, [])
         XCTAssertEqual(mockDataService.lastLoadedKey, "Array<StubModel>")
-    }
-
-    func testKeychainSaveAndLoad_Success() {
-        let key = "key"
-        let stubModel = StubModel(variable: "value")
-
-        let saveStatus = keychainDataService.save(value: stubModel, key: key)
-        let retrievedValue: StubModel? = keychainDataService.load(key: key)
-
-        XCTAssertEqual(saveStatus, .success)
-        XCTAssertNotNil(retrievedValue)
-        XCTAssertEqual(retrievedValue!, stubModel)
-    }
-
-    func testKeychainSave_Failure() {
-        let key = "key"
-        let nan = Double.nan
-
-        let saveStatus = keychainDataService.save(value: nan, key: key)
-
-        XCTAssertEqual(saveStatus, .failure)
-    }
-
-    func testKeychainLoad_Failure() {
-        let key = "nonExistantKey"
-
-        let loadedItem: StubModel? = keychainDataService.load(key: key)
-
-        XCTAssertNil(loadedItem)
     }
 
     func testUserDefaultsSaveAndLoad_Success() {
