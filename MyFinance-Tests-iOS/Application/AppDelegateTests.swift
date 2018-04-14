@@ -3,6 +3,8 @@
 class AppDelegateTests: XCTestCase {
 
     func testLifecycle() {
+        let newExpectation = expectation(description: "Expectation")
+
         let mockAppStateiOS = MockAppStateiOS()
         let mockAuthViewModel = MockAuthViewModel()
         let mockNavigator = mockAppStateiOS.navigator as? MockNavigator
@@ -12,16 +14,23 @@ class AppDelegateTests: XCTestCase {
         appDelegate.appState = mockAppStateiOS
 
         XCTAssertTrue(appDelegate.application(UIApplication.shared, didFinishLaunchingWithOptions: nil))
-        XCTAssertTrue(mockNavigator!.didCallCreateNavigationStack)
-        XCTAssertNil(mockNavigator!.lastViewModel)
-        XCTAssertNotNil(mockNavigator!.lastAuthViewModelType)
-        XCTAssertTrue(mockAuthViewModel.didCallAuthenticate)
 
-        appDelegate.applicationWillEnterForeground(UIApplication.shared)
-        XCTAssertTrue(mockAuthViewModel.didCallAuthenticate)
+        DispatchQueue.main.async {
+            XCTAssertTrue(mockNavigator!.didCallCreateNavigationStack)
+            XCTAssertNil(mockNavigator!.lastViewModel)
+            XCTAssertNotNil(mockNavigator!.lastAuthViewModelType)
+            XCTAssertTrue(mockAuthViewModel.didCallAuthenticate)
 
-        appDelegate.applicationDidEnterBackground(UIApplication.shared)
-        XCTAssertTrue(mockAuthViewModel.didCallAddOcclusion)
+            appDelegate.applicationWillEnterForeground(UIApplication.shared)
+            XCTAssertTrue(mockAuthViewModel.didCallAuthenticate)
+
+            appDelegate.applicationDidEnterBackground(UIApplication.shared)
+            XCTAssertTrue(mockAuthViewModel.didCallAddOcclusion)
+
+            newExpectation.fulfill()
+        }
+
+        waitForExpectations(timeout: 1.0, handler: nil)
     }
 
 }

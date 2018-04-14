@@ -2492,8 +2492,8 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 9A20222F2038D29D0012DD51 /* Build configuration list for PBXNativeTarget "MyFinance-tvOS" */;
 			buildPhases = (
-				9A2022862038DA550012DD51 /* SwiftLint */,
 				132A123BCF3720570D65A649 /* [CP] Check Pods Manifest.lock */,
+				9A2022862038DA550012DD51 /* SwiftLint */,
 				9A20221D2038D29D0012DD51 /* Sources */,
 				9A20221E2038D29D0012DD51 /* Frameworks */,
 				9A20221F2038D29D0012DD51 /* Resources */,
@@ -2554,8 +2554,8 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 9A3CB7E9202FC657008AF158 /* Build configuration list for PBXNativeTarget "MyFinance-watchOS" */;
 			buildPhases = (
-				9A2022872038DA770012DD51 /* SwiftLint */,
 				FA7F85745006FC9F5F44B61E /* [CP] Check Pods Manifest.lock */,
+				9A2022872038DA770012DD51 /* SwiftLint */,
 				9A3CB7C4202FC657008AF158 /* Resources */,
 				9A3CB7E8202FC657008AF158 /* Embed App Extensions */,
 				B02D8B61E5FF61F71DDD84BE /* Frameworks */,
@@ -2633,8 +2633,8 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 9A5AE5842012A8AC00B25081 /* Build configuration list for PBXNativeTarget "MyFinance-iOS" */;
 			buildPhases = (
-				9AD3EE322013B7EB0083F8FE /* SwiftLint */,
 				6C277E91235BF3232ED07A23 /* [CP] Check Pods Manifest.lock */,
+				9AD3EE322013B7EB0083F8FE /* SwiftLint */,
 				9A5AE56E2012A8AB00B25081 /* Sources */,
 				9A5AE56F2012A8AB00B25081 /* Frameworks */,
 				9A5AE5702012A8AB00B25081 /* Resources */,
@@ -2700,8 +2700,8 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 9A740EDA201E245200D40943 /* Build configuration list for PBXNativeTarget "MyFinance-macOS" */;
 			buildPhases = (
-				9A85618D202794CE00A26F12 /* SwiftLint */,
 				6D183F4DCB25A005174AF45F /* [CP] Check Pods Manifest.lock */,
+				9A85618D202794CE00A26F12 /* SwiftLint */,
 				9A740EC7201E245200D40943 /* Sources */,
 				9A740EC8201E245200D40943 /* Frameworks */,
 				9A740EC9201E245200D40943 /* Resources */,
