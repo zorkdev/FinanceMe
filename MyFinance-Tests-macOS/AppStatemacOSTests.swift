@@ -9,6 +9,7 @@ class AppStatemacOSTests: XCTestCase {
 
         XCTAssertTrue(appState.networkService is NetworkService)
         XCTAssertTrue(appState.dataService is KeychainDataService)
+        XCTAssertTrue(appState.sessionService is SessionFileService)
     }
 
 }

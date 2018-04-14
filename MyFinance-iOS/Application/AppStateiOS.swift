@@ -28,12 +28,23 @@ class AppStateiOS: AppState, AppStateiOSType {
     let laContext: LAContextType
 
     override init() {
-        let keychainDataService = KeychainDataService(configService: ConfigDefaultService())
+        let configService = ConfigDefaultService()
+        let dataService = KeychainDataService(configService: configService)
+        let sessionService = SessionDefaultService(dataService: dataService)
+        let networkService = NetworkService(networkRequestable: URLSession.shared,
+                                            configService: configService,
+                                            sessionService: sessionService)
+
         self.navigator = Navigator(window: UIWindow())
         self.watchService = WatchService(wcSession: WCSession.default,
-                                         dataService: keychainDataService)
+                                         dataService: dataService)
         self.laContext = LAContext()
-        super.init()
+
+        super.init(networkService: networkService,
+                   dataService: dataService,
+                   configService: configService,
+                   sessionService: sessionService)
+
         self.navigator.appState = self
     }
 

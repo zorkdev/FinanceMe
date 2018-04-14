@@ -4,12 +4,14 @@ class UserBusinessLogicTests: XCTestCase {
 
     var mockNetworkService = MockNetworkService()
     var mockDataService = MockDataService()
+    var mockSessionService = MockSessionService()
 
     override func tearDown() {
         super.tearDown()
 
         mockNetworkService = MockNetworkService()
         mockDataService = MockDataService()
+        mockSessionService = MockSessionService()
     }
 
     func testGetSession() {
@@ -21,7 +23,8 @@ class UserBusinessLogicTests: XCTestCase {
         mockNetworkService.returnJSONDecodableValues = [expectedSession]
 
         let userBusinessLogic = UserBusinessLogic(networkService: mockNetworkService,
-                                                  dataService: mockDataService)
+                                                  dataService: mockDataService,
+                                                  sessionService: mockSessionService)
 
         _ = userBusinessLogic.getSession(credentials: credentials).done { session in
 
@@ -30,8 +33,7 @@ class UserBusinessLogicTests: XCTestCase {
             XCTAssertNil(self.mockNetworkService.lastRequest?.parameters)
             XCTAssertEqual(self.mockNetworkService.lastRequest?.body as? Credentials, credentials)
             XCTAssertEqual(session, expectedSession)
-            XCTAssertTrue(self.mockDataService.savedValues
-                .contains(where: { ($0 as? Session) == expectedSession }) == true)
+            XCTAssertNotNil(self.mockSessionService.lastSaveValue)
 
             newExpectation.fulfill()
         }
@@ -47,7 +49,8 @@ class UserBusinessLogicTests: XCTestCase {
         mockNetworkService.returnJSONDecodableValues = [expectedUser]
 
         let userBusinessLogic = UserBusinessLogic(networkService: mockNetworkService,
-                                                  dataService: mockDataService)
+                                                  dataService: mockDataService,
+                                                  sessionService: mockSessionService)
 
         _ = userBusinessLogic.getCurrentUser().done { user in
 
@@ -73,7 +76,8 @@ class UserBusinessLogicTests: XCTestCase {
         mockNetworkService.returnJSONDecodableValues = [expectedUser]
 
         let userBusinessLogic = UserBusinessLogic(networkService: mockNetworkService,
-                                                  dataService: mockDataService)
+                                                  dataService: mockDataService,
+                                                  sessionService: mockSessionService)
 
         _ = userBusinessLogic.update(user: expectedUser).done { user in
 

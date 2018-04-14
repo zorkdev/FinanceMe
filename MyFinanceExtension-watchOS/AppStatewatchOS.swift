@@ -14,10 +14,19 @@ class AppStatewatchOS: AppState, AppStatewatchOSType {
     let complicationService: ComplicationServiceType
 
     override init() {
-        let keychainDataService = KeychainDataService(configService: ConfigDefaultService())
+        let configService = ConfigDefaultService()
+        let dataService = KeychainDataService(configService: configService)
+        let sessionService = SessionDefaultService(dataService: dataService)
         self.complicationService = ComplicationService(wcSession: WCSession.default,
-                                                       dataService: keychainDataService)
-        super.init()
+                                                       dataService: dataService)
+        let networkService = NetworkService(networkRequestable: URLSession.shared,
+                                            configService: configService,
+                                            sessionService: sessionService)
+
+        super.init(networkService: networkService,
+                   dataService: dataService,
+                   configService: configService,
+                   sessionService: sessionService)
     }
 
 }

@@ -2,7 +2,7 @@ import MyFinanceKit
 
 class MockTodayPresentable: TodayPresentable {
 
-    typealias ServiceProvider = NetworkServiceProvider & DataServiceProvider
+    typealias ServiceProvider = NetworkServiceProvider & DataServiceProvider & SessionServiceProvider
     var serviceProvider: ServiceProvider
 
     var displayModel: TodayDisplayModelType

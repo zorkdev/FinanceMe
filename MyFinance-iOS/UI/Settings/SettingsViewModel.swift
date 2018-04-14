@@ -29,7 +29,11 @@ protocol SettingsViewModelType: ViewModelType {
 
 class SettingsViewModel {
 
-    typealias ServiceProvider = NavigatorProvider & NetworkServiceProvider & DataServiceProvider
+    typealias ServiceProvider = NavigatorProvider
+        & NetworkServiceProvider
+        & DataServiceProvider
+        & SessionServiceProvider
+
     let serviceProvider: ServiceProvider
 
     private let userBusinessLogic: UserBusinessLogic
@@ -48,7 +52,8 @@ class SettingsViewModel {
         self.serviceProvider = serviceProvider
         self.dataDelegate = dataDelegate
         self.userBusinessLogic = UserBusinessLogic(networkService: serviceProvider.networkService,
-                                                   dataService: serviceProvider.dataService)
+                                                   dataService: serviceProvider.dataService,
+                                                   sessionService: serviceProvider.sessionService)
     }
 
 }

@@ -6,7 +6,7 @@ protocol LaunchViewModelType: ViewModelType {
 
 class LaunchViewModel {
 
-    typealias ServiceProvider = NavigatorProvider & DataServiceProvider
+    typealias ServiceProvider = NavigatorProvider & DataServiceProvider & SessionServiceProvider
     let serviceProvider: ServiceProvider
 
     init(serviceProvider: ServiceProvider) {
@@ -32,7 +32,7 @@ extension LaunchViewModel: LaunchViewModelType {
 extension LaunchViewModel {
 
     private var hasSession: Bool {
-        return Session.load(dataService: serviceProvider.dataService) != nil
+        return serviceProvider.sessionService.hasSession
     }
 
     private func moveToHome() {

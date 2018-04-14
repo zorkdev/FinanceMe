@@ -8,7 +8,7 @@ public protocol TodayViewModelDelegate: ViewModelDelegate {
 
 public protocol TodayPresentable: ViewModelType {
 
-    typealias ServiceProvider = NetworkServiceProvider & DataServiceProvider
+    typealias ServiceProvider = NetworkServiceProvider & DataServiceProvider & SessionServiceProvider
     var serviceProvider: ServiceProvider { get }
 
     var displayModel: TodayDisplayModelType { get }
@@ -58,7 +58,8 @@ public extension TodayPresentable {
 
     @discardableResult public func getUser() -> Promise<Void> {
         return UserBusinessLogic(networkService: serviceProvider.networkService,
-                                 dataService: serviceProvider.dataService)
+                                 dataService: serviceProvider.dataService,
+                                 sessionService: serviceProvider.sessionService)
             .getCurrentUser().done { user in
                 let allowanceAttributedString = self.createAttributedString(from: user.allowance)
                 let allowanceIcon = SpendingBusinessLogic().allowanceIcon(for: user)

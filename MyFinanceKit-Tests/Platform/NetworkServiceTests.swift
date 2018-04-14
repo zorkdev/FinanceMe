@@ -7,7 +7,7 @@ class NetworkServiceTests: XCTestCase {
 
     var mockNetworkRequestable = MockNetworkRequestable()
     let mockConfigService = MockConfigService()
-    let mockDataService = MockDataService()
+    var mockSessionService = MockSessionService()
     var mockAPI = MockAPI()
     let session = Factory.makeSession()
 
@@ -16,7 +16,8 @@ class NetworkServiceTests: XCTestCase {
 
         mockNetworkRequestable = MockNetworkRequestable()
         mockAPI = MockAPI()
-        mockDataService.loadReturnValues = [session]
+        mockSessionService = MockSessionService()
+        mockSessionService.getSessionReturnValue = session
     }
 
     func testPerformRequest() {
@@ -25,8 +26,8 @@ class NetworkServiceTests: XCTestCase {
         let mockToken = mockAPI.token(session: session)
 
         let networkService = NetworkService(networkRequestable: mockNetworkRequestable,
-                                            dataService: mockDataService,
-                                            configService: mockConfigService)
+                                            configService: mockConfigService,
+                                            sessionService: mockSessionService)
 
         _ = networkService.performRequest(api: mockAPI,
                                           method: .get,
@@ -57,8 +58,8 @@ class NetworkServiceTests: XCTestCase {
         let mockToken = mockAPI.token(session: session)
 
         let networkService = NetworkService(networkRequestable: mockNetworkRequestable,
-                                            dataService: mockDataService,
-                                            configService: mockConfigService)
+                                            configService: mockConfigService,
+                                            sessionService: mockSessionService)
 
         struct Body: JSONEncodable {
             let body = "body"
@@ -104,8 +105,8 @@ class NetworkServiceTests: XCTestCase {
         mockAPI.url = nil
 
         let networkService = NetworkService(networkRequestable: mockNetworkRequestable,
-                                            dataService: mockDataService,
-                                            configService: mockConfigService)
+                                            configService: mockConfigService,
+                                            sessionService: mockSessionService)
 
         _ = networkService.performRequest(api: mockAPI,
                                           method: .get,
@@ -125,8 +126,8 @@ class NetworkServiceTests: XCTestCase {
         mockNetworkRequestable.returnErrorValue = PMKHTTPError.badStatusCode(400, Data(), HTTPURLResponse())
 
         let networkService = NetworkService(networkRequestable: mockNetworkRequestable,
-                                            dataService: mockDataService,
-                                            configService: mockConfigService)
+                                            configService: mockConfigService,
+                                            sessionService: mockSessionService)
 
         _ = networkService.performRequest(api: mockAPI,
                                           method: .get,
@@ -150,8 +151,8 @@ class NetworkServiceTests: XCTestCase {
         mockNetworkRequestable.returnErrorValue = nsError
 
         let networkService = NetworkService(networkRequestable: mockNetworkRequestable,
-                                            dataService: mockDataService,
-                                            configService: mockConfigService)
+                                            configService: mockConfigService,
+                                            sessionService: mockSessionService)
 
         _ = networkService.performRequest(api: mockAPI,
                                           method: .get,
@@ -171,8 +172,8 @@ class NetworkServiceTests: XCTestCase {
         let mockToken = mockAPI.token(session: session)
 
         let networkService = NetworkService(networkRequestable: mockNetworkRequestable,
-                                            dataService: mockDataService,
-                                            configService: mockConfigService)
+                                            configService: mockConfigService,
+                                            sessionService: mockSessionService)
 
         struct Body: JSONCodable {
             let body = "body"
@@ -209,8 +210,8 @@ class NetworkServiceTests: XCTestCase {
         let newExpectation = expectation(description: "Network call unsuccessful - JSON parsing error")
 
         let networkService = NetworkService(networkRequestable: mockNetworkRequestable,
-                                            dataService: mockDataService,
-                                            configService: mockConfigService)
+                                            configService: mockConfigService,
+                                            sessionService: mockSessionService)
 
         struct Body: JSONCodable {
             let body = "body"

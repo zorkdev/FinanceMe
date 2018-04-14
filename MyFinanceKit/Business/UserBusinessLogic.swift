@@ -2,11 +2,14 @@ public struct UserBusinessLogic {
 
     private let networkService: NetworkServiceType
     private let dataService: DataService
+    private let sessionService: SessionService
 
     public init(networkService: NetworkServiceType,
-                dataService: DataService) {
+                dataService: DataService,
+                sessionService: SessionService) {
         self.networkService = networkService
         self.dataService = dataService
+        self.sessionService = sessionService
     }
 
     public func getSession(credentials: Credentials) -> Promise<Session> {
@@ -15,7 +18,7 @@ public struct UserBusinessLogic {
                                              parameters: nil,
                                              body: credentials)
             .then { (session: Session) -> Promise<Session> in
-                session.save(dataService: self.dataService)
+                self.sessionService.save(session: session)
 
                 return .value(session)
         }

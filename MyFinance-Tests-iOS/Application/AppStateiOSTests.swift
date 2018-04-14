@@ -8,6 +8,7 @@ class AppStateiOSTests: XCTestCase {
 
         XCTAssertTrue(appState.networkService is NetworkService)
         XCTAssertTrue(appState.dataService is KeychainDataService)
+        XCTAssertTrue(appState.sessionService is SessionDefaultService)
         XCTAssertTrue(appState.watchService is WatchService)
         XCTAssertTrue(appState.laContext is LAContext)
         XCTAssertTrue(appState.navigator is Navigator)

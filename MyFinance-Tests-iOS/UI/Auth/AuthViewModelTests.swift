@@ -5,7 +5,7 @@ class AuthViewModelTests: XCTestCase {
     var mockAppStateiOS = MockAppStateiOS()
     var mockNavigator: MockNavigator!
     var mockLAContext: MockLAContext!
-    var mockDataService: MockDataService!
+    var mockSessionService: MockSessionService!
 
     override func setUp() {
         super.setUp()
@@ -13,7 +13,7 @@ class AuthViewModelTests: XCTestCase {
         mockAppStateiOS = MockAppStateiOS()
         mockNavigator = mockAppStateiOS.navigator as? MockNavigator
         mockLAContext = mockAppStateiOS.laContext as? MockLAContext
-        mockDataService = mockAppStateiOS.dataService as? MockDataService
+        mockSessionService = mockAppStateiOS.sessionService as? MockSessionService
     }
 
     func testTryAgainButtonTapped() {
@@ -44,8 +44,7 @@ class AuthViewModelTests: XCTestCase {
         let mockAuthViewModelDelegate = MockAuthViewModelDelegate()
         mockLAContext.canEvaluatePolicyReturnValue = true
         mockLAContext.evaluatePolicyReturnValue = true
-        mockDataService.loadReturnValues = [Factory.makeSession(),
-                                            Factory.makeSession()]
+        mockSessionService.hasSessionReturnValue = true
 
         let authViewModel = AuthViewModel(serviceProvider: mockAppStateiOS)
         authViewModel.delegate = mockAuthViewModelDelegate
@@ -69,8 +68,7 @@ class AuthViewModelTests: XCTestCase {
         let mockAuthViewModelDelegate = MockAuthViewModelDelegate()
         mockLAContext.createCanEvaluatePolicyReturnValue = true
         mockLAContext.createEvaluatePolicyReturnValue = false
-        mockDataService.loadReturnValues = [Factory.makeSession(),
-                                            Factory.makeSession()]
+        mockSessionService.hasSessionReturnValue = true
 
         let authViewModel = AuthViewModel(serviceProvider: mockAppStateiOS)
         authViewModel.delegate = mockAuthViewModelDelegate
@@ -89,7 +87,7 @@ class AuthViewModelTests: XCTestCase {
     }
 
     func testAddOcclusion() {
-        mockDataService.loadReturnValues = [Factory.makeSession()]
+        mockSessionService.hasSessionReturnValue = true
         let authViewModel = AuthViewModel(serviceProvider: mockAppStateiOS)
         authViewModel.addOcclusion()
         XCTAssertTrue(mockNavigator.didCallShowAuthWindow)

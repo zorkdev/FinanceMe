@@ -8,7 +8,8 @@ class UserBusinessLogicTests: IntegrationTestCase {
         config.appState.dataService.removeAll()
 
         let userBusinessLogic = UserBusinessLogic(networkService: config.appState.networkService,
-                                                  dataService: config.appState.dataService)
+                                                  dataService: config.appState.dataService,
+                                                  sessionService: config.appState.sessionService)
 
         _ = userBusinessLogic.getSession(credentials: config.testCredentials)
             .done { _ in
@@ -22,7 +23,8 @@ class UserBusinessLogicTests: IntegrationTestCase {
         let newExpectation = expectation(description: "Current user fetched")
 
         let userBusinessLogic = UserBusinessLogic(networkService: config.appState.networkService,
-                                                  dataService: config.appState.dataService)
+                                                  dataService: config.appState.dataService,
+                                                  sessionService: config.appState.sessionService)
 
         _ = userBusinessLogic.getCurrentUser()
             .done { _ in
@@ -36,7 +38,8 @@ class UserBusinessLogicTests: IntegrationTestCase {
         let newExpectation = expectation(description: "Current user updated")
 
         let userBusinessLogic = UserBusinessLogic(networkService: config.appState.networkService,
-                                                  dataService: config.appState.dataService)
+                                                  dataService: config.appState.dataService,
+                                                  sessionService: config.appState.sessionService)
 
         _ = userBusinessLogic.getCurrentUser()
             .then { user in

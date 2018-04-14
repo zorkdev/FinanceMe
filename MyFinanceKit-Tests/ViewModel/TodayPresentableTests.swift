@@ -17,7 +17,8 @@ class TodayPresentableTests: XCTestCase {
         mockDataService = MockDataService()
         mockNetworkService = MockNetworkService()
         mockAppState = MockAppState(dataService: mockDataService!,
-                                    networkService: mockNetworkService!)
+                                    networkService: mockNetworkService!,
+                                    sessionService: MockSessionService())
         mockTodayDisplayModel = MockTodayDisplayModel()
         mockTodayViewModelDelegate = MockTodayViewModelDelegate()
         mockTodayPresentable = MockTodayPresentable(serviceProvider: mockAppState!,

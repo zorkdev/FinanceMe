@@ -10,7 +10,12 @@ class HomeViewModel {
         case allowance, inbound, outbound
     }
 
-    typealias ServiceProvider = NavigatorProvider & NetworkServiceProvider & DataServiceProvider & WatchServiceProvider
+    typealias ServiceProvider = NavigatorProvider
+        & NetworkServiceProvider
+        & DataServiceProvider
+        & WatchServiceProvider
+        & SessionServiceProvider
+
     let serviceProvider: ServiceProvider
 
     private let externalTransactionsBusinessLogic: ExternalTransactionsBusinessLogic
@@ -117,7 +122,8 @@ extension HomeViewModel {
 
     @discardableResult public func getUser() -> Promise<Void> {
         return UserBusinessLogic(networkService: serviceProvider.networkService,
-                                 dataService: serviceProvider.dataService)
+                                 dataService: serviceProvider.dataService,
+                                 sessionService: serviceProvider.sessionService)
             .getCurrentUser().done { user in
                 let allowanceAttributedString = self.createAttributedString(from: user.allowance)
                 let allowanceIcon = SpendingBusinessLogic().allowanceIcon(for: user)

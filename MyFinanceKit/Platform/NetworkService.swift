@@ -42,15 +42,15 @@ public class NetworkService: NetworkServiceType {
     }
 
     private let networkService: NetworkRequestable
-    private let dataService: DataService
     private let configService: ConfigService
+    private let sessionService: SessionService
 
     public init(networkRequestable: NetworkRequestable,
-                dataService: DataService,
-                configService: ConfigService) {
+                configService: ConfigService,
+                sessionService: SessionService) {
         networkService = networkRequestable
-        self.dataService = dataService
         self.configService = configService
+        self.sessionService = sessionService
     }
 
     public func performRequest<T: JSONDecodable>(api: APIType,
@@ -127,7 +127,7 @@ public class NetworkService: NetworkServiceType {
         request.setValue(Constants.encodingValue,
                          forHTTPHeaderField: Constants.encodingKey)
 
-        if let session = Session.load(dataService: dataService) {
+        if let session = sessionService.getSession() {
             request.setValue(Constants.authHeaderValue(api.token(session: session)),
                              forHTTPHeaderField: Constants.authHeaderKey)
         }

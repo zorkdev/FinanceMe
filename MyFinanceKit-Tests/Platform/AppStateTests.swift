@@ -13,11 +13,13 @@ class AppStateTests: XCTestCase {
     func testInitWithParameters() {
         let appState = AppState(networkService: MockNetworkService(),
                                 dataService: MockDataService(),
-                                configService: MockConfigService())
+                                configService: MockConfigService(),
+                                sessionService: MockSessionService())
 
         XCTAssertTrue(appState.networkService is MockNetworkService)
         XCTAssertTrue(appState.dataService is MockDataService)
         XCTAssertTrue(appState.configService is MockConfigService)
+        XCTAssertTrue(appState.sessionService is MockSessionService)
     }
 
 }
