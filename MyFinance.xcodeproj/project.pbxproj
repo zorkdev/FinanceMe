@@ -4450,7 +4450,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = 29MN2WH3Q3;
+				DEVELOPMENT_TEAM = 5837VWT72M;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
@@ -4480,7 +4480,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = 29MN2WH3Q3;
+				DEVELOPMENT_TEAM = 5837VWT72M;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
@@ -4510,7 +4510,7 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_ENTITLEMENTS = "MyFinance-tvOS/Application/MyFinance-tvOS.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 29MN2WH3Q3;
+				DEVELOPMENT_TEAM = 5837VWT72M;
 				INFOPLIST_FILE = "$(SRCROOT)/MyFinance-tvOS/Application/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.attilanemet.MyFinance-tvOS";
@@ -4532,7 +4532,7 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_ENTITLEMENTS = "MyFinance-tvOS/Application/MyFinance-tvOS.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 29MN2WH3Q3;
+				DEVELOPMENT_TEAM = 5837VWT72M;
 				INFOPLIST_FILE = "$(SRCROOT)/MyFinance-tvOS/Application/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.attilanemet.MyFinance-tvOS";
@@ -4553,7 +4553,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = 29MN2WH3Q3;
+				DEVELOPMENT_TEAM = 5837VWT72M;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
@@ -4581,7 +4581,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = 29MN2WH3Q3;
+				DEVELOPMENT_TEAM = 5837VWT72M;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
@@ -4606,7 +4606,7 @@
 			baseConfigurationReference = B008049E88D3C2E449F693F8 /* Pods-MyFinance-iOS-MyFinanceKit-IntegrationTests.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 29MN2WH3Q3;
+				DEVELOPMENT_TEAM = 5837VWT72M;
 				INFOPLIST_FILE = "MyFinanceKit-IntegrationTests/Config/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.attilanemet.MyFinanceKit-IntegrationTests";
@@ -4623,7 +4623,7 @@
 			baseConfigurationReference = E80B1A6C7C92598DBB460F5D /* Pods-MyFinance-iOS-MyFinanceKit-IntegrationTests.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 29MN2WH3Q3;
+				DEVELOPMENT_TEAM = 5837VWT72M;
 				INFOPLIST_FILE = "MyFinanceKit-IntegrationTests/Config/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.attilanemet.MyFinanceKit-IntegrationTests";
@@ -4642,7 +4642,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 29MN2WH3Q3;
+				DEVELOPMENT_TEAM = 5837VWT72M;
 				IBSC_MODULE = MyFinance_watchOS_Extension;
 				INFOPLIST_FILE = "MyFinance-watchOS/Info.plist";
 				PRODUCT_BUNDLE_IDENTIFIER = com.attilanemet.MyFinance.watchkitapp;
@@ -4662,7 +4662,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 29MN2WH3Q3;
+				DEVELOPMENT_TEAM = 5837VWT72M;
 				IBSC_MODULE = MyFinance_watchOS_Extension;
 				INFOPLIST_FILE = "MyFinance-watchOS/Info.plist";
 				PRODUCT_BUNDLE_IDENTIFIER = com.attilanemet.MyFinance.watchkitapp;
@@ -4682,7 +4682,7 @@
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
 				CODE_SIGN_ENTITLEMENTS = "MyFinanceExtension-watchOS/MyFinanceExtension-watchOS.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 29MN2WH3Q3;
+				DEVELOPMENT_TEAM = 5837VWT72M;
 				INFOPLIST_FILE = "$(SRCROOT)/MyFinanceExtension-watchOS/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.attilanemet.MyFinance.watchkitapp.watchkitextension;
@@ -4702,7 +4702,7 @@
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
 				CODE_SIGN_ENTITLEMENTS = "MyFinanceExtension-watchOS/MyFinanceExtension-watchOS.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 29MN2WH3Q3;
+				DEVELOPMENT_TEAM = 5837VWT72M;
 				INFOPLIST_FILE = "$(SRCROOT)/MyFinanceExtension-watchOS/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.attilanemet.MyFinance.watchkitapp.watchkitextension;
@@ -4724,7 +4724,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = 29MN2WH3Q3;
+				DEVELOPMENT_TEAM = 5837VWT72M;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
@@ -4751,7 +4751,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = 29MN2WH3Q3;
+				DEVELOPMENT_TEAM = 5837VWT72M;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
@@ -4779,7 +4779,7 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = 29MN2WH3Q3;
+				DEVELOPMENT_TEAM = 5837VWT72M;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
@@ -4809,7 +4809,7 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = 29MN2WH3Q3;
+				DEVELOPMENT_TEAM = 5837VWT72M;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
@@ -4950,7 +4950,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = "MyFinance-iOS/Application/MyFinance-iOS.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 29MN2WH3Q3;
+				DEVELOPMENT_TEAM = 5837VWT72M;
 				INFOPLIST_FILE = "$(SRCROOT)/MyFinance-iOS/Application/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.attilanemet.MyFinance;
@@ -4969,7 +4969,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = "MyFinance-iOS/Application/MyFinance-iOS.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 29MN2WH3Q3;
+				DEVELOPMENT_TEAM = 5837VWT72M;
 				INFOPLIST_FILE = "$(SRCROOT)/MyFinance-iOS/Application/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.attilanemet.MyFinance;
@@ -4987,7 +4987,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CLANG_ENABLE_OBJC_WEAK = YES;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 29MN2WH3Q3;
+				DEVELOPMENT_TEAM = 5837VWT72M;
 				INFOPLIST_FILE = "MyFinance-Tests-iOS/Config/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -5007,7 +5007,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CLANG_ENABLE_OBJC_WEAK = YES;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 29MN2WH3Q3;
+				DEVELOPMENT_TEAM = 5837VWT72M;
 				INFOPLIST_FILE = "MyFinance-Tests-iOS/Config/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -5025,7 +5025,7 @@
 			baseConfigurationReference = C7CCD183A17160B8240BDEC7 /* Pods-MyFinance-iOS-MyFinanceKit-iOS-Tests.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 29MN2WH3Q3;
+				DEVELOPMENT_TEAM = 5837VWT72M;
 				INFOPLIST_FILE = "MyFinanceKit-Tests/Config/iOS/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.attilanemet.MyFinanceKit-iOS-Tests";
@@ -5042,7 +5042,7 @@
 			baseConfigurationReference = 604EBE23F52463D6AA3FB62B /* Pods-MyFinance-iOS-MyFinanceKit-iOS-Tests.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 29MN2WH3Q3;
+				DEVELOPMENT_TEAM = 5837VWT72M;
 				INFOPLIST_FILE = "MyFinanceKit-Tests/Config/iOS/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.attilanemet.MyFinanceKit-iOS-Tests";
@@ -5064,7 +5064,7 @@
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = 29MN2WH3Q3;
+				DEVELOPMENT_TEAM = 5837VWT72M;
 				INFOPLIST_FILE = "MyFinance-macOS/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.13;
@@ -5086,7 +5086,7 @@
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = 29MN2WH3Q3;
+				DEVELOPMENT_TEAM = 5837VWT72M;
 				INFOPLIST_FILE = "MyFinance-macOS/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.13;
@@ -5106,7 +5106,7 @@
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = 29MN2WH3Q3;
+				DEVELOPMENT_TEAM = 5837VWT72M;
 				INFOPLIST_FILE = "MyFinanceExtension-macOS/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @executable_path/../../../../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.13;
@@ -5127,7 +5127,7 @@
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = 29MN2WH3Q3;
+				DEVELOPMENT_TEAM = 5837VWT72M;
 				INFOPLIST_FILE = "MyFinanceExtension-macOS/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @executable_path/../../../../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.13;
@@ -5147,7 +5147,7 @@
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = 29MN2WH3Q3;
+				DEVELOPMENT_TEAM = 5837VWT72M;
 				INFOPLIST_FILE = "MyFinanceKit-Tests/Config/macOS/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.attilanemet.MyFinanceKit-macOS-Tests";
@@ -5166,7 +5166,7 @@
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = 29MN2WH3Q3;
+				DEVELOPMENT_TEAM = 5837VWT72M;
 				INFOPLIST_FILE = "MyFinanceKit-Tests/Config/macOS/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.attilanemet.MyFinanceKit-macOS-Tests";
@@ -5187,7 +5187,7 @@
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = 29MN2WH3Q3;
+				DEVELOPMENT_TEAM = 5837VWT72M;
 				INFOPLIST_FILE = "MyFinance-Tests-macOS/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.attilanemet.MyFinance-Tests-macOS";
@@ -5207,7 +5207,7 @@
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = 29MN2WH3Q3;
+				DEVELOPMENT_TEAM = 5837VWT72M;
 				INFOPLIST_FILE = "MyFinance-Tests-macOS/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.attilanemet.MyFinance-Tests-macOS";
@@ -5225,7 +5225,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CLANG_ENABLE_OBJC_WEAK = YES;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 29MN2WH3Q3;
+				DEVELOPMENT_TEAM = 5837VWT72M;
 				INFOPLIST_FILE = "MyFinance-Tests-tvOS/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.attilanemet.MyFinance-Tests-tvOS";
@@ -5245,7 +5245,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CLANG_ENABLE_OBJC_WEAK = YES;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 29MN2WH3Q3;
+				DEVELOPMENT_TEAM = 5837VWT72M;
 				INFOPLIST_FILE = "MyFinance-Tests-tvOS/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.attilanemet.MyFinance-Tests-tvOS";
@@ -5264,7 +5264,7 @@
 			buildSettings = {
 				CLANG_ENABLE_OBJC_WEAK = YES;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 29MN2WH3Q3;
+				DEVELOPMENT_TEAM = 5837VWT72M;
 				INFOPLIST_FILE = "MyFinanceKit-Tests/Config/tvOS/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.attilanemet.MyFinanceKit-Tests-tvOS";
@@ -5284,7 +5284,7 @@
 			buildSettings = {
 				CLANG_ENABLE_OBJC_WEAK = YES;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 29MN2WH3Q3;
+				DEVELOPMENT_TEAM = 5837VWT72M;
 				INFOPLIST_FILE = "MyFinanceKit-Tests/Config/tvOS/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.attilanemet.MyFinanceKit-Tests-tvOS";
@@ -5304,7 +5304,7 @@
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = "MyFinanceExtension-iOS/MyFinanceExtension-iOS.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 29MN2WH3Q3;
+				DEVELOPMENT_TEAM = 5837VWT72M;
 				INFOPLIST_FILE = "$(SRCROOT)/MyFinanceExtension-iOS/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.attilanemet.MyFinance.MyFinanceExtension;
@@ -5322,7 +5322,7 @@
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = "MyFinanceExtension-iOS/MyFinanceExtension-iOS.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 29MN2WH3Q3;
+				DEVELOPMENT_TEAM = 5837VWT72M;
 				INFOPLIST_FILE = "$(SRCROOT)/MyFinanceExtension-iOS/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.attilanemet.MyFinance.MyFinanceExtension;

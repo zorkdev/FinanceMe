@@ -22,13 +22,13 @@
 	<string>1</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
+	<key>TeamID</key>
+	<string>$(AppIdentifierPrefix)</string>
 	<key>UIRequiredDeviceCapabilities</key>
 	<array>
 		<string>arm64</string>
 	</array>
 	<key>UIUserInterfaceStyle</key>
 	<string>Automatic</string>
-	<key>TeamID</key>
-	<string>$(AppIdentifierPrefix)</string>
 </dict>
 </plist>
