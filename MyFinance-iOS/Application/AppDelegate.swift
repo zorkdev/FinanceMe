@@ -13,7 +13,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
         if authViewModel == nil { authViewModel = AuthViewModel(serviceProvider: appState) }
         appState.navigator.createAuthStack(viewModel: authViewModel)
-        authViewModel.authenticate()
+
+        DispatchQueue.main.async {
+            self.authViewModel.authenticate()
+        }
 
         return true
     }
