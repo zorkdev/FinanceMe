@@ -16,7 +16,7 @@ class AppStatewatchOS: AppState, AppStatewatchOSType {
     override init() {
         let configService = ConfigDefaultService()
         let dataService = KeychainDataService(configService: configService)
-        let sessionService = SessionDefaultService(dataService: dataService)
+        let sessionService = SessionFileService(dataService: dataService)
         self.complicationService = ComplicationService(wcSession: WCSession.default,
                                                        dataService: dataService)
         let networkService = NetworkService(networkRequestable: URLSession.shared,
