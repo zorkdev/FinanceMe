@@ -41,6 +41,7 @@ abstract_target 'MyFinance' do
         target 'MyFinanceExtension-macOS'
         target 'MyFinanceKit-macOS'
         target 'MyFinanceKit-macOS-Tests'
+        target 'MyFinanceKit-macOS-Unsigned-Tests'
         target 'MyFinance-Tests-macOS'
     end
 end
