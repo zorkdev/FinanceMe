@@ -2,6 +2,13 @@
 
 class FormattersTests: XCTestCase {
 
+    let calendar: Calendar = {
+        var calendar = Calendar(identifier: .gregorian)
+        calendar.locale = Locale(identifier: "en_GB")
+        calendar.timeZone = TimeZone(identifier: "Europe/London")!
+        return calendar
+    }()
+
     let date: Date = {
         var components = DateComponents()
         components.year = 2018
@@ -11,7 +18,11 @@ class FormattersTests: XCTestCase {
         components.minute = 30
         components.second = 10
 
-        return Calendar.current.date(from: components)!
+        var calendar = Calendar(identifier: .gregorian)
+        calendar.locale = Locale(identifier: "en_GB")
+        calendar.timeZone = TimeZone(identifier: "Europe/London")!
+
+        return calendar.date(from: components)!
     }()
 
     let positiveAmount = NSNumber(value: 100.0)
@@ -97,7 +108,7 @@ class FormattersTests: XCTestCase {
     }
 
     func testFormatRelativeThisYear() {
-        let date = Calendar.current.date(byAdding: .day, value: -2, to: Date())!
+        let date = calendar.date(byAdding: .day, value: -2, to: Date())!
 
         guard date.isToday == false, date.isYesterday == false, date.isThisYear == true else { return }
 

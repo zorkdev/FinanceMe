@@ -2,6 +2,13 @@
 
 class DateExtensionsTests: XCTestCase {
 
+    let calendar: Calendar = {
+        var calendar = Calendar(identifier: .gregorian)
+        calendar.locale = Locale(identifier: "en_GB")
+        calendar.timeZone = TimeZone(identifier: "Europe/London")!
+        return calendar
+    }()
+
     override func tearDown() {
         super.tearDown()
 
@@ -16,7 +23,7 @@ class DateExtensionsTests: XCTestCase {
         var components = DateComponents()
         components.day = -1
 
-        let yesterday = Calendar.current.date(byAdding: components, to: Date())!
+        let yesterday = calendar.date(byAdding: components, to: Date())!
 
         XCTAssertTrue(yesterday.isYesterday)
     }
@@ -32,10 +39,10 @@ class DateExtensionsTests: XCTestCase {
     func testStartOfDay() {
         let now = Date()
 
-        let components = Calendar.current.dateComponents([.year, .month, .day],
+        let components = calendar.dateComponents([.year, .month, .day],
                                                          from: now)
 
-        let startOfDay = Calendar.current.date(from: components)
+        let startOfDay = calendar.date(from: components)
 
         XCTAssertEqual(now.startOfDay, startOfDay)
     }
@@ -43,10 +50,10 @@ class DateExtensionsTests: XCTestCase {
     func testStartOfWeek() {
         let now = Date()
 
-        let components = Calendar.current.dateComponents([.yearForWeekOfYear, .weekOfYear],
+        let components = calendar.dateComponents([.yearForWeekOfYear, .weekOfYear],
                                                          from: now)
 
-        let startOfWeek = Calendar.current.date(from: components)
+        let startOfWeek = calendar.date(from: components)
 
         XCTAssertEqual(now.startOfWeek, startOfWeek)
     }
@@ -54,10 +61,10 @@ class DateExtensionsTests: XCTestCase {
     func testStartOfYear() {
         let now = Date()
 
-        let components = Calendar.current.dateComponents([.year],
+        let components = calendar.dateComponents([.year],
                                                          from: now)
 
-        let startOfYear = Calendar.current.date(from: components)
+        let startOfYear = calendar.date(from: components)
 
         XCTAssertEqual(now.startOfYear, startOfYear)
     }
@@ -65,14 +72,14 @@ class DateExtensionsTests: XCTestCase {
     func testEndOfWeek() {
         let now = Date()
 
-        let components = Calendar.current.dateComponents([.yearForWeekOfYear, .weekOfYear],
+        let components = calendar.dateComponents([.yearForWeekOfYear, .weekOfYear],
                                                          from: now)
-        let startOfWeek = Calendar.current.date(from: components)!
+        let startOfWeek = calendar.date(from: components)!
 
         var newComponents = DateComponents()
         newComponents.weekOfYear = 1
 
-        let endOfWeek = Calendar.current.date(byAdding: newComponents, to: startOfWeek)
+        let endOfWeek = calendar.date(byAdding: newComponents, to: startOfWeek)
 
         XCTAssertEqual(now.endOfWeek, endOfWeek)
     }
@@ -83,7 +90,7 @@ class DateExtensionsTests: XCTestCase {
         var components = DateComponents()
         components.month = -1
 
-        let oneMonthAgo = Calendar.current.date(byAdding: components, to: now)
+        let oneMonthAgo = calendar.date(byAdding: components, to: now)
 
         XCTAssertEqual(now.oneMonthAgo, oneMonthAgo)
     }
@@ -93,7 +100,7 @@ class DateExtensionsTests: XCTestCase {
         components.year = 2018
         components.month = 1
 
-        let january = Calendar.current.date(from: components)!
+        let january = calendar.date(from: components)!
 
         XCTAssertEqual(january.daysInMonth, 31)
     }
@@ -103,7 +110,7 @@ class DateExtensionsTests: XCTestCase {
         components.year = 2018
         components.month = 1
 
-        let january = Calendar.current.date(from: components)!
+        let january = calendar.date(from: components)!
 
         XCTAssertEqual(january.weeksInMonth, 31 / 7)
     }
@@ -114,7 +121,7 @@ class DateExtensionsTests: XCTestCase {
         var components = DateComponents()
         components.day = -1
 
-        let dayBefore = Calendar.current.date(byAdding: components, to: now)
+        let dayBefore = calendar.date(byAdding: components, to: now)
 
         XCTAssertEqual(now.dayBefore, dayBefore)
     }
@@ -130,10 +137,10 @@ class DateExtensionsTests: XCTestCase {
         components.year = 2018
         components.month = 1
         components.day = 1
-        let january1 = Calendar.current.date(from: components)!
+        let january1 = calendar.date(from: components)!
 
         components.day = 10
-        let january10 = Calendar.current.date(from: components)!
+        let january10 = calendar.date(from: components)!
 
         XCTAssertEqual(january10.numberOfDays(from: january1), 9)
     }
@@ -145,11 +152,11 @@ class DateExtensionsTests: XCTestCase {
         components.year = 2018
         components.month = 1
         components.day = 10
-        let january10 = Calendar.current.date(from: components)!
+        let january10 = calendar.date(from: components)!
 
         components.month = 2
         components.day = day
-        let february5 = Calendar.current.date(from: components)!
+        let february5 = calendar.date(from: components)!
 
         XCTAssertEqual(january10.next(day: day, direction: .forward), february5)
     }

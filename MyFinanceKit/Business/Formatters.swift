@@ -32,6 +32,7 @@ public struct Formatters {
 
     public static let date: DateFormatter = {
         let formatter = DateFormatter()
+        formatter.locale = locale
         formatter.dateFormat = "d MMM yyyy"
 
         return formatter
@@ -39,6 +40,7 @@ public struct Formatters {
 
     public static let dateTime: DateFormatter = {
         let formatter = DateFormatter()
+        formatter.locale = locale
         formatter.dateFormat = "d MMM yyyy' at 'H:mm"
 
         return formatter
@@ -46,6 +48,7 @@ public struct Formatters {
 
     public static let dateWithoutYear: DateFormatter = {
         let formatter = DateFormatter()
+        formatter.locale = locale
         formatter.dateFormat = "EEEE, d MMMM"
 
         return formatter
@@ -53,6 +56,7 @@ public struct Formatters {
 
     public static let dateWithYear: DateFormatter = {
         let formatter = DateFormatter()
+        formatter.locale = locale
         formatter.dateFormat = "EEEE, d MMMM yyyy"
 
         return formatter
@@ -60,6 +64,7 @@ public struct Formatters {
 
     public static let month: DateFormatter = {
         let formatter = DateFormatter()
+        formatter.locale = locale
         formatter.dateFormat = "MMMM"
 
         return formatter
@@ -67,6 +72,7 @@ public struct Formatters {
 
     public static let monthShort: DateFormatter = {
         let formatter = DateFormatter()
+        formatter.locale = locale
         formatter.dateFormat = "MMM"
 
         return formatter
@@ -74,6 +80,7 @@ public struct Formatters {
 
     public static let year: DateFormatter = {
         let formatter = DateFormatter()
+        formatter.locale = locale
         formatter.dateFormat = "yyyy"
 
         return formatter
@@ -120,7 +127,7 @@ public struct Formatters {
 
     public static let currencyNoFractions: NumberFormatter = {
         let formatter = NumberFormatter()
-        formatter.locale = Formatters.locale
+        formatter.locale = locale
         formatter.numberStyle = .currency
         formatter.maximumFractionDigits = 0
 
@@ -131,18 +138,18 @@ public struct Formatters {
         let amountString = from
             .components(separatedBy: .whitespaces)
             .joined()
-            .replacingOccurrences(of: Formatters.currencySymbol, with: "")
+            .replacingOccurrences(of: currencySymbol, with: "")
 
         return Double(amountString)
     }
 
     public static func sanitise(amount: String) -> String {
         var amountTemp = amount
-        amountTemp = amountTemp.replacingOccurrences(of: ",", with: Formatters.decimalSeparator)
+        amountTemp = amountTemp.replacingOccurrences(of: ",", with: decimalSeparator)
 
-        if amountTemp.contains(Formatters.currencySymbol) == false {
-            amountTemp.insert(Character(Formatters.currencySymbol), at: amountTemp.startIndex)
-        } else if amountTemp == Formatters.currencySymbol {
+        if amountTemp.contains(currencySymbol) == false {
+            amountTemp.insert(Character(currencySymbol), at: amountTemp.startIndex)
+        } else if amountTemp == currencySymbol {
             return ""
         }
 
