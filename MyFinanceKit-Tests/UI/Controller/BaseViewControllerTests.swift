@@ -2,7 +2,7 @@
 
 class BaseViewControllerTests: XCTestCase {
 
-    class TestViewController: BaseViewController, KeyboardManageable {}
+    class TestViewController: BaseViewController {}
 
     var testViewController: TestViewController?
 
@@ -40,9 +40,4 @@ class BaseViewControllerTests: XCTestCase {
         testViewController?.textFieldDidEndEditing(UITextField())
     }
 
-    func testKeyboardChanged() {
-        let textField = UITextField()
-        testViewController?.view.addSubview(textField)
-        textField.becomeFirstResponder()
-    }
 }

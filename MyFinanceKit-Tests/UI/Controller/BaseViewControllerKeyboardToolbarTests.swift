@@ -2,22 +2,30 @@
 
 class BaseViewControllerKeyboardToolbarTests: XCTestCase {
 
-    var baseViewController: BaseViewController?
+    class TestViewController: BaseViewController, KeyboardManageable {}
+
+    var testViewController: TestViewController?
 
     override func setUp() {
         super.setUp()
 
-        baseViewController = BaseViewController()
-        UIApplication.shared.keyWindow?.rootViewController = baseViewController
-        _ = baseViewController?.view
+        testViewController = TestViewController()
+        UIApplication.shared.keyWindow?.rootViewController = testViewController
+        _ = testViewController?.view
+    }
+
+    func testKeyboardChanged() {
+        let textField = UITextField()
+        testViewController?.view.addSubview(textField)
+        textField.becomeFirstResponder()
     }
 
     func testKeyboardToolbar() {
-        XCTAssertNotNil(baseViewController?.keyBoardToolbar)
+        XCTAssertNotNil(testViewController?.keyBoardToolbar)
     }
 
     func testDoneTapped() {
-        baseViewController?.doneTapped()
+        testViewController?.doneTapped()
     }
 
 }
