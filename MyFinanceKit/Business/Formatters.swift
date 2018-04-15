@@ -8,6 +8,10 @@ public struct Formatters {
         return locale.currencySymbol ?? "£"
     }()
 
+    public static let decimalSeparator = {
+        return locale.decimalSeparator ?? "."
+    }()
+
     public static let apiDate: DateFormatter = {
         let formatter = DateFormatter()
         formatter.timeZone = apiTimeZone
@@ -122,6 +126,28 @@ public struct Formatters {
 
         return formatter
     }()
+
+    public static func createAmount(from: String) -> Double? {
+        let amountString = from
+            .components(separatedBy: .whitespaces)
+            .joined()
+            .replacingOccurrences(of: Formatters.currencySymbol, with: "")
+
+        return Double(amountString)
+    }
+
+    public static func sanitise(amount: String) -> String {
+        var amountTemp = amount
+        amountTemp = amountTemp.replacingOccurrences(of: ",", with: Formatters.decimalSeparator)
+
+        if amountTemp.contains(Formatters.currencySymbol) == false {
+            amountTemp.insert(Character(Formatters.currencySymbol), at: amountTemp.startIndex)
+        } else if amountTemp == Formatters.currencySymbol {
+            return ""
+        }
+
+        return amountTemp
+    }
 
     public static func formatRelative(date: Date) -> String {
         switch date {

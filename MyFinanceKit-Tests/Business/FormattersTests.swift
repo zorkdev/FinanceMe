@@ -17,6 +17,14 @@ class FormattersTests: XCTestCase {
     let positiveAmount = NSNumber(value: 100.0)
     let negativeAmount = NSNumber(value: -100.0)
 
+    func testCurrencySymbol() {
+        XCTAssertEqual(Formatters.currencySymbol, "£")
+    }
+
+    func testDecimalSeparator() {
+        XCTAssertEqual(Formatters.decimalSeparator, ".")
+    }
+
     func testAPIDateFormatter() {
         XCTAssertEqual(Formatters.apiDate.string(from: date), "2018-01-07")
     }
@@ -98,6 +106,22 @@ class FormattersTests: XCTestCase {
         let expectedString = dateFormatter.string(from: date)
 
         XCTAssertEqual(Formatters.formatRelative(date: date), expectedString)
+    }
+
+    func testCreateAmount() {
+        let amountString = "£12.21"
+
+        XCTAssertEqual(Formatters.createAmount(from: amountString), 12.21)
+    }
+
+    func testSanitiseAmount() {
+        var amountString = "12,21"
+
+        XCTAssertEqual(Formatters.sanitise(amount: amountString), "£12.21")
+
+        amountString = "£"
+
+        XCTAssertEqual(Formatters.sanitise(amount: amountString), "")
     }
 
     func testFormatRelativeDefault() {

@@ -78,7 +78,7 @@ extension SettingsViewModel: SettingsViewModelType {
 
     func shouldEnableSaveButton(displayModel: SettingsDisplayModel) -> Bool {
         if isEditing {
-        guard let largeTransaction = createAmount(from: displayModel.largeTransaction),
+        guard let largeTransaction = Formatters.createAmount(from: displayModel.largeTransaction),
             largeTransaction != 0,
             displayModel.name.components(separatedBy: .whitespaces).joined() != "" else { return false }
         }
@@ -98,7 +98,7 @@ extension SettingsViewModel: SettingsViewModelType {
     func saveButtonTapped(with displayModel: SettingsDisplayModel?) {
         if isEditing {
             guard let displayModel = displayModel,
-                let largeTransaction = createAmount(from: displayModel.largeTransaction),
+                let largeTransaction = Formatters.createAmount(from: displayModel.largeTransaction),
                 let payday = Int(displayModel.payday) else { return }
 
             let user = User(name: displayModel.name,
@@ -114,15 +114,9 @@ extension SettingsViewModel: SettingsViewModelType {
     }
 
     func formatted(amount: String, original: String) -> String {
-        var amountTemp = amount
+        let sanitisedAmount = Formatters.sanitise(amount: amount)
 
-        if amountTemp.contains(Formatters.currencySymbol) == false {
-            amountTemp.insert(Character(Formatters.currencySymbol), at: amountTemp.startIndex)
-        } else if amountTemp == Formatters.currencySymbol {
-            return ""
-        }
-
-        return validate(amount: amountTemp) ? amountTemp : original
+        return validate(amount: sanitisedAmount) ? sanitisedAmount : original
     }
 
     func numberOfComponentsInPickerView() -> Int {
@@ -166,15 +160,6 @@ extension SettingsViewModel {
 
     private func validate(amount: String) -> Bool {
         return Validators.validate(amount: amount)
-    }
-
-    private func createAmount(from: String) -> Double? {
-        let amountString = from
-            .components(separatedBy: .whitespaces)
-            .joined()
-            .replacingOccurrences(of: Formatters.currencySymbol, with: "")
-
-        return Double(amountString)
     }
 
     private func save(user: User) {

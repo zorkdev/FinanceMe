@@ -1,10 +1,12 @@
+private let calendar: Calendar = {
+    var calendar = Calendar(identifier: .gregorian)
+    calendar.locale = Locale(identifier: "en_GB")
+    return calendar
+}()
+
 public extension Date {
 
     static let daysInWeek = 7
-
-    private var calendar: Calendar {
-        return Calendar.autoupdatingCurrent
-    }
 
     var isToday: Bool {
         return calendar.isDateInToday(self)

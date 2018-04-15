@@ -1,3 +1,5 @@
+public protocol KeyboardManageable {}
+
 extension BaseViewController {
 
     open override var preferredStatusBarStyle: UIStatusBarStyle {
@@ -7,13 +9,13 @@ extension BaseViewController {
     open override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
 
-        registerForKeyboardNotifications()
+        if self is KeyboardManageable { registerForKeyboardNotifications() }
     }
 
     open override func viewDidDisappear(_ animated: Bool) {
         super.viewDidDisappear(animated)
 
-        deRegisterForKeyboardNotifications()
+        if self is KeyboardManageable { deRegisterForKeyboardNotifications() }
     }
 
 }

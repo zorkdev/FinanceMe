@@ -1,4 +1,4 @@
-class LoginViewController: BaseViewController {
+class LoginViewController: BaseViewController, KeyboardManageable {
 
     @IBOutlet private weak var emailField: UITextField!
     @IBOutlet private weak var passwordField: UITextField!
@@ -65,18 +65,6 @@ extension LoginViewController {
 
     @IBAction private func textFieldValueChanged(_ sender: UITextField) {
         updateLoginButton()
-    }
-
-    private func textField(_ textField: UITextField,
-                           shouldChangeCharactersIn range: NSRange,
-                           replacementString string: String) -> Bool {
-        guard textField == emailField,
-            let originalText = textField.text,
-            let range = Range(range, in: originalText)  else { return true }
-
-        let text = originalText.replacingCharacters(in: range, with: string)
-
-        return viewModel.validate(email: text)
     }
 
 }

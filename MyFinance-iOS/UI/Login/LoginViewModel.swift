@@ -8,7 +8,6 @@ protocol LoginViewModelType: ViewModelType {
 
     func shouldEnableLoginButton(displayModel: LoginDisplayModel) -> Bool
     func loginButtonTapped(with displayModel: LoginDisplayModel)
-    func validate(email: String) -> Bool
 
 }
 
@@ -57,11 +56,6 @@ extension LoginViewModel: LoginViewModelType {
         login(credentials: credentials)
     }
 
-    func validate(email: String) -> Bool {
-        //return Validators.validate(amount: amount)
-        return true
-    }
-
 }
 
 // MARK: - Private methods
@@ -69,7 +63,7 @@ extension LoginViewModel: LoginViewModelType {
 extension LoginViewModel {
 
     private func validate(fullEmail: String) -> Bool {
-        return true
+        return Validators.validate(fullEmail: fullEmail)
     }
 
     private func login(credentials: Credentials) {

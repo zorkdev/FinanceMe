@@ -1,4 +1,4 @@
-class SettingsViewController: BaseViewController {
+class SettingsViewController: BaseViewController, KeyboardManageable {
 
     @IBOutlet private weak var nameField: UITextField!
     @IBOutlet private weak var largeTransactionField: UITextField!

@@ -2,29 +2,31 @@
 
 class BaseViewControllerTests: XCTestCase {
 
-    var baseViewController: BaseViewController?
+    class TestViewController: BaseViewController, KeyboardManageable {}
+
+    var testViewController: TestViewController?
 
     override func setUp() {
         super.setUp()
 
-        baseViewController = BaseViewController()
+        testViewController = TestViewController()
         let window = UIWindow()
         window.makeKeyAndVisible()
-        window.rootViewController = baseViewController
-        _ = baseViewController?.view
+        window.rootViewController = testViewController
+        _ = testViewController?.view
     }
 
     func testViewWillDisappear() {
-        baseViewController?.viewWillDisappear(true)
+        testViewController?.viewWillDisappear(true)
     }
 
     func testPresentAndDismiss() {
         let newExpectation = expectation(description: "Expectation fulfilled")
 
-        let viewController = BaseViewController()
-        baseViewController?.present(viewController: viewController, animated: false)
+        let viewController = TestViewController()
+        testViewController?.present(viewController: viewController, animated: false)
 
-        XCTAssertTrue(baseViewController?.presented is BaseViewController)
+        XCTAssertTrue(testViewController?.presented is BaseViewController)
 
         _ = viewController.dismiss()
             .ensure { newExpectation.fulfill() }
@@ -34,13 +36,13 @@ class BaseViewControllerTests: XCTestCase {
     }
 
     func testTextFieldDelegate() {
-        XCTAssertTrue(baseViewController?.textFieldShouldReturn(UITextField()) == true)
-        baseViewController?.textFieldDidEndEditing(UITextField())
+        XCTAssertTrue(testViewController?.textFieldShouldReturn(UITextField()) == true)
+        testViewController?.textFieldDidEndEditing(UITextField())
     }
 
     func testKeyboardChanged() {
         let textField = UITextField()
-        baseViewController?.view.addSubview(textField)
+        testViewController?.view.addSubview(textField)
         textField.becomeFirstResponder()
     }
 }

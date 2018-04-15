@@ -1,4 +1,4 @@
-class AddTransactionViewController: BaseViewController {
+class AddTransactionViewController: BaseViewController, KeyboardManageable {
 
     @IBOutlet private weak var amountField: UITextField!
     @IBOutlet private weak var narrativeField: UITextField!
