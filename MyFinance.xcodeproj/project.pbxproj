@@ -876,6 +876,8 @@
 		9A3CB7EB203074CD008AF158 /* WatchService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchService.swift; sourceTree = "<group>"; };
 		9A42F747203F9CB5005C3185 /* AppStatemacOS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStatemacOS.swift; sourceTree = "<group>"; };
 		9A42F74A203FA1B4005C3185 /* TodayDisplayModelTypeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayDisplayModelTypeTests.swift; sourceTree = "<group>"; };
+		9A44BECE208567BC00B0A8D3 /* CODE_OF_CONDUCT.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = CODE_OF_CONDUCT.md; sourceTree = "<group>"; };
+		9A44BECF208567C500B0A8D3 /* LICENSE */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		9A44C4B4205DA05B00BFC443 /* UITextField+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+Extensions.swift"; sourceTree = "<group>"; };
 		9A4F55052023C3FC00DBF68F /* Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Bridging-Header.h"; sourceTree = "<group>"; };
 		9A4F55062023C4A700DBF68F /* Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Bridging-Header.h"; sourceTree = "<group>"; };
@@ -956,7 +958,7 @@
 		9A856185202791E100A26F12 /* config.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = config.json; sourceTree = SOURCE_ROOT; };
 		9A8561882027920600A26F12 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = SOURCE_ROOT; };
 		9A8561892027920D00A26F12 /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text; path = .swiftlint.yml; sourceTree = SOURCE_ROOT; };
-		9A85618A2027921800A26F12 /* Podfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9A85618A2027921800A26F12 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; path = Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		9A85618B2027921F00A26F12 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = SOURCE_ROOT; };
 		9A8561A32027A68F00A26F12 /* HomeCurrentMonthCellModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCurrentMonthCellModel.swift; sourceTree = "<group>"; };
 		9A8561A52027A71300A26F12 /* HomeCurrentMonthCellDisplayModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCurrentMonthCellDisplayModel.swift; sourceTree = "<group>"; };
@@ -1858,6 +1860,8 @@
 			isa = PBXGroup;
 			children = (
 				9A85618B2027921F00A26F12 /* README.md */,
+				9A44BECE208567BC00B0A8D3 /* CODE_OF_CONDUCT.md */,
+				9A44BECF208567C500B0A8D3 /* LICENSE */,
 				9A856185202791E100A26F12 /* config.json */,
 				9A85618A2027921800A26F12 /* Podfile */,
 				9A8561882027920600A26F12 /* .gitignore */,
