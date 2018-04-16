@@ -1,0 +1,13 @@
+ignore:
+- "MyFinance-macOS"
+- "MyFinance-watchOS"
+- "MyFinance-Tests-iOS"
+- "MyFinance-Tests-tvOS"
+- "MyFinance-Tests-macOS"
+- "MyFinanceExtension-iOS"
+- "MyFinanceExtension-macOS"
+- "MyFinanceExtension-watchOS"
+- "MyFinanceKit-IntegrationTests"
+- "MyFinanceKit-Tests"
+- "MyFinanceTestKit"
+- "Pods"
