@@ -28,6 +28,12 @@ class FormattersTests: XCTestCase {
     let positiveAmount = NSNumber(value: 100.0)
     let negativeAmount = NSNumber(value: -100.0)
 
+    override func setUp() {
+        super.setUp()
+
+        NSTimeZone.default = TimeZone(identifier: "Europe/London")!
+    }
+
     func testCurrencySymbol() {
         XCTAssertEqual(Formatters.currencySymbol, "£")
     }

@@ -9,10 +9,10 @@ class DateExtensionsTests: XCTestCase {
         return calendar
     }()
 
-    override func tearDown() {
-        super.tearDown()
+    override func setUp() {
+        super.setUp()
 
-        NSTimeZone.resetSystemTimeZone()
+        NSTimeZone.default = TimeZone(identifier: "Europe/London")!
     }
 
     func testIsToday() {
