@@ -3,7 +3,6 @@ import PromiseKit
 
 class MockBaseNavigator: BaseNavigatorType {
 
-    var appState: AppStateType!
     var window: WindowType?
     var viewControllers: [ViewControllerType] = []
 

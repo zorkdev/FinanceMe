@@ -1,6 +1,5 @@
 public protocol BaseNavigatorType {
 
-    var appState: AppStateType! { get set }
     var window: WindowType? { get set }
     var viewControllers: [ViewControllerType] { get set }
 

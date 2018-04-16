@@ -10,7 +10,9 @@ class BaseViewControllerKeyboardToolbarTests: XCTestCase {
         super.setUp()
 
         testViewController = TestViewController()
-        UIApplication.shared.keyWindow?.rootViewController = testViewController
+        let window = UIWindow()
+        window.makeKeyAndVisible()
+        window.rootViewController = testViewController
         _ = testViewController?.view
     }
 

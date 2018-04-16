@@ -27,7 +27,7 @@ protocol SettingsViewModelType: ViewModelType {
 
 }
 
-class SettingsViewModel {
+class SettingsViewModel: ServiceClient {
 
     typealias ServiceProvider = NavigatorProvider
         & NetworkServiceProvider

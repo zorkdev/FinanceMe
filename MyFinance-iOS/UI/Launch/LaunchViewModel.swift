@@ -4,7 +4,7 @@ protocol LaunchViewModelType: ViewModelType {
 
 }
 
-class LaunchViewModel {
+class LaunchViewModel: ServiceClient {
 
     typealias ServiceProvider = NavigatorProvider & DataServiceProvider & SessionServiceProvider
     let serviceProvider: ServiceProvider

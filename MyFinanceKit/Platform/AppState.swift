@@ -1,3 +1,10 @@
+public protocol ServiceClient {
+
+    associatedtype ServiceProvider
+    var serviceProvider: ServiceProvider { get }
+
+}
+
 public protocol NetworkServiceProvider {
 
     var networkService: NetworkServiceType { get }

@@ -7,17 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		055A915AFA3824A7460FD3A8 /* Pods_MyFinance_iOS_MyFinanceKit_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C6892B68EC26AE07C3CA5EC9 /* Pods_MyFinance_iOS_MyFinanceKit_iOS.framework */; };
-		0CEB5B2645D55BB30BF30358 /* Pods_MyFinance_iOS_MyFinance_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB6CB1440466B30927CA9A29 /* Pods_MyFinance_iOS_MyFinance_iOS.framework */; };
-		303BB4698944490FE9297BF8 /* Pods_MyFinance_tvOS_MyFinance_tvOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F51C2C4D4AC0582B151157AE /* Pods_MyFinance_tvOS_MyFinance_tvOS.framework */; };
-		320F3290B1CE93F3AFA6A5B4 /* Pods_MyFinance_tvOS_MyFinance_Tests_tvOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 45FFBFDFCED8A7B0A3C3C53E /* Pods_MyFinance_tvOS_MyFinance_Tests_tvOS.framework */; };
-		3352ECF8B6D82DDD5F459495 /* Pods_MyFinance_watchOS_MyFinanceExtension_watchOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9990EA6FC7E88C79C350B2C7 /* Pods_MyFinance_watchOS_MyFinanceExtension_watchOS.framework */; };
-		43DCADA4C020B52177F4A8B8 /* Pods_MyFinance_iOS_MyFinance_Tests_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B12880C4555D6838E9EF306 /* Pods_MyFinance_iOS_MyFinance_Tests_iOS.framework */; };
-		53C320DE596E0DDAA8C9A563 /* Pods_MyFinance_watchOS_MyFinanceKit_watchOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C12538FAB8FD2A459C138F6F /* Pods_MyFinance_watchOS_MyFinanceKit_watchOS.framework */; };
-		666FF7C8DC7AAE8C08265510 /* Pods_MyFinance_watchOS_MyFinance_watchOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAE0140E56957BEC3F23A61C /* Pods_MyFinance_watchOS_MyFinance_watchOS.framework */; };
-		6DC90F28A7DABA6071FA0014 /* Pods_MyFinance_iOS_MyFinanceExtension_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5F9A63CFD7EF62E12AE4886C /* Pods_MyFinance_iOS_MyFinanceExtension_iOS.framework */; };
-		8611EADDB1E2A1836F1649EC /* Pods_MyFinance_iOS_MyFinanceKit_iOS_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EEED47369C41EF4D1ABBAA5A /* Pods_MyFinance_iOS_MyFinanceKit_iOS_Tests.framework */; };
-		8D19919D51253CAB1217E611 /* Pods_MyFinance_macOS_MyFinanceKit_macOS_Unsigned_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 402ACA20B26921BF30FE4C7E /* Pods_MyFinance_macOS_MyFinanceKit_macOS_Unsigned_Tests.framework */; };
+		100A822E412A767D395614BB /* Pods_MyFinance_macOS_MyFinanceKit_macOS_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DA5B0E02A565BD73C387CA3 /* Pods_MyFinance_macOS_MyFinanceKit_macOS_Tests.framework */; };
+		13C6A73302D46E73FE7B51D3 /* Pods_MyFinance_watchOS_MyFinanceExtension_watchOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F289C4CE684A98DF3F6609C6 /* Pods_MyFinance_watchOS_MyFinanceExtension_watchOS.framework */; };
+		1C9D0E4C1F0438DAA20296AC /* Pods_MyFinance_iOS_MyFinanceExtension_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E6EA8DC0A2B844063063D42F /* Pods_MyFinance_iOS_MyFinanceExtension_iOS.framework */; };
+		22314155D52D5E27A79E4579 /* Pods_MyFinance_tvOS_MyFinance_Tests_tvOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2374DB55C71CBF1F53CCC3AE /* Pods_MyFinance_tvOS_MyFinance_Tests_tvOS.framework */; };
+		274F77F823A2BEFB7CC8225E /* Pods_MyFinance_macOS_MyFinance_Tests_macOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9462ADEE979CD68EEC01987 /* Pods_MyFinance_macOS_MyFinance_Tests_macOS.framework */; };
+		5E15BE6CDB13E1D8A18BD513 /* Pods_MyFinance_macOS_MyFinanceExtension_macOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74FC869DEACDFD6D9E71A90E /* Pods_MyFinance_macOS_MyFinanceExtension_macOS.framework */; };
+		69268E74E7AB1DFD063EEBF3 /* Pods_MyFinance_iOS_MyFinance_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4AAF8D7EC1D5BBD273E0622A /* Pods_MyFinance_iOS_MyFinance_iOS.framework */; };
+		71ED7AAA75351043B77A4356 /* Pods_MyFinance_iOS_MyFinanceKit_IntegrationTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E4C7644B9FDF0C85E1E925C6 /* Pods_MyFinance_iOS_MyFinanceKit_IntegrationTests.framework */; };
+		908C1B90C8998980F68996BF /* Pods_MyFinance_macOS_MyFinanceKit_macOS_Unsigned_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC91FB440B587B652B203531 /* Pods_MyFinance_macOS_MyFinanceKit_macOS_Unsigned_Tests.framework */; };
 		9A014490204264F800443585 /* AuthViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A01448F204264F800443585 /* AuthViewModelTests.swift */; };
 		9A0C474D204B65DB0011D817 /* Credentials.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A0C474C204B65DB0011D817 /* Credentials.swift */; };
 		9A0C474E204B65DB0011D817 /* Credentials.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A0C474C204B65DB0011D817 /* Credentials.swift */; };
@@ -535,15 +533,16 @@
 		9AEEC8AD2042696800ED7627 /* MockAuthViewModelDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AEEC8AC2042696800ED7627 /* MockAuthViewModelDelegate.swift */; };
 		9AFC00462071748F00826D33 /* LaunchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AFC00452071748F00826D33 /* LaunchViewController.swift */; };
 		9AFC0048207175BB00826D33 /* LaunchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AFC0047207175BB00826D33 /* LaunchViewModel.swift */; };
-		BBC5A5547D0781C573BFDB13 /* Pods_MyFinance_macOS_MyFinanceKit_macOS_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1AC4539514CBD7EC7BAF1475 /* Pods_MyFinance_macOS_MyFinanceKit_macOS_Tests.framework */; };
-		C242C4EF085B137AD0C67EB4 /* Pods_MyFinance_tvOS_MyFinanceKit_tvOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E71D62F8FA81161772D2548 /* Pods_MyFinance_tvOS_MyFinanceKit_tvOS.framework */; };
-		C41953C68CB3F32F3E400D0E /* Pods_MyFinance_macOS_MyFinance_macOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D12ECA6763403A32015CFB7 /* Pods_MyFinance_macOS_MyFinance_macOS.framework */; };
-		C77BD962978D93AD2285E535 /* Pods_MyFinance_watchOS_MyFinanceExtension_watchOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A2F72D52078E65E00B16F7C /* Pods_MyFinance_watchOS_MyFinanceExtension_watchOS.framework */; };
-		CF1DE6BCBAA9A2E0FBCE786F /* Pods_MyFinance_macOS_MyFinance_Tests_macOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 318A3499250893FE5FE2FFB7 /* Pods_MyFinance_macOS_MyFinance_Tests_macOS.framework */; };
-		D3900C47AF95713829627096 /* Pods_MyFinance_macOS_MyFinanceKit_macOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D92DB258D0260909E4D930C /* Pods_MyFinance_macOS_MyFinanceKit_macOS.framework */; };
-		D6DD7D2425CA91649F9A30E0 /* Pods_MyFinance_iOS_MyFinanceKit_IntegrationTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 837E698B1836AE75332FD4D6 /* Pods_MyFinance_iOS_MyFinanceKit_IntegrationTests.framework */; };
-		DC2E7679A0A81641E95B459A /* Pods_MyFinance_macOS_MyFinanceExtension_macOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4AED65AE524543BFC60DA7F2 /* Pods_MyFinance_macOS_MyFinanceExtension_macOS.framework */; };
-		FC2C2720D75238A76F748B1A /* Pods_MyFinance_tvOS_MyFinanceKit_tvOS_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 392542F0F8097B23DFF8BD2E /* Pods_MyFinance_tvOS_MyFinanceKit_tvOS_Tests.framework */; };
+		A38B12D4084F832EBE5A70F8 /* Pods_MyFinance_watchOS_MyFinance_watchOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB188015E1371D807A21CA50 /* Pods_MyFinance_watchOS_MyFinance_watchOS.framework */; };
+		AEA35E12D82DEA8DC4C87326 /* Pods_MyFinance_iOS_MyFinanceKit_iOS_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8ECA80B3590F04BD1A616429 /* Pods_MyFinance_iOS_MyFinanceKit_iOS_Tests.framework */; };
+		B1978925B67B180EA90EC174 /* Pods_MyFinance_macOS_MyFinanceKit_macOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C03A6F15C431AE5ADE6F961 /* Pods_MyFinance_macOS_MyFinanceKit_macOS.framework */; };
+		B273D64CCA9F7C9AA59ECCFD /* Pods_MyFinance_tvOS_MyFinance_tvOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B086D3E79B2C8395899ACE89 /* Pods_MyFinance_tvOS_MyFinance_tvOS.framework */; };
+		B321ED1D9D091CD288147F57 /* Pods_MyFinance_tvOS_MyFinanceKit_tvOS_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5088A6EE33F45814AF71752B /* Pods_MyFinance_tvOS_MyFinanceKit_tvOS_Tests.framework */; };
+		B698B004FF98D90571BA8484 /* Pods_MyFinance_tvOS_MyFinanceKit_tvOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 80AB84DBC713B4CB28B0F678 /* Pods_MyFinance_tvOS_MyFinanceKit_tvOS.framework */; };
+		BA16EB9FD0699F0E5E33FF7B /* Pods_MyFinance_iOS_MyFinance_Tests_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6A1E436FADCBECFD9C960385 /* Pods_MyFinance_iOS_MyFinance_Tests_iOS.framework */; };
+		F094D06180A4468030E169C0 /* Pods_MyFinance_macOS_MyFinance_macOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E8FF088B83746D910908B1A7 /* Pods_MyFinance_macOS_MyFinance_macOS.framework */; };
+		F4FCF7D442B3013C8F5D4D62 /* Pods_MyFinance_iOS_MyFinanceKit_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9588789BFD40EE73F6386C37 /* Pods_MyFinance_iOS_MyFinanceKit_iOS.framework */; };
+		F91DF770295ED8627207026D /* Pods_MyFinance_watchOS_MyFinanceKit_watchOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 64CD47381C44E05034BD2D62 /* Pods_MyFinance_watchOS_MyFinanceKit_watchOS.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -781,115 +780,30 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		0160511FA92C83C454207298 /* Pods-MyFinance-MyFinance-Tests-tvOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyFinance-MyFinance-Tests-tvOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MyFinance-MyFinance-Tests-tvOS/Pods-MyFinance-MyFinance-Tests-tvOS.debug.xcconfig"; sourceTree = "<group>"; };
-		04B47DC2BA0BF476906300EF /* Pods_MyFinance_MyFinance_Tests_macOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyFinance_MyFinance_Tests_macOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		05DEF06637CD9C3E2B22002E /* Pods-MyFinanceKit-tvOS-Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyFinanceKit-tvOS-Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MyFinanceKit-tvOS-Tests/Pods-MyFinanceKit-tvOS-Tests.release.xcconfig"; sourceTree = "<group>"; };
-		0613BC2F22CEB669D68D23C1 /* Pods_MyFinanceExtension_macOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyFinanceExtension_macOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		08CEA510E26C7BEE1DB71CC2 /* Pods_MyFinance_MyFinanceKit_MyFinanceKit_macOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyFinance_MyFinanceKit_MyFinanceKit_macOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		0965CA42C9921A8FEE28ADD9 /* Pods-MyFinance-MyFinanceExtension-iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyFinance-MyFinanceExtension-iOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MyFinance-MyFinanceExtension-iOS/Pods-MyFinance-MyFinanceExtension-iOS.debug.xcconfig"; sourceTree = "<group>"; };
-		09C82B2A82B999F2CE14A81D /* Pods-MyFinanceKit-macOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyFinanceKit-macOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-MyFinanceKit-macOS/Pods-MyFinanceKit-macOS.release.xcconfig"; sourceTree = "<group>"; };
-		0AF9D3FC1CAE2B4D66C2020D /* Pods-MyFinance-iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyFinance-iOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MyFinance-iOS/Pods-MyFinance-iOS.debug.xcconfig"; sourceTree = "<group>"; };
-		0FB7130A0C9E7413D8963383 /* Pods_MyFinance_MyFinanceKit_macOS_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyFinance_MyFinanceKit_macOS_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		11D4A8861AC65C6D988EE1C1 /* Pods-MyFinance-iOS-MyFinance-iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyFinance-iOS-MyFinance-iOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-MyFinance-iOS-MyFinance-iOS/Pods-MyFinance-iOS-MyFinance-iOS.release.xcconfig"; sourceTree = "<group>"; };
-		150AD21D7EEF353D2BD1A89E /* Pods-MyFinance-macOS-MyFinanceKit-macOS-Unsigned-Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyFinance-macOS-MyFinanceKit-macOS-Unsigned-Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MyFinance-macOS-MyFinanceKit-macOS-Unsigned-Tests/Pods-MyFinance-macOS-MyFinanceKit-macOS-Unsigned-Tests.release.xcconfig"; sourceTree = "<group>"; };
-		154C3EDEA429A33FE8DEF397 /* Pods-MyFinance-watchOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyFinance-watchOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-MyFinance-watchOS/Pods-MyFinance-watchOS.release.xcconfig"; sourceTree = "<group>"; };
-		17B7B8346066410A945846CC /* Pods-MyFinanceKit-macOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyFinanceKit-macOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MyFinanceKit-macOS/Pods-MyFinanceKit-macOS.debug.xcconfig"; sourceTree = "<group>"; };
-		18E272BE0EF275A986DCD73A /* Pods_MyFinance_macOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyFinance_macOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		19B67532F344CC6207E4D4A6 /* Pods-MyFinance-MyFinanceKit-MyFinanceKit-iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyFinance-MyFinanceKit-MyFinanceKit-iOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-MyFinance-MyFinanceKit-MyFinanceKit-iOS/Pods-MyFinance-MyFinanceKit-MyFinanceKit-iOS.release.xcconfig"; sourceTree = "<group>"; };
-		1AC0B4AF2420BB94F67FBB6F /* Pods-MyFinance-MyFinance-iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyFinance-MyFinance-iOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MyFinance-MyFinance-iOS/Pods-MyFinance-MyFinance-iOS.debug.xcconfig"; sourceTree = "<group>"; };
-		1AC4539514CBD7EC7BAF1475 /* Pods_MyFinance_macOS_MyFinanceKit_macOS_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyFinance_macOS_MyFinanceKit_macOS_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		1BE4C5DE00BF623DC17EBB83 /* Pods-MyFinance-watchOS-MyFinance-watchOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyFinance-watchOS-MyFinance-watchOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MyFinance-watchOS-MyFinance-watchOS/Pods-MyFinance-watchOS-MyFinance-watchOS.debug.xcconfig"; sourceTree = "<group>"; };
-		1C508E3DC958128F866AC4D1 /* Pods-MyFinance-macOS-MyFinanceKit-macOS-Unsigned-Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyFinance-macOS-MyFinanceKit-macOS-Unsigned-Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MyFinance-macOS-MyFinanceKit-macOS-Unsigned-Tests/Pods-MyFinance-macOS-MyFinanceKit-macOS-Unsigned-Tests.debug.xcconfig"; sourceTree = "<group>"; };
-		1CC1B7F5F25BF7423D6AE09A /* Pods-MyFinanceKit-macOS-Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyFinanceKit-macOS-Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MyFinanceKit-macOS-Tests/Pods-MyFinanceKit-macOS-Tests.release.xcconfig"; sourceTree = "<group>"; };
-		1D08B16190DF79BBEC88FDEE /* Pods-MyFinance-MyFinanceKit-tvOS-Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyFinance-MyFinanceKit-tvOS-Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MyFinance-MyFinanceKit-tvOS-Tests/Pods-MyFinance-MyFinanceKit-tvOS-Tests.debug.xcconfig"; sourceTree = "<group>"; };
-		1D92DB258D0260909E4D930C /* Pods_MyFinance_macOS_MyFinanceKit_macOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyFinance_macOS_MyFinanceKit_macOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		1DDA4BA8DDECA7088DB8650F /* Pods_MyFinanceExtension.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyFinanceExtension.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		1F19DA8737392671FF04ED86 /* Pods-MyFinance-MyFinanceExtension-watchOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyFinance-MyFinanceExtension-watchOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-MyFinance-MyFinanceExtension-watchOS/Pods-MyFinance-MyFinanceExtension-watchOS.release.xcconfig"; sourceTree = "<group>"; };
-		1F304E2C8DCABE34E95201E8 /* Pods-MyFinance-MyFinanceExtension-macOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyFinance-MyFinanceExtension-macOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-MyFinance-MyFinanceExtension-macOS/Pods-MyFinance-MyFinanceExtension-macOS.release.xcconfig"; sourceTree = "<group>"; };
-		2067BDD55EFC5ED4EF189AA7 /* Pods-MyFinance-MyFinance-macOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyFinance-MyFinance-macOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MyFinance-MyFinance-macOS/Pods-MyFinance-MyFinance-macOS.debug.xcconfig"; sourceTree = "<group>"; };
-		21B3EE530AA3AECFBE345AC1 /* Pods_MyFinanceKit_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyFinanceKit_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		22691F405AF0DB88B1291798 /* Pods-MyFinance-MyFinanceKit-MyFinanceKit-tvOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyFinance-MyFinanceKit-MyFinanceKit-tvOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MyFinance-MyFinanceKit-MyFinanceKit-tvOS/Pods-MyFinance-MyFinanceKit-MyFinanceKit-tvOS.debug.xcconfig"; sourceTree = "<group>"; };
-		235FA5C3CF610C9453E5598A /* Pods-MyFinance-MyFinanceExtension-iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyFinance-MyFinanceExtension-iOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-MyFinance-MyFinanceExtension-iOS/Pods-MyFinance-MyFinanceExtension-iOS.release.xcconfig"; sourceTree = "<group>"; };
-		24A8E1C6F363039A00A60FAD /* Pods_MyFinance_watchOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyFinance_watchOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		24D31AF734D7C2594D35D164 /* Pods_MyFinance_MyFinanceKit_MyFinanceKit_watchOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyFinance_MyFinanceKit_MyFinanceKit_watchOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		28E9625BA8CAC1E7ACDCED58 /* Pods_MyFinance_MyFinance_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyFinance_MyFinance_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		2B12880C4555D6838E9EF306 /* Pods_MyFinance_iOS_MyFinance_Tests_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyFinance_iOS_MyFinance_Tests_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		2CA9B8503DCA039D14F472B2 /* Pods-MyFinance-iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyFinance-iOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-MyFinance-iOS/Pods-MyFinance-iOS.release.xcconfig"; sourceTree = "<group>"; };
-		2D12856044DE82C2924693FD /* Pods-MyFinanceExtension.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyFinanceExtension.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MyFinanceExtension/Pods-MyFinanceExtension.debug.xcconfig"; sourceTree = "<group>"; };
-		2EC823162676B33C1F0731F6 /* Pods-MyFinance-Tests-iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyFinance-Tests-iOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-MyFinance-Tests-iOS/Pods-MyFinance-Tests-iOS.release.xcconfig"; sourceTree = "<group>"; };
-		300147042264DD560CDF6466 /* Pods-MyFinanceExtension.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyFinanceExtension.release.xcconfig"; path = "Pods/Target Support Files/Pods-MyFinanceExtension/Pods-MyFinanceExtension.release.xcconfig"; sourceTree = "<group>"; };
-		318A3499250893FE5FE2FFB7 /* Pods_MyFinance_macOS_MyFinance_Tests_macOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyFinance_macOS_MyFinance_Tests_macOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		31E496E3C420FCE75CDDFC3B /* Pods_MyFinanceExtension_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyFinanceExtension_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		3429B9D125217AAD69FD03E4 /* Pods-MyFinance-MyFinanceKit-MyFinanceKit-tvOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyFinance-MyFinanceKit-MyFinanceKit-tvOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-MyFinance-MyFinanceKit-MyFinanceKit-tvOS/Pods-MyFinance-MyFinanceKit-MyFinanceKit-tvOS.release.xcconfig"; sourceTree = "<group>"; };
-		35181FAAAD64D51803B331DD /* Pods-MyFinance-iOS-MyFinanceKit-iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyFinance-iOS-MyFinanceKit-iOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-MyFinance-iOS-MyFinanceKit-iOS/Pods-MyFinance-iOS-MyFinanceKit-iOS.release.xcconfig"; sourceTree = "<group>"; };
-		359045875C88CF718A815028 /* Pods-MyFinance-macOS-MyFinanceExtension-macOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyFinance-macOS-MyFinanceExtension-macOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MyFinance-macOS-MyFinanceExtension-macOS/Pods-MyFinance-macOS-MyFinanceExtension-macOS.debug.xcconfig"; sourceTree = "<group>"; };
-		38AEF6280A3D9697DE9DC8F8 /* Pods-MyFinance-watchOS-MyFinance-watchOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyFinance-watchOS-MyFinance-watchOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-MyFinance-watchOS-MyFinance-watchOS/Pods-MyFinance-watchOS-MyFinance-watchOS.release.xcconfig"; sourceTree = "<group>"; };
-		392542F0F8097B23DFF8BD2E /* Pods_MyFinance_tvOS_MyFinanceKit_tvOS_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyFinance_tvOS_MyFinanceKit_tvOS_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		395DF64D11E749E953E28FB4 /* Pods-MyFinance-iOS-MyFinanceKit-iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyFinance-iOS-MyFinanceKit-iOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MyFinance-iOS-MyFinanceKit-iOS/Pods-MyFinance-iOS-MyFinanceKit-iOS.debug.xcconfig"; sourceTree = "<group>"; };
-		3CBA170BBCABA7327BC80DBE /* Pods-MyFinance-MyFinanceKit-iOS-Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyFinance-MyFinanceKit-iOS-Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MyFinance-MyFinanceKit-iOS-Tests/Pods-MyFinance-MyFinanceKit-iOS-Tests.debug.xcconfig"; sourceTree = "<group>"; };
-		3D12ECA6763403A32015CFB7 /* Pods_MyFinance_macOS_MyFinance_macOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyFinance_macOS_MyFinance_macOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		3DC549F247E197B6E094C87F /* Pods-MyFinance-tvOS-MyFinance-Tests-tvOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyFinance-tvOS-MyFinance-Tests-tvOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MyFinance-tvOS-MyFinance-Tests-tvOS/Pods-MyFinance-tvOS-MyFinance-Tests-tvOS.debug.xcconfig"; sourceTree = "<group>"; };
-		3E6438874C943DED0760066F /* Pods-MyFinance-MyFinance-tvOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyFinance-MyFinance-tvOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MyFinance-MyFinance-tvOS/Pods-MyFinance-MyFinance-tvOS.debug.xcconfig"; sourceTree = "<group>"; };
-		3E71D62F8FA81161772D2548 /* Pods_MyFinance_tvOS_MyFinanceKit_tvOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyFinance_tvOS_MyFinanceKit_tvOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		3EB7F9277553860675BDE5F6 /* Pods-MyFinance-MyFinanceKit-macOS-Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyFinance-MyFinanceKit-macOS-Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MyFinance-MyFinanceKit-macOS-Tests/Pods-MyFinance-MyFinanceKit-macOS-Tests.debug.xcconfig"; sourceTree = "<group>"; };
-		3F0DDB259287DA183EB8E324 /* Pods-MyFinance-MyFinance-Tests-macOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyFinance-MyFinance-Tests-macOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MyFinance-MyFinance-Tests-macOS/Pods-MyFinance-MyFinance-Tests-macOS.debug.xcconfig"; sourceTree = "<group>"; };
-		3F8CC9621F1D2426ED916A31 /* Pods-MyFinance-MyFinanceKit-tvOS-Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyFinance-MyFinanceKit-tvOS-Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MyFinance-MyFinanceKit-tvOS-Tests/Pods-MyFinance-MyFinanceKit-tvOS-Tests.release.xcconfig"; sourceTree = "<group>"; };
-		402ACA20B26921BF30FE4C7E /* Pods_MyFinance_macOS_MyFinanceKit_macOS_Unsigned_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyFinance_macOS_MyFinanceKit_macOS_Unsigned_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		44AC3487225BC41D05828D87 /* Pods_MyFinanceKit_macOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyFinanceKit_macOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		45FFBFDFCED8A7B0A3C3C53E /* Pods_MyFinance_tvOS_MyFinance_Tests_tvOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyFinance_tvOS_MyFinance_Tests_tvOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		4675972CE0E0F3F2A0C12129 /* Pods-MyFinance-MyFinance-Tests-iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyFinance-MyFinance-Tests-iOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-MyFinance-MyFinance-Tests-iOS/Pods-MyFinance-MyFinance-Tests-iOS.release.xcconfig"; sourceTree = "<group>"; };
-		492C916B37F4205BF9BBB650 /* Pods-MyFinance-tvOS-MyFinanceKit-tvOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyFinance-tvOS-MyFinanceKit-tvOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-MyFinance-tvOS-MyFinanceKit-tvOS/Pods-MyFinance-tvOS-MyFinanceKit-tvOS.release.xcconfig"; sourceTree = "<group>"; };
-		4AED65AE524543BFC60DA7F2 /* Pods_MyFinance_macOS_MyFinanceExtension_macOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyFinance_macOS_MyFinanceExtension_macOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		4BD4B39AD0637A850A615FE2 /* Pods_MyFinanceExtension_watchOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyFinanceExtension_watchOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		4CE8E49AA8123D33ACB26854 /* Pods_MyFinance_MyFinanceExtension_watchOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyFinance_MyFinanceExtension_watchOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		4E9A9AF241A9DC08D68A0519 /* Pods_MyFinance_MyFinance_tvOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyFinance_MyFinance_tvOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		4F4D45E9CE29394DD3ACD6C2 /* Pods_MyFinance_MyFinanceKit_MyFinanceKit_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyFinance_MyFinanceKit_MyFinanceKit_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		500C02F8001EBB900EEE9BCE /* Pods-MyFinance-macOS-MyFinanceKit-macOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyFinance-macOS-MyFinanceKit-macOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MyFinance-macOS-MyFinanceKit-macOS/Pods-MyFinance-macOS-MyFinanceKit-macOS.debug.xcconfig"; sourceTree = "<group>"; };
-		507698C7795732329034A957 /* Pods_MyFinance_MyFinanceExtension_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyFinance_MyFinanceExtension_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		547E5D3156566AFD935566D8 /* Pods-MyFinanceKit-macOS-Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyFinanceKit-macOS-Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MyFinanceKit-macOS-Tests/Pods-MyFinanceKit-macOS-Tests.debug.xcconfig"; sourceTree = "<group>"; };
-		54F2EAF62CE4FC188C88B031 /* Pods-MyFinanceKit-iOS-Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyFinanceKit-iOS-Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MyFinanceKit-iOS-Tests/Pods-MyFinanceKit-iOS-Tests.debug.xcconfig"; sourceTree = "<group>"; };
-		5545AC61647BC0167370E20F /* Pods-MyFinance-Tests-macOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyFinance-Tests-macOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-MyFinance-Tests-macOS/Pods-MyFinance-Tests-macOS.release.xcconfig"; sourceTree = "<group>"; };
-		5563F949D3ACBB2F12C64BAF /* Pods-MyFinance-MyFinance-macOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyFinance-MyFinance-macOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-MyFinance-MyFinance-macOS/Pods-MyFinance-MyFinance-macOS.release.xcconfig"; sourceTree = "<group>"; };
-		55B4F55974A8EFBEFE326937 /* Pods_MyFinance_MyFinanceKit_IntegrationTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyFinance_MyFinanceKit_IntegrationTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		587DEA3C82AB1A9AA9B4B037 /* Pods-MyFinance-MyFinanceKit-MyFinanceKit-macOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyFinance-MyFinanceKit-MyFinanceKit-macOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-MyFinance-MyFinanceKit-MyFinanceKit-macOS/Pods-MyFinance-MyFinanceKit-MyFinanceKit-macOS.release.xcconfig"; sourceTree = "<group>"; };
-		5882A25CABF72E67030B4FA6 /* Pods-MyFinance-watchOS-MyFinanceExtension-watchOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyFinance-watchOS-MyFinanceExtension-watchOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MyFinance-watchOS-MyFinanceExtension-watchOS/Pods-MyFinance-watchOS-MyFinanceExtension-watchOS.debug.xcconfig"; sourceTree = "<group>"; };
-		58E0C3F7A039A5AF5AF672A9 /* Pods-MyFinance-macOS-MyFinance-Tests-macOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyFinance-macOS-MyFinance-Tests-macOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MyFinance-macOS-MyFinance-Tests-macOS/Pods-MyFinance-macOS-MyFinance-Tests-macOS.debug.xcconfig"; sourceTree = "<group>"; };
-		59213E5F4F696F1C0F6253D8 /* Pods-MyFinance-watchOS-MyFinanceKit-watchOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyFinance-watchOS-MyFinanceKit-watchOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-MyFinance-watchOS-MyFinanceKit-watchOS/Pods-MyFinance-watchOS-MyFinanceKit-watchOS.release.xcconfig"; sourceTree = "<group>"; };
-		5995E6833EDF311EFF4704CB /* Pods-MyFinanceKit-tvOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyFinanceKit-tvOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MyFinanceKit-tvOS/Pods-MyFinanceKit-tvOS.debug.xcconfig"; sourceTree = "<group>"; };
-		5A25FB183210480050D71829 /* Pods-MyFinanceExtension-macOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyFinanceExtension-macOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-MyFinanceExtension-macOS/Pods-MyFinanceExtension-macOS.release.xcconfig"; sourceTree = "<group>"; };
-		5A927F98A7636F840CF33560 /* Pods-MyFinance-MyFinanceKit-IntegrationTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyFinance-MyFinanceKit-IntegrationTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MyFinance-MyFinanceKit-IntegrationTests/Pods-MyFinance-MyFinanceKit-IntegrationTests.debug.xcconfig"; sourceTree = "<group>"; };
-		5B2B5A93D6FC19C2DF068D3C /* Pods_MyFinance_MyFinanceKit_MyFinanceKit_tvOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyFinance_MyFinanceKit_MyFinanceKit_tvOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		5CD20F00FDCA7C321135462A /* Pods_MyFinanceKit_tvOS_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyFinanceKit_tvOS_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		5F9A63CFD7EF62E12AE4886C /* Pods_MyFinance_iOS_MyFinanceExtension_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyFinance_iOS_MyFinanceExtension_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		6047CB5BBC31A3C6F4932EDA /* Pods_MyFinance_MyFinanceKit_iOS_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyFinance_MyFinanceKit_iOS_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		604EBE23F52463D6AA3FB62B /* Pods-MyFinance-iOS-MyFinanceKit-iOS-Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyFinance-iOS-MyFinanceKit-iOS-Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MyFinance-iOS-MyFinanceKit-iOS-Tests/Pods-MyFinance-iOS-MyFinanceKit-iOS-Tests.release.xcconfig"; sourceTree = "<group>"; };
-		657896AC39A3CD1FA90830E2 /* Pods-MyFinance.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyFinance.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MyFinance/Pods-MyFinance.debug.xcconfig"; sourceTree = "<group>"; };
-		65930352217F496E9E423CC1 /* Pods-MyFinance-MyFinanceExtension-watchOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyFinance-MyFinanceExtension-watchOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MyFinance-MyFinanceExtension-watchOS/Pods-MyFinance-MyFinanceExtension-watchOS.debug.xcconfig"; sourceTree = "<group>"; };
-		6A10DA04A38E8472AB53A8F2 /* Pods-MyFinance-MyFinanceKit-macOS-Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyFinance-MyFinanceKit-macOS-Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MyFinance-MyFinanceKit-macOS-Tests/Pods-MyFinance-MyFinanceKit-macOS-Tests.release.xcconfig"; sourceTree = "<group>"; };
-		6CDC99995DFF040817E2BD06 /* Pods-MyFinanceKit-watchOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyFinanceKit-watchOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MyFinanceKit-watchOS/Pods-MyFinanceKit-watchOS.debug.xcconfig"; sourceTree = "<group>"; };
-		6FED7CD4F62A512E35417530 /* Pods-MyFinanceKit-tvOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyFinanceKit-tvOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-MyFinanceKit-tvOS/Pods-MyFinanceKit-tvOS.release.xcconfig"; sourceTree = "<group>"; };
-		70AD92226C6336BFA092006A /* Pods-MyFinance-iOS-MyFinanceExtension-iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyFinance-iOS-MyFinanceExtension-iOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-MyFinance-iOS-MyFinanceExtension-iOS/Pods-MyFinance-iOS-MyFinanceExtension-iOS.release.xcconfig"; sourceTree = "<group>"; };
-		71DE352B10B756CB7290E228 /* Pods_MyFinanceKit_iOS_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyFinanceKit_iOS_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		74049B79C623546C08393954 /* Pods-MyFinance-macOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyFinance-macOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MyFinance-macOS/Pods-MyFinance-macOS.debug.xcconfig"; sourceTree = "<group>"; };
-		745E5BBC404A92536657D4B6 /* Pods-MyFinance-Tests-tvOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyFinance-Tests-tvOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-MyFinance-Tests-tvOS/Pods-MyFinance-Tests-tvOS.release.xcconfig"; sourceTree = "<group>"; };
-		79F06D819001165C50083BB5 /* Pods-MyFinance-MyFinanceKit-iOS-Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyFinance-MyFinanceKit-iOS-Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MyFinance-MyFinanceKit-iOS-Tests/Pods-MyFinance-MyFinanceKit-iOS-Tests.release.xcconfig"; sourceTree = "<group>"; };
-		7A383CB85EBD5980CBFBB091 /* Pods_MyFinanceKit_IntegrationTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyFinanceKit_IntegrationTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		7E05704523C729A976882919 /* Pods_MyFinance_Tests_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyFinance_Tests_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		7E134E4C4AD752A4AC063CBA /* Pods-MyFinanceExtension-watchOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyFinanceExtension-watchOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-MyFinanceExtension-watchOS/Pods-MyFinanceExtension-watchOS.release.xcconfig"; sourceTree = "<group>"; };
-		7E3AFC27C92FCD4298AF8D39 /* Pods-MyFinance-MyFinance-Tests-tvOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyFinance-MyFinance-Tests-tvOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-MyFinance-MyFinance-Tests-tvOS/Pods-MyFinance-MyFinance-Tests-tvOS.release.xcconfig"; sourceTree = "<group>"; };
-		808750C0D703AB5A22C394FA /* Pods-MyFinance-MyFinanceKit-IntegrationTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyFinance-MyFinanceKit-IntegrationTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MyFinance-MyFinanceKit-IntegrationTests/Pods-MyFinance-MyFinanceKit-IntegrationTests.release.xcconfig"; sourceTree = "<group>"; };
-		818FF4243E1F740922885780 /* Pods_MyFinance_MyFinance_macOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyFinance_MyFinance_macOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		837E698B1836AE75332FD4D6 /* Pods_MyFinance_iOS_MyFinanceKit_IntegrationTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyFinance_iOS_MyFinanceKit_IntegrationTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		8700134F2AB0F549F2951071 /* Pods-MyFinance-tvOS-MyFinanceKit-tvOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyFinance-tvOS-MyFinanceKit-tvOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MyFinance-tvOS-MyFinanceKit-tvOS/Pods-MyFinance-tvOS-MyFinanceKit-tvOS.debug.xcconfig"; sourceTree = "<group>"; };
-		879A3C5C09E31523AC8C6902 /* Pods-MyFinance-tvOS-MyFinance-Tests-tvOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyFinance-tvOS-MyFinance-Tests-tvOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-MyFinance-tvOS-MyFinance-Tests-tvOS/Pods-MyFinance-tvOS-MyFinance-Tests-tvOS.release.xcconfig"; sourceTree = "<group>"; };
-		8A08E3B1273B7D72A834A457 /* Pods-MyFinanceKit-iOS-Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyFinanceKit-iOS-Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MyFinanceKit-iOS-Tests/Pods-MyFinanceKit-iOS-Tests.release.xcconfig"; sourceTree = "<group>"; };
-		8D6579C8CEC34BEF2023799E /* Pods-MyFinance-MyFinance-watchOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyFinance-MyFinance-watchOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-MyFinance-MyFinance-watchOS/Pods-MyFinance-MyFinance-watchOS.release.xcconfig"; sourceTree = "<group>"; };
-		912C8C9B1823959085F2299C /* Pods-MyFinanceExtension-iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyFinanceExtension-iOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-MyFinanceExtension-iOS/Pods-MyFinanceExtension-iOS.release.xcconfig"; sourceTree = "<group>"; };
-		9239A46CF282FB4F0EC76F88 /* Pods-MyFinance-MyFinanceKit-MyFinanceKit-watchOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyFinance-MyFinanceKit-MyFinanceKit-watchOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MyFinance-MyFinanceKit-MyFinanceKit-watchOS/Pods-MyFinance-MyFinanceKit-MyFinanceKit-watchOS.debug.xcconfig"; sourceTree = "<group>"; };
-		9583B4C05F05012F0928BCE1 /* Pods-MyFinanceKit-watchOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyFinanceKit-watchOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-MyFinanceKit-watchOS/Pods-MyFinanceKit-watchOS.release.xcconfig"; sourceTree = "<group>"; };
-		969E022C2D93D205E728AAAA /* Pods-MyFinance-iOS-MyFinance-Tests-iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyFinance-iOS-MyFinance-Tests-iOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MyFinance-iOS-MyFinance-Tests-iOS/Pods-MyFinance-iOS-MyFinance-Tests-iOS.debug.xcconfig"; sourceTree = "<group>"; };
-		98F0B4845C9A3C0612D856F8 /* Pods_MyFinance_MyFinance_Tests_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyFinance_MyFinance_Tests_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		9990EA6FC7E88C79C350B2C7 /* Pods_MyFinance_watchOS_MyFinanceExtension_watchOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyFinance_watchOS_MyFinanceExtension_watchOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		011140048EC4209D7FA0E28B /* Pods-MyFinance-iOS-MyFinance-iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyFinance-iOS-MyFinance-iOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MyFinance-iOS-MyFinance-iOS/Pods-MyFinance-iOS-MyFinance-iOS.debug.xcconfig"; sourceTree = "<group>"; };
+		1176ADFAAD72A89C79AAFCB7 /* Pods-MyFinance-macOS-MyFinanceKit-macOS-Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyFinance-macOS-MyFinanceKit-macOS-Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MyFinance-macOS-MyFinanceKit-macOS-Tests/Pods-MyFinance-macOS-MyFinanceKit-macOS-Tests.release.xcconfig"; sourceTree = "<group>"; };
+		1DA5B0E02A565BD73C387CA3 /* Pods_MyFinance_macOS_MyFinanceKit_macOS_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyFinance_macOS_MyFinanceKit_macOS_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		20C42AD9FBD83F55190E47AB /* Pods-MyFinance-macOS-MyFinanceExtension-macOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyFinance-macOS-MyFinanceExtension-macOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MyFinance-macOS-MyFinanceExtension-macOS/Pods-MyFinance-macOS-MyFinanceExtension-macOS.debug.xcconfig"; sourceTree = "<group>"; };
+		2374DB55C71CBF1F53CCC3AE /* Pods_MyFinance_tvOS_MyFinance_Tests_tvOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyFinance_tvOS_MyFinance_Tests_tvOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4505461AD12BF71C8097B3CC /* Pods-MyFinance-iOS-MyFinance-iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyFinance-iOS-MyFinance-iOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-MyFinance-iOS-MyFinance-iOS/Pods-MyFinance-iOS-MyFinance-iOS.release.xcconfig"; sourceTree = "<group>"; };
+		4AAF8D7EC1D5BBD273E0622A /* Pods_MyFinance_iOS_MyFinance_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyFinance_iOS_MyFinance_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5088A6EE33F45814AF71752B /* Pods_MyFinance_tvOS_MyFinanceKit_tvOS_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyFinance_tvOS_MyFinanceKit_tvOS_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		536B883A204303D423A0539A /* Pods-MyFinance-watchOS-MyFinance-watchOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyFinance-watchOS-MyFinance-watchOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-MyFinance-watchOS-MyFinance-watchOS/Pods-MyFinance-watchOS-MyFinance-watchOS.release.xcconfig"; sourceTree = "<group>"; };
+		5A1E7A263BB71026C5847800 /* Pods-MyFinance-iOS-MyFinanceKit-iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyFinance-iOS-MyFinanceKit-iOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-MyFinance-iOS-MyFinanceKit-iOS/Pods-MyFinance-iOS-MyFinanceKit-iOS.release.xcconfig"; sourceTree = "<group>"; };
+		5C03A6F15C431AE5ADE6F961 /* Pods_MyFinance_macOS_MyFinanceKit_macOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyFinance_macOS_MyFinanceKit_macOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		61F43F89CFDC178DA8EA2C5A /* Pods-MyFinance-watchOS-MyFinanceExtension-watchOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyFinance-watchOS-MyFinanceExtension-watchOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-MyFinance-watchOS-MyFinanceExtension-watchOS/Pods-MyFinance-watchOS-MyFinanceExtension-watchOS.release.xcconfig"; sourceTree = "<group>"; };
+		64CD47381C44E05034BD2D62 /* Pods_MyFinance_watchOS_MyFinanceKit_watchOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyFinance_watchOS_MyFinanceKit_watchOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6A1E436FADCBECFD9C960385 /* Pods_MyFinance_iOS_MyFinance_Tests_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyFinance_iOS_MyFinance_Tests_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		730A1C85F10126499979CE03 /* Pods-MyFinance-tvOS-MyFinanceKit-tvOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyFinance-tvOS-MyFinanceKit-tvOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MyFinance-tvOS-MyFinanceKit-tvOS/Pods-MyFinance-tvOS-MyFinanceKit-tvOS.debug.xcconfig"; sourceTree = "<group>"; };
+		747B1A0CD26B252402EBAA49 /* Pods-MyFinance-macOS-MyFinanceKit-macOS-Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyFinance-macOS-MyFinanceKit-macOS-Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MyFinance-macOS-MyFinanceKit-macOS-Tests/Pods-MyFinance-macOS-MyFinanceKit-macOS-Tests.debug.xcconfig"; sourceTree = "<group>"; };
+		74FC869DEACDFD6D9E71A90E /* Pods_MyFinance_macOS_MyFinanceExtension_macOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyFinance_macOS_MyFinanceExtension_macOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		80AB84DBC713B4CB28B0F678 /* Pods_MyFinance_tvOS_MyFinanceKit_tvOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyFinance_tvOS_MyFinanceKit_tvOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		863BE547E5A2B72CF19534BF /* Pods-MyFinance-macOS-MyFinance-macOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyFinance-macOS-MyFinance-macOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MyFinance-macOS-MyFinance-macOS/Pods-MyFinance-macOS-MyFinance-macOS.debug.xcconfig"; sourceTree = "<group>"; };
+		8ECA80B3590F04BD1A616429 /* Pods_MyFinance_iOS_MyFinanceKit_iOS_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyFinance_iOS_MyFinanceKit_iOS_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8F6856B0590EA5CA21402A1D /* Pods-MyFinance-watchOS-MyFinance-watchOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyFinance-watchOS-MyFinance-watchOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MyFinance-watchOS-MyFinance-watchOS/Pods-MyFinance-watchOS-MyFinance-watchOS.debug.xcconfig"; sourceTree = "<group>"; };
+		91EEFF46D9D7957577B02F0F /* Pods-MyFinance-watchOS-MyFinanceKit-watchOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyFinance-watchOS-MyFinanceKit-watchOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-MyFinance-watchOS-MyFinanceKit-watchOS/Pods-MyFinance-watchOS-MyFinanceKit-watchOS.release.xcconfig"; sourceTree = "<group>"; };
+		9588789BFD40EE73F6386C37 /* Pods_MyFinance_iOS_MyFinanceKit_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyFinance_iOS_MyFinanceKit_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		972F8AEF77998B94292E09CA /* Pods-MyFinance-tvOS-MyFinanceKit-tvOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyFinance-tvOS-MyFinanceKit-tvOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-MyFinance-tvOS-MyFinanceKit-tvOS/Pods-MyFinance-tvOS-MyFinanceKit-tvOS.release.xcconfig"; sourceTree = "<group>"; };
 		9A01448F204264F800443585 /* AuthViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewModelTests.swift; sourceTree = "<group>"; };
 		9A0C474C204B65DB0011D817 /* Credentials.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Credentials.swift; sourceTree = "<group>"; };
 		9A0C4751204B69D90011D817 /* IntegrationTestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntegrationTestCase.swift; sourceTree = "<group>"; };
@@ -929,7 +843,6 @@
 		9A2BDAA32044D599008EE977 /* MockNavigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockNavigator.swift; sourceTree = "<group>"; };
 		9A2BDAA52044D697008EE977 /* MockWindow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockWindow.swift; sourceTree = "<group>"; };
 		9A2DB563202F54EC0008A4E5 /* UIView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extensions.swift"; sourceTree = "<group>"; };
-		9A2F72D52078E65E00B16F7C /* Pods_MyFinance_watchOS_MyFinanceExtension_watchOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Pods_MyFinance_watchOS_MyFinanceExtension_watchOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9A37AB10203E144900CFEE67 /* MockDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockDataService.swift; sourceTree = "<group>"; };
 		9A37AB2B203E22D300CFEE67 /* ConfigDefaultServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigDefaultServiceTests.swift; sourceTree = "<group>"; };
 		9A37AB2F203E293F00CFEE67 /* APIsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIsTests.swift; sourceTree = "<group>"; };
@@ -1058,6 +971,7 @@
 		9A872E112016719100C1E9BE /* UserBusinessLogic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserBusinessLogic.swift; sourceTree = "<group>"; };
 		9A88A7F62042602B00421943 /* AuthViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewControllerTests.swift; sourceTree = "<group>"; };
 		9A88A7FA204260C300421943 /* MockAuthViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockAuthViewModel.swift; sourceTree = "<group>"; };
+		9A8BF8332085474900FF4688 /* codecov.yml */ = {isa = PBXFileReference; lastKnownFileType = text; path = codecov.yml; sourceTree = SOURCE_ROOT; };
 		9A8CD6BB207A433D007EC2F5 /* MockLaunchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockLaunchViewModel.swift; sourceTree = "<group>"; };
 		9A9093E92044C9F800C87A99 /* WindowTypeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WindowTypeTests.swift; sourceTree = "<group>"; };
 		9A9093EC2044CCB000C87A99 /* BaseNavigatorType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseNavigatorType.swift; sourceTree = "<group>"; };
@@ -1091,8 +1005,6 @@
 		9AAA77CF203F9AA5000E1323 /* MockAppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockAppState.swift; sourceTree = "<group>"; };
 		9AAA77D4203F9B1E000E1323 /* MockTodayViewModelDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockTodayViewModelDelegate.swift; sourceTree = "<group>"; };
 		9AAA77D7203F9B2A000E1323 /* MockTodayDisplayModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockTodayDisplayModel.swift; sourceTree = "<group>"; };
-		9AAD3890202F5CAD00395119 /* Pods_MyFinanceExtension_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Pods_MyFinanceExtension_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		9AAD3892202F5CBF00395119 /* Pods_MyFinanceKit_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Pods_MyFinanceKit_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9AAD3894202F66E500395119 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		9AAD3896202F684E00395119 /* SettingsDisplayModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsDisplayModel.swift; sourceTree = "<group>"; };
 		9AAD3898202F68C000395119 /* SettingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewModel.swift; sourceTree = "<group>"; };
@@ -1158,68 +1070,39 @@
 		9AEEC8AC2042696800ED7627 /* MockAuthViewModelDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockAuthViewModelDelegate.swift; sourceTree = "<group>"; };
 		9AFC00452071748F00826D33 /* LaunchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchViewController.swift; sourceTree = "<group>"; };
 		9AFC0047207175BB00826D33 /* LaunchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchViewModel.swift; sourceTree = "<group>"; };
-		9BF959DE601445A20C613BBB /* Pods-MyFinance-tvOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyFinance-tvOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MyFinance-tvOS/Pods-MyFinance-tvOS.debug.xcconfig"; sourceTree = "<group>"; };
-		9CBCFFCDFA0B6EC4BB770E5B /* Pods-MyFinance-MyFinance-tvOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyFinance-MyFinance-tvOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-MyFinance-MyFinance-tvOS/Pods-MyFinance-MyFinance-tvOS.release.xcconfig"; sourceTree = "<group>"; };
-		A1C327FD81E201A0B0E6382E /* Pods-MyFinance-MyFinanceKit-MyFinanceKit-watchOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyFinance-MyFinanceKit-MyFinanceKit-watchOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-MyFinance-MyFinanceKit-MyFinanceKit-watchOS/Pods-MyFinance-MyFinanceKit-MyFinanceKit-watchOS.release.xcconfig"; sourceTree = "<group>"; };
-		A3729F1878A4E1F964F4105F /* Pods_MyFinance_MyFinanceKit_tvOS_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyFinance_MyFinanceKit_tvOS_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		A8B0411C6517F0B6198C67E8 /* Pods-MyFinanceExtension-iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyFinanceExtension-iOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MyFinanceExtension-iOS/Pods-MyFinanceExtension-iOS.debug.xcconfig"; sourceTree = "<group>"; };
-		AA3699BFE9E32E28FB09065A /* Pods_MyFinance_MyFinance_Tests_tvOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyFinance_MyFinance_Tests_tvOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		AD2A187BD7CC65C7F408B8B3 /* Pods-MyFinanceExtension-macOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyFinanceExtension-macOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MyFinanceExtension-macOS/Pods-MyFinanceExtension-macOS.debug.xcconfig"; sourceTree = "<group>"; };
-		ADBD8518395325566C1A293C /* Pods-MyFinanceKit-iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyFinanceKit-iOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-MyFinanceKit-iOS/Pods-MyFinanceKit-iOS.release.xcconfig"; sourceTree = "<group>"; };
-		AE2F8F578F6B35DBC78283E0 /* Pods-MyFinance-Tests-macOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyFinance-Tests-macOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MyFinance-Tests-macOS/Pods-MyFinance-Tests-macOS.debug.xcconfig"; sourceTree = "<group>"; };
-		B008049E88D3C2E449F693F8 /* Pods-MyFinance-iOS-MyFinanceKit-IntegrationTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyFinance-iOS-MyFinanceKit-IntegrationTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MyFinance-iOS-MyFinanceKit-IntegrationTests/Pods-MyFinance-iOS-MyFinanceKit-IntegrationTests.debug.xcconfig"; sourceTree = "<group>"; };
-		B0E3DCB8F5D0F6024CD19567 /* Pods-MyFinance-macOS-MyFinance-Tests-macOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyFinance-macOS-MyFinance-Tests-macOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-MyFinance-macOS-MyFinance-Tests-macOS/Pods-MyFinance-macOS-MyFinance-Tests-macOS.release.xcconfig"; sourceTree = "<group>"; };
-		B1C2DBD48616B3719349D2E9 /* Pods-MyFinance-macOS-MyFinance-macOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyFinance-macOS-MyFinance-macOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-MyFinance-macOS-MyFinance-macOS/Pods-MyFinance-macOS-MyFinance-macOS.release.xcconfig"; sourceTree = "<group>"; };
-		B7B9418C6D695CEA04D49512 /* Pods-MyFinance-macOS-MyFinance-macOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyFinance-macOS-MyFinance-macOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MyFinance-macOS-MyFinance-macOS/Pods-MyFinance-macOS-MyFinance-macOS.debug.xcconfig"; sourceTree = "<group>"; };
-		B7F8F05E7BD702B52DF750B0 /* Pods-MyFinanceKit-IntegrationTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyFinanceKit-IntegrationTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MyFinanceKit-IntegrationTests/Pods-MyFinanceKit-IntegrationTests.release.xcconfig"; sourceTree = "<group>"; };
-		BA0115B8C0B2CCFD0F103F26 /* Pods-MyFinance-Tests-tvOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyFinance-Tests-tvOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MyFinance-Tests-tvOS/Pods-MyFinance-Tests-tvOS.debug.xcconfig"; sourceTree = "<group>"; };
-		BD0B35B829FCB2C200C00716 /* Pods-MyFinance-tvOS-MyFinanceKit-tvOS-Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyFinance-tvOS-MyFinanceKit-tvOS-Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MyFinance-tvOS-MyFinanceKit-tvOS-Tests/Pods-MyFinance-tvOS-MyFinanceKit-tvOS-Tests.debug.xcconfig"; sourceTree = "<group>"; };
-		BFAE274C26F56EC75AF18966 /* Pods-MyFinanceKit-iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyFinanceKit-iOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MyFinanceKit-iOS/Pods-MyFinanceKit-iOS.debug.xcconfig"; sourceTree = "<group>"; };
-		C00742E35A2D39BB6D61F955 /* Pods_MyFinance_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyFinance_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		C12538FAB8FD2A459C138F6F /* Pods_MyFinance_watchOS_MyFinanceKit_watchOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyFinance_watchOS_MyFinanceKit_watchOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		C223AF58FF1CE65B81044CD9 /* Pods-MyFinanceExtension-watchOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyFinanceExtension-watchOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MyFinanceExtension-watchOS/Pods-MyFinanceExtension-watchOS.debug.xcconfig"; sourceTree = "<group>"; };
-		C2489DCFA65618360AC31A0F /* Pods-MyFinance-tvOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyFinance-tvOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-MyFinance-tvOS/Pods-MyFinance-tvOS.release.xcconfig"; sourceTree = "<group>"; };
-		C2C63C31D40DAC096106092E /* Pods_MyFinance_Tests_macOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyFinance_Tests_macOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		C32FD287FCCF5EBDB2FD5502 /* Pods-MyFinance-MyFinanceKit-MyFinanceKit-iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyFinance-MyFinanceKit-MyFinanceKit-iOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MyFinance-MyFinanceKit-MyFinanceKit-iOS/Pods-MyFinance-MyFinanceKit-MyFinanceKit-iOS.debug.xcconfig"; sourceTree = "<group>"; };
-		C49F06F9156F2CB30EC7BDDD /* Pods-MyFinance.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyFinance.release.xcconfig"; path = "Pods/Target Support Files/Pods-MyFinance/Pods-MyFinance.release.xcconfig"; sourceTree = "<group>"; };
-		C4C15E09C7E9DA97B2B9C720 /* Pods-MyFinance-tvOS-MyFinanceKit-tvOS-Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyFinance-tvOS-MyFinanceKit-tvOS-Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MyFinance-tvOS-MyFinanceKit-tvOS-Tests/Pods-MyFinance-tvOS-MyFinanceKit-tvOS-Tests.release.xcconfig"; sourceTree = "<group>"; };
-		C530537C0F415F713BCDE25D /* Pods-MyFinance-watchOS-MyFinanceExtension-watchOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyFinance-watchOS-MyFinanceExtension-watchOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-MyFinance-watchOS-MyFinanceExtension-watchOS/Pods-MyFinance-watchOS-MyFinanceExtension-watchOS.release.xcconfig"; sourceTree = "<group>"; };
-		C6892B68EC26AE07C3CA5EC9 /* Pods_MyFinance_iOS_MyFinanceKit_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyFinance_iOS_MyFinanceKit_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		C7BD7A61227A0D52B6BD2249 /* Pods-MyFinance-MyFinanceKit-MyFinanceKit-macOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyFinance-MyFinanceKit-MyFinanceKit-macOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MyFinance-MyFinanceKit-MyFinanceKit-macOS/Pods-MyFinance-MyFinanceKit-MyFinanceKit-macOS.debug.xcconfig"; sourceTree = "<group>"; };
-		C7CCD183A17160B8240BDEC7 /* Pods-MyFinance-iOS-MyFinanceKit-iOS-Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyFinance-iOS-MyFinanceKit-iOS-Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MyFinance-iOS-MyFinanceKit-iOS-Tests/Pods-MyFinance-iOS-MyFinanceKit-iOS-Tests.debug.xcconfig"; sourceTree = "<group>"; };
-		CA5E834DE6F6F9286C7C1D36 /* Pods_MyFinance_tvOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyFinance_tvOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		CB57E94D2A2F103E662A3C81 /* Pods-MyFinance-Tests-iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyFinance-Tests-iOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MyFinance-Tests-iOS/Pods-MyFinance-Tests-iOS.debug.xcconfig"; sourceTree = "<group>"; };
-		CB783AE36E4C018A8030ED7E /* Pods-MyFinanceKit-IntegrationTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyFinanceKit-IntegrationTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MyFinanceKit-IntegrationTests/Pods-MyFinanceKit-IntegrationTests.debug.xcconfig"; sourceTree = "<group>"; };
-		CCD970AA2A95287EC386A160 /* Pods-MyFinance-macOS-MyFinanceKit-macOS-Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyFinance-macOS-MyFinanceKit-macOS-Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MyFinance-macOS-MyFinanceKit-macOS-Tests/Pods-MyFinance-macOS-MyFinanceKit-macOS-Tests.debug.xcconfig"; sourceTree = "<group>"; };
-		D073DB893B5EF97E375E6E62 /* Pods-MyFinance-tvOS-MyFinance-tvOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyFinance-tvOS-MyFinance-tvOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MyFinance-tvOS-MyFinance-tvOS/Pods-MyFinance-tvOS-MyFinance-tvOS.debug.xcconfig"; sourceTree = "<group>"; };
-		D12F56B07BCE050C5014DB30 /* Pods-MyFinance-MyFinance-watchOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyFinance-MyFinance-watchOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MyFinance-MyFinance-watchOS/Pods-MyFinance-MyFinance-watchOS.debug.xcconfig"; sourceTree = "<group>"; };
-		D3F36BBF68AB654F26131BCF /* Pods_MyFinance_MyFinance_watchOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyFinance_MyFinance_watchOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		D421672C41645CA4A6C45F6D /* Pods-MyFinance-iOS-MyFinance-iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyFinance-iOS-MyFinance-iOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MyFinance-iOS-MyFinance-iOS/Pods-MyFinance-iOS-MyFinance-iOS.debug.xcconfig"; sourceTree = "<group>"; };
-		D7A58AADC22358D4DB5558AC /* Pods-MyFinance-MyFinance-Tests-iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyFinance-MyFinance-Tests-iOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MyFinance-MyFinance-Tests-iOS/Pods-MyFinance-MyFinance-Tests-iOS.debug.xcconfig"; sourceTree = "<group>"; };
-		D7F4F7FCB5493D404767A134 /* Pods_MyFinance_Tests_tvOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyFinance_Tests_tvOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		D8A7BA9C33A7287631E4147C /* Pods-MyFinance-macOS-MyFinanceKit-macOS-Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyFinance-macOS-MyFinanceKit-macOS-Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MyFinance-macOS-MyFinanceKit-macOS-Tests/Pods-MyFinance-macOS-MyFinanceKit-macOS-Tests.release.xcconfig"; sourceTree = "<group>"; };
-		DB6CB1440466B30927CA9A29 /* Pods_MyFinance_iOS_MyFinance_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyFinance_iOS_MyFinance_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		DF104020B08A284ACCD0C1C6 /* Pods_MyFinanceKit_watchOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyFinanceKit_watchOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		DF4BE8B9000BFF9FF5D30B21 /* Pods-MyFinance-MyFinance-Tests-macOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyFinance-MyFinance-Tests-macOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-MyFinance-MyFinance-Tests-macOS/Pods-MyFinance-MyFinance-Tests-macOS.release.xcconfig"; sourceTree = "<group>"; };
-		E0477DD22BA01E711EFA6535 /* Pods-MyFinanceKit-tvOS-Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyFinanceKit-tvOS-Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MyFinanceKit-tvOS-Tests/Pods-MyFinanceKit-tvOS-Tests.debug.xcconfig"; sourceTree = "<group>"; };
-		E120202F3E808F55766B52EC /* Pods-MyFinance-watchOS-MyFinanceKit-watchOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyFinance-watchOS-MyFinanceKit-watchOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MyFinance-watchOS-MyFinanceKit-watchOS/Pods-MyFinance-watchOS-MyFinanceKit-watchOS.debug.xcconfig"; sourceTree = "<group>"; };
-		E2A22ECAE018E7C8BC198690 /* Pods-MyFinance-macOS-MyFinanceExtension-macOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyFinance-macOS-MyFinanceExtension-macOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-MyFinance-macOS-MyFinanceExtension-macOS/Pods-MyFinance-macOS-MyFinanceExtension-macOS.release.xcconfig"; sourceTree = "<group>"; };
-		E67CAACA13C50DDC075D28D1 /* Pods-MyFinance-iOS-MyFinance-Tests-iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyFinance-iOS-MyFinance-Tests-iOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-MyFinance-iOS-MyFinance-Tests-iOS/Pods-MyFinance-iOS-MyFinance-Tests-iOS.release.xcconfig"; sourceTree = "<group>"; };
-		E71F0674251275330B29E3DE /* Pods-MyFinance-MyFinance-iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyFinance-MyFinance-iOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-MyFinance-MyFinance-iOS/Pods-MyFinance-MyFinance-iOS.release.xcconfig"; sourceTree = "<group>"; };
-		E7A907976CB05B5A1334B46A /* Pods-MyFinance-macOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyFinance-macOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-MyFinance-macOS/Pods-MyFinance-macOS.release.xcconfig"; sourceTree = "<group>"; };
-		E80B1A6C7C92598DBB460F5D /* Pods-MyFinance-iOS-MyFinanceKit-IntegrationTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyFinance-iOS-MyFinanceKit-IntegrationTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MyFinance-iOS-MyFinanceKit-IntegrationTests/Pods-MyFinance-iOS-MyFinanceKit-IntegrationTests.release.xcconfig"; sourceTree = "<group>"; };
-		E968946EC731E2374D087BDB /* Pods-MyFinance-tvOS-MyFinance-tvOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyFinance-tvOS-MyFinance-tvOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-MyFinance-tvOS-MyFinance-tvOS/Pods-MyFinance-tvOS-MyFinance-tvOS.release.xcconfig"; sourceTree = "<group>"; };
-		EAE0140E56957BEC3F23A61C /* Pods_MyFinance_watchOS_MyFinance_watchOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyFinance_watchOS_MyFinance_watchOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		EEED47369C41EF4D1ABBAA5A /* Pods_MyFinance_iOS_MyFinanceKit_iOS_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyFinance_iOS_MyFinanceKit_iOS_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		F4CA859283CA4A6BD22F4199 /* Pods-MyFinance-MyFinanceExtension-macOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyFinance-MyFinanceExtension-macOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MyFinance-MyFinanceExtension-macOS/Pods-MyFinance-MyFinanceExtension-macOS.debug.xcconfig"; sourceTree = "<group>"; };
-		F51C2C4D4AC0582B151157AE /* Pods_MyFinance_tvOS_MyFinance_tvOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyFinance_tvOS_MyFinance_tvOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		F8EE69DEB5545771CE74522A /* Pods_MyFinance_MyFinanceExtension_macOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyFinance_MyFinanceExtension_macOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		F9842499D6F19715258EF9E7 /* Pods_MyFinanceKit_tvOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyFinanceKit_tvOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		F9C22E65EE27E359BD71BEBF /* Pods_MyFinanceKit_macOS_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyFinanceKit_macOS_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		FB857C1D6B3E1C921DB1C62E /* Pods-MyFinance-iOS-MyFinanceExtension-iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyFinance-iOS-MyFinanceExtension-iOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MyFinance-iOS-MyFinanceExtension-iOS/Pods-MyFinance-iOS-MyFinanceExtension-iOS.debug.xcconfig"; sourceTree = "<group>"; };
-		FBD616E33767A57E45EB175A /* Pods_MyFinance.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyFinance.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		FC0BC5C7098BF9F6DD407698 /* Pods-MyFinance-watchOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyFinance-watchOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MyFinance-watchOS/Pods-MyFinance-watchOS.debug.xcconfig"; sourceTree = "<group>"; };
-		FD2391F3B0AB2D129D98DF60 /* Pods-MyFinance-macOS-MyFinanceKit-macOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyFinance-macOS-MyFinanceKit-macOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-MyFinance-macOS-MyFinanceKit-macOS/Pods-MyFinance-macOS-MyFinanceKit-macOS.release.xcconfig"; sourceTree = "<group>"; };
+		9E16A7ED046C9A52EA56ECAA /* Pods-MyFinance-tvOS-MyFinance-tvOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyFinance-tvOS-MyFinance-tvOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-MyFinance-tvOS-MyFinance-tvOS/Pods-MyFinance-tvOS-MyFinance-tvOS.release.xcconfig"; sourceTree = "<group>"; };
+		9FBB5DAF3F32B2EF55726EA3 /* Pods-MyFinance-iOS-MyFinanceKit-iOS-Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyFinance-iOS-MyFinanceKit-iOS-Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MyFinance-iOS-MyFinanceKit-iOS-Tests/Pods-MyFinance-iOS-MyFinanceKit-iOS-Tests.debug.xcconfig"; sourceTree = "<group>"; };
+		A0EA82D430A0F52DF230FE05 /* Pods-MyFinance-macOS-MyFinanceKit-macOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyFinance-macOS-MyFinanceKit-macOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MyFinance-macOS-MyFinanceKit-macOS/Pods-MyFinance-macOS-MyFinanceKit-macOS.debug.xcconfig"; sourceTree = "<group>"; };
+		ABB85ED292326BE22AF04C27 /* Pods-MyFinance-macOS-MyFinanceExtension-macOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyFinance-macOS-MyFinanceExtension-macOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-MyFinance-macOS-MyFinanceExtension-macOS/Pods-MyFinance-macOS-MyFinanceExtension-macOS.release.xcconfig"; sourceTree = "<group>"; };
+		B01CDDE8E113F57D9F8D634F /* Pods-MyFinance-macOS-MyFinanceKit-macOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyFinance-macOS-MyFinanceKit-macOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-MyFinance-macOS-MyFinanceKit-macOS/Pods-MyFinance-macOS-MyFinanceKit-macOS.release.xcconfig"; sourceTree = "<group>"; };
+		B086D3E79B2C8395899ACE89 /* Pods_MyFinance_tvOS_MyFinance_tvOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyFinance_tvOS_MyFinance_tvOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B171E2567DB80D274E9459AB /* Pods-MyFinance-tvOS-MyFinance-Tests-tvOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyFinance-tvOS-MyFinance-Tests-tvOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MyFinance-tvOS-MyFinance-Tests-tvOS/Pods-MyFinance-tvOS-MyFinance-Tests-tvOS.debug.xcconfig"; sourceTree = "<group>"; };
+		B78EFCB39EECD4FF3A0CA9B3 /* Pods-MyFinance-macOS-MyFinanceKit-macOS-Unsigned-Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyFinance-macOS-MyFinanceKit-macOS-Unsigned-Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MyFinance-macOS-MyFinanceKit-macOS-Unsigned-Tests/Pods-MyFinance-macOS-MyFinanceKit-macOS-Unsigned-Tests.debug.xcconfig"; sourceTree = "<group>"; };
+		B97AC6B4924B9F3BACE32BF6 /* Pods-MyFinance-tvOS-MyFinanceKit-tvOS-Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyFinance-tvOS-MyFinanceKit-tvOS-Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MyFinance-tvOS-MyFinanceKit-tvOS-Tests/Pods-MyFinance-tvOS-MyFinanceKit-tvOS-Tests.release.xcconfig"; sourceTree = "<group>"; };
+		B9B4A036EED949F14150DA8A /* Pods-MyFinance-macOS-MyFinance-Tests-macOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyFinance-macOS-MyFinance-Tests-macOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MyFinance-macOS-MyFinance-Tests-macOS/Pods-MyFinance-macOS-MyFinance-Tests-macOS.debug.xcconfig"; sourceTree = "<group>"; };
+		BD1256F76D20F1043E561DEB /* Pods-MyFinance-iOS-MyFinanceExtension-iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyFinance-iOS-MyFinanceExtension-iOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MyFinance-iOS-MyFinanceExtension-iOS/Pods-MyFinance-iOS-MyFinanceExtension-iOS.debug.xcconfig"; sourceTree = "<group>"; };
+		BE49C7AE8F9B8944FAC917DD /* Pods-MyFinance-iOS-MyFinanceKit-IntegrationTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyFinance-iOS-MyFinanceKit-IntegrationTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MyFinance-iOS-MyFinanceKit-IntegrationTests/Pods-MyFinance-iOS-MyFinanceKit-IntegrationTests.release.xcconfig"; sourceTree = "<group>"; };
+		C110DB3AC5B138071ADC9650 /* Pods-MyFinance-iOS-MyFinanceKit-iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyFinance-iOS-MyFinanceKit-iOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MyFinance-iOS-MyFinanceKit-iOS/Pods-MyFinance-iOS-MyFinanceKit-iOS.debug.xcconfig"; sourceTree = "<group>"; };
+		C8510FBE82D7EFDB9CF09365 /* Pods-MyFinance-watchOS-MyFinanceExtension-watchOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyFinance-watchOS-MyFinanceExtension-watchOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MyFinance-watchOS-MyFinanceExtension-watchOS/Pods-MyFinance-watchOS-MyFinanceExtension-watchOS.debug.xcconfig"; sourceTree = "<group>"; };
+		C9462ADEE979CD68EEC01987 /* Pods_MyFinance_macOS_MyFinance_Tests_macOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyFinance_macOS_MyFinance_Tests_macOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C9568D338E569D54A0387F6E /* Pods-MyFinance-iOS-MyFinance-Tests-iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyFinance-iOS-MyFinance-Tests-iOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MyFinance-iOS-MyFinance-Tests-iOS/Pods-MyFinance-iOS-MyFinance-Tests-iOS.debug.xcconfig"; sourceTree = "<group>"; };
+		D8D926226C93F4318936EE5F /* Pods-MyFinance-iOS-MyFinanceKit-iOS-Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyFinance-iOS-MyFinanceKit-iOS-Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MyFinance-iOS-MyFinanceKit-iOS-Tests/Pods-MyFinance-iOS-MyFinanceKit-iOS-Tests.release.xcconfig"; sourceTree = "<group>"; };
+		DD47E238039CA8AE12C57C25 /* Pods-MyFinance-macOS-MyFinance-macOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyFinance-macOS-MyFinance-macOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-MyFinance-macOS-MyFinance-macOS/Pods-MyFinance-macOS-MyFinance-macOS.release.xcconfig"; sourceTree = "<group>"; };
+		DDAEDD691FB4BCCCE1F503EE /* Pods-MyFinance-iOS-MyFinanceKit-IntegrationTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyFinance-iOS-MyFinanceKit-IntegrationTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MyFinance-iOS-MyFinanceKit-IntegrationTests/Pods-MyFinance-iOS-MyFinanceKit-IntegrationTests.debug.xcconfig"; sourceTree = "<group>"; };
+		DE3A6B029D3C4B0442DE0D23 /* Pods-MyFinance-macOS-MyFinanceKit-macOS-Unsigned-Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyFinance-macOS-MyFinanceKit-macOS-Unsigned-Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MyFinance-macOS-MyFinanceKit-macOS-Unsigned-Tests/Pods-MyFinance-macOS-MyFinanceKit-macOS-Unsigned-Tests.release.xcconfig"; sourceTree = "<group>"; };
+		DFF8A5998A6D263FD1A88894 /* Pods-MyFinance-macOS-MyFinance-Tests-macOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyFinance-macOS-MyFinance-Tests-macOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-MyFinance-macOS-MyFinance-Tests-macOS/Pods-MyFinance-macOS-MyFinance-Tests-macOS.release.xcconfig"; sourceTree = "<group>"; };
+		E4C7644B9FDF0C85E1E925C6 /* Pods_MyFinance_iOS_MyFinanceKit_IntegrationTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyFinance_iOS_MyFinanceKit_IntegrationTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E6EA8DC0A2B844063063D42F /* Pods_MyFinance_iOS_MyFinanceExtension_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyFinance_iOS_MyFinanceExtension_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E8FF088B83746D910908B1A7 /* Pods_MyFinance_macOS_MyFinance_macOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyFinance_macOS_MyFinance_macOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EA80DA632AAD88AC54CCFB78 /* Pods-MyFinance-iOS-MyFinance-Tests-iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyFinance-iOS-MyFinance-Tests-iOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-MyFinance-iOS-MyFinance-Tests-iOS/Pods-MyFinance-iOS-MyFinance-Tests-iOS.release.xcconfig"; sourceTree = "<group>"; };
+		EB188015E1371D807A21CA50 /* Pods_MyFinance_watchOS_MyFinance_watchOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyFinance_watchOS_MyFinance_watchOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EB68694F2363C51DA6753387 /* Pods-MyFinance-iOS-MyFinanceExtension-iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyFinance-iOS-MyFinanceExtension-iOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-MyFinance-iOS-MyFinanceExtension-iOS/Pods-MyFinance-iOS-MyFinanceExtension-iOS.release.xcconfig"; sourceTree = "<group>"; };
+		F289C4CE684A98DF3F6609C6 /* Pods_MyFinance_watchOS_MyFinanceExtension_watchOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyFinance_watchOS_MyFinanceExtension_watchOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F47ECCF1A28D21D497F8E335 /* Pods-MyFinance-tvOS-MyFinanceKit-tvOS-Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyFinance-tvOS-MyFinanceKit-tvOS-Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MyFinance-tvOS-MyFinanceKit-tvOS-Tests/Pods-MyFinance-tvOS-MyFinanceKit-tvOS-Tests.debug.xcconfig"; sourceTree = "<group>"; };
+		F536594AB4F9B5EF5D9C91A5 /* Pods-MyFinance-tvOS-MyFinance-tvOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyFinance-tvOS-MyFinance-tvOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MyFinance-tvOS-MyFinance-tvOS/Pods-MyFinance-tvOS-MyFinance-tvOS.debug.xcconfig"; sourceTree = "<group>"; };
+		F6944706D0987DB59F567452 /* Pods-MyFinance-tvOS-MyFinance-Tests-tvOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyFinance-tvOS-MyFinance-Tests-tvOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-MyFinance-tvOS-MyFinance-Tests-tvOS/Pods-MyFinance-tvOS-MyFinance-Tests-tvOS.release.xcconfig"; sourceTree = "<group>"; };
+		FC91FB440B587B652B203531 /* Pods_MyFinance_macOS_MyFinanceKit_macOS_Unsigned_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyFinance_macOS_MyFinanceKit_macOS_Unsigned_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FFC0182EFAA65EEF0BA3735E /* Pods-MyFinance-watchOS-MyFinanceKit-watchOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyFinance-watchOS-MyFinanceKit-watchOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MyFinance-watchOS-MyFinanceKit-watchOS/Pods-MyFinance-watchOS-MyFinanceKit-watchOS.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1227,7 +1110,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				53C320DE596E0DDAA8C9A563 /* Pods_MyFinance_watchOS_MyFinanceKit_watchOS.framework in Frameworks */,
+				F91DF770295ED8627207026D /* Pods_MyFinance_watchOS_MyFinanceKit_watchOS.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1236,7 +1119,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9A2022402038D4990012DD51 /* MyFinanceKit.framework in Frameworks */,
-				303BB4698944490FE9297BF8 /* Pods_MyFinance_tvOS_MyFinance_tvOS.framework in Frameworks */,
+				B273D64CCA9F7C9AA59ECCFD /* Pods_MyFinance_tvOS_MyFinance_tvOS.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1244,7 +1127,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C242C4EF085B137AD0C67EB4 /* Pods_MyFinance_tvOS_MyFinanceKit_tvOS.framework in Frameworks */,
+				B698B004FF98D90571BA8484 /* Pods_MyFinance_tvOS_MyFinanceKit_tvOS.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1253,7 +1136,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9A2022912038DCCF0012DD51 /* MyFinanceKit.framework in Frameworks */,
-				D6DD7D2425CA91649F9A30E0 /* Pods_MyFinance_iOS_MyFinanceKit_IntegrationTests.framework in Frameworks */,
+				71ED7AAA75351043B77A4356 /* Pods_MyFinance_iOS_MyFinanceKit_IntegrationTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1262,8 +1145,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9A20220F2038CAE00012DD51 /* MyFinanceKit.framework in Frameworks */,
-				3352ECF8B6D82DDD5F459495 /* Pods_MyFinance_watchOS_MyFinanceExtension_watchOS.framework in Frameworks */,
-				C77BD962978D93AD2285E535 /* Pods_MyFinance_watchOS_MyFinanceExtension_watchOS.framework in Frameworks */,
+				13C6A73302D46E73FE7B51D3 /* Pods_MyFinance_watchOS_MyFinanceExtension_watchOS.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1271,7 +1153,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				055A915AFA3824A7460FD3A8 /* Pods_MyFinance_iOS_MyFinanceKit_iOS.framework in Frameworks */,
+				F4FCF7D442B3013C8F5D4D62 /* Pods_MyFinance_iOS_MyFinanceKit_iOS.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1279,7 +1161,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D3900C47AF95713829627096 /* Pods_MyFinance_macOS_MyFinanceKit_macOS.framework in Frameworks */,
+				B1978925B67B180EA90EC174 /* Pods_MyFinance_macOS_MyFinanceKit_macOS.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1288,7 +1170,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9A4F55372023C7A900DBF68F /* MyFinanceKit.framework in Frameworks */,
-				0CEB5B2645D55BB30BF30358 /* Pods_MyFinance_iOS_MyFinance_iOS.framework in Frameworks */,
+				69268E74E7AB1DFD063EEBF3 /* Pods_MyFinance_iOS_MyFinance_iOS.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1296,7 +1178,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				43DCADA4C020B52177F4A8B8 /* Pods_MyFinance_iOS_MyFinance_Tests_iOS.framework in Frameworks */,
+				BA16EB9FD0699F0E5E33FF7B /* Pods_MyFinance_iOS_MyFinance_Tests_iOS.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1305,7 +1187,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9A6EF74C202B939B006D3420 /* MyFinanceKit.framework in Frameworks */,
-				8611EADDB1E2A1836F1649EC /* Pods_MyFinance_iOS_MyFinanceKit_iOS_Tests.framework in Frameworks */,
+				AEA35E12D82DEA8DC4C87326 /* Pods_MyFinance_iOS_MyFinanceKit_iOS_Tests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1314,7 +1196,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9A4F55492023C7BE00DBF68F /* MyFinanceKit.framework in Frameworks */,
-				C41953C68CB3F32F3E400D0E /* Pods_MyFinance_macOS_MyFinance_macOS.framework in Frameworks */,
+				F094D06180A4468030E169C0 /* Pods_MyFinance_macOS_MyFinance_macOS.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1324,7 +1206,7 @@
 			files = (
 				9A4F557C2023CE2C00DBF68F /* MyFinanceKit.framework in Frameworks */,
 				9A740EE0201E247D00D40943 /* NotificationCenter.framework in Frameworks */,
-				DC2E7679A0A81641E95B459A /* Pods_MyFinance_macOS_MyFinanceExtension_macOS.framework in Frameworks */,
+				5E15BE6CDB13E1D8A18BD513 /* Pods_MyFinance_macOS_MyFinanceExtension_macOS.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1333,7 +1215,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9A94F8E6202CE83100AEF61F /* MyFinanceKit.framework in Frameworks */,
-				BBC5A5547D0781C573BFDB13 /* Pods_MyFinance_macOS_MyFinanceKit_macOS_Tests.framework in Frameworks */,
+				100A822E412A767D395614BB /* Pods_MyFinance_macOS_MyFinanceKit_macOS_Tests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1341,7 +1223,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CF1DE6BCBAA9A2E0FBCE786F /* Pods_MyFinance_macOS_MyFinance_Tests_macOS.framework in Frameworks */,
+				274F77F823A2BEFB7CC8225E /* Pods_MyFinance_macOS_MyFinance_Tests_macOS.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1349,7 +1231,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				320F3290B1CE93F3AFA6A5B4 /* Pods_MyFinance_tvOS_MyFinance_Tests_tvOS.framework in Frameworks */,
+				22314155D52D5E27A79E4579 /* Pods_MyFinance_tvOS_MyFinance_Tests_tvOS.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1358,7 +1240,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9ABBC4B12041B00E008B6306 /* MyFinanceKit.framework in Frameworks */,
-				FC2C2720D75238A76F748B1A /* Pods_MyFinance_tvOS_MyFinanceKit_tvOS_Tests.framework in Frameworks */,
+				B321ED1D9D091CD288147F57 /* Pods_MyFinance_tvOS_MyFinanceKit_tvOS_Tests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1367,7 +1249,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9AC1A5FA20840D6200947DCE /* MyFinanceKit.framework in Frameworks */,
-				8D19919D51253CAB1217E611 /* Pods_MyFinance_macOS_MyFinanceKit_macOS_Unsigned_Tests.framework in Frameworks */,
+				908C1B90C8998980F68996BF /* Pods_MyFinance_macOS_MyFinanceKit_macOS_Unsigned_Tests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1377,7 +1259,7 @@
 			files = (
 				9A4F557B2023CE2100DBF68F /* MyFinanceKit.framework in Frameworks */,
 				9AD3EE3A2013D9A10083F8FE /* NotificationCenter.framework in Frameworks */,
-				6DC90F28A7DABA6071FA0014 /* Pods_MyFinance_iOS_MyFinanceExtension_iOS.framework in Frameworks */,
+				1C9D0E4C1F0438DAA20296AC /* Pods_MyFinance_iOS_MyFinanceExtension_iOS.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1385,7 +1267,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				666FF7C8DC7AAE8C08265510 /* Pods_MyFinance_watchOS_MyFinance_watchOS.framework in Frameworks */,
+				A38B12D4084F832EBE5A70F8 /* Pods_MyFinance_watchOS_MyFinance_watchOS.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1395,67 +1277,26 @@
 		6A8339920FDEA889B7701045 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				9A2F72D52078E65E00B16F7C /* Pods_MyFinance_watchOS_MyFinanceExtension_watchOS.framework */,
-				9AAD3892202F5CBF00395119 /* Pods_MyFinanceKit_iOS.framework */,
-				9AAD3890202F5CAD00395119 /* Pods_MyFinanceExtension_iOS.framework */,
-				FBD616E33767A57E45EB175A /* Pods_MyFinance.framework */,
 				9AD3EE392013D9A10083F8FE /* NotificationCenter.framework */,
-				1DDA4BA8DDECA7088DB8650F /* Pods_MyFinanceExtension.framework */,
-				18E272BE0EF275A986DCD73A /* Pods_MyFinance_macOS.framework */,
-				0613BC2F22CEB669D68D23C1 /* Pods_MyFinanceExtension_macOS.framework */,
-				21B3EE530AA3AECFBE345AC1 /* Pods_MyFinanceKit_iOS.framework */,
-				44AC3487225BC41D05828D87 /* Pods_MyFinanceKit_macOS.framework */,
-				C00742E35A2D39BB6D61F955 /* Pods_MyFinance_iOS.framework */,
-				31E496E3C420FCE75CDDFC3B /* Pods_MyFinanceExtension_iOS.framework */,
-				71DE352B10B756CB7290E228 /* Pods_MyFinanceKit_iOS_Tests.framework */,
-				F9C22E65EE27E359BD71BEBF /* Pods_MyFinanceKit_macOS_Tests.framework */,
-				DF104020B08A284ACCD0C1C6 /* Pods_MyFinanceKit_watchOS.framework */,
-				24A8E1C6F363039A00A60FAD /* Pods_MyFinance_watchOS.framework */,
-				4BD4B39AD0637A850A615FE2 /* Pods_MyFinanceExtension_watchOS.framework */,
-				CA5E834DE6F6F9286C7C1D36 /* Pods_MyFinance_tvOS.framework */,
-				F9842499D6F19715258EF9E7 /* Pods_MyFinanceKit_tvOS.framework */,
-				7A383CB85EBD5980CBFBB091 /* Pods_MyFinanceKit_IntegrationTests.framework */,
-				5CD20F00FDCA7C321135462A /* Pods_MyFinanceKit_tvOS_Tests.framework */,
-				7E05704523C729A976882919 /* Pods_MyFinance_Tests_iOS.framework */,
-				C2C63C31D40DAC096106092E /* Pods_MyFinance_Tests_macOS.framework */,
-				D7F4F7FCB5493D404767A134 /* Pods_MyFinance_Tests_tvOS.framework */,
-				98F0B4845C9A3C0612D856F8 /* Pods_MyFinance_MyFinance_Tests_iOS.framework */,
-				04B47DC2BA0BF476906300EF /* Pods_MyFinance_MyFinance_Tests_macOS.framework */,
-				AA3699BFE9E32E28FB09065A /* Pods_MyFinance_MyFinance_Tests_tvOS.framework */,
-				28E9625BA8CAC1E7ACDCED58 /* Pods_MyFinance_MyFinance_iOS.framework */,
-				818FF4243E1F740922885780 /* Pods_MyFinance_MyFinance_macOS.framework */,
-				4E9A9AF241A9DC08D68A0519 /* Pods_MyFinance_MyFinance_tvOS.framework */,
-				D3F36BBF68AB654F26131BCF /* Pods_MyFinance_MyFinance_watchOS.framework */,
-				507698C7795732329034A957 /* Pods_MyFinance_MyFinanceExtension_iOS.framework */,
-				F8EE69DEB5545771CE74522A /* Pods_MyFinance_MyFinanceExtension_macOS.framework */,
-				4CE8E49AA8123D33ACB26854 /* Pods_MyFinance_MyFinanceExtension_watchOS.framework */,
-				55B4F55974A8EFBEFE326937 /* Pods_MyFinance_MyFinanceKit_IntegrationTests.framework */,
-				4F4D45E9CE29394DD3ACD6C2 /* Pods_MyFinance_MyFinanceKit_MyFinanceKit_iOS.framework */,
-				08CEA510E26C7BEE1DB71CC2 /* Pods_MyFinance_MyFinanceKit_MyFinanceKit_macOS.framework */,
-				5B2B5A93D6FC19C2DF068D3C /* Pods_MyFinance_MyFinanceKit_MyFinanceKit_tvOS.framework */,
-				24D31AF734D7C2594D35D164 /* Pods_MyFinance_MyFinanceKit_MyFinanceKit_watchOS.framework */,
-				6047CB5BBC31A3C6F4932EDA /* Pods_MyFinance_MyFinanceKit_iOS_Tests.framework */,
-				0FB7130A0C9E7413D8963383 /* Pods_MyFinance_MyFinanceKit_macOS_Tests.framework */,
-				A3729F1878A4E1F964F4105F /* Pods_MyFinance_MyFinanceKit_tvOS_Tests.framework */,
-				2B12880C4555D6838E9EF306 /* Pods_MyFinance_iOS_MyFinance_Tests_iOS.framework */,
-				DB6CB1440466B30927CA9A29 /* Pods_MyFinance_iOS_MyFinance_iOS.framework */,
-				5F9A63CFD7EF62E12AE4886C /* Pods_MyFinance_iOS_MyFinanceExtension_iOS.framework */,
-				837E698B1836AE75332FD4D6 /* Pods_MyFinance_iOS_MyFinanceKit_IntegrationTests.framework */,
-				EEED47369C41EF4D1ABBAA5A /* Pods_MyFinance_iOS_MyFinanceKit_iOS_Tests.framework */,
-				318A3499250893FE5FE2FFB7 /* Pods_MyFinance_macOS_MyFinance_Tests_macOS.framework */,
-				3D12ECA6763403A32015CFB7 /* Pods_MyFinance_macOS_MyFinance_macOS.framework */,
-				4AED65AE524543BFC60DA7F2 /* Pods_MyFinance_macOS_MyFinanceExtension_macOS.framework */,
-				1AC4539514CBD7EC7BAF1475 /* Pods_MyFinance_macOS_MyFinanceKit_macOS_Tests.framework */,
-				45FFBFDFCED8A7B0A3C3C53E /* Pods_MyFinance_tvOS_MyFinance_Tests_tvOS.framework */,
-				F51C2C4D4AC0582B151157AE /* Pods_MyFinance_tvOS_MyFinance_tvOS.framework */,
-				392542F0F8097B23DFF8BD2E /* Pods_MyFinance_tvOS_MyFinanceKit_tvOS_Tests.framework */,
-				EAE0140E56957BEC3F23A61C /* Pods_MyFinance_watchOS_MyFinance_watchOS.framework */,
-				9990EA6FC7E88C79C350B2C7 /* Pods_MyFinance_watchOS_MyFinanceExtension_watchOS.framework */,
-				C6892B68EC26AE07C3CA5EC9 /* Pods_MyFinance_iOS_MyFinanceKit_iOS.framework */,
-				1D92DB258D0260909E4D930C /* Pods_MyFinance_macOS_MyFinanceKit_macOS.framework */,
-				3E71D62F8FA81161772D2548 /* Pods_MyFinance_tvOS_MyFinanceKit_tvOS.framework */,
-				C12538FAB8FD2A459C138F6F /* Pods_MyFinance_watchOS_MyFinanceKit_watchOS.framework */,
-				402ACA20B26921BF30FE4C7E /* Pods_MyFinance_macOS_MyFinanceKit_macOS_Unsigned_Tests.framework */,
+				6A1E436FADCBECFD9C960385 /* Pods_MyFinance_iOS_MyFinance_Tests_iOS.framework */,
+				4AAF8D7EC1D5BBD273E0622A /* Pods_MyFinance_iOS_MyFinance_iOS.framework */,
+				E6EA8DC0A2B844063063D42F /* Pods_MyFinance_iOS_MyFinanceExtension_iOS.framework */,
+				E4C7644B9FDF0C85E1E925C6 /* Pods_MyFinance_iOS_MyFinanceKit_IntegrationTests.framework */,
+				9588789BFD40EE73F6386C37 /* Pods_MyFinance_iOS_MyFinanceKit_iOS.framework */,
+				8ECA80B3590F04BD1A616429 /* Pods_MyFinance_iOS_MyFinanceKit_iOS_Tests.framework */,
+				C9462ADEE979CD68EEC01987 /* Pods_MyFinance_macOS_MyFinance_Tests_macOS.framework */,
+				E8FF088B83746D910908B1A7 /* Pods_MyFinance_macOS_MyFinance_macOS.framework */,
+				74FC869DEACDFD6D9E71A90E /* Pods_MyFinance_macOS_MyFinanceExtension_macOS.framework */,
+				5C03A6F15C431AE5ADE6F961 /* Pods_MyFinance_macOS_MyFinanceKit_macOS.framework */,
+				1DA5B0E02A565BD73C387CA3 /* Pods_MyFinance_macOS_MyFinanceKit_macOS_Tests.framework */,
+				FC91FB440B587B652B203531 /* Pods_MyFinance_macOS_MyFinanceKit_macOS_Unsigned_Tests.framework */,
+				2374DB55C71CBF1F53CCC3AE /* Pods_MyFinance_tvOS_MyFinance_Tests_tvOS.framework */,
+				B086D3E79B2C8395899ACE89 /* Pods_MyFinance_tvOS_MyFinance_tvOS.framework */,
+				80AB84DBC713B4CB28B0F678 /* Pods_MyFinance_tvOS_MyFinanceKit_tvOS.framework */,
+				5088A6EE33F45814AF71752B /* Pods_MyFinance_tvOS_MyFinanceKit_tvOS_Tests.framework */,
+				EB188015E1371D807A21CA50 /* Pods_MyFinance_watchOS_MyFinance_watchOS.framework */,
+				F289C4CE684A98DF3F6609C6 /* Pods_MyFinance_watchOS_MyFinanceExtension_watchOS.framework */,
+				64CD47381C44E05034BD2D62 /* Pods_MyFinance_watchOS_MyFinanceKit_watchOS.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -1695,7 +1536,7 @@
 		9A5AE5692012A8AB00B25081 = {
 			isa = PBXGroup;
 			children = (
-				9A85617F202790D000A26F12 /* Supporting Files */,
+				9A8BF8352085479100FF4688 /* Supporting Files */,
 				9A4F55312023C7A900DBF68F /* MyFinanceKit */,
 				9A5AE5742012A8AB00B25081 /* MyFinance-iOS */,
 				9AD3EE3B2013D9A10083F8FE /* MyFinanceExtension-iOS */,
@@ -1951,18 +1792,6 @@
 			path = TableView;
 			sourceTree = "<group>";
 		};
-		9A85617F202790D000A26F12 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				9A85618B2027921F00A26F12 /* README.md */,
-				9A856185202791E100A26F12 /* config.json */,
-				9A85618A2027921800A26F12 /* Podfile */,
-				9A8561882027920600A26F12 /* .gitignore */,
-				9A8561892027920D00A26F12 /* .swiftlint.yml */,
-			);
-			path = "Supporting Files";
-			sourceTree = "<group>";
-		};
 		9A8561AB2027AB8A00A26F12 /* View */ = {
 			isa = PBXGroup;
 			children = (
@@ -2023,6 +1852,19 @@
 				9ADC567E20432FDC003D8C63 /* Settings */,
 			);
 			path = UI;
+			sourceTree = "<group>";
+		};
+		9A8BF8352085479100FF4688 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				9A85618B2027921F00A26F12 /* README.md */,
+				9A856185202791E100A26F12 /* config.json */,
+				9A85618A2027921800A26F12 /* Podfile */,
+				9A8561882027920600A26F12 /* .gitignore */,
+				9A8561892027920D00A26F12 /* .swiftlint.yml */,
+				9A8BF8332085474900FF4688 /* codecov.yml */,
+			);
+			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
 		9A8CD6BA207A431A007EC2F5 /* Launch */ = {
@@ -2236,8 +2078,8 @@
 			isa = PBXGroup;
 			children = (
 				9A3A2B98203A2DDC0071FBC5 /* Mocks */,
-				9AC3E73520423C7100CD29B6 /* Factory.swift */,
 				9AE7F158204256D200BA98BD /* View */,
+				9AC3E73520423C7100CD29B6 /* Factory.swift */,
 			);
 			path = MyFinanceTestKit;
 			sourceTree = "<group>";
@@ -2407,120 +2249,44 @@
 		B68A00CB2E7F1881222650B9 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				657896AC39A3CD1FA90830E2 /* Pods-MyFinance.debug.xcconfig */,
-				C49F06F9156F2CB30EC7BDDD /* Pods-MyFinance.release.xcconfig */,
-				2D12856044DE82C2924693FD /* Pods-MyFinanceExtension.debug.xcconfig */,
-				300147042264DD560CDF6466 /* Pods-MyFinanceExtension.release.xcconfig */,
-				74049B79C623546C08393954 /* Pods-MyFinance-macOS.debug.xcconfig */,
-				E7A907976CB05B5A1334B46A /* Pods-MyFinance-macOS.release.xcconfig */,
-				AD2A187BD7CC65C7F408B8B3 /* Pods-MyFinanceExtension-macOS.debug.xcconfig */,
-				5A25FB183210480050D71829 /* Pods-MyFinanceExtension-macOS.release.xcconfig */,
-				BFAE274C26F56EC75AF18966 /* Pods-MyFinanceKit-iOS.debug.xcconfig */,
-				ADBD8518395325566C1A293C /* Pods-MyFinanceKit-iOS.release.xcconfig */,
-				17B7B8346066410A945846CC /* Pods-MyFinanceKit-macOS.debug.xcconfig */,
-				09C82B2A82B999F2CE14A81D /* Pods-MyFinanceKit-macOS.release.xcconfig */,
-				0AF9D3FC1CAE2B4D66C2020D /* Pods-MyFinance-iOS.debug.xcconfig */,
-				2CA9B8503DCA039D14F472B2 /* Pods-MyFinance-iOS.release.xcconfig */,
-				A8B0411C6517F0B6198C67E8 /* Pods-MyFinanceExtension-iOS.debug.xcconfig */,
-				912C8C9B1823959085F2299C /* Pods-MyFinanceExtension-iOS.release.xcconfig */,
-				54F2EAF62CE4FC188C88B031 /* Pods-MyFinanceKit-iOS-Tests.debug.xcconfig */,
-				8A08E3B1273B7D72A834A457 /* Pods-MyFinanceKit-iOS-Tests.release.xcconfig */,
-				547E5D3156566AFD935566D8 /* Pods-MyFinanceKit-macOS-Tests.debug.xcconfig */,
-				1CC1B7F5F25BF7423D6AE09A /* Pods-MyFinanceKit-macOS-Tests.release.xcconfig */,
-				6CDC99995DFF040817E2BD06 /* Pods-MyFinanceKit-watchOS.debug.xcconfig */,
-				9583B4C05F05012F0928BCE1 /* Pods-MyFinanceKit-watchOS.release.xcconfig */,
-				FC0BC5C7098BF9F6DD407698 /* Pods-MyFinance-watchOS.debug.xcconfig */,
-				154C3EDEA429A33FE8DEF397 /* Pods-MyFinance-watchOS.release.xcconfig */,
-				C223AF58FF1CE65B81044CD9 /* Pods-MyFinanceExtension-watchOS.debug.xcconfig */,
-				7E134E4C4AD752A4AC063CBA /* Pods-MyFinanceExtension-watchOS.release.xcconfig */,
-				9BF959DE601445A20C613BBB /* Pods-MyFinance-tvOS.debug.xcconfig */,
-				C2489DCFA65618360AC31A0F /* Pods-MyFinance-tvOS.release.xcconfig */,
-				5995E6833EDF311EFF4704CB /* Pods-MyFinanceKit-tvOS.debug.xcconfig */,
-				6FED7CD4F62A512E35417530 /* Pods-MyFinanceKit-tvOS.release.xcconfig */,
-				CB783AE36E4C018A8030ED7E /* Pods-MyFinanceKit-IntegrationTests.debug.xcconfig */,
-				B7F8F05E7BD702B52DF750B0 /* Pods-MyFinanceKit-IntegrationTests.release.xcconfig */,
-				E0477DD22BA01E711EFA6535 /* Pods-MyFinanceKit-tvOS-Tests.debug.xcconfig */,
-				05DEF06637CD9C3E2B22002E /* Pods-MyFinanceKit-tvOS-Tests.release.xcconfig */,
-				CB57E94D2A2F103E662A3C81 /* Pods-MyFinance-Tests-iOS.debug.xcconfig */,
-				2EC823162676B33C1F0731F6 /* Pods-MyFinance-Tests-iOS.release.xcconfig */,
-				AE2F8F578F6B35DBC78283E0 /* Pods-MyFinance-Tests-macOS.debug.xcconfig */,
-				5545AC61647BC0167370E20F /* Pods-MyFinance-Tests-macOS.release.xcconfig */,
-				BA0115B8C0B2CCFD0F103F26 /* Pods-MyFinance-Tests-tvOS.debug.xcconfig */,
-				745E5BBC404A92536657D4B6 /* Pods-MyFinance-Tests-tvOS.release.xcconfig */,
-				D7A58AADC22358D4DB5558AC /* Pods-MyFinance-MyFinance-Tests-iOS.debug.xcconfig */,
-				4675972CE0E0F3F2A0C12129 /* Pods-MyFinance-MyFinance-Tests-iOS.release.xcconfig */,
-				3F0DDB259287DA183EB8E324 /* Pods-MyFinance-MyFinance-Tests-macOS.debug.xcconfig */,
-				DF4BE8B9000BFF9FF5D30B21 /* Pods-MyFinance-MyFinance-Tests-macOS.release.xcconfig */,
-				0160511FA92C83C454207298 /* Pods-MyFinance-MyFinance-Tests-tvOS.debug.xcconfig */,
-				7E3AFC27C92FCD4298AF8D39 /* Pods-MyFinance-MyFinance-Tests-tvOS.release.xcconfig */,
-				1AC0B4AF2420BB94F67FBB6F /* Pods-MyFinance-MyFinance-iOS.debug.xcconfig */,
-				E71F0674251275330B29E3DE /* Pods-MyFinance-MyFinance-iOS.release.xcconfig */,
-				2067BDD55EFC5ED4EF189AA7 /* Pods-MyFinance-MyFinance-macOS.debug.xcconfig */,
-				5563F949D3ACBB2F12C64BAF /* Pods-MyFinance-MyFinance-macOS.release.xcconfig */,
-				3E6438874C943DED0760066F /* Pods-MyFinance-MyFinance-tvOS.debug.xcconfig */,
-				9CBCFFCDFA0B6EC4BB770E5B /* Pods-MyFinance-MyFinance-tvOS.release.xcconfig */,
-				D12F56B07BCE050C5014DB30 /* Pods-MyFinance-MyFinance-watchOS.debug.xcconfig */,
-				8D6579C8CEC34BEF2023799E /* Pods-MyFinance-MyFinance-watchOS.release.xcconfig */,
-				0965CA42C9921A8FEE28ADD9 /* Pods-MyFinance-MyFinanceExtension-iOS.debug.xcconfig */,
-				235FA5C3CF610C9453E5598A /* Pods-MyFinance-MyFinanceExtension-iOS.release.xcconfig */,
-				F4CA859283CA4A6BD22F4199 /* Pods-MyFinance-MyFinanceExtension-macOS.debug.xcconfig */,
-				1F304E2C8DCABE34E95201E8 /* Pods-MyFinance-MyFinanceExtension-macOS.release.xcconfig */,
-				65930352217F496E9E423CC1 /* Pods-MyFinance-MyFinanceExtension-watchOS.debug.xcconfig */,
-				1F19DA8737392671FF04ED86 /* Pods-MyFinance-MyFinanceExtension-watchOS.release.xcconfig */,
-				5A927F98A7636F840CF33560 /* Pods-MyFinance-MyFinanceKit-IntegrationTests.debug.xcconfig */,
-				808750C0D703AB5A22C394FA /* Pods-MyFinance-MyFinanceKit-IntegrationTests.release.xcconfig */,
-				C32FD287FCCF5EBDB2FD5502 /* Pods-MyFinance-MyFinanceKit-MyFinanceKit-iOS.debug.xcconfig */,
-				19B67532F344CC6207E4D4A6 /* Pods-MyFinance-MyFinanceKit-MyFinanceKit-iOS.release.xcconfig */,
-				C7BD7A61227A0D52B6BD2249 /* Pods-MyFinance-MyFinanceKit-MyFinanceKit-macOS.debug.xcconfig */,
-				587DEA3C82AB1A9AA9B4B037 /* Pods-MyFinance-MyFinanceKit-MyFinanceKit-macOS.release.xcconfig */,
-				22691F405AF0DB88B1291798 /* Pods-MyFinance-MyFinanceKit-MyFinanceKit-tvOS.debug.xcconfig */,
-				3429B9D125217AAD69FD03E4 /* Pods-MyFinance-MyFinanceKit-MyFinanceKit-tvOS.release.xcconfig */,
-				9239A46CF282FB4F0EC76F88 /* Pods-MyFinance-MyFinanceKit-MyFinanceKit-watchOS.debug.xcconfig */,
-				A1C327FD81E201A0B0E6382E /* Pods-MyFinance-MyFinanceKit-MyFinanceKit-watchOS.release.xcconfig */,
-				3CBA170BBCABA7327BC80DBE /* Pods-MyFinance-MyFinanceKit-iOS-Tests.debug.xcconfig */,
-				79F06D819001165C50083BB5 /* Pods-MyFinance-MyFinanceKit-iOS-Tests.release.xcconfig */,
-				3EB7F9277553860675BDE5F6 /* Pods-MyFinance-MyFinanceKit-macOS-Tests.debug.xcconfig */,
-				6A10DA04A38E8472AB53A8F2 /* Pods-MyFinance-MyFinanceKit-macOS-Tests.release.xcconfig */,
-				1D08B16190DF79BBEC88FDEE /* Pods-MyFinance-MyFinanceKit-tvOS-Tests.debug.xcconfig */,
-				3F8CC9621F1D2426ED916A31 /* Pods-MyFinance-MyFinanceKit-tvOS-Tests.release.xcconfig */,
-				969E022C2D93D205E728AAAA /* Pods-MyFinance-iOS-MyFinance-Tests-iOS.debug.xcconfig */,
-				E67CAACA13C50DDC075D28D1 /* Pods-MyFinance-iOS-MyFinance-Tests-iOS.release.xcconfig */,
-				D421672C41645CA4A6C45F6D /* Pods-MyFinance-iOS-MyFinance-iOS.debug.xcconfig */,
-				11D4A8861AC65C6D988EE1C1 /* Pods-MyFinance-iOS-MyFinance-iOS.release.xcconfig */,
-				FB857C1D6B3E1C921DB1C62E /* Pods-MyFinance-iOS-MyFinanceExtension-iOS.debug.xcconfig */,
-				70AD92226C6336BFA092006A /* Pods-MyFinance-iOS-MyFinanceExtension-iOS.release.xcconfig */,
-				B008049E88D3C2E449F693F8 /* Pods-MyFinance-iOS-MyFinanceKit-IntegrationTests.debug.xcconfig */,
-				E80B1A6C7C92598DBB460F5D /* Pods-MyFinance-iOS-MyFinanceKit-IntegrationTests.release.xcconfig */,
-				C7CCD183A17160B8240BDEC7 /* Pods-MyFinance-iOS-MyFinanceKit-iOS-Tests.debug.xcconfig */,
-				604EBE23F52463D6AA3FB62B /* Pods-MyFinance-iOS-MyFinanceKit-iOS-Tests.release.xcconfig */,
-				58E0C3F7A039A5AF5AF672A9 /* Pods-MyFinance-macOS-MyFinance-Tests-macOS.debug.xcconfig */,
-				B0E3DCB8F5D0F6024CD19567 /* Pods-MyFinance-macOS-MyFinance-Tests-macOS.release.xcconfig */,
-				B7B9418C6D695CEA04D49512 /* Pods-MyFinance-macOS-MyFinance-macOS.debug.xcconfig */,
-				B1C2DBD48616B3719349D2E9 /* Pods-MyFinance-macOS-MyFinance-macOS.release.xcconfig */,
-				359045875C88CF718A815028 /* Pods-MyFinance-macOS-MyFinanceExtension-macOS.debug.xcconfig */,
-				E2A22ECAE018E7C8BC198690 /* Pods-MyFinance-macOS-MyFinanceExtension-macOS.release.xcconfig */,
-				CCD970AA2A95287EC386A160 /* Pods-MyFinance-macOS-MyFinanceKit-macOS-Tests.debug.xcconfig */,
-				D8A7BA9C33A7287631E4147C /* Pods-MyFinance-macOS-MyFinanceKit-macOS-Tests.release.xcconfig */,
-				3DC549F247E197B6E094C87F /* Pods-MyFinance-tvOS-MyFinance-Tests-tvOS.debug.xcconfig */,
-				879A3C5C09E31523AC8C6902 /* Pods-MyFinance-tvOS-MyFinance-Tests-tvOS.release.xcconfig */,
-				D073DB893B5EF97E375E6E62 /* Pods-MyFinance-tvOS-MyFinance-tvOS.debug.xcconfig */,
-				E968946EC731E2374D087BDB /* Pods-MyFinance-tvOS-MyFinance-tvOS.release.xcconfig */,
-				BD0B35B829FCB2C200C00716 /* Pods-MyFinance-tvOS-MyFinanceKit-tvOS-Tests.debug.xcconfig */,
-				C4C15E09C7E9DA97B2B9C720 /* Pods-MyFinance-tvOS-MyFinanceKit-tvOS-Tests.release.xcconfig */,
-				1BE4C5DE00BF623DC17EBB83 /* Pods-MyFinance-watchOS-MyFinance-watchOS.debug.xcconfig */,
-				38AEF6280A3D9697DE9DC8F8 /* Pods-MyFinance-watchOS-MyFinance-watchOS.release.xcconfig */,
-				5882A25CABF72E67030B4FA6 /* Pods-MyFinance-watchOS-MyFinanceExtension-watchOS.debug.xcconfig */,
-				C530537C0F415F713BCDE25D /* Pods-MyFinance-watchOS-MyFinanceExtension-watchOS.release.xcconfig */,
-				395DF64D11E749E953E28FB4 /* Pods-MyFinance-iOS-MyFinanceKit-iOS.debug.xcconfig */,
-				35181FAAAD64D51803B331DD /* Pods-MyFinance-iOS-MyFinanceKit-iOS.release.xcconfig */,
-				500C02F8001EBB900EEE9BCE /* Pods-MyFinance-macOS-MyFinanceKit-macOS.debug.xcconfig */,
-				FD2391F3B0AB2D129D98DF60 /* Pods-MyFinance-macOS-MyFinanceKit-macOS.release.xcconfig */,
-				8700134F2AB0F549F2951071 /* Pods-MyFinance-tvOS-MyFinanceKit-tvOS.debug.xcconfig */,
-				492C916B37F4205BF9BBB650 /* Pods-MyFinance-tvOS-MyFinanceKit-tvOS.release.xcconfig */,
-				E120202F3E808F55766B52EC /* Pods-MyFinance-watchOS-MyFinanceKit-watchOS.debug.xcconfig */,
-				59213E5F4F696F1C0F6253D8 /* Pods-MyFinance-watchOS-MyFinanceKit-watchOS.release.xcconfig */,
-				1C508E3DC958128F866AC4D1 /* Pods-MyFinance-macOS-MyFinanceKit-macOS-Unsigned-Tests.debug.xcconfig */,
-				150AD21D7EEF353D2BD1A89E /* Pods-MyFinance-macOS-MyFinanceKit-macOS-Unsigned-Tests.release.xcconfig */,
+				C9568D338E569D54A0387F6E /* Pods-MyFinance-iOS-MyFinance-Tests-iOS.debug.xcconfig */,
+				EA80DA632AAD88AC54CCFB78 /* Pods-MyFinance-iOS-MyFinance-Tests-iOS.release.xcconfig */,
+				011140048EC4209D7FA0E28B /* Pods-MyFinance-iOS-MyFinance-iOS.debug.xcconfig */,
+				4505461AD12BF71C8097B3CC /* Pods-MyFinance-iOS-MyFinance-iOS.release.xcconfig */,
+				BD1256F76D20F1043E561DEB /* Pods-MyFinance-iOS-MyFinanceExtension-iOS.debug.xcconfig */,
+				EB68694F2363C51DA6753387 /* Pods-MyFinance-iOS-MyFinanceExtension-iOS.release.xcconfig */,
+				DDAEDD691FB4BCCCE1F503EE /* Pods-MyFinance-iOS-MyFinanceKit-IntegrationTests.debug.xcconfig */,
+				BE49C7AE8F9B8944FAC917DD /* Pods-MyFinance-iOS-MyFinanceKit-IntegrationTests.release.xcconfig */,
+				C110DB3AC5B138071ADC9650 /* Pods-MyFinance-iOS-MyFinanceKit-iOS.debug.xcconfig */,
+				5A1E7A263BB71026C5847800 /* Pods-MyFinance-iOS-MyFinanceKit-iOS.release.xcconfig */,
+				9FBB5DAF3F32B2EF55726EA3 /* Pods-MyFinance-iOS-MyFinanceKit-iOS-Tests.debug.xcconfig */,
+				D8D926226C93F4318936EE5F /* Pods-MyFinance-iOS-MyFinanceKit-iOS-Tests.release.xcconfig */,
+				B9B4A036EED949F14150DA8A /* Pods-MyFinance-macOS-MyFinance-Tests-macOS.debug.xcconfig */,
+				DFF8A5998A6D263FD1A88894 /* Pods-MyFinance-macOS-MyFinance-Tests-macOS.release.xcconfig */,
+				863BE547E5A2B72CF19534BF /* Pods-MyFinance-macOS-MyFinance-macOS.debug.xcconfig */,
+				DD47E238039CA8AE12C57C25 /* Pods-MyFinance-macOS-MyFinance-macOS.release.xcconfig */,
+				20C42AD9FBD83F55190E47AB /* Pods-MyFinance-macOS-MyFinanceExtension-macOS.debug.xcconfig */,
+				ABB85ED292326BE22AF04C27 /* Pods-MyFinance-macOS-MyFinanceExtension-macOS.release.xcconfig */,
+				A0EA82D430A0F52DF230FE05 /* Pods-MyFinance-macOS-MyFinanceKit-macOS.debug.xcconfig */,
+				B01CDDE8E113F57D9F8D634F /* Pods-MyFinance-macOS-MyFinanceKit-macOS.release.xcconfig */,
+				747B1A0CD26B252402EBAA49 /* Pods-MyFinance-macOS-MyFinanceKit-macOS-Tests.debug.xcconfig */,
+				1176ADFAAD72A89C79AAFCB7 /* Pods-MyFinance-macOS-MyFinanceKit-macOS-Tests.release.xcconfig */,
+				B78EFCB39EECD4FF3A0CA9B3 /* Pods-MyFinance-macOS-MyFinanceKit-macOS-Unsigned-Tests.debug.xcconfig */,
+				DE3A6B029D3C4B0442DE0D23 /* Pods-MyFinance-macOS-MyFinanceKit-macOS-Unsigned-Tests.release.xcconfig */,
+				B171E2567DB80D274E9459AB /* Pods-MyFinance-tvOS-MyFinance-Tests-tvOS.debug.xcconfig */,
+				F6944706D0987DB59F567452 /* Pods-MyFinance-tvOS-MyFinance-Tests-tvOS.release.xcconfig */,
+				F536594AB4F9B5EF5D9C91A5 /* Pods-MyFinance-tvOS-MyFinance-tvOS.debug.xcconfig */,
+				9E16A7ED046C9A52EA56ECAA /* Pods-MyFinance-tvOS-MyFinance-tvOS.release.xcconfig */,
+				730A1C85F10126499979CE03 /* Pods-MyFinance-tvOS-MyFinanceKit-tvOS.debug.xcconfig */,
+				972F8AEF77998B94292E09CA /* Pods-MyFinance-tvOS-MyFinanceKit-tvOS.release.xcconfig */,
+				F47ECCF1A28D21D497F8E335 /* Pods-MyFinance-tvOS-MyFinanceKit-tvOS-Tests.debug.xcconfig */,
+				B97AC6B4924B9F3BACE32BF6 /* Pods-MyFinance-tvOS-MyFinanceKit-tvOS-Tests.release.xcconfig */,
+				8F6856B0590EA5CA21402A1D /* Pods-MyFinance-watchOS-MyFinance-watchOS.debug.xcconfig */,
+				536B883A204303D423A0539A /* Pods-MyFinance-watchOS-MyFinance-watchOS.release.xcconfig */,
+				C8510FBE82D7EFDB9CF09365 /* Pods-MyFinance-watchOS-MyFinanceExtension-watchOS.debug.xcconfig */,
+				61F43F89CFDC178DA8EA2C5A /* Pods-MyFinance-watchOS-MyFinanceExtension-watchOS.release.xcconfig */,
+				FFC0182EFAA65EEF0BA3735E /* Pods-MyFinance-watchOS-MyFinanceKit-watchOS.debug.xcconfig */,
+				91EEFF46D9D7957577B02F0F /* Pods-MyFinance-watchOS-MyFinanceKit-watchOS.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -4677,7 +4443,7 @@
 /* Begin XCBuildConfiguration section */
 		9A2022112038CAE00012DD51 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = E120202F3E808F55766B52EC /* Pods-MyFinance-watchOS-MyFinanceKit-watchOS.debug.xcconfig */;
+			baseConfigurationReference = FFC0182EFAA65EEF0BA3735E /* Pods-MyFinance-watchOS-MyFinanceKit-watchOS.debug.xcconfig */;
 			buildSettings = {
 				APPLICATION_EXTENSION_API_ONLY = YES;
 				CODE_SIGN_IDENTITY = "";
@@ -4708,7 +4474,7 @@
 		};
 		9A2022122038CAE00012DD51 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 59213E5F4F696F1C0F6253D8 /* Pods-MyFinance-watchOS-MyFinanceKit-watchOS.release.xcconfig */;
+			baseConfigurationReference = 91EEFF46D9D7957577B02F0F /* Pods-MyFinance-watchOS-MyFinanceKit-watchOS.release.xcconfig */;
 			buildSettings = {
 				APPLICATION_EXTENSION_API_ONLY = YES;
 				CODE_SIGN_IDENTITY = "";
@@ -4739,7 +4505,7 @@
 		};
 		9A20222D2038D29D0012DD51 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = D073DB893B5EF97E375E6E62 /* Pods-MyFinance-tvOS-MyFinance-tvOS.debug.xcconfig */;
+			baseConfigurationReference = F536594AB4F9B5EF5D9C91A5 /* Pods-MyFinance-tvOS-MyFinance-tvOS.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
@@ -4762,7 +4528,7 @@
 		};
 		9A20222E2038D29D0012DD51 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = E968946EC731E2374D087BDB /* Pods-MyFinance-tvOS-MyFinance-tvOS.release.xcconfig */;
+			baseConfigurationReference = 9E16A7ED046C9A52EA56ECAA /* Pods-MyFinance-tvOS-MyFinance-tvOS.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
@@ -4784,7 +4550,7 @@
 		};
 		9A2022432038D4990012DD51 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 8700134F2AB0F549F2951071 /* Pods-MyFinance-tvOS-MyFinanceKit-tvOS.debug.xcconfig */;
+			baseConfigurationReference = 730A1C85F10126499979CE03 /* Pods-MyFinance-tvOS-MyFinanceKit-tvOS.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
@@ -4813,7 +4579,7 @@
 		};
 		9A2022442038D4990012DD51 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 492C916B37F4205BF9BBB650 /* Pods-MyFinance-tvOS-MyFinanceKit-tvOS.release.xcconfig */;
+			baseConfigurationReference = 972F8AEF77998B94292E09CA /* Pods-MyFinance-tvOS-MyFinanceKit-tvOS.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
@@ -4842,7 +4608,7 @@
 		};
 		9A2022942038DCCF0012DD51 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B008049E88D3C2E449F693F8 /* Pods-MyFinance-iOS-MyFinanceKit-IntegrationTests.debug.xcconfig */;
+			baseConfigurationReference = DDAEDD691FB4BCCCE1F503EE /* Pods-MyFinance-iOS-MyFinanceKit-IntegrationTests.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5837VWT72M;
@@ -4860,7 +4626,7 @@
 		};
 		9A2022952038DCCF0012DD51 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = E80B1A6C7C92598DBB460F5D /* Pods-MyFinance-iOS-MyFinanceKit-IntegrationTests.release.xcconfig */;
+			baseConfigurationReference = BE49C7AE8F9B8944FAC917DD /* Pods-MyFinance-iOS-MyFinanceKit-IntegrationTests.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5837VWT72M;
@@ -4877,7 +4643,7 @@
 		};
 		9A3CB7E3202FC657008AF158 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1BE4C5DE00BF623DC17EBB83 /* Pods-MyFinance-watchOS-MyFinance-watchOS.debug.xcconfig */;
+			baseConfigurationReference = 8F6856B0590EA5CA21402A1D /* Pods-MyFinance-watchOS-MyFinance-watchOS.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -4898,7 +4664,7 @@
 		};
 		9A3CB7E4202FC657008AF158 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 38AEF6280A3D9697DE9DC8F8 /* Pods-MyFinance-watchOS-MyFinance-watchOS.release.xcconfig */;
+			baseConfigurationReference = 536B883A204303D423A0539A /* Pods-MyFinance-watchOS-MyFinance-watchOS.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -4918,7 +4684,7 @@
 		};
 		9A3CB7E5202FC657008AF158 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5882A25CABF72E67030B4FA6 /* Pods-MyFinance-watchOS-MyFinanceExtension-watchOS.debug.xcconfig */;
+			baseConfigurationReference = C8510FBE82D7EFDB9CF09365 /* Pods-MyFinance-watchOS-MyFinanceExtension-watchOS.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
 				CODE_SIGN_ENTITLEMENTS = "MyFinanceExtension-watchOS/MyFinanceExtension-watchOS.entitlements";
@@ -4939,7 +4705,7 @@
 		};
 		9A3CB7E6202FC657008AF158 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = C530537C0F415F713BCDE25D /* Pods-MyFinance-watchOS-MyFinanceExtension-watchOS.release.xcconfig */;
+			baseConfigurationReference = 61F43F89CFDC178DA8EA2C5A /* Pods-MyFinance-watchOS-MyFinanceExtension-watchOS.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
 				CODE_SIGN_ENTITLEMENTS = "MyFinanceExtension-watchOS/MyFinanceExtension-watchOS.entitlements";
@@ -4959,7 +4725,7 @@
 		};
 		9A4F55392023C7A900DBF68F /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 395DF64D11E749E953E28FB4 /* Pods-MyFinance-iOS-MyFinanceKit-iOS.debug.xcconfig */;
+			baseConfigurationReference = C110DB3AC5B138071ADC9650 /* Pods-MyFinance-iOS-MyFinanceKit-iOS.debug.xcconfig */;
 			buildSettings = {
 				APPLICATION_EXTENSION_API_ONLY = YES;
 				CODE_SIGN_IDENTITY = "";
@@ -4987,7 +4753,7 @@
 		};
 		9A4F553A2023C7A900DBF68F /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 35181FAAAD64D51803B331DD /* Pods-MyFinance-iOS-MyFinanceKit-iOS.release.xcconfig */;
+			baseConfigurationReference = 5A1E7A263BB71026C5847800 /* Pods-MyFinance-iOS-MyFinanceKit-iOS.release.xcconfig */;
 			buildSettings = {
 				APPLICATION_EXTENSION_API_ONLY = YES;
 				CODE_SIGN_IDENTITY = "";
@@ -5015,7 +4781,7 @@
 		};
 		9A4F554C2023C7BE00DBF68F /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 500C02F8001EBB900EEE9BCE /* Pods-MyFinance-macOS-MyFinanceKit-macOS.debug.xcconfig */;
+			baseConfigurationReference = A0EA82D430A0F52DF230FE05 /* Pods-MyFinance-macOS-MyFinanceKit-macOS.debug.xcconfig */;
 			buildSettings = {
 				APPLICATION_EXTENSION_API_ONLY = YES;
 				CODE_SIGN_IDENTITY = "";
@@ -5046,7 +4812,7 @@
 		};
 		9A4F554D2023C7BE00DBF68F /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = FD2391F3B0AB2D129D98DF60 /* Pods-MyFinance-macOS-MyFinanceKit-macOS.release.xcconfig */;
+			baseConfigurationReference = B01CDDE8E113F57D9F8D634F /* Pods-MyFinance-macOS-MyFinanceKit-macOS.release.xcconfig */;
 			buildSettings = {
 				APPLICATION_EXTENSION_API_ONLY = YES;
 				CODE_SIGN_IDENTITY = "";
@@ -5190,7 +4956,7 @@
 		};
 		9A5AE5852012A8AC00B25081 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = D421672C41645CA4A6C45F6D /* Pods-MyFinance-iOS-MyFinance-iOS.debug.xcconfig */;
+			baseConfigurationReference = 011140048EC4209D7FA0E28B /* Pods-MyFinance-iOS-MyFinance-iOS.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -5210,7 +4976,7 @@
 		};
 		9A5AE5862012A8AC00B25081 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 11D4A8861AC65C6D988EE1C1 /* Pods-MyFinance-iOS-MyFinance-iOS.release.xcconfig */;
+			baseConfigurationReference = 4505461AD12BF71C8097B3CC /* Pods-MyFinance-iOS-MyFinance-iOS.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -5229,7 +4995,7 @@
 		};
 		9A65DF062041CE7300E8177A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 969E022C2D93D205E728AAAA /* Pods-MyFinance-iOS-MyFinance-Tests-iOS.debug.xcconfig */;
+			baseConfigurationReference = C9568D338E569D54A0387F6E /* Pods-MyFinance-iOS-MyFinance-Tests-iOS.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CLANG_ENABLE_OBJC_WEAK = YES;
@@ -5250,7 +5016,7 @@
 		};
 		9A65DF072041CE7300E8177A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = E67CAACA13C50DDC075D28D1 /* Pods-MyFinance-iOS-MyFinance-Tests-iOS.release.xcconfig */;
+			baseConfigurationReference = EA80DA632AAD88AC54CCFB78 /* Pods-MyFinance-iOS-MyFinance-Tests-iOS.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CLANG_ENABLE_OBJC_WEAK = YES;
@@ -5270,7 +5036,7 @@
 		};
 		9A6EF74F202B939B006D3420 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = C7CCD183A17160B8240BDEC7 /* Pods-MyFinance-iOS-MyFinanceKit-iOS-Tests.debug.xcconfig */;
+			baseConfigurationReference = 9FBB5DAF3F32B2EF55726EA3 /* Pods-MyFinance-iOS-MyFinanceKit-iOS-Tests.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5837VWT72M;
@@ -5288,7 +5054,7 @@
 		};
 		9A6EF750202B939B006D3420 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 604EBE23F52463D6AA3FB62B /* Pods-MyFinance-iOS-MyFinanceKit-iOS-Tests.release.xcconfig */;
+			baseConfigurationReference = D8D926226C93F4318936EE5F /* Pods-MyFinance-iOS-MyFinanceKit-iOS-Tests.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5837VWT72M;
@@ -5305,7 +5071,7 @@
 		};
 		9A740ED8201E245200D40943 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B7B9418C6D695CEA04D49512 /* Pods-MyFinance-macOS-MyFinance-macOS.debug.xcconfig */;
+			baseConfigurationReference = 863BE547E5A2B72CF19534BF /* Pods-MyFinance-macOS-MyFinance-macOS.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -5328,7 +5094,7 @@
 		};
 		9A740ED9201E245200D40943 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B1C2DBD48616B3719349D2E9 /* Pods-MyFinance-macOS-MyFinance-macOS.release.xcconfig */;
+			baseConfigurationReference = DD47E238039CA8AE12C57C25 /* Pods-MyFinance-macOS-MyFinance-macOS.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -5350,7 +5116,7 @@
 		};
 		9A740EF0201E247D00D40943 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 359045875C88CF718A815028 /* Pods-MyFinance-macOS-MyFinanceExtension-macOS.debug.xcconfig */;
+			baseConfigurationReference = 20C42AD9FBD83F55190E47AB /* Pods-MyFinance-macOS-MyFinanceExtension-macOS.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = "MyFinanceExtension-macOS/MyFinanceExtension-macOS.entitlements";
 				CODE_SIGN_IDENTITY = "Mac Developer";
@@ -5372,7 +5138,7 @@
 		};
 		9A740EF1201E247D00D40943 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = E2A22ECAE018E7C8BC198690 /* Pods-MyFinance-macOS-MyFinanceExtension-macOS.release.xcconfig */;
+			baseConfigurationReference = ABB85ED292326BE22AF04C27 /* Pods-MyFinance-macOS-MyFinanceExtension-macOS.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = "MyFinanceExtension-macOS/MyFinanceExtension-macOS.entitlements";
 				CODE_SIGN_IDENTITY = "Mac Developer";
@@ -5393,7 +5159,7 @@
 		};
 		9A94F8EA202CE83100AEF61F /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = CCD970AA2A95287EC386A160 /* Pods-MyFinance-macOS-MyFinanceKit-macOS-Tests.debug.xcconfig */;
+			baseConfigurationReference = 747B1A0CD26B252402EBAA49 /* Pods-MyFinance-macOS-MyFinanceKit-macOS-Tests.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				CODE_SIGN_STYLE = Automatic;
@@ -5413,7 +5179,7 @@
 		};
 		9A94F8EB202CE83100AEF61F /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = D8A7BA9C33A7287631E4147C /* Pods-MyFinance-macOS-MyFinanceKit-macOS-Tests.release.xcconfig */;
+			baseConfigurationReference = 1176ADFAAD72A89C79AAFCB7 /* Pods-MyFinance-macOS-MyFinanceKit-macOS-Tests.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				CODE_SIGN_STYLE = Automatic;
@@ -5432,7 +5198,7 @@
 		};
 		9A98CD38204221E8004B5ACE /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 58E0C3F7A039A5AF5AF672A9 /* Pods-MyFinance-macOS-MyFinance-Tests-macOS.debug.xcconfig */;
+			baseConfigurationReference = B9B4A036EED949F14150DA8A /* Pods-MyFinance-macOS-MyFinance-Tests-macOS.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CLANG_ENABLE_OBJC_WEAK = YES;
@@ -5453,7 +5219,7 @@
 		};
 		9A98CD39204221E8004B5ACE /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B0E3DCB8F5D0F6024CD19567 /* Pods-MyFinance-macOS-MyFinance-Tests-macOS.release.xcconfig */;
+			baseConfigurationReference = DFF8A5998A6D263FD1A88894 /* Pods-MyFinance-macOS-MyFinance-Tests-macOS.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CLANG_ENABLE_OBJC_WEAK = YES;
@@ -5473,7 +5239,7 @@
 		};
 		9AA374DA2042205E00B016BB /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3DC549F247E197B6E094C87F /* Pods-MyFinance-tvOS-MyFinance-Tests-tvOS.debug.xcconfig */;
+			baseConfigurationReference = B171E2567DB80D274E9459AB /* Pods-MyFinance-tvOS-MyFinance-Tests-tvOS.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CLANG_ENABLE_OBJC_WEAK = YES;
@@ -5494,7 +5260,7 @@
 		};
 		9AA374DB2042205E00B016BB /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 879A3C5C09E31523AC8C6902 /* Pods-MyFinance-tvOS-MyFinance-Tests-tvOS.release.xcconfig */;
+			baseConfigurationReference = F6944706D0987DB59F567452 /* Pods-MyFinance-tvOS-MyFinance-Tests-tvOS.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CLANG_ENABLE_OBJC_WEAK = YES;
@@ -5514,7 +5280,7 @@
 		};
 		9ABBC4B52041B00E008B6306 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = BD0B35B829FCB2C200C00716 /* Pods-MyFinance-tvOS-MyFinanceKit-tvOS-Tests.debug.xcconfig */;
+			baseConfigurationReference = F47ECCF1A28D21D497F8E335 /* Pods-MyFinance-tvOS-MyFinanceKit-tvOS-Tests.debug.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_OBJC_WEAK = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -5535,7 +5301,7 @@
 		};
 		9ABBC4B62041B00E008B6306 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = C4C15E09C7E9DA97B2B9C720 /* Pods-MyFinance-tvOS-MyFinanceKit-tvOS-Tests.release.xcconfig */;
+			baseConfigurationReference = B97AC6B4924B9F3BACE32BF6 /* Pods-MyFinance-tvOS-MyFinanceKit-tvOS-Tests.release.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_OBJC_WEAK = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -5555,7 +5321,7 @@
 		};
 		9AC1A5FD20840D6200947DCE /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1C508E3DC958128F866AC4D1 /* Pods-MyFinance-macOS-MyFinanceKit-macOS-Unsigned-Tests.debug.xcconfig */;
+			baseConfigurationReference = B78EFCB39EECD4FF3A0CA9B3 /* Pods-MyFinance-macOS-MyFinanceKit-macOS-Unsigned-Tests.debug.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_OBJC_WEAK = YES;
 				CODE_SIGN_IDENTITY = "Mac Developer";
@@ -5575,7 +5341,7 @@
 		};
 		9AC1A5FE20840D6200947DCE /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 150AD21D7EEF353D2BD1A89E /* Pods-MyFinance-macOS-MyFinanceKit-macOS-Unsigned-Tests.release.xcconfig */;
+			baseConfigurationReference = DE3A6B029D3C4B0442DE0D23 /* Pods-MyFinance-macOS-MyFinanceKit-macOS-Unsigned-Tests.release.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_OBJC_WEAK = YES;
 				CODE_SIGN_IDENTITY = "Mac Developer";
@@ -5594,7 +5360,7 @@
 		};
 		9AD3EE462013D9A10083F8FE /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = FB857C1D6B3E1C921DB1C62E /* Pods-MyFinance-iOS-MyFinanceExtension-iOS.debug.xcconfig */;
+			baseConfigurationReference = BD1256F76D20F1043E561DEB /* Pods-MyFinance-iOS-MyFinanceExtension-iOS.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = "MyFinanceExtension-iOS/MyFinanceExtension-iOS.entitlements";
 				CODE_SIGN_STYLE = Automatic;
@@ -5613,7 +5379,7 @@
 		};
 		9AD3EE472013D9A10083F8FE /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 70AD92226C6336BFA092006A /* Pods-MyFinance-iOS-MyFinanceExtension-iOS.release.xcconfig */;
+			baseConfigurationReference = EB68694F2363C51DA6753387 /* Pods-MyFinance-iOS-MyFinanceExtension-iOS.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = "MyFinanceExtension-iOS/MyFinanceExtension-iOS.entitlements";
 				CODE_SIGN_STYLE = Automatic;

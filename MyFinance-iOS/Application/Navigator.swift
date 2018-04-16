@@ -18,6 +18,7 @@ struct SceneModel {
 
 protocol NavigatorType: BaseNavigatorType {
 
+    var appState: AppStateiOSType! { get set }
     func createNavigationStack(scene: Scene, viewModel: ViewModelType?)
     func createAuthStack(viewModel: AuthViewModelType)
     func moveTo(scene: Scene, viewModel: ViewModelType?)
@@ -30,7 +31,7 @@ class Navigator: NavigatorType {
 
     private var authWindow: WindowType?
 
-    weak var appState: AppStateType!
+    weak var appState: AppStateiOSType!
     var window: WindowType?
     var viewControllers = [ViewControllerType]()
 
@@ -101,16 +102,12 @@ class Navigator: NavigatorType {
 
     private func createViewModel(scene: Scene) -> ViewModelType {
         switch scene {
-        case .launch: return LaunchViewModel(serviceProvider: appState as! LaunchViewModel.ServiceProvider)
-        case .auth: return AuthViewModel(serviceProvider: appState as! AuthViewModel.ServiceProvider)
-        case .login: return LoginViewModel(serviceProvider: appState as! LoginViewModel.ServiceProvider)
-        case .home: return HomeViewModel(serviceProvider: appState as! HomeViewModel.ServiceProvider)
-        case .addTransaction:
-            return AddTransactionViewModel(serviceProvider: appState as! AddTransactionViewModel.ServiceProvider,
-                                           dataDelegate: nil)
-        case .settings:
-            return SettingsViewModel(serviceProvider: appState as! SettingsViewModel.ServiceProvider,
-                                     dataDelegate: nil)
+        case .launch: return LaunchViewModel(serviceProvider: appState)
+        case .auth: return AuthViewModel(serviceProvider: appState)
+        case .login: return LoginViewModel(serviceProvider: appState)
+        case .home: return HomeViewModel(serviceProvider: appState)
+        case .addTransaction: return AddTransactionViewModel(serviceProvider: appState, dataDelegate: nil)
+        case .settings: return SettingsViewModel(serviceProvider: appState, dataDelegate: nil)
         }
     }
 

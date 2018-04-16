@@ -23,7 +23,7 @@ protocol AddTransactionViewModelType: ViewModelType {
 
 }
 
-class AddTransactionViewModel {
+class AddTransactionViewModel: ServiceClient {
 
     enum State {
         case add, edit

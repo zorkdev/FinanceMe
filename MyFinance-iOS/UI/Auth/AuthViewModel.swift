@@ -31,7 +31,7 @@ protocol AuthViewModelType: ViewModelType {
 
 }
 
-class AuthViewModel: AuthViewModelType {
+class AuthViewModel: AuthViewModelType, ServiceClient {
 
     private struct Constants {
         static let reason = "Please authenticate to unlock this app"

@@ -11,7 +11,7 @@ protocol LoginViewModelType: ViewModelType {
 
 }
 
-class LoginViewModel {
+class LoginViewModel: ServiceClient {
 
     typealias ServiceProvider = NavigatorProvider
         & NetworkServiceProvider

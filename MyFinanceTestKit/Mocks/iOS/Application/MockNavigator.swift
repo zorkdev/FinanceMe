@@ -10,7 +10,7 @@ class MockNavigator: NavigatorType {
     var lastViewModel: ViewModelType?
     var lastAuthViewModelType: AuthViewModelType?
 
-    weak var appState: AppStateType!
+    weak var appState: AppStateiOSType!
     var window: WindowType?
     var viewControllers = [ViewControllerType]()
 

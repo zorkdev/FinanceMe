@@ -1,6 +1,6 @@
 import NotificationCenter
 
-class HomeViewModel {
+class HomeViewModel: ServiceClient {
 
     enum Tab: Int {
         case transactions = 0, bills, balances
