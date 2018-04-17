@@ -222,6 +222,14 @@
 		9A5AE57D2012A8AC00B25081 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9A5AE57C2012A8AC00B25081 /* Assets.xcassets */; };
 		9A5AE5802012A8AC00B25081 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9A5AE57E2012A8AC00B25081 /* LaunchScreen.storyboard */; };
 		9A5AE5A22012C99A00B25081 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A5AE5A12012C99A00B25081 /* HomeViewModel.swift */; };
+		9A61249E20867EC500A1EAAB /* ServiceClientTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A61249D20867EC500A1EAAB /* ServiceClientTestCase.swift */; };
+		9A61249F20867EC500A1EAAB /* ServiceClientTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A61249D20867EC500A1EAAB /* ServiceClientTestCase.swift */; };
+		9A6124A020867EC500A1EAAB /* ServiceClientTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A61249D20867EC500A1EAAB /* ServiceClientTestCase.swift */; };
+		9A6124A120867EC600A1EAAB /* ServiceClientTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A61249D20867EC500A1EAAB /* ServiceClientTestCase.swift */; };
+		9A6124A220867EC600A1EAAB /* ServiceClientTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A61249D20867EC500A1EAAB /* ServiceClientTestCase.swift */; };
+		9A6124A320867EC600A1EAAB /* ServiceClientTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A61249D20867EC500A1EAAB /* ServiceClientTestCase.swift */; };
+		9A6124A420867EC600A1EAAB /* ServiceClientTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A61249D20867EC500A1EAAB /* ServiceClientTestCase.swift */; };
+		9A6124A72086815500A1EAAB /* ServiceClientiOSTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A6124A62086815500A1EAAB /* ServiceClientiOSTestCase.swift */; };
 		9A65B79D202651F3004165F2 /* Validators.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A65B79C202651F3004165F2 /* Validators.swift */; };
 		9A65B79E202651F3004165F2 /* Validators.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A65B79C202651F3004165F2 /* Validators.swift */; };
 		9A65B7A0202686A9004165F2 /* Summary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A65B79F202686A9004165F2 /* Summary.swift */; };
@@ -905,6 +913,8 @@
 		9A5AE5A12012C99A00B25081 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		9A5AE5A32012CA7700B25081 /* Formatters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Formatters.swift; sourceTree = "<group>"; };
 		9A5AE5A52012CCFC00B25081 /* APIs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIs.swift; sourceTree = "<group>"; };
+		9A61249D20867EC500A1EAAB /* ServiceClientTestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceClientTestCase.swift; sourceTree = "<group>"; };
+		9A6124A62086815500A1EAAB /* ServiceClientiOSTestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceClientiOSTestCase.swift; sourceTree = "<group>"; };
 		9A65B79C202651F3004165F2 /* Validators.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Validators.swift; sourceTree = "<group>"; };
 		9A65B79F202686A9004165F2 /* Summary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Summary.swift; sourceTree = "<group>"; };
 		9A65B7A4202690DB004165F2 /* EndOfMonthSummaryBusinessLogic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndOfMonthSummaryBusinessLogic.swift; sourceTree = "<group>"; };
@@ -1410,7 +1420,6 @@
 			isa = PBXGroup;
 			children = (
 				9A37AB3E203E386A00CFEE67 /* Config.swift */,
-				9A0C4751204B69D90011D817 /* IntegrationTestCase.swift */,
 				9A2022992038DDF50012DD51 /* Bridging-Header.h */,
 				9A2022902038DCCF0012DD51 /* Info.plist */,
 			);
@@ -1693,6 +1702,16 @@
 				9A9093EC2044CCB000C87A99 /* BaseNavigatorType.swift */,
 			);
 			path = Platform;
+			sourceTree = "<group>";
+		};
+		9A6124A52086812C00A1EAAB /* BaseTestCases */ = {
+			isa = PBXGroup;
+			children = (
+				9A0C4751204B69D90011D817 /* IntegrationTestCase.swift */,
+				9A61249D20867EC500A1EAAB /* ServiceClientTestCase.swift */,
+				9A6124A62086815500A1EAAB /* ServiceClientiOSTestCase.swift */,
+			);
+			path = BaseTestCases;
 			sourceTree = "<group>";
 		};
 		9A65DEFF2041CE7300E8177A /* MyFinance-Tests-iOS */ = {
@@ -2081,6 +2100,7 @@
 		9AC3E7182042385800CD29B6 /* MyFinanceTestKit */ = {
 			isa = PBXGroup;
 			children = (
+				9A6124A52086812C00A1EAAB /* BaseTestCases */,
 				9A3A2B98203A2DDC0071FBC5 /* Mocks */,
 				9AE7F158204256D200BA98BD /* View */,
 				9AC3E73520423C7100CD29B6 /* Factory.swift */,
@@ -3952,6 +3972,7 @@
 				9ADC568620433660003D8C63 /* SettingsViewControllerTests.swift in Sources */,
 				9AC3E7172042349000CD29B6 /* MockDataService.swift in Sources */,
 				9ADC5680204332FD003D8C63 /* MockSettingsViewModel.swift in Sources */,
+				9A6124A72086815500A1EAAB /* ServiceClientiOSTestCase.swift in Sources */,
 				9A65DF012041CE7300E8177A /* AppDelegateTests.swift in Sources */,
 				9AC3E73220423A9200CD29B6 /* MockWCSession.swift in Sources */,
 				9A2860DF20422B8A008FA915 /* AppStateiOSTests.swift in Sources */,
@@ -3970,6 +3991,7 @@
 				9AEEC8AB204267C200ED7627 /* MockLAContext.swift in Sources */,
 				9AEEC8AD2042696800ED7627 /* MockAuthViewModelDelegate.swift in Sources */,
 				9A88A7F72042602B00421943 /* AuthViewControllerTests.swift in Sources */,
+				9A6124A220867EC600A1EAAB /* ServiceClientTestCase.swift in Sources */,
 				9AC3E72A20423A4200CD29B6 /* MockAPI.swift in Sources */,
 				9A2BDAA62044D697008EE977 /* MockWindow.swift in Sources */,
 				9AC3E71420422FD600CD29B6 /* WatchServiceTests.swift in Sources */,
@@ -3991,6 +4013,7 @@
 				9A2022A52038EBEE0012DD51 /* DateExtensionsTests.swift in Sources */,
 				9ABA69382082A95A00B48CC8 /* MockSessionService.swift in Sources */,
 				9A6B06EE203F6E4E006FB40E /* EndOfMonthSummaryBusinessLogicTests.swift in Sources */,
+				9A61249E20867EC500A1EAAB /* ServiceClientTestCase.swift in Sources */,
 				9A3A2B7D20399A020071FBC5 /* StringRepresentableTests.swift in Sources */,
 				9AAA77CD203F9939000E1323 /* TodayViewModelTests.swift in Sources */,
 				9AEAD365203F908900CB572C /* UIViewExtensionsTests.swift in Sources */,
@@ -4066,6 +4089,7 @@
 				9A94F8F1202CEA9300AEF61F /* UserTests.swift in Sources */,
 				9AAA77D6203F9B1E000E1323 /* MockTodayViewModelDelegate.swift in Sources */,
 				9AAA77D1203F9AA5000E1323 /* MockAppState.swift in Sources */,
+				9A6124A020867EC500A1EAAB /* ServiceClientTestCase.swift in Sources */,
 				9A3A2B9E203A2E940071FBC5 /* MockConfigService.swift in Sources */,
 				9A37AB31203E293F00CFEE67 /* APIsTests.swift in Sources */,
 				9A85358920796EC400704A78 /* MockViewModel.swift in Sources */,
@@ -4128,6 +4152,7 @@
 				9AC3E72320423A3200CD29B6 /* MockAppState.swift in Sources */,
 				9AC3E72C20423A4300CD29B6 /* MockAPI.swift in Sources */,
 				9AC3E72E20423A4600CD29B6 /* MockDataService.swift in Sources */,
+				9A6124A420867EC600A1EAAB /* ServiceClientTestCase.swift in Sources */,
 				9A98CD34204221E8004B5ACE /* AppStatemacOSTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -4137,6 +4162,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9AC3E73920423D8300CD29B6 /* Factory.swift in Sources */,
+				9A6124A320867EC600A1EAAB /* ServiceClientTestCase.swift in Sources */,
 				9AC3E72520423A3C00CD29B6 /* MockNetworkRequestable.swift in Sources */,
 				9ABA693D2082A95A00B48CC8 /* MockSessionService.swift in Sources */,
 				9AC3E72820423A3F00CD29B6 /* MockConfigService.swift in Sources */,
@@ -4161,6 +4187,7 @@
 				9AE7F1662042576800BA98BD /* TestViewController.swift in Sources */,
 				9A65DEB32041B25E00E8177A /* AllowanceTests.swift in Sources */,
 				9A65DEC22041B2B500E8177A /* EndOfMonthSummaryBusinessLogicTests.swift in Sources */,
+				9A61249F20867EC500A1EAAB /* ServiceClientTestCase.swift in Sources */,
 				9A65DEA82041B24100E8177A /* StringRepresentableTests.swift in Sources */,
 				9A85357A20796BF400704A78 /* MockBaseNavigator.swift in Sources */,
 				9A65DEBC2041B2A700E8177A /* APIsTests.swift in Sources */,
@@ -4247,6 +4274,7 @@
 				9AC1A62A2084103700947DCE /* FormattersTests.swift in Sources */,
 				9AC1A6222084100700947DCE /* SummaryTests.swift in Sources */,
 				9AC1A6202084100100947DCE /* BalanceTests.swift in Sources */,
+				9A6124A120867EC600A1EAAB /* ServiceClientTestCase.swift in Sources */,
 				9AC1A6262084102800947DCE /* TodayDisplayModelTypeTests.swift in Sources */,
 				9AC1A60E20840F8200947DCE /* MockAPI.swift in Sources */,
 				9AC1A61620840FE200947DCE /* StringRepresentableTests.swift in Sources */,

@@ -2,7 +2,7 @@
 
 class AuthViewControllerTests: XCTestCase {
 
-    var mockAuthViewModel = MockAuthViewModel()
+    var mockAuthViewModel: MockAuthViewModel!
 
     override func setUp() {
         super.setUp()

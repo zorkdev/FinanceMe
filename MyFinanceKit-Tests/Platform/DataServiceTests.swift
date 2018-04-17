@@ -6,13 +6,20 @@ class DataServiceTests: XCTestCase {
         let variable: String
     }
 
-    var mockDataService = MockDataService()
-    let userDefaultsDataService = UserDefaultsDataService()
+    var mockDataService: MockDataService!
+
+    var userDefaultsDataService: UserDefaultsDataService!
+
+    override func setUp() {
+        super.setUp()
+
+        mockDataService = MockDataService()
+        userDefaultsDataService = UserDefaultsDataService()
+    }
 
     override func tearDown() {
         super.tearDown()
 
-        mockDataService = MockDataService()
         UserDefaults.standard.removePersistentDomain(forName: Bundle.main.bundleIdentifier!)
     }
 

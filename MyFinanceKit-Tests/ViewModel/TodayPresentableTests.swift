@@ -1,70 +1,62 @@
 @testable import MyFinanceKit
 
-class TodayPresentableTests: XCTestCase {
+class TodayPresentableTests: ServiceClientTestCase {
 
-    var mockTodayPresentable: MockTodayPresentable?
-    var mockTodayDisplayModel: MockTodayDisplayModel?
-    var mockAppState: MockAppState?
-    var mockNetworkService: MockNetworkService?
-    var mockDataService: MockDataService?
+    var mockTodayPresentable: MockTodayPresentable!
+    var mockTodayDisplayModel: MockTodayDisplayModel!
 
     //swiftlint:disable:next weak_delegate
-    var mockTodayViewModelDelegate: MockTodayViewModelDelegate?
+    var mockTodayViewModelDelegate: MockTodayViewModelDelegate!
 
     override func setUp() {
         super.setUp()
 
-        mockDataService = MockDataService()
-        mockNetworkService = MockNetworkService()
-        mockAppState = MockAppState(dataService: mockDataService!,
-                                    networkService: mockNetworkService!,
-                                    sessionService: MockSessionService())
         mockTodayDisplayModel = MockTodayDisplayModel()
         mockTodayViewModelDelegate = MockTodayViewModelDelegate()
-        mockTodayPresentable = MockTodayPresentable(serviceProvider: mockAppState!,
-                                                    displayModel: mockTodayDisplayModel!,
-                                                    delegate: mockTodayViewModelDelegate!)
+        mockTodayPresentable = MockTodayPresentable(serviceProvider: mockAppState,
+                                                    displayModel: mockTodayDisplayModel,
+                                                    delegate: mockTodayViewModelDelegate)
     }
 
     func testViewDidLoad() {
         let expectedUser = Factory.makeUser()
         let expectedBalance = Factory.makeBalance()
 
-        mockDataService?.loadReturnValues = [expectedUser, expectedBalance]
-        mockNetworkService?.returnJSONDecodableValues = [expectedUser, expectedBalance]
+        mockAppState.mockDataService.loadReturnValues = [expectedUser, expectedBalance]
+        mockAppState.mockNetworkService.returnJSONDecodableValues = [expectedUser, expectedBalance]
         mockTodayPresentable!.viewDidLoad()
 
-        XCTAssertEqual(mockTodayViewModelDelegate?.lastBalance?.string, "£20.00")
-        XCTAssertEqual(mockTodayViewModelDelegate?.lastAllowance?.string, "£100.22")
-        XCTAssertEqual(mockTodayViewModelDelegate?.lastAllowanceIcon, "😇")
+        XCTAssertEqual(mockTodayViewModelDelegate.lastBalance?.string, "£20.00")
+        XCTAssertEqual(mockTodayViewModelDelegate.lastAllowance?.string, "£100.22")
+        XCTAssertEqual(mockTodayViewModelDelegate.lastAllowanceIcon, "😇")
     }
 
     func testSetupDefaults() {
         let expectedUser = Factory.makeUser()
         let expectedBalance = Factory.makeBalance()
 
-        mockDataService?.loadReturnValues = [expectedUser, expectedBalance]
+        mockAppState.mockDataService.loadReturnValues = [expectedUser, expectedBalance]
         mockTodayPresentable!.setupDefaults()
 
-        XCTAssertEqual(mockTodayViewModelDelegate?.lastBalance?.string, "£20.00")
-        XCTAssertEqual(mockTodayViewModelDelegate?.lastAllowance?.string, "£100.22")
-        XCTAssertEqual(mockTodayViewModelDelegate?.lastAllowanceIcon, "😇")
+        XCTAssertEqual(mockTodayViewModelDelegate.lastBalance?.string, "£20.00")
+        XCTAssertEqual(mockTodayViewModelDelegate.lastAllowance?.string, "£100.22")
+        XCTAssertEqual(mockTodayViewModelDelegate.lastAllowanceIcon, "😇")
     }
 
     func testUpdateData() {
         let expectedUser = Factory.makeUser()
         let expectedBalance = Factory.makeBalance()
 
-        mockDataService?.loadReturnValues = [expectedUser, expectedBalance]
-        mockNetworkService?.returnJSONDecodableValues = [expectedUser, expectedBalance]
+        mockAppState.mockDataService.loadReturnValues = [expectedUser, expectedBalance]
+        mockAppState.mockNetworkService.returnJSONDecodableValues = [expectedUser, expectedBalance]
 
         _ = mockTodayPresentable!.updateData().done {
-            XCTAssertEqual(self.mockTodayViewModelDelegate?.lastBalance?.string, "£20.00")
-            XCTAssertEqual(self.mockTodayViewModelDelegate?.lastAllowance?.string, "£100.22")
-            XCTAssertEqual(self.mockTodayViewModelDelegate?.lastAllowanceIcon, "😇")
-            XCTAssertTrue(self.mockDataService!.savedValues
+            XCTAssertEqual(self.mockTodayViewModelDelegate.lastBalance?.string, "£20.00")
+            XCTAssertEqual(self.mockTodayViewModelDelegate.lastAllowance?.string, "£100.22")
+            XCTAssertEqual(self.mockTodayViewModelDelegate.lastAllowanceIcon, "😇")
+            XCTAssertTrue(self.mockAppState.mockDataService.savedValues
                 .contains(where: { ($0 as? User) == expectedUser }) == true)
-            XCTAssertTrue(self.mockDataService!.savedValues
+            XCTAssertTrue(self.mockAppState.mockDataService.savedValues
                 .contains(where: { ($0 as? Balance) == expectedBalance }) == true)
         }
     }
@@ -72,13 +64,13 @@ class TodayPresentableTests: XCTestCase {
     func testGetUser() {
         let expectedUser = Factory.makeUser()
 
-        mockDataService?.loadReturnValues = [expectedUser]
-        mockNetworkService?.returnJSONDecodableValues = [expectedUser]
+        mockAppState.mockDataService.loadReturnValues = [expectedUser]
+        mockAppState.mockNetworkService.returnJSONDecodableValues = [expectedUser]
 
         _ = mockTodayPresentable!.getUser().done {
-            XCTAssertEqual(self.mockTodayViewModelDelegate?.lastAllowance?.string, "£100.22")
-            XCTAssertEqual(self.mockTodayViewModelDelegate?.lastAllowanceIcon, "😇")
-            XCTAssertTrue(self.mockDataService!.savedValues
+            XCTAssertEqual(self.mockTodayViewModelDelegate.lastAllowance?.string, "£100.22")
+            XCTAssertEqual(self.mockTodayViewModelDelegate.lastAllowanceIcon, "😇")
+            XCTAssertTrue(self.mockAppState.mockDataService.savedValues
                 .contains(where: { ($0 as? User) == expectedUser }) == true)
         }
     }
@@ -86,12 +78,12 @@ class TodayPresentableTests: XCTestCase {
     func testGetBalance() {
         let expectedBalance = Factory.makeBalance()
 
-        mockDataService?.loadReturnValues = [expectedBalance]
-        mockNetworkService?.returnJSONDecodableValues = [expectedBalance]
+        mockAppState.mockDataService.loadReturnValues = [expectedBalance]
+        mockAppState.mockNetworkService.returnJSONDecodableValues = [expectedBalance]
 
         _ = mockTodayPresentable!.getBalance().done {
-        XCTAssertEqual(self.mockTodayViewModelDelegate?.lastBalance?.string, "£20.00")
-        XCTAssertTrue(self.mockDataService!.savedValues
+        XCTAssertEqual(self.mockTodayViewModelDelegate.lastBalance?.string, "£20.00")
+        XCTAssertTrue(self.mockAppState.mockDataService.savedValues
             .contains(where: { ($0 as? Balance) == expectedBalance }) == true)
         }
     }

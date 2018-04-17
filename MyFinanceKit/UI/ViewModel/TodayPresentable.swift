@@ -48,8 +48,7 @@ public extension TodayPresentable {
     }
 
     @discardableResult public func getBalance() -> Promise<Void> {
-        return BalanceBusinessLogic(networkService: serviceProvider.networkService,
-                                    dataService: serviceProvider.dataService)
+        return BalanceBusinessLogic(serviceProvider: serviceProvider)
             .getBalance().done { balance in
             let balanceAttributedString = self.createAttributedString(from: balance.effectiveBalance)
             self.delegate?.set(balance: balanceAttributedString)
@@ -57,9 +56,7 @@ public extension TodayPresentable {
     }
 
     @discardableResult public func getUser() -> Promise<Void> {
-        return UserBusinessLogic(networkService: serviceProvider.networkService,
-                                 dataService: serviceProvider.dataService,
-                                 sessionService: serviceProvider.sessionService)
+        return UserBusinessLogic(serviceProvider: serviceProvider)
             .getCurrentUser().done { user in
                 let allowanceAttributedString = self.createAttributedString(from: user.allowance)
                 let allowanceIcon = SpendingBusinessLogic().allowanceIcon(for: user)

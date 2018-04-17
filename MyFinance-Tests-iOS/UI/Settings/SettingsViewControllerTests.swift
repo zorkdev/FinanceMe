@@ -2,7 +2,7 @@
 
 class SettingsViewControllerTests: XCTestCase {
 
-    var mockSettingsViewModel = MockSettingsViewModel()
+    var mockSettingsViewModel: MockSettingsViewModel!
 
     override func setUp() {
         super.setUp()

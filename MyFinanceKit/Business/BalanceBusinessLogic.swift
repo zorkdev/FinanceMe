@@ -1,21 +1,20 @@
-public struct BalanceBusinessLogic {
+public struct BalanceBusinessLogic: ServiceClient {
 
-    private let networkService: NetworkServiceType
-    private let dataService: DataService
+    public typealias ServiceProvider = NetworkServiceProvider & DataServiceProvider
+    public let serviceProvider: ServiceProvider
 
-    public init(networkService: NetworkServiceType,
-                dataService: DataService) {
-        self.networkService = networkService
-        self.dataService = dataService
+    public init(serviceProvider: ServiceProvider) {
+        self.serviceProvider = serviceProvider
     }
 
     public func getBalance() -> Promise<Balance> {
-        return networkService.performRequest(api: API.starling(.balance),
-                                             method: .get,
-                                             parameters: nil,
-                                             body: nil)
+        return serviceProvider.networkService
+            .performRequest(api: API.starling(.balance),
+                            method: .get,
+                            parameters: nil,
+                            body: nil)
             .then { (balance: Balance) -> Promise<Balance> in
-                balance.save(dataService: self.dataService)
+                balance.save(dataService: self.serviceProvider.dataService)
 
                 return .value(balance)
         }

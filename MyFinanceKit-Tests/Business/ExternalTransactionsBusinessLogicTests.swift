@@ -1,14 +1,6 @@
 @testable import MyFinanceKit
 
-class ExternalTransactionsBusinessLogicTests: XCTestCase {
-
-    var mockNetworkService = MockNetworkService()
-
-    override func tearDown() {
-        super.tearDown()
-
-        mockNetworkService = MockNetworkService()
-    }
+class ExternalTransactionsBusinessLogicTests: ServiceClientTestCase {
 
     func testGetExternalTransactions() {
         let newExpectation = expectation(description: "External Transactions fetched")
@@ -20,16 +12,17 @@ class ExternalTransactionsBusinessLogicTests: XCTestCase {
 
         let expectedTransactions = [Factory.makeTransaction()]
 
-        mockNetworkService.returnJSONDecodableValues = [expectedTransactions]
+        mockAppState.mockNetworkService.returnJSONDecodableValues = [expectedTransactions]
 
-        let externalTransactionsBusinessLogic = ExternalTransactionsBusinessLogic(networkService: mockNetworkService)
+        let externalTransactionsBusinessLogic = ExternalTransactionsBusinessLogic(serviceProvider: mockAppState)
 
         _ = externalTransactionsBusinessLogic.getExternalTransactions(fromTo: expectedFromTo).done { transactions in
 
-            XCTAssertEqual(self.mockNetworkService.lastRequest?.api as? API, .zorkdev(.transactions))
-            XCTAssertEqual(self.mockNetworkService.lastRequest?.method, .get)
-            XCTAssertEqual(self.mockNetworkService.lastRequest?.parameters as? FromToParameters, expectedFromTo)
-            XCTAssertNil(self.mockNetworkService.lastRequest?.body)
+            XCTAssertEqual(self.mockAppState.mockNetworkService.lastRequest?.api as? API, .zorkdev(.transactions))
+            XCTAssertEqual(self.mockAppState.mockNetworkService.lastRequest?.method, .get)
+            XCTAssertEqual(self.mockAppState.mockNetworkService.lastRequest?.parameters as? FromToParameters,
+                           expectedFromTo)
+            XCTAssertNil(self.mockAppState.mockNetworkService.lastRequest?.body)
             XCTAssertEqual(transactions, expectedTransactions)
 
             newExpectation.fulfill()
@@ -43,16 +36,16 @@ class ExternalTransactionsBusinessLogicTests: XCTestCase {
 
         let expectedTransaction = Factory.makeTransaction()
 
-        mockNetworkService.returnJSONDecodableValues = [expectedTransaction]
+        mockAppState.mockNetworkService.returnJSONDecodableValues = [expectedTransaction]
 
-        let externalTransactionsBusinessLogic = ExternalTransactionsBusinessLogic(networkService: mockNetworkService)
+        let externalTransactionsBusinessLogic = ExternalTransactionsBusinessLogic(serviceProvider: mockAppState)
 
         _ = externalTransactionsBusinessLogic.create(transaction: expectedTransaction).done { transaction in
 
-            XCTAssertEqual(self.mockNetworkService.lastRequest?.api as? API, .zorkdev(.transactions))
-            XCTAssertEqual(self.mockNetworkService.lastRequest?.method, .post)
-            XCTAssertNil(self.mockNetworkService.lastRequest?.parameters)
-            XCTAssertEqual(self.mockNetworkService.lastRequest?.body as? Transaction, expectedTransaction)
+            XCTAssertEqual(self.mockAppState.mockNetworkService.lastRequest?.api as? API, .zorkdev(.transactions))
+            XCTAssertEqual(self.mockAppState.mockNetworkService.lastRequest?.method, .post)
+            XCTAssertNil(self.mockAppState.mockNetworkService.lastRequest?.parameters)
+            XCTAssertEqual(self.mockAppState.mockNetworkService.lastRequest?.body as? Transaction, expectedTransaction)
             XCTAssertEqual(transaction, expectedTransaction)
 
             newExpectation.fulfill()
@@ -66,17 +59,17 @@ class ExternalTransactionsBusinessLogicTests: XCTestCase {
 
         let expectedTransaction = Factory.makeTransaction()
 
-        mockNetworkService.returnJSONDecodableValues = [expectedTransaction]
+        mockAppState.mockNetworkService.returnJSONDecodableValues = [expectedTransaction]
 
-        let externalTransactionsBusinessLogic = ExternalTransactionsBusinessLogic(networkService: mockNetworkService)
+        let externalTransactionsBusinessLogic = ExternalTransactionsBusinessLogic(serviceProvider: mockAppState)
 
         _ = externalTransactionsBusinessLogic.update(transaction: expectedTransaction).done { transaction in
 
-            XCTAssertEqual(self.mockNetworkService.lastRequest?.api as? API,
+            XCTAssertEqual(self.mockAppState.mockNetworkService.lastRequest?.api as? API,
                            .zorkdev(.transaction(expectedTransaction.id!)))
-            XCTAssertEqual(self.mockNetworkService.lastRequest?.method, .put)
-            XCTAssertNil(self.mockNetworkService.lastRequest?.parameters)
-            XCTAssertEqual(self.mockNetworkService.lastRequest?.body as? Transaction, expectedTransaction)
+            XCTAssertEqual(self.mockAppState.mockNetworkService.lastRequest?.method, .put)
+            XCTAssertNil(self.mockAppState.mockNetworkService.lastRequest?.parameters)
+            XCTAssertEqual(self.mockAppState.mockNetworkService.lastRequest?.body as? Transaction, expectedTransaction)
             XCTAssertEqual(transaction, expectedTransaction)
 
             newExpectation.fulfill()
@@ -96,7 +89,7 @@ class ExternalTransactionsBusinessLogicTests: XCTestCase {
                                               source: .fasterPaymentsIn,
                                               balance: 100)
 
-        let externalTransactionsBusinessLogic = ExternalTransactionsBusinessLogic(networkService: mockNetworkService)
+        let externalTransactionsBusinessLogic = ExternalTransactionsBusinessLogic(serviceProvider: mockAppState)
 
         _ = externalTransactionsBusinessLogic.update(transaction: expectedTransaction).catch { error in
 
@@ -113,17 +106,17 @@ class ExternalTransactionsBusinessLogicTests: XCTestCase {
 
         let expectedTransaction = Factory.makeTransaction()
 
-        mockNetworkService.returnJSONDecodableValues = [expectedTransaction]
+        mockAppState.mockNetworkService.returnJSONDecodableValues = [expectedTransaction]
 
-        let externalTransactionsBusinessLogic = ExternalTransactionsBusinessLogic(networkService: mockNetworkService)
+        let externalTransactionsBusinessLogic = ExternalTransactionsBusinessLogic(serviceProvider: mockAppState)
 
         _ = externalTransactionsBusinessLogic.delete(transaction: expectedTransaction).done {
 
-            XCTAssertEqual(self.mockNetworkService.lastRequest?.api as? API,
+            XCTAssertEqual(self.mockAppState.mockNetworkService.lastRequest?.api as? API,
                            .zorkdev(.transaction(expectedTransaction.id!)))
-            XCTAssertEqual(self.mockNetworkService.lastRequest?.method, .delete)
-            XCTAssertNil(self.mockNetworkService.lastRequest?.parameters)
-            XCTAssertNil(self.mockNetworkService.lastRequest?.body)
+            XCTAssertEqual(self.mockAppState.mockNetworkService.lastRequest?.method, .delete)
+            XCTAssertNil(self.mockAppState.mockNetworkService.lastRequest?.parameters)
+            XCTAssertNil(self.mockAppState.mockNetworkService.lastRequest?.body)
 
             newExpectation.fulfill()
         }
@@ -142,7 +135,7 @@ class ExternalTransactionsBusinessLogicTests: XCTestCase {
                                               source: .fasterPaymentsIn,
                                               balance: 100)
 
-        let externalTransactionsBusinessLogic = ExternalTransactionsBusinessLogic(networkService: mockNetworkService)
+        let externalTransactionsBusinessLogic = ExternalTransactionsBusinessLogic(serviceProvider: mockAppState)
 
         _ = externalTransactionsBusinessLogic.delete(transaction: expectedTransaction).catch { error in
 

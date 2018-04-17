@@ -51,9 +51,7 @@ class SettingsViewModel: ServiceClient {
          dataDelegate: SettingsViewModelDataDelegate?) {
         self.serviceProvider = serviceProvider
         self.dataDelegate = dataDelegate
-        self.userBusinessLogic = UserBusinessLogic(networkService: serviceProvider.networkService,
-                                                   dataService: serviceProvider.dataService,
-                                                   sessionService: serviceProvider.sessionService)
+        self.userBusinessLogic = UserBusinessLogic(serviceProvider: serviceProvider)
     }
 
 }

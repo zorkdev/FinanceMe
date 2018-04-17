@@ -1,16 +1,18 @@
-public struct EndOfMonthSummaryBusinessLogic {
+public struct EndOfMonthSummaryBusinessLogic: ServiceClient {
 
-    private let networkService: NetworkServiceType
+    public typealias ServiceProvider = NetworkServiceProvider
+    public let serviceProvider: ServiceProvider
 
-    public init(networkService: NetworkServiceType) {
-        self.networkService = networkService
+    public init(serviceProvider: ServiceProvider) {
+        self.serviceProvider = serviceProvider
     }
 
     public func getEndOfMonthSummaryList() -> Promise<EndOfMonthSummaryList> {
-        return networkService.performRequest(api: API.zorkdev(.endOfMonthSummaries),
-                                             method: .get,
-                                             parameters: nil,
-                                             body: nil)
+        return serviceProvider.networkService
+            .performRequest(api: API.zorkdev(.endOfMonthSummaries),
+                            method: .get,
+                            parameters: nil,
+                            body: nil)
     }
 
 }

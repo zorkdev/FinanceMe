@@ -1,14 +1,6 @@
 @testable import MyFinanceKit
 
-class TransactionsBusinessLogicTests: XCTestCase {
-
-    var mockNetworkService = MockNetworkService()
-
-    override func tearDown() {
-        super.tearDown()
-
-        mockNetworkService = MockNetworkService()
-    }
+class TransactionsBusinessLogicTests: ServiceClientTestCase {
 
     func testGetTransactions() {
         let newExpectation = expectation(description: "Transactions fetched")
@@ -22,16 +14,17 @@ class TransactionsBusinessLogicTests: XCTestCase {
 
         let halResponse = HALResponse(embedded: TransactionList(transactions: expectedTransactions))
 
-        mockNetworkService.returnJSONDecodableValues = [halResponse]
+        mockAppState.mockNetworkService.returnJSONDecodableValues = [halResponse]
 
-        let transactionsBusinessLogic = TransactionsBusinessLogic(networkService: mockNetworkService)
+        let transactionsBusinessLogic = TransactionsBusinessLogic(serviceProvider: mockAppState)
 
         _ = transactionsBusinessLogic.getTransactions(fromTo: expectedFromTo).done { transactions in
 
-            XCTAssertEqual(self.mockNetworkService.lastRequest?.api as? API, .starling(.transactions))
-            XCTAssertEqual(self.mockNetworkService.lastRequest?.method, .get)
-            XCTAssertEqual(self.mockNetworkService.lastRequest?.parameters as? FromToParameters, expectedFromTo)
-            XCTAssertNil(self.mockNetworkService.lastRequest?.body)
+            XCTAssertEqual(self.mockAppState.mockNetworkService.lastRequest?.api as? API, .starling(.transactions))
+            XCTAssertEqual(self.mockAppState.mockNetworkService.lastRequest?.method, .get)
+            XCTAssertEqual(self.mockAppState.mockNetworkService.lastRequest?.parameters as? FromToParameters,
+                           expectedFromTo)
+            XCTAssertNil(self.mockAppState.mockNetworkService.lastRequest?.body)
             XCTAssertEqual(transactions, expectedTransactions)
 
             newExpectation.fulfill()

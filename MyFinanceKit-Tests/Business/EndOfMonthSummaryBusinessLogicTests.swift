@@ -1,16 +1,6 @@
 @testable import MyFinanceKit
 
-class EndOfMonthSummaryBusinessLogicTests: XCTestCase {
-
-    var mockNetworkService = MockNetworkService()
-    var mockDataService = MockDataService()
-
-    override func tearDown() {
-        super.tearDown()
-
-        mockNetworkService = MockNetworkService()
-        mockDataService = MockDataService()
-    }
+class EndOfMonthSummaryBusinessLogicTests: ServiceClientTestCase {
 
     func testGetEndOfMonthSummaryList() {
         let newExpectation = expectation(description: "EndOfMonthSummaryList fetched")
@@ -25,16 +15,17 @@ class EndOfMonthSummaryBusinessLogicTests: XCTestCase {
         let expectedEndOfMonthSummaryList = EndOfMonthSummaryList(currentMonthSummary: currentMonthSummary,
                                                                   endOfMonthSummaries: [endOfMonthSummary])
 
-        mockNetworkService.returnJSONDecodableValues = [expectedEndOfMonthSummaryList]
+        mockAppState.mockNetworkService.returnJSONDecodableValues = [expectedEndOfMonthSummaryList]
 
-        let endOfMonthSummaryBusinessLogic = EndOfMonthSummaryBusinessLogic(networkService: mockNetworkService)
+        let endOfMonthSummaryBusinessLogic = EndOfMonthSummaryBusinessLogic(serviceProvider: mockAppState)
 
         _ = endOfMonthSummaryBusinessLogic.getEndOfMonthSummaryList().done { endOfMonthSummaryList in
 
-            XCTAssertEqual(self.mockNetworkService.lastRequest?.api as? API, .zorkdev(.endOfMonthSummaries))
-            XCTAssertEqual(self.mockNetworkService.lastRequest?.method, .get)
-            XCTAssertNil(self.mockNetworkService.lastRequest?.parameters)
-            XCTAssertNil(self.mockNetworkService.lastRequest?.body)
+            XCTAssertEqual(self.mockAppState.mockNetworkService.lastRequest?.api as? API,
+                           .zorkdev(.endOfMonthSummaries))
+            XCTAssertEqual(self.mockAppState.mockNetworkService.lastRequest?.method, .get)
+            XCTAssertNil(self.mockAppState.mockNetworkService.lastRequest?.parameters)
+            XCTAssertNil(self.mockAppState.mockNetworkService.lastRequest?.body)
             XCTAssertEqual(endOfMonthSummaryList, expectedEndOfMonthSummaryList)
 
             newExpectation.fulfill()

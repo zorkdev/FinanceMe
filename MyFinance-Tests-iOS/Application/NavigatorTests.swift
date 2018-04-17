@@ -4,7 +4,7 @@ class NavigatorTests: XCTestCase {
 
     typealias ViewController = UIViewController
 
-    var mockWindow = MockWindow()
+    var mockWindow: MockWindow!
 
     override func setUp() {
         super.setUp()

@@ -1,16 +1,18 @@
-public struct TransactionsBusinessLogic {
+public struct TransactionsBusinessLogic: ServiceClient {
 
-    private let networkService: NetworkServiceType
+    public typealias ServiceProvider = NetworkServiceProvider
+    public let serviceProvider: ServiceProvider
 
-    public init(networkService: NetworkServiceType) {
-        self.networkService = networkService
+    public init(serviceProvider: ServiceProvider) {
+        self.serviceProvider = serviceProvider
     }
 
     public func getTransactions(fromTo: FromToParameters? = nil) -> Promise<[Transaction]> {
-        return networkService.performRequest(api: API.starling(.transactions),
-                                             method: .get,
-                                             parameters: fromTo,
-                                             body: nil)
+        return serviceProvider.networkService
+            .performRequest(api: API.starling(.transactions),
+                            method: .get,
+                            parameters: fromTo,
+                            body: nil)
             .then { (halResponse: HALResponse<TransactionList>) -> Promise<[Transaction]> in
                 return .value(halResponse.embedded.transactions)
         }

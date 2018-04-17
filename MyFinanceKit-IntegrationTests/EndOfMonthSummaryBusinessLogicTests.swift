@@ -5,8 +5,7 @@ class EndOfMonthSummaryBusinessLogicTests: IntegrationTestCase {
     func testGetEndOfMonthSummaryList() {
         let newExpectation = expectation(description: "EndOfMonthSummaryList fetched")
 
-        let endOfMonthSummaryBusinessLogic =
-            EndOfMonthSummaryBusinessLogic(networkService: config.appState.networkService)
+        let endOfMonthSummaryBusinessLogic = EndOfMonthSummaryBusinessLogic(serviceProvider: config.appState)
 
         _ = endOfMonthSummaryBusinessLogic.getEndOfMonthSummaryList()
             .done { _ in

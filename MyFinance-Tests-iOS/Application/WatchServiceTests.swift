@@ -3,8 +3,8 @@ import WatchConnectivity
 
 class WatchServiceTests: XCTestCase {
 
-    var mockWCSession = MockWCSession()
-    var mockDataService = MockDataService()
+    var mockWCSession: MockWCSession!
+    var mockDataService: MockDataService!
 
     override func setUp() {
         super.setUp()

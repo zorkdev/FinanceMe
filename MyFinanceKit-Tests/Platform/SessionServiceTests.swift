@@ -2,10 +2,10 @@
 
 class SessionServiceTests: XCTestCase {
 
-    var mockDataService = MockDataService()
+    var mockDataService: MockDataService!
 
-    override func tearDown() {
-        super.tearDown()
+    override func setUp() {
+        super.setUp()
 
         mockDataService = MockDataService()
     }

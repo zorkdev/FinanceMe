@@ -6,7 +6,13 @@ class KeychainDataServiceTests: XCTestCase {
         let variable: String
     }
 
-    let keychainDataService = KeychainDataService(configService: ConfigDefaultService())
+    var keychainDataService: KeychainDataService!
+
+    override func setUp() {
+        super.setUp()
+
+        keychainDataService = KeychainDataService(configService: ConfigDefaultService())
+    }
 
     override func tearDown() {
         super.tearDown()

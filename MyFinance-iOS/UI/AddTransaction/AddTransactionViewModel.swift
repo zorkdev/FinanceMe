@@ -46,7 +46,7 @@ class AddTransactionViewModel: ServiceClient {
         self.serviceProvider = serviceProvider
         self.dataDelegate = dataDelegate
         self.externalTransactionsBusinessLogic =
-            ExternalTransactionsBusinessLogic(networkService: serviceProvider.networkService)
+            ExternalTransactionsBusinessLogic(serviceProvider: serviceProvider)
         self.state = state
         self.transaction = transaction
     }

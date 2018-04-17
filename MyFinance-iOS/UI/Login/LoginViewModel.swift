@@ -26,9 +26,7 @@ class LoginViewModel: ServiceClient {
 
     init(serviceProvider: ServiceProvider) {
         self.serviceProvider = serviceProvider
-        self.userBusinessLogic = UserBusinessLogic(networkService: serviceProvider.networkService,
-                                                   dataService: serviceProvider.dataService,
-                                                   sessionService: serviceProvider.sessionService)
+        self.userBusinessLogic = UserBusinessLogic(serviceProvider: serviceProvider)
     }
 
 }

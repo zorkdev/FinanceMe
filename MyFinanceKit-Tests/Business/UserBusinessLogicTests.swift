@@ -1,18 +1,6 @@
 @testable import MyFinanceKit
 
-class UserBusinessLogicTests: XCTestCase {
-
-    var mockNetworkService = MockNetworkService()
-    var mockDataService = MockDataService()
-    var mockSessionService = MockSessionService()
-
-    override func tearDown() {
-        super.tearDown()
-
-        mockNetworkService = MockNetworkService()
-        mockDataService = MockDataService()
-        mockSessionService = MockSessionService()
-    }
+class UserBusinessLogicTests: ServiceClientTestCase {
 
     func testGetSession() {
         let newExpectation = expectation(description: "Session fetched")
@@ -20,20 +8,18 @@ class UserBusinessLogicTests: XCTestCase {
         let expectedSession = Factory.makeSession()
         let credentials = Credentials(email: "test@test.com", password: "test")
 
-        mockNetworkService.returnJSONDecodableValues = [expectedSession]
+        mockAppState.mockNetworkService.returnJSONDecodableValues = [expectedSession]
 
-        let userBusinessLogic = UserBusinessLogic(networkService: mockNetworkService,
-                                                  dataService: mockDataService,
-                                                  sessionService: mockSessionService)
+        let userBusinessLogic = UserBusinessLogic(serviceProvider: mockAppState)
 
         _ = userBusinessLogic.getSession(credentials: credentials).done { session in
 
-            XCTAssertEqual(self.mockNetworkService.lastRequest?.api as? API, .zorkdev(.login))
-            XCTAssertEqual(self.mockNetworkService.lastRequest?.method, .post)
-            XCTAssertNil(self.mockNetworkService.lastRequest?.parameters)
-            XCTAssertEqual(self.mockNetworkService.lastRequest?.body as? Credentials, credentials)
+            XCTAssertEqual(self.mockAppState.mockNetworkService.lastRequest?.api as? API, .zorkdev(.login))
+            XCTAssertEqual(self.mockAppState.mockNetworkService.lastRequest?.method, .post)
+            XCTAssertNil(self.mockAppState.mockNetworkService.lastRequest?.parameters)
+            XCTAssertEqual(self.mockAppState.mockNetworkService.lastRequest?.body as? Credentials, credentials)
             XCTAssertEqual(session, expectedSession)
-            XCTAssertNotNil(self.mockSessionService.lastSaveValue)
+            XCTAssertNotNil(self.mockAppState.mockSessionService.lastSaveValue)
 
             newExpectation.fulfill()
         }
@@ -46,20 +32,18 @@ class UserBusinessLogicTests: XCTestCase {
 
         let expectedUser = Factory.makeUser()
 
-        mockNetworkService.returnJSONDecodableValues = [expectedUser]
+        mockAppState.mockNetworkService.returnJSONDecodableValues = [expectedUser]
 
-        let userBusinessLogic = UserBusinessLogic(networkService: mockNetworkService,
-                                                  dataService: mockDataService,
-                                                  sessionService: mockSessionService)
+        let userBusinessLogic = UserBusinessLogic(serviceProvider: mockAppState)
 
         _ = userBusinessLogic.getCurrentUser().done { user in
 
-            XCTAssertEqual(self.mockNetworkService.lastRequest?.api as? API, .zorkdev(.user))
-            XCTAssertEqual(self.mockNetworkService.lastRequest?.method, .get)
-            XCTAssertNil(self.mockNetworkService.lastRequest?.parameters)
-            XCTAssertNil(self.mockNetworkService.lastRequest?.body)
+            XCTAssertEqual(self.mockAppState.mockNetworkService.lastRequest?.api as? API, .zorkdev(.user))
+            XCTAssertEqual(self.mockAppState.mockNetworkService.lastRequest?.method, .get)
+            XCTAssertNil(self.mockAppState.mockNetworkService.lastRequest?.parameters)
+            XCTAssertNil(self.mockAppState.mockNetworkService.lastRequest?.body)
             XCTAssertEqual(user, expectedUser)
-            XCTAssertTrue(self.mockDataService.savedValues
+            XCTAssertTrue(self.mockAppState.mockDataService.savedValues
                 .contains(where: { ($0 as? User) == expectedUser }) == true)
 
             newExpectation.fulfill()
@@ -73,20 +57,18 @@ class UserBusinessLogicTests: XCTestCase {
 
         let expectedUser = Factory.makeUser()
 
-        mockNetworkService.returnJSONDecodableValues = [expectedUser]
+        mockAppState.mockNetworkService.returnJSONDecodableValues = [expectedUser]
 
-        let userBusinessLogic = UserBusinessLogic(networkService: mockNetworkService,
-                                                  dataService: mockDataService,
-                                                  sessionService: mockSessionService)
+        let userBusinessLogic = UserBusinessLogic(serviceProvider: mockAppState)
 
         _ = userBusinessLogic.update(user: expectedUser).done { user in
 
-            XCTAssertEqual(self.mockNetworkService.lastRequest?.api as? API, .zorkdev(.user))
-            XCTAssertEqual(self.mockNetworkService.lastRequest?.method, .patch)
-            XCTAssertNil(self.mockNetworkService.lastRequest?.parameters)
-            XCTAssertEqual(self.mockNetworkService.lastRequest?.body as? User, expectedUser)
+            XCTAssertEqual(self.mockAppState.mockNetworkService.lastRequest?.api as? API, .zorkdev(.user))
+            XCTAssertEqual(self.mockAppState.mockNetworkService.lastRequest?.method, .patch)
+            XCTAssertNil(self.mockAppState.mockNetworkService.lastRequest?.parameters)
+            XCTAssertEqual(self.mockAppState.mockNetworkService.lastRequest?.body as? User, expectedUser)
             XCTAssertEqual(user, expectedUser)
-            XCTAssertTrue(self.mockDataService.savedValues
+            XCTAssertTrue(self.mockAppState.mockDataService.savedValues
                 .contains(where: { ($0 as? User) == expectedUser }) == true)
 
             newExpectation.fulfill()
