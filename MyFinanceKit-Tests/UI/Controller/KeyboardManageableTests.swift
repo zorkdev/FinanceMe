@@ -1,6 +1,6 @@
 @testable import MyFinanceKit
 
-class BaseViewControllerKeyboardToolbarTests: XCTestCase {
+class KeyboardManageableTests: XCTestCase {
 
     class TestViewController: BaseViewController, KeyboardManageable {}
 
@@ -20,14 +20,6 @@ class BaseViewControllerKeyboardToolbarTests: XCTestCase {
         let textField = UITextField()
         testViewController?.view.addSubview(textField)
         textField.becomeFirstResponder()
-    }
-
-    func testKeyboardToolbar() {
-        XCTAssertNotNil(testViewController?.keyBoardToolbar)
-    }
-
-    func testDoneTapped() {
-        testViewController?.doneTapped()
     }
 
 }

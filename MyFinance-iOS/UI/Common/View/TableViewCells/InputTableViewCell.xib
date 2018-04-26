@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="InputTableViewCell" rowHeight="60" id="8gD-4J-gH3" customClass="InputTableViewCell" customModule="MyFinance_iOS" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="60"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="8gD-4J-gH3" id="qMQ-2C-tzy">
+                <rect key="frame" x="0.0" y="0.0" width="375" height="59.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view alpha="0.40000000000000002" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XX0-2Q-l4D" userLabel="Separator">
+                        <rect key="frame" x="16" y="59" width="359" height="0.5"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="0.5" id="QA5-Dc-PRf"/>
+                        </constraints>
+                    </view>
+                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="asC-VO-L1a">
+                        <rect key="frame" x="16" y="0.0" width="343" height="59.5"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="tintColor" red="0.003221878549" green="0.64363974329999996" blue="0.86026746030000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="textColor" red="0.003221878549" green="0.64363974329999996" blue="0.86026746030000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                        <textInputTraits key="textInputTraits"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="boolean" keyPath="showLeftLabel" value="YES"/>
+                            <userDefinedRuntimeAttribute type="color" keyPath="leftLabelTextColor">
+                                <color key="value" white="0.94999999999999996" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </textField>
+                </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="XX0-2Q-l4D" secondAttribute="trailing" id="9GT-7t-psB"/>
+                    <constraint firstItem="asC-VO-L1a" firstAttribute="trailing" secondItem="qMQ-2C-tzy" secondAttribute="trailingMargin" id="FzL-hY-PJw"/>
+                    <constraint firstAttribute="bottom" secondItem="asC-VO-L1a" secondAttribute="bottom" id="KJR-n4-o8U"/>
+                    <constraint firstAttribute="bottom" secondItem="XX0-2Q-l4D" secondAttribute="bottom" id="Smm-d5-KcQ"/>
+                    <constraint firstItem="asC-VO-L1a" firstAttribute="leading" secondItem="qMQ-2C-tzy" secondAttribute="leadingMargin" id="ehf-MP-YeB"/>
+                    <constraint firstItem="XX0-2Q-l4D" firstAttribute="leading" secondItem="qMQ-2C-tzy" secondAttribute="leadingMargin" id="mrC-66-Jo1"/>
+                    <constraint firstItem="asC-VO-L1a" firstAttribute="top" secondItem="qMQ-2C-tzy" secondAttribute="top" id="wnn-lY-rQH"/>
+                </constraints>
+            </tableViewCellContentView>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <connections>
+                <outlet property="textField" destination="asC-VO-L1a" id="Vbn-Gd-KZa"/>
+            </connections>
+            <point key="canvasLocation" x="97.5" y="-68.5"/>
+        </tableViewCell>
+    </objects>
+</document>

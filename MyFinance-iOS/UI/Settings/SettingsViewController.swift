@@ -25,7 +25,8 @@ class SettingsViewController: BaseViewController, KeyboardManageable {
 
     private func setupTextFields() {
         if UIDevice.current.userInterfaceIdiom == .phone {
-            largeTransactionField.inputAccessoryView = keyBoardToolbar
+            largeTransactionField.inputAccessoryView =
+                KeyboardToolbar(doneAction: { self.view.endEditing(true) }).toolbar
         }
 
         startDatePicker.datePickerMode = .date
@@ -33,13 +34,13 @@ class SettingsViewController: BaseViewController, KeyboardManageable {
                                   action: #selector(startDatePickerValueChanged(_:)),
                                   for: .valueChanged)
         startDateField.inputView = startDatePicker
-        startDateField.inputAccessoryView = keyBoardToolbar
+        startDateField.inputAccessoryView = KeyboardToolbar(doneAction: { self.view.endEditing(true) }).toolbar
         startDateField.tintColor = .clear
 
         paydayPicker.delegate = self
         paydayPicker.dataSource = self
         paydayField.inputView = paydayPicker
-        paydayField.inputAccessoryView = keyBoardToolbar
+        paydayField.inputAccessoryView = KeyboardToolbar(doneAction: { self.view.endEditing(true) }).toolbar
         paydayField.tintColor = .clear
 
         updateSaveButton()

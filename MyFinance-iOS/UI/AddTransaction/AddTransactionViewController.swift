@@ -23,14 +23,14 @@ class AddTransactionViewController: BaseViewController, KeyboardManageable {
 
     private func setupTextFields() {
         if UIDevice.current.userInterfaceIdiom == .phone {
-            amountField.inputAccessoryView = keyBoardToolbar
+            amountField.inputAccessoryView = KeyboardToolbar(doneAction: { self.view.endEditing(true) }).toolbar
         }
 
         createdPicker.addTarget(self,
                                 action: #selector(createdPickerValueChanged(_:)),
                                 for: .valueChanged)
         createdField.inputView = createdPicker
-        createdField.inputAccessoryView = keyBoardToolbar
+        createdField.inputAccessoryView = KeyboardToolbar(doneAction: { self.view.endEditing(true) }).toolbar
         createdField.tintColor = .clear
         createdField.text = AddTransactionDisplayModel.dateString(from: selectedDate)
 
@@ -38,7 +38,7 @@ class AddTransactionViewController: BaseViewController, KeyboardManageable {
         sourcePicker.delegate = self
         sourcePicker.dataSource = self
         sourceField.inputView = sourcePicker
-        sourceField.inputAccessoryView = keyBoardToolbar
+        sourceField.inputAccessoryView = KeyboardToolbar(doneAction: { self.view.endEditing(true) }).toolbar
         sourceField.tintColor = .clear
         sourceField.text = viewModel.pickerViewTitle(for: selectedSource, for: 0)
 

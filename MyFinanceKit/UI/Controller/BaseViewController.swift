@@ -1,9 +1,5 @@
 open class BaseViewController: ViewController {
 
-    struct Constants {
-        static let keyboardToolbarDoneButtonTitle = "Done"
-    }
-
     open override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
 

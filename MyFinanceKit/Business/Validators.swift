@@ -3,7 +3,7 @@ public struct Validators {
     public static func validate(amount: String) -> Bool {
         let cs = Formatters.currencySymbol
         let ds = Formatters.decimalSeparator
-        let regex = "^(\(cs)?0\\\(ds)?|\(cs)?0\\\(ds)\\d{0,2}|\(cs)?[1-9]\\d{0,6}|\(cs)?[1-9]\\d{0,6}\\\(ds)\\d{0,2})$"
+        let regex = "^(|\(cs)?0\\\(ds)?|\(cs)?0\\\(ds)\\d{0,2}|\(cs)?[1-9]\\d{0,6}|\(cs)?[1-9]\\d{0,6}\\\(ds)\\d{0,2})$"
 
         return amount.range(of: regex, options: .regularExpression) != nil
     }

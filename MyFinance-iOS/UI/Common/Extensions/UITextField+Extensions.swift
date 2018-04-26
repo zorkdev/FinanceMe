@@ -37,4 +37,14 @@ extension UITextField {
         }
     }
 
+    func setLeftLabel(text: String, color: UIColor) {
+        let label = (leftView as? UILabel) ?? UILabel()
+        label.font = font
+        label.text = text
+        label.textColor = color
+        leftView = label
+        leftViewMode = .always
+        label.sizeToFit()
+    }
+
 }
