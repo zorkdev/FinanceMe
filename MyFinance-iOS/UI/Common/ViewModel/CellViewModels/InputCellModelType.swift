@@ -60,6 +60,7 @@ extension InputCellModelForViewType {
     var isSecureTextEntry: Bool { return false }
     var autocapitalizationType: UITextAutocapitalizationType { return .none }
     var inputView: UIView? { return nil }
+    var inputAccessoryView: UIView? { return nil }
 
     var textColor: Color {
         return isEnabled ? displayModel.enabledTextColor : displayModel.disabledTextColor
