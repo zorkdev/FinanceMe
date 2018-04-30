@@ -2,12 +2,12 @@ class InputTableViewCell: UITableViewCell {
 
     @IBOutlet private weak var textField: UITextField!
 
-    private weak var viewModel: InputCellModelForViewType!
+    private weak var viewModel: InputCellModelForViewType?
 
     override func prepareForReuse() {
         super.prepareForReuse()
 
-        viewModel.viewDelegate = nil
+        viewModel?.viewDelegate = nil
         viewModel = nil
     }
 
@@ -19,7 +19,7 @@ extension InputTableViewCell: TableViewCellForViewModelType {
         guard let viewModel = viewModel as? InputCellModelForViewType else { return }
 
         self.viewModel = viewModel
-        self.viewModel.viewDelegate = self
+        self.viewModel?.viewDelegate = self
         textField.delegate = self
 
         selectionStyle = viewModel.displayModel.selectionStyle
@@ -38,6 +38,7 @@ extension InputTableViewCell: InputCellModelViewDelegate {
     }
 
     func update() {
+        guard let viewModel = viewModel else { return }
         textField.keyboardType = viewModel.keyboardType
         textField.autocapitalizationType = viewModel.autocapitalizationType
         textField.inputView = viewModel.inputView
@@ -70,14 +71,14 @@ extension InputTableViewCell: UITextFieldDelegate {
             let range = Range(range, in: originalText)  else { return false }
 
         let newText = originalText.replacingCharacters(in: range, with: string)
-        textField.text = viewModel.willChange(value: newText, original: originalText)
-        viewModel.didChange(value: textField.text ?? "")
+        textField.text = viewModel?.willChange(value: newText, original: originalText)
+        viewModel?.didChange(value: textField.text ?? "")
 
         return false
     }
 
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        viewModel.didEndEditing()
+        viewModel?.didEndEditing()
         return true
     }
 

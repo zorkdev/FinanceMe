@@ -1,3 +1,12 @@
+struct TableViewUpdate {
+
+    var insertSections: IndexSet = []
+    var deleteSections: IndexSet = []
+    var insertRows: [IndexPath] = []
+    var deleteRows: [IndexPath] = []
+
+}
+
 protocol TableViewControllerType {
 
     func updateCells()
@@ -34,6 +43,15 @@ extension TableViewController: TableViewControllerType {
         tableView.reloadData()
     }
 
+    func updateCells(tableViewUpdate: TableViewUpdate) {
+        tableView.beginUpdates()
+        tableView.deleteSections(tableViewUpdate.deleteSections, with: .automatic)
+        tableView.deleteRows(at: tableViewUpdate.deleteRows, with: .automatic)
+        tableView.insertSections(tableViewUpdate.insertSections, with: .automatic)
+        tableView.insertRows(at: tableViewUpdate.insertRows, with: .automatic)
+        tableView.endUpdates()
+    }
+
 }
 
 extension TableViewController: UITableViewDataSource {
@@ -49,10 +67,10 @@ extension TableViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cellModel = viewModel.sections[indexPath.section].cellModels[indexPath.row]
         let tableViewCell = tableView
-            .dequeueReusableCell(withIdentifier: type(of: cellModel).reuseIdentifier,
+            .dequeueReusableCell(withIdentifier: type(of: cellModel.wrapped).reuseIdentifier,
                                  for: indexPath)
         guard let cell = tableViewCell as? TableViewCellForViewModelType else { return UITableViewCell ()}
-        cell.update(viewModel: cellModel)
+        cell.update(viewModel: cellModel.wrapped)
 
         return tableViewCell
     }

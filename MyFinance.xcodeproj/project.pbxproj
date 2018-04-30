@@ -111,13 +111,16 @@
 		9A2022A92038EC0A0012DD51 /* DateExtensionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A2022A32038EBC40012DD51 /* DateExtensionsTests.swift */; };
 		9A2860DF20422B8A008FA915 /* AppStateiOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A2860DE20422B8A008FA915 /* AppStateiOSTests.swift */; };
 		9A28B828209728B60020A8DC /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A28B827209728B60020A8DC /* TableViewController.swift */; };
-		9A28B82B20972DDD0020A8DC /* TableViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A28B82A20972DDD0020A8DC /* TableViewModel.swift */; };
+		9A28B82B20972DDD0020A8DC /* TableViewModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A28B82A20972DDD0020A8DC /* TableViewModelType.swift */; };
 		9A28B82E20972F2E0020A8DC /* CellModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A28B82C20972EFF0020A8DC /* CellModelType.swift */; };
 		9A28B82F20972F2E0020A8DC /* CellModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A28B82C20972EFF0020A8DC /* CellModelType.swift */; };
 		9A28B83020972F2E0020A8DC /* CellModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A28B82C20972EFF0020A8DC /* CellModelType.swift */; };
 		9A28B83120972F2E0020A8DC /* CellModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A28B82C20972EFF0020A8DC /* CellModelType.swift */; };
 		9A28B8332097377A0020A8DC /* TableViewType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A28B8322097377A0020A8DC /* TableViewType.swift */; };
 		9A28B8342097377A0020A8DC /* TableViewType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A28B8322097377A0020A8DC /* TableViewType.swift */; };
+		9A28B83B2097870F0020A8DC /* TextInputCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A28B83A2097870F0020A8DC /* TextInputCellModel.swift */; };
+		9A28B83F20978F5A0020A8DC /* SecureTextInputCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A28B83E20978F5A0020A8DC /* SecureTextInputCellModel.swift */; };
+		9A28B841209790DA0020A8DC /* EmailInputCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A28B840209790DA0020A8DC /* EmailInputCellModel.swift */; };
 		9A2A88E4203F6CE9002ADA1B /* UserBusinessLogicTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A2A88E3203F6CE9002ADA1B /* UserBusinessLogicTests.swift */; };
 		9A2A88E5203F6CE9002ADA1B /* UserBusinessLogicTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A2A88E3203F6CE9002ADA1B /* UserBusinessLogicTests.swift */; };
 		9A2BDAA42044D599008EE977 /* MockNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A2BDAA32044D599008EE977 /* MockNavigator.swift */; };
@@ -238,7 +241,7 @@
 		9A6124A320867EC600A1EAAB /* ServiceClientTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A61249D20867EC500A1EAAB /* ServiceClientTestCase.swift */; };
 		9A6124A420867EC600A1EAAB /* ServiceClientTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A61249D20867EC500A1EAAB /* ServiceClientTestCase.swift */; };
 		9A6124A72086815500A1EAAB /* ServiceClientiOSTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A6124A62086815500A1EAAB /* ServiceClientiOSTestCase.swift */; };
-		9A6124AA208686A600A1EAAB /* AmountCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A6124A9208686A600A1EAAB /* AmountCellViewModel.swift */; };
+		9A6124AA208686A600A1EAAB /* AmountInputCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A6124A9208686A600A1EAAB /* AmountInputCellModel.swift */; };
 		9A6124AC208687B500A1EAAB /* InputCellModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A6124AB208687B500A1EAAB /* InputCellModelType.swift */; };
 		9A6124AE20868C2E00A1EAAB /* NumberFormatter+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A6124AD20868C2E00A1EAAB /* NumberFormatter+Extensions.swift */; };
 		9A6124AF20868C2E00A1EAAB /* NumberFormatter+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A6124AD20868C2E00A1EAAB /* NumberFormatter+Extensions.swift */; };
@@ -293,7 +296,7 @@
 		9A65DEC32041B2B700E8177A /* ExternalTransactionsBusinessLogicTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ADDE1B9203F818200BCA1DE /* ExternalTransactionsBusinessLogicTests.swift */; };
 		9A65DEC42041B2BA00E8177A /* SpendingBusinessLogicTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A6B06F0203F6F51006FB40E /* SpendingBusinessLogicTests.swift */; };
 		9A65DEC82041B36F00E8177A /* BaseViewController+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A65DEC72041B36F00E8177A /* BaseViewController+Extensions.swift */; };
-		9A65DECA2041B3BD00E8177A /* BaseViewControllerKeyboardToolbarTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A65DEC92041B3BD00E8177A /* BaseViewControllerKeyboardToolbarTests.swift */; };
+		9A65DECA2041B3BD00E8177A /* KeyboardManageableTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A65DEC92041B3BD00E8177A /* KeyboardManageableTests.swift */; };
 		9A65DECC2041B72600E8177A /* TableViewCelltvOS.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9A65DECB2041B72600E8177A /* TableViewCelltvOS.xib */; };
 		9A65DECE2041B7CA00E8177A /* TableViewCelltvOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A65DECD2041B7CA00E8177A /* TableViewCelltvOSTests.swift */; };
 		9A65DF012041CE7300E8177A /* AppDelegateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A65DF002041CE7300E8177A /* AppDelegateTests.swift */; };
@@ -556,6 +559,10 @@
 		9AEAD365203F908900CB572C /* UIViewExtensionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AEAD364203F908900CB572C /* UIViewExtensionsTests.swift */; };
 		9AEEC8AB204267C200ED7627 /* MockLAContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AEEC8AA204267C200ED7627 /* MockLAContext.swift */; };
 		9AEEC8AD2042696800ED7627 /* MockAuthViewModelDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AEEC8AC2042696800ED7627 /* MockAuthViewModelDelegate.swift */; };
+		9AFB034F2097DCA200A431B9 /* Diffable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AFB034E2097DCA200A431B9 /* Diffable.swift */; };
+		9AFB03502097DCA200A431B9 /* Diffable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AFB034E2097DCA200A431B9 /* Diffable.swift */; };
+		9AFB03512097DCA200A431B9 /* Diffable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AFB034E2097DCA200A431B9 /* Diffable.swift */; };
+		9AFB03522097DCA200A431B9 /* Diffable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AFB034E2097DCA200A431B9 /* Diffable.swift */; };
 		9AFC00462071748F00826D33 /* LaunchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AFC00452071748F00826D33 /* LaunchViewController.swift */; };
 		9AFC0048207175BB00826D33 /* LaunchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AFC0047207175BB00826D33 /* LaunchViewModel.swift */; };
 		A38B12D4084F832EBE5A70F8 /* Pods_MyFinance_watchOS_MyFinance_watchOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB188015E1371D807A21CA50 /* Pods_MyFinance_watchOS_MyFinance_watchOS.framework */; };
@@ -865,9 +872,12 @@
 		9A2860DE20422B8A008FA915 /* AppStateiOSTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStateiOSTests.swift; sourceTree = "<group>"; };
 		9A2860E120422BEC008FA915 /* Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Bridging-Header.h"; sourceTree = "<group>"; };
 		9A28B827209728B60020A8DC /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
-		9A28B82A20972DDD0020A8DC /* TableViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewModel.swift; sourceTree = "<group>"; };
+		9A28B82A20972DDD0020A8DC /* TableViewModelType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewModelType.swift; sourceTree = "<group>"; };
 		9A28B82C20972EFF0020A8DC /* CellModelType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellModelType.swift; sourceTree = "<group>"; };
 		9A28B8322097377A0020A8DC /* TableViewType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewType.swift; sourceTree = "<group>"; };
+		9A28B83A2097870F0020A8DC /* TextInputCellModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextInputCellModel.swift; sourceTree = "<group>"; };
+		9A28B83E20978F5A0020A8DC /* SecureTextInputCellModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecureTextInputCellModel.swift; sourceTree = "<group>"; };
+		9A28B840209790DA0020A8DC /* EmailInputCellModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailInputCellModel.swift; sourceTree = "<group>"; };
 		9A2A88E3203F6CE9002ADA1B /* UserBusinessLogicTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserBusinessLogicTests.swift; sourceTree = "<group>"; };
 		9A2BDAA32044D599008EE977 /* MockNavigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockNavigator.swift; sourceTree = "<group>"; };
 		9A2BDAA52044D697008EE977 /* MockWindow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockWindow.swift; sourceTree = "<group>"; };
@@ -936,7 +946,7 @@
 		9A5AE5A52012CCFC00B25081 /* APIs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIs.swift; sourceTree = "<group>"; };
 		9A61249D20867EC500A1EAAB /* ServiceClientTestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceClientTestCase.swift; sourceTree = "<group>"; };
 		9A6124A62086815500A1EAAB /* ServiceClientiOSTestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceClientiOSTestCase.swift; sourceTree = "<group>"; };
-		9A6124A9208686A600A1EAAB /* AmountCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AmountCellViewModel.swift; sourceTree = "<group>"; };
+		9A6124A9208686A600A1EAAB /* AmountInputCellModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AmountInputCellModel.swift; sourceTree = "<group>"; };
 		9A6124AB208687B500A1EAAB /* InputCellModelType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputCellModelType.swift; sourceTree = "<group>"; };
 		9A6124AD20868C2E00A1EAAB /* NumberFormatter+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NumberFormatter+Extensions.swift"; sourceTree = "<group>"; };
 		9A6124B220869E8B00A1EAAB /* KeyboardToolbar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardToolbar.swift; sourceTree = "<group>"; };
@@ -945,7 +955,7 @@
 		9A65B79F202686A9004165F2 /* Summary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Summary.swift; sourceTree = "<group>"; };
 		9A65B7A4202690DB004165F2 /* EndOfMonthSummaryBusinessLogic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndOfMonthSummaryBusinessLogic.swift; sourceTree = "<group>"; };
 		9A65DEC72041B36F00E8177A /* BaseViewController+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BaseViewController+Extensions.swift"; sourceTree = "<group>"; };
-		9A65DEC92041B3BD00E8177A /* BaseViewControllerKeyboardToolbarTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewControllerKeyboardToolbarTests.swift; sourceTree = "<group>"; };
+		9A65DEC92041B3BD00E8177A /* KeyboardManageableTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardManageableTests.swift; sourceTree = "<group>"; };
 		9A65DECB2041B72600E8177A /* TableViewCelltvOS.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TableViewCelltvOS.xib; sourceTree = "<group>"; };
 		9A65DECD2041B7CA00E8177A /* TableViewCelltvOSTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCelltvOSTests.swift; sourceTree = "<group>"; };
 		9A65DEFE2041CE7300E8177A /* MyFinance-Tests-iOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "MyFinance-Tests-iOS.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -1107,6 +1117,7 @@
 		9AEAD364203F908900CB572C /* UIViewExtensionsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtensionsTests.swift; sourceTree = "<group>"; };
 		9AEEC8AA204267C200ED7627 /* MockLAContext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockLAContext.swift; sourceTree = "<group>"; };
 		9AEEC8AC2042696800ED7627 /* MockAuthViewModelDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockAuthViewModelDelegate.swift; sourceTree = "<group>"; };
+		9AFB034E2097DCA200A431B9 /* Diffable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Diffable.swift; sourceTree = "<group>"; };
 		9AFC00452071748F00826D33 /* LaunchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchViewController.swift; sourceTree = "<group>"; };
 		9AFC0047207175BB00826D33 /* LaunchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchViewModel.swift; sourceTree = "<group>"; };
 		9E16A7ED046C9A52EA56ECAA /* Pods-MyFinance-tvOS-MyFinance-tvOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyFinance-tvOS-MyFinance-tvOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-MyFinance-tvOS-MyFinance-tvOS/Pods-MyFinance-tvOS-MyFinance-tvOS.release.xcconfig"; sourceTree = "<group>"; };
@@ -1495,7 +1506,7 @@
 			isa = PBXGroup;
 			children = (
 				9A6124A82086867500A1EAAB /* CellViewModels */,
-				9A28B82A20972DDD0020A8DC /* TableViewModel.swift */,
+				9A28B82A20972DDD0020A8DC /* TableViewModelType.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -1739,6 +1750,7 @@
 				9A3A2B822039AEAD0071FBC5 /* AppState.swift */,
 				9AD96C9A202534D600D37F23 /* StringRepresentable.swift */,
 				9A6EF752202B980F006D3420 /* JSONCodable.swift */,
+				9AFB034E2097DCA200A431B9 /* Diffable.swift */,
 				9A5AE5992012C0D000B25081 /* NetworkService.swift */,
 				9ADE54C0201568D90039D774 /* DataService.swift */,
 				9A85356B207951F000704A78 /* KeychainDataService.swift */,
@@ -1763,7 +1775,10 @@
 			isa = PBXGroup;
 			children = (
 				9A6124AB208687B500A1EAAB /* InputCellModelType.swift */,
-				9A6124A9208686A600A1EAAB /* AmountCellViewModel.swift */,
+				9A28B83A2097870F0020A8DC /* TextInputCellModel.swift */,
+				9A28B83E20978F5A0020A8DC /* SecureTextInputCellModel.swift */,
+				9A28B840209790DA0020A8DC /* EmailInputCellModel.swift */,
+				9A6124A9208686A600A1EAAB /* AmountInputCellModel.swift */,
 			);
 			path = CellViewModels;
 			sourceTree = "<group>";
@@ -2340,7 +2355,7 @@
 			children = (
 				9A9093E92044C9F800C87A99 /* WindowTypeTests.swift */,
 				9A709E1C203F9454003A33FC /* BaseViewControllerTests.swift */,
-				9A65DEC92041B3BD00E8177A /* BaseViewControllerKeyboardToolbarTests.swift */,
+				9A65DEC92041B3BD00E8177A /* KeyboardManageableTests.swift */,
 				9AB4F12820424DEE008D0F5D /* InstantiatableTests.swift */,
 			);
 			path = Controller;
@@ -3791,6 +3806,7 @@
 				9A2022722038D9440012DD51 /* User.swift in Sources */,
 				9A2022792038D9590012DD51 /* TransactionsBusinessLogic.swift in Sources */,
 				9A20221B2038CD2A0012DD51 /* Error.swift in Sources */,
+				9AFB03502097DCA200A431B9 /* Diffable.swift in Sources */,
 				9A2022192038CD010012DD51 /* Formatters.swift in Sources */,
 				9A2022172038CC350012DD51 /* JSONCodable.swift in Sources */,
 				9A28B82E20972F2E0020A8DC /* CellModelType.swift in Sources */,
@@ -3873,6 +3889,7 @@
 				9A2022492038D6FD0012DD51 /* URLSession+Extensions.swift in Sources */,
 				9A2022622038D7770012DD51 /* TableViewCellType.swift in Sources */,
 				9A20225E2038D74C0012DD51 /* SpendingBusinessLogic.swift in Sources */,
+				9AFB03512097DCA200A431B9 /* Diffable.swift in Sources */,
 				9A2022502038D7250012DD51 /* HALResponse.swift in Sources */,
 				9A0C474F204B65DB0011D817 /* Credentials.swift in Sources */,
 				9A3A2B94203A26620071FBC5 /* Allowance.swift in Sources */,
@@ -3929,6 +3946,7 @@
 				9A4F55522023C95B00DBF68F /* NetworkService.swift in Sources */,
 				9A4F55652023CAA700DBF68F /* HALResponse.swift in Sources */,
 				9A4F55722023CACD00DBF68F /* Formatters.swift in Sources */,
+				9AFB034F2097DCA200A431B9 /* Diffable.swift in Sources */,
 				9A4F555A2023C97300DBF68F /* Date+Extensions.swift in Sources */,
 				9A2DB564202F54EC0008A4E5 /* UIView+Extensions.swift in Sources */,
 				9A4F55742023CAD300DBF68F /* BalanceBusinessLogic.swift in Sources */,
@@ -3976,6 +3994,7 @@
 				9A3A2B95203A26620071FBC5 /* Allowance.swift in Sources */,
 				9A9666822025EAF5000F8A42 /* TodayDisplayModelType.swift in Sources */,
 				9A6EF754202B980F006D3420 /* JSONCodable.swift in Sources */,
+				9AFB03522097DCA200A431B9 /* Diffable.swift in Sources */,
 				9A65B7A6202690DB004165F2 /* EndOfMonthSummaryBusinessLogic.swift in Sources */,
 				9A4F55642023CAA200DBF68F /* Error.swift in Sources */,
 				9A28B83120972F2E0020A8DC /* CellModelType.swift in Sources */,
@@ -4042,12 +4061,15 @@
 				9AAD3897202F684E00395119 /* SettingsDisplayModel.swift in Sources */,
 				9A5AE5762012A8AB00B25081 /* AppDelegate.swift in Sources */,
 				9A8561722027730F00A26F12 /* HomeCellDisplayModel.swift in Sources */,
-				9A28B82B20972DDD0020A8DC /* TableViewModel.swift in Sources */,
+				9A28B82B20972DDD0020A8DC /* TableViewModelType.swift in Sources */,
 				9A85617D20278FA000A26F12 /* MessagePresentable.swift in Sources */,
 				9AAA3D7F202925FC008881FD /* AuthDisplayModel.swift in Sources */,
 				9A3A2B8F2039DA6F0071FBC5 /* AppStateiOS.swift in Sources */,
+				9A28B841209790DA0020A8DC /* EmailInputCellModel.swift in Sources */,
 				9AD96CA0202539E500D37F23 /* AddTransactionViewController.swift in Sources */,
+				9A28B83B2097870F0020A8DC /* TextInputCellModel.swift in Sources */,
 				9A0C4757204B6B9B0011D817 /* LoginViewModel.swift in Sources */,
+				9A28B83F20978F5A0020A8DC /* SecureTextInputCellModel.swift in Sources */,
 				9A8561A82027A7FC00A26F12 /* HomeCurrentMonthTableViewCell.swift in Sources */,
 				9A3A2B902039DB9B0071FBC5 /* WatchService.swift in Sources */,
 				9AD96C9720252CBF00D37F23 /* HomeCellModel.swift in Sources */,
@@ -4055,7 +4077,7 @@
 				9A6F9FC3203CBCA00040BD50 /* HomeViewModelType.swift in Sources */,
 				9AAA3D7620290621008881FD /* AuthViewController.swift in Sources */,
 				9AFC0048207175BB00826D33 /* LaunchViewModel.swift in Sources */,
-				9A6124AA208686A600A1EAAB /* AmountCellViewModel.swift in Sources */,
+				9A6124AA208686A600A1EAAB /* AmountInputCellModel.swift in Sources */,
 				9A8561A42027A68F00A26F12 /* HomeCurrentMonthCellModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -4156,7 +4178,7 @@
 				9A6EF762202BABE0006D3420 /* SummaryTests.swift in Sources */,
 				9A3A2B802039A4050071FBC5 /* NetworkServiceTests.swift in Sources */,
 				9A37AB36203E2FCE00CFEE67 /* AppStateTests.swift in Sources */,
-				9A65DECA2041B3BD00E8177A /* BaseViewControllerKeyboardToolbarTests.swift in Sources */,
+				9A65DECA2041B3BD00E8177A /* KeyboardManageableTests.swift in Sources */,
 				9A74CD01203E084900CBA082 /* DataServiceTests.swift in Sources */,
 				9A85357520796AF600704A78 /* BaseNavigatorTypeTests.swift in Sources */,
 				9A37AB46203E3B5700CFEE67 /* MockNetworkService.swift in Sources */,
