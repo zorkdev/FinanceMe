@@ -21,13 +21,22 @@ class TextInputCellModel {
     let label: String
     let placeholder: String
 
+    var keyboardType: UIKeyboardType { return .default }
+    var textContentType: UITextContentType { return UITextContentType("") }
+    var autocapitalizationType: UITextAutocapitalizationType { return .words }
+    var isSecureTextEntry: Bool { return false }
+
     init(label: String, placeholder: String) {
         self.label = label
         self.placeholder = placeholder
     }
 
-    private func validate(value: String) -> Bool {
-        return value.components(separatedBy: .whitespaces).joined().isEmpty == false
+    func validate(value: String) -> Bool {
+        return Validators.validate(string: value)
+    }
+
+    func willChange(value: String, original: String) -> String {
+        return value
     }
 
 }
@@ -35,7 +44,6 @@ class TextInputCellModel {
 extension TextInputCellModel: InputCellModelForViewType {
 
     var returnKeyType: UIReturnKeyType { return viewModelDelegate?.returnKeyType(inputCell: self) ?? .done }
-    var autocapitalizationType: UITextAutocapitalizationType { return .words }
 
     var isEnabled: Bool {
         return viewModelDelegate?.isEnabled(inputCell: self) ?? true
@@ -48,10 +56,6 @@ extension TextInputCellModel: InputCellModelForViewType {
 
         let value = viewModelDelegate?.defaultValue(textCell: self) ?? ""
         cachedValue = value
-        return value
-    }
-
-    func willChange(value: String, original: String) -> String {
         return value
     }
 

@@ -156,6 +156,10 @@ public struct Formatters {
         return amountTemp
     }
 
+    public static func sanitise(email: String) -> String {
+        return email.components(separatedBy: .whitespaces).joined()
+    }
+
     public static func formatRelative(date: Date) -> String {
         switch date {
         case _ where date.isToday:

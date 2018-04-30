@@ -1,5 +1,9 @@
 public struct Validators {
 
+    public static func validate(string: String) -> Bool {
+        return string.components(separatedBy: .whitespaces).joined().isEmpty == false
+    }
+
     public static func validate(amount: String) -> Bool {
         let cs = Formatters.currencySymbol
         let ds = Formatters.decimalSeparator
@@ -14,6 +18,12 @@ public struct Validators {
             amount != 0 else { return false }
 
         return true
+    }
+
+    public static func validate(email: String) -> Bool {
+        let regex = "^[A-Z0-9a-z._%+-@]*$"
+
+        return email.range(of: regex, options: .regularExpression) != nil
     }
 
     public static func validate(fullEmail: String) -> Bool {

@@ -48,6 +48,7 @@ extension InputTableViewCell: InputCellModelViewDelegate {
         textField.text = viewModel.defaultValue
         textField.textColor = viewModel.textColor
         textField.isUserInteractionEnabled = viewModel.isEnabled
+        textField.isSecureTextEntry = viewModel.isSecureTextEntry
     }
 
     func becomeFirstResponder() {

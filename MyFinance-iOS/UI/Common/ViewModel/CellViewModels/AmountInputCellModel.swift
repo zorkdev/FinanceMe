@@ -18,8 +18,14 @@ class AmountInputCellModel {
 
     lazy var toolbar = KeyboardToolbar(doneAction: { self.didEndEditing() })
 
+    let label: String
+
     private let formatter = Formatters.currencyNoSign
     private var cachedValue: String?
+
+    init(label: String) {
+        self.label = label
+    }
 
     private func validate(value: String) -> Bool {
         return Validators.validate(amount: value)
@@ -31,7 +37,6 @@ extension AmountInputCellModel: InputCellModelForViewType {
 
     var keyboardType: UIKeyboardType { return .decimalPad }
     var returnKeyType: UIReturnKeyType { return viewModelDelegate?.returnKeyType(inputCell: self) ?? .done }
-    var label: String { return "Amount" }
 
     var inputAccessoryView: UIView? { return toolbar.toolbar }
 
