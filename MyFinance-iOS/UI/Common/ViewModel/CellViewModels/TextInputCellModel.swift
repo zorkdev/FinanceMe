@@ -1,22 +1,30 @@
-protocol NarrativeInputCellModelViewModelDelegate: InputCellModelViewModelDelegate {
+protocol TextInputCellModelViewModelDelegate: InputCellModelViewModelDelegate {
 
-    func defaultValue(narrativeCell: NarrativeInputCellModelForViewModelType) -> String?
-    func didChange(narrativeCell: NarrativeInputCellModelForViewModelType, value: String)
+    func defaultValue(textCell: TextInputCellModelForViewModelType) -> String?
+    func didChange(textCell: TextInputCellModelForViewModelType, value: String)
 
 }
 
-protocol NarrativeInputCellModelForViewModelType: InputCellModelForViewModelType {
+protocol TextInputCellModelForViewModelType: InputCellModelForViewModelType {
 
     var currentValue: String? { get }
 
 }
 
-class NarrativeInputCellModel {
+class TextInputCellModel {
 
     weak var viewDelegate: InputCellModelViewDelegate?
-    weak var viewModelDelegate: NarrativeInputCellModelViewModelDelegate?
+    weak var viewModelDelegate: TextInputCellModelViewModelDelegate?
 
     private var cachedValue: String?
+
+    let label: String
+    let placeholder: String
+
+    init(label: String, placeholder: String) {
+        self.label = label
+        self.placeholder = placeholder
+    }
 
     private func validate(value: String) -> Bool {
         return value.components(separatedBy: .whitespaces).joined().isEmpty == false
@@ -24,12 +32,10 @@ class NarrativeInputCellModel {
 
 }
 
-extension NarrativeInputCellModel: InputCellModelForViewType {
+extension TextInputCellModel: InputCellModelForViewType {
 
     var returnKeyType: UIReturnKeyType { return viewModelDelegate?.returnKeyType(inputCell: self) ?? .done }
     var autocapitalizationType: UITextAutocapitalizationType { return .words }
-    var label: String { return "Narrative" }
-    var placeholder: String { return "Groceries" }
 
     var isEnabled: Bool {
         return viewModelDelegate?.isEnabled(inputCell: self) ?? true
@@ -40,7 +46,7 @@ extension NarrativeInputCellModel: InputCellModelForViewType {
             return cachedValue
         }
 
-        let value = viewModelDelegate?.defaultValue(narrativeCell: self) ?? ""
+        let value = viewModelDelegate?.defaultValue(textCell: self) ?? ""
         cachedValue = value
         return value
     }
@@ -51,7 +57,7 @@ extension NarrativeInputCellModel: InputCellModelForViewType {
 
     func didChange(value: String) {
         cachedValue = value
-        viewModelDelegate?.didChange(narrativeCell: self, value: currentValue ?? "")
+        viewModelDelegate?.didChange(textCell: self, value: currentValue ?? "")
     }
 
     func didEndEditing() {
@@ -60,7 +66,7 @@ extension NarrativeInputCellModel: InputCellModelForViewType {
 
 }
 
-extension NarrativeInputCellModel: NarrativeInputCellModelForViewModelType {
+extension TextInputCellModel: TextInputCellModelForViewModelType {
 
     var currentValue: String? {
         return viewDelegate?.currentValue
