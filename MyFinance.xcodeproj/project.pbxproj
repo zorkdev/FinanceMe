@@ -17,6 +17,17 @@
 		71ED7AAA75351043B77A4356 /* Pods_MyFinance_iOS_MyFinanceKit_IntegrationTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E4C7644B9FDF0C85E1E925C6 /* Pods_MyFinance_iOS_MyFinanceKit_IntegrationTests.framework */; };
 		908C1B90C8998980F68996BF /* Pods_MyFinance_macOS_MyFinanceKit_macOS_Unsigned_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC91FB440B587B652B203531 /* Pods_MyFinance_macOS_MyFinanceKit_macOS_Unsigned_Tests.framework */; };
 		9A014490204264F800443585 /* AuthViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A01448F204264F800443585 /* AuthViewModelTests.swift */; };
+		9A09C8D12099011B00DBB626 /* PickerInputCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A09C8D02099011B00DBB626 /* PickerInputCellModel.swift */; };
+		9A09C8D3209908DE00DBB626 /* Describable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A09C8D2209908DE00DBB626 /* Describable.swift */; };
+		9A09C8D4209908DE00DBB626 /* Describable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A09C8D2209908DE00DBB626 /* Describable.swift */; };
+		9A09C8D5209908DE00DBB626 /* Describable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A09C8D2209908DE00DBB626 /* Describable.swift */; };
+		9A09C8D6209908DE00DBB626 /* Describable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A09C8D2209908DE00DBB626 /* Describable.swift */; };
+		9A09C8D820990B0600DBB626 /* Payday.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A09C8D720990B0600DBB626 /* Payday.swift */; };
+		9A09C8D920990B0600DBB626 /* Payday.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A09C8D720990B0600DBB626 /* Payday.swift */; };
+		9A09C8DA20990B0600DBB626 /* Payday.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A09C8D720990B0600DBB626 /* Payday.swift */; };
+		9A09C8DB20990B0600DBB626 /* Payday.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A09C8D720990B0600DBB626 /* Payday.swift */; };
+		9A09C8DD209911F100DBB626 /* PaydayInputCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A09C8DC209911F100DBB626 /* PaydayInputCellModel.swift */; };
+		9A09C8DF209914F700DBB626 /* CategoryInputCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A09C8DE209914F700DBB626 /* CategoryInputCellModel.swift */; };
 		9A0C474D204B65DB0011D817 /* Credentials.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A0C474C204B65DB0011D817 /* Credentials.swift */; };
 		9A0C474E204B65DB0011D817 /* Credentials.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A0C474C204B65DB0011D817 /* Credentials.swift */; };
 		9A0C474F204B65DB0011D817 /* Credentials.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A0C474C204B65DB0011D817 /* Credentials.swift */; };
@@ -838,6 +849,11 @@
 		9588789BFD40EE73F6386C37 /* Pods_MyFinance_iOS_MyFinanceKit_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyFinance_iOS_MyFinanceKit_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		972F8AEF77998B94292E09CA /* Pods-MyFinance-tvOS-MyFinanceKit-tvOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyFinance-tvOS-MyFinanceKit-tvOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-MyFinance-tvOS-MyFinanceKit-tvOS/Pods-MyFinance-tvOS-MyFinanceKit-tvOS.release.xcconfig"; sourceTree = "<group>"; };
 		9A01448F204264F800443585 /* AuthViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewModelTests.swift; sourceTree = "<group>"; };
+		9A09C8D02099011B00DBB626 /* PickerInputCellModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickerInputCellModel.swift; sourceTree = "<group>"; };
+		9A09C8D2209908DE00DBB626 /* Describable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Describable.swift; sourceTree = "<group>"; };
+		9A09C8D720990B0600DBB626 /* Payday.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Payday.swift; sourceTree = "<group>"; };
+		9A09C8DC209911F100DBB626 /* PaydayInputCellModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaydayInputCellModel.swift; sourceTree = "<group>"; };
+		9A09C8DE209914F700DBB626 /* CategoryInputCellModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryInputCellModel.swift; sourceTree = "<group>"; };
 		9A0C474C204B65DB0011D817 /* Credentials.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Credentials.swift; sourceTree = "<group>"; };
 		9A0C4751204B69D90011D817 /* IntegrationTestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntegrationTestCase.swift; sourceTree = "<group>"; };
 		9A0C4754204B6B910011D817 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -1674,6 +1690,7 @@
 				9AD3EE1D20138F6C0083F8FE /* Transaction.swift */,
 				9A65B79F202686A9004165F2 /* Summary.swift */,
 				9A3A2B91203A26620071FBC5 /* Allowance.swift */,
+				9A09C8D720990B0600DBB626 /* Payday.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -1753,6 +1770,7 @@
 				9AD96C9A202534D600D37F23 /* StringRepresentable.swift */,
 				9A6EF752202B980F006D3420 /* JSONCodable.swift */,
 				9AFB034E2097DCA200A431B9 /* Diffable.swift */,
+				9A09C8D2209908DE00DBB626 /* Describable.swift */,
 				9A5AE5992012C0D000B25081 /* NetworkService.swift */,
 				9ADE54C0201568D90039D774 /* DataService.swift */,
 				9A85356B207951F000704A78 /* KeychainDataService.swift */,
@@ -1782,6 +1800,9 @@
 				9A28B840209790DA0020A8DC /* EmailInputCellModel.swift */,
 				9A6124A9208686A600A1EAAB /* AmountInputCellModel.swift */,
 				9AFB03582097F38C00A431B9 /* DateInputCellModel.swift */,
+				9A09C8D02099011B00DBB626 /* PickerInputCellModel.swift */,
+				9A09C8DC209911F100DBB626 /* PaydayInputCellModel.swift */,
+				9A09C8DE209914F700DBB626 /* CategoryInputCellModel.swift */,
 			);
 			path = CellViewModels;
 			sourceTree = "<group>";
@@ -3824,8 +3845,10 @@
 				9A2022752038D94B0012DD51 /* Summary.swift in Sources */,
 				9A2022712038D9420012DD51 /* Session.swift in Sources */,
 				9A2022782038D9570012DD51 /* BalanceBusinessLogic.swift in Sources */,
+				9A09C8D920990B0600DBB626 /* Payday.swift in Sources */,
 				9A2022772038D9540012DD51 /* Validators.swift in Sources */,
 				9A20226E2038D92C0012DD51 /* NetworkService.swift in Sources */,
+				9A09C8D4209908DE00DBB626 /* Describable.swift in Sources */,
 				9A20227B2038D95E0012DD51 /* ExternalTransactionsBusinessLogic.swift in Sources */,
 				9A20227F2038D9720012DD51 /* TodayDisplayModelType.swift in Sources */,
 				9A2022702038D93F0012DD51 /* HALResponse.swift in Sources */,
@@ -3874,6 +3897,7 @@
 				9A9093E52044C36100C87A99 /* WindowType.swift in Sources */,
 				9A2022632038D8200012DD51 /* TodayDisplayModelType.swift in Sources */,
 				9A2022672038D83A0012DD51 /* UIView+Extensions.swift in Sources */,
+				9A09C8D5209908DE00DBB626 /* Describable.swift in Sources */,
 				9A2022642038D8240012DD51 /* TodayPresentable.swift in Sources */,
 				9A20224B2038D7070012DD51 /* NetworkService.swift in Sources */,
 				9A20224D2038D70D0012DD51 /* DataService.swift in Sources */,
@@ -3884,6 +3908,7 @@
 				9A2022602038D7600012DD51 /* ColorPalette.swift in Sources */,
 				9AB4F12B2042500B008D0F5D /* Instantiatable.swift in Sources */,
 				9A2022512038D7270012DD51 /* Session.swift in Sources */,
+				9A09C8DA20990B0600DBB626 /* Payday.swift in Sources */,
 				9A2022592038D7400012DD51 /* BalanceBusinessLogic.swift in Sources */,
 				9A2022582038D73D0012DD51 /* Validators.swift in Sources */,
 				9A2022532038D72C0012DD51 /* Balance.swift in Sources */,
@@ -3946,6 +3971,7 @@
 				9A1C9F752044C0A0002A21F4 /* WindowType.swift in Sources */,
 				9A0C474D204B65DB0011D817 /* Credentials.swift in Sources */,
 				9A4F55762023CAD900DBF68F /* TransactionsBusinessLogic.swift in Sources */,
+				9A09C8D820990B0600DBB626 /* Payday.swift in Sources */,
 				9A4F55522023C95B00DBF68F /* NetworkService.swift in Sources */,
 				9A4F55652023CAA700DBF68F /* HALResponse.swift in Sources */,
 				9A4F55722023CACD00DBF68F /* Formatters.swift in Sources */,
@@ -3970,6 +3996,7 @@
 				9A4F55612023C98200DBF68F /* Data+Extensions.swift in Sources */,
 				9A65B7A0202686A9004165F2 /* Summary.swift in Sources */,
 				9A96668720260E7B000F8A42 /* ColorPalette.swift in Sources */,
+				9A09C8D3209908DE00DBB626 /* Describable.swift in Sources */,
 				9A4F55782023CADE00DBF68F /* UserBusinessLogic.swift in Sources */,
 				9A28B8332097377A0020A8DC /* TableViewType.swift in Sources */,
 				9AAD38A1202FA9BC00395119 /* SpendingBusinessLogic.swift in Sources */,
@@ -4012,8 +4039,10 @@
 				9A4F55732023CAD300DBF68F /* BalanceBusinessLogic.swift in Sources */,
 				9AAD38A2202FA9BC00395119 /* SpendingBusinessLogic.swift in Sources */,
 				9AD96C9C202534D600D37F23 /* StringRepresentable.swift in Sources */,
+				9A09C8DB20990B0600DBB626 /* Payday.swift in Sources */,
 				9AD96C95202529E100D37F23 /* TodayPresentable.swift in Sources */,
 				9A94F901202D176200AEF61F /* URLSession+Extensions.swift in Sources */,
+				9A09C8D6209908DE00DBB626 /* Describable.swift in Sources */,
 				9A96668820260E7B000F8A42 /* ColorPalette.swift in Sources */,
 				9A4F55572023C96700DBF68F /* DataService.swift in Sources */,
 				9A4F556D2023CABF00DBF68F /* Transaction.swift in Sources */,
@@ -4044,6 +4073,7 @@
 				9A0C4755204B6B910011D817 /* LoginViewController.swift in Sources */,
 				9AD96C992025341D00D37F23 /* HomeTableViewCell.swift in Sources */,
 				9AAD3899202F68C000395119 /* SettingsViewModel.swift in Sources */,
+				9A09C8D12099011B00DBB626 /* PickerInputCellModel.swift in Sources */,
 				9A5AE5782012A8AC00B25081 /* HomeViewController.swift in Sources */,
 				9AAD3895202F66E500395119 /* SettingsViewController.swift in Sources */,
 				9AE4D4452044891800299897 /* Navigator.swift in Sources */,
@@ -4077,11 +4107,13 @@
 				9A3A2B902039DB9B0071FBC5 /* WatchService.swift in Sources */,
 				9AD96C9720252CBF00D37F23 /* HomeCellModel.swift in Sources */,
 				9A856176202774F300A26F12 /* AddTransactionDisplayModel.swift in Sources */,
+				9A09C8DF209914F700DBB626 /* CategoryInputCellModel.swift in Sources */,
 				9A6F9FC3203CBCA00040BD50 /* HomeViewModelType.swift in Sources */,
 				9AAA3D7620290621008881FD /* AuthViewController.swift in Sources */,
 				9AFC0048207175BB00826D33 /* LaunchViewModel.swift in Sources */,
 				9A6124AA208686A600A1EAAB /* AmountInputCellModel.swift in Sources */,
 				9AFB03592097F38C00A431B9 /* DateInputCellModel.swift in Sources */,
+				9A09C8DD209911F100DBB626 /* PaydayInputCellModel.swift in Sources */,
 				9A8561A42027A68F00A26F12 /* HomeCurrentMonthCellModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

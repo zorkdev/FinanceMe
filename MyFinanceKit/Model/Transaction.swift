@@ -68,6 +68,12 @@ public enum TransactionSource: String, JSONCodable, Equatable {
 
 }
 
+extension TransactionSource: Describable {
+
+    public var description: String { return displayString }
+
+}
+
 public struct Transaction: Storeable, Equatable {
 
     public let id: String?

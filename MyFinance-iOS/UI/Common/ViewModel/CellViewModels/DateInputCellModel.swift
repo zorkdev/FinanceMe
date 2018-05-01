@@ -92,9 +92,7 @@ extension DateInputCellModel: DateInputCellModelForViewModelType {
         return cachedValue ?? Date()
     }
 
-    var isValid: Bool {
-        return true
-    }
+    var isValid: Bool { return true }
 
     func becomeFirstResponder() {
         viewDelegate?.becomeFirstResponder()
