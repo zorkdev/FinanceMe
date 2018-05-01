@@ -23,7 +23,6 @@ extension InputTableViewCell: TableViewCellForViewModelType {
         textField.delegate = self
 
         selectionStyle = viewModel.displayModel.selectionStyle
-        textField.tintColor = viewModel.displayModel.tintColor
         textField.font = viewModel.displayModel.font
 
         update()
@@ -48,8 +47,13 @@ extension InputTableViewCell: InputCellModelViewDelegate {
                                                              attributes: viewModel.displayModel.placeholderAttributes)
         textField.text = viewModel.defaultValue
         textField.textColor = viewModel.textColor
+        textField.tintColor = viewModel.tintColor
         textField.isUserInteractionEnabled = viewModel.isEnabled
         textField.isSecureTextEntry = viewModel.isSecureTextEntry
+    }
+
+    func update(value: String) {
+        textField.text = value
     }
 
     func becomeFirstResponder() {
@@ -63,6 +67,11 @@ extension InputTableViewCell: InputCellModelViewDelegate {
 }
 
 extension InputTableViewCell: UITextFieldDelegate {
+
+    func textFieldShouldBeginEditing(_ textField: UITextField) -> Bool {
+        viewModel?.willBeginEditing()
+        return true
+    }
 
     func textField(_ textField: UITextField,
                    shouldChangeCharactersIn range: NSRange,

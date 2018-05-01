@@ -563,6 +563,7 @@
 		9AFB03502097DCA200A431B9 /* Diffable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AFB034E2097DCA200A431B9 /* Diffable.swift */; };
 		9AFB03512097DCA200A431B9 /* Diffable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AFB034E2097DCA200A431B9 /* Diffable.swift */; };
 		9AFB03522097DCA200A431B9 /* Diffable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AFB034E2097DCA200A431B9 /* Diffable.swift */; };
+		9AFB03592097F38C00A431B9 /* DateInputCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AFB03582097F38C00A431B9 /* DateInputCellModel.swift */; };
 		9AFC00462071748F00826D33 /* LaunchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AFC00452071748F00826D33 /* LaunchViewController.swift */; };
 		9AFC0048207175BB00826D33 /* LaunchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AFC0047207175BB00826D33 /* LaunchViewModel.swift */; };
 		A38B12D4084F832EBE5A70F8 /* Pods_MyFinance_watchOS_MyFinance_watchOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB188015E1371D807A21CA50 /* Pods_MyFinance_watchOS_MyFinance_watchOS.framework */; };
@@ -1118,6 +1119,7 @@
 		9AEEC8AA204267C200ED7627 /* MockLAContext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockLAContext.swift; sourceTree = "<group>"; };
 		9AEEC8AC2042696800ED7627 /* MockAuthViewModelDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockAuthViewModelDelegate.swift; sourceTree = "<group>"; };
 		9AFB034E2097DCA200A431B9 /* Diffable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Diffable.swift; sourceTree = "<group>"; };
+		9AFB03582097F38C00A431B9 /* DateInputCellModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateInputCellModel.swift; sourceTree = "<group>"; };
 		9AFC00452071748F00826D33 /* LaunchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchViewController.swift; sourceTree = "<group>"; };
 		9AFC0047207175BB00826D33 /* LaunchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchViewModel.swift; sourceTree = "<group>"; };
 		9E16A7ED046C9A52EA56ECAA /* Pods-MyFinance-tvOS-MyFinance-tvOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyFinance-tvOS-MyFinance-tvOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-MyFinance-tvOS-MyFinance-tvOS/Pods-MyFinance-tvOS-MyFinance-tvOS.release.xcconfig"; sourceTree = "<group>"; };
@@ -1779,6 +1781,7 @@
 				9A28B83E20978F5A0020A8DC /* SecureTextInputCellModel.swift */,
 				9A28B840209790DA0020A8DC /* EmailInputCellModel.swift */,
 				9A6124A9208686A600A1EAAB /* AmountInputCellModel.swift */,
+				9AFB03582097F38C00A431B9 /* DateInputCellModel.swift */,
 			);
 			path = CellViewModels;
 			sourceTree = "<group>";
@@ -4078,6 +4081,7 @@
 				9AAA3D7620290621008881FD /* AuthViewController.swift in Sources */,
 				9AFC0048207175BB00826D33 /* LaunchViewModel.swift in Sources */,
 				9A6124AA208686A600A1EAAB /* AmountInputCellModel.swift in Sources */,
+				9AFB03592097F38C00A431B9 /* DateInputCellModel.swift in Sources */,
 				9A8561A42027A68F00A26F12 /* HomeCurrentMonthCellModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

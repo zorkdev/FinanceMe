@@ -21,6 +21,7 @@ protocol InputCellModelViewDelegate: class {
     var currentValue: String { get }
 
     func update()
+    func update(value: String)
     func becomeFirstResponder()
     func resignFirstResponder()
 
@@ -43,8 +44,10 @@ protocol InputCellModelForViewType: class {
     var inputView: UIView? { get }
     var inputAccessoryView: UIView? { get }
     var textColor: Color { get }
+    var tintColor: Color { get }
     var isEnabled: Bool { get }
 
+    func willBeginEditing()
     func willChange(value: String, original: String) -> String
     func didChange(value: String)
     func didEndEditing()
@@ -61,10 +64,15 @@ extension InputCellModelForViewType {
     var autocapitalizationType: UITextAutocapitalizationType { return .none }
     var inputView: UIView? { return nil }
     var inputAccessoryView: UIView? { return nil }
+    var tintColor: Color { return displayModel.tintColor }
 
     var textColor: Color {
         return isEnabled ? displayModel.enabledTextColor : displayModel.disabledTextColor
     }
+
+    func willBeginEditing() {}
+    func willChange(value: String, original: String) -> String { return value }
+    func didChange(value: String) {}
 
 }
 
