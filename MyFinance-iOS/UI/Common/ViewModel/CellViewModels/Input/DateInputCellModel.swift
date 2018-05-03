@@ -1,12 +1,12 @@
 protocol DateInputCellModelViewModelDelegate: InputCellModelViewModelDelegate {
 
     func defaultValue(dateCell: DateInputCellModelForViewModelType) -> Date
-    func didChange(dateCell: DateInputCellModelForViewModelType, value: Date)
 
 }
 
 protocol DateInputCellModelForViewModelType: InputCellModelForViewModelType {
 
+    var viewModelDelegate: DateInputCellModelViewModelDelegate? { get set }
     var currentValue: Date { get }
 
 }
@@ -48,7 +48,7 @@ class DateInputCellModel {
     @objc func pickerDidChange() {
         cachedValue = picker.date
         viewDelegate?.update(value: formatter.string(from: picker.date))
-        viewModelDelegate?.didChange(dateCell: self, value: picker.date)
+        viewModelDelegate?.didChangeValue()
     }
 
 }

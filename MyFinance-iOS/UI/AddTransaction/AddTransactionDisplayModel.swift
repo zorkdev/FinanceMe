@@ -4,14 +4,9 @@ struct AddTransactionDisplayModel {
     static let buttonDisabledAlpha: CGFloat = 0.5
     static let buttonAnimationDuration = 0.2
     static let successMessage = "Your transaction has been saved!"
-
-    let amount: String
-    let narrative: String
-    let source: Int
-    let created: Date
-
-    static func dateString(from date: Date) -> String {
-        return Formatters.dateTime.string(from: date)
-    }
+    static let amountTitle = "Amount"
+    static let descriptionTitle = "Description"
+    static let descriptionPlaceholder = "Groceries"
+    static let dateTitle = "Date"
 
 }

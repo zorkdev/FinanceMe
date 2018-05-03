@@ -1,12 +1,12 @@
 protocol CategoryInputCellModelViewModelDelegate: InputCellModelViewModelDelegate {
 
     func defaultValue(categoryCell: CategoryInputCellModelForViewModelType) -> TransactionSource
-    func didChange(categoryCell: CategoryInputCellModelForViewModelType, value: TransactionSource)
 
 }
 
 protocol CategoryInputCellModelForViewModelType: InputCellModelForViewModelType {
 
+    var categoryViewModelDelegate: CategoryInputCellModelViewModelDelegate? { get set }
     var currentCategoryValue: TransactionSource { get }
 
 }
@@ -36,8 +36,8 @@ extension CategoryInputCellModel: PickerInputCellModelViewModelDelegate {
         return categoryViewModelDelegate?.defaultValue(categoryCell: self) ?? TransactionSource.externalValues[0]
     }
 
-    func didChange(pickerCell: PickerInputCellModelForViewModelType, value: Describable) {
-        categoryViewModelDelegate?.didChange(categoryCell: self, value: value as! TransactionSource)
+    func didChangeValue() {
+        categoryViewModelDelegate?.didChangeValue()
     }
 
     func isEnabled(inputCell: InputCellModelForViewModelType) -> Bool {

@@ -1,12 +1,12 @@
 protocol AmountInputCellModelViewModelDelegate: InputCellModelViewModelDelegate {
 
     func defaultValue(amountCell: AmountInputCellModelForViewModelType) -> Double?
-    func didChange(amountCell: AmountInputCellModelForViewModelType, value: Double)
 
 }
 
 protocol AmountInputCellModelForViewModelType: InputCellModelForViewModelType {
 
+    var viewModelDelegate: AmountInputCellModelViewModelDelegate? { get set }
     var currentValue: Double? { get }
 
 }
@@ -38,7 +38,9 @@ extension AmountInputCellModel: InputCellModelForViewType {
     var keyboardType: UIKeyboardType { return .decimalPad }
     var returnKeyType: UIReturnKeyType { return viewModelDelegate?.returnKeyType(inputCell: self) ?? .done }
 
-    var inputAccessoryView: UIView? { return toolbar.toolbar }
+    var inputAccessoryView: UIView? {
+        return UIDevice.current.userInterfaceIdiom == .phone ? toolbar.toolbar : nil
+    }
 
     var placeholder: String {
         return formatter.string(from: 0)
@@ -66,7 +68,7 @@ extension AmountInputCellModel: InputCellModelForViewType {
 
     func didChange(value: String) {
         cachedValue = value
-        viewModelDelegate?.didChange(amountCell: self, value: currentValue ?? 0)
+        viewModelDelegate?.didChangeValue()
     }
 
     func didEndEditing() {

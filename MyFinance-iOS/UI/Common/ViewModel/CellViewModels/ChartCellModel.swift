@@ -72,10 +72,7 @@ extension ChartCellModel: ChartCellModelForViewModelType {
     }
 
     static var rowHeight: CGFloat {
-        switch UIDevice.current.userInterfaceIdiom {
-        case .pad: return 350
-        default: return 180
-        }
+        return UIDevice.current.userInterfaceIdiom == .phone ? 180 : 350
     }
 
     func update(endOfMonthSummaries: [EndOfMonthSummary]) {

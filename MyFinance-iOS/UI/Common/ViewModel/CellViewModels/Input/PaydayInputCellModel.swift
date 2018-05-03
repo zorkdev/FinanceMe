@@ -1,12 +1,12 @@
 protocol PaydayInputCellModelViewModelDelegate: InputCellModelViewModelDelegate {
 
     func defaultValue(paydayCell: PaydayInputCellModelForViewModelType) -> Payday
-    func didChange(paydayCell: PaydayInputCellModelForViewModelType, value: Payday)
 
 }
 
 protocol PaydayInputCellModelForViewModelType: InputCellModelForViewModelType {
 
+    var paydayViewModelDelegate: PaydayInputCellModelViewModelDelegate? { get set }
     var currentPaydayValue: Payday { get }
 
 }
@@ -36,8 +36,8 @@ extension PaydayInputCellModel: PickerInputCellModelViewModelDelegate {
         return paydayViewModelDelegate?.defaultValue(paydayCell: self) ?? Paydays.values[0]
     }
 
-    func didChange(pickerCell: PickerInputCellModelForViewModelType, value: Describable) {
-        paydayViewModelDelegate?.didChange(paydayCell: self, value: value as! Payday)
+    func didChangeValue() {
+        paydayViewModelDelegate?.didChangeValue()
     }
 
     func isEnabled(inputCell: InputCellModelForViewModelType) -> Bool {

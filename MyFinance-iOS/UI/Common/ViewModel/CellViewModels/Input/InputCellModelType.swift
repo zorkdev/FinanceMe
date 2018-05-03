@@ -80,6 +80,7 @@ protocol InputCellModelViewModelDelegate: class {
 
     func isEnabled(inputCell: InputCellModelForViewModelType) -> Bool
     func returnKeyType(inputCell: InputCellModelForViewModelType) -> UIReturnKeyType
+    func didChangeValue()
 
 }
 

@@ -38,10 +38,10 @@ class HomeViewController: BaseViewController {
         regularsRefreshControl.addTarget(self, action: #selector(updateData(_:)), for: .valueChanged)
         balanceRefreshControl.addTarget(self, action: #selector(updateData(_:)), for: .valueChanged)
 
-        balanceTableView.register(HomeCurrentMonthTableViewCell.nib,
-                                  forCellReuseIdentifier: HomeCurrentMonthTableViewCell.instanceName)
-        balanceTableView.register(HomeChartTableViewCell.nib,
-                                  forCellReuseIdentifier: HomeChartTableViewCell.instanceName)
+        balanceTableView.register(CurrentMonthTableViewCell.nib,
+                                  forCellReuseIdentifier: CurrentMonthTableViewCell.instanceName)
+        balanceTableView.register(ChartTableViewCell.nib,
+                                  forCellReuseIdentifier: ChartTableViewCell.instanceName)
     }
 
     private func tab(for tableView: UITableView) -> HomeViewModel.Tab? {
@@ -205,16 +205,16 @@ extension HomeViewController: UITableViewDataSource, UITableViewDelegate {
             return cell
 
         case let homeCurrentMonthCellModel as HomeCurrentMonthCellModel:
-            guard let cell = tableView.dequeueReusableCell(withIdentifier: HomeCurrentMonthTableViewCell.instanceName,
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: CurrentMonthTableViewCell.instanceName,
                                                            for: indexPath)
-                as? HomeCurrentMonthTableViewCell else { return UITableViewCell() }
+                as? CurrentMonthTableViewCell else { return UITableViewCell() }
             cell.set(homeCurrentMonthCellModel: homeCurrentMonthCellModel)
             return cell
 
         case let homeChartCellModel as HomeChartCellModel:
-            guard let cell = tableView.dequeueReusableCell(withIdentifier: HomeChartTableViewCell.instanceName,
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: ChartTableViewCell.instanceName,
                                                            for: indexPath)
-                as? HomeChartTableViewCell else { return UITableViewCell() }
+                as? ChartTableViewCell else { return UITableViewCell() }
             cell.set(homeChartCellModel: homeChartCellModel)
             return cell
 

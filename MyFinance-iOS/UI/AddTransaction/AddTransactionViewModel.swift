@@ -5,25 +5,21 @@ protocol AddTransactionViewModelDataDelegate: class {
 
 }
 
-protocol AddTransactionViewModelDelegate: ViewModelDelegate & MessagePresentable {
+protocol AddTransactionViewModelDelegate: TableViewModelDelegate, MessagePresentable {
 
-    func update(displayModel: AddTransactionDisplayModel)
+    func updateSaveButton(enabled: Bool)
 
 }
 
 protocol AddTransactionViewModelType: ViewModelType {
 
-    func shouldEnableSaveButton(displayModel: AddTransactionDisplayModel) -> Bool
-    func saveButtonTapped(with displayModel: AddTransactionDisplayModel)
-    func formatted(amount: String, original: String) -> String
-    func numberOfComponentsInPickerView() -> Int
-    func pickerViewNumberOfRowsIn(component: Int) -> Int
-    func pickerViewTitle(for row: Int, for component: Int) -> String?
+    func viewWillAppear()
+    func saveButtonTapped()
     func dismissTapped()
 
 }
 
-class AddTransactionViewModel: ServiceClient {
+class AddTransactionViewModel: ServiceClient, TableViewModelType {
 
     enum State {
         case add, edit
@@ -36,8 +32,21 @@ class AddTransactionViewModel: ServiceClient {
     private let state: State
     private let transaction: Transaction?
 
+    private let amountModel: AmountInputCellModelForViewModelType
+    private let descriptionModel: TextInputCellModelForViewModelType
+    private let categoryModel: CategoryInputCellModelForViewModelType
+    private let dateModel: DateInputCellModelForViewModelType
+
     private weak var delegate: AddTransactionViewModelDelegate?
     private weak var dataDelegate: AddTransactionViewModelDataDelegate?
+
+    var sections = [TableViewSection]() {
+        didSet {
+            updateSections(new: sections, old: oldValue)
+        }
+    }
+
+    var tableViewController: TableViewController?
 
     init(serviceProvider: ServiceProvider,
          dataDelegate: AddTransactionViewModelDataDelegate?,
@@ -45,10 +54,34 @@ class AddTransactionViewModel: ServiceClient {
          transaction: Transaction? = nil) {
         self.serviceProvider = serviceProvider
         self.dataDelegate = dataDelegate
-        self.externalTransactionsBusinessLogic =
-            ExternalTransactionsBusinessLogic(serviceProvider: serviceProvider)
+        self.externalTransactionsBusinessLogic = ExternalTransactionsBusinessLogic(serviceProvider: serviceProvider)
         self.state = state
         self.transaction = transaction
+
+        amountModel = AmountInputCellModel(label: AddTransactionDisplayModel.amountTitle)
+        descriptionModel = TextInputCellModel(label: AddTransactionDisplayModel.descriptionTitle,
+                                              placeholder: AddTransactionDisplayModel.descriptionPlaceholder)
+        categoryModel = CategoryInputCellModel()
+        dateModel = DateInputCellModel(label: AddTransactionDisplayModel.dateTitle, mode: .dateAndTime)
+
+        amountModel.viewModelDelegate = self
+        descriptionModel.viewModelDelegate = self
+        categoryModel.categoryViewModelDelegate = self
+        dateModel.viewModelDelegate = self
+    }
+
+    private func setupTableView() {
+        sections = [TableViewSection(cellModels: [amountModel.wrap,
+                                                  descriptionModel.wrap,
+                                                  categoryModel.wrap,
+                                                  dateModel.wrap])]
+
+        guard let tableView = delegate?.tableView else { return }
+
+        tableViewController = TableViewController(tableView: tableView,
+                                                  cells: [InputTableViewCell.self],
+                                                  viewModel: self)
+        tableViewController?.updateCells()
     }
 
 }
@@ -58,9 +91,13 @@ class AddTransactionViewModel: ServiceClient {
 extension AddTransactionViewModel: AddTransactionViewModelType {
 
     func viewDidLoad() {
-        if state == .edit, let transaction = transaction {
-            let displayModel = createDisplayModel(transaction: transaction)
-            delegate?.update(displayModel: displayModel)
+        self.setupTableView()
+    }
+
+    func viewWillAppear() {
+        DispatchQueue.main.async {
+            self.delegate?.updateSaveButton(enabled: self.isValid)
+            (self.sections.first?.cellModels.first?.wrapped as? InputCellModelForViewModelType)?.becomeFirstResponder()
         }
     }
 
@@ -69,25 +106,20 @@ extension AddTransactionViewModel: AddTransactionViewModelType {
         self.delegate = delegate
     }
 
-    func shouldEnableSaveButton(displayModel: AddTransactionDisplayModel) -> Bool {
-        guard let amount = Formatters.createAmount(from: displayModel.amount),
-            amount != 0,
-            displayModel.narrative.components(separatedBy: .whitespaces).joined() != "" else { return false }
+    func saveButtonTapped() {
+        guard let amountAbs = amountModel.currentValue,
+            let narrative = descriptionModel.currentValue else { return }
 
-        return  true
-    }
-
-    func saveButtonTapped(with displayModel: AddTransactionDisplayModel) {
-        guard let amountAbs = Formatters.createAmount(from: displayModel.amount) else { return }
-        let source = TransactionSource.externalValues[displayModel.source]
+        let source = categoryModel.currentCategoryValue
         let amount = source.direction == .inbound ? amountAbs : -amountAbs
+        let created = dateModel.currentValue
 
         switch state {
         case .add:
             let transaction = Transaction(amount: amount,
                                           direction: source.direction,
-                                          created: displayModel.created,
-                                          narrative: displayModel.narrative,
+                                          created: created,
+                                          narrative: narrative,
                                           source: source)
             save(transaction: transaction)
 
@@ -95,31 +127,13 @@ extension AddTransactionViewModel: AddTransactionViewModelType {
             guard var transaction = transaction else { return }
             transaction.amount = amount
             transaction.direction = source.direction
-            transaction.created = displayModel.created
-            transaction.narrative = displayModel.narrative
+            transaction.created = created
+            transaction.narrative = narrative
             transaction.source = source
 
             update(transaction: transaction)
         }
 
-    }
-
-    func formatted(amount: String, original: String) -> String {
-        let sanitisedAmount = Formatters.sanitise(amount: amount)
-
-        return validate(amount: sanitisedAmount) ? sanitisedAmount : original
-    }
-
-    func numberOfComponentsInPickerView() -> Int {
-        return 1
-    }
-
-    func pickerViewNumberOfRowsIn(component: Int) -> Int {
-        return TransactionSource.externalValues.count
-    }
-
-    func pickerViewTitle(for row: Int, for component: Int) -> String? {
-        return TransactionSource.externalValues[row].displayString
     }
 
     func dismissTapped() {
@@ -128,23 +142,44 @@ extension AddTransactionViewModel: AddTransactionViewModelType {
 
 }
 
+extension AddTransactionViewModel: InputCellModelViewModelDelegate {
+
+    func isEnabled(inputCell: InputCellModelForViewModelType) -> Bool { return true }
+
+    func returnKeyType(inputCell: InputCellModelForViewModelType) -> UIReturnKeyType { return .done }
+
+    func didChangeValue() {
+        delegate?.updateSaveButton(enabled: isValid)
+    }
+
+}
+
+extension AddTransactionViewModel: AmountInputCellModelViewModelDelegate {}
+extension AddTransactionViewModel: TextInputCellModelViewModelDelegate {}
+extension AddTransactionViewModel: CategoryInputCellModelViewModelDelegate {}
+extension AddTransactionViewModel: DateInputCellModelViewModelDelegate {
+
+    func defaultValue(amountCell: AmountInputCellModelForViewModelType) -> Double? {
+        return transaction?.amount
+    }
+
+    func defaultValue(textCell: TextInputCellModelForViewModelType) -> String? {
+        return transaction?.narrative
+    }
+
+    func defaultValue(categoryCell: CategoryInputCellModelForViewModelType) -> TransactionSource {
+        return transaction?.source ?? TransactionSource.externalValues[0]
+    }
+
+    func defaultValue(dateCell: DateInputCellModelForViewModelType) -> Date {
+        return transaction?.created ?? Date()
+    }
+
+}
+
 // MARK: - Private methods
 
 extension AddTransactionViewModel {
-
-    private func validate(amount: String) -> Bool {
-        return Validators.validate(amount: amount)
-    }
-
-    private func createDisplayModel(transaction: Transaction) -> AddTransactionDisplayModel {
-        let amount = Formatters.currencyNoSign.string(from: NSNumber(value: transaction.amount))!
-        let source = TransactionSource.externalValues.index(of: transaction.source)!
-
-        return AddTransactionDisplayModel(amount: amount,
-                                          narrative: transaction.narrative,
-                                          source: source,
-                                          created: transaction.created)
-    }
 
     private func save(transaction: Transaction) {
         delegate?.showSpinner()

@@ -1,12 +1,12 @@
 protocol PickerInputCellModelViewModelDelegate: InputCellModelViewModelDelegate {
 
     func defaultValue(pickerCell: PickerInputCellModelForViewModelType) -> Describable
-    func didChange(pickerCell: PickerInputCellModelForViewModelType, value: Describable)
 
 }
 
 protocol PickerInputCellModelForViewModelType: InputCellModelForViewModelType {
 
+    var viewModelDelegate: PickerInputCellModelViewModelDelegate? { get set }
     var currentValue: Describable { get }
 
 }
@@ -98,7 +98,7 @@ extension PickerInputCellModel: UIPickerViewDelegate {
         let item = rows[row]
         cachedValue = item
         viewDelegate?.update(value: item.description)
-        viewModelDelegate?.didChange(pickerCell: self, value: item)
+        viewModelDelegate?.didChangeValue()
     }
 
 }

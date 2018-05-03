@@ -1,12 +1,12 @@
 protocol TextInputCellModelViewModelDelegate: InputCellModelViewModelDelegate {
 
     func defaultValue(textCell: TextInputCellModelForViewModelType) -> String?
-    func didChange(textCell: TextInputCellModelForViewModelType, value: String)
 
 }
 
 protocol TextInputCellModelForViewModelType: InputCellModelForViewModelType {
 
+    var viewModelDelegate: TextInputCellModelViewModelDelegate? { get set }
     var currentValue: String? { get }
 
 }
@@ -61,7 +61,7 @@ extension TextInputCellModel: InputCellModelForViewType {
 
     func didChange(value: String) {
         cachedValue = value
-        viewModelDelegate?.didChange(textCell: self, value: currentValue ?? "")
+        viewModelDelegate?.didChangeValue()
     }
 
     func didEndEditing() {

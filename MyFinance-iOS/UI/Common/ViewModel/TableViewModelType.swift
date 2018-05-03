@@ -18,13 +18,25 @@ struct TableViewSection: Hashable {
 
 }
 
-protocol TableViewModelDelegate: class {
+protocol TableViewContainer: TableViewModelDelegate {
+
+    var uiTableView: UITableView! { get }
+
+}
+
+extension TableViewContainer {
+
+    var tableView: TableViewType { return uiTableView as TableViewType }
+
+}
+
+protocol TableViewModelDelegate: ViewModelDelegate {
 
     var tableView: TableViewType { get }
 
 }
 
-protocol TableViewModelType: ViewModelType {
+protocol TableViewModelType: class {
 
     var sections: [TableViewSection] { get }
     var tableViewController: TableViewController? { get set }
