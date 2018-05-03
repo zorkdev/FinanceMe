@@ -27,7 +27,6 @@ protocol TableViewModelDelegate: class {
 protocol TableViewModelType: ViewModelType {
 
     var sections: [TableViewSection] { get }
-    var rowHeight: CGFloat { get }
     var tableViewController: TableViewController? { get set }
     var isValid: Bool { get }
 
@@ -36,8 +35,6 @@ protocol TableViewModelType: ViewModelType {
 }
 
 extension TableViewModelType {
-
-    var rowHeight: CGFloat { return 60 }
 
     var isValid: Bool {
         return sections

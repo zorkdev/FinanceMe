@@ -28,7 +28,6 @@ class TableViewController: NSObject {
 
         tableView.delegate = self
         tableView.dataSource = self
-        tableView.rowHeight = viewModel.rowHeight
 
         for cell in cells {
             tableView.register(cell.nib, forCellReuseIdentifier: cell.reuseIdentifier)
@@ -65,16 +64,23 @@ extension TableViewController: UITableViewDataSource {
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cellModel = viewModel.sections[indexPath.section].cellModels[indexPath.row]
+        let cellModel = viewModel.sections[indexPath.section].cellModels[indexPath.row].wrapped
         let tableViewCell = tableView
-            .dequeueReusableCell(withIdentifier: type(of: cellModel.wrapped).reuseIdentifier,
+            .dequeueReusableCell(withIdentifier: type(of: cellModel).reuseIdentifier,
                                  for: indexPath)
         guard let cell = tableViewCell as? TableViewCellForViewModelType else { return UITableViewCell ()}
-        cell.update(viewModel: cellModel.wrapped)
+        cell.update(viewModel: cellModel)
 
         return tableViewCell
     }
 
 }
 
-extension TableViewController: UITableViewDelegate {}
+extension TableViewController: UITableViewDelegate {
+
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        let cellModel = viewModel.sections[indexPath.section].cellModels[indexPath.row].wrapped
+        return type(of: cellModel).rowHeight
+    }
+
+}

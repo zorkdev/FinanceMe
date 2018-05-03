@@ -7,7 +7,6 @@ struct InputCellDisplayModel {
         NSAttributedStringKey.font: UIFont.systemFont(ofSize: 18)
     ]
 
-    let selectionStyle = UITableViewCellSelectionStyle.none
     let enabledTextColor = ColorPalette.secondary
     let disabledTextColor = ColorPalette.lightText
     let labelColor = ColorPalette.lightText
@@ -20,7 +19,6 @@ protocol InputCellModelViewDelegate: class {
 
     var currentValue: String { get }
 
-    func update()
     func update(value: String)
     func becomeFirstResponder()
     func resignFirstResponder()

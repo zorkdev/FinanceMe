@@ -16,9 +16,20 @@ public struct ColorPalette {
                                         green: 164/255.0,
                                         blue: 219/255.0,
                                         alpha: 1)
+
     public static let lightText = Color(red: 242/255.0,
                                         green: 242/255.0,
                                         blue: 242/255.0,
                                         alpha: 1)
+    public static let darkText = UIColor.darkGray
+
+    public static let green = UIColor(red: 103/255.0,
+                                  green: 184/255.0,
+                                  blue: 82/255.0,
+                                  alpha: 1)
+    public static let red = UIColor(red: 209/255.0,
+                                  green: 69/255.0,
+                                  blue: 58/255.0,
+                                  alpha: 1)
 
 }

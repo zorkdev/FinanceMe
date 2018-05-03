@@ -137,6 +137,12 @@
 		9A2BDAA42044D599008EE977 /* MockNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A2BDAA32044D599008EE977 /* MockNavigator.swift */; };
 		9A2BDAA62044D697008EE977 /* MockWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A2BDAA52044D697008EE977 /* MockWindow.swift */; };
 		9A2DB564202F54EC0008A4E5 /* UIView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A2DB563202F54EC0008A4E5 /* UIView+Extensions.swift */; };
+		9A323E3E209B8EFB00CB40B1 /* BasicCellModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A323E3D209B8EFB00CB40B1 /* BasicCellModelType.swift */; };
+		9A323E40209B909900CB40B1 /* BasicTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A323E3F209B909900CB40B1 /* BasicTableViewCell.swift */; };
+		9A323E42209B999D00CB40B1 /* TransactionCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A323E41209B999D00CB40B1 /* TransactionCellModel.swift */; };
+		9A323E45209B9D6100CB40B1 /* AmountDisplayModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A323E44209B9D6100CB40B1 /* AmountDisplayModelType.swift */; };
+		9A323E48209BA4CF00CB40B1 /* TransactionDisplayModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A323E47209BA4CF00CB40B1 /* TransactionDisplayModelType.swift */; };
+		9A323E4A209BA8FE00CB40B1 /* BasicTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9A323E49209BA8FE00CB40B1 /* BasicTableViewCell.xib */; };
 		9A37AB11203E144900CFEE67 /* MockDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A37AB10203E144900CFEE67 /* MockDataService.swift */; };
 		9A37AB12203E144900CFEE67 /* MockDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A37AB10203E144900CFEE67 /* MockDataService.swift */; };
 		9A37AB2C203E22D300CFEE67 /* ConfigDefaultServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A37AB2B203E22D300CFEE67 /* ConfigDefaultServiceTests.swift */; };
@@ -899,6 +905,12 @@
 		9A2BDAA32044D599008EE977 /* MockNavigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockNavigator.swift; sourceTree = "<group>"; };
 		9A2BDAA52044D697008EE977 /* MockWindow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockWindow.swift; sourceTree = "<group>"; };
 		9A2DB563202F54EC0008A4E5 /* UIView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extensions.swift"; sourceTree = "<group>"; };
+		9A323E3D209B8EFB00CB40B1 /* BasicCellModelType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicCellModelType.swift; sourceTree = "<group>"; };
+		9A323E3F209B909900CB40B1 /* BasicTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicTableViewCell.swift; sourceTree = "<group>"; };
+		9A323E41209B999D00CB40B1 /* TransactionCellModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionCellModel.swift; sourceTree = "<group>"; };
+		9A323E44209B9D6100CB40B1 /* AmountDisplayModelType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AmountDisplayModelType.swift; sourceTree = "<group>"; };
+		9A323E47209BA4CF00CB40B1 /* TransactionDisplayModelType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionDisplayModelType.swift; sourceTree = "<group>"; };
+		9A323E49209BA8FE00CB40B1 /* BasicTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BasicTableViewCell.xib; sourceTree = "<group>"; };
 		9A37AB10203E144900CFEE67 /* MockDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockDataService.swift; sourceTree = "<group>"; };
 		9A37AB2B203E22D300CFEE67 /* ConfigDefaultServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigDefaultServiceTests.swift; sourceTree = "<group>"; };
 		9A37AB2F203E293F00CFEE67 /* APIsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIsTests.swift; sourceTree = "<group>"; };
@@ -1529,6 +1541,33 @@
 			path = ViewModel;
 			sourceTree = "<group>";
 		};
+		9A323E3C209B8ED800CB40B1 /* Input */ = {
+			isa = PBXGroup;
+			children = (
+				9A6124AB208687B500A1EAAB /* InputCellModelType.swift */,
+				9A28B83A2097870F0020A8DC /* TextInputCellModel.swift */,
+				9A28B83E20978F5A0020A8DC /* SecureTextInputCellModel.swift */,
+				9A28B840209790DA0020A8DC /* EmailInputCellModel.swift */,
+				9A6124A9208686A600A1EAAB /* AmountInputCellModel.swift */,
+				9AFB03582097F38C00A431B9 /* DateInputCellModel.swift */,
+				9A09C8D02099011B00DBB626 /* PickerInputCellModel.swift */,
+				9A09C8DC209911F100DBB626 /* PaydayInputCellModel.swift */,
+				9A09C8DE209914F700DBB626 /* CategoryInputCellModel.swift */,
+			);
+			path = Input;
+			sourceTree = "<group>";
+		};
+		9A323E43209B9D4E00CB40B1 /* Basic */ = {
+			isa = PBXGroup;
+			children = (
+				9A323E3D209B8EFB00CB40B1 /* BasicCellModelType.swift */,
+				9A323E41209B999D00CB40B1 /* TransactionCellModel.swift */,
+				9A323E47209BA4CF00CB40B1 /* TransactionDisplayModelType.swift */,
+				9A323E44209B9D6100CB40B1 /* AmountDisplayModelType.swift */,
+			);
+			path = Basic;
+			sourceTree = "<group>";
+		};
 		9A37AB2E203E292A00CFEE67 /* Business */ = {
 			isa = PBXGroup;
 			children = (
@@ -1794,15 +1833,8 @@
 		9A6124A82086867500A1EAAB /* CellViewModels */ = {
 			isa = PBXGroup;
 			children = (
-				9A6124AB208687B500A1EAAB /* InputCellModelType.swift */,
-				9A28B83A2097870F0020A8DC /* TextInputCellModel.swift */,
-				9A28B83E20978F5A0020A8DC /* SecureTextInputCellModel.swift */,
-				9A28B840209790DA0020A8DC /* EmailInputCellModel.swift */,
-				9A6124A9208686A600A1EAAB /* AmountInputCellModel.swift */,
-				9AFB03582097F38C00A431B9 /* DateInputCellModel.swift */,
-				9A09C8D02099011B00DBB626 /* PickerInputCellModel.swift */,
-				9A09C8DC209911F100DBB626 /* PaydayInputCellModel.swift */,
-				9A09C8DE209914F700DBB626 /* CategoryInputCellModel.swift */,
+				9A323E3C209B8ED800CB40B1 /* Input */,
+				9A323E43209B9D4E00CB40B1 /* Basic */,
 			);
 			path = CellViewModels;
 			sourceTree = "<group>";
@@ -1832,6 +1864,8 @@
 			children = (
 				9AA4049D2092701800D55604 /* InputTableViewCell.xib */,
 				9A6124B92086AC7000A1EAAB /* InputTableViewCell.swift */,
+				9A323E49209BA8FE00CB40B1 /* BasicTableViewCell.xib */,
+				9A323E3F209B909900CB40B1 /* BasicTableViewCell.swift */,
 			);
 			path = TableViewCells;
 			sourceTree = "<group>";
@@ -3108,6 +3142,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9A8561AF2027BCDA00A26F12 /* HomeChartTableViewCell.xib in Resources */,
+				9A323E4A209BA8FE00CB40B1 /* BasicTableViewCell.xib in Resources */,
 				9A5AE5802012A8AC00B25081 /* LaunchScreen.storyboard in Resources */,
 				9A8561AA2027A8A100A26F12 /* HomeCurrentMonthTableViewCell.xib in Resources */,
 				9A5AE57D2012A8AC00B25081 /* Assets.xcassets in Resources */,
@@ -4085,6 +4120,7 @@
 				9A8561B12027BD7600A26F12 /* HomeChartTableViewCell.swift in Sources */,
 				9A28B828209728B60020A8DC /* TableViewController.swift in Sources */,
 				9A6124AC208687B500A1EAAB /* InputCellModelType.swift in Sources */,
+				9A323E40209B909900CB40B1 /* BasicTableViewCell.swift in Sources */,
 				9A5AE5A22012C99A00B25081 /* HomeViewModel.swift in Sources */,
 				9A65DF092041D18500E8177A /* main.swift in Sources */,
 				9A6124B320869E8B00A1EAAB /* KeyboardToolbar.swift in Sources */,
@@ -4096,10 +4132,14 @@
 				9A8561722027730F00A26F12 /* HomeCellDisplayModel.swift in Sources */,
 				9A28B82B20972DDD0020A8DC /* TableViewModelType.swift in Sources */,
 				9A85617D20278FA000A26F12 /* MessagePresentable.swift in Sources */,
+				9A323E42209B999D00CB40B1 /* TransactionCellModel.swift in Sources */,
 				9AAA3D7F202925FC008881FD /* AuthDisplayModel.swift in Sources */,
 				9A3A2B8F2039DA6F0071FBC5 /* AppStateiOS.swift in Sources */,
+				9A323E48209BA4CF00CB40B1 /* TransactionDisplayModelType.swift in Sources */,
 				9A28B841209790DA0020A8DC /* EmailInputCellModel.swift in Sources */,
+				9A323E3E209B8EFB00CB40B1 /* BasicCellModelType.swift in Sources */,
 				9AD96CA0202539E500D37F23 /* AddTransactionViewController.swift in Sources */,
+				9A323E45209B9D6100CB40B1 /* AmountDisplayModelType.swift in Sources */,
 				9A28B83B2097870F0020A8DC /* TextInputCellModel.swift in Sources */,
 				9A0C4757204B6B9B0011D817 /* LoginViewModel.swift in Sources */,
 				9A28B83F20978F5A0020A8DC /* SecureTextInputCellModel.swift in Sources */,
