@@ -145,6 +145,7 @@
 		9A323E4A209BA8FE00CB40B1 /* BasicTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9A323E49209BA8FE00CB40B1 /* BasicTableViewCell.xib */; };
 		9A323E4C209BAFDD00CB40B1 /* CurrentMonthCellModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A323E4B209BAFDD00CB40B1 /* CurrentMonthCellModelType.swift */; };
 		9A323E4E209BB73100CB40B1 /* CurrentMonthDisplayModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A323E4D209BB73100CB40B1 /* CurrentMonthDisplayModel.swift */; };
+		9A323E50209BBF4E00CB40B1 /* ChartCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A323E4F209BBF4E00CB40B1 /* ChartCellModel.swift */; };
 		9A37AB11203E144900CFEE67 /* MockDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A37AB10203E144900CFEE67 /* MockDataService.swift */; };
 		9A37AB12203E144900CFEE67 /* MockDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A37AB10203E144900CFEE67 /* MockDataService.swift */; };
 		9A37AB2C203E22D300CFEE67 /* ConfigDefaultServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A37AB2B203E22D300CFEE67 /* ConfigDefaultServiceTests.swift */; };
@@ -915,6 +916,7 @@
 		9A323E49209BA8FE00CB40B1 /* BasicTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BasicTableViewCell.xib; sourceTree = "<group>"; };
 		9A323E4B209BAFDD00CB40B1 /* CurrentMonthCellModelType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentMonthCellModelType.swift; sourceTree = "<group>"; };
 		9A323E4D209BB73100CB40B1 /* CurrentMonthDisplayModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentMonthDisplayModel.swift; sourceTree = "<group>"; };
+		9A323E4F209BBF4E00CB40B1 /* ChartCellModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartCellModel.swift; sourceTree = "<group>"; };
 		9A37AB10203E144900CFEE67 /* MockDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockDataService.swift; sourceTree = "<group>"; };
 		9A37AB2B203E22D300CFEE67 /* ConfigDefaultServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigDefaultServiceTests.swift; sourceTree = "<group>"; };
 		9A37AB2F203E293F00CFEE67 /* APIsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIsTests.swift; sourceTree = "<group>"; };
@@ -1841,6 +1843,7 @@
 				9A323E43209B9D4E00CB40B1 /* Basic */,
 				9A323E4B209BAFDD00CB40B1 /* CurrentMonthCellModelType.swift */,
 				9A323E4D209BB73100CB40B1 /* CurrentMonthDisplayModel.swift */,
+				9A323E4F209BBF4E00CB40B1 /* ChartCellModel.swift */,
 			);
 			path = CellViewModels;
 			sourceTree = "<group>";
@@ -4143,6 +4146,7 @@
 				9AAA3D7F202925FC008881FD /* AuthDisplayModel.swift in Sources */,
 				9A3A2B8F2039DA6F0071FBC5 /* AppStateiOS.swift in Sources */,
 				9A323E4E209BB73100CB40B1 /* CurrentMonthDisplayModel.swift in Sources */,
+				9A323E50209BBF4E00CB40B1 /* ChartCellModel.swift in Sources */,
 				9A323E48209BA4CF00CB40B1 /* TransactionDisplayModelType.swift in Sources */,
 				9A28B841209790DA0020A8DC /* EmailInputCellModel.swift in Sources */,
 				9A323E3E209B8EFB00CB40B1 /* BasicCellModelType.swift in Sources */,
