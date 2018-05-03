@@ -2,25 +2,20 @@ struct HomeCurrentMonthCellModel: HomeCellModelType {
 
     static let rowHeight: CGFloat = 90
 
-    let displayModel = HomeCurrentMonthCellDisplayModel()
-
     let allowance: String
     let forecast: String
     let spending: String
 
 }
 
-extension HomeCurrentMonthTableViewCell {
+extension CurrentMonthTableViewCell {
 
     func set(homeCurrentMonthCellModel: HomeCurrentMonthCellModel) {
-        allowanceLabel.attributedText = homeCurrentMonthCellModel
-            .displayModel
+        allowanceLabel.attributedText = HomeCurrentMonthCellDisplayModel
             .amountAttributedString(from: homeCurrentMonthCellModel.allowance)
-        forecastLabel.attributedText = homeCurrentMonthCellModel
-            .displayModel
+        forecastLabel.attributedText = HomeCurrentMonthCellDisplayModel
             .amountAttributedString(from: homeCurrentMonthCellModel.forecast)
-        spendingLabel.attributedText = homeCurrentMonthCellModel
-            .displayModel
+        spendingLabel.attributedText = HomeCurrentMonthCellDisplayModel
             .amountAttributedString(from: homeCurrentMonthCellModel.spending)
     }
 

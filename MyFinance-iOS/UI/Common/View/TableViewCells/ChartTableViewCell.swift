@@ -1,6 +1,6 @@
 import Charts
 
-class HomeChartTableViewCell: UITableViewCell {
+class ChartTableViewCell: UITableViewCell {
 
     @IBOutlet weak var chart: LineChartView!
 

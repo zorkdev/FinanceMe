@@ -107,8 +107,8 @@ extension HomeViewModel {
 
     public func createAttributedString(from amount: Double) -> NSAttributedString {
         let currencyString = Formatters.currency
-            .string(from: NSNumber(value: amount)) ?? displayModel.defaultAmount
-        return displayModel.amountAttributedString(from: currencyString)
+            .string(from: NSNumber(value: amount)) ?? HomeDisplayModel.defaultAmount
+        return HomeDisplayModel.amountAttributedString(from: currencyString)
     }
 
     @discardableResult public func getBalance() -> Promise<Void> {
@@ -420,7 +420,7 @@ extension HomeViewModel {
 
             let detail = Formatters.currencyPlusMinusSign
                 .string(from: NSNumber(value: endOfMonthSummary.balance))
-                ?? displayModel.defaultAmount
+                ?? HomeDisplayModel.defaultAmount
             let detailColor = endOfMonthSummary.balance > 0 ?
                 HomeCellDisplayModel.positiveColor : HomeCellDisplayModel.negativeBalanceColor
             let cellModel = HomeCellModel(title: title,
@@ -443,15 +443,15 @@ extension HomeViewModel {
         if let currentMonthSummary = currentMonthSummary {
             let allowance = Formatters.currency
                 .string(from: NSNumber(value: currentMonthSummary.allowance))
-                ?? displayModel.defaultAmount
+                ?? HomeDisplayModel.defaultAmount
 
             let forecast = Formatters.currency
                 .string(from: NSNumber(value: currentMonthSummary.forecast))
-                ?? displayModel.defaultAmount
+                ?? HomeDisplayModel.defaultAmount
 
             let spending = Formatters.currency
                 .string(from: NSNumber(value: currentMonthSummary.spending))
-                ?? displayModel.defaultAmount
+                ?? HomeDisplayModel.defaultAmount
 
             let homeCurrentMonthCellModel = HomeCurrentMonthCellModel(allowance: allowance,
                                                                       forecast: forecast,
@@ -482,7 +482,7 @@ extension HomeViewModel {
             let title = transaction.narrative
             let detail = Formatters.currencyPlusSign
                 .string(from: NSNumber(value: transaction.amount))
-                ?? displayModel.defaultAmount
+                ?? HomeDisplayModel.defaultAmount
             let detailColor = transaction.amount > 0 ?
                 HomeCellDisplayModel.positiveColor : HomeCellDisplayModel.negativeColor
             let cellModel = HomeCellModel(title: title,
@@ -505,7 +505,7 @@ extension HomeViewModel {
             let title = transaction.narrative
             let detail = Formatters.currencyPlusSign
                 .string(from: NSNumber(value: transaction.amount))
-                ?? displayModel.defaultAmount
+                ?? HomeDisplayModel.defaultAmount
             let detailColor = transaction.amount > 0 ?
                 HomeCellDisplayModel.positiveColor : HomeCellDisplayModel.negativeColor
             let cellModel = HomeCellModel(title: title,
@@ -534,7 +534,7 @@ extension HomeViewModel {
             .reduce(0, +)
         let detail = Formatters.currency
             .string(from: NSNumber(value: monthlyAllowance))
-            ?? displayModel.defaultAmount
+            ?? HomeDisplayModel.defaultAmount
         let detailColor = monthlyAllowance > 0 ?
             HomeCellDisplayModel.negativeColor : HomeCellDisplayModel.negativeBalanceColor
         let cellModel = HomeCellModel(title: HomeDisplayModel.monthlyAllowanceTitle,

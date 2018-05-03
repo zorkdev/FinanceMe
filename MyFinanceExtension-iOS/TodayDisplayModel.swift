@@ -1,8 +1,8 @@
 struct TodayDisplayModel: TodayDisplayModelType {
 
-    let positiveColor = UIColor.darkText
-    let negativeColor = UIColor.red
-    let largeFontSize: CGFloat = 40
-    let smallFontSize: CGFloat = 16
+    static let positiveColor = UIColor.darkText
+    static let negativeColor = UIColor.red
+    static let largeFontSize: CGFloat = 40
+    static let smallFontSize: CGFloat = 16
 
 }

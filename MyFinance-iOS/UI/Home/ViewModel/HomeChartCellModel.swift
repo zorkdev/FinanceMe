@@ -48,7 +48,7 @@ struct HomeChartCellModel: HomeCellModelType {
 
 }
 
-extension HomeChartTableViewCell {
+extension ChartTableViewCell {
 
     func set(homeChartCellModel: HomeChartCellModel) {
         chart.data = homeChartCellModel.data

@@ -1,20 +1,20 @@
 public protocol TodayDisplayModelType {
 
-    var defaultAmount: String { get }
-    var positiveColor: Color { get }
-    var negativeColor: Color { get }
-    var largeFontSize: CGFloat { get }
-    var smallFontSize: CGFloat { get }
+    static var defaultAmount: String { get }
+    static var positiveColor: Color { get }
+    static var negativeColor: Color { get }
+    static var largeFontSize: CGFloat { get }
+    static var smallFontSize: CGFloat { get }
 
-    func amountAttributedString(from string: String) -> NSAttributedString
+    static func amountAttributedString(from string: String) -> NSAttributedString
 
 }
 
 public extension TodayDisplayModelType {
 
-    var defaultAmount: String { return "\(Formatters.currencySymbol)0.00" }
+    static var defaultAmount: String { return "\(Formatters.currencySymbol)0.00" }
 
-    func amountAttributedString(from string: String) -> NSAttributedString {
+    static func amountAttributedString(from string: String) -> NSAttributedString {
         let isNegative = string.first == "-"
         let color = isNegative ? negativeColor : positiveColor
 

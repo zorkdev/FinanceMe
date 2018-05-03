@@ -2,10 +2,10 @@ import MyFinanceKit
 
 struct HomeDisplayModel: TodayDisplayModelType {
 
-    let positiveColor = UIColor.white
-    let negativeColor = UIColor.red
-    let largeFontSize: CGFloat = 36
-    let smallFontSize: CGFloat = 16
+    static let positiveColor = UIColor.white
+    static let negativeColor = UIColor.red
+    static let largeFontSize: CGFloat = 36
+    static let smallFontSize: CGFloat = 16
 
 }
 

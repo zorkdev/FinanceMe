@@ -1,14 +1,8 @@
 struct HomeCurrentMonthCellDisplayModel: TodayDisplayModelType {
 
-    let positiveColor = Color(red: 103/255.0,
-                              green: 184/255.0,
-                              blue: 82/255.0,
-                              alpha: 1)
-    let negativeColor = Color(red: 209/255.0,
-                              green: 69/255.0,
-                              blue: 58/255.0,
-                              alpha: 1)
-    let largeFontSize: CGFloat = 30
-    let smallFontSize: CGFloat = 16
+    static let positiveColor = ColorPalette.green
+    static let negativeColor = ColorPalette.red
+    static let largeFontSize: CGFloat = 30
+    static let smallFontSize: CGFloat = 16
 
 }

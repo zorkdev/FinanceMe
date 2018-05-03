@@ -43,8 +43,8 @@ public extension TodayPresentable {
 
     public func createAttributedString(from amount: Double) -> NSAttributedString {
         let currencyString = Formatters.currency
-            .string(from: NSNumber(value: amount)) ?? displayModel.defaultAmount
-        return displayModel.amountAttributedString(from: currencyString)
+            .string(from: NSNumber(value: amount)) ?? type(of: displayModel).defaultAmount
+        return type(of: displayModel).amountAttributedString(from: currencyString)
     }
 
     @discardableResult public func getBalance() -> Promise<Void> {
