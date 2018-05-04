@@ -24,6 +24,8 @@ extension TransactionCellModel: BasicCellModelForViewType {}
 
 extension TransactionCellModel: TransactionCellModelForViewModelType {
 
+    var canEdit: Bool { return transaction.canEdit }
+
     func update(transaction: TransactionPresentable) {
         self.transaction = transaction
         viewDelegate?.update()

@@ -16,13 +16,6 @@ struct HomeDisplayModel: TodayDisplayModelType {
                                               bottom: 58,
                                               right: 0)
 
-    static let regularAllowanceSectionTitle = ""
-    static let regularInboundSectionTitle = "Incoming"
-    static let regularOutboundSectionTitle = "Outgoing"
-    static let monthlyAllowanceTitle = "Monthly Allowance"
-    static let currentMonthTitle = "This month"
-    static let chartTitle = "Balances"
-
     struct DeleteAlert {
 
         static let title = "Are you sure? 😰"

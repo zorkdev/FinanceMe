@@ -24,4 +24,9 @@ public struct EndOfMonthSummaryList: JSONCodable, Equatable {
     public let currentMonthSummary: CurrentMonthSummary
     public let endOfMonthSummaries: [EndOfMonthSummary]
 
+    public init(currentMonthSummary: CurrentMonthSummary, endOfMonthSummaries: [EndOfMonthSummary]) {
+        self.currentMonthSummary = currentMonthSummary
+        self.endOfMonthSummaries = endOfMonthSummaries
+    }
+
 }

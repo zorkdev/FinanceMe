@@ -34,6 +34,10 @@ class TableViewController: NSObject {
         }
     }
 
+    private func model(at indexPath: IndexPath) -> CellModelType {
+        return viewModel.sections[indexPath.section].cellModels[indexPath.row].wrapped
+    }
+
 }
 
 extension TableViewController: TableViewControllerType {
@@ -64,7 +68,7 @@ extension TableViewController: UITableViewDataSource {
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cellModel = viewModel.sections[indexPath.section].cellModels[indexPath.row].wrapped
+        let cellModel = model(at: indexPath)
         let tableViewCell = tableView
             .dequeueReusableCell(withIdentifier: type(of: cellModel).reuseIdentifier,
                                  for: indexPath)
@@ -74,13 +78,31 @@ extension TableViewController: UITableViewDataSource {
         return tableViewCell
     }
 
+    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        return viewModel.sections[section].title
+    }
+
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        viewModel.didSelect(indexPath: indexPath)
+    }
+
+    func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+        return model(at: indexPath).canEdit
+    }
+
+    func tableView(_ tableView: UITableView,
+                   commit editingStyle: UITableViewCellEditingStyle,
+                   forRowAt indexPath: IndexPath) {
+        guard editingStyle == .delete else { return }
+        viewModel.didDelete(indexPath: indexPath)
+    }
+
 }
 
 extension TableViewController: UITableViewDelegate {
 
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        let cellModel = viewModel.sections[indexPath.section].cellModels[indexPath.row].wrapped
-        return type(of: cellModel).rowHeight
+        return type(of: model(at: indexPath)).rowHeight
     }
 
 }

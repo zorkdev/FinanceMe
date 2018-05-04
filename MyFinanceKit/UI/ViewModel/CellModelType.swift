@@ -21,6 +21,8 @@ public protocol CellModelType: class {
     static var reuseIdentifier: String { get }
     static var rowHeight: CGFloat { get }
 
+    var canEdit: Bool { get }
+
     var wrap: CellModelWrapper { get }
 
 }
@@ -28,6 +30,8 @@ public protocol CellModelType: class {
 public extension CellModelType {
 
     static var rowHeight: CGFloat { return 60 }
+
+    var canEdit: Bool { return false }
 
     var wrap: CellModelWrapper {
         return CellModelWrapper(self)

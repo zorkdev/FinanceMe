@@ -1,11 +1,13 @@
 struct TableViewSection: Hashable {
 
     let id = UUID()
+    let title: String?
 
     var cellModels: [CellModelWrapper]
 
-    init(cellModels: [CellModelWrapper]) {
+    init(cellModels: [CellModelWrapper], title: String? = nil) {
         self.cellModels = cellModels
+        self.title = title
     }
 
     var hashValue: Int {
@@ -43,6 +45,8 @@ protocol TableViewModelType: class {
     var isValid: Bool { get }
 
     func updateSections(new: [TableViewSection], old: [TableViewSection])
+    func didSelect(indexPath: IndexPath)
+    func didDelete(indexPath: IndexPath)
 
 }
 
@@ -80,5 +84,8 @@ extension TableViewModelType {
 
         tableViewController?.updateCells(tableViewUpdate: tableViewUpdate)
     }
+
+    func didSelect(indexPath: IndexPath) {}
+    func didDelete(indexPath: IndexPath) {}
 
 }

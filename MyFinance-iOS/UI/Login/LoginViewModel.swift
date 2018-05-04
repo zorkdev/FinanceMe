@@ -109,7 +109,8 @@ extension LoginViewModel {
     }
 
     private func clearFields() {
-
+        emailModel.update(value: "")
+        passwordModel.update(value: "")
     }
 
     private func login(credentials: Credentials) {

@@ -58,10 +58,6 @@
                                                                 </tableViewCellContentView>
                                                             </tableViewCell>
                                                         </prototypes>
-                                                        <connections>
-                                                            <outlet property="dataSource" destination="BYZ-38-t0r" id="eLg-c0-CHY"/>
-                                                            <outlet property="delegate" destination="BYZ-38-t0r" id="NTf-fK-4jJ"/>
-                                                        </connections>
                                                     </tableView>
                                                     <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="60" estimatedRowHeight="-1" sectionHeaderHeight="1" sectionFooterHeight="1" translatesAutoresizingMaskIntoConstraints="NO" id="rMl-2u-LwL">
                                                         <rect key="frame" x="375" y="0.0" width="375" height="523"/>
@@ -92,10 +88,6 @@
                                                                 </tableViewCellContentView>
                                                             </tableViewCell>
                                                         </prototypes>
-                                                        <connections>
-                                                            <outlet property="dataSource" destination="BYZ-38-t0r" id="E7z-l8-IdK"/>
-                                                            <outlet property="delegate" destination="BYZ-38-t0r" id="li8-ml-YtM"/>
-                                                        </connections>
                                                     </tableView>
                                                     <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="60" estimatedRowHeight="-1" sectionHeaderHeight="1" sectionFooterHeight="1" translatesAutoresizingMaskIntoConstraints="NO" id="qTQ-Ej-o7c">
                                                         <rect key="frame" x="750" y="0.0" width="375" height="523"/>
@@ -126,10 +118,6 @@
                                                                 </tableViewCellContentView>
                                                             </tableViewCell>
                                                         </prototypes>
-                                                        <connections>
-                                                            <outlet property="dataSource" destination="BYZ-38-t0r" id="Gli-UF-MCa"/>
-                                                            <outlet property="delegate" destination="BYZ-38-t0r" id="8Ej-LG-fTv"/>
-                                                        </connections>
                                                     </tableView>
                                                 </subviews>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -380,13 +368,13 @@
                         <outlet property="allowanceLabel" destination="N4m-8L-jE4" id="ekV-m7-p2G"/>
                         <outlet property="balanceButton" destination="yOp-1E-vWM" id="iyv-Oj-Loo"/>
                         <outlet property="balanceLabel" destination="aLP-fJ-Zas" id="lXz-7u-3xt"/>
-                        <outlet property="balanceTableView" destination="qTQ-Ej-o7c" id="X7D-Ae-Vav"/>
+                        <outlet property="balancesUITableView" destination="qTQ-Ej-o7c" id="6Ij-Rg-Smm"/>
+                        <outlet property="feedUITableView" destination="oBS-lc-3c7" id="YoB-3l-Yeb"/>
                         <outlet property="regularsButton" destination="e7u-Lb-S0L" id="DU3-YW-9VS"/>
-                        <outlet property="regularsTableView" destination="rMl-2u-LwL" id="KO7-bX-07c"/>
+                        <outlet property="regularsUITableView" destination="rMl-2u-LwL" id="YuN-FY-342"/>
                         <outlet property="scrollView" destination="JmV-wt-loh" id="uoh-C7-nA6"/>
                         <outlet property="tabIndicator" destination="eFU-El-Bbo" id="WEk-UV-16p"/>
                         <outlet property="transactionsButton" destination="qcf-pf-Pg1" id="nOO-Iv-QSY"/>
-                        <outlet property="transactionsTableView" destination="oBS-lc-3c7" id="9yw-pw-JnI"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

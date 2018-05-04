@@ -3,6 +3,7 @@ protocol TransactionPresentable {
     var narrative: String { get }
     var amount: String { get }
     var amountColor: Color { get }
+    var canEdit: Bool { get }
 
 }
 
@@ -17,6 +18,7 @@ struct NormalTransactionDisplayModel: TransactionPresentable, TransactionDisplay
     let narrative: String
     let amount: String
     let amountColor: Color
+    let canEdit = true
     let amountDisplayModel: AmountDisplayModelType = .plus
 
     init(transaction: Transaction) {
@@ -32,6 +34,7 @@ struct MonthlyAllowanceDisplayModel: TransactionPresentable, TransactionDisplayM
     let narrative = "Monthly Allowance"
     let amount: String
     let amountColor: Color
+    let canEdit = false
     let amountDisplayModel: AmountDisplayModelType = .minus
 
     init(amount: Double) {
@@ -46,6 +49,7 @@ struct EndOfMonthSummaryDisplayModel: TransactionPresentable, TransactionDisplay
     let narrative: String
     let amount: String
     let amountColor: Color
+    let canEdit = false
     let amountDisplayModel: AmountDisplayModelType = .plusMinus
 
     init(date: Date, amount: Double) {
