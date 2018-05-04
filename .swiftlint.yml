@@ -2,10 +2,10 @@ excluded:
 - Pods
 
 disabled_rules:
-- class_delegate_protocol
 - force_cast
-- nesting
 
-file_length: 650
 identifier_name:
   min_length: 2
+nesting:
+  type_level:
+    warning: 2
