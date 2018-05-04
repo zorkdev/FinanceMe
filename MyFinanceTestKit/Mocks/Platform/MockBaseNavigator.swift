@@ -9,7 +9,7 @@ class MockBaseNavigator: BaseNavigatorType {
     init() {}
 
     required init(window: WindowType) {}
-    func dismiss() -> Promise<Void> { return .value(Void()) }
-    func popToRoot() {}
+    func dismiss() -> Promise<Void> { return Promise() }
+    func popToRoot() -> Promise<Void> { return Promise() }
 
 }

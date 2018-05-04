@@ -10,7 +10,7 @@ class MockViewController: ViewControllerType {
     #endif
 
     func present(viewController: ViewControllerType, animated: Bool) {}
-    func dismiss() -> Promise<Void> { return .value(Void()) }
+    func dismiss() -> Promise<Void> { return Promise() }
 
 }
 
@@ -23,7 +23,7 @@ class MockInjectableViewController: ViewControllerType & ViewModelInjectable {
     #endif
 
     func present(viewController: ViewControllerType, animated: Bool) {}
-    func dismiss() -> Promise<Void> { return .value(Void()) }
+    func dismiss() -> Promise<Void> { return Promise() }
 
     var lastViewModel: ViewModelType?
     func inject(viewModel: ViewModelType) {

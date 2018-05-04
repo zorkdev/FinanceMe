@@ -69,6 +69,27 @@ class NavigatorTests: XCTestCase {
         waitForExpectations(timeout: 10.0, handler: nil)
     }
 
+    func testPopToRoot() {
+        let newExpectation = expectation(description: "Popped to root")
+
+        let appState = MockAppStateiOS()
+        let window = UIWindow()
+        let navigator = Navigator(window: window)
+        navigator.appState = appState
+        let mockHomeViewModel = MockHomeViewModel()
+
+        navigator.createNavigationStack(scene: .home, viewModel: mockHomeViewModel)
+        navigator.moveTo(scene: .settings, viewModel: nil)
+
+        _ = navigator.popToRoot().done {
+            XCTAssertNotNil(window.baseViewController)
+            XCTAssertNil(window.baseViewController?.presented)
+            newExpectation.fulfill()
+        }
+
+        waitForExpectations(timeout: 10.0, handler: nil)
+    }
+
     func testShowAndHideAuthWindow() {
         let navigator = Navigator(window: mockWindow)
         let mockAuthViewModel = MockAuthViewModel()

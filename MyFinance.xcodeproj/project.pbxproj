@@ -247,6 +247,18 @@
 		9A4F557F2023D07000DBF68F /* TodayViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AD3EE4A2013DC5E0083F8FE /* TodayViewModel.swift */; };
 		9A4F55812023D0C900DBF68F /* TodayDisplayModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A4F55802023D0C900DBF68F /* TodayDisplayModel.swift */; };
 		9A4F55832023D10E00DBF68F /* TodayDisplayModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A4F55822023D10E00DBF68F /* TodayDisplayModel.swift */; };
+		9A533819209CE207007965C5 /* PaydayTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A533818209CE207007965C5 /* PaydayTests.swift */; };
+		9A53381A209CE207007965C5 /* PaydayTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A533818209CE207007965C5 /* PaydayTests.swift */; };
+		9A53381B209CE207007965C5 /* PaydayTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A533818209CE207007965C5 /* PaydayTests.swift */; };
+		9A53381C209CE207007965C5 /* PaydayTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A533818209CE207007965C5 /* PaydayTests.swift */; };
+		9A53381E209CE341007965C5 /* DiffableTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A53381D209CE341007965C5 /* DiffableTests.swift */; };
+		9A53381F209CE341007965C5 /* DiffableTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A53381D209CE341007965C5 /* DiffableTests.swift */; };
+		9A533820209CE341007965C5 /* DiffableTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A53381D209CE341007965C5 /* DiffableTests.swift */; };
+		9A533821209CE341007965C5 /* DiffableTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A53381D209CE341007965C5 /* DiffableTests.swift */; };
+		9A533829209CEBF3007965C5 /* CellModelTypeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A533828209CEBF3007965C5 /* CellModelTypeTests.swift */; };
+		9A53382A209CEBF3007965C5 /* CellModelTypeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A533828209CEBF3007965C5 /* CellModelTypeTests.swift */; };
+		9A53382B209CEBF3007965C5 /* CellModelTypeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A533828209CEBF3007965C5 /* CellModelTypeTests.swift */; };
+		9A53382C209CEBF3007965C5 /* CellModelTypeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A533828209CEBF3007965C5 /* CellModelTypeTests.swift */; };
 		9A59B0FF209C5A0200A8AFA2 /* FeedTableViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A59B0FE209C5A0200A8AFA2 /* FeedTableViewModel.swift */; };
 		9A59B101209C6DA300A8AFA2 /* RegularsTableViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A59B100209C6DA300A8AFA2 /* RegularsTableViewModel.swift */; };
 		9A59B103209C744900A8AFA2 /* BalancesTableViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A59B102209C744900A8AFA2 /* BalancesTableViewModel.swift */; };
@@ -321,7 +333,7 @@
 		9A65DEC82041B36F00E8177A /* BaseViewController+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A65DEC72041B36F00E8177A /* BaseViewController+Extensions.swift */; };
 		9A65DECA2041B3BD00E8177A /* KeyboardManageableTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A65DEC92041B3BD00E8177A /* KeyboardManageableTests.swift */; };
 		9A65DECC2041B72600E8177A /* TableViewCelltvOS.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9A65DECB2041B72600E8177A /* TableViewCelltvOS.xib */; };
-		9A65DECE2041B7CA00E8177A /* TableViewCelltvOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A65DECD2041B7CA00E8177A /* TableViewCelltvOSTests.swift */; };
+		9A65DECE2041B7CA00E8177A /* TableViewCellTypetvOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A65DECD2041B7CA00E8177A /* TableViewCellTypetvOSTests.swift */; };
 		9A65DF012041CE7300E8177A /* AppDelegateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A65DF002041CE7300E8177A /* AppDelegateTests.swift */; };
 		9A65DF092041D18500E8177A /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A65DF082041D18500E8177A /* main.swift */; };
 		9A6B06EE203F6E4E006FB40E /* EndOfMonthSummaryBusinessLogicTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A6B06ED203F6E4E006FB40E /* EndOfMonthSummaryBusinessLogicTests.swift */; };
@@ -572,7 +584,7 @@
 		9AE7F16A2042580C00BA98BD /* InstantiatableTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AB4F12820424DEE008D0F5D /* InstantiatableTests.swift */; };
 		9AE7F16C20425E7700BA98BD /* MessagePresentableTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AE7F16B20425E7700BA98BD /* MessagePresentableTests.swift */; };
 		9AEAD361203F8F9100CB572C /* TableViewCelliOS.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9AEAD360203F8F9100CB572C /* TableViewCelliOS.xib */; };
-		9AEAD363203F8FA700CB572C /* UITableViewCelliOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AEAD362203F8FA700CB572C /* UITableViewCelliOSTests.swift */; };
+		9AEAD363203F8FA700CB572C /* TableViewCellTypeiOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AEAD362203F8FA700CB572C /* TableViewCellTypeiOSTests.swift */; };
 		9AEAD365203F908900CB572C /* UIViewExtensionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AEAD364203F908900CB572C /* UIViewExtensionsTests.swift */; };
 		9AEEC8AB204267C200ED7627 /* MockLAContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AEEC8AA204267C200ED7627 /* MockLAContext.swift */; };
 		9AEEC8AD2042696800ED7627 /* MockAuthViewModelDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AEEC8AC2042696800ED7627 /* MockAuthViewModelDelegate.swift */; };
@@ -960,6 +972,9 @@
 		9A4F55452023C7BE00DBF68F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9A4F55802023D0C900DBF68F /* TodayDisplayModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayDisplayModel.swift; sourceTree = "<group>"; };
 		9A4F55822023D10E00DBF68F /* TodayDisplayModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayDisplayModel.swift; sourceTree = "<group>"; };
+		9A533818209CE207007965C5 /* PaydayTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaydayTests.swift; sourceTree = "<group>"; };
+		9A53381D209CE341007965C5 /* DiffableTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiffableTests.swift; sourceTree = "<group>"; };
+		9A533828209CEBF3007965C5 /* CellModelTypeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellModelTypeTests.swift; sourceTree = "<group>"; };
 		9A59B0FE209C5A0200A8AFA2 /* FeedTableViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedTableViewModel.swift; sourceTree = "<group>"; };
 		9A59B100209C6DA300A8AFA2 /* RegularsTableViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegularsTableViewModel.swift; sourceTree = "<group>"; };
 		9A59B102209C744900A8AFA2 /* BalancesTableViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BalancesTableViewModel.swift; sourceTree = "<group>"; };
@@ -992,7 +1007,7 @@
 		9A65DEC72041B36F00E8177A /* BaseViewController+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BaseViewController+Extensions.swift"; sourceTree = "<group>"; };
 		9A65DEC92041B3BD00E8177A /* KeyboardManageableTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardManageableTests.swift; sourceTree = "<group>"; };
 		9A65DECB2041B72600E8177A /* TableViewCelltvOS.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TableViewCelltvOS.xib; sourceTree = "<group>"; };
-		9A65DECD2041B7CA00E8177A /* TableViewCelltvOSTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCelltvOSTests.swift; sourceTree = "<group>"; };
+		9A65DECD2041B7CA00E8177A /* TableViewCellTypetvOSTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCellTypetvOSTests.swift; sourceTree = "<group>"; };
 		9A65DEFE2041CE7300E8177A /* MyFinance-Tests-iOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "MyFinance-Tests-iOS.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9A65DF002041CE7300E8177A /* AppDelegateTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegateTests.swift; sourceTree = "<group>"; };
 		9A65DF022041CE7300E8177A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -1142,7 +1157,7 @@
 		9AE7F1642042576800BA98BD /* TestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestViewController.swift; sourceTree = "<group>"; };
 		9AE7F16B20425E7700BA98BD /* MessagePresentableTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessagePresentableTests.swift; sourceTree = "<group>"; };
 		9AEAD360203F8F9100CB572C /* TableViewCelliOS.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TableViewCelliOS.xib; sourceTree = "<group>"; };
-		9AEAD362203F8FA700CB572C /* UITableViewCelliOSTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableViewCelliOSTests.swift; sourceTree = "<group>"; };
+		9AEAD362203F8FA700CB572C /* TableViewCellTypeiOSTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCellTypeiOSTests.swift; sourceTree = "<group>"; };
 		9AEAD364203F908900CB572C /* UIViewExtensionsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtensionsTests.swift; sourceTree = "<group>"; };
 		9AEEC8AA204267C200ED7627 /* MockLAContext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockLAContext.swift; sourceTree = "<group>"; };
 		9AEEC8AC2042696800ED7627 /* MockAuthViewModelDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockAuthViewModelDelegate.swift; sourceTree = "<group>"; };
@@ -1398,6 +1413,7 @@
 				9A42F74A203FA1B4005C3185 /* TodayDisplayModelTypeTests.swift */,
 				9AA1A3DC203FA41C0059EC5A /* TodayPresentableTests.swift */,
 				9AAA77CC203F9939000E1323 /* TodayViewModelTests.swift */,
+				9A533828209CEBF3007965C5 /* CellModelTypeTests.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -1876,7 +1892,6 @@
 				9A94F8DB202CE6FF00AEF61F /* Platform */,
 				9A6EF758202BA59C006D3420 /* Model */,
 				9AEAD35D203F8F0200CB572C /* UI */,
-				9A0E8E50203F9847003A811E /* ViewModel */,
 				9A37AB2E203E292A00CFEE67 /* Business */,
 			);
 			path = "MyFinanceKit-Tests";
@@ -1894,6 +1909,7 @@
 				9A6EF75F202BA718006D3420 /* TransactionTests.swift */,
 				9A6EF761202BABE0006D3420 /* SummaryTests.swift */,
 				9A37AB3B203E333900CFEE67 /* AllowanceTests.swift */,
+				9A533818209CE207007965C5 /* PaydayTests.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -2027,8 +2043,9 @@
 			children = (
 				9A2022A22038EBA80012DD51 /* Extensions */,
 				9A37AB35203E2FCE00CFEE67 /* AppStateTests.swift */,
-				9A94F8F9202CF23E00AEF61F /* JSONCodableTests.swift */,
 				9A3A2B7C20399A020071FBC5 /* StringRepresentableTests.swift */,
+				9A94F8F9202CF23E00AEF61F /* JSONCodableTests.swift */,
+				9A53381D209CE341007965C5 /* DiffableTests.swift */,
 				9A3A2B7F2039A4050071FBC5 /* NetworkServiceTests.swift */,
 				9A74CCFC203E081F00CBA082 /* DataServiceTests.swift */,
 				9AE35040208007EE00B9343C /* KeychainDataServiceTests.swift */,
@@ -2360,6 +2377,7 @@
 			children = (
 				9AEAD35E203F8F2000CB572C /* View */,
 				9AEAD35F203F8F2E00CB572C /* Controller */,
+				9A0E8E50203F9847003A811E /* ViewModel */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -2368,8 +2386,8 @@
 			isa = PBXGroup;
 			children = (
 				9AEAD364203F908900CB572C /* UIViewExtensionsTests.swift */,
-				9AEAD362203F8FA700CB572C /* UITableViewCelliOSTests.swift */,
-				9A65DECD2041B7CA00E8177A /* TableViewCelltvOSTests.swift */,
+				9AEAD362203F8FA700CB572C /* TableViewCellTypeiOSTests.swift */,
+				9A65DECD2041B7CA00E8177A /* TableViewCellTypetvOSTests.swift */,
 				9AEAD360203F8F9100CB572C /* TableViewCelliOS.xib */,
 				9A65DECB2041B72600E8177A /* TableViewCelltvOS.xib */,
 			);
@@ -4176,6 +4194,7 @@
 				9A8535712079696100704A78 /* CredentialsTests.swift in Sources */,
 				9A85357920796BF400704A78 /* MockBaseNavigator.swift in Sources */,
 				9A37AB30203E293F00CFEE67 /* APIsTests.swift in Sources */,
+				9A533829209CEBF3007965C5 /* CellModelTypeTests.swift in Sources */,
 				9A6EF757202BA15D006D3420 /* ErrorTests.swift in Sources */,
 				9A85358020796D7B00704A78 /* MockViewController.swift in Sources */,
 				9A2022A52038EBEE0012DD51 /* DateExtensionsTests.swift in Sources */,
@@ -4210,7 +4229,8 @@
 				9AA1A3DD203FA41C0059EC5A /* TodayPresentableTests.swift in Sources */,
 				9AAA77D8203F9B2A000E1323 /* MockTodayDisplayModel.swift in Sources */,
 				9AE7F1682042580B00BA98BD /* InstantiatableTests.swift in Sources */,
-				9AEAD363203F8FA700CB572C /* UITableViewCelliOSTests.swift in Sources */,
+				9AEAD363203F8FA700CB572C /* TableViewCellTypeiOSTests.swift in Sources */,
+				9A533819209CE207007965C5 /* PaydayTests.swift in Sources */,
 				9A37AB43203E3AF000CFEE67 /* BalanceBusinessLogicTests.swift in Sources */,
 				9A6EF760202BA718006D3420 /* TransactionTests.swift in Sources */,
 				9A3A2BA0203A2FC80071FBC5 /* MockAPI.swift in Sources */,
@@ -4218,6 +4238,7 @@
 				9ADDE1BA203F818200BCA1DE /* ExternalTransactionsBusinessLogicTests.swift in Sources */,
 				9A42F74B203FA1B4005C3185 /* TodayDisplayModelTypeTests.swift in Sources */,
 				9ABA69402082AE9E00B48CC8 /* SessionServiceTests.swift in Sources */,
+				9A53381E209CE341007965C5 /* DiffableTests.swift in Sources */,
 				9ABBAD2F203F6479000A1020 /* TransactionsBusinessLogicTests.swift in Sources */,
 				9A6EF762202BABE0006D3420 /* SummaryTests.swift in Sources */,
 				9A3A2B802039A4050071FBC5 /* NetworkServiceTests.swift in Sources */,
@@ -4259,6 +4280,7 @@
 				9AAA77D1203F9AA5000E1323 /* MockAppState.swift in Sources */,
 				9A6124A020867EC500A1EAAB /* ServiceClientTestCase.swift in Sources */,
 				9A3A2B9E203A2E940071FBC5 /* MockConfigService.swift in Sources */,
+				9A53382B209CEBF3007965C5 /* CellModelTypeTests.swift in Sources */,
 				9A37AB31203E293F00CFEE67 /* APIsTests.swift in Sources */,
 				9A85358920796EC400704A78 /* MockViewModel.swift in Sources */,
 				9A94F8EF202CEA8E00AEF61F /* HALResponseTests.swift in Sources */,
@@ -4283,6 +4305,7 @@
 				9A37AB12203E144900CFEE67 /* MockDataService.swift in Sources */,
 				9A37AB44203E3AF000CFEE67 /* BalanceBusinessLogicTests.swift in Sources */,
 				9AE7F16A2042580C00BA98BD /* InstantiatableTests.swift in Sources */,
+				9A533820209CE341007965C5 /* DiffableTests.swift in Sources */,
 				9ABA69422082AE9E00B48CC8 /* SessionServiceTests.swift in Sources */,
 				9AAA77D9203F9B2A000E1323 /* MockTodayDisplayModel.swift in Sources */,
 				9AC3E73D20423D8600CD29B6 /* Factory.swift in Sources */,
@@ -4291,6 +4314,7 @@
 				9A37AB34203E2CAE00CFEE67 /* FormattersTests.swift in Sources */,
 				9ABA693A2082A95A00B48CC8 /* MockSessionService.swift in Sources */,
 				9AA1A3E1203FA4580059EC5A /* MockTodayPresentable.swift in Sources */,
+				9A53381B209CE207007965C5 /* PaydayTests.swift in Sources */,
 				9ADDE1BB203F818200BCA1DE /* ExternalTransactionsBusinessLogicTests.swift in Sources */,
 				9ABBAD30203F6479000A1020 /* TransactionsBusinessLogicTests.swift in Sources */,
 				9A2022A82038EC050012DD51 /* DataExtensionsTests.swift in Sources */,
@@ -4351,7 +4375,7 @@
 			files = (
 				9A85358120796D7B00704A78 /* MockViewController.swift in Sources */,
 				9A65DEC32041B2B700E8177A /* ExternalTransactionsBusinessLogicTests.swift in Sources */,
-				9A65DECE2041B7CA00E8177A /* TableViewCelltvOSTests.swift in Sources */,
+				9A65DECE2041B7CA00E8177A /* TableViewCellTypetvOSTests.swift in Sources */,
 				9AE7F1662042576800BA98BD /* TestViewController.swift in Sources */,
 				9A65DEB32041B25E00E8177A /* AllowanceTests.swift in Sources */,
 				9A65DEC22041B2B500E8177A /* EndOfMonthSummaryBusinessLogicTests.swift in Sources */,
@@ -4360,6 +4384,7 @@
 				9A85357A20796BF400704A78 /* MockBaseNavigator.swift in Sources */,
 				9A65DEBC2041B2A700E8177A /* APIsTests.swift in Sources */,
 				9A65DEA52041B23A00E8177A /* URLSessionExtensionsTests.swift in Sources */,
+				9A53382A209CEBF3007965C5 /* CellModelTypeTests.swift in Sources */,
 				9A65DEB72041B27B00E8177A /* BaseViewControllerTests.swift in Sources */,
 				9AE7F1692042580C00BA98BD /* InstantiatableTests.swift in Sources */,
 				9A65DEA92041B24300E8177A /* NetworkServiceTests.swift in Sources */,
@@ -4369,6 +4394,7 @@
 				9A65DE9D2041B22200E8177A /* MockAppState.swift in Sources */,
 				9A65DEAB2041B24900E8177A /* ConfigDefaultServiceTests.swift in Sources */,
 				9A65DEA22041B22D00E8177A /* MockDataService.swift in Sources */,
+				9A53381F209CE341007965C5 /* DiffableTests.swift in Sources */,
 				9A65DEB22041B25C00E8177A /* SummaryTests.swift in Sources */,
 				9A65DEA42041B23800E8177A /* DataExtensionsTests.swift in Sources */,
 				9A85357620796AF600704A78 /* BaseNavigatorTypeTests.swift in Sources */,
@@ -4396,6 +4422,7 @@
 				9A85358820796EC400704A78 /* MockViewModel.swift in Sources */,
 				9A65DEAC2041B24E00E8177A /* ErrorTests.swift in Sources */,
 				9A65DEC42041B2BA00E8177A /* SpendingBusinessLogicTests.swift in Sources */,
+				9A53381A209CE207007965C5 /* PaydayTests.swift in Sources */,
 				9AC3E73C20423D8500CD29B6 /* Factory.swift in Sources */,
 				9A65DEB02041B25800E8177A /* BalanceTests.swift in Sources */,
 				9ABA69392082A95A00B48CC8 /* MockSessionService.swift in Sources */,
@@ -4419,11 +4446,14 @@
 				9AC1A60420840F5F00947DCE /* MockViewModel.swift in Sources */,
 				9AC1A62B2084103A00947DCE /* ValidatorsTests.swift in Sources */,
 				9AC1A61E20840FFC00947DCE /* SessionTests.swift in Sources */,
+				9A533821209CE341007965C5 /* DiffableTests.swift in Sources */,
+				9A53382C209CEBF3007965C5 /* CellModelTypeTests.swift in Sources */,
 				9AC1A62E2084104100947DCE /* UserBusinessLogicTests.swift in Sources */,
 				9AC1A60B20840F7500947DCE /* MockDataService.swift in Sources */,
 				9AC1A60320840F5D00947DCE /* MockViewController.swift in Sources */,
 				9AC1A61220840FD600947DCE /* DataExtensionsTests.swift in Sources */,
 				9AC1A61320840FD900947DCE /* URLSessionExtensionsTests.swift in Sources */,
+				9A53381C209CE207007965C5 /* PaydayTests.swift in Sources */,
 				9AC1A61120840FD400947DCE /* DateExtensionsTests.swift in Sources */,
 				9AC1A61B20840FEF00947DCE /* SessionServiceTests.swift in Sources */,
 				9AC1A62D2084103F00947DCE /* TransactionsBusinessLogicTests.swift in Sources */,

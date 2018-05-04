@@ -2,6 +2,11 @@
 
 class ValidatorsTests: XCTestCase {
 
+    func testValidateString() {
+        XCTAssertTrue(Validators.validate(string: "test"))
+        XCTAssertFalse(Validators.validate(string: " "))
+    }
+
     func testValidateAmount_Success() {
         XCTAssertTrue(Validators.validate(amount: ""))
         XCTAssertTrue(Validators.validate(amount: "£0"))
@@ -60,6 +65,33 @@ class ValidatorsTests: XCTestCase {
         XCTAssertFalse(Validators.validate(fullAmount: "%"))
         XCTAssertFalse(Validators.validate(fullAmount: " "))
         XCTAssertFalse(Validators.validate(fullAmount: "10000000.00"))
+    }
+
+    func testValidateEmail_Success() {
+        XCTAssertTrue(Validators.validate(email: "test@test.com"))
+        XCTAssertTrue(Validators.validate(email: "a@a.aa"))
+        XCTAssertTrue(Validators.validate(email: "someone@something.co.uk"))
+        XCTAssertTrue(Validators.validate(email: "test@test.c"))
+        XCTAssertTrue(Validators.validate(email: "a@a.a"))
+        XCTAssertTrue(Validators.validate(email: "test@test."))
+        XCTAssertTrue(Validators.validate(email: "test@."))
+        XCTAssertTrue(Validators.validate(email: "@test.com"))
+        XCTAssertTrue(Validators.validate(email: ".@."))
+        XCTAssertTrue(Validators.validate(email: "test@com"))
+        XCTAssertTrue(Validators.validate(email: "test@"))
+        XCTAssertTrue(Validators.validate(email: "._%+-@"))
+    }
+
+    func testValidateEmail_Failure() {
+        XCTAssertFalse(Validators.validate(email: "!"))
+        XCTAssertFalse(Validators.validate(email: "$"))
+        XCTAssertFalse(Validators.validate(email: "§"))
+        XCTAssertFalse(Validators.validate(email: "£"))
+        XCTAssertFalse(Validators.validate(email: "^"))
+        XCTAssertFalse(Validators.validate(email: "&"))
+        XCTAssertFalse(Validators.validate(email: "*"))
+        XCTAssertFalse(Validators.validate(email: "("))
+        XCTAssertFalse(Validators.validate(email: ")"))
     }
 
     func testValidateFullEmail_Success() {

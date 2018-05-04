@@ -2,10 +2,11 @@
 
 class TableViewCelliOS: UITableViewCell {}
 
-class UITableViewCellExtensionsTests: XCTestCase {
+class TableViewCellTypeTests: XCTestCase {
 
     func testNib() {
         XCTAssertNoThrow(TableViewCelliOS.nib)
+        XCTAssertEqual(TableViewCelliOS.reuseIdentifier, "TableViewCelliOS")
     }
 
 }

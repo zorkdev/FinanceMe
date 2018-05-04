@@ -1,3 +1,4 @@
+import LocalAuthentication
 @testable import MyFinance_iOS
 
 class AuthViewModelTests: ServiceClientiOSTestCase {
@@ -77,6 +78,10 @@ class AuthViewModelTests: ServiceClientiOSTestCase {
         let authViewModel = AuthViewModel(serviceProvider: mockAppState)
         authViewModel.addOcclusion()
         XCTAssertTrue(mockAppState.mockNavigator.didCallShowAuthWindow)
+    }
+
+    func testCreateLAContext() {
+        _ = LAContext().createContext()
     }
 
 }

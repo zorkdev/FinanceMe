@@ -25,8 +25,8 @@ class FormattersTests: XCTestCase {
         return calendar.date(from: components)!
     }()
 
-    let positiveAmount = NSNumber(value: 100.0)
-    let negativeAmount = NSNumber(value: -100.0)
+    let positiveAmount = 100.0
+    let negativeAmount = -100.0
 
     override func setUp() {
         super.setUp()
@@ -139,6 +139,12 @@ class FormattersTests: XCTestCase {
         amountString = "£"
 
         XCTAssertEqual(Formatters.sanitise(amount: amountString), "")
+    }
+
+    func testSanitiseEmail() {
+        let emailString = " test@test.com "
+
+        XCTAssertEqual(Formatters.sanitise(email: emailString), "test@test.com")
     }
 
     func testFormatRelativeDefault() {

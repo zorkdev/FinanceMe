@@ -74,11 +74,15 @@ class Navigator: NavigatorType {
         }
     }
 
-    func popToRoot() {
+    @discardableResult func popToRoot() -> Promise<Void> {
+        var promises = [Promise<Void>]()
         for (index, viewController) in viewControllers.reversed().enumerated() where index < viewControllers.count - 1 {
-            _ = viewController.dismiss()
+            promises.append(viewController.dismiss())
         }
-        viewControllers.removeLast(viewControllers.count - 1)
+
+        return when(fulfilled: promises).done {
+            self.viewControllers.removeLast(self.viewControllers.count - 1)
+        }
     }
 
     func showAuthWindow() {

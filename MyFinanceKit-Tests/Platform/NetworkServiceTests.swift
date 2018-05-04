@@ -1,7 +1,6 @@
 import PromiseKit
 @testable import MyFinanceKit
 
-//swiftlint:disable nesting
 //swiftlint:disable type_body_length
 class NetworkServiceTests: XCTestCase {
 

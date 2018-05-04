@@ -4,6 +4,7 @@ excluded:
 disabled_rules:
 - class_delegate_protocol
 - force_cast
+- nesting
 
 file_length: 650
 identifier_name:

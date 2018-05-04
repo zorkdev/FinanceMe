@@ -70,4 +70,24 @@ class TransactionTests: XCTestCase {
         XCTAssertEqual(TransactionSource.masterCard.displayString, "MASTER_CARD")
     }
 
+    func testTransactionHashValue() {
+        let transaction1 = Factory.makeTransaction()
+
+        var transaction2 = Factory.makeTransaction()
+        transaction2.created = transaction1.created
+
+        var transaction3 = Factory.makeTransaction()
+        transaction3.amount = 1
+        transaction3.created = transaction1.created
+
+        XCTAssertEqual(transaction1.hashValue, transaction2.hashValue)
+        XCTAssertNotEqual(transaction1.hashValue, transaction3.hashValue)
+    }
+
+    func testTransactionSourceDescription() {
+        for source in TransactionSource.externalValues {
+            XCTAssertEqual(source.description, source.displayString)
+        }
+    }
+
 }

@@ -5,7 +5,7 @@ public protocol BaseNavigatorType {
 
     init(window: WindowType)
     @discardableResult func dismiss() -> Promise<Void>
-    func popToRoot()
+    @discardableResult func popToRoot() -> Promise<Void>
     func inject(viewController: ViewControllerType, viewModel: ViewModelType)
 
 }
