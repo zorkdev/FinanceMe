@@ -3,6 +3,7 @@
 class ValidatorsTests: XCTestCase {
 
     func testValidateAmount_Success() {
+        XCTAssertTrue(Validators.validate(amount: ""))
         XCTAssertTrue(Validators.validate(amount: "£0"))
         XCTAssertTrue(Validators.validate(amount: "£0."))
         XCTAssertTrue(Validators.validate(amount: "£0.0"))
@@ -18,7 +19,6 @@ class ValidatorsTests: XCTestCase {
     }
 
     func testValidateAmount_Failure() {
-        XCTAssertFalse(Validators.validate(amount: ""))
         XCTAssertFalse(Validators.validate(amount: "£"))
         XCTAssertFalse(Validators.validate(amount: "£01"))
         XCTAssertFalse(Validators.validate(amount: "£0.."))
