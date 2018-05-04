@@ -1,17 +1,17 @@
-protocol LoginViewModelDelegate: ViewModelDelegate & MessagePresentable {
+protocol LoginViewModelDelegate: TableViewModelDelegate, MessagePresentable {
 
-    func clearFields()
+    func updateLoginButton(enabled: Bool)
 
 }
 
 protocol LoginViewModelType: ViewModelType {
 
-    func shouldEnableLoginButton(displayModel: LoginDisplayModel) -> Bool
-    func loginButtonTapped(with displayModel: LoginDisplayModel)
+    func viewWillAppear()
+    func loginButtonTapped()
 
 }
 
-class LoginViewModel: ServiceClient {
+class LoginViewModel: ServiceClient, TableViewModelType {
 
     typealias ServiceProvider = NavigatorProvider
         & NetworkServiceProvider
@@ -22,11 +22,28 @@ class LoginViewModel: ServiceClient {
 
     private let userBusinessLogic: UserBusinessLogic
 
+    private let emailModel: TextInputCellModelForViewModelType
+    private let passwordModel: TextInputCellModelForViewModelType
+
     private weak var delegate: LoginViewModelDelegate?
+
+    var sections = [TableViewSection]() {
+        didSet {
+            updateSections(new: sections, old: oldValue)
+        }
+    }
+
+    var tableViewController: TableViewController?
 
     init(serviceProvider: ServiceProvider) {
         self.serviceProvider = serviceProvider
         self.userBusinessLogic = UserBusinessLogic(serviceProvider: serviceProvider)
+
+        emailModel = EmailInputCellModel()
+        passwordModel = SecureTextInputCellModel(label: LoginDisplayModel.passwordTitle)
+
+        emailModel.viewModelDelegate = self
+        passwordModel.viewModelDelegate = self
     }
 
 }
@@ -35,24 +52,44 @@ class LoginViewModel: ServiceClient {
 
 extension LoginViewModel: LoginViewModelType {
 
+    func viewDidLoad() {
+        setupTableView()
+    }
+
+    func viewWillAppear() {
+        DispatchQueue.main.async {
+            self.delegate?.updateLoginButton(enabled: self.isValid)
+            (self.sections.first?.cellModels.first?.wrapped as? InputCellModelForViewModelType)?.becomeFirstResponder()
+        }
+    }
+
     func inject(delegate: ViewModelDelegate) {
         guard let delegate = delegate as? LoginViewModelDelegate else { return }
         self.delegate = delegate
     }
 
-    func shouldEnableLoginButton(displayModel: LoginDisplayModel) -> Bool {
-        guard displayModel.email.components(separatedBy: .whitespaces).joined() != "",
-            displayModel.password.components(separatedBy: .whitespaces).joined() != "",
-            validate(fullEmail: displayModel.email) else { return false }
+    func loginButtonTapped() {
+        guard let email = emailModel.currentValue,
+            let password = passwordModel.currentValue else { return }
 
-        return  true
-    }
-
-    func loginButtonTapped(with displayModel: LoginDisplayModel) {
-        let credentials = Credentials(email: displayModel.email,
-                                      password: displayModel.password)
+        let credentials = Credentials(email: email,
+                                      password: password)
         login(credentials: credentials)
     }
+
+}
+
+extension LoginViewModel: TextInputCellModelViewModelDelegate {
+
+    func isEnabled(inputCell: InputCellModelForViewModelType) -> Bool { return true }
+
+    func returnKeyType(inputCell: InputCellModelForViewModelType) -> UIReturnKeyType { return .done }
+
+    func didChangeValue() {
+        delegate?.updateLoginButton(enabled: isValid)
+    }
+
+    func defaultValue(textCell: TextInputCellModelForViewModelType) -> String? { return nil }
 
 }
 
@@ -60,8 +97,19 @@ extension LoginViewModel: LoginViewModelType {
 
 extension LoginViewModel {
 
-    private func validate(fullEmail: String) -> Bool {
-        return Validators.validate(fullEmail: fullEmail)
+    private func setupTableView() {
+        sections = [TableViewSection(cellModels: [emailModel.wrap, passwordModel.wrap])]
+
+        guard let tableView = delegate?.tableView else { return }
+
+        tableViewController = TableViewController(tableView: tableView,
+                                                  cells: [InputTableViewCell.self],
+                                                  viewModel: self)
+        tableViewController?.updateCells()
+    }
+
+    private func clearFields() {
+
     }
 
     private func login(credentials: Credentials) {
@@ -69,7 +117,7 @@ extension LoginViewModel {
         userBusinessLogic.getSession(credentials: credentials)
             .done { _ in
                 self.serviceProvider.navigator.popToRoot()
-                self.delegate?.clearFields()
+                self.clearFields()
             }.catch { error in
                 self.delegate?.showError(message: error.localizedDescription)
             }.finally {

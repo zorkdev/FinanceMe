@@ -70,20 +70,6 @@ class AddTransactionViewModel: ServiceClient, TableViewModelType {
         dateModel.viewModelDelegate = self
     }
 
-    private func setupTableView() {
-        sections = [TableViewSection(cellModels: [amountModel.wrap,
-                                                  descriptionModel.wrap,
-                                                  categoryModel.wrap,
-                                                  dateModel.wrap])]
-
-        guard let tableView = delegate?.tableView else { return }
-
-        tableViewController = TableViewController(tableView: tableView,
-                                                  cells: [InputTableViewCell.self],
-                                                  viewModel: self)
-        tableViewController?.updateCells()
-    }
-
 }
 
 // MARK: Interface
@@ -180,6 +166,20 @@ extension AddTransactionViewModel: DateInputCellModelViewModelDelegate {
 // MARK: - Private methods
 
 extension AddTransactionViewModel {
+
+    private func setupTableView() {
+        sections = [TableViewSection(cellModels: [amountModel.wrap,
+                                                  descriptionModel.wrap,
+                                                  categoryModel.wrap,
+                                                  dateModel.wrap])]
+
+        guard let tableView = delegate?.tableView else { return }
+
+        tableViewController = TableViewController(tableView: tableView,
+                                                  cells: [InputTableViewCell.self],
+                                                  viewModel: self)
+        tableViewController?.updateCells()
+    }
 
     private func save(transaction: Transaction) {
         delegate?.showSpinner()

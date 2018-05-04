@@ -4,6 +4,10 @@ class EmailInputCellModel: TextInputCellModel {
     override var textContentType: UITextContentType { return .emailAddress }
     override var autocapitalizationType: UITextAutocapitalizationType { return .none }
 
+    init() {
+        super.init(label: "Email", placeholder: "")
+    }
+
     override func validate(value: String) -> Bool {
         return Validators.validate(fullEmail: value)
     }

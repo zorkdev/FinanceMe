@@ -1,53 +1,35 @@
-class LoginViewController: BaseViewController, KeyboardManageable {
+class LoginViewController: BaseViewController, KeyboardManageable, TableViewContainer {
 
-    @IBOutlet private weak var emailField: UITextField!
-    @IBOutlet private weak var passwordField: UITextField!
+    @IBOutlet weak var uiTableView: UITableView!
     @IBOutlet private weak var loginButton: UIButton!
 
     var viewModel: LoginViewModelType!
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        updateLoginButton()
-        emailField.becomeFirstResponder()
+        viewModel.viewDidLoad()
     }
 
-    private func updateLoginButton() {
-        let loginDisplayModel = LoginDisplayModel(email: emailField.text ?? "",
-                                                  password: passwordField.text ?? "")
-
-        let shouldEnable = viewModel.shouldEnableLoginButton(displayModel: loginDisplayModel)
-
-        loginButton.isEnabled = shouldEnable
-
-        UIView.animate(withDuration: LoginDisplayModel.buttonAnimationDuration) {
-            self.loginButton.alpha = shouldEnable ? LoginDisplayModel.buttonEnabledAlpha :
-                LoginDisplayModel.buttonDisabledAlpha
-        }
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        viewModel.viewWillAppear()
     }
 
     @IBAction private func loginButtonTapped(_ sender: UIButton) {
-        guard let email = emailField.text,
-            email.components(separatedBy: .whitespaces)
-                .joined() != "",
-            let password = passwordField.text,
-            password.components(separatedBy: .whitespaces)
-                .joined() != "" else { return }
-
-        let loginDisplayModel = LoginDisplayModel(email: email,
-                                                  password: password)
-
-        viewModel.loginButtonTapped(with: loginDisplayModel)
+        viewModel.loginButtonTapped()
     }
 
 }
 
 extension LoginViewController: LoginViewModelDelegate {
 
-    func clearFields() {
-        emailField.text = nil
-        passwordField.text = nil
+    func updateLoginButton(enabled: Bool) {
+        loginButton.isEnabled = enabled
+
+        UIView.animate(withDuration: LoginDisplayModel.buttonAnimationDuration) {
+            self.loginButton.alpha = enabled ? LoginDisplayModel.buttonEnabledAlpha :
+                                               LoginDisplayModel.buttonDisabledAlpha
+        }
     }
 
 }
@@ -57,14 +39,6 @@ extension LoginViewController: ViewModelInjectable {
     func inject(viewModel: ViewModelType) {
         guard let viewModel = viewModel as? LoginViewModelType else { return }
         self.viewModel = viewModel
-    }
-
-}
-
-extension LoginViewController {
-
-    @IBAction private func textFieldValueChanged(_ sender: UITextField) {
-        updateLoginButton()
     }
 
 }
