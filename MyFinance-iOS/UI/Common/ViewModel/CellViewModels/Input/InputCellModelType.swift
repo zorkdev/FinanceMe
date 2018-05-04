@@ -98,4 +98,8 @@ extension InputCellModelForViewModelType {
         return InputTableViewCell.reuseIdentifier
     }
 
+    var id: Int {
+        return ObjectIdentifier(self).hashValue
+    }
+
 }

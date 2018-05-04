@@ -38,8 +38,11 @@ class ChartCellModel {
 
     var data: LineChartData
 
+    let id: Int
+
     init(endOfMonthSummaries: [EndOfMonthSummary]) {
         data = ChartCellModel.createChartData(from: endOfMonthSummaries)
+        id = "\(endOfMonthSummaries)".hashValue
     }
 
     private static func createChartData(from summaries: [EndOfMonthSummary]) -> LineChartData {

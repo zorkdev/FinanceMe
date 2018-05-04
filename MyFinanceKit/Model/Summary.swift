@@ -1,4 +1,4 @@
-public struct EndOfMonthSummary: Storeable, Equatable {
+public struct EndOfMonthSummary: Storeable, Hashable {
 
     public let balance: Double
     public let created: Date
@@ -11,7 +11,7 @@ public struct EndOfMonthSummary: Storeable, Equatable {
 
 }
 
-public struct CurrentMonthSummary: Storeable, Equatable {
+public struct CurrentMonthSummary: Storeable, Hashable {
 
     public let allowance: Double
     public let forecast: Double

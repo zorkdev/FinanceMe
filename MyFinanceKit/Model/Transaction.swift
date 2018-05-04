@@ -1,4 +1,4 @@
-public enum TransactionDirection: String, JSONCodable, Equatable {
+public enum TransactionDirection: String, JSONCodable, Hashable {
 
     case none = "NONE"
     case outbound = "OUTBOUND"
@@ -6,7 +6,7 @@ public enum TransactionDirection: String, JSONCodable, Equatable {
 
 }
 
-public enum TransactionSource: String, JSONCodable, Equatable {
+public enum TransactionSource: String, JSONCodable, Hashable {
 
     case directCredit = "DIRECT_CREDIT"
     case directDebit = "DIRECT_DEBIT"
@@ -74,7 +74,7 @@ extension TransactionSource: Describable {
 
 }
 
-public struct Transaction: Storeable, Equatable {
+public struct Transaction: Storeable, Hashable {
 
     public let id: String?
     public let currency: String
@@ -101,6 +101,17 @@ public struct Transaction: Storeable, Equatable {
         self.narrative = narrative
         self.source = source
         self.balance = balance
+    }
+
+    public var hashValue: Int {
+        return (id ?? "").hashValue
+            ^ currency.hashValue
+            ^ amount.hashValue
+            ^ direction.hashValue
+            ^ created.hashValue
+            ^ narrative.hashValue
+            ^ source.hashValue
+            ^ balance.hashValue
     }
 
 }

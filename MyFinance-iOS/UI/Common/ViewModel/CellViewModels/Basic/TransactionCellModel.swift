@@ -10,20 +10,23 @@ class TransactionCellModel {
 
     private var transaction: TransactionPresentable
 
-    var title: String { return transaction.narrative }
-    var detail: String { return transaction.amount }
-    var detailColor: Color { return transaction.amountColor }
-
     init(transaction: TransactionPresentable) {
         self.transaction = transaction
     }
 
 }
 
-extension TransactionCellModel: BasicCellModelForViewType {}
+extension TransactionCellModel: BasicCellModelForViewType {
+
+    var title: String { return transaction.narrative }
+    var detail: String { return transaction.amount }
+    var detailColor: Color { return transaction.amountColor }
+
+}
 
 extension TransactionCellModel: TransactionCellModelForViewModelType {
 
+    var id: Int { return transaction.id }
     var canEdit: Bool { return transaction.canEdit }
 
     func update(transaction: TransactionPresentable) {

@@ -11,7 +11,7 @@ struct TableViewSection: Hashable {
     }
 
     var hashValue: Int {
-        return id.hashValue
+        return title?.hashValue ?? id.hashValue
     }
 
     static func == (lhs: TableViewSection, rhs: TableViewSection) -> Bool {

@@ -46,6 +46,8 @@ extension CurrentMonthCellModel: CurrentMonthCellModelForViewModelType {
 
     static var rowHeight: CGFloat { return 90 }
 
+    var id: Int { return displayModel.id }
+
     func update(currentMonthSummary: CurrentMonthSummary) {
         displayModel = CurrentMonthDisplayModel(currentMonthSummary: currentMonthSummary)
         viewDelegate?.update()

@@ -1,4 +1,4 @@
-struct CurrentMonthDisplayModel: TodayDisplayModelType {
+struct CurrentMonthDisplayModel: TodayDisplayModelType, Identifiable {
 
     static let positiveColor = ColorPalette.green
     static let negativeColor = ColorPalette.red
@@ -10,6 +10,8 @@ struct CurrentMonthDisplayModel: TodayDisplayModelType {
     let spending: NSAttributedString
     let allowance: NSAttributedString
 
+    let id: Int
+
     init(currentMonthSummary: CurrentMonthSummary) {
         let createString = {
             CurrentMonthDisplayModel.amountAttributedString(from: CurrentMonthDisplayModel.formatter.string(from: $0))
@@ -18,6 +20,7 @@ struct CurrentMonthDisplayModel: TodayDisplayModelType {
         forecast = createString(currentMonthSummary.forecast)
         spending = createString(currentMonthSummary.spending)
         allowance = createString(currentMonthSummary.allowance)
+        id = currentMonthSummary.hashValue
     }
 
 }
