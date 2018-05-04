@@ -135,7 +135,7 @@ extension BalancesTableViewModel {
         var summaries = list.endOfMonthSummaries + [currentSummary]
         summaries.sort(by: { $0.created < $1.created })
         summaries = Array(summaries.suffix(12))
-        let cellModel = ChartCellModel(endOfMonthSummaries: list.endOfMonthSummaries).wrap
+        let cellModel = ChartCellModel(endOfMonthSummaries: summaries).wrap
 
         return TableViewSection(cellModels: [cellModel], title: BalancesSection.chart.title)
     }
