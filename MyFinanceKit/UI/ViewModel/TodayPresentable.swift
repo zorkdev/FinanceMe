@@ -23,7 +23,6 @@ public extension TodayPresentable {
 
     public func viewDidLoad() {
         setupDefaults()
-        updateData()
     }
 
     @discardableResult public func updateData() -> Promise<Void> {
