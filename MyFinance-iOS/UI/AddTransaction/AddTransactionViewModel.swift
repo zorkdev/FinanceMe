@@ -77,7 +77,7 @@ class AddTransactionViewModel: ServiceClient, TableViewModelType {
 extension AddTransactionViewModel: AddTransactionViewModelType {
 
     func viewDidLoad() {
-        self.setupTableView()
+        setupTableView()
     }
 
     func viewWillAppear() {

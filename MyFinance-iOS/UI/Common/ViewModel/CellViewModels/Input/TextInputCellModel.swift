@@ -9,6 +9,8 @@ protocol TextInputCellModelForViewModelType: InputCellModelForViewModelType {
     var viewModelDelegate: TextInputCellModelViewModelDelegate? { get set }
     var currentValue: String? { get }
 
+    func update(value: String)
+
 }
 
 class TextInputCellModel {
@@ -84,6 +86,11 @@ extension TextInputCellModel: TextInputCellModelForViewModelType {
 
     func becomeFirstResponder() {
         viewDelegate?.becomeFirstResponder()
+    }
+
+    func update(value: String) {
+        cachedValue = value
+        viewDelegate?.update(value: value)
     }
 
 }

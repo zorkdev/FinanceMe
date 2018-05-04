@@ -9,6 +9,8 @@ protocol DateInputCellModelForViewModelType: InputCellModelForViewModelType {
     var viewModelDelegate: DateInputCellModelViewModelDelegate? { get set }
     var currentValue: Date { get }
 
+    func update(value: Date)
+
 }
 
 class DateInputCellModel {
@@ -26,7 +28,12 @@ class DateInputCellModel {
 
     private let picker = UIDatePicker()
     private let formatter: DateFormatter
-    private var cachedValue: Date?
+
+    private var cachedValue: Date? {
+        didSet {
+            picker.setDate(cachedValue ?? Date(), animated: false)
+        }
+    }
 
     init(label: String, mode: Mode) {
         self.label = label
@@ -96,6 +103,11 @@ extension DateInputCellModel: DateInputCellModelForViewModelType {
 
     func becomeFirstResponder() {
         viewDelegate?.becomeFirstResponder()
+    }
+
+    func update(value: Date) {
+        cachedValue = value
+        viewDelegate?.update(value: formatter.string(from: value))
     }
 
 }

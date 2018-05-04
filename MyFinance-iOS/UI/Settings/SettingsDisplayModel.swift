@@ -9,13 +9,4 @@ struct SettingsDisplayModel {
     static let logOutButtonTitle = "Log Out"
     static let successMessage = "Your settings have been updated!"
 
-    let name: String
-    let largeTransaction: String
-    let payday: String
-    let startDate: Date
-
-    static func dateString(from date: Date) -> String {
-        return Formatters.date.string(from: date)
-    }
-
 }

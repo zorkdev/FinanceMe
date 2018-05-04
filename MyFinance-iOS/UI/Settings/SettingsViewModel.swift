@@ -4,30 +4,25 @@ protocol SettingsViewModelDataDelegate: class {
 
 }
 
-protocol SettingsViewModelDelegate: ViewModelDelegate & MessagePresentable {
+protocol SettingsViewModelDelegate: TableViewModelDelegate, MessagePresentable {
 
-    func setupDefault(displayModel: SettingsDisplayModel)
-    func update(editing: Bool)
+    func updateButtons(enabled: Bool, editing: Bool)
 
 }
 
 protocol SettingsViewModelType: ViewModelType {
 
     var saveButtonTitle: String { get }
+    var editButtonTitle: String { get }
 
-    func shouldEnableSaveButton(displayModel: SettingsDisplayModel) -> Bool
+    func viewWillAppear()
+    func saveButtonTapped()
     func editButtonTapped()
-    func saveButtonTapped(with displayModel: SettingsDisplayModel?)
-    func formatted(amount: String, original: String) -> String
-    func numberOfComponentsInPickerView() -> Int
-    func pickerViewNumberOfRowsIn(component: Int) -> Int
-    func pickerViewTitle(for row: Int, for component: Int) -> String?
-    func pickerViewRowInComponent(for payday: String) -> (row: Int, component: Int)
     func dismissTapped()
 
 }
 
-class SettingsViewModel: ServiceClient {
+class SettingsViewModel: ServiceClient, TableViewModelType {
 
     typealias ServiceProvider = NavigatorProvider
         & NetworkServiceProvider
@@ -38,20 +33,39 @@ class SettingsViewModel: ServiceClient {
 
     private let userBusinessLogic: UserBusinessLogic
 
-    private let paydayValues: [String] = {
-        return Array(1...28).map { "\($0)" }
-    }()
-
     private var isEditing = false
+
+    private let nameModel: TextInputCellModelForViewModelType
+    private let amountLimitModel: AmountInputCellModelForViewModelType
+    private let paydayModel: PaydayInputCellModelForViewModelType
+    private let startDateModel: DateInputCellModelForViewModelType
 
     private weak var delegate: SettingsViewModelDelegate?
     private weak var dataDelegate: SettingsViewModelDataDelegate?
+
+    var sections = [TableViewSection]() {
+        didSet {
+            updateSections(new: sections, old: oldValue)
+        }
+    }
+
+    var tableViewController: TableViewController?
 
     init(serviceProvider: ServiceProvider,
          dataDelegate: SettingsViewModelDataDelegate?) {
         self.serviceProvider = serviceProvider
         self.dataDelegate = dataDelegate
         self.userBusinessLogic = UserBusinessLogic(serviceProvider: serviceProvider)
+
+        nameModel = TextInputCellModel(label: "Name", placeholder: "John")
+        amountLimitModel = AmountInputCellModel(label: "Amount Limit")
+        paydayModel = PaydayInputCellModel()
+        startDateModel = DateInputCellModel(label: "Start Date", mode: .date)
+
+        nameModel.viewModelDelegate = self
+        amountLimitModel.viewModelDelegate = self
+        paydayModel.paydayViewModelDelegate = self
+        startDateModel.viewModelDelegate = self
     }
 
 }
@@ -64,9 +78,18 @@ extension SettingsViewModel: SettingsViewModelType {
         return isEditing ? SettingsDisplayModel.saveButtonTitle : SettingsDisplayModel.logOutButtonTitle
     }
 
+    var editButtonTitle: String {
+        return isEditing ? SettingsDisplayModel.cancelButtonTitle : SettingsDisplayModel.editButtonTitle
+    }
+
     func viewDidLoad() {
-        setupDefaults()
-        delegate?.update(editing: isEditing)
+        setupTableView()
+    }
+
+    func viewWillAppear() {
+        DispatchQueue.main.async {
+            self.updateButtons()
+        }
     }
 
     func inject(delegate: ViewModelDelegate) {
@@ -74,63 +97,30 @@ extension SettingsViewModel: SettingsViewModelType {
         self.delegate = delegate
     }
 
-    func shouldEnableSaveButton(displayModel: SettingsDisplayModel) -> Bool {
-        if isEditing {
-        guard let largeTransaction = Formatters.createAmount(from: displayModel.largeTransaction),
-            largeTransaction != 0,
-            displayModel.name.components(separatedBy: .whitespaces).joined() != "" else { return false }
-        }
-
-        return  true
-    }
-
     func editButtonTapped() {
         isEditing = !isEditing
-        delegate?.update(editing: isEditing)
-
-        if isEditing == false {
-            setupDefaults()
-        }
+        if isEditing == false { setupDefaults() }
+        tableViewController?.updateCells()
+        updateButtons()
     }
 
-    func saveButtonTapped(with displayModel: SettingsDisplayModel?) {
+    func saveButtonTapped() {
         if isEditing {
-            guard let displayModel = displayModel,
-                let largeTransaction = Formatters.createAmount(from: displayModel.largeTransaction),
-                let payday = Int(displayModel.payday) else { return }
+            guard let name = nameModel.currentValue,
+                let largeTransaction = amountLimitModel.currentValue else { return }
 
-            let user = User(name: displayModel.name,
+            let payday = paydayModel.currentPaydayValue.intValue
+            let startDate = startDateModel.currentValue
+
+            let user = User(name: name,
                             payday: payday,
-                            startDate: displayModel.startDate,
+                            startDate: startDate,
                             largeTransaction: largeTransaction)
             save(user: user)
 
         } else {
-            serviceProvider.dataService.removeAll()
-            serviceProvider.navigator.popToRoot()
+            logOut()
         }
-    }
-
-    func formatted(amount: String, original: String) -> String {
-        let sanitisedAmount = Formatters.sanitise(amount: amount)
-
-        return validate(amount: sanitisedAmount) ? sanitisedAmount : original
-    }
-
-    func numberOfComponentsInPickerView() -> Int {
-        return 1
-    }
-
-    func pickerViewNumberOfRowsIn(component: Int) -> Int {
-        return paydayValues.count
-    }
-
-    func pickerViewTitle(for row: Int, for component: Int) -> String? {
-        return paydayValues[row]
-    }
-
-    func pickerViewRowInComponent(for payday: String) -> (row: Int, component: Int) {
-        return ((paydayValues.index(of: payday) ?? 0), 0)
     }
 
     func dismissTapped() {
@@ -139,25 +129,81 @@ extension SettingsViewModel: SettingsViewModelType {
 
 }
 
+extension SettingsViewModel: InputCellModelViewModelDelegate {
+
+    func isEnabled(inputCell: InputCellModelForViewModelType) -> Bool {
+        return isEditing
+    }
+
+    func returnKeyType(inputCell: InputCellModelForViewModelType) -> UIReturnKeyType { return .done }
+
+    func didChangeValue() {
+        updateButtons()
+    }
+
+}
+
+extension SettingsViewModel: AmountInputCellModelViewModelDelegate {}
+extension SettingsViewModel: TextInputCellModelViewModelDelegate {}
+extension SettingsViewModel: PaydayInputCellModelViewModelDelegate {}
+extension SettingsViewModel: DateInputCellModelViewModelDelegate {
+
+    func defaultValue(amountCell: AmountInputCellModelForViewModelType) -> Double? {
+        return User.load(dataService: serviceProvider.dataService)?.largeTransaction ?? 0
+    }
+
+    func defaultValue(textCell: TextInputCellModelForViewModelType) -> String? {
+        return User.load(dataService: serviceProvider.dataService)?.name
+    }
+
+    func defaultValue(paydayCell: PaydayInputCellModelForViewModelType) -> Payday {
+        guard let payday = User.load(dataService: serviceProvider.dataService)?.payday else {
+            return Paydays.values[0]
+        }
+        return Payday(intValue: payday)
+    }
+
+    func defaultValue(dateCell: DateInputCellModelForViewModelType) -> Date {
+        return User.load(dataService: serviceProvider.dataService)?.startDate ?? Date()
+    }
+
+}
+
 // MARK: - Private methods
 
 extension SettingsViewModel {
 
-    func setupDefaults() {
-        guard let user = User.load(dataService: serviceProvider.dataService),
-            let largeTransaction = Formatters.currency
-                .string(from: NSNumber(value: user.largeTransaction)) else { return }
+    private func setupTableView() {
+        sections = [TableViewSection(cellModels: [nameModel.wrap,
+                                                  amountLimitModel.wrap,
+                                                  paydayModel.wrap,
+                                                  startDateModel.wrap])]
 
-        let displayModel = SettingsDisplayModel(name: user.name,
-                                                largeTransaction: largeTransaction,
-                                                payday: "\(user.payday)",
-            startDate: user.startDate)
+        guard let tableView = delegate?.tableView else { return }
 
-        delegate?.setupDefault(displayModel: displayModel)
+        tableViewController = TableViewController(tableView: tableView,
+                                                  cells: [InputTableViewCell.self],
+                                                  viewModel: self)
+        tableViewController?.updateCells()
     }
 
-    private func validate(amount: String) -> Bool {
-        return Validators.validate(amount: amount)
+    private func setupDefaults() {
+        guard let user = User.load(dataService: serviceProvider.dataService) else { return }
+
+        nameModel.update(value: user.name)
+        amountLimitModel.update(value: user.largeTransaction)
+        paydayModel.update(payday: Payday(intValue: user.payday))
+        startDateModel.update(value: user.startDate)
+    }
+
+    private func updateButtons() {
+        let enabled = isEditing ? isValid : true
+        delegate?.updateButtons(enabled: enabled, editing: isEditing)
+    }
+
+    private func logOut() {
+        serviceProvider.dataService.removeAll()
+        serviceProvider.navigator.popToRoot()
     }
 
     private func save(user: User) {

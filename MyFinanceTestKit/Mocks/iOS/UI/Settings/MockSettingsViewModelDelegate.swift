@@ -2,20 +2,12 @@
 
 class MockSettingsViewModelDelegate: SettingsViewModelDelegate {
 
-    var didCallSetupDefault = false
-    var didCallUpdate = false
-    var didCallDismiss = false
+    var lastUpdateButtonsValue: (enabled: Bool, editing: Bool)?
 
-    func setupDefault(displayModel: SettingsDisplayModel) {
-        didCallSetupDefault = true
-    }
+    var tableView: TableViewType = UITableView()
 
-    func update(editing: Bool) {
-        didCallUpdate = true
-    }
-
-    func dismiss(_ sender: AnyObject) {
-        didCallDismiss = true
+    func updateButtons(enabled: Bool, editing: Bool) {
+        lastUpdateButtonsValue = (enabled: enabled, editing: editing)
     }
 
 }

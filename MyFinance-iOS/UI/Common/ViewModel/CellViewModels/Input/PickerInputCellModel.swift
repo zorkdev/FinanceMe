@@ -9,6 +9,8 @@ protocol PickerInputCellModelForViewModelType: InputCellModelForViewModelType {
     var viewModelDelegate: PickerInputCellModelViewModelDelegate? { get set }
     var currentValue: Describable { get }
 
+    func update(value: Describable)
+
 }
 
 class PickerInputCellModel: NSObject {
@@ -21,7 +23,18 @@ class PickerInputCellModel: NSObject {
     let label: String
 
     private let picker = UIPickerView()
-    private var cachedValue: Describable?
+
+    private var cachedValue: Describable? {
+        didSet {
+            var row = 0
+            if let value = cachedValue,
+                let index = rows.index(where: { $0.description == value.description }) {
+                row = index
+            }
+            picker.selectRow(row, inComponent: 0, animated: false)
+        }
+    }
+
     private let rows: [Describable]
 
     init(label: String, rows: [Describable]) {
@@ -74,6 +87,11 @@ extension PickerInputCellModel: PickerInputCellModelForViewModelType {
 
     func becomeFirstResponder() {
         viewDelegate?.becomeFirstResponder()
+    }
+
+    func update(value: Describable) {
+        cachedValue = value
+        viewDelegate?.update(value: value.description)
     }
 
 }

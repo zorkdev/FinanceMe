@@ -9,6 +9,8 @@ protocol PaydayInputCellModelForViewModelType: InputCellModelForViewModelType {
     var paydayViewModelDelegate: PaydayInputCellModelViewModelDelegate? { get set }
     var currentPaydayValue: Payday { get }
 
+    func update(payday: Payday)
+
 }
 
 class PaydayInputCellModel: PickerInputCellModel {
@@ -26,6 +28,10 @@ extension PaydayInputCellModel: PaydayInputCellModelForViewModelType {
 
     var currentPaydayValue: Payday {
         return currentValue as! Payday
+    }
+
+    func update(payday: Payday) {
+        update(value: payday)
     }
 
 }

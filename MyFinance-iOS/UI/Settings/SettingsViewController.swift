@@ -1,94 +1,30 @@
-class SettingsViewController: BaseViewController, KeyboardManageable {
+class SettingsViewController: BaseViewController, KeyboardManageable, TableViewContainer {
 
-    @IBOutlet private weak var nameField: UITextField!
-    @IBOutlet private weak var largeTransactionField: UITextField!
-    @IBOutlet private weak var paydayField: UITextField!
-    @IBOutlet private weak var startDateField: UITextField!
+    @IBOutlet weak var uiTableView: UITableView!
     @IBOutlet private weak var editButton: UIButton!
     @IBOutlet private weak var saveButton: UIButton!
 
-    private let startDatePicker = UIDatePicker()
-    private var selectedDate = Date()
-
-    private let paydayPicker = UIPickerView()
-
     var viewModel: SettingsViewModelType!
-
-    weak var dataDelegate: SettingsViewModelDataDelegate?
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        setupTextFields()
         viewModel.viewDidLoad()
     }
 
-    private func setupTextFields() {
-        if UIDevice.current.userInterfaceIdiom == .phone {
-            largeTransactionField.inputAccessoryView =
-                KeyboardToolbar(doneAction: { self.view.endEditing(true) }).toolbar
-        }
-
-        startDatePicker.datePickerMode = .date
-        startDatePicker.addTarget(self,
-                                  action: #selector(startDatePickerValueChanged(_:)),
-                                  for: .valueChanged)
-        startDateField.inputView = startDatePicker
-        startDateField.inputAccessoryView = KeyboardToolbar(doneAction: { self.view.endEditing(true) }).toolbar
-        startDateField.tintColor = .clear
-
-        paydayPicker.delegate = self
-        paydayPicker.dataSource = self
-        paydayField.inputView = paydayPicker
-        paydayField.inputAccessoryView = KeyboardToolbar(doneAction: { self.view.endEditing(true) }).toolbar
-        paydayField.tintColor = .clear
-
-        updateSaveButton()
-    }
-
-    private func updateSaveButton() {
-        let settingsDisplayModel = SettingsDisplayModel(name: nameField.text ?? "",
-                                                        largeTransaction: largeTransactionField.text ?? "",
-                                                        payday: paydayField.text ?? "",
-                                                        startDate: selectedDate)
-
-        let shouldEnable = viewModel.shouldEnableSaveButton(displayModel: settingsDisplayModel)
-
-        saveButton.isEnabled = shouldEnable
-        saveButton.setTitle(viewModel.saveButtonTitle, for: .normal)
-
-        UIView.animate(withDuration: SettingsDisplayModel.buttonAnimationDuration) {
-            self.saveButton.alpha = shouldEnable ? SettingsDisplayModel.buttonEnabledAlpha :
-                SettingsDisplayModel.buttonDisabledAlpha
-        }
-    }
-
-    @objc private func startDatePickerValueChanged(_ sender: UIDatePicker) {
-        selectedDate = sender.date
-        startDateField.text = SettingsDisplayModel.dateString(from: selectedDate)
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        viewModel.viewWillAppear()
     }
 
     @IBAction private func saveButtonTapped(_ sender: UIButton) {
-        guard let name = nameField.text,
-            name.components(separatedBy: .whitespaces)
-                .joined() != "",
-            let largeTransaction = largeTransactionField.text,
-            largeTransaction.components(separatedBy: .whitespaces)
-                .joined() != "" else { return }
-
-        let settingsDisplayModel = SettingsDisplayModel(name: name,
-                                                        largeTransaction: largeTransaction,
-                                                        payday: paydayField.text ?? "",
-                                                        startDate: selectedDate)
-
-        viewModel.saveButtonTapped(with: settingsDisplayModel)
+        viewModel.saveButtonTapped()
     }
 
-    @IBAction func editButtonTapped(_ sender: UIButton) {
+    @IBAction private func editButtonTapped(_ sender: UIButton) {
         viewModel.editButtonTapped()
     }
 
-    @IBAction func dismissTapped(_ sender: UIButton) {
+    @IBAction private func dismissTapped(_ sender: UIButton) {
         viewModel.dismissTapped()
     }
 
@@ -105,84 +41,15 @@ extension SettingsViewController: ViewModelInjectable {
 
 extension SettingsViewController: SettingsViewModelDelegate {
 
-    func setupDefault(displayModel: SettingsDisplayModel) {
-        nameField.text = displayModel.name
-        largeTransactionField.text = displayModel.largeTransaction
-        paydayField.text = displayModel.payday
-        let selection = viewModel.pickerViewRowInComponent(for: displayModel.payday)
-        paydayPicker.selectRow(selection.row, inComponent: selection.component, animated: false)
-        startDateField.text = SettingsDisplayModel.dateString(from: displayModel.startDate)
-        selectedDate = displayModel.startDate
-        startDatePicker.setDate(selectedDate, animated: false)
-        updateSaveButton()
-    }
+    func updateButtons(enabled: Bool, editing: Bool) {
+        saveButton.isEnabled = enabled
+        saveButton.setTitle(viewModel.saveButtonTitle, for: .normal)
+        editButton.setTitle(viewModel.editButtonTitle, for: .normal)
 
-    func update(editing: Bool) {
-        nameField.textColor = editing ? ColorPalette.secondary : ColorPalette.lightText
-        largeTransactionField.textColor = editing ? ColorPalette.secondary : ColorPalette.lightText
-        paydayField.textColor = editing ? ColorPalette.secondary : ColorPalette.lightText
-        startDateField.textColor = editing ? ColorPalette.secondary : ColorPalette.lightText
-
-        nameField.isEnabled = editing
-        largeTransactionField.isEnabled = editing
-        paydayField.isEnabled = editing
-        startDateField.isEnabled = editing
-        let editButtonTitle = editing ? SettingsDisplayModel.cancelButtonTitle :
-                                        SettingsDisplayModel.editButtonTitle
-        editButton.setTitle(editButtonTitle, for: .normal)
-
-        updateSaveButton()
-
-        if editing {
-            nameField.becomeFirstResponder()
+        UIView.animate(withDuration: SettingsDisplayModel.buttonAnimationDuration) {
+            self.saveButton.alpha = enabled ? SettingsDisplayModel.buttonEnabledAlpha :
+                SettingsDisplayModel.buttonDisabledAlpha
         }
-    }
-
-}
-
-extension SettingsViewController: UIPickerViewDelegate, UIPickerViewDataSource {
-
-    func numberOfComponents(in pickerView: UIPickerView) -> Int {
-        return viewModel.numberOfComponentsInPickerView()
-    }
-
-    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        return viewModel.pickerViewNumberOfRowsIn(component: component)
-    }
-
-    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        return viewModel.pickerViewTitle(for: row, for: component)
-    }
-
-    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        paydayField.text = viewModel.pickerViewTitle(for: row, for: component)
-    }
-
-}
-
-extension SettingsViewController {
-
-    @IBAction private func textFieldValueChanged(_ sender: UITextField) {
-        updateSaveButton()
-    }
-
-    private func textFieldShouldBeginEditing(_ textField: UITextField) -> Bool {
-        startDatePicker.maximumDate = Date()
-        return true
-    }
-
-    private func textField(_ textField: UITextField,
-                           shouldChangeCharactersIn range: NSRange,
-                           replacementString string: String) -> Bool {
-        guard textField == largeTransactionField,
-            let originalText = textField.text,
-            let range = Range(range, in: originalText)  else { return true }
-
-        let text = originalText.replacingCharacters(in: range, with: string)
-        textField.text = viewModel.formatted(amount: text, original: originalText)
-        updateSaveButton()
-
-        return false
     }
 
 }

@@ -21,6 +21,15 @@ class LoginViewController: BaseViewController, KeyboardManageable, TableViewCont
 
 }
 
+extension LoginViewController: ViewModelInjectable {
+
+    func inject(viewModel: ViewModelType) {
+        guard let viewModel = viewModel as? LoginViewModelType else { return }
+        self.viewModel = viewModel
+    }
+
+}
+
 extension LoginViewController: LoginViewModelDelegate {
 
     func updateLoginButton(enabled: Bool) {
@@ -30,15 +39,6 @@ extension LoginViewController: LoginViewModelDelegate {
             self.loginButton.alpha = enabled ? LoginDisplayModel.buttonEnabledAlpha :
                                                LoginDisplayModel.buttonDisabledAlpha
         }
-    }
-
-}
-
-extension LoginViewController: ViewModelInjectable {
-
-    func inject(viewModel: ViewModelType) {
-        guard let viewModel = viewModel as? LoginViewModelType else { return }
-        self.viewModel = viewModel
     }
 
 }

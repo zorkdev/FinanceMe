@@ -1,8 +1,8 @@
 import MyFinanceKit
 
 struct MockTodayDisplayModel: TodayDisplayModelType {
-    var positiveColor: Color = .white
-    var negativeColor: Color = .black
-    var largeFontSize: CGFloat = 20
-    var smallFontSize: CGFloat = 10
+    static var positiveColor: Color = .white
+    static var negativeColor: Color = .black
+    static var largeFontSize: CGFloat = 20
+    static var smallFontSize: CGFloat = 10
 }

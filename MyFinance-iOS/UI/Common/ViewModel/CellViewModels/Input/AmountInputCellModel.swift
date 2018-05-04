@@ -9,6 +9,8 @@ protocol AmountInputCellModelForViewModelType: InputCellModelForViewModelType {
     var viewModelDelegate: AmountInputCellModelViewModelDelegate? { get set }
     var currentValue: Double? { get }
 
+    func update(value: Double?)
+
 }
 
 class AmountInputCellModel {
@@ -92,6 +94,15 @@ extension AmountInputCellModel: AmountInputCellModelForViewModelType {
 
     func becomeFirstResponder() {
         viewDelegate?.becomeFirstResponder()
+    }
+
+    func update(value: Double?) {
+        var valueString = ""
+        if let value = value {
+            valueString = formatter.string(from: value)
+        }
+        cachedValue = valueString
+        viewDelegate?.update(value: valueString)
     }
 
 }
