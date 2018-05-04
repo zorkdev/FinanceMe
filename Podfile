@@ -3,7 +3,8 @@ inhibit_all_warnings!
 
 abstract_target 'MyFinance' do
     pod 'SwiftLint'
-    pod 'PromiseKit'
+    pod 'PromiseKit/CorePromise'
+    pod 'PromiseKit/Foundation'
 
     abstract_target 'iOS' do
         platform :ios, '11.2'
