@@ -1,9 +1,9 @@
 #if os(macOS)
-    public typealias Color = NSColor
-    public typealias Font = NSFont
+public typealias Color = NSColor
+public typealias Font = NSFont
 #elseif os(iOS) || os(watchOS) || os(tvOS)
-    public typealias Color = UIColor
-    public typealias Font = UIFont
+public typealias Color = UIColor
+public typealias Font = UIFont
 #endif
 
 public struct ColorPalette {
@@ -21,13 +21,13 @@ public struct ColorPalette {
                                         green: 242/255.0,
                                         blue: 242/255.0,
                                         alpha: 1)
-    public static let darkText = UIColor.darkGray
+    public static let darkText = Color.darkGray
 
-    public static let green = UIColor(red: 103/255.0,
-                                  green: 184/255.0,
-                                  blue: 82/255.0,
-                                  alpha: 1)
-    public static let red = UIColor(red: 209/255.0,
+    public static let green = Color(red: 103/255.0,
+                                    green: 184/255.0,
+                                    blue: 82/255.0,
+                                    alpha: 1)
+    public static let red = Color(red: 209/255.0,
                                   green: 69/255.0,
                                   blue: 58/255.0,
                                   alpha: 1)

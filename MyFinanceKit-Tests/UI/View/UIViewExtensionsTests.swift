@@ -39,9 +39,9 @@ class UIViewExtensionsTests: XCTestCase {
         XCTAssertNil(view.shadowColor)
 
         view.shadowColor = .red
-        XCTAssertEqual(view.layer.shadowColor, UIColor.red.cgColor)
+        XCTAssertEqual(view.layer.shadowColor, Color.red.cgColor)
 
-        view.layer.shadowColor = UIColor.blue.cgColor
+        view.layer.shadowColor = Color.blue.cgColor
         XCTAssertEqual(view.shadowColor, .blue)
     }
 

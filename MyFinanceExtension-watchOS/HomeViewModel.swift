@@ -2,8 +2,8 @@ import MyFinanceKit
 
 struct HomeDisplayModel: TodayDisplayModelType {
 
-    static let positiveColor = UIColor.white
-    static let negativeColor = UIColor.red
+    static let positiveColor = Color.white
+    static let negativeColor = Color.red
     static let largeFontSize: CGFloat = 36
     static let smallFontSize: CGFloat = 16
 

@@ -4,7 +4,10 @@ public protocol TableViewType: class {
     var dataSource: UITableViewDataSource? { get set }
     var rowHeight: CGFloat { get set }
     var contentInset: UIEdgeInsets { get set }
+
+    #if os(iOS)
     var refreshControl: UIRefreshControl? { get set }
+    #endif
 
     func register(_ nib: UINib?, forCellReuseIdentifier identifier: String)
     func reloadData()
