@@ -91,7 +91,6 @@ extension BalancesTableViewModel {
                                                           CurrentMonthTableViewCell.self,
                                                           ChartTableViewCell.self],
                                                   viewModel: self)
-        tableViewController?.updateCells()
     }
 
     private func updateEndOfMonthSummaries() {

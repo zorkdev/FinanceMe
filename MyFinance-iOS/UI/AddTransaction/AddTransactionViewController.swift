@@ -10,11 +10,6 @@ class AddTransactionViewController: BaseViewController, KeyboardManageable, Tabl
         viewModel.viewDidLoad()
     }
 
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        viewModel.viewWillAppear()
-    }
-
     @IBAction private func saveButtonTapped(_ sender: UIButton) {
         viewModel.saveButtonTapped()
     }

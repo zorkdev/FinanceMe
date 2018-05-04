@@ -15,7 +15,6 @@ protocol SettingsViewModelType: ViewModelType {
     var saveButtonTitle: String { get }
     var editButtonTitle: String { get }
 
-    func viewWillAppear()
     func saveButtonTapped()
     func editButtonTapped()
     func dismissTapped()
@@ -68,6 +67,10 @@ class SettingsViewModel: ServiceClient, TableViewModelType {
         startDateModel.viewModelDelegate = self
     }
 
+    func didFinishLoadingTableView() {
+        updateButtons()
+    }
+
 }
 
 // MARK: Interface
@@ -84,12 +87,6 @@ extension SettingsViewModel: SettingsViewModelType {
 
     func viewDidLoad() {
         setupTableView()
-    }
-
-    func viewWillAppear() {
-        DispatchQueue.main.async {
-            self.updateButtons()
-        }
     }
 
     func inject(delegate: ViewModelDelegate) {
@@ -184,7 +181,6 @@ extension SettingsViewModel {
         tableViewController = TableViewController(tableView: tableView,
                                                   cells: [InputTableViewCell.self],
                                                   viewModel: self)
-        tableViewController?.updateCells()
     }
 
     private func setupDefaults() {

@@ -3,7 +3,6 @@
 class MockSettingsViewModel: SettingsViewModelType {
 
     var didCallViewDidLoad = false
-    var didCallViewWillAppear = false
     var didCallEditButtonTapped = false
     var didCallSaveButtonTapped = false
     var didCallDismissTapped = false
@@ -19,10 +18,6 @@ class MockSettingsViewModel: SettingsViewModelType {
 
     func viewDidLoad() {
         didCallViewDidLoad = true
-    }
-
-    func viewWillAppear() {
-        didCallViewWillAppear = true
     }
 
     func editButtonTapped() {

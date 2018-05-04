@@ -13,7 +13,6 @@ protocol AddTransactionViewModelDelegate: TableViewModelDelegate, MessagePresent
 
 protocol AddTransactionViewModelType: ViewModelType {
 
-    func viewWillAppear()
     func saveButtonTapped()
     func dismissTapped()
 
@@ -70,6 +69,11 @@ class AddTransactionViewModel: ServiceClient, TableViewModelType {
         dateModel.viewModelDelegate = self
     }
 
+    func didFinishLoadingTableView() {
+        self.delegate?.updateSaveButton(enabled: self.isValid)
+        (self.sections.first?.cellModels.first?.wrapped as? InputCellModelForViewModelType)?.becomeFirstResponder()
+    }
+
 }
 
 // MARK: Interface
@@ -78,13 +82,6 @@ extension AddTransactionViewModel: AddTransactionViewModelType {
 
     func viewDidLoad() {
         setupTableView()
-    }
-
-    func viewWillAppear() {
-        DispatchQueue.main.async {
-            self.delegate?.updateSaveButton(enabled: self.isValid)
-            (self.sections.first?.cellModels.first?.wrapped as? InputCellModelForViewModelType)?.becomeFirstResponder()
-        }
     }
 
     func inject(delegate: ViewModelDelegate) {
@@ -178,7 +175,6 @@ extension AddTransactionViewModel {
         tableViewController = TableViewController(tableView: tableView,
                                                   cells: [InputTableViewCell.self],
                                                   viewModel: self)
-        tableViewController?.updateCells()
     }
 
     private func save(transaction: Transaction) {

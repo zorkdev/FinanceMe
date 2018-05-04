@@ -17,6 +17,7 @@ class TableViewController: NSObject {
 
     private let tableView: TableViewType
     private let viewModel: TableViewModelType
+    private var isLoading = true
 
     init(tableView: TableViewType,
          cells: [TableViewCellType.Type],
@@ -78,12 +79,23 @@ extension TableViewController: UITableViewDataSource {
         return tableViewCell
     }
 
+    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        if isLoading {
+            isLoading = false
+            DispatchQueue.main.async {
+                self.viewModel.didFinishLoadingTableView()
+            }
+        }
+    }
+
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         return viewModel.sections[section].title
     }
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        viewModel.didSelect(indexPath: indexPath)
+        DispatchQueue.main.async {
+            self.viewModel.didSelect(indexPath: indexPath)
+        }
     }
 
     func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {

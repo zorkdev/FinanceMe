@@ -10,11 +10,6 @@ class LoginViewController: BaseViewController, KeyboardManageable, TableViewCont
         viewModel.viewDidLoad()
     }
 
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        viewModel.viewWillAppear()
-    }
-
     @IBAction private func loginButtonTapped(_ sender: UIButton) {
         viewModel.loginButtonTapped()
     }

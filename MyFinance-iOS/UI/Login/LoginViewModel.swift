@@ -6,7 +6,6 @@ protocol LoginViewModelDelegate: TableViewModelDelegate, MessagePresentable {
 
 protocol LoginViewModelType: ViewModelType {
 
-    func viewWillAppear()
     func loginButtonTapped()
 
 }
@@ -56,13 +55,6 @@ extension LoginViewModel: LoginViewModelType {
         setupTableView()
     }
 
-    func viewWillAppear() {
-        DispatchQueue.main.async {
-            self.delegate?.updateLoginButton(enabled: self.isValid)
-            (self.sections.first?.cellModels.first?.wrapped as? InputCellModelForViewModelType)?.becomeFirstResponder()
-        }
-    }
-
     func inject(delegate: ViewModelDelegate) {
         guard let delegate = delegate as? LoginViewModelDelegate else { return }
         self.delegate = delegate
@@ -75,6 +67,11 @@ extension LoginViewModel: LoginViewModelType {
         let credentials = Credentials(email: email,
                                       password: password)
         login(credentials: credentials)
+    }
+
+    func didFinishLoadingTableView() {
+        delegate?.updateLoginButton(enabled: isValid)
+        (sections.first?.cellModels.first?.wrapped as? InputCellModelForViewModelType)?.becomeFirstResponder()
     }
 
 }
@@ -105,7 +102,6 @@ extension LoginViewModel {
         tableViewController = TableViewController(tableView: tableView,
                                                   cells: [InputTableViewCell.self],
                                                   viewModel: self)
-        tableViewController?.updateCells()
     }
 
     private func clearFields() {

@@ -101,7 +101,6 @@ extension FeedTableViewModel {
         tableViewController = TableViewController(tableView: tableView,
                                                   cells: [BasicTableViewCell.self],
                                                   viewModel: self)
-        tableViewController?.updateCells()
     }
 
     private func createSections() {

@@ -44,6 +44,7 @@ protocol TableViewModelType: class {
     var tableViewController: TableViewController? { get set }
     var isValid: Bool { get }
 
+    func didFinishLoadingTableView()
     func updateSections(new: [TableViewSection], old: [TableViewSection])
     func didSelect(indexPath: IndexPath)
     func didDelete(indexPath: IndexPath)
@@ -58,6 +59,8 @@ extension TableViewModelType {
             .compactMap({ ($0.wrapped as? InputCellModelForViewModelType)?.isValid })
             .reduce(true) { $0 && $1 }
     }
+
+    func didFinishLoadingTableView() {}
 
     func updateSections(new: [TableViewSection], old: [TableViewSection]) {
         var tableViewUpdate = TableViewUpdate()
