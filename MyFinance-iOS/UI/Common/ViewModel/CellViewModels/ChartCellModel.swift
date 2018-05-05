@@ -30,7 +30,7 @@ class ChartCellModel {
 
     class CurrencyValueFormatter: NSObject, IAxisValueFormatter {
         public func stringForValue(_ value: Double, axis: AxisBase?) -> String {
-            return Formatters.currencyNoFractions.string(from: NSNumber(value: value)) ?? ""
+            return Formatters.currencyNoFractions.string(from: value)
         }
     }
 

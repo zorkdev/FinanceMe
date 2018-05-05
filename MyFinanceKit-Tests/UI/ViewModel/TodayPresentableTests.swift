@@ -88,9 +88,4 @@ class TodayPresentableTests: ServiceClientTestCase {
         }
     }
 
-    func testCreateAttributedString() {
-        XCTAssertEqual(mockTodayPresentable?.createAttributedString(from: 10).string, "£10.00")
-        XCTAssertEqual(mockTodayPresentable?.createAttributedString(from: -10).string, "-£10.00")
-    }
-
 }

@@ -30,11 +30,9 @@ class FeedTableViewModel {
         }
     }
 
-    var tableViewController: TableViewController?
+    var tableViewController: TableViewControllerType?
 
     weak var delegate: FeedTableViewModelDelegate?
-
-    init() {}
 
 }
 
@@ -94,13 +92,11 @@ extension FeedTableViewModel {
 
     private func setupTableView() {
         guard let tableView = delegate?.tableView(forModel: self) else { return }
+
         tableView.contentInset = HomeDisplayModel.tableViewInsets
         refreshControl.addTarget(self, action: #selector(didTapRefresh), for: .valueChanged)
         tableView.refreshControl = refreshControl
-
-        tableViewController = TableViewController(tableView: tableView,
-                                                  cells: [BasicTableViewCell.self],
-                                                  viewModel: self)
+        setup(tableView: tableView, cells: [BasicTableViewCell.self])
     }
 
     private func createSections() {

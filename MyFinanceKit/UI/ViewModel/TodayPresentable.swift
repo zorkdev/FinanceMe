@@ -32,24 +32,18 @@ public extension TodayPresentable {
     public func setupDefaults() {
         guard let balance = Balance.load(dataService: serviceProvider.dataService),
             let user = User.load(dataService: serviceProvider.dataService) else { return }
-        let balanceAttributedString = createAttributedString(from: balance.effectiveBalance)
+        let balanceAttributedString = type(of: displayModel).attributedString(from: balance.effectiveBalance)
         delegate?.set(balance: balanceAttributedString)
-        let allowanceAttributedString = createAttributedString(from: user.allowance)
+        let allowanceAttributedString = type(of: displayModel).attributedString(from: user.allowance)
         let allowanceIcon = SpendingBusinessLogic().allowanceIcon(for: user)
         delegate?.set(allowance: allowanceAttributedString)
         delegate?.set(allowanceIcon: allowanceIcon)
     }
 
-    public func createAttributedString(from amount: Double) -> NSAttributedString {
-        let currencyString = Formatters.currency
-            .string(from: NSNumber(value: amount)) ?? type(of: displayModel).defaultAmount
-        return type(of: displayModel).amountAttributedString(from: currencyString)
-    }
-
     @discardableResult public func getBalance() -> Promise<Void> {
         return BalanceBusinessLogic(serviceProvider: serviceProvider)
             .getBalance().done { balance in
-            let balanceAttributedString = self.createAttributedString(from: balance.effectiveBalance)
+            let balanceAttributedString = type(of: self.displayModel).attributedString(from: balance.effectiveBalance)
             self.delegate?.set(balance: balanceAttributedString)
         }
     }
@@ -57,7 +51,7 @@ public extension TodayPresentable {
     @discardableResult public func getUser() -> Promise<Void> {
         return UserBusinessLogic(serviceProvider: serviceProvider)
             .getCurrentUser().done { user in
-                let allowanceAttributedString = self.createAttributedString(from: user.allowance)
+                let allowanceAttributedString = type(of: self.displayModel).attributedString(from: user.allowance)
                 let allowanceIcon = SpendingBusinessLogic().allowanceIcon(for: user)
                 self.delegate?.set(allowance: allowanceAttributedString)
                 self.delegate?.set(allowanceIcon: allowanceIcon)

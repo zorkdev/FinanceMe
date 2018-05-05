@@ -2,7 +2,10 @@
 
 class MockLaunchViewModel: LaunchViewModelType {
 
-    func viewDidAppear() {}
+    var didCallViewDidAppear = false
+    func viewDidAppear() {
+        didCallViewDidAppear = true
+    }
 
     var lastInjectValue: ViewModelDelegate?
     func inject(delegate: ViewModelDelegate) {

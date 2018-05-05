@@ -51,7 +51,7 @@ class BalancesTableViewModel: ServiceClient, TableViewModelType {
         }
     }
 
-    var tableViewController: TableViewController?
+    var tableViewController: TableViewControllerType?
 
     weak var delegate: BalancesTableViewModelDelegate?
 

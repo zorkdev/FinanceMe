@@ -10,6 +10,7 @@ struct TableViewUpdate {
 protocol TableViewControllerType {
 
     func updateCells()
+    func updateCells(tableViewUpdate: TableViewUpdate)
 
 }
 

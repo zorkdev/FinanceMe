@@ -4,7 +4,7 @@ class MockSettingsViewModelDelegate: SettingsViewModelDelegate {
 
     var lastUpdateButtonsValue: (enabled: Bool, editing: Bool)?
 
-    var tableView: TableViewType = UITableView()
+    var tableView: TableViewType = MockTableView()
 
     func updateButtons(enabled: Bool, editing: Bool) {
         lastUpdateButtonsValue = (enabled: enabled, editing: editing)

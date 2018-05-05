@@ -32,14 +32,17 @@ class LoginViewModel: ServiceClient, TableViewModelType {
         }
     }
 
-    var tableViewController: TableViewController?
+    var tableViewController: TableViewControllerType?
 
     init(serviceProvider: ServiceProvider) {
         self.serviceProvider = serviceProvider
-        self.userBusinessLogic = UserBusinessLogic(serviceProvider: serviceProvider)
+
+        userBusinessLogic = UserBusinessLogic(serviceProvider: serviceProvider)
 
         emailModel = EmailInputCellModel()
         passwordModel = SecureTextInputCellModel(label: LoginDisplayModel.passwordTitle)
+
+        sections = [TableViewSection(cellModels: [emailModel.wrap, passwordModel.wrap])]
 
         emailModel.viewModelDelegate = self
         passwordModel.viewModelDelegate = self
@@ -52,7 +55,8 @@ class LoginViewModel: ServiceClient, TableViewModelType {
 extension LoginViewModel: LoginViewModelType {
 
     func viewDidLoad() {
-        setupTableView()
+        guard let tableView = delegate?.tableView else { return }
+        setup(tableView: tableView, cells: [InputTableViewCell.self])
     }
 
     func inject(delegate: ViewModelDelegate) {
@@ -71,7 +75,7 @@ extension LoginViewModel: LoginViewModelType {
 
     func didFinishLoadingTableView() {
         delegate?.updateLoginButton(enabled: isValid)
-        (sections.first?.cellModels.first?.wrapped as? InputCellModelForViewModelType)?.becomeFirstResponder()
+        becomeFirstResponder()
     }
 
 }
@@ -94,27 +98,11 @@ extension LoginViewModel: TextInputCellModelViewModelDelegate {
 
 extension LoginViewModel {
 
-    private func setupTableView() {
-        sections = [TableViewSection(cellModels: [emailModel.wrap, passwordModel.wrap])]
-
-        guard let tableView = delegate?.tableView else { return }
-
-        tableViewController = TableViewController(tableView: tableView,
-                                                  cells: [InputTableViewCell.self],
-                                                  viewModel: self)
-    }
-
-    private func clearFields() {
-        emailModel.update(value: "")
-        passwordModel.update(value: "")
-    }
-
     private func login(credentials: Credentials) {
         delegate?.showSpinner()
         userBusinessLogic.getSession(credentials: credentials)
             .done { _ in
                 self.serviceProvider.navigator.popToRoot()
-                self.clearFields()
             }.catch { error in
                 self.delegate?.showError(message: error.localizedDescription)
             }.finally {

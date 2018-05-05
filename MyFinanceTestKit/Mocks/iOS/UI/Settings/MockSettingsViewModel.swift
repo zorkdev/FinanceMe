@@ -9,11 +9,11 @@ class MockSettingsViewModel: SettingsViewModelType {
     var lastInjectValue: ViewModelDelegate?
 
     var saveButtonTitle: String {
-        return ""
+        return "saveButtonTitle"
     }
 
     var editButtonTitle: String {
-        return ""
+        return "editButtonTitle"
     }
 
     func viewDidLoad() {

@@ -1,8 +1,8 @@
 class SettingsViewController: BaseViewController, KeyboardManageable, TableViewContainer {
 
     @IBOutlet weak var uiTableView: UITableView!
-    @IBOutlet private weak var editButton: UIButton!
-    @IBOutlet private weak var saveButton: UIButton!
+    @IBOutlet weak var editButton: UIButton!
+    @IBOutlet weak var saveButton: UIButton!
 
     var viewModel: SettingsViewModelType!
 
@@ -11,15 +11,15 @@ class SettingsViewController: BaseViewController, KeyboardManageable, TableViewC
         viewModel.viewDidLoad()
     }
 
-    @IBAction private func saveButtonTapped(_ sender: UIButton) {
+    @IBAction func saveButtonTapped(_ sender: UIButton) {
         viewModel.saveButtonTapped()
     }
 
-    @IBAction private func editButtonTapped(_ sender: UIButton) {
+    @IBAction func editButtonTapped(_ sender: UIButton) {
         viewModel.editButtonTapped()
     }
 
-    @IBAction private func dismissTapped(_ sender: UIButton) {
+    @IBAction func dismissTapped(_ sender: UIButton) {
         viewModel.dismissTapped()
     }
 

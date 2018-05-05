@@ -14,7 +14,7 @@ struct CurrentMonthDisplayModel: TodayDisplayModelType, Identifiable {
 
     init(currentMonthSummary: CurrentMonthSummary) {
         let createString = {
-            CurrentMonthDisplayModel.amountAttributedString(from: CurrentMonthDisplayModel.formatter.string(from: $0))
+            CurrentMonthDisplayModel.attributedString(from: $0)
         }
 
         forecast = createString(currentMonthSummary.forecast)

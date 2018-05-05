@@ -10,14 +10,13 @@ protocol SettingsViewModelDelegate: TableViewModelDelegate, MessagePresentable {
 
 }
 
-protocol SettingsViewModelType: ViewModelType {
+protocol SettingsViewModelType: ViewModelType, Dismissable {
 
     var saveButtonTitle: String { get }
     var editButtonTitle: String { get }
 
     func saveButtonTapped()
     func editButtonTapped()
-    func dismissTapped()
 
 }
 
@@ -48,18 +47,24 @@ class SettingsViewModel: ServiceClient, TableViewModelType {
         }
     }
 
-    var tableViewController: TableViewController?
+    var tableViewController: TableViewControllerType?
 
     init(serviceProvider: ServiceProvider,
          dataDelegate: SettingsViewModelDataDelegate?) {
         self.serviceProvider = serviceProvider
         self.dataDelegate = dataDelegate
-        self.userBusinessLogic = UserBusinessLogic(serviceProvider: serviceProvider)
+
+        userBusinessLogic = UserBusinessLogic(serviceProvider: serviceProvider)
 
         nameModel = TextInputCellModel(label: "Name", placeholder: "John")
         amountLimitModel = AmountInputCellModel(label: "Amount Limit")
         paydayModel = PaydayInputCellModel()
         startDateModel = DateInputCellModel(label: "Start Date", mode: .date)
+
+        sections = [TableViewSection(cellModels: [nameModel.wrap,
+                                                  amountLimitModel.wrap,
+                                                  paydayModel.wrap,
+                                                  startDateModel.wrap])]
 
         nameModel.viewModelDelegate = self
         amountLimitModel.viewModelDelegate = self
@@ -86,7 +91,8 @@ extension SettingsViewModel: SettingsViewModelType {
     }
 
     func viewDidLoad() {
-        setupTableView()
+        guard let tableView = delegate?.tableView else { return }
+        setup(tableView: tableView, cells: [InputTableViewCell.self])
     }
 
     func inject(delegate: ViewModelDelegate) {
@@ -118,10 +124,6 @@ extension SettingsViewModel: SettingsViewModelType {
         } else {
             logOut()
         }
-    }
-
-    func dismissTapped() {
-        serviceProvider.navigator.dismiss()
     }
 
 }
@@ -169,19 +171,6 @@ extension SettingsViewModel: DateInputCellModelViewModelDelegate {
 // MARK: - Private methods
 
 extension SettingsViewModel {
-
-    private func setupTableView() {
-        sections = [TableViewSection(cellModels: [nameModel.wrap,
-                                                  amountLimitModel.wrap,
-                                                  paydayModel.wrap,
-                                                  startDateModel.wrap])]
-
-        guard let tableView = delegate?.tableView else { return }
-
-        tableViewController = TableViewController(tableView: tableView,
-                                                  cells: [InputTableViewCell.self],
-                                                  viewModel: self)
-    }
 
     private func setupDefaults() {
         guard let user = User.load(dataService: serviceProvider.dataService) else { return }

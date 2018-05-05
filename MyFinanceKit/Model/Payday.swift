@@ -1,4 +1,4 @@
-public struct Payday {
+public struct Payday: Equatable {
 
     public let intValue: Int
     public var stringValue: String { return "\(intValue)" }

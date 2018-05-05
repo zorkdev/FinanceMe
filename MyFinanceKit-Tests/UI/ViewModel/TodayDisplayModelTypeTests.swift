@@ -9,8 +9,8 @@ class TodayDisplayModelTypeTests: XCTestCase {
     }
 
     func testAmountAttributedString() {
-        let positiveAmount = MockTodayDisplayModel.amountAttributedString(from: "£10.00")
-        let negativeAmount = MockTodayDisplayModel.amountAttributedString(from: "-£10.00")
+        let positiveAmount = MockTodayDisplayModel.attributedString(from: 10)
+        let negativeAmount = MockTodayDisplayModel.attributedString(from: -10)
 
         XCTAssertEqual(positiveAmount.string, "£10.00")
         XCTAssertEqual(negativeAmount.string, "-£10.00")

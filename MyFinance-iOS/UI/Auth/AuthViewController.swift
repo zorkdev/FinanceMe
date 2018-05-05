@@ -1,7 +1,7 @@
 class AuthViewController: BaseViewController {
 
-    @IBOutlet private weak var logoImageView: UIImageView!
-    @IBOutlet private weak var tryAgainView: UIView!
+    @IBOutlet weak var logoImageView: UIImageView!
+    @IBOutlet weak var tryAgainView: UIView!
 
     var viewModel: AuthViewModelType!
 

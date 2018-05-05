@@ -41,11 +41,9 @@ protocol TableViewModelDelegate: ViewModelDelegate {
 protocol TableViewModelType: class {
 
     var sections: [TableViewSection] { get }
-    var tableViewController: TableViewController? { get set }
-    var isValid: Bool { get }
+    var tableViewController: TableViewControllerType? { get set }
 
     func didFinishLoadingTableView()
-    func updateSections(new: [TableViewSection], old: [TableViewSection])
     func didSelect(indexPath: IndexPath)
     func didDelete(indexPath: IndexPath)
 
@@ -61,6 +59,14 @@ extension TableViewModelType {
     }
 
     func didFinishLoadingTableView() {}
+    func didSelect(indexPath: IndexPath) {}
+    func didDelete(indexPath: IndexPath) {}
+
+    func setup(tableView: TableViewType, cells: [TableViewCellType.Type]) {
+        tableViewController = TableViewController(tableView: tableView,
+                                                  cells: cells,
+                                                  viewModel: self)
+    }
 
     func updateSections(new: [TableViewSection], old: [TableViewSection]) {
         var tableViewUpdate = TableViewUpdate()
@@ -88,7 +94,8 @@ extension TableViewModelType {
         tableViewController?.updateCells(tableViewUpdate: tableViewUpdate)
     }
 
-    func didSelect(indexPath: IndexPath) {}
-    func didDelete(indexPath: IndexPath) {}
+    func becomeFirstResponder() {
+        (sections.first?.cellModels.first?.wrapped as? InputCellModelForViewModelType)?.becomeFirstResponder()
+    }
 
 }

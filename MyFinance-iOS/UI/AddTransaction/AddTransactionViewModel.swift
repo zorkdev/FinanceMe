@@ -11,10 +11,9 @@ protocol AddTransactionViewModelDelegate: TableViewModelDelegate, MessagePresent
 
 }
 
-protocol AddTransactionViewModelType: ViewModelType {
+protocol AddTransactionViewModelType: ViewModelType, Dismissable {
 
     func saveButtonTapped()
-    func dismissTapped()
 
 }
 
@@ -45,7 +44,7 @@ class AddTransactionViewModel: ServiceClient, TableViewModelType {
         }
     }
 
-    var tableViewController: TableViewController?
+    var tableViewController: TableViewControllerType?
 
     init(serviceProvider: ServiceProvider,
          dataDelegate: AddTransactionViewModelDataDelegate?,
@@ -53,15 +52,21 @@ class AddTransactionViewModel: ServiceClient, TableViewModelType {
          transaction: Transaction? = nil) {
         self.serviceProvider = serviceProvider
         self.dataDelegate = dataDelegate
-        self.externalTransactionsBusinessLogic = ExternalTransactionsBusinessLogic(serviceProvider: serviceProvider)
         self.state = state
         self.transaction = transaction
+
+        externalTransactionsBusinessLogic = ExternalTransactionsBusinessLogic(serviceProvider: serviceProvider)
 
         amountModel = AmountInputCellModel(label: AddTransactionDisplayModel.amountTitle)
         descriptionModel = TextInputCellModel(label: AddTransactionDisplayModel.descriptionTitle,
                                               placeholder: AddTransactionDisplayModel.descriptionPlaceholder)
         categoryModel = CategoryInputCellModel()
         dateModel = DateInputCellModel(label: AddTransactionDisplayModel.dateTitle, mode: .dateAndTime)
+
+        sections = [TableViewSection(cellModels: [amountModel.wrap,
+                                                  descriptionModel.wrap,
+                                                  categoryModel.wrap,
+                                                  dateModel.wrap])]
 
         amountModel.viewModelDelegate = self
         descriptionModel.viewModelDelegate = self
@@ -70,8 +75,8 @@ class AddTransactionViewModel: ServiceClient, TableViewModelType {
     }
 
     func didFinishLoadingTableView() {
-        self.delegate?.updateSaveButton(enabled: self.isValid)
-        (self.sections.first?.cellModels.first?.wrapped as? InputCellModelForViewModelType)?.becomeFirstResponder()
+        delegate?.updateSaveButton(enabled: isValid)
+        becomeFirstResponder()
     }
 
 }
@@ -81,7 +86,8 @@ class AddTransactionViewModel: ServiceClient, TableViewModelType {
 extension AddTransactionViewModel: AddTransactionViewModelType {
 
     func viewDidLoad() {
-        setupTableView()
+        guard let tableView = delegate?.tableView else { return }
+        setup(tableView: tableView, cells: [InputTableViewCell.self])
     }
 
     func inject(delegate: ViewModelDelegate) {
@@ -117,10 +123,6 @@ extension AddTransactionViewModel: AddTransactionViewModelType {
             update(transaction: transaction)
         }
 
-    }
-
-    func dismissTapped() {
-        serviceProvider.navigator.dismiss()
     }
 
 }
@@ -163,19 +165,6 @@ extension AddTransactionViewModel: DateInputCellModelViewModelDelegate {
 // MARK: - Private methods
 
 extension AddTransactionViewModel {
-
-    private func setupTableView() {
-        sections = [TableViewSection(cellModels: [amountModel.wrap,
-                                                  descriptionModel.wrap,
-                                                  categoryModel.wrap,
-                                                  dateModel.wrap])]
-
-        guard let tableView = delegate?.tableView else { return }
-
-        tableViewController = TableViewController(tableView: tableView,
-                                                  cells: [InputTableViewCell.self],
-                                                  viewModel: self)
-    }
 
     private func save(transaction: Transaction) {
         delegate?.showSpinner()

@@ -16,18 +16,22 @@ class HomeViewModel: ServiceClient {
     private var transactions = [Transaction]()
     private var endOfMonthSummaryList: EndOfMonthSummaryList?
 
+    private let todayViewModel: TodayPresentable
+
     private let feedTableViewModel: FeedTableViewModelType
     private let regularsTableViewModel: RegularsTableViewModelType
     private let balancesTableViewModel: BalancesTableViewModelType
-
-    let displayModel: TodayDisplayModelType = HomeDisplayModel()
 
     weak var delegate: HomeViewModelDelegate?
 
     init(serviceProvider: ServiceProvider) {
         self.serviceProvider = serviceProvider
-        self.externalTransactionsBusinessLogic = ExternalTransactionsBusinessLogic(serviceProvider: serviceProvider)
-        self.endOfMonthSummaryBusinessLogic = EndOfMonthSummaryBusinessLogic(serviceProvider: serviceProvider)
+
+        externalTransactionsBusinessLogic = ExternalTransactionsBusinessLogic(serviceProvider: serviceProvider)
+        endOfMonthSummaryBusinessLogic = EndOfMonthSummaryBusinessLogic(serviceProvider: serviceProvider)
+
+        todayViewModel = TodayViewModel(serviceProvider: serviceProvider,
+                                        displayModel: HomeDisplayModel())
 
         feedTableViewModel = FeedTableViewModel()
         regularsTableViewModel = RegularsTableViewModel()
@@ -47,70 +51,6 @@ class HomeViewModel: ServiceClient {
 
 }
 
-extension HomeViewModel {
-
-    func setupDefaults() {
-        guard let balance = Balance.load(dataService: serviceProvider.dataService),
-            let user = User.load(dataService: serviceProvider.dataService) else { return }
-        let balanceAttributedString = createAttributedString(from: balance.effectiveBalance)
-        delegate?.set(balance: balanceAttributedString)
-        let allowanceAttributedString = createAttributedString(from: user.allowance)
-        let allowanceIcon = SpendingBusinessLogic().allowanceIcon(for: user)
-        delegate?.set(allowance: allowanceAttributedString)
-        delegate?.set(allowanceIcon: allowanceIcon)
-
-        transactions = Transaction.all(dataService: serviceProvider.dataService)
-        let endOfMonthSummaries = EndOfMonthSummary.all(dataService: serviceProvider.dataService)
-
-        guard let currentMonthSummary = CurrentMonthSummary.load(dataService: serviceProvider.dataService) else {
-            return
-        }
-
-        let list = EndOfMonthSummaryList(currentMonthSummary: currentMonthSummary,
-                                         endOfMonthSummaries: endOfMonthSummaries)
-
-        feedTableViewModel.update(transactions: transactions)
-        regularsTableViewModel.update(transactions: transactions)
-        balancesTableViewModel.update(endOfMonthSummaryList: list)
-    }
-
-    @discardableResult func updateData() -> Promise<Void> {
-        return when(fulfilled: getBalance(),
-                    getUser(),
-                    getExternalTransactions(),
-                    getEndOfMonthSummaryList())
-            .recover { error in
-                self.delegate?.showError(message: error.localizedDescription)
-        }
-    }
-
-    public func createAttributedString(from amount: Double) -> NSAttributedString {
-        let currencyString = Formatters.currency
-            .string(from: NSNumber(value: amount)) ?? HomeDisplayModel.defaultAmount
-        return HomeDisplayModel.amountAttributedString(from: currencyString)
-    }
-
-    @discardableResult public func getBalance() -> Promise<Void> {
-        return BalanceBusinessLogic(serviceProvider: serviceProvider)
-            .getBalance().done { balance in
-                let balanceAttributedString = self.createAttributedString(from: balance.effectiveBalance)
-                self.delegate?.set(balance: balanceAttributedString)
-        }
-    }
-
-    @discardableResult public func getUser() -> Promise<Void> {
-        return UserBusinessLogic(serviceProvider: serviceProvider)
-            .getCurrentUser().done { user in
-                let allowanceAttributedString = self.createAttributedString(from: user.allowance)
-                let allowanceIcon = SpendingBusinessLogic().allowanceIcon(for: user)
-                self.delegate?.set(allowance: allowanceAttributedString)
-                self.delegate?.set(allowanceIcon: allowanceIcon)
-                self.serviceProvider.watchService.updateComplication()
-        }
-    }
-
-}
-
 // MARK: - Interface
 
 extension HomeViewModel: HomeViewModelType {
@@ -126,6 +66,7 @@ extension HomeViewModel: HomeViewModelType {
     func inject(delegate: ViewModelDelegate) {
         guard let delegate = delegate as? HomeViewModelDelegate else { return }
         self.delegate = delegate
+        todayViewModel.inject(delegate: delegate)
     }
 
     func settingsButtonTapped() {
@@ -188,12 +129,48 @@ extension HomeViewModel {
         updateData()
     }
 
-    private func updateTableViewModels() {
+    private func updateTransactionsTableViewModels() {
         feedTableViewModel.update(transactions: transactions)
         regularsTableViewModel.update(transactions: transactions)
+    }
+
+    private func updateTableViewModels() {
+        updateTransactionsTableViewModels()
 
         if let endOfMonthSummaryList = endOfMonthSummaryList {
             balancesTableViewModel.update(endOfMonthSummaryList: endOfMonthSummaryList)
+        }
+    }
+
+    private func setupDefaults() {
+        todayViewModel.setupDefaults()
+
+        transactions = Transaction.all(dataService: serviceProvider.dataService)
+        let endOfMonthSummaries = EndOfMonthSummary.all(dataService: serviceProvider.dataService)
+
+        guard let currentMonthSummary = CurrentMonthSummary.load(dataService: serviceProvider.dataService) else {
+            return
+        }
+
+        endOfMonthSummaryList = EndOfMonthSummaryList(currentMonthSummary: currentMonthSummary,
+                                                      endOfMonthSummaries: endOfMonthSummaries)
+        updateTableViewModels()
+    }
+
+    @discardableResult private func updateData() -> Promise<Void> {
+        return when(fulfilled: todayViewModel.getBalance(),
+                    getUser(),
+                    getExternalTransactions(),
+                    getEndOfMonthSummaryList())
+            .recover { error in
+                self.delegate?.showError(message: error.localizedDescription)
+        }
+    }
+
+    @discardableResult private func getUser() -> Promise<Void> {
+        return todayViewModel.getUser()
+            .done {
+                self.serviceProvider.watchService.updateComplication()
         }
     }
 
@@ -202,8 +179,7 @@ extension HomeViewModel {
             .done { transactions in
                 self.transactions = transactions
                 self.transactions.save(dataService: self.serviceProvider.dataService)
-                self.feedTableViewModel.update(transactions: transactions)
-                self.regularsTableViewModel.update(transactions: transactions)
+                self.updateTransactionsTableViewModels()
         }
     }
 
@@ -212,8 +188,7 @@ extension HomeViewModel {
             self.getUser()
             self.getEndOfMonthSummaryList()
             self.transactions = self.transactions.filter { $0.id != transaction.id }
-            self.updateTableViewModels()
-
+            self.updateTransactionsTableViewModels()
         }.catch { error in
             self.delegate?.showError(message: error.localizedDescription)
         }
@@ -235,8 +210,9 @@ extension HomeViewModel: AddTransactionViewModelDataDelegate {
     func didCreate(transaction: Transaction) {
         getUser()
         getEndOfMonthSummaryList()
+
         transactions.append(transaction)
-        updateTableViewModels()
+        updateTransactionsTableViewModels()
     }
 
     func didUpdate(transaction: Transaction) {
@@ -245,7 +221,7 @@ extension HomeViewModel: AddTransactionViewModelDataDelegate {
 
         guard let index = transactions.index(where: { $0.id == transaction.id }) else { return }
         transactions[index] = transaction
-        updateTableViewModels()
+        updateTransactionsTableViewModels()
     }
 
 }
@@ -253,10 +229,7 @@ extension HomeViewModel: AddTransactionViewModelDataDelegate {
 extension HomeViewModel: SettingsViewModelDataDelegate {
 
     func didUpdate(user: User) {
-        let allowanceAttributedString = self.createAttributedString(from: user.allowance)
-        self.delegate?.set(allowance: allowanceAttributedString)
-        updateTableViewModels()
-        serviceProvider.watchService.updateComplication()
+        updateData()
     }
 
 }

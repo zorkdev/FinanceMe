@@ -3,28 +3,28 @@ import PromiseKit
 
 class MockNavigator: NavigatorType {
 
-    var didCallCreateNavigationStack = false
-    var didCallShowAuthWindow = false
-    var didCallHideAuthWindow = false
-    var lastViewModel: ViewModelType?
-    var lastAuthViewModelType: AuthViewModelType?
-
     weak var appState: AppStateiOSType!
     var window: WindowType?
     var viewControllers = [ViewControllerType]()
 
     required init(window: WindowType) {}
 
+    var didCallCreateNavigationStack = false
+    var lastViewModel: ViewModelType?
     func createNavigationStack(scene: Scene, viewModel: ViewModelType?) {
         didCallCreateNavigationStack = true
         lastViewModel = viewModel
     }
 
+    var lastAuthViewModelType: AuthViewModelType?
     func createAuthStack(viewModel: AuthViewModelType) {
         lastAuthViewModelType = viewModel
     }
 
-    func moveTo(scene: Scene, viewModel: ViewModelType?) {}
+    var lastMoveToValue: (scene: Scene, viewModel: ViewModelType?)?
+    func moveTo(scene: Scene, viewModel: ViewModelType?) {
+        lastMoveToValue = (scene, viewModel)
+    }
 
     @discardableResult func dismiss() -> Promise<Void> {
         return Promise()
@@ -34,10 +34,12 @@ class MockNavigator: NavigatorType {
         return Promise()
     }
 
+    var didCallShowAuthWindow = false
     func showAuthWindow() {
         didCallShowAuthWindow = true
     }
 
+    var didCallHideAuthWindow = false
     func hideAuthWindow() {
         didCallHideAuthWindow = true
     }
