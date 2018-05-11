@@ -2,11 +2,11 @@ PODS:
   - Charts (3.1.1):
     - Charts/Core (= 3.1.1)
   - Charts/Core (3.1.1)
-  - NVActivityIndicatorView (4.2.0):
-    - NVActivityIndicatorView/Presenter (= 4.2.0)
-  - NVActivityIndicatorView/Presenter (4.2.0)
-  - PromiseKit/CorePromise (6.2.5)
-  - PromiseKit/Foundation (6.2.5):
+  - NVActivityIndicatorView (4.2.1):
+    - NVActivityIndicatorView/Presenter (= 4.2.1)
+  - NVActivityIndicatorView/Presenter (4.2.1)
+  - PromiseKit/CorePromise (6.2.6)
+  - PromiseKit/Foundation (6.2.6):
     - PromiseKit/CorePromise
   - SwiftLint (0.25.1)
   - SwiftMessages (4.1.2)
@@ -29,11 +29,11 @@ SPEC REPOS:
 
 SPEC CHECKSUMS:
   Charts: 90a4d61da0f6e06684c591e3bcab11940fe61736
-  NVActivityIndicatorView: 75c9634073e03b31d7e2748cd2417feab1206195
-  PromiseKit: a26828b0a8d5874960dfdb575b57a70790ec36f1
+  NVActivityIndicatorView: 8068ba3ad39cb44cbaab25d89ff2546b3f092681
+  PromiseKit: 8245cb2e3a8fe00453e580bd4aafb57e1671f501
   SwiftLint: ce933681be10c3266e82576dad676fa815a602e9
   SwiftMessages: d81f48c1f8b6bc1dbebdfffe11226f0344f937ca
 
-PODFILE CHECKSUM: a9029d5c7697e14ee0646fcf105f28bddb497bba
+PODFILE CHECKSUM: 9e9be64e93a607a6d09e2dec8f25d837e26b6caf
 
 COCOAPODS: 1.5.0
