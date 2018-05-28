@@ -5,7 +5,7 @@
 [![codecov](https://codecov.io/gh/zorkdev/MyFinance/branch/master/graph/badge.svg)](https://codecov.io/gh/zorkdev/MyFinance)
 [![Build Status](https://www.bitrise.io/app/d0e2f3c29e3ae17b/status.svg?token=q45LfvzgE2YtbE-cwiG-JQ&branch=master)](https://www.bitrise.io/app/d0e2f3c29e3ae17b)
 
-## Instructions
+## 🚀 Instructions
 
 This project uses [CocoaPods](http://cocoapods.org/). Build instructions:
 
@@ -13,7 +13,6 @@ This project uses [CocoaPods](http://cocoapods.org/). Build instructions:
 $ sudo gem install cocoapods
 $ git clone https://github.com/zorkdev/MyFinance.git
 $ cd MyFinance
-$ pod repo update
-$ pod install
+$ pod install --repo-update
 $ open MyFinance.xcworkspace
 ```
