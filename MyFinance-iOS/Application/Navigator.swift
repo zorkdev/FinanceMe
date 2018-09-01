@@ -49,7 +49,7 @@ class Navigator: NavigatorType {
 
         guard let frame = window?.frame else { fatalError() }
         authWindow = window?.createWindow(frame: frame)
-        authWindow?.windowLevel = UIWindowLevelStatusBar - 1
+        authWindow?.windowLevel = UIWindow.Level(UIWindow.Level.statusBar.rawValue - 1)
         authWindow?.baseViewController = scene.viewController
         authWindow?.makeKeyAndVisible()
         hideAuthWindow()

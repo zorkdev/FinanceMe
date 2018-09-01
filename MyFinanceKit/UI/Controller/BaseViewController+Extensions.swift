@@ -27,30 +27,30 @@ extension BaseViewController {
     func registerForKeyboardNotifications() {
         NotificationCenter.default.addObserver(self,
                                                selector: #selector(keyboardChanged),
-                                               name: .UIKeyboardWillShow,
+                                               name: UIResponder.keyboardWillShowNotification,
                                                object: nil)
         NotificationCenter.default.addObserver(self,
                                                selector: #selector(keyboardChanged),
-                                               name: .UIKeyboardWillHide,
+                                               name: UIResponder.keyboardWillHideNotification,
                                                object: nil)
     }
 
     func deRegisterForKeyboardNotifications() {
         NotificationCenter.default.removeObserver(self,
-                                                  name: .UIKeyboardWillShow,
+                                                  name: UIResponder.keyboardWillShowNotification,
                                                   object: nil)
         NotificationCenter.default.removeObserver(self,
-                                                  name: .UIKeyboardWillHide,
+                                                  name: UIResponder.keyboardWillHideNotification,
                                                   object: nil)
     }
 
     @objc private func keyboardChanged(_ notification: Notification) {
         guard let userInfo = notification.userInfo,
-            let keyboardFrame = userInfo[UIKeyboardFrameEndUserInfoKey] as? CGRect,
-            let duration = userInfo[UIKeyboardAnimationDurationUserInfoKey] as? Double,
-            let curve = userInfo[UIKeyboardAnimationCurveUserInfoKey] as? UInt else { return }
+            let keyboardFrame = userInfo[UIResponder.keyboardFrameEndUserInfoKey] as? CGRect,
+            let duration = userInfo[UIResponder.keyboardAnimationDurationUserInfoKey] as? Double,
+            let curve = userInfo[UIResponder.keyboardAnimationCurveUserInfoKey] as? UInt else { return }
 
-        let options = UIViewAnimationOptions(rawValue: curve)
+        let options = UIView.AnimationOptions(rawValue: curve)
 
         let newFrame = CGRect(x: view.frame.origin.x,
                               y: view.frame.origin.y,

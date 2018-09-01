@@ -5,7 +5,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     let appState = AppState()
 
     func application(_ application: UIApplication,
-                     didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]? = nil) -> Bool {
+                     didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]? = nil) -> Bool {
 
         let storyboard = UIStoryboard(name: UIViewController.storyboardId, bundle: nil)
         let initialViewController = storyboard.instantiateInitialViewController() as? BaseViewController

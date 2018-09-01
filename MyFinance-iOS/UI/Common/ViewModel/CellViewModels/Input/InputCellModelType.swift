@@ -2,9 +2,9 @@
 
 struct InputCellDisplayModel {
 
-    let placeholderAttributes: [NSAttributedStringKey: Any] = [
-        NSAttributedStringKey.foregroundColor: ColorPalette.lightText.withAlphaComponent(0.5),
-        NSAttributedStringKey.font: UIFont.systemFont(ofSize: 18)
+    let placeholderAttributes: [NSAttributedString.Key: Any] = [
+        .foregroundColor: ColorPalette.lightText.withAlphaComponent(0.5),
+        .font: UIFont.systemFont(ofSize: 18)
     ]
 
     let enabledTextColor = ColorPalette.secondary
@@ -57,7 +57,7 @@ extension InputCellModelForViewType {
     var displayModel: InputCellDisplayModel { return InputCellDisplayModel() }
 
     var keyboardType: UIKeyboardType { return .default }
-    var textContentType: UITextContentType { return UITextContentType("") }
+    var textContentType: UITextContentType { return UITextContentType(rawValue: "") }
     var isSecureTextEntry: Bool { return false }
     var autocapitalizationType: UITextAutocapitalizationType { return .none }
     var inputView: UIView? { return nil }

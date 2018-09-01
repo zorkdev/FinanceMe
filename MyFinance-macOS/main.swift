@@ -1,7 +1,8 @@
 let isTesting = NSClassFromString("XCTestCase") != nil
 
-NSApplication.shared.delegate = AppDelegate()
-let storyboard = NSStoryboard(name: NSStoryboard.Name(NSViewController.storyboardId),
+let delegate = AppDelegate()
+NSApplication.shared.delegate = delegate
+let storyboard = NSStoryboard(name: NSViewController.storyboardId,
                               bundle: nil)
 let initialController = storyboard.instantiateInitialController() as? NSWindowController
 

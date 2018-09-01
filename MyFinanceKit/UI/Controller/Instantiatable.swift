@@ -26,9 +26,8 @@ extension Instantiatable where Self: ViewController {
         let viewController = Self()
 
         #elseif os(macOS)
-        let viewController = (NSStoryboard(name: NSStoryboard.Name(storyboardId), bundle: bundle)
-            .instantiateController(withIdentifier:
-                NSStoryboard.SceneIdentifier(rawValue: Self.instanceName)) as? Self)!
+        let viewController = (NSStoryboard(name: storyboardId, bundle: bundle)
+            .instantiateController(withIdentifier: Self.instanceName) as? Self)!
         #endif
 
         return viewController

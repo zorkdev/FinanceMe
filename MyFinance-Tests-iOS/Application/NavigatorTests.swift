@@ -38,7 +38,7 @@ class NavigatorTests: XCTestCase {
 
         let authViewController = mockWindow.lastCreateWindow?.baseViewController as? AuthViewController
         XCTAssertEqual(mockWindow.lastCreateWindow!.frame, mockWindow.frame)
-        XCTAssertEqual(mockWindow.lastCreateWindow!.windowLevel, UIWindowLevelStatusBar - 1)
+        XCTAssertEqual(mockWindow.lastCreateWindow!.windowLevel, UIWindow.Level.statusBar - 1)
         XCTAssertNotNil(authViewController)
         XCTAssertTrue(authViewController!.viewModel is MockAuthViewModel)
         XCTAssertTrue(mockAuthViewModel.lastInjectValue is AuthViewController)

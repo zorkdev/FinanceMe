@@ -42,7 +42,7 @@ class ChartCellModel {
 
     init(endOfMonthSummaries: [EndOfMonthSummary]) {
         data = ChartCellModel.createChartData(from: endOfMonthSummaries)
-        id = "\(endOfMonthSummaries)".hashValue
+        id = endOfMonthSummaries.hashValue
     }
 
     private static func createChartData(from summaries: [EndOfMonthSummary]) -> LineChartData {

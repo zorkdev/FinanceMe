@@ -44,7 +44,7 @@ class HomeViewModel: ServiceClient {
         NotificationCenter.default.addObserver(
             self,
             selector: #selector(handleShouldReloadNotification),
-            name: .UIApplicationWillEnterForeground,
+            name: UIApplication.willEnterForegroundNotification,
             object: nil
         )
     }

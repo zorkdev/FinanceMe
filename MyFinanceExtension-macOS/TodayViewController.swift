@@ -11,7 +11,7 @@ class TodayViewController: NSViewController {
     private var viewModel: TodayPresentable!
 
     override var nibName: NSNib.Name? {
-        return NSNib.Name(TodayViewController.instanceName)
+        return TodayViewController.instanceName
     }
 
     override func viewDidLoad() {
@@ -36,7 +36,7 @@ extension TodayViewController: TodayViewModelDelegate {
         let paragraphStyle = NSMutableParagraphStyle()
         paragraphStyle.alignment = .right
         allowanceTemp.addAttributes(
-            [NSAttributedStringKey.paragraphStyle: paragraphStyle],
+            [.paragraphStyle: paragraphStyle],
             range: NSRange(location: 0, length: allowance.length))
         allowanceLabel.attributedStringValue = allowanceTemp
     }

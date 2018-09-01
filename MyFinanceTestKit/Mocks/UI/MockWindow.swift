@@ -1,7 +1,7 @@
 class MockWindow: WindowType {
 
     var frame: CGRect = CGRect.zero
-    var windowLevel: UIWindowLevel = UIWindowLevelNormal
+    var windowLevel: UIWindow.Level = .normal
     var isHidden: Bool = false
     var baseViewController: ViewControllerType?
 

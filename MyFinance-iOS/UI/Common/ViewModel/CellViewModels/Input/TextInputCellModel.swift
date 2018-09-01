@@ -24,7 +24,7 @@ class TextInputCellModel {
     let placeholder: String
 
     var keyboardType: UIKeyboardType { return .default }
-    var textContentType: UITextContentType { return UITextContentType("") }
+    var textContentType: UITextContentType { return UITextContentType(rawValue: "") }
     var autocapitalizationType: UITextAutocapitalizationType { return .words }
     var isSecureTextEntry: Bool { return false }
 

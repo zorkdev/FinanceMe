@@ -9,3 +9,4 @@ identifier_name:
 nesting:
   type_level:
     warning: 2
+line_length: 125

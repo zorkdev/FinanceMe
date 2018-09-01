@@ -5,7 +5,7 @@ public typealias Window = UIWindow
 public protocol WindowType {
 
     var frame: CGRect { get set }
-    var windowLevel: UIWindowLevel { get set }
+    var windowLevel: UIWindow.Level { get set }
     var isHidden: Bool { get set }
     var baseViewController: ViewControllerType? { get set }
 

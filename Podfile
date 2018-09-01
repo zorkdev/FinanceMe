@@ -46,11 +46,3 @@ abstract_target 'MyFinance' do
         target 'MyFinance-Tests-macOS'
     end
 end
-
-post_install do |installer|
-    installer.pods_project.targets.each do |target|
-        target.build_configurations.each do |config|
-            config.build_settings['SWIFT_COMPILATION_MODE'] = 'wholemodule'
-        end
-    end
-end

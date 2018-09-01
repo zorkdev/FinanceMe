@@ -104,7 +104,7 @@ extension TableViewController: UITableViewDataSource {
     }
 
     func tableView(_ tableView: UITableView,
-                   commit editingStyle: UITableViewCellEditingStyle,
+                   commit editingStyle: UITableViewCell.EditingStyle,
                    forRowAt indexPath: IndexPath) {
         guard editingStyle == .delete else { return }
         viewModel.didDelete(indexPath: indexPath)

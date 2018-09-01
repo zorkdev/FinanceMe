@@ -29,7 +29,7 @@ public extension MessagePresentable {
         view.configureDropShadow()
 
         let buttonImage = UIImage(named: MessageConstants.errorBannerCloseImage)
-        let iconText = MessageConstants.errorBannerIcons.sm_random() ?? ""
+        let iconText = MessageConstants.errorBannerIcons.randomElement() ?? ""
 
         view.configureContent(title: MessageConstants.errorBannerTitle,
                               body: message,
@@ -83,11 +83,11 @@ public extension MessagePresentable {
                                 backgroundColor: nil,
                                 textColor: nil)
 
-        NVActivityIndicatorPresenter.sharedInstance.startAnimating(data)
+        NVActivityIndicatorPresenter.sharedInstance.startAnimating(data, nil)
     }
 
     func hideSpinner() {
-        NVActivityIndicatorPresenter.sharedInstance.stopAnimating()
+        NVActivityIndicatorPresenter.sharedInstance.stopAnimating(nil)
     }
 
 }

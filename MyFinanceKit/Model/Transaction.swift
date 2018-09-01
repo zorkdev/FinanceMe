@@ -103,17 +103,6 @@ public struct Transaction: Storeable, Hashable {
         self.balance = balance
     }
 
-    public var hashValue: Int {
-        return (id ?? "").hashValue
-            ^ currency.hashValue
-            ^ amount.hashValue
-            ^ direction.hashValue
-            ^ created.hashValue
-            ^ narrative.hashValue
-            ^ source.hashValue
-            ^ balance.hashValue
-    }
-
 }
 
 struct TransactionList: JSONCodable, Equatable {

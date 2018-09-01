@@ -18,16 +18,16 @@ class MockTableView: TableViewType {
 
     func endUpdates() {}
 
-    func reloadSections(_ sections: IndexSet, with animation: UITableViewRowAnimation) {}
+    func reloadSections(_ sections: IndexSet, with animation: UITableView.RowAnimation) {}
 
-    func insertSections(_ sections: IndexSet, with animation: UITableViewRowAnimation) {}
+    func insertSections(_ sections: IndexSet, with animation: UITableView.RowAnimation) {}
 
-    func deleteSections(_ sections: IndexSet, with animation: UITableViewRowAnimation) {}
+    func deleteSections(_ sections: IndexSet, with animation: UITableView.RowAnimation) {}
 
-    func reloadRows(at indexPaths: [IndexPath], with animation: UITableViewRowAnimation) {}
+    func reloadRows(at indexPaths: [IndexPath], with animation: UITableView.RowAnimation) {}
 
-    func insertRows(at indexPaths: [IndexPath], with animation: UITableViewRowAnimation) {}
+    func insertRows(at indexPaths: [IndexPath], with animation: UITableView.RowAnimation) {}
 
-    func deleteRows(at indexPaths: [IndexPath], with animation: UITableViewRowAnimation) {}
+    func deleteRows(at indexPaths: [IndexPath], with animation: UITableView.RowAnimation) {}
 
 }
