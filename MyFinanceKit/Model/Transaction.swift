@@ -77,30 +77,24 @@ extension TransactionSource: Describable {
 public struct Transaction: Storeable, Hashable {
 
     public let id: String?
-    public let currency: String
     public var amount: Double
     public var direction: TransactionDirection
     public var created: Date
     public var narrative: String
     public var source: TransactionSource
-    public let balance: Double
 
     public init(id: String? = nil,
-                currency: String = "GBP",
                 amount: Double,
                 direction: TransactionDirection,
                 created: Date,
                 narrative: String,
-                source: TransactionSource,
-                balance: Double = 0.0) {
+                source: TransactionSource) {
         self.id = id
-        self.currency = currency
         self.amount = amount
         self.direction = direction
         self.created = created
         self.narrative = narrative
         self.source = source
-        self.balance = balance
     }
 
 }

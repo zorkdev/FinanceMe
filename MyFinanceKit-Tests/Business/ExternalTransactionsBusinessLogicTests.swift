@@ -81,13 +81,11 @@ class ExternalTransactionsBusinessLogicTests: ServiceClientTestCase {
     func testUpdateTransaction_Failure() {
         let newExpectation = expectation(description: "Transaction update failed")
 
-        let expectedTransaction = Transaction(currency: "GBP",
-                                              amount: 10.30,
+        let expectedTransaction = Transaction(amount: 10.30,
                                               direction: .inbound,
                                               created: Date(),
                                               narrative: "Test",
-                                              source: .fasterPaymentsIn,
-                                              balance: 100)
+                                              source: .fasterPaymentsIn)
 
         let externalTransactionsBusinessLogic = ExternalTransactionsBusinessLogic(serviceProvider: mockAppState)
 
@@ -127,13 +125,11 @@ class ExternalTransactionsBusinessLogicTests: ServiceClientTestCase {
     func testDeleteTransaction_Failure() {
         let newExpectation = expectation(description: "Transaction delete failed")
 
-        let expectedTransaction = Transaction(currency: "GBP",
-                                              amount: 10.30,
+        let expectedTransaction = Transaction(amount: 10.30,
                                               direction: .inbound,
                                               created: Date(),
                                               narrative: "Test",
-                                              source: .fasterPaymentsIn,
-                                              balance: 100)
+                                              source: .fasterPaymentsIn)
 
         let externalTransactionsBusinessLogic = ExternalTransactionsBusinessLogic(serviceProvider: mockAppState)
 
