@@ -80,9 +80,9 @@ class Navigator: NavigatorType {
             promises.append(viewController.dismiss())
         }
 
-        return when(fulfilled: promises).done {
-            self.viewControllers.removeLast(self.viewControllers.count - 1)
-        }
+        self.viewControllers.removeLast(self.viewControllers.count - 1)
+
+        return when(fulfilled: promises)
     }
 
     func showAuthWindow() {

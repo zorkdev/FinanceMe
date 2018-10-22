@@ -5,6 +5,7 @@ class MockSettingsViewModel: SettingsViewModelType {
     var didCallViewDidLoad = false
     var didCallEditButtonTapped = false
     var didCallSaveButtonTapped = false
+    var didCallReconcileButtonTapped = false
     var didCallDismissTapped = false
     var lastInjectValue: ViewModelDelegate?
 
@@ -14,6 +15,10 @@ class MockSettingsViewModel: SettingsViewModelType {
 
     var editButtonTitle: String {
         return "editButtonTitle"
+    }
+
+    var reconcileButtonTitle: String {
+        return "reconcileButtonTitle"
     }
 
     func viewDidLoad() {
@@ -26,6 +31,10 @@ class MockSettingsViewModel: SettingsViewModelType {
 
     func saveButtonTapped() {
         didCallSaveButtonTapped = true
+    }
+
+    func reconcileButtonTapped() {
+        didCallReconcileButtonTapped = true
     }
 
     func dismissTapped() {

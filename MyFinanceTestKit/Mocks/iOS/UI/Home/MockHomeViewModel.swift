@@ -14,5 +14,6 @@ class MockHomeViewModel: HomeViewModelType {
     func didCreate(transaction: Transaction) {}
     func didUpdate(transaction: Transaction) {}
     func didUpdate(user: User) {}
+    func didReconcile() {}
 
 }

@@ -690,7 +690,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gmz-J3-OPo">
+                            <button opaque="NO" clipsSubviews="YES" alpha="0.5" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gmz-J3-OPo">
                                 <rect key="frame" x="16" y="601" width="343" height="50"/>
                                 <color key="backgroundColor" red="0.003221878549" green="0.64363974329999996" blue="0.86026746030000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
