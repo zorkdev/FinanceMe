@@ -47,4 +47,12 @@ public struct ExternalTransactionsBusinessLogic: ServiceClient {
                             body: nil).asVoid()
     }
 
+    public func reconcile() -> Promise<Void> {
+        return serviceProvider.networkService
+            .performRequest(api: API.zorkdev(.reconcile),
+                            method: .post,
+                            parameters: nil,
+                            body: nil).asVoid()
+    }
+
 }

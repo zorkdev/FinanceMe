@@ -1,13 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="jGe-Rt-w7H">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="jGe-Rt-w7H">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
-        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
-        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -579,6 +577,25 @@
                                     <action selector="saveButtonTapped:" destination="RJQ-cl-VlO" eventType="touchUpInside" id="9WB-t2-phM"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O9A-7F-T8q">
+                                <rect key="frame" x="16" y="535" width="343" height="50"/>
+                                <color key="backgroundColor" red="0.003221878549" green="0.64363974329999996" blue="0.86026746030000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="2Ur-nx-Qaq"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="18"/>
+                                <state key="normal" title="Reconcile">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layerCornerRadius">
+                                        <real key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="reconcileButtonTapped:" destination="RJQ-cl-VlO" eventType="touchUpInside" id="fKH-Hd-8ZM"/>
+                                </connections>
+                            </button>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="aCN-uh-kFL">
                                 <rect key="frame" x="0.0" y="64" width="375" height="521"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -639,20 +656,24 @@
                         <color key="backgroundColor" red="0.1058823529" green="0.18823529410000001" blue="0.31764705879999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="qSV-MQ-G41" firstAttribute="leading" secondItem="6vM-Qy-Rvb" secondAttribute="leading" constant="16" id="0bZ-ld-0xU"/>
+                            <constraint firstItem="O9A-7F-T8q" firstAttribute="top" secondItem="aCN-uh-kFL" secondAttribute="bottom" constant="16" id="0sg-Ek-xWk"/>
                             <constraint firstItem="aCN-uh-kFL" firstAttribute="leading" secondItem="6vM-Qy-Rvb" secondAttribute="leading" id="5qM-hM-76P"/>
                             <constraint firstItem="aCN-uh-kFL" firstAttribute="top" secondItem="uRx-n0-qlB" secondAttribute="bottom" id="HBR-Ml-zlG"/>
+                            <constraint firstItem="qSV-MQ-G41" firstAttribute="top" secondItem="O9A-7F-T8q" secondAttribute="bottom" constant="16" id="HQ0-JC-BDD"/>
                             <constraint firstItem="6vM-Qy-Rvb" firstAttribute="trailing" secondItem="aCN-uh-kFL" secondAttribute="trailing" id="Ho6-PP-umb"/>
                             <constraint firstItem="uRx-n0-qlB" firstAttribute="leading" secondItem="6vM-Qy-Rvb" secondAttribute="leading" id="L1L-7J-4qy"/>
                             <constraint firstItem="6vM-Qy-Rvb" firstAttribute="bottom" secondItem="qSV-MQ-G41" secondAttribute="bottom" constant="16" id="UbA-BI-U4R"/>
                             <constraint firstItem="uRx-n0-qlB" firstAttribute="top" secondItem="6vM-Qy-Rvb" secondAttribute="top" id="Ues-cl-zUt"/>
                             <constraint firstItem="6vM-Qy-Rvb" firstAttribute="trailing" secondItem="qSV-MQ-G41" secondAttribute="trailing" constant="16" id="ZeJ-V5-3jZ"/>
+                            <constraint firstItem="6vM-Qy-Rvb" firstAttribute="trailing" secondItem="O9A-7F-T8q" secondAttribute="trailing" constant="16" id="b9j-ET-HIO"/>
+                            <constraint firstItem="O9A-7F-T8q" firstAttribute="leading" secondItem="6vM-Qy-Rvb" secondAttribute="leading" constant="16" id="dV2-nX-5br"/>
                             <constraint firstItem="6vM-Qy-Rvb" firstAttribute="trailing" secondItem="uRx-n0-qlB" secondAttribute="trailing" id="dcR-Xo-edb"/>
-                            <constraint firstItem="qSV-MQ-G41" firstAttribute="top" secondItem="aCN-uh-kFL" secondAttribute="bottom" constant="16" id="ufQ-nz-1bi"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6vM-Qy-Rvb"/>
                     </view>
                     <connections>
                         <outlet property="editButton" destination="KYb-ks-n4a" id="BbB-sL-5X2"/>
+                        <outlet property="reconcileButton" destination="O9A-7F-T8q" id="x0D-f9-SMf"/>
                         <outlet property="saveButton" destination="qSV-MQ-G41" id="ylR-B1-m8K"/>
                         <outlet property="uiTableView" destination="aCN-uh-kFL" id="BO8-rU-zBA"/>
                     </connections>

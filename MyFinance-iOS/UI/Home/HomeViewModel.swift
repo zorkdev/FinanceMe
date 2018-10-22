@@ -232,4 +232,8 @@ extension HomeViewModel: SettingsViewModelDataDelegate {
         updateData()
     }
 
+    func didReconcile() {
+        updateData()
+    }
+
 }

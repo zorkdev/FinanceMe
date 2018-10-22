@@ -1,6 +1,7 @@
 protocol SettingsViewModelDataDelegate: class {
 
     func didUpdate(user: User)
+    func didReconcile()
 
 }
 
@@ -14,9 +15,11 @@ protocol SettingsViewModelType: ViewModelType, Dismissable {
 
     var saveButtonTitle: String { get }
     var editButtonTitle: String { get }
+    var reconcileButtonTitle: String { get }
 
     func saveButtonTapped()
     func editButtonTapped()
+    func reconcileButtonTapped()
 
 }
 
@@ -30,6 +33,7 @@ class SettingsViewModel: ServiceClient, TableViewModelType {
     let serviceProvider: ServiceProvider
 
     private let userBusinessLogic: UserBusinessLogic
+    private let externalTransactionsBusinessLogic: ExternalTransactionsBusinessLogic
 
     private var isEditing = false
 
@@ -55,6 +59,7 @@ class SettingsViewModel: ServiceClient, TableViewModelType {
         self.dataDelegate = dataDelegate
 
         userBusinessLogic = UserBusinessLogic(serviceProvider: serviceProvider)
+        externalTransactionsBusinessLogic = ExternalTransactionsBusinessLogic(serviceProvider: serviceProvider)
 
         nameModel = TextInputCellModel(label: "Name", placeholder: "John")
         amountLimitModel = AmountInputCellModel(label: "Amount Limit")
@@ -88,6 +93,10 @@ extension SettingsViewModel: SettingsViewModelType {
 
     var editButtonTitle: String {
         return isEditing ? SettingsDisplayModel.cancelButtonTitle : SettingsDisplayModel.editButtonTitle
+    }
+
+    var reconcileButtonTitle: String {
+        return SettingsDisplayModel.reconcileButtonTitle
     }
 
     func viewDidLoad() {
@@ -124,6 +133,10 @@ extension SettingsViewModel: SettingsViewModelType {
         } else {
             logOut()
         }
+    }
+
+    func reconcileButtonTapped() {
+        reconcile()
     }
 
 }
@@ -198,6 +211,19 @@ extension SettingsViewModel {
                 self.dataDelegate?.didUpdate(user: user)
                 self.delegate?.showSuccess(message: SettingsDisplayModel.successMessage)
                 self.serviceProvider.navigator.dismiss()
+            }.catch { error in
+                self.delegate?.showError(message: error.localizedDescription)
+            }.finally {
+                self.delegate?.hideSpinner()
+        }
+    }
+
+    private func reconcile() {
+        delegate?.showSpinner()
+        externalTransactionsBusinessLogic.reconcile()
+            .done {
+                self.dataDelegate?.didReconcile()
+                self.delegate?.showSuccess(message: SettingsDisplayModel.reconcileSuccessMessage)
             }.catch { error in
                 self.delegate?.showError(message: error.localizedDescription)
             }.finally {
