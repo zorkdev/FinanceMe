@@ -9,9 +9,9 @@ PODS:
   - PromiseKit/Foundation (6.5.2):
     - PromiseKit/CorePromise
   - SwiftLint (0.27.0)
-  - SwiftMessages (6.0.0):
-    - SwiftMessages/App (= 6.0.0)
-  - SwiftMessages/App (6.0.0)
+  - SwiftMessages (6.0.1):
+    - SwiftMessages/App (= 6.0.1)
+  - SwiftMessages/App (6.0.1)
 
 DEPENDENCIES:
   - Charts
@@ -34,7 +34,7 @@ SPEC CHECKSUMS:
   NVActivityIndicatorView: ec7440a57af2450319d3a4181cca7da6fc127064
   PromiseKit: 27c1601bfb73405871b805bcb8cf7e55c4dad3db
   SwiftLint: 3207c1faa2240bf8973b191820a116113cd11073
-  SwiftMessages: da7c981256a65b3e58022d9027a36584cf4eccf5
+  SwiftMessages: 42ed7b6e1f2f1ead9ee667dc61a0ae87e4f49570
 
 PODFILE CHECKSUM: 6d1c3c00c250bb5361f31efd3df25a981bcc643b
 
