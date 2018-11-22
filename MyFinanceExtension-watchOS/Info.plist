@@ -32,7 +32,7 @@
 		<key>NSExtensionAttributes</key>
 		<dict>
 			<key>WKAppBundleIdentifier</key>
-			<string>com.attilanemet.MyFinance.watchkitapp</string>
+			<string>com.zorkdev.MyFinance.iOS.watchkitapp</string>
 		</dict>
 		<key>NSExtensionPointIdentifier</key>
 		<string>com.apple.watchkit</string>
