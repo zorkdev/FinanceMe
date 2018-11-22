@@ -97,6 +97,16 @@ public struct Transaction: Storeable, Hashable {
         self.source = source
     }
 
+    public init(from decoder: Decoder) throws {
+        let container = try decoder.container(keyedBy: CodingKeys.self)
+        id = try container.decodeIfPresent(String.self, forKey: .id)
+        amount = try container.decode(Double.self, forKey: .amount)
+        direction = try container.decode(TransactionDirection.self, forKey: .direction)
+        created = try container.decode(Date.self, forKey: .created)
+        narrative = try container.decode(String.self, forKey: .narrative)
+        source = (try container.decodeIfPresent(TransactionSource.self, forKey: .source)) ?? .fasterPaymentsOut
+    }
+
 }
 
 struct TransactionList: JSONCodable, Equatable {
