@@ -38,6 +38,8 @@
 		<key>NSAllowsArbitraryLoads</key>
 		<true/>
 	</dict>
+	<key>NSFaceIDUsageDescription</key>
+	<string>We use Face ID to secure your financial information.</string>
 	<key>TeamID</key>
 	<string>$(AppIdentifierPrefix)</string>
 	<key>UILaunchStoryboardName</key>
@@ -58,7 +60,5 @@
 	<array>
 		<string>UIInterfaceOrientationPortrait</string>
 	</array>
-	<key>NSFaceIDUsageDescription</key>
-	<string>We use Face ID to secure your financial information.</string>
 </dict>
 </plist>
