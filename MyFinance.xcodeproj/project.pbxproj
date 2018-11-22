@@ -5315,7 +5315,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 29MN2WH3Q3;
 				INFOPLIST_FILE = "MyFinance-Tests-iOS/Config/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.attilanemet.MyFinance-Tests-iOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -5336,7 +5336,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 29MN2WH3Q3;
 				INFOPLIST_FILE = "MyFinance-Tests-iOS/Config/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.attilanemet.MyFinance-Tests-iOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -5572,7 +5572,7 @@
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = 3;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MyFinance-tvOS.app/MyFinance-tvOS";
-				TVOS_DEPLOYMENT_TARGET = 11.3;
+				TVOS_DEPLOYMENT_TARGET = 12.1;
 			};
 			name = Debug;
 		};
@@ -5593,7 +5593,7 @@
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = 3;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MyFinance-tvOS.app/MyFinance-tvOS";
-				TVOS_DEPLOYMENT_TARGET = 11.3;
+				TVOS_DEPLOYMENT_TARGET = 12.1;
 			};
 			name = Release;
 		};
@@ -5614,7 +5614,7 @@
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = 3;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MyFinance-tvOS.app/MyFinance-tvOS";
-				TVOS_DEPLOYMENT_TARGET = 11.3;
+				TVOS_DEPLOYMENT_TARGET = 12.1;
 			};
 			name = Debug;
 		};
@@ -5634,7 +5634,7 @@
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = 3;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MyFinance-tvOS.app/MyFinance-tvOS";
-				TVOS_DEPLOYMENT_TARGET = 11.3;
+				TVOS_DEPLOYMENT_TARGET = 12.1;
 			};
 			name = Release;
 		};

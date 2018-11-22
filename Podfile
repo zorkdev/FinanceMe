@@ -7,7 +7,7 @@ abstract_target 'MyFinance' do
     pod 'PromiseKit/Foundation'
 
     abstract_target 'iOS' do
-        platform :ios, '11.3'
+        platform :ios, '12.1'
         target 'MyFinance-iOS' do
             pod 'SwiftMessages'
             pod 'Charts'
@@ -29,7 +29,7 @@ abstract_target 'MyFinance' do
     end
 
     abstract_target 'tvOS' do
-        platform :tvos, '11.3'
+        platform :tvos, '12.1'
         target 'MyFinance-tvOS'
         target 'MyFinanceKit-tvOS'
         target 'MyFinanceKit-tvOS-Tests'
@@ -37,7 +37,7 @@ abstract_target 'MyFinance' do
     end
 
     abstract_target 'macOS' do
-        platform :osx, '10.13'
+        platform :osx, '10.14'
         target 'MyFinance-macOS'
         target 'MyFinanceExtension-macOS'
         target 'MyFinanceKit-macOS'
