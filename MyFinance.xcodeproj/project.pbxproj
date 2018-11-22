@@ -4913,7 +4913,7 @@
 			baseConfigurationReference = DDAEDD691FB4BCCCE1F503EE /* Pods-MyFinance-iOS-MyFinanceKit-IntegrationTests.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 29MN2WH3Q3;
+				DEVELOPMENT_TEAM = WX9VZ58J6W;
 				INFOPLIST_FILE = "MyFinanceKit-IntegrationTests/Config/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.attilanemet.MyFinanceKit-IntegrationTests";
@@ -4931,7 +4931,7 @@
 			baseConfigurationReference = BE49C7AE8F9B8944FAC917DD /* Pods-MyFinance-iOS-MyFinanceKit-IntegrationTests.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 29MN2WH3Q3;
+				DEVELOPMENT_TEAM = WX9VZ58J6W;
 				INFOPLIST_FILE = "MyFinanceKit-IntegrationTests/Config/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.attilanemet.MyFinanceKit-IntegrationTests";
@@ -4955,7 +4955,7 @@
 				DEVELOPMENT_TEAM = WX9VZ58J6W;
 				IBSC_MODULE = MyFinance_watchOS_Extension;
 				INFOPLIST_FILE = "MyFinance-watchOS/Info.plist";
-				PRODUCT_BUNDLE_IDENTIFIER = com.zorkdev.MyFinance.watchkitapp;
+				PRODUCT_BUNDLE_IDENTIFIER = com.zorkdev.MyFinance.iOS.watchkitapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = watchos;
@@ -4978,7 +4978,7 @@
 				DEVELOPMENT_TEAM = WX9VZ58J6W;
 				IBSC_MODULE = MyFinance_watchOS_Extension;
 				INFOPLIST_FILE = "MyFinance-watchOS/Info.plist";
-				PRODUCT_BUNDLE_IDENTIFIER = com.zorkdev.MyFinance.watchkitapp;
+				PRODUCT_BUNDLE_IDENTIFIER = com.zorkdev.MyFinance.iOS.watchkitapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = watchos;
@@ -5000,7 +5000,7 @@
 				DEVELOPMENT_TEAM = WX9VZ58J6W;
 				INFOPLIST_FILE = "$(SRCROOT)/MyFinanceExtension-watchOS/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.zorkdev.MyFinance.watchkitapp.watchkitextension;
+				PRODUCT_BUNDLE_IDENTIFIER = com.zorkdev.MyFinance.iOS.watchkitapp.watchkitextension;
 				PRODUCT_NAME = "${TARGET_NAME}";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
@@ -5021,7 +5021,7 @@
 				DEVELOPMENT_TEAM = WX9VZ58J6W;
 				INFOPLIST_FILE = "$(SRCROOT)/MyFinanceExtension-watchOS/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.zorkdev.MyFinance.watchkitapp.watchkitextension;
+				PRODUCT_BUNDLE_IDENTIFIER = com.zorkdev.MyFinance.iOS.watchkitapp.watchkitextension;
 				PRODUCT_NAME = "${TARGET_NAME}";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
@@ -5313,7 +5313,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CLANG_ENABLE_OBJC_WEAK = YES;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 29MN2WH3Q3;
+				DEVELOPMENT_TEAM = WX9VZ58J6W;
 				INFOPLIST_FILE = "MyFinance-Tests-iOS/Config/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -5334,7 +5334,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CLANG_ENABLE_OBJC_WEAK = YES;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 29MN2WH3Q3;
+				DEVELOPMENT_TEAM = WX9VZ58J6W;
 				INFOPLIST_FILE = "MyFinance-Tests-iOS/Config/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -5352,7 +5352,7 @@
 			baseConfigurationReference = 9FBB5DAF3F32B2EF55726EA3 /* Pods-MyFinance-iOS-MyFinanceKit-iOS-Tests.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 29MN2WH3Q3;
+				DEVELOPMENT_TEAM = WX9VZ58J6W;
 				INFOPLIST_FILE = "MyFinanceKit-Tests/Config/iOS/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.attilanemet.MyFinanceKit-iOS-Tests";
@@ -5370,7 +5370,7 @@
 			baseConfigurationReference = D8D926226C93F4318936EE5F /* Pods-MyFinance-iOS-MyFinanceKit-iOS-Tests.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 29MN2WH3Q3;
+				DEVELOPMENT_TEAM = WX9VZ58J6W;
 				INFOPLIST_FILE = "MyFinanceKit-Tests/Config/iOS/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.attilanemet.MyFinanceKit-iOS-Tests";
@@ -5479,7 +5479,7 @@
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = 29MN2WH3Q3;
+				DEVELOPMENT_TEAM = WX9VZ58J6W;
 				INFOPLIST_FILE = "MyFinanceKit-Tests/Config/macOS/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.attilanemet.MyFinanceKit-macOS-Tests";
@@ -5499,7 +5499,7 @@
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = 29MN2WH3Q3;
+				DEVELOPMENT_TEAM = WX9VZ58J6W;
 				INFOPLIST_FILE = "MyFinanceKit-Tests/Config/macOS/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.attilanemet.MyFinanceKit-macOS-Tests";
@@ -5520,7 +5520,7 @@
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = 29MN2WH3Q3;
+				DEVELOPMENT_TEAM = WX9VZ58J6W;
 				INFOPLIST_FILE = "MyFinance-Tests-macOS/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.attilanemet.MyFinance-Tests-macOS";
@@ -5542,7 +5542,7 @@
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = 29MN2WH3Q3;
+				DEVELOPMENT_TEAM = WX9VZ58J6W;
 				INFOPLIST_FILE = "MyFinance-Tests-macOS/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.attilanemet.MyFinance-Tests-macOS";
@@ -5561,7 +5561,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CLANG_ENABLE_OBJC_WEAK = YES;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 29MN2WH3Q3;
+				DEVELOPMENT_TEAM = WX9VZ58J6W;
 				INFOPLIST_FILE = "MyFinance-Tests-tvOS/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.attilanemet.MyFinance-Tests-tvOS";
@@ -5583,7 +5583,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CLANG_ENABLE_OBJC_WEAK = YES;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 29MN2WH3Q3;
+				DEVELOPMENT_TEAM = WX9VZ58J6W;
 				INFOPLIST_FILE = "MyFinance-Tests-tvOS/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.attilanemet.MyFinance-Tests-tvOS";
@@ -5603,7 +5603,7 @@
 			buildSettings = {
 				CLANG_ENABLE_OBJC_WEAK = YES;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 29MN2WH3Q3;
+				DEVELOPMENT_TEAM = WX9VZ58J6W;
 				INFOPLIST_FILE = "MyFinanceKit-Tests/Config/tvOS/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.attilanemet.MyFinanceKit-Tests-tvOS";
@@ -5624,7 +5624,7 @@
 			buildSettings = {
 				CLANG_ENABLE_OBJC_WEAK = YES;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 29MN2WH3Q3;
+				DEVELOPMENT_TEAM = WX9VZ58J6W;
 				INFOPLIST_FILE = "MyFinanceKit-Tests/Config/tvOS/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.attilanemet.MyFinanceKit-Tests-tvOS";
@@ -5646,7 +5646,7 @@
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = 29MN2WH3Q3;
+				DEVELOPMENT_TEAM = WX9VZ58J6W;
 				INFOPLIST_FILE = "MyFinanceKit-Tests/Config/macOS/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.attilanemet.MyFinanceKit-macOS-Unsigned-Tests";
@@ -5666,7 +5666,7 @@
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = 29MN2WH3Q3;
+				DEVELOPMENT_TEAM = WX9VZ58J6W;
 				INFOPLIST_FILE = "MyFinanceKit-Tests/Config/macOS/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.attilanemet.MyFinanceKit-macOS-Unsigned-Tests";
