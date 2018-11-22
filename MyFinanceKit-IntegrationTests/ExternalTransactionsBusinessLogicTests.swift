@@ -13,6 +13,8 @@ class ExternalTransactionsBusinessLogicTests: IntegrationTestCase {
             .done { transactions in
                 XCTAssert(transactions.isEmpty == false)
                 newExpectation.fulfill()
+            }.catch { error in
+                XCTFail(error.localizedDescription)
         }
 
         waitForExpectations(timeout: 10.0, handler: nil)
@@ -38,6 +40,8 @@ class ExternalTransactionsBusinessLogicTests: IntegrationTestCase {
                 return externalTransactionsBusinessLogic.delete(transaction: transaction)
             }.done {
                 deletedExpectation.fulfill()
+            }.catch { error in
+                XCTFail(error.localizedDescription)
         }
 
         waitForExpectations(timeout: 10.0, handler: nil)

@@ -12,6 +12,8 @@ class UserBusinessLogicTests: IntegrationTestCase {
         _ = userBusinessLogic.getSession(credentials: config.testCredentials)
             .done { _ in
                 newExpectation.fulfill()
+            }.catch { error in
+                XCTFail(error.localizedDescription)
         }
 
         waitForExpectations(timeout: 10.0, handler: nil)
@@ -25,6 +27,8 @@ class UserBusinessLogicTests: IntegrationTestCase {
         _ = userBusinessLogic.getCurrentUser()
             .done { _ in
                 newExpectation.fulfill()
+            }.catch { error in
+                XCTFail(error.localizedDescription)
         }
 
         waitForExpectations(timeout: 10.0, handler: nil)
@@ -40,6 +44,8 @@ class UserBusinessLogicTests: IntegrationTestCase {
                 userBusinessLogic.update(user: user).asVoid()
             }.done {
                 newExpectation.fulfill()
+            }.catch { error in
+                XCTFail(error.localizedDescription)
         }
 
         waitForExpectations(timeout: 10.0, handler: nil)

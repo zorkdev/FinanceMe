@@ -12,6 +12,8 @@ class TransactionsBusinessLogicTests: IntegrationTestCase {
             .done { transactions in
                 XCTAssertFalse(transactions.isEmpty)
                 newExpectation.fulfill()
+            }.catch { error in
+                XCTFail(error.localizedDescription)
         }
 
         waitForExpectations(timeout: 10.0, handler: nil)
