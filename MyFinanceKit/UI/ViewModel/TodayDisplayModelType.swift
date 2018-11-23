@@ -19,13 +19,16 @@ public extension TodayDisplayModelType {
 
     static func attributedString(from amount: Double) -> NSAttributedString {
         let string = formatter.string(from: amount)
+        let location = string.firstIndex { CharacterSet.decimalDigits.contains($0.unicodeScalars.first!) }
+
+        guard let length = location?.encodedOffset else { return NSAttributedString(string: string) }
+
         let isNegative = amount < 0
         let color = isNegative ? negativeColor : positiveColor
 
         let attributedString = NSMutableAttributedString(string: string, attributes:
             [.font: Font.systemFont(ofSize: largeFontSize, weight: .light),
              .foregroundColor: color])
-        let length = isNegative ? 2 : 1
         attributedString.addAttributes(
             [.font: Font.systemFont(ofSize: smallFontSize, weight: .regular)],
             range: NSRange(location: 0, length: length))
