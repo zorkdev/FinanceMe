@@ -16,7 +16,6 @@ public class KeychainDataService: DataService {
         query[kSecAttrAccessible] = kSecAttrAccessibleWhenUnlocked
 
         let status = SecItemAdd(query as CFDictionary, nil)
-        print(status)
 
         switch status {
         case errSecSuccess: return .success
@@ -32,7 +31,6 @@ public class KeychainDataService: DataService {
 
         var result: AnyObject?
         let status = SecItemCopyMatching(query as CFDictionary, &result)
-        print(status)
 
         guard status == noErr,
             let data = result as? Data,
@@ -44,7 +42,6 @@ public class KeychainDataService: DataService {
     @discardableResult public func delete(key: String) -> DataServiceStatus {
         let query = createQuery(key: key) as CFDictionary
         let status = SecItemDelete(query)
-        print(status)
 
         return status == errSecSuccess ? .success : .failure
     }
@@ -74,7 +71,6 @@ extension KeychainDataService {
         let updateDictionary = [kSecValueData: value] as CFDictionary
 
         let status = SecItemUpdate(query, updateDictionary)
-        print(status)
 
         return status == errSecSuccess ? .success : .failure
     }
