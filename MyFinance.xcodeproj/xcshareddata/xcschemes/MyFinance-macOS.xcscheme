@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "9A740ECA201E245200D40943"
-               BuildableName = "MyFinance-macOS.app"
+               BuildableName = "FinanceMe.app"
                BlueprintName = "MyFinance-macOS"
                ReferencedContainer = "container:MyFinance.xcodeproj">
             </BuildableReference>
@@ -36,7 +36,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "9A740ECA201E245200D40943"
-            BuildableName = "MyFinance-macOS.app"
+            BuildableName = "FinanceMe.app"
             BlueprintName = "MyFinance-macOS"
             ReferencedContainer = "container:MyFinance.xcodeproj">
          </BuildableReference>
@@ -74,7 +74,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "9A740ECA201E245200D40943"
-            BuildableName = "MyFinance-macOS.app"
+            BuildableName = "FinanceMe.app"
             BlueprintName = "MyFinance-macOS"
             ReferencedContainer = "container:MyFinance.xcodeproj">
          </BuildableReference>
@@ -105,7 +105,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "9A740ECA201E245200D40943"
-            BuildableName = "MyFinance-macOS.app"
+            BuildableName = "FinanceMe.app"
             BlueprintName = "MyFinance-macOS"
             ReferencedContainer = "container:MyFinance.xcodeproj">
          </BuildableReference>
@@ -124,7 +124,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "9A740ECA201E245200D40943"
-            BuildableName = "MyFinance-macOS.app"
+            BuildableName = "FinanceMe.app"
             BlueprintName = "MyFinance-macOS"
             ReferencedContainer = "container:MyFinance.xcodeproj">
          </BuildableReference>

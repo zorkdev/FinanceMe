@@ -5498,7 +5498,7 @@
 				SWIFT_COMPILATION_MODE = singlefile;
 				SWIFT_OBJC_BRIDGING_HEADER = "MyFinanceKit-Tests/Config/macOS/Bridging-Header.h";
 				SWIFT_VERSION = 4.2;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MyFinance-macOS.app/Contents/MacOS/MyFinance-macOS";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FinanceMe.app/Contents/MacOS/FinanceMe";
 			};
 			name = Debug;
 		};
@@ -5517,7 +5517,7 @@
 				SDKROOT = macosx;
 				SWIFT_OBJC_BRIDGING_HEADER = "MyFinanceKit-Tests/Config/macOS/Bridging-Header.h";
 				SWIFT_VERSION = 4.2;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MyFinance-macOS.app/Contents/MacOS/MyFinance-macOS";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FinanceMe.app/Contents/MacOS/FinanceMe";
 			};
 			name = Release;
 		};
@@ -5539,7 +5539,7 @@
 				SWIFT_COMPILATION_MODE = singlefile;
 				SWIFT_OBJC_BRIDGING_HEADER = "MyFinance-Tests-iOS/Config/Bridging-Header.h";
 				SWIFT_VERSION = 4.2;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MyFinance-macOS.app/Contents/MacOS/MyFinance-macOS";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FinanceMe.app/Contents/MacOS/FinanceMe";
 			};
 			name = Debug;
 		};
@@ -5560,7 +5560,7 @@
 				SDKROOT = macosx;
 				SWIFT_OBJC_BRIDGING_HEADER = "MyFinance-Tests-iOS/Config/Bridging-Header.h";
 				SWIFT_VERSION = 4.2;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MyFinance-macOS.app/Contents/MacOS/MyFinance-macOS";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FinanceMe.app/Contents/MacOS/FinanceMe";
 			};
 			name = Release;
 		};
