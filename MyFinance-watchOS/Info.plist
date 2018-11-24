@@ -29,7 +29,5 @@
 	<string>com.zorkdev.MyFinance.iOS</string>
 	<key>WKWatchKitApp</key>
 	<true/>
-	<key>ITSAppUsesNonExemptEncryption</key>
-	<false/>
 </dict>
 </plist>
