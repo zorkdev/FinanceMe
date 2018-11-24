@@ -552,6 +552,7 @@
 		9AC3E73B20423D8500CD29B6 /* Factory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AC3E73520423C7100CD29B6 /* Factory.swift */; };
 		9AC3E73C20423D8500CD29B6 /* Factory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AC3E73520423C7100CD29B6 /* Factory.swift */; };
 		9AC3E73D20423D8600CD29B6 /* Factory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AC3E73520423C7100CD29B6 /* Factory.swift */; };
+		9ACA782D21A9BCF20099613B /* ExportOptions.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9ACA782C21A9BCF20099613B /* ExportOptions.plist */; };
 		9AD3EE3A2013D9A10083F8FE /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AD3EE392013D9A10083F8FE /* NotificationCenter.framework */; };
 		9AD3EE3D2013D9A10083F8FE /* TodayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AD3EE3C2013D9A10083F8FE /* TodayViewController.swift */; };
 		9AD3EE402013D9A10083F8FE /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9AD3EE3E2013D9A10083F8FE /* MainInterface.storyboard */; };
@@ -1136,6 +1137,7 @@
 		9AC3E72F20423A8000CD29B6 /* MockWatchService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockWatchService.swift; sourceTree = "<group>"; };
 		9AC3E73120423A9200CD29B6 /* MockWCSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockWCSession.swift; sourceTree = "<group>"; };
 		9AC3E73520423C7100CD29B6 /* Factory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Factory.swift; sourceTree = "<group>"; };
+		9ACA782C21A9BCF20099613B /* ExportOptions.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = ExportOptions.plist; sourceTree = "<group>"; };
 		9AD3EE1D20138F6C0083F8FE /* Transaction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Transaction.swift; sourceTree = "<group>"; };
 		9AD3EE222013985B0083F8FE /* TransactionsBusinessLogic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionsBusinessLogic.swift; sourceTree = "<group>"; };
 		9AD3EE2420139BA40083F8FE /* Data+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Data+Extensions.swift"; sourceTree = "<group>"; };
@@ -2067,6 +2069,7 @@
 				9A8561882027920600A26F12 /* .gitignore */,
 				9A8561892027920D00A26F12 /* .swiftlint.yml */,
 				9A8BF8332085474900FF4688 /* codecov.yml */,
+				9ACA782C21A9BCF20099613B /* ExportOptions.plist */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -3198,6 +3201,7 @@
 				9A8561AF2027BCDA00A26F12 /* ChartTableViewCell.xib in Resources */,
 				9A323E4A209BA8FE00CB40B1 /* BasicTableViewCell.xib in Resources */,
 				9A5AE5802012A8AC00B25081 /* LaunchScreen.storyboard in Resources */,
+				9ACA782D21A9BCF20099613B /* ExportOptions.plist in Resources */,
 				9A8561AA2027A8A100A26F12 /* CurrentMonthTableViewCell.xib in Resources */,
 				9A5AE57D2012A8AC00B25081 /* Assets.xcassets in Resources */,
 				9AA4049E2092701800D55604 /* InputTableViewCell.xib in Resources */,

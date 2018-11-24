@@ -1,3 +1,3 @@
 /* Display name and description for this extension. */
-"CFBundleDisplayName" = "Finance";
+"CFBundleDisplayName" = "FinanceMe";
 "com.apple.notificationcenter.widget.description" = "Sample description";
