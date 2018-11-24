@@ -4822,7 +4822,7 @@
 				DEVELOPMENT_TEAM = WX9VZ58J6W;
 				INFOPLIST_FILE = "$(SRCROOT)/MyFinance-tvOS/Application/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.zorkdev.MyFinance.tvOS;
+				PRODUCT_BUNDLE_IDENTIFIER = com.zorkdev.MyFinance.iOS;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = appletvos;
 				SWIFT_COMPILATION_MODE = singlefile;
@@ -4845,7 +4845,7 @@
 				DEVELOPMENT_TEAM = WX9VZ58J6W;
 				INFOPLIST_FILE = "$(SRCROOT)/MyFinance-tvOS/Application/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.zorkdev.MyFinance.tvOS;
+				PRODUCT_BUNDLE_IDENTIFIER = com.zorkdev.MyFinance.iOS;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = appletvos;
 				SWIFT_OBJC_BRIDGING_HEADER = "MyFinance-tvOS/Application/Bridging-Header.h";
