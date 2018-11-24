@@ -1041,7 +1041,7 @@
 		9A6EF761202BABE0006D3420 /* SummaryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SummaryTests.swift; sourceTree = "<group>"; };
 		9A6F9FC2203CBCA00040BD50 /* HomeViewModelType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModelType.swift; sourceTree = "<group>"; };
 		9A709E1C203F9454003A33FC /* BaseViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewControllerTests.swift; sourceTree = "<group>"; };
-		9A740ECB201E245200D40943 /* MyFinance-macOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "MyFinance-macOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		9A740ECB201E245200D40943 /* FinanceMe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FinanceMe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9A740ECD201E245200D40943 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9A740ED1201E245200D40943 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9A740ED4201E245200D40943 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -1750,7 +1750,7 @@
 			children = (
 				9A5AE5722012A8AB00B25081 /* MyFinance-iOS.app */,
 				9AD3EE382013D9A10083F8FE /* MyFinanceExtension-iOS.appex */,
-				9A740ECB201E245200D40943 /* MyFinance-macOS.app */,
+				9A740ECB201E245200D40943 /* FinanceMe.app */,
 				9A740EDF201E247D00D40943 /* MyFinanceExtension-macOS.appex */,
 				9A4F55302023C7A900DBF68F /* MyFinanceKit.framework */,
 				9A4F55422023C7BE00DBF68F /* MyFinanceKit.framework */,
@@ -2789,7 +2789,7 @@
 			);
 			name = "MyFinance-macOS";
 			productName = "MyFinance-macOS";
-			productReference = 9A740ECB201E245200D40943 /* MyFinance-macOS.app */;
+			productReference = 9A740ECB201E245200D40943 /* FinanceMe.app */;
 			productType = "com.apple.product-type.application";
 		};
 		9A740EDE201E247D00D40943 /* MyFinanceExtension-macOS */ = {
@@ -5405,7 +5405,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.14;
 				PRODUCT_BUNDLE_IDENTIFIER = com.zorkdev.MyFinance.macOS;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = FinanceMe;
 				SDKROOT = macosx;
 				SWIFT_COMPILATION_MODE = singlefile;
 				SWIFT_OBJC_BRIDGING_HEADER = "MyFinance-macOS/Bridging-Header.h";
@@ -5429,7 +5429,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.14;
 				PRODUCT_BUNDLE_IDENTIFIER = com.zorkdev.MyFinance.macOS;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = FinanceMe;
 				SDKROOT = macosx;
 				SWIFT_OBJC_BRIDGING_HEADER = "MyFinance-macOS/Bridging-Header.h";
 				SWIFT_VERSION = 4.2;
