@@ -4824,7 +4824,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = WX9VZ58J6W;
-				INFOPLIST_FILE = "$(SRCROOT)/MyFinance-tvOS/Application/Info.plist";
+				INFOPLIST_FILE = "MyFinance-tvOS/Application/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.zorkdev.MyFinance.iOS;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -4847,7 +4847,7 @@
 				CODE_SIGN_ENTITLEMENTS = "MyFinance-tvOS/Application/MyFinance-tvOS.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = WX9VZ58J6W;
-				INFOPLIST_FILE = "$(SRCROOT)/MyFinance-tvOS/Application/Info.plist";
+				INFOPLIST_FILE = "MyFinance-tvOS/Application/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.zorkdev.MyFinance.iOS;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -5008,7 +5008,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = WX9VZ58J6W;
-				INFOPLIST_FILE = "$(SRCROOT)/MyFinanceExtension-watchOS/Info.plist";
+				INFOPLIST_FILE = "MyFinanceExtension-watchOS/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.zorkdev.MyFinance.iOS.watchkitapp.watchkitextension;
 				PRODUCT_NAME = "${TARGET_NAME}";
@@ -5029,7 +5029,7 @@
 				CODE_SIGN_ENTITLEMENTS = "MyFinanceExtension-watchOS/MyFinanceExtension-watchOS.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = WX9VZ58J6W;
-				INFOPLIST_FILE = "$(SRCROOT)/MyFinanceExtension-watchOS/Info.plist";
+				INFOPLIST_FILE = "MyFinanceExtension-watchOS/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.zorkdev.MyFinance.iOS.watchkitapp.watchkitextension;
 				PRODUCT_NAME = "${TARGET_NAME}";
@@ -5285,7 +5285,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = WX9VZ58J6W;
-				INFOPLIST_FILE = "$(SRCROOT)/MyFinance-iOS/Application/Info.plist";
+				INFOPLIST_FILE = "MyFinance-iOS/Application/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.zorkdev.MyFinance.iOS;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -5305,7 +5305,7 @@
 				CODE_SIGN_ENTITLEMENTS = "MyFinance-iOS/Application/MyFinance-iOS.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = WX9VZ58J6W;
-				INFOPLIST_FILE = "$(SRCROOT)/MyFinance-iOS/Application/Info.plist";
+				INFOPLIST_FILE = "MyFinance-iOS/Application/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.zorkdev.MyFinance.iOS;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -5700,7 +5700,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = WX9VZ58J6W;
-				INFOPLIST_FILE = "$(SRCROOT)/MyFinanceExtension-iOS/Info.plist";
+				INFOPLIST_FILE = "MyFinanceExtension-iOS/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.zorkdev.MyFinance.iOS.MyFinanceExtension;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -5721,7 +5721,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = WX9VZ58J6W;
-				INFOPLIST_FILE = "$(SRCROOT)/MyFinanceExtension-iOS/Info.plist";
+				INFOPLIST_FILE = "MyFinanceExtension-iOS/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.zorkdev.MyFinance.iOS.MyFinanceExtension;
 				PRODUCT_NAME = "$(TARGET_NAME)";
