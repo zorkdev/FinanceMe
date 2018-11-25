@@ -9,7 +9,11 @@ struct HomeDisplayModel: TodayDisplayModelType {
 
 }
 
-class HomeViewModel: TodayViewModel {
+protocol HomeViewModelType: TodayPresentable {
+    @discardableResult func update() -> Promise<Void>
+}
+
+class HomeViewModel: TodayViewModel, HomeViewModelType {
 
     let complicationService: ComplicationServiceType
 
@@ -20,8 +24,8 @@ class HomeViewModel: TodayViewModel {
         super.init(serviceProvider: serviceProvider, displayModel: displayModel)
     }
 
-    @discardableResult public func getUser() -> Promise<Void> {
-        return super.getUser().done {
+    @discardableResult func update() -> Promise<Void> {
+        return updateData().done {
             guard let user = User.load(dataService: self.serviceProvider.dataService) else { return }
             self.complicationService.updateComplication(allowance: user.allowance)
         }

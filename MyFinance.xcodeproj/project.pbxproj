@@ -552,7 +552,6 @@
 		9AC3E73B20423D8500CD29B6 /* Factory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AC3E73520423C7100CD29B6 /* Factory.swift */; };
 		9AC3E73C20423D8500CD29B6 /* Factory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AC3E73520423C7100CD29B6 /* Factory.swift */; };
 		9AC3E73D20423D8600CD29B6 /* Factory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AC3E73520423C7100CD29B6 /* Factory.swift */; };
-		9ACA782D21A9BCF20099613B /* ExportOptions.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9ACA782C21A9BCF20099613B /* ExportOptions.plist */; };
 		9AD3EE3A2013D9A10083F8FE /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AD3EE392013D9A10083F8FE /* NotificationCenter.framework */; };
 		9AD3EE3D2013D9A10083F8FE /* TodayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AD3EE3C2013D9A10083F8FE /* TodayViewController.swift */; };
 		9AD3EE402013D9A10083F8FE /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9AD3EE3E2013D9A10083F8FE /* MainInterface.storyboard */; };
@@ -3201,7 +3200,6 @@
 				9A8561AF2027BCDA00A26F12 /* ChartTableViewCell.xib in Resources */,
 				9A323E4A209BA8FE00CB40B1 /* BasicTableViewCell.xib in Resources */,
 				9A5AE5802012A8AC00B25081 /* LaunchScreen.storyboard in Resources */,
-				9ACA782D21A9BCF20099613B /* ExportOptions.plist in Resources */,
 				9A8561AA2027A8A100A26F12 /* CurrentMonthTableViewCell.xib in Resources */,
 				9A5AE57D2012A8AC00B25081 /* Assets.xcassets in Resources */,
 				9AA4049E2092701800D55604 /* InputTableViewCell.xib in Resources */,

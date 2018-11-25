@@ -7,7 +7,7 @@ class HomeInterfaceController: WKInterfaceController {
     @IBOutlet private weak var allowanceLabel: WKInterfaceLabel!
     @IBOutlet private weak var allowanceIconLabel: WKInterfaceLabel!
 
-    private var viewModel: TodayPresentable!
+    private var viewModel: HomeViewModelType!
 
     override init() {
         super.init()
@@ -28,7 +28,7 @@ class HomeInterfaceController: WKInterfaceController {
     override func willActivate() {
         super.willActivate()
 
-        viewModel.updateData()
+        viewModel.update()
     }
 
 }
