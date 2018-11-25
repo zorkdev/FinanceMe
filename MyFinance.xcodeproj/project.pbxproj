@@ -48,7 +48,7 @@
 		9A20221B2038CD2A0012DD51 /* Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A5AE59B2012C45700B25081 /* Error.swift */; };
 		9A20221C2038CE530012DD51 /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ADE54C0201568D90039D774 /* DataService.swift */; };
 		9A2022242038D29D0012DD51 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A2022232038D29D0012DD51 /* AppDelegate.swift */; };
-		9A2022262038D29D0012DD51 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A2022252038D29D0012DD51 /* ViewController.swift */; };
+		9A2022262038D29D0012DD51 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A2022252038D29D0012DD51 /* MainViewController.swift */; };
 		9A2022292038D29D0012DD51 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9A2022272038D29D0012DD51 /* Main.storyboard */; };
 		9A20222B2038D29D0012DD51 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9A20222A2038D29D0012DD51 /* Assets.xcassets */; };
 		9A20223D2038D4990012DD51 /* MyFinanceKit_tvOS.h in Headers */ = {isa = PBXBuildFile; fileRef = 9A20223B2038D4990012DD51 /* MyFinanceKit_tvOS.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -428,6 +428,10 @@
 		9A96668720260E7B000F8A42 /* ColorPalette.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A96668620260E7B000F8A42 /* ColorPalette.swift */; };
 		9A96668820260E7B000F8A42 /* ColorPalette.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A96668620260E7B000F8A42 /* ColorPalette.swift */; };
 		9A98CD34204221E8004B5ACE /* AppStatemacOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A98CD33204221E8004B5ACE /* AppStatemacOSTests.swift */; };
+		9A9AB9F621AB628300BA8031 /* MainDisplayModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A9AB9F521AB628300BA8031 /* MainDisplayModel.swift */; };
+		9A9AB9FA21AB77AC00BA8031 /* MainViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A9AB9F921AB77AC00BA8031 /* MainViewControllerTests.swift */; };
+		9A9AB9FB21AB788800BA8031 /* MockTodayPresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AA1A3DF203FA4580059EC5A /* MockTodayPresentable.swift */; };
+		9A9AB9FC21AB78D900BA8031 /* MockTodayDisplayModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AAA77D7203F9B2A000E1323 /* MockTodayDisplayModel.swift */; };
 		9AA1A3DD203FA41C0059EC5A /* TodayPresentableTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AA1A3DC203FA41C0059EC5A /* TodayPresentableTests.swift */; };
 		9AA1A3DE203FA41C0059EC5A /* TodayPresentableTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AA1A3DC203FA41C0059EC5A /* TodayPresentableTests.swift */; };
 		9AA1A3E0203FA4580059EC5A /* MockTodayPresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AA1A3DF203FA4580059EC5A /* MockTodayPresentable.swift */; };
@@ -892,7 +896,7 @@
 		9A2022182038CC4A0012DD51 /* Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Bridging-Header.h"; sourceTree = "<group>"; };
 		9A2022212038D29D0012DD51 /* MyFinance-tvOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "MyFinance-tvOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9A2022232038D29D0012DD51 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		9A2022252038D29D0012DD51 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		9A2022252038D29D0012DD51 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		9A2022282038D29D0012DD51 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		9A20222A2038D29D0012DD51 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9A20222C2038D29D0012DD51 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -1095,6 +1099,8 @@
 		9A98CD31204221E8004B5ACE /* MyFinance-Tests-macOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "MyFinance-Tests-macOS.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9A98CD33204221E8004B5ACE /* AppStatemacOSTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStatemacOSTests.swift; sourceTree = "<group>"; };
 		9A98CD35204221E8004B5ACE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9A9AB9F521AB628300BA8031 /* MainDisplayModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainDisplayModel.swift; sourceTree = "<group>"; };
+		9A9AB9F921AB77AC00BA8031 /* MainViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewControllerTests.swift; sourceTree = "<group>"; };
 		9AA1A3DC203FA41C0059EC5A /* TodayPresentableTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayPresentableTests.swift; sourceTree = "<group>"; };
 		9AA1A3DF203FA4580059EC5A /* MockTodayPresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockTodayPresentable.swift; sourceTree = "<group>"; };
 		9AA374D32042205D00B016BB /* MyFinance-Tests-tvOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "MyFinance-Tests-tvOS.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -1479,7 +1485,8 @@
 			isa = PBXGroup;
 			children = (
 				9A2022272038D29D0012DD51 /* Main.storyboard */,
-				9A2022252038D29D0012DD51 /* ViewController.swift */,
+				9A2022252038D29D0012DD51 /* MainViewController.swift */,
+				9A9AB9F521AB628300BA8031 /* MainDisplayModel.swift */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -2161,6 +2168,7 @@
 			isa = PBXGroup;
 			children = (
 				9AA374D52042205D00B016BB /* AppDelegateTests.swift */,
+				9A9AB9F921AB77AC00BA8031 /* MainViewControllerTests.swift */,
 				9AA374D72042205E00B016BB /* Info.plist */,
 			);
 			path = "MyFinance-Tests-tvOS";
@@ -3966,7 +3974,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9A2022262038D29D0012DD51 /* ViewController.swift in Sources */,
+				9A2022262038D29D0012DD51 /* MainViewController.swift in Sources */,
+				9A9AB9F621AB628300BA8031 /* MainDisplayModel.swift in Sources */,
 				9A2022242038D29D0012DD51 /* AppDelegate.swift in Sources */,
 				9AC004AF2041DB1E00ABB462 /* main.swift in Sources */,
 			);
@@ -4438,11 +4447,14 @@
 				9A85358420796D7B00704A78 /* MockViewController.swift in Sources */,
 				9A85357C20796BFE00704A78 /* MockBaseNavigator.swift in Sources */,
 				9AC3E71F20423A2B00CD29B6 /* MockNetworkService.swift in Sources */,
+				9A9AB9FC21AB78D900BA8031 /* MockTodayDisplayModel.swift in Sources */,
 				9AC3E72220423A3200CD29B6 /* MockAppState.swift in Sources */,
 				9A85358B20796EC400704A78 /* MockViewModel.swift in Sources */,
 				9AC3E72B20423A4300CD29B6 /* MockAPI.swift in Sources */,
+				9A9AB9FB21AB788800BA8031 /* MockTodayPresentable.swift in Sources */,
 				9AC3E72D20423A4500CD29B6 /* MockDataService.swift in Sources */,
 				9AA374D62042205D00B016BB /* AppDelegateTests.swift in Sources */,
+				9A9AB9FA21AB77AC00BA8031 /* MainViewControllerTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -1,1 +1,0 @@
-class ViewController: BaseViewController {}
