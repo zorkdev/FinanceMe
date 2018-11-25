@@ -20,6 +20,23 @@ class TransactionTests: XCTestCase {
         XCTAssertNotNil(Transaction(data: jsonData))
     }
 
+    func testDecodeTransactionWithNullSource() {
+        let jsonData =
+            """
+        {
+            "amount" : 10.30,
+            "id" : "id",
+            "created" : "2018-01-01T00:00:00.000Z",
+            "direction" : "INBOUND",
+            "currency" : "GBP",
+            "balance" : 100,
+            "narrative" : "Test"
+        }
+        """.data(using: .utf8)!
+
+        XCTAssertNotNil(Transaction(data: jsonData))
+    }
+
     func testEncodeTransaction() {
         let transaction = Factory.makeTransaction()
 

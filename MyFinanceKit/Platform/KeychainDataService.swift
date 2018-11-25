@@ -13,7 +13,6 @@ public class KeychainDataService: DataService {
 
         var query = createQuery(key: key)
         query[kSecValueData] = data
-        query[kSecAttrAccessible] = kSecAttrAccessibleAfterFirstUnlock
 
         let status = SecItemAdd(query as CFDictionary, nil)
 
@@ -82,6 +81,7 @@ extension KeychainDataService {
         query[kSecAttrSynchronizable] = kCFBooleanTrue
         query[kSecAttrGeneric] = key
         query[kSecAttrAccount] = key
+        query[kSecAttrAccessible] = kSecAttrAccessibleAfterFirstUnlock
 
         return query
     }

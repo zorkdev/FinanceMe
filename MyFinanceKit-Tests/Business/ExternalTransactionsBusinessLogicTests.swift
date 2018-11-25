@@ -143,4 +143,42 @@ class ExternalTransactionsBusinessLogicTests: ServiceClientTestCase {
         waitForExpectations(timeout: 10.0, handler: nil)
     }
 
+    func testReconcile_Success() {
+        let newExpectation = expectation(description: "Transactions reconciled")
+
+        mockAppState.mockNetworkService.returnDataValue = Data()
+
+        let externalTransactionsBusinessLogic = ExternalTransactionsBusinessLogic(serviceProvider: mockAppState)
+
+        _ = externalTransactionsBusinessLogic.reconcile().done {
+
+            XCTAssertEqual(self.mockAppState.mockNetworkService.lastRequest?.api as? API,
+                           .zorkdev(.reconcile))
+            XCTAssertEqual(self.mockAppState.mockNetworkService.lastRequest?.method, .post)
+            XCTAssertNil(self.mockAppState.mockNetworkService.lastRequest?.parameters)
+            XCTAssertNil(self.mockAppState.mockNetworkService.lastRequest?.body)
+
+            newExpectation.fulfill()
+        }
+
+        waitForExpectations(timeout: 10.0, handler: nil)
+    }
+
+    func testReconcile_Failure() {
+        let newExpectation = expectation(description: "Reconciliation failed")
+
+        mockAppState.mockNetworkService.returnErrorValue = APIError.badRequest
+
+        let externalTransactionsBusinessLogic = ExternalTransactionsBusinessLogic(serviceProvider: mockAppState)
+
+        _ = externalTransactionsBusinessLogic.reconcile().catch { error in
+
+            XCTAssertEqual(error as? APIError, .badRequest)
+
+            newExpectation.fulfill()
+        }
+
+        waitForExpectations(timeout: 10.0, handler: nil)
+    }
+
 }

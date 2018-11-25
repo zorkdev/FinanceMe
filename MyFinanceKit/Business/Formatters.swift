@@ -5,11 +5,11 @@ public struct Formatters {
     public static let apiTimeZone = Foundation.TimeZone(abbreviation: "UTC")
 
     public static let currencySymbol = {
-        return locale.currencySymbol ?? "£"
+        return locale.currencySymbol!
     }()
 
     public static let decimalSeparator = {
-        return locale.decimalSeparator ?? "."
+        return locale.decimalSeparator!
     }()
 
     public static let apiDate: DateFormatter = {
