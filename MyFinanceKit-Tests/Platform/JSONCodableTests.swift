@@ -109,27 +109,43 @@ class JSONCodableTests: XCTestCase {
         XCTAssertTrue(urlFormEncoded.contains(URLQueryItem(name: "double", value: "1.1")))
     }
 
-    func testURLFormEncoded_Failure() {
+    func testURLFormEncodedNaN_Failure() {
         let nan = Double.nan
         let urlFormEncoded = nan.urlEncoded()
 
         XCTAssertNil(urlFormEncoded)
     }
 
-    func testCodableDictionary() {
-        _ = CodableDictionary.CodingKeys.init(intValue: 1)
-
-        let jsonData =
-        """
-        {
-            "key": 10,
+    func testURLFormEncodedNestedKeyed_Failure() {
+        struct NestedModel: JSONCodable {
+            var int: Int
         }
-        """.data(using: .utf8)!
 
-        let codableDictionary = CodableDictionary(data: jsonData)
+        struct Model: JSONCodable {
+            var nestedModel: NestedModel
+        }
 
-        XCTAssertNotNil(codableDictionary)
-        XCTAssertEqual(codableDictionary?.value, ["key": "10"])
+        let model = Model(nestedModel: NestedModel(int: 2))
+
+        let urlFormEncoded = model.urlEncoded()
+
+        XCTAssertNil(urlFormEncoded)
+    }
+
+    func testURLFormEncodedUnkeyed_Failure() {
+        struct NestedModel: JSONCodable {
+            var int: Int
+        }
+
+        struct Model: JSONCodable {
+            var nestedModel: [NestedModel]
+        }
+
+        let model = [Model(nestedModel: [NestedModel(int: 2)])]
+
+        let urlFormEncoded = model.urlEncoded()
+
+        XCTAssertNil(urlFormEncoded)
     }
 
 }

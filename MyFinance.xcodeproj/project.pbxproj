@@ -432,6 +432,10 @@
 		9A9AB9FA21AB77AC00BA8031 /* MainViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A9AB9F921AB77AC00BA8031 /* MainViewControllerTests.swift */; };
 		9A9AB9FB21AB788800BA8031 /* MockTodayPresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AA1A3DF203FA4580059EC5A /* MockTodayPresentable.swift */; };
 		9A9AB9FC21AB78D900BA8031 /* MockTodayDisplayModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AAA77D7203F9B2A000E1323 /* MockTodayDisplayModel.swift */; };
+		9A9C1CB72143DEE3001CA110 /* DictionaryEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A9C1CB62143DEE3001CA110 /* DictionaryEncoder.swift */; };
+		9A9C1CB82143DEE3001CA110 /* DictionaryEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A9C1CB62143DEE3001CA110 /* DictionaryEncoder.swift */; };
+		9A9C1CB92143DEE3001CA110 /* DictionaryEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A9C1CB62143DEE3001CA110 /* DictionaryEncoder.swift */; };
+		9A9C1CBA2143DEE3001CA110 /* DictionaryEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A9C1CB62143DEE3001CA110 /* DictionaryEncoder.swift */; };
 		9AA1A3DD203FA41C0059EC5A /* TodayPresentableTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AA1A3DC203FA41C0059EC5A /* TodayPresentableTests.swift */; };
 		9AA1A3DE203FA41C0059EC5A /* TodayPresentableTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AA1A3DC203FA41C0059EC5A /* TodayPresentableTests.swift */; };
 		9AA1A3E0203FA4580059EC5A /* MockTodayPresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AA1A3DF203FA4580059EC5A /* MockTodayPresentable.swift */; };
@@ -1101,6 +1105,7 @@
 		9A98CD35204221E8004B5ACE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9A9AB9F521AB628300BA8031 /* MainDisplayModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainDisplayModel.swift; sourceTree = "<group>"; };
 		9A9AB9F921AB77AC00BA8031 /* MainViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewControllerTests.swift; sourceTree = "<group>"; };
+		9A9C1CB62143DEE3001CA110 /* DictionaryEncoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DictionaryEncoder.swift; sourceTree = "<group>"; };
 		9AA1A3DC203FA41C0059EC5A /* TodayPresentableTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayPresentableTests.swift; sourceTree = "<group>"; };
 		9AA1A3DF203FA4580059EC5A /* MockTodayPresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockTodayPresentable.swift; sourceTree = "<group>"; };
 		9AA374D32042205D00B016BB /* MyFinance-Tests-tvOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "MyFinance-Tests-tvOS.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -1852,6 +1857,7 @@
 				9A3A2B822039AEAD0071FBC5 /* AppState.swift */,
 				9AD96C9A202534D600D37F23 /* StringRepresentable.swift */,
 				9A6EF752202B980F006D3420 /* JSONCodable.swift */,
+				9A9C1CB62143DEE3001CA110 /* DictionaryEncoder.swift */,
 				9AFB034E2097DCA200A431B9 /* Diffable.swift */,
 				9A09C8D2209908DE00DBB626 /* Describable.swift */,
 				9A5AE5992012C0D000B25081 /* NetworkService.swift */,
@@ -3938,6 +3944,7 @@
 				9AE7F1572042513100BA98BD /* Instantiatable.swift in Sources */,
 				9A3A2B842039AEB10071FBC5 /* AppState.swift in Sources */,
 				9A20226B2038D91F0012DD51 /* Data+Extensions.swift in Sources */,
+				9A9C1CB82143DEE3001CA110 /* DictionaryEncoder.swift in Sources */,
 				9A85356D20795D8E00704A78 /* KeychainDataService.swift in Sources */,
 				9A0C474E204B65DB0011D817 /* Credentials.swift in Sources */,
 				9A2022812038D9770012DD51 /* TodayViewModel.swift in Sources */,
@@ -4009,6 +4016,7 @@
 				9AB4F12B2042500B008D0F5D /* Instantiatable.swift in Sources */,
 				9A2022512038D7270012DD51 /* Session.swift in Sources */,
 				9A09C8DA20990B0600DBB626 /* Payday.swift in Sources */,
+				9A9C1CB92143DEE3001CA110 /* DictionaryEncoder.swift in Sources */,
 				9A2022592038D7400012DD51 /* BalanceBusinessLogic.swift in Sources */,
 				9A2022582038D73D0012DD51 /* Validators.swift in Sources */,
 				9A2022532038D72C0012DD51 /* Balance.swift in Sources */,
@@ -4078,6 +4086,7 @@
 				9AFB034F2097DCA200A431B9 /* Diffable.swift in Sources */,
 				9A4F555A2023C97300DBF68F /* Date+Extensions.swift in Sources */,
 				9A2DB564202F54EC0008A4E5 /* UIView+Extensions.swift in Sources */,
+				9A9C1CB72143DEE3001CA110 /* DictionaryEncoder.swift in Sources */,
 				9A4F55742023CAD300DBF68F /* BalanceBusinessLogic.swift in Sources */,
 				9A3A2B882039C2350071FBC5 /* ViewControllerType.swift in Sources */,
 				9AD96C9B202534D600D37F23 /* StringRepresentable.swift in Sources */,
@@ -4133,6 +4142,7 @@
 				9A4F55662023CAA800DBF68F /* HALResponse.swift in Sources */,
 				9AB4F12C2042500C008D0F5D /* Instantiatable.swift in Sources */,
 				9A4F55712023CACC00DBF68F /* Formatters.swift in Sources */,
+				9A9C1CBA2143DEE3001CA110 /* DictionaryEncoder.swift in Sources */,
 				9A85356F20795D9000704A78 /* KeychainDataService.swift in Sources */,
 				9A0C4750204B65DB0011D817 /* Credentials.swift in Sources */,
 				9A4F555B2023C97300DBF68F /* Date+Extensions.swift in Sources */,
