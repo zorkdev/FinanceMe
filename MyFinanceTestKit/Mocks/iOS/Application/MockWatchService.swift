@@ -6,7 +6,9 @@ class MockWatchService: WatchServiceType {
 
     init() {}
 
-    required init(wcSession: WCSessionType, dataService: DataService) {}
+    required init(wcSession: WCSessionType,
+                  dataService: DataService,
+                  pushNotificationService: PushNotificationService) {}
 
     func updateComplication() {
         didCallUpdateComplication = true

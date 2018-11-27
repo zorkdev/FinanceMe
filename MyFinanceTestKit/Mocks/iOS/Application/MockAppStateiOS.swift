@@ -11,4 +11,9 @@ class MockAppStateiOS: MockAppState, AppStateiOSType {
     var navigator: NavigatorType = MockNavigator(window: MockWindow())
     var mockNavigator: MockNavigator { return navigator as! MockNavigator }
 
+    var pushNotificationService: PushNotificationService = MockPushNotificationService()
+    var mockPushNotificationService: MockPushNotificationService {
+        return pushNotificationService as! MockPushNotificationService
+    }
+
 }

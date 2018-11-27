@@ -7,6 +7,12 @@ protocol NavigatorProvider {
 
 }
 
+protocol PushNotificationServiceProvider {
+
+    var pushNotificationService: PushNotificationService { get }
+
+}
+
 protocol WatchServiceProvider {
 
     var watchService: WatchServiceType { get }
@@ -19,11 +25,16 @@ protocol LAContextProvider {
 
 }
 
-protocol AppStateiOSType: AppStateType & NavigatorProvider & WatchServiceProvider & LAContextProvider {}
+protocol AppStateiOSType: AppStateType
+& NavigatorProvider
+& WatchServiceProvider
+& LAContextProvider
+& PushNotificationServiceProvider {}
 
 class AppStateiOS: AppState, AppStateiOSType {
 
     var navigator: NavigatorType
+    let pushNotificationService: PushNotificationService
     let watchService: WatchServiceType
     let laContext: LAContextType
 
@@ -36,8 +47,10 @@ class AppStateiOS: AppState, AppStateiOSType {
                                             sessionService: sessionService)
 
         self.navigator = Navigator(window: UIWindow())
+        self.pushNotificationService = PushNotificationDefaultService(networkService: networkService)
         self.watchService = WatchService(wcSession: WCSession.default,
-                                         dataService: dataService)
+                                         dataService: dataService,
+                                         pushNotificationService: pushNotificationService)
         self.laContext = LAContext()
 
         super.init(networkService: networkService,

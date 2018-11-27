@@ -16,6 +16,7 @@ class LoginViewModel: ServiceClient, TableViewModelType {
         & NetworkServiceProvider
         & DataServiceProvider
         & SessionServiceProvider
+        & PushNotificationServiceProvider
 
     let serviceProvider: ServiceProvider
 
@@ -102,6 +103,7 @@ extension LoginViewModel {
         delegate?.showSpinner()
         userBusinessLogic.getSession(credentials: credentials)
             .done { _ in
+                self.serviceProvider.pushNotificationService.registerForNotifications()
                 self.serviceProvider.navigator.popToRoot()
             }.catch { error in
                 self.delegate?.showError(message: error.localizedDescription)

@@ -60,6 +60,7 @@ public enum ZorkdevAPI: APIType, Equatable {
     case transaction(String)
     case endOfMonthSummaries
     case reconcile
+    case deviceToken
 
     private var path: String {
         switch self {
@@ -69,6 +70,7 @@ public enum ZorkdevAPI: APIType, Equatable {
         case .transaction(let id): return "transactions/\(id)"
         case .endOfMonthSummaries: return "endOfMonthSummaries"
         case .reconcile: return "reconcile"
+        case .deviceToken: return "deviceToken"
         }
     }
 

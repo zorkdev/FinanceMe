@@ -343,6 +343,16 @@
 		9A65DECE2041B7CA00E8177A /* TableViewCellTypetvOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A65DECD2041B7CA00E8177A /* TableViewCellTypetvOSTests.swift */; };
 		9A65DF012041CE7300E8177A /* AppDelegateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A65DF002041CE7300E8177A /* AppDelegateTests.swift */; };
 		9A65DF092041D18500E8177A /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A65DF082041D18500E8177A /* main.swift */; };
+		9A67AD9021ADC26100FF7156 /* PushNotificationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A67AD8B21ADA12C00FF7156 /* PushNotificationService.swift */; };
+		9A67AD9221ADC53D00FF7156 /* PushNotificationBusinessLogic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A67AD9121ADC53D00FF7156 /* PushNotificationBusinessLogic.swift */; };
+		9A67AD9321ADC53D00FF7156 /* PushNotificationBusinessLogic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A67AD9121ADC53D00FF7156 /* PushNotificationBusinessLogic.swift */; };
+		9A67AD9421ADC53D00FF7156 /* PushNotificationBusinessLogic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A67AD9121ADC53D00FF7156 /* PushNotificationBusinessLogic.swift */; };
+		9A67AD9521ADC53D00FF7156 /* PushNotificationBusinessLogic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A67AD9121ADC53D00FF7156 /* PushNotificationBusinessLogic.swift */; };
+		9A67AD9721ADC6F200FF7156 /* DeviceToken.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A67AD9621ADC6F200FF7156 /* DeviceToken.swift */; };
+		9A67AD9821ADC6F200FF7156 /* DeviceToken.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A67AD9621ADC6F200FF7156 /* DeviceToken.swift */; };
+		9A67AD9921ADC6F200FF7156 /* DeviceToken.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A67AD9621ADC6F200FF7156 /* DeviceToken.swift */; };
+		9A67AD9A21ADC6F200FF7156 /* DeviceToken.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A67AD9621ADC6F200FF7156 /* DeviceToken.swift */; };
+		9A67AD9C21ADEA6600FF7156 /* MockPushNotificationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A67AD9B21ADEA6600FF7156 /* MockPushNotificationService.swift */; };
 		9A6B06EE203F6E4E006FB40E /* EndOfMonthSummaryBusinessLogicTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A6B06ED203F6E4E006FB40E /* EndOfMonthSummaryBusinessLogicTests.swift */; };
 		9A6B06EF203F6E4E006FB40E /* EndOfMonthSummaryBusinessLogicTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A6B06ED203F6E4E006FB40E /* EndOfMonthSummaryBusinessLogicTests.swift */; };
 		9A6B06F1203F6F51006FB40E /* SpendingBusinessLogicTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A6B06F0203F6F51006FB40E /* SpendingBusinessLogicTests.swift */; };
@@ -1034,6 +1044,10 @@
 		9A65DF002041CE7300E8177A /* AppDelegateTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegateTests.swift; sourceTree = "<group>"; };
 		9A65DF022041CE7300E8177A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9A65DF082041D18500E8177A /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		9A67AD8B21ADA12C00FF7156 /* PushNotificationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PushNotificationService.swift; sourceTree = "<group>"; };
+		9A67AD9121ADC53D00FF7156 /* PushNotificationBusinessLogic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PushNotificationBusinessLogic.swift; sourceTree = "<group>"; };
+		9A67AD9621ADC6F200FF7156 /* DeviceToken.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceToken.swift; sourceTree = "<group>"; };
+		9A67AD9B21ADEA6600FF7156 /* MockPushNotificationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockPushNotificationService.swift; sourceTree = "<group>"; };
 		9A6B06ED203F6E4E006FB40E /* EndOfMonthSummaryBusinessLogicTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndOfMonthSummaryBusinessLogicTests.swift; sourceTree = "<group>"; };
 		9A6B06F0203F6F51006FB40E /* SpendingBusinessLogicTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpendingBusinessLogicTests.swift; sourceTree = "<group>"; };
 		9A6EF747202B939B006D3420 /* MyFinanceKit-iOS-Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "MyFinanceKit-iOS-Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -1807,6 +1821,7 @@
 				9A65B79F202686A9004165F2 /* Summary.swift */,
 				9A3A2B91203A26620071FBC5 /* Allowance.swift */,
 				9A09C8D720990B0600DBB626 /* Payday.swift */,
+				9A67AD9621ADC6F200FF7156 /* DeviceToken.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -1817,6 +1832,7 @@
 				9A65DF082041D18500E8177A /* main.swift */,
 				9A5AE5752012A8AB00B25081 /* AppDelegate.swift */,
 				9A3A2B8E2039DA6F0071FBC5 /* AppStateiOS.swift */,
+				9A67AD8B21ADA12C00FF7156 /* PushNotificationService.swift */,
 				9A3CB7EB203074CD008AF158 /* WatchService.swift */,
 				9AE4D4442044891800299897 /* Navigator.swift */,
 				9AD3EE332013C9120083F8FE /* Bridging-Header.h */,
@@ -1846,6 +1862,7 @@
 				9A872984201662E100C1E9BE /* ExternalTransactionsBusinessLogic.swift */,
 				9A65B7A4202690DB004165F2 /* EndOfMonthSummaryBusinessLogic.swift */,
 				9AAD38A0202FA9BC00395119 /* SpendingBusinessLogic.swift */,
+				9A67AD9121ADC53D00FF7156 /* PushNotificationBusinessLogic.swift */,
 			);
 			path = Business;
 			sourceTree = "<group>";
@@ -2053,6 +2070,7 @@
 				9AC3E73120423A9200CD29B6 /* MockWCSession.swift */,
 				9AC3E72F20423A8000CD29B6 /* MockWatchService.swift */,
 				9A2BDAA32044D599008EE977 /* MockNavigator.swift */,
+				9A67AD9B21ADEA6600FF7156 /* MockPushNotificationService.swift */,
 			);
 			path = Application;
 			sourceTree = "<group>";
@@ -2969,6 +2987,9 @@
 							com.apple.Keychain = {
 								enabled = 1;
 							};
+							com.apple.Push = {
+								enabled = 1;
+							};
 						};
 					};
 					9A2022382038D4990012DD51 = {
@@ -2999,6 +3020,9 @@
 							com.apple.Keychain = {
 								enabled = 1;
 							};
+							com.apple.Push = {
+								enabled = 1;
+							};
 						};
 					};
 					9A4F552F2023C7A900DBF68F = {
@@ -3017,6 +3041,9 @@
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
 							com.apple.Keychain = {
+								enabled = 1;
+							};
+							com.apple.Push = {
 								enabled = 1;
 							};
 						};
@@ -3044,6 +3071,9 @@
 							com.apple.Keychain = {
 								enabled = 1;
 							};
+							com.apple.Push = {
+								enabled = 1;
+							};
 							com.apple.Sandbox = {
 								enabled = 1;
 							};
@@ -3058,6 +3088,9 @@
 								enabled = 1;
 							};
 							com.apple.Keychain = {
+								enabled = 1;
+							};
+							com.apple.Push = {
 								enabled = 1;
 							};
 							com.apple.Sandbox = {
@@ -3099,6 +3132,9 @@
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
 							com.apple.Keychain = {
+								enabled = 1;
+							};
+							com.apple.Push = {
 								enabled = 1;
 							};
 						};
@@ -3948,6 +3984,7 @@
 				9A85356D20795D8E00704A78 /* KeychainDataService.swift in Sources */,
 				9A0C474E204B65DB0011D817 /* Credentials.swift in Sources */,
 				9A2022812038D9770012DD51 /* TodayViewModel.swift in Sources */,
+				9A67AD9321ADC53D00FF7156 /* PushNotificationBusinessLogic.swift in Sources */,
 				9A2022752038D94B0012DD51 /* Summary.swift in Sources */,
 				9A2022712038D9420012DD51 /* Session.swift in Sources */,
 				9A2022782038D9570012DD51 /* BalanceBusinessLogic.swift in Sources */,
@@ -3960,6 +3997,7 @@
 				9A2022702038D93F0012DD51 /* HALResponse.swift in Sources */,
 				9AE4D44720448BEB00299897 /* ViewControllerType.swift in Sources */,
 				9A20221A2038CD130012DD51 /* Date+Extensions.swift in Sources */,
+				9A67AD9821ADC6F200FF7156 /* DeviceToken.swift in Sources */,
 				9A2022802038D9750012DD51 /* TodayPresentable.swift in Sources */,
 				9ABA692B20829BFA00B48CC8 /* SessionService.swift in Sources */,
 				9A3A2B93203A26620071FBC5 /* Allowance.swift in Sources */,
@@ -4015,11 +4053,13 @@
 				9A2022602038D7600012DD51 /* ColorPalette.swift in Sources */,
 				9AB4F12B2042500B008D0F5D /* Instantiatable.swift in Sources */,
 				9A2022512038D7270012DD51 /* Session.swift in Sources */,
+				9A67AD9921ADC6F200FF7156 /* DeviceToken.swift in Sources */,
 				9A09C8DA20990B0600DBB626 /* Payday.swift in Sources */,
 				9A9C1CB92143DEE3001CA110 /* DictionaryEncoder.swift in Sources */,
 				9A2022592038D7400012DD51 /* BalanceBusinessLogic.swift in Sources */,
 				9A2022582038D73D0012DD51 /* Validators.swift in Sources */,
 				9A2022532038D72C0012DD51 /* Balance.swift in Sources */,
+				9A67AD9421ADC53D00FF7156 /* PushNotificationBusinessLogic.swift in Sources */,
 				9A20225C2038D7470012DD51 /* ExternalTransactionsBusinessLogic.swift in Sources */,
 				9A2022482038D6F90012DD51 /* Data+Extensions.swift in Sources */,
 				9A2022492038D6FD0012DD51 /* URLSession+Extensions.swift in Sources */,
@@ -4103,10 +4143,12 @@
 				9A6EF753202B980F006D3420 /* JSONCodable.swift in Sources */,
 				9A4F55682023CAAD00DBF68F /* Session.swift in Sources */,
 				9A4F55612023C98200DBF68F /* Data+Extensions.swift in Sources */,
+				9A67AD9721ADC6F200FF7156 /* DeviceToken.swift in Sources */,
 				9A65B7A0202686A9004165F2 /* Summary.swift in Sources */,
 				9A96668720260E7B000F8A42 /* ColorPalette.swift in Sources */,
 				9A09C8D3209908DE00DBB626 /* Describable.swift in Sources */,
 				9A4F55782023CADE00DBF68F /* UserBusinessLogic.swift in Sources */,
+				9A67AD9221ADC53D00FF7156 /* PushNotificationBusinessLogic.swift in Sources */,
 				9A28B8332097377A0020A8DC /* TableViewType.swift in Sources */,
 				9AAD38A1202FA9BC00395119 /* SpendingBusinessLogic.swift in Sources */,
 				9AD96CA620253CC300D37F23 /* BaseViewController.swift in Sources */,
@@ -4146,6 +4188,7 @@
 				9A85356F20795D9000704A78 /* KeychainDataService.swift in Sources */,
 				9A0C4750204B65DB0011D817 /* Credentials.swift in Sources */,
 				9A4F555B2023C97300DBF68F /* Date+Extensions.swift in Sources */,
+				9A67AD9521ADC53D00FF7156 /* PushNotificationBusinessLogic.swift in Sources */,
 				9A4F55732023CAD300DBF68F /* BalanceBusinessLogic.swift in Sources */,
 				9AAD38A2202FA9BC00395119 /* SpendingBusinessLogic.swift in Sources */,
 				9AD96C9C202534D600D37F23 /* StringRepresentable.swift in Sources */,
@@ -4158,6 +4201,7 @@
 				9A4F556D2023CABF00DBF68F /* Transaction.swift in Sources */,
 				9A65B7A1202686A9004165F2 /* Summary.swift in Sources */,
 				9AE4D44620448BEA00299897 /* ViewControllerType.swift in Sources */,
+				9A67AD9A21ADC6F200FF7156 /* DeviceToken.swift in Sources */,
 				9A4F55552023C96200DBF68F /* ConfigService.swift in Sources */,
 				9ABA692D20829BFB00B48CC8 /* SessionService.swift in Sources */,
 				9A4F556F2023CAC700DBF68F /* APIs.swift in Sources */,
@@ -4201,6 +4245,7 @@
 				9A6124B320869E8B00A1EAAB /* KeyboardToolbar.swift in Sources */,
 				9AFC00462071748F00826D33 /* LaunchViewController.swift in Sources */,
 				9A6124BA2086AC7000A1EAAB /* InputTableViewCell.swift in Sources */,
+				9A67AD9021ADC26100FF7156 /* PushNotificationService.swift in Sources */,
 				9AAD3897202F684E00395119 /* SettingsDisplayModel.swift in Sources */,
 				9A5AE5762012A8AB00B25081 /* AppDelegate.swift in Sources */,
 				9A28B82B20972DDD0020A8DC /* TableViewModelType.swift in Sources */,
@@ -4238,6 +4283,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9A67AD9C21ADEA6600FF7156 /* MockPushNotificationService.swift in Sources */,
 				9A3F0DA6209E474200904C13 /* LaunchViewControllerTests.swift in Sources */,
 				9ADC5682204334A2003D8C63 /* MockSettingsViewModelDelegate.swift in Sources */,
 				9AC3E72420423A3B00CD29B6 /* MockNetworkRequestable.swift in Sources */,

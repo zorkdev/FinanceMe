@@ -4,7 +4,7 @@ public struct User: Storeable, Equatable {
     public let payday: Int
     public let startDate: Date
     public let largeTransaction: Double
-    public let allowance: Double
+    public var allowance: Double
 
     public init(name: String,
                 payday: Int,

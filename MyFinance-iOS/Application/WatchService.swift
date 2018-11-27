@@ -17,7 +17,9 @@ extension WCSession: WCSessionType {}
 
 protocol WatchServiceType {
 
-    init(wcSession: WCSessionType, dataService: DataService)
+    init(wcSession: WCSessionType,
+         dataService: DataService,
+         pushNotificationService: PushNotificationService)
     func updateComplication()
 
 }
@@ -27,13 +29,16 @@ class WatchService: NSObject, WatchServiceType {
     private let dataService: DataService
     private var session: WCSessionType?
 
-    required init(wcSession: WCSessionType, dataService: DataService) {
+    required init(wcSession: WCSessionType,
+                  dataService: DataService,
+                  pushNotificationService: PushNotificationService) {
         self.session = wcSession
         self.dataService = dataService
 
         super.init()
 
         self.session?.delegate = self
+        pushNotificationService.delegate = self
 
         if type(of: wcSession).isSupported() { session?.activate() }
     }
@@ -60,5 +65,17 @@ extension WatchService: WCSessionDelegate {
                         error: Error?) {}
     public func sessionDidBecomeInactive(_ session: WCSession) {}
     public func sessionDidDeactivate(_ session: WCSession) {}
+
+}
+
+extension WatchService: PushNotificationServiceDelegate {
+
+    func didReceiveIncomingPush(payload: [AnyHashable: Any]) {
+        guard let allowance = payload["allowance"] as? Double,
+            var user = User.load(dataService: dataService) else { return }
+        user.allowance = allowance
+        user.save(dataService: dataService)
+        updateComplication()
+    }
 
 }

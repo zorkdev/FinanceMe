@@ -5,19 +5,22 @@ class WatchServiceTests: XCTestCase {
 
     var mockWCSession: MockWCSession!
     var mockDataService: MockDataService!
+    var mockPushNotificationService: MockPushNotificationService!
 
     override func setUp() {
         super.setUp()
 
         mockWCSession = MockWCSession()
         mockDataService = MockDataService()
+        mockPushNotificationService = MockPushNotificationService()
     }
 
     func testInit_Success() {
         MockWCSession.isSupportedValue = true
 
         let watchService = WatchService(wcSession: mockWCSession,
-                                        dataService: mockDataService)
+                                        dataService: mockDataService,
+                                        pushNotificationService: mockPushNotificationService)
 
         XCTAssertTrue(mockWCSession.didCallActivate)
         XCTAssertEqual(mockWCSession.delegate as? WatchService, watchService)
@@ -27,7 +30,8 @@ class WatchServiceTests: XCTestCase {
         MockWCSession.isSupportedValue = false
 
         let watchService = WatchService(wcSession: mockWCSession,
-                                        dataService: mockDataService)
+                                        dataService: mockDataService,
+                                        pushNotificationService: mockPushNotificationService)
 
         XCTAssertFalse(mockWCSession.didCallActivate)
         XCTAssertEqual(mockWCSession.delegate as? WatchService, watchService)
@@ -45,7 +49,8 @@ class WatchServiceTests: XCTestCase {
         let expectedUserInfo = [Allowance.instanceName: expectedAllowance.allowance]
 
         let watchService = WatchService(wcSession: mockWCSession,
-                                        dataService: mockDataService)
+                                        dataService: mockDataService,
+                                        pushNotificationService: mockPushNotificationService)
 
         watchService.updateComplication()
 
@@ -64,7 +69,8 @@ class WatchServiceTests: XCTestCase {
         mockDataService.loadReturnValues = [user, previousAllowance]
 
         let watchService = WatchService(wcSession: mockWCSession,
-                                        dataService: mockDataService)
+                                        dataService: mockDataService,
+                                        pushNotificationService: mockPushNotificationService)
 
         watchService.updateComplication()
 
@@ -82,7 +88,8 @@ class WatchServiceTests: XCTestCase {
         mockDataService.loadReturnValues = [user, previousAllowance]
 
         let watchService = WatchService(wcSession: mockWCSession,
-                                        dataService: mockDataService)
+                                        dataService: mockDataService,
+                                        pushNotificationService: mockPushNotificationService)
 
         watchService.updateComplication()
 
@@ -100,7 +107,8 @@ class WatchServiceTests: XCTestCase {
         mockDataService.loadReturnValues = [user, previousAllowance]
 
         let watchService = WatchService(wcSession: mockWCSession,
-                                        dataService: mockDataService)
+                                        dataService: mockDataService,
+                                        pushNotificationService: mockPushNotificationService)
 
         watchService.updateComplication()
 
@@ -110,7 +118,8 @@ class WatchServiceTests: XCTestCase {
 
     func testDelegateMethods() {
         let watchService = WatchService(wcSession: mockWCSession,
-                                        dataService: mockDataService)
+                                        dataService: mockDataService,
+                                        pushNotificationService: mockPushNotificationService)
         watchService.session(WCSession.default,
                              activationDidCompleteWith: .activated,
                              error: nil)
