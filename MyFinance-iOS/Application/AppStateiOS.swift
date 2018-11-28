@@ -47,7 +47,8 @@ class AppStateiOS: AppState, AppStateiOSType {
                                             sessionService: sessionService)
 
         self.navigator = Navigator(window: UIWindow())
-        self.pushNotificationService = PushNotificationDefaultService(networkService: networkService)
+        self.pushNotificationService = PushNotificationDefaultService(networkService: networkService,
+                                                                      sessionService: sessionService)
         self.watchService = WatchService(wcSession: WCSession.default,
                                          dataService: dataService,
                                          pushNotificationService: pushNotificationService)

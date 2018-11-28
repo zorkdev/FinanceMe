@@ -6,10 +6,7 @@ protocol LaunchViewModelType: ViewModelType {
 
 class LaunchViewModel: ServiceClient {
 
-    typealias ServiceProvider = NavigatorProvider
-        & DataServiceProvider
-        & SessionServiceProvider
-        & PushNotificationServiceProvider
+    typealias ServiceProvider = NavigatorProvider & DataServiceProvider & SessionServiceProvider
     let serviceProvider: ServiceProvider
 
     init(serviceProvider: ServiceProvider) {
@@ -23,12 +20,7 @@ class LaunchViewModel: ServiceClient {
 extension LaunchViewModel: LaunchViewModelType {
 
     func viewDidAppear() {
-        if hasSession {
-            moveToHome()
-            serviceProvider.pushNotificationService.registerForNotifications()
-        } else {
-            moveToLogin()
-        }
+        hasSession ? moveToHome() : moveToLogin()
     }
 
     func inject(delegate: ViewModelDelegate) {}

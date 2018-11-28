@@ -16,13 +16,15 @@ protocol PushNotificationService: class {
 
 class PushNotificationDefaultService: NSObject, PushNotificationService {
 
+    private let sessionService: SessionService
     private let pushRegistry: PKPushRegistry
     private let pushNotificationBusinessLogic: PushNotificationBusinessLogic
     private var deviceToken: String?
 
     weak var delegate: PushNotificationServiceDelegate?
 
-    init(networkService: NetworkService) {
+    init(networkService: NetworkService, sessionService: SessionService) {
+        self.sessionService = sessionService
         self.pushNotificationBusinessLogic = PushNotificationBusinessLogic(networkService: networkService)
         pushRegistry = PKPushRegistry(queue: DispatchQueue.main)
         super.init()
@@ -31,7 +33,8 @@ class PushNotificationDefaultService: NSObject, PushNotificationService {
     }
 
     func registerForNotifications() {
-        guard let deviceToken = deviceToken else { return }
+        guard let deviceToken = deviceToken,
+            sessionService.hasSession else { return }
         pushNotificationBusinessLogic.create(deviceToken: DeviceToken(deviceToken: deviceToken))
     }
 
@@ -44,6 +47,7 @@ extension PushNotificationDefaultService: PKPushRegistryDelegate {
                       for type: PKPushType) {
         let token = pushCredentials.token.reduce("", {$0 + String(format: "%02X", $1)}).uppercased()
         deviceToken = token
+        registerForNotifications()
     }
 
     func pushRegistry(_ registry: PKPushRegistry,
