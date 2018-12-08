@@ -5,8 +5,8 @@ PODS:
   - NVActivityIndicatorView (4.4.0):
     - NVActivityIndicatorView/Presenter (= 4.4.0)
   - NVActivityIndicatorView/Presenter (4.4.0)
-  - PromiseKit/CorePromise (6.6.0)
-  - PromiseKit/Foundation (6.6.0):
+  - PromiseKit/CorePromise (6.7.0)
+  - PromiseKit/Foundation (6.7.0):
     - PromiseKit/CorePromise
   - SwiftLint (0.29.1)
   - SwiftMessages (6.0.1):
@@ -32,7 +32,7 @@ SPEC REPOS:
 SPEC CHECKSUMS:
   Charts: f122fb70b19847fa5817d018b77d6c5a2296ab25
   NVActivityIndicatorView: ec7440a57af2450319d3a4181cca7da6fc127064
-  PromiseKit: c2983ba0f1eca9efc3412cc7032ce8de2fd59d06
+  PromiseKit: 453ddcc947fe7b302f3ef41882b81d31c554df7f
   SwiftLint: 6772320e40b52049053a518c17db9b0634a0b45a
   SwiftMessages: 42ed7b6e1f2f1ead9ee667dc61a0ae87e4f49570
 
