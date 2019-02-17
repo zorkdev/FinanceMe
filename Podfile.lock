@@ -1,17 +1,17 @@
 PODS:
-  - Charts (3.2.1):
-    - Charts/Core (= 3.2.1)
-  - Charts/Core (3.2.1)
-  - NVActivityIndicatorView (4.4.0):
-    - NVActivityIndicatorView/Presenter (= 4.4.0)
-  - NVActivityIndicatorView/Presenter (4.4.0)
-  - PromiseKit/CorePromise (6.7.0)
-  - PromiseKit/Foundation (6.7.0):
+  - Charts (3.2.2):
+    - Charts/Core (= 3.2.2)
+  - Charts/Core (3.2.2)
+  - NVActivityIndicatorView (4.6.1):
+    - NVActivityIndicatorView/Presenter (= 4.6.1)
+  - NVActivityIndicatorView/Presenter (4.6.1)
+  - PromiseKit/CorePromise (6.8.3)
+  - PromiseKit/Foundation (6.8.3):
     - PromiseKit/CorePromise
-  - SwiftLint (0.29.1)
-  - SwiftMessages (6.0.1):
-    - SwiftMessages/App (= 6.0.1)
-  - SwiftMessages/App (6.0.1)
+  - SwiftLint (0.30.1)
+  - SwiftMessages (6.0.2):
+    - SwiftMessages/App (= 6.0.2)
+  - SwiftMessages/App (6.0.2)
 
 DEPENDENCIES:
   - Charts
@@ -30,12 +30,12 @@ SPEC REPOS:
     - SwiftMessages
 
 SPEC CHECKSUMS:
-  Charts: f122fb70b19847fa5817d018b77d6c5a2296ab25
-  NVActivityIndicatorView: ec7440a57af2450319d3a4181cca7da6fc127064
-  PromiseKit: 453ddcc947fe7b302f3ef41882b81d31c554df7f
-  SwiftLint: 6772320e40b52049053a518c17db9b0634a0b45a
-  SwiftMessages: 42ed7b6e1f2f1ead9ee667dc61a0ae87e4f49570
+  Charts: f69cf0518b6d1d62608ca504248f1bbe0b6ae77e
+  NVActivityIndicatorView: 4ca19fccc84595a78957336a086d00a49be6ce61
+  PromiseKit: 94c6e781838c5bf4717677d0d882b0e7250c80fc
+  SwiftLint: a54bf1fe12b55c68560eb2a7689dfc81458508f7
+  SwiftMessages: 8b3cc68dba2f1c91aac1a74c90b10287aac35371
 
 PODFILE CHECKSUM: 4db68ce7c4d1238ea78d590ac955c951166b452b
 
-COCOAPODS: 1.5.3
+COCOAPODS: 1.6.0

@@ -10,8 +10,12 @@ struct TableViewSection: Hashable {
         self.title = title
     }
 
-    var hashValue: Int {
-        return title?.hashValue ?? id.hashValue
+    func hash(into hasher: inout Hasher) {
+        if let title = title {
+            hasher.combine(title)
+        } else {
+            hasher.combine(id)
+        }
     }
 
     static func == (lhs: TableViewSection, rhs: TableViewSection) -> Bool {

@@ -3347,7 +3347,7 @@
 			files = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-MyFinance-tvOS-MyFinance-tvOS/Pods-MyFinance-tvOS-MyFinance-tvOS-frameworks.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-MyFinance-tvOS-MyFinance-tvOS/Pods-MyFinance-tvOS-MyFinance-tvOS-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/PromiseKit-tvOS/PromiseKit.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
@@ -3356,7 +3356,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MyFinance-tvOS-MyFinance-tvOS/Pods-MyFinance-tvOS-MyFinance-tvOS-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MyFinance-tvOS-MyFinance-tvOS/Pods-MyFinance-tvOS-MyFinance-tvOS-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		132A123BCF3720570D65A649 /* [CP] Check Pods Manifest.lock */ = {
@@ -3419,7 +3419,7 @@
 			files = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-MyFinance-tvOS-MyFinance-Tests-tvOS/Pods-MyFinance-tvOS-MyFinance-Tests-tvOS-frameworks.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-MyFinance-tvOS-MyFinance-Tests-tvOS/Pods-MyFinance-tvOS-MyFinance-Tests-tvOS-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/PromiseKit-tvOS/PromiseKit.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
@@ -3428,7 +3428,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MyFinance-tvOS-MyFinance-Tests-tvOS/Pods-MyFinance-tvOS-MyFinance-Tests-tvOS-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MyFinance-tvOS-MyFinance-Tests-tvOS/Pods-MyFinance-tvOS-MyFinance-Tests-tvOS-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		2A523521B2ACA17445AA0EC0 /* [CP] Check Pods Manifest.lock */ = {
@@ -3455,7 +3455,7 @@
 			files = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-MyFinance-watchOS-MyFinanceExtension-watchOS/Pods-MyFinance-watchOS-MyFinanceExtension-watchOS-frameworks.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-MyFinance-watchOS-MyFinanceExtension-watchOS/Pods-MyFinance-watchOS-MyFinanceExtension-watchOS-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/PromiseKit-watchOS/PromiseKit.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
@@ -3464,7 +3464,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MyFinance-watchOS-MyFinanceExtension-watchOS/Pods-MyFinance-watchOS-MyFinanceExtension-watchOS-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MyFinance-watchOS-MyFinanceExtension-watchOS/Pods-MyFinance-watchOS-MyFinanceExtension-watchOS-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		4132988D3D6D1950CA11CEFB /* [CP] Embed Pods Frameworks */ = {
@@ -3473,7 +3473,7 @@
 			files = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-MyFinance-macOS-MyFinance-macOS/Pods-MyFinance-macOS-MyFinance-macOS-frameworks.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-MyFinance-macOS-MyFinance-macOS/Pods-MyFinance-macOS-MyFinance-macOS-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/PromiseKit-macOS/PromiseKit.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
@@ -3482,7 +3482,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MyFinance-macOS-MyFinance-macOS/Pods-MyFinance-macOS-MyFinance-macOS-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MyFinance-macOS-MyFinance-macOS/Pods-MyFinance-macOS-MyFinance-macOS-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		45B8A505DD493A95B39A1EBE /* [CP] Check Pods Manifest.lock */ = {
@@ -3509,7 +3509,7 @@
 			files = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-MyFinance-macOS-MyFinanceKit-macOS-Unsigned-Tests/Pods-MyFinance-macOS-MyFinanceKit-macOS-Unsigned-Tests-frameworks.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-MyFinance-macOS-MyFinanceKit-macOS-Unsigned-Tests/Pods-MyFinance-macOS-MyFinanceKit-macOS-Unsigned-Tests-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/PromiseKit-macOS/PromiseKit.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
@@ -3518,7 +3518,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MyFinance-macOS-MyFinanceKit-macOS-Unsigned-Tests/Pods-MyFinance-macOS-MyFinanceKit-macOS-Unsigned-Tests-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MyFinance-macOS-MyFinanceKit-macOS-Unsigned-Tests/Pods-MyFinance-macOS-MyFinanceKit-macOS-Unsigned-Tests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		56D0D99E21A2A5243930D0F8 /* [CP] Check Pods Manifest.lock */ = {
@@ -3745,7 +3745,7 @@
 			files = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-MyFinance-macOS-MyFinanceKit-macOS-Tests/Pods-MyFinance-macOS-MyFinanceKit-macOS-Tests-frameworks.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-MyFinance-macOS-MyFinanceKit-macOS-Tests/Pods-MyFinance-macOS-MyFinanceKit-macOS-Tests-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/PromiseKit-macOS/PromiseKit.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
@@ -3754,7 +3754,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MyFinance-macOS-MyFinanceKit-macOS-Tests/Pods-MyFinance-macOS-MyFinanceKit-macOS-Tests-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MyFinance-macOS-MyFinanceKit-macOS-Tests/Pods-MyFinance-macOS-MyFinanceKit-macOS-Tests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		A39C74F7B23EFA6D3E053316 /* [CP] Embed Pods Frameworks */ = {
@@ -3763,7 +3763,7 @@
 			files = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-MyFinance-tvOS-MyFinanceKit-tvOS-Tests/Pods-MyFinance-tvOS-MyFinanceKit-tvOS-Tests-frameworks.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-MyFinance-tvOS-MyFinanceKit-tvOS-Tests/Pods-MyFinance-tvOS-MyFinanceKit-tvOS-Tests-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/PromiseKit-tvOS/PromiseKit.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
@@ -3772,7 +3772,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MyFinance-tvOS-MyFinanceKit-tvOS-Tests/Pods-MyFinance-tvOS-MyFinanceKit-tvOS-Tests-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MyFinance-tvOS-MyFinanceKit-tvOS-Tests/Pods-MyFinance-tvOS-MyFinanceKit-tvOS-Tests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		A3F97762370688F7105D55D2 /* [CP] Check Pods Manifest.lock */ = {
@@ -3817,7 +3817,7 @@
 			files = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-MyFinance-iOS-MyFinance-Tests-iOS/Pods-MyFinance-iOS-MyFinance-Tests-iOS-frameworks.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-MyFinance-iOS-MyFinance-Tests-iOS/Pods-MyFinance-iOS-MyFinance-Tests-iOS-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/PromiseKit-iOS/PromiseKit.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
@@ -3826,7 +3826,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MyFinance-iOS-MyFinance-Tests-iOS/Pods-MyFinance-iOS-MyFinance-Tests-iOS-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MyFinance-iOS-MyFinance-Tests-iOS/Pods-MyFinance-iOS-MyFinance-Tests-iOS-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		C73FAE4B7E84B6048262DA6E /* [CP] Check Pods Manifest.lock */ = {
@@ -3853,7 +3853,7 @@
 			files = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-MyFinance-iOS-MyFinanceKit-iOS-Tests/Pods-MyFinance-iOS-MyFinanceKit-iOS-Tests-frameworks.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-MyFinance-iOS-MyFinanceKit-iOS-Tests/Pods-MyFinance-iOS-MyFinanceKit-iOS-Tests-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/PromiseKit-iOS/PromiseKit.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
@@ -3862,7 +3862,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MyFinance-iOS-MyFinanceKit-iOS-Tests/Pods-MyFinance-iOS-MyFinanceKit-iOS-Tests-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MyFinance-iOS-MyFinanceKit-iOS-Tests/Pods-MyFinance-iOS-MyFinanceKit-iOS-Tests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		CF43FB8C2A1281F1CB851185 /* [CP] Embed Pods Frameworks */ = {
@@ -3871,7 +3871,7 @@
 			files = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-MyFinance-iOS-MyFinanceKit-IntegrationTests/Pods-MyFinance-iOS-MyFinanceKit-IntegrationTests-frameworks.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-MyFinance-iOS-MyFinanceKit-IntegrationTests/Pods-MyFinance-iOS-MyFinanceKit-IntegrationTests-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/PromiseKit-iOS/PromiseKit.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
@@ -3880,7 +3880,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MyFinance-iOS-MyFinanceKit-IntegrationTests/Pods-MyFinance-iOS-MyFinanceKit-IntegrationTests-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MyFinance-iOS-MyFinanceKit-IntegrationTests/Pods-MyFinance-iOS-MyFinanceKit-IntegrationTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		EBBC7F54CA63C0EF3FB98DC6 /* [CP] Check Pods Manifest.lock */ = {
@@ -3907,7 +3907,7 @@
 			files = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-MyFinance-macOS-MyFinance-Tests-macOS/Pods-MyFinance-macOS-MyFinance-Tests-macOS-frameworks.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-MyFinance-macOS-MyFinance-Tests-macOS/Pods-MyFinance-macOS-MyFinance-Tests-macOS-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/PromiseKit-macOS/PromiseKit.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
@@ -3916,7 +3916,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MyFinance-macOS-MyFinance-Tests-macOS/Pods-MyFinance-macOS-MyFinance-Tests-macOS-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MyFinance-macOS-MyFinance-Tests-macOS/Pods-MyFinance-macOS-MyFinance-Tests-macOS-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		F67C6BD98D47F6864C27F74D /* [CP] Embed Pods Frameworks */ = {
@@ -3925,7 +3925,7 @@
 			files = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-MyFinance-iOS-MyFinance-iOS/Pods-MyFinance-iOS-MyFinance-iOS-frameworks.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-MyFinance-iOS-MyFinance-iOS/Pods-MyFinance-iOS-MyFinance-iOS-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Charts/Charts.framework",
 				"${BUILT_PRODUCTS_DIR}/NVActivityIndicatorView/NVActivityIndicatorView.framework",
 				"${BUILT_PRODUCTS_DIR}/PromiseKit-iOS/PromiseKit.framework",
@@ -3940,7 +3940,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MyFinance-iOS-MyFinance-iOS/Pods-MyFinance-iOS-MyFinance-iOS-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MyFinance-iOS-MyFinance-iOS/Pods-MyFinance-iOS-MyFinance-iOS-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		FA7F85745006FC9F5F44B61E /* [CP] Check Pods Manifest.lock */ = {

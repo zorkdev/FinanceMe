@@ -8,6 +8,7 @@ public struct CellModelWrapper: Hashable {
 
     public let wrapped: CellModelType
 
+    // swiftlint:disable:next legacy_hashing
     public var hashValue: Int {
         return wrapped.id
     }
