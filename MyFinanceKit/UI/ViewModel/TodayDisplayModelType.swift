@@ -21,7 +21,7 @@ public extension TodayDisplayModelType {
         let string = formatter.string(from: amount)
         let location = string.firstIndex { CharacterSet.decimalDigits.contains($0.unicodeScalars.first!) }
 
-        guard let length = location?.encodedOffset else { return NSAttributedString(string: string) }
+        guard let length = location?.utf16Offset(in: string) else { return NSAttributedString(string: string) }
 
         let isNegative = amount < 0
         let color = isNegative ? negativeColor : positiveColor

@@ -219,7 +219,7 @@ extension HomeViewModel: AddTransactionViewModelDataDelegate {
         getUser()
         getEndOfMonthSummaryList()
 
-        guard let index = transactions.index(where: { $0.id == transaction.id }) else { return }
+        guard let index = transactions.firstIndex(where: { $0.id == transaction.id }) else { return }
         transactions[index] = transaction
         updateTransactionsTableViewModels()
     }

@@ -16,9 +16,9 @@ public extension Array where Element: Hashable {
         let insertions = newSet.subtracting(oldSet)
         let unchanged = newSet.intersection(oldSet)
 
-        let deletionIndices = IndexSet(deletions.compactMap({ other.index(of: $0) }))
-        let insertionIndices = IndexSet(insertions.compactMap({ self.index(of: $0) }))
-        let unchangedIndices = IndexSet(unchanged.compactMap({ self.index(of: $0) }))
+        let deletionIndices = IndexSet(deletions.compactMap({ other.firstIndex(of: $0) }))
+        let insertionIndices = IndexSet(insertions.compactMap({ self.firstIndex(of: $0) }))
+        let unchangedIndices = IndexSet(unchanged.compactMap({ self.firstIndex(of: $0) }))
 
         return Diff(deletions: deletionIndices,
                     insertions: insertionIndices,

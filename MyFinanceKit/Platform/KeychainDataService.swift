@@ -55,7 +55,7 @@ public class KeychainDataService: DataService {
 
         for secClass in secClasses {
             let query = [kSecClass: secClass,
-                         kSecAttrSynchronizable: kCFBooleanTrue] as CFDictionary
+                         kSecAttrSynchronizable: kCFBooleanTrue!] as CFDictionary
             _ = SecItemDelete(query)
         }
     }

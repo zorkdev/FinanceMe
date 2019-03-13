@@ -25,7 +25,7 @@ class MockDataService: DataService {
     func load<T>(key: String) -> T? where T: JSONDecodable {
         lastLoadedKey = key
 
-        if let index = loadReturnValues.index(where: { $0 is T }) {
+        if let index = loadReturnValues.firstIndex(where: { $0 is T }) {
             let value = loadReturnValues[index] as? T
             loadReturnValues.remove(at: index)
             return value

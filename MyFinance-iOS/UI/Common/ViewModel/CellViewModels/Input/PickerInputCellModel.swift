@@ -28,7 +28,7 @@ class PickerInputCellModel: NSObject {
         didSet {
             var row = 0
             if let value = cachedValue,
-                let index = rows.index(where: { $0.description == value.description }) {
+                let index = rows.firstIndex(where: { $0.description == value.description }) {
                 row = index
             }
             picker.selectRow(row, inComponent: 0, animated: false)

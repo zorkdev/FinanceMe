@@ -12,7 +12,7 @@ public protocol BaseNavigatorType {
 
 public extension BaseNavigatorType {
 
-    public func inject(viewController: ViewControllerType, viewModel: ViewModelType) {
+    func inject(viewController: ViewControllerType, viewModel: ViewModelType) {
         if let injectableViewController = viewController as? ViewModelInjectable {
             injectableViewController.inject(viewModel: viewModel)
         }

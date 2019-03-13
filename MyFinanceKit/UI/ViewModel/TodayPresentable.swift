@@ -21,15 +21,15 @@ public protocol TodayPresentable: ViewModelType {
 
 public extension TodayPresentable {
 
-    public func viewDidLoad() {
+    func viewDidLoad() {
         setupDefaults()
     }
 
-    @discardableResult public func updateData() -> Promise<Void> {
+    @discardableResult func updateData() -> Promise<Void> {
         return when(fulfilled: getBalance(), getUser())
     }
 
-    public func setupDefaults() {
+    func setupDefaults() {
         guard let balance = Balance.load(dataService: serviceProvider.dataService),
             let user = User.load(dataService: serviceProvider.dataService) else { return }
         let balanceAttributedString = type(of: displayModel).attributedString(from: balance.effectiveBalance)
@@ -40,7 +40,7 @@ public extension TodayPresentable {
         delegate?.set(allowanceIcon: allowanceIcon)
     }
 
-    @discardableResult public func getBalance() -> Promise<Void> {
+    @discardableResult func getBalance() -> Promise<Void> {
         return BalanceBusinessLogic(serviceProvider: serviceProvider)
             .getBalance().done { balance in
             let balanceAttributedString = type(of: self.displayModel).attributedString(from: balance.effectiveBalance)
@@ -48,7 +48,7 @@ public extension TodayPresentable {
         }
     }
 
-    @discardableResult public func getUser() -> Promise<Void> {
+    @discardableResult func getUser() -> Promise<Void> {
         return UserBusinessLogic(serviceProvider: serviceProvider)
             .getCurrentUser().done { user in
                 let allowanceAttributedString = type(of: self.displayModel).attributedString(from: user.allowance)

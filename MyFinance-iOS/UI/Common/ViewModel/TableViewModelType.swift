@@ -81,7 +81,7 @@ extension TableViewModelType {
 
         for index in sectionsDiff.unchanged {
             let newSection = new[index]
-            guard let oldIndex = old.index(of: newSection) else { continue }
+            guard let oldIndex = old.firstIndex(of: newSection) else { continue }
             let rowsDiff = newSection.cellModels.diff(other: old[oldIndex].cellModels)
 
             guard rowsDiff.deletions.isEmpty == false || rowsDiff.insertions.isEmpty == false else {

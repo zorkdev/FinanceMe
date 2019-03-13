@@ -20,7 +20,7 @@ class MockNetworkService: NetworkServiceType {
             return Promise(error: error)
         }
 
-        if let index = returnJSONDecodableValues.index(where: { $0 is T }) {
+        if let index = returnJSONDecodableValues.firstIndex(where: { $0 is T }) {
             let value = returnJSONDecodableValues[index] as? T
             returnJSONDecodableValues.remove(at: index)
             return .value(value!)

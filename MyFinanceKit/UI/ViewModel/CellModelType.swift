@@ -8,17 +8,16 @@ public struct CellModelWrapper: Hashable {
 
     public let wrapped: CellModelType
 
-    // swiftlint:disable:next legacy_hashing
-    public var hashValue: Int {
-        return wrapped.id
-    }
-
     public init(_ cellModelType: CellModelType) {
         self.wrapped = cellModelType
     }
 
     public static func == (lhs: CellModelWrapper, rhs: CellModelWrapper) -> Bool {
         return lhs.hashValue == rhs.hashValue
+    }
+
+    public func hash(into hasher: inout Hasher) {
+        hasher.combine(wrapped.id)
     }
 
 }
