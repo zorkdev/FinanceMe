@@ -12,7 +12,7 @@ class CellModelTypeTests: XCTestCase {
         let cellModel = TestCellModel()
         let wrapper = CellModelWrapper(cellModel)
 
-        XCTAssertEqual(wrapper.hashValue, 123)
+        XCTAssertEqual(wrapper.hashValue, 123.hashValue)
         XCTAssertEqual(wrapper.wrapped.id, 123)
         XCTAssertEqual(cellModel.wrap, wrapper)
         XCTAssertEqual(cellModel.canEdit, false)
