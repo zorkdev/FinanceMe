@@ -59,7 +59,7 @@ extension TableViewModelType {
         return sections
             .flatMap({ $0.cellModels })
             .compactMap({ ($0.wrapped as? InputCellModelForViewModelType)?.isValid })
-            .reduce(true) { $0 && $1 }
+            .allSatisfy { $0 }
     }
 
     func didFinishLoadingTableView() {}

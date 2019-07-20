@@ -53,7 +53,7 @@ class ChartCellModel {
                                               y: summary.balance))
         }
 
-        let dataSet = LineChartDataSet(values: dataEntries, label: nil)
+        let dataSet = LineChartDataSet(entries: dataEntries, label: nil)
         dataSet.drawValuesEnabled = false
         dataSet.drawCirclesEnabled = false
         dataSet.drawFilledEnabled = true
