@@ -1,7 +1,6 @@
 @testable import MyFinanceKit
 
 class SessionServiceTests: XCTestCase {
-
     var mockDataService: MockDataService!
 
     override func setUp() {
@@ -50,5 +49,4 @@ class SessionServiceTests: XCTestCase {
 
         XCTAssertTrue(mockDataService.savedValues.isEmpty)
     }
-
 }

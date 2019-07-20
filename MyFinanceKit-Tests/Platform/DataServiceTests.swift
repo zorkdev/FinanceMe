@@ -1,7 +1,6 @@
 @testable import MyFinanceKit
 
 class DataServiceTests: XCTestCase {
-
     struct StubModel: Storeable, Equatable {
         let variable: String
     }
@@ -30,7 +29,7 @@ class DataServiceTests: XCTestCase {
 
         XCTAssertFalse(mockDataService.savedValues.isEmpty)
         XCTAssertTrue(mockDataService.savedValues
-            .contains(where: { ($0 as? StubModel) == stubModel }) == true)
+            .contains { ($0 as? StubModel) == stubModel } == true)
         XCTAssertEqual(mockDataService.lastSavedKey, "StubModel")
     }
 
@@ -110,5 +109,4 @@ class DataServiceTests: XCTestCase {
 
         XCTAssertNil(retrievedAgainValue)
     }
-
 }

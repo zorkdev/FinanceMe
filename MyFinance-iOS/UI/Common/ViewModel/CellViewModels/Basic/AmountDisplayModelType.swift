@@ -1,13 +1,10 @@
 enum AmountDisplayModelType {
-
     case plus
     case minus
     case plusMinus
-
 }
 
 extension AmountDisplayModelType {
-
     var formatter: NumberFormatter {
         switch self {
         case .plus: return Formatters.currencyPlusSign
@@ -25,5 +22,4 @@ extension AmountDisplayModelType {
         case .plusMinus: return isPositive ? ColorPalette.green : ColorPalette.red
         }
     }
-
 }

@@ -1,12 +1,9 @@
 public protocol StringRepresentable {
-
     static var instanceName: String { get }
     var instanceName: String { get }
-
 }
 
 public extension StringRepresentable {
-
     static var instanceName: String {
         return String(describing: self)
     }
@@ -14,7 +11,6 @@ public extension StringRepresentable {
     var instanceName: String {
         return String(describing: type(of: self))
     }
-
 }
 
 extension Array: StringRepresentable {}

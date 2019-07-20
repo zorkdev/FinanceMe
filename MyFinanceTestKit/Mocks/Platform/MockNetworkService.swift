@@ -2,7 +2,6 @@ import PromiseKit
 import MyFinanceKit
 
 class MockNetworkService: NetworkServiceType {
-
     //swiftlint:disable:next large_tuple
     var lastRequest: (api: APIType, method: HTTPMethod, parameters: JSONEncodable?, body: JSONEncodable?)?
     var returnJSONDecodableValues = [JSONDecodable]()
@@ -13,7 +12,6 @@ class MockNetworkService: NetworkServiceType {
                                           method: HTTPMethod,
                                           parameters: JSONEncodable?,
                                           body: JSONEncodable?) -> Promise<T> {
-
         lastRequest = (api: api, method: method, parameters: parameters, body: body)
 
         if let error = returnErrorValue {
@@ -33,7 +31,6 @@ class MockNetworkService: NetworkServiceType {
                         method: HTTPMethod,
                         parameters: JSONEncodable?,
                         body: JSONEncodable?) -> Promise<Data> {
-
         lastRequest = (api: api, method: method, parameters: parameters, body: body)
 
         if let error = returnErrorValue {
@@ -42,5 +39,4 @@ class MockNetworkService: NetworkServiceType {
 
         return .value(returnDataValue ?? Data())
     }
-
 }

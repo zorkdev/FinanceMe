@@ -1,7 +1,6 @@
 @testable import MyFinanceKit
 
 class SummaryTests: XCTestCase {
-
     func testDecodeEndOfMonthSummary() {
         let jsonData =
         """
@@ -78,5 +77,4 @@ class SummaryTests: XCTestCase {
 
         XCTAssertNotNil(endOfMonthSummaryList.encoded())
     }
-
 }

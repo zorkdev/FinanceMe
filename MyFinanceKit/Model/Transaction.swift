@@ -1,13 +1,10 @@
 public enum TransactionDirection: String, JSONCodable, Hashable {
-
     case none = "NONE"
     case outbound = "OUTBOUND"
     case inbound = "INBOUND"
-
 }
 
 public enum TransactionSource: String, JSONCodable, Hashable {
-
     case directCredit = "DIRECT_CREDIT"
     case directDebit = "DIRECT_DEBIT"
     case directDebitDispute = "DIRECT_DEBIT_DISPUTE"
@@ -67,17 +64,13 @@ public enum TransactionSource: String, JSONCodable, Hashable {
             return .inbound
         }
     }
-
 }
 
 extension TransactionSource: Describable {
-
     public var description: String { return displayString }
-
 }
 
 public struct Transaction: Storeable, Hashable {
-
     public let id: String?
     public var amount: Double
     public var direction: TransactionDirection
@@ -108,11 +101,8 @@ public struct Transaction: Storeable, Hashable {
         narrative = try container.decode(String.self, forKey: .narrative)
         source = (try container.decodeIfPresent(TransactionSource.self, forKey: .source)) ?? .fasterPaymentsOut
     }
-
 }
 
 struct TransactionList: JSONCodable, Equatable {
-
     let transactions: [Transaction]
-
 }

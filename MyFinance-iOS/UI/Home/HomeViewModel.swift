@@ -1,7 +1,6 @@
 import NotificationCenter
 
 class HomeViewModel: ServiceClient {
-
     typealias ServiceProvider = NavigatorProvider
         & NetworkServiceProvider
         & DataServiceProvider
@@ -48,13 +47,11 @@ class HomeViewModel: ServiceClient {
             object: nil
         )
     }
-
 }
 
 // MARK: - Interface
 
 extension HomeViewModel: HomeViewModelType {
-
     func viewDidLoad() {
         feedTableViewModel.viewDidLoad()
         regularsTableViewModel.viewDidLoad()
@@ -80,13 +77,11 @@ extension HomeViewModel: HomeViewModelType {
                                                               dataDelegate: self)
         serviceProvider.navigator.moveTo(scene: .addTransaction, viewModel: addTransactionViewModel)
     }
-
 }
 
 extension HomeViewModel: FeedTableViewModelDelegate {}
 extension HomeViewModel: RegularsTableViewModelDelegate {}
 extension HomeViewModel: BalancesTableViewModelDelegate {
-
     func didTapRefresh() {
         updateData()
     }
@@ -118,14 +113,13 @@ extension HomeViewModel: BalancesTableViewModelDelegate {
     func tableView(forModel: BalancesTableViewModel) -> TableViewType? {
         return delegate?.balancesTableView
     }
-
 }
 
 // MARK: - Private methods
 
 extension HomeViewModel {
-
-    @objc private func handleShouldReloadNotification() {
+    @objc
+    private func handleShouldReloadNotification() {
         updateData()
     }
 
@@ -157,21 +151,23 @@ extension HomeViewModel {
         updateTableViewModels()
     }
 
-    @discardableResult private func updateData() -> Promise<Void> {
+    @discardableResult
+    private func updateData() -> Promise<Void> {
         return when(fulfilled: todayViewModel.getBalance(),
                     getUser(),
                     getExternalTransactions(),
                     getEndOfMonthSummaryList())
             .recover { error in
                 self.delegate?.showError(message: error.localizedDescription)
-        }
+            }
     }
 
-    @discardableResult private func getUser() -> Promise<Void> {
+    @discardableResult
+    private func getUser() -> Promise<Void> {
         return todayViewModel.getUser()
             .done {
                 self.serviceProvider.watchService.updateComplication()
-        }
+            }
     }
 
     private func getExternalTransactions() -> Promise<Void> {
@@ -180,7 +176,7 @@ extension HomeViewModel {
                 self.transactions = transactions
                 self.transactions.save(dataService: self.serviceProvider.dataService)
                 self.updateTransactionsTableViewModels()
-        }
+            }
     }
 
     private func delete(transaction: Transaction) {
@@ -194,7 +190,8 @@ extension HomeViewModel {
         }
     }
 
-    @discardableResult private func getEndOfMonthSummaryList() -> Promise<Void> {
+    @discardableResult
+    private func getEndOfMonthSummaryList() -> Promise<Void> {
         return endOfMonthSummaryBusinessLogic.getEndOfMonthSummaryList()
             .done { endOfMonthSummaryList in
                 endOfMonthSummaryList.endOfMonthSummaries.save(dataService: self.serviceProvider.dataService)
@@ -202,11 +199,9 @@ extension HomeViewModel {
                 self.balancesTableViewModel.update(endOfMonthSummaryList: endOfMonthSummaryList)
             }
     }
-
 }
 
 extension HomeViewModel: AddTransactionViewModelDataDelegate {
-
     func didCreate(transaction: Transaction) {
         getUser()
         getEndOfMonthSummaryList()
@@ -223,11 +218,9 @@ extension HomeViewModel: AddTransactionViewModelDataDelegate {
         transactions[index] = transaction
         updateTransactionsTableViewModels()
     }
-
 }
 
 extension HomeViewModel: SettingsViewModelDataDelegate {
-
     func didUpdate(user: User) {
         updateData()
     }
@@ -235,5 +228,4 @@ extension HomeViewModel: SettingsViewModelDataDelegate {
     func didReconcile() {
         updateData()
     }
-
 }

@@ -1,7 +1,6 @@
 @testable import MyFinanceKit
 
 class FormattersTests: XCTestCase {
-
     let calendar: Calendar = {
         var calendar = Calendar(identifier: .gregorian)
         calendar.locale = Locale(identifier: "en_GB")
@@ -155,5 +154,4 @@ class FormattersTests: XCTestCase {
 
         XCTAssertEqual(Formatters.formatRelative(date: date), expectedString)
     }
-
 }

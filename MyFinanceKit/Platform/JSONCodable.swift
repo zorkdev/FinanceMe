@@ -8,13 +8,10 @@ extension Double: JSONCodable {}
 extension String: JSONCodable {}
 
 public protocol JSONDecodable: Decodable {
-
     static var decodeDateFormatter: DateFormatter { get }
-
 }
 
 public extension JSONDecodable {
-
     static var decodeDateFormatter: DateFormatter {
         return Formatters.apiDateTime
     }
@@ -25,17 +22,13 @@ public extension JSONDecodable {
         guard let instance = try? jsonDecoder.decode(Self.self, from: data) else { return nil }
         self = instance
     }
-
 }
 
 public protocol JSONEncodable: Encodable {
-
     static var encodeDateFormatter: DateFormatter { get }
-
 }
 
 public extension JSONEncodable {
-
     static var encodeDateFormatter: DateFormatter {
         return Formatters.apiDateTime
     }
@@ -61,5 +54,4 @@ public extension JSONEncodable {
 
         return try? urlFormEncoder.encode(self)
     }
-
 }

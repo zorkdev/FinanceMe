@@ -1,7 +1,6 @@
 @testable import MyFinanceKit
 
 class TransactionTests: XCTestCase {
-
     func testDecodeTransaction() {
         let jsonData =
         """
@@ -106,5 +105,4 @@ class TransactionTests: XCTestCase {
             XCTAssertEqual(source.description, source.displayString)
         }
     }
-
 }

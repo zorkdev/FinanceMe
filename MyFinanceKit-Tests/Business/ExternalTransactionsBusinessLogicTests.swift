@@ -1,7 +1,6 @@
 @testable import MyFinanceKit
 
 class ExternalTransactionsBusinessLogicTests: ServiceClientTestCase {
-
     func testGetExternalTransactions() {
         let newExpectation = expectation(description: "External Transactions fetched")
 
@@ -17,7 +16,6 @@ class ExternalTransactionsBusinessLogicTests: ServiceClientTestCase {
         let externalTransactionsBusinessLogic = ExternalTransactionsBusinessLogic(serviceProvider: mockAppState)
 
         _ = externalTransactionsBusinessLogic.getExternalTransactions(fromTo: expectedFromTo).done { transactions in
-
             XCTAssertEqual(self.mockAppState.mockNetworkService.lastRequest?.api as? API, .zorkdev(.transactions))
             XCTAssertEqual(self.mockAppState.mockNetworkService.lastRequest?.method, .get)
             XCTAssertEqual(self.mockAppState.mockNetworkService.lastRequest?.parameters as? FromToParameters,
@@ -41,7 +39,6 @@ class ExternalTransactionsBusinessLogicTests: ServiceClientTestCase {
         let externalTransactionsBusinessLogic = ExternalTransactionsBusinessLogic(serviceProvider: mockAppState)
 
         _ = externalTransactionsBusinessLogic.create(transaction: expectedTransaction).done { transaction in
-
             XCTAssertEqual(self.mockAppState.mockNetworkService.lastRequest?.api as? API, .zorkdev(.transactions))
             XCTAssertEqual(self.mockAppState.mockNetworkService.lastRequest?.method, .post)
             XCTAssertNil(self.mockAppState.mockNetworkService.lastRequest?.parameters)
@@ -64,7 +61,6 @@ class ExternalTransactionsBusinessLogicTests: ServiceClientTestCase {
         let externalTransactionsBusinessLogic = ExternalTransactionsBusinessLogic(serviceProvider: mockAppState)
 
         _ = externalTransactionsBusinessLogic.update(transaction: expectedTransaction).done { transaction in
-
             XCTAssertEqual(self.mockAppState.mockNetworkService.lastRequest?.api as? API,
                            .zorkdev(.transaction(expectedTransaction.id!)))
             XCTAssertEqual(self.mockAppState.mockNetworkService.lastRequest?.method, .put)
@@ -90,7 +86,6 @@ class ExternalTransactionsBusinessLogicTests: ServiceClientTestCase {
         let externalTransactionsBusinessLogic = ExternalTransactionsBusinessLogic(serviceProvider: mockAppState)
 
         _ = externalTransactionsBusinessLogic.update(transaction: expectedTransaction).catch { error in
-
             XCTAssertEqual(error as? AppError, .apiPathInvalid)
 
             newExpectation.fulfill()
@@ -109,7 +104,6 @@ class ExternalTransactionsBusinessLogicTests: ServiceClientTestCase {
         let externalTransactionsBusinessLogic = ExternalTransactionsBusinessLogic(serviceProvider: mockAppState)
 
         _ = externalTransactionsBusinessLogic.delete(transaction: expectedTransaction).done {
-
             XCTAssertEqual(self.mockAppState.mockNetworkService.lastRequest?.api as? API,
                            .zorkdev(.transaction(expectedTransaction.id!)))
             XCTAssertEqual(self.mockAppState.mockNetworkService.lastRequest?.method, .delete)
@@ -134,7 +128,6 @@ class ExternalTransactionsBusinessLogicTests: ServiceClientTestCase {
         let externalTransactionsBusinessLogic = ExternalTransactionsBusinessLogic(serviceProvider: mockAppState)
 
         _ = externalTransactionsBusinessLogic.delete(transaction: expectedTransaction).catch { error in
-
             XCTAssertEqual(error as? AppError, .apiPathInvalid)
 
             newExpectation.fulfill()
@@ -151,7 +144,6 @@ class ExternalTransactionsBusinessLogicTests: ServiceClientTestCase {
         let externalTransactionsBusinessLogic = ExternalTransactionsBusinessLogic(serviceProvider: mockAppState)
 
         _ = externalTransactionsBusinessLogic.reconcile().done {
-
             XCTAssertEqual(self.mockAppState.mockNetworkService.lastRequest?.api as? API,
                            .zorkdev(.reconcile))
             XCTAssertEqual(self.mockAppState.mockNetworkService.lastRequest?.method, .post)
@@ -172,7 +164,6 @@ class ExternalTransactionsBusinessLogicTests: ServiceClientTestCase {
         let externalTransactionsBusinessLogic = ExternalTransactionsBusinessLogic(serviceProvider: mockAppState)
 
         _ = externalTransactionsBusinessLogic.reconcile().catch { error in
-
             XCTAssertEqual(error as? APIError, .badRequest)
 
             newExpectation.fulfill()
@@ -180,5 +171,4 @@ class ExternalTransactionsBusinessLogicTests: ServiceClientTestCase {
 
         waitForExpectations(timeout: 10.0, handler: nil)
     }
-
 }

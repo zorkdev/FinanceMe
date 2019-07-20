@@ -1,5 +1,4 @@
 public struct UserBusinessLogic: ServiceClient {
-
     public typealias ServiceProvider = NetworkServiceProvider & DataServiceProvider & SessionServiceProvider
     public let serviceProvider: ServiceProvider
 
@@ -17,7 +16,7 @@ public struct UserBusinessLogic: ServiceClient {
                 self.serviceProvider.sessionService.save(session: session)
 
                 return .value(session)
-        }
+            }
     }
 
     public func getCurrentUser() -> Promise<User> {
@@ -30,7 +29,7 @@ public struct UserBusinessLogic: ServiceClient {
                 user.save(dataService: self.serviceProvider.dataService)
 
                 return .value(user)
-        }
+            }
     }
 
     public func update(user: User) -> Promise<User> {
@@ -43,7 +42,6 @@ public struct UserBusinessLogic: ServiceClient {
                 user.save(dataService: self.serviceProvider.dataService)
 
                 return .value(user)
-        }
+            }
     }
-
 }

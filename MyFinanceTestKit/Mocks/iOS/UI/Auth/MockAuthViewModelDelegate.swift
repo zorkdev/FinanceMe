@@ -1,7 +1,7 @@
 @testable import MyFinance_iOS
 
 class MockAuthViewModelDelegate: AuthViewModelDelegate {
-
+    // swiftlint:disable discouraged_optional_boolean
     var lastUpdateTryAgainValue: Bool?
     var lastUpdateLogoValue: Bool?
 
@@ -12,5 +12,4 @@ class MockAuthViewModelDelegate: AuthViewModelDelegate {
     func updateLogo(isHidden: Bool) {
         lastUpdateLogoValue = isHidden
     }
-
 }

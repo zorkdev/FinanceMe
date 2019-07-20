@@ -1,5 +1,4 @@
 public struct ExternalTransactionsBusinessLogic: ServiceClient {
-
     public typealias ServiceProvider = NetworkServiceProvider
     public let serviceProvider: ServiceProvider
 
@@ -54,5 +53,4 @@ public struct ExternalTransactionsBusinessLogic: ServiceClient {
                             parameters: nil,
                             body: nil).asVoid()
     }
-
 }

@@ -1,12 +1,11 @@
 struct HomeDisplayModel: TodayDisplayModelType {
-
-    static let positiveColor = Color(red: 245/255.0,
-                                     green: 245/255.0,
-                                     blue: 255/255.0,
+    static let positiveColor = Color(red: 245 / 255.0,
+                                     green: 245 / 255.0,
+                                     blue: 255 / 255.0,
                                      alpha: 1)
-    static let negativeColor = Color(red: 205/255.0,
-                                     green: 65/255.0,
-                                     blue: 75/255.0,
+    static let negativeColor = Color(red: 205 / 255.0,
+                                     green: 65 / 255.0,
+                                     blue: 75 / 255.0,
                                      alpha: 1)
     static let largeFontSize: CGFloat = 40
     static let smallFontSize: CGFloat = 16
@@ -16,13 +15,10 @@ struct HomeDisplayModel: TodayDisplayModelType {
                                               bottom: 58,
                                               right: 0)
 
-    struct DeleteAlert {
-
+    enum DeleteAlert {
         static let title = "Are you sure? 😰"
         static let message = "The transaction will be deleted."
         static let confirmButtonTitle = "Delete"
         static let cancelButtonTitle = "Cancel"
-
     }
-
 }

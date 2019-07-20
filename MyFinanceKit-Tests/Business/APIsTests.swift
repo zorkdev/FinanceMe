@@ -1,7 +1,6 @@
 @testable import MyFinanceKit
 
 class APIsTests: XCTestCase {
-
     let session = Factory.makeSession()
 
     func testAPIToken() {
@@ -46,5 +45,4 @@ class APIsTests: XCTestCase {
         XCTAssertEqual(FromToParameters.decodeDateFormatter, Formatters.apiDate)
         XCTAssertEqual(FromToParameters.encodeDateFormatter, Formatters.apiDate)
     }
-
 }

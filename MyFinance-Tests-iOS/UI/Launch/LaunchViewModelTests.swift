@@ -1,7 +1,6 @@
 @testable import MyFinance_iOS
 
 class LaunchViewModelTests: ServiceClientiOSTestCase {
-
     var launchViewModel: LaunchViewModel!
 
     override func setUp() {
@@ -31,5 +30,4 @@ class LaunchViewModelTests: ServiceClientiOSTestCase {
         XCTAssertEqual(mockAppState.mockNavigator.lastMoveToValue?.scene, .login)
         XCTAssertNil(mockAppState.mockNavigator.lastMoveToValue?.viewModel)
     }
-
 }

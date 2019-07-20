@@ -1,7 +1,7 @@
 @testable import MyFinance_iOS
 
+// swiftlint:disable force_cast
 class MockAppStateiOS: MockAppState, AppStateiOSType {
-
     var watchService: WatchServiceType = MockWatchService()
     var mockWatchService: MockWatchService { return watchService as! MockWatchService }
 
@@ -15,5 +15,4 @@ class MockAppStateiOS: MockAppState, AppStateiOSType {
     var mockPushNotificationService: MockPushNotificationService {
         return pushNotificationService as! MockPushNotificationService
     }
-
 }

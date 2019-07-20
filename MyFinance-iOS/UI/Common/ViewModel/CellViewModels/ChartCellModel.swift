@@ -1,35 +1,28 @@
 import Charts
 
-protocol ChartCellModelViewDelegate: class {
-
+protocol ChartCellModelViewDelegate: AnyObject {
     func update()
-
 }
 
-protocol ChartCellModelForViewType: class {
-
+protocol ChartCellModelForViewType: AnyObject {
     var viewDelegate: ChartCellModelViewDelegate? { get set }
 
     var data: LineChartData { get }
-
 }
 
 protocol ChartCellModelForViewModelType: CellModelType {
-
     func update(endOfMonthSummaries: [EndOfMonthSummary])
-
 }
 
 class ChartCellModel {
-
     class DateValueFormatter: NSObject, IAxisValueFormatter {
-        public func stringForValue(_ value: Double, axis: AxisBase?) -> String {
+        func stringForValue(_ value: Double, axis: AxisBase?) -> String {
             return Formatters.monthShort.string(from: Date(timeIntervalSince1970: value))
         }
     }
 
     class CurrencyValueFormatter: NSObject, IAxisValueFormatter {
-        public func stringForValue(_ value: Double, axis: AxisBase?) -> String {
+        func stringForValue(_ value: Double, axis: AxisBase?) -> String {
             return Formatters.currencyNoFractions.string(from: value)
         }
     }
@@ -63,13 +56,11 @@ class ChartCellModel {
 
         return LineChartData(dataSet: dataSet)
     }
-
 }
 
 extension ChartCellModel: ChartCellModelForViewType {}
 
 extension ChartCellModel: ChartCellModelForViewModelType {
-
     static var reuseIdentifier: String {
         return ChartTableViewCell.reuseIdentifier
     }
@@ -82,5 +73,4 @@ extension ChartCellModel: ChartCellModelForViewModelType {
         data = ChartCellModel.createChartData(from: endOfMonthSummaries)
         viewDelegate?.update()
     }
-
 }

@@ -1,5 +1,4 @@
 class IntegrationTestCase: XCTestCase {
-
     var config: Config!
 
     override func setUp() {
@@ -13,5 +12,4 @@ class IntegrationTestCase: XCTestCase {
 
         config.appState.dataService.removeAll()
     }
-
 }

@@ -1,5 +1,4 @@
 protocol HomeViewModelDelegate: TodayViewModelDelegate, MessagePresentable {
-
     var feedTableView: TableViewType! { get }
     var regularsTableView: TableViewType! { get }
     var balancesTableView: TableViewType! { get }
@@ -9,12 +8,9 @@ protocol HomeViewModelDelegate: TodayViewModelDelegate, MessagePresentable {
                    confirmActionTitle: String,
                    confirmAction: @escaping () -> Void,
                    cancelActionTitle: String)
-
 }
 
 protocol HomeViewModelType: ViewModelType, AddTransactionViewModelDataDelegate, SettingsViewModelDataDelegate {
-
     func settingsButtonTapped()
     func addTransactionButtonTapped()
-
 }

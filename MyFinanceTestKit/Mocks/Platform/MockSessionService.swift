@@ -1,7 +1,6 @@
 @testable import MyFinanceKit
 
 class MockSessionService: SessionService {
-
     var hasSessionReturnValue = false
     var getSessionReturnValue: Session?
     var lastSaveValue: Session?
@@ -17,5 +16,4 @@ class MockSessionService: SessionService {
     func save(session: Session) {
         lastSaveValue = session
     }
-
 }

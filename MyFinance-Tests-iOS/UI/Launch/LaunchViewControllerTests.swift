@@ -1,7 +1,6 @@
 @testable import MyFinance_iOS
 
 class LaunchViewControllerTests: XCTestCase {
-
     var mockLaunchViewModel: MockLaunchViewModel!
     var launchViewController: LaunchViewController!
 
@@ -22,5 +21,4 @@ class LaunchViewControllerTests: XCTestCase {
         launchViewController.viewDidAppear(true)
         XCTAssertTrue(mockLaunchViewModel.didCallViewDidAppear)
     }
-
 }

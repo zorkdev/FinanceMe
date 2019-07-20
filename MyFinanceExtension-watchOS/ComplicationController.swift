@@ -2,7 +2,6 @@ import ClockKit
 import MyFinanceKit
 
 class ComplicationController: NSObject, CLKComplicationDataSource {
-
     func getSupportedTimeTravelDirections(
         for complication: CLKComplication,
         withHandler handler: @escaping (CLKComplicationTimeTravelDirections) -> Void) {
@@ -34,11 +33,10 @@ class ComplicationController: NSObject, CLKComplicationDataSource {
             let template = CLKComplicationTemplateUtilitarianSmallFlat()
             template.textProvider = CLKSimpleTextProvider(text: allowance)
             let timelineEntry = CLKComplicationTimelineEntry(date: Date(),
-                                                         complicationTemplate: template)
+                                                             complicationTemplate: template)
             handler(timelineEntry)
         default:
             handler(nil)
         }
     }
-
 }

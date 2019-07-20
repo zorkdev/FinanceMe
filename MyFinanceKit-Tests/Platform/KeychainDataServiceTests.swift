@@ -1,7 +1,6 @@
 @testable import MyFinanceKit
 
 class KeychainDataServiceTests: XCTestCase {
-
     struct StubModel: Storeable, Equatable {
         let variable: String
     }
@@ -101,5 +100,4 @@ class KeychainDataServiceTests: XCTestCase {
 
         XCTAssertNil(retrievedAgainValue)
     }
-
 }

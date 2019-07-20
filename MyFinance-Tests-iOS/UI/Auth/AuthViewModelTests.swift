@@ -2,7 +2,6 @@ import LocalAuthentication
 @testable import MyFinance_iOS
 
 class AuthViewModelTests: ServiceClientiOSTestCase {
-
     func testTryAgainButtonTapped() {
         let newExpectation = expectation(description: "Authenticated")
 
@@ -83,5 +82,4 @@ class AuthViewModelTests: ServiceClientiOSTestCase {
     func testCreateLAContext() {
         _ = LAContext().createContext()
     }
-
 }

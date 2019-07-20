@@ -1,7 +1,6 @@
 class BasicTableViewCell: UITableViewCell {
-
-    @IBOutlet private weak var titleLabel: UILabel!
-    @IBOutlet private weak var detailLabel: UILabel!
+    @IBOutlet private var titleLabel: UILabel!
+    @IBOutlet private var detailLabel: UILabel!
 
     private weak var viewModel: BasicCellModelForViewType?
 
@@ -11,11 +10,9 @@ class BasicTableViewCell: UITableViewCell {
         viewModel?.viewDelegate = nil
         viewModel = nil
     }
-
 }
 
 extension BasicTableViewCell: TableViewCellForViewModelType {
-
     func update(viewModel: CellModelType) {
         guard let viewModel = viewModel as? BasicCellModelForViewType else { return }
 
@@ -24,11 +21,9 @@ extension BasicTableViewCell: TableViewCellForViewModelType {
 
         update()
     }
-
 }
 
 extension BasicTableViewCell: BasicCellModelViewDelegate {
-
     func update() {
         guard let viewModel = viewModel else { return }
 
@@ -36,5 +31,4 @@ extension BasicTableViewCell: BasicCellModelViewDelegate {
         detailLabel.text = viewModel.detail
         detailLabel.textColor = viewModel.detailColor
     }
-
 }

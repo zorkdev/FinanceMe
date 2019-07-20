@@ -1,7 +1,6 @@
 import MyFinanceKit
 
 class MockDataService: DataService {
-
     var savedValues = [JSONEncodable]()
     var lastSavedKey: String?
     var saveReturnValue: DataServiceStatus?
@@ -38,5 +37,4 @@ class MockDataService: DataService {
         savedValues = []
         didCallRemoveAll = true
     }
-
 }

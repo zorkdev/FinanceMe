@@ -1,7 +1,6 @@
 @testable import MyFinanceKit
 
 class TodayViewModelTests: XCTestCase {
-
     func testInit() {
         _ = TodayViewModel(serviceProvider: MockAppState(),
                            displayModel: MockTodayDisplayModel())
@@ -14,5 +13,4 @@ class TodayViewModelTests: XCTestCase {
         viewModel.inject(delegate: mockDelegate)
         XCTAssertTrue(viewModel.delegate is MockTodayViewModelDelegate)
     }
-
 }

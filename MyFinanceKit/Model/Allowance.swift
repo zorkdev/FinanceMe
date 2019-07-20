@@ -1,5 +1,4 @@
 public struct Allowance: Storeable, Equatable {
-
     public let allowance: Double
 
     public var formatted: String {
@@ -9,5 +8,4 @@ public struct Allowance: Storeable, Equatable {
     public init(allowance: Double) {
         self.allowance = allowance
     }
-
 }

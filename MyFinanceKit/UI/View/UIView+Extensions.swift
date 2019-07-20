@@ -3,7 +3,6 @@ public typealias View = UIView
 #endif
 
 public extension View {
-
     @IBInspectable var layerCornerRadius: CGFloat {
         get {
             return layer.cornerRadius
@@ -43,5 +42,4 @@ public extension View {
             layer.shadowColor = newValue?.cgColor
         }
     }
-
 }

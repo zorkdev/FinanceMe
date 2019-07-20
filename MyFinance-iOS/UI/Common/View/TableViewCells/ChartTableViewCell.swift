@@ -1,8 +1,7 @@
 import Charts
 
 class ChartTableViewCell: UITableViewCell {
-
-    @IBOutlet weak var chart: LineChartView!
+    @IBOutlet var chart: LineChartView!
 
     private weak var viewModel: ChartCellModelForViewType?
 
@@ -12,11 +11,9 @@ class ChartTableViewCell: UITableViewCell {
         viewModel?.viewDelegate = nil
         viewModel = nil
     }
-
 }
 
 extension ChartTableViewCell: TableViewCellForViewModelType {
-
     func update(viewModel: CellModelType) {
         guard let viewModel = viewModel as? ChartCellModelForViewType else { return }
 
@@ -25,11 +22,9 @@ extension ChartTableViewCell: TableViewCellForViewModelType {
 
         update()
     }
-
 }
 
 extension ChartTableViewCell: ChartCellModelViewDelegate {
-
     func update() {
         guard let viewModel = viewModel else { return }
 
@@ -51,5 +46,4 @@ extension ChartTableViewCell: ChartCellModelViewDelegate {
         chart.xAxis.avoidFirstLastClippingEnabled = true
         chart.isUserInteractionEnabled = false
     }
-
 }

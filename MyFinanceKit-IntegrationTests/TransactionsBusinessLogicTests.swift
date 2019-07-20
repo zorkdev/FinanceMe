@@ -1,7 +1,6 @@
 @testable import MyFinanceKit
 
 class TransactionsBusinessLogicTests: IntegrationTestCase {
-
     func testGetTransactions() {
         let newExpectation = expectation(description: "Transactions fetched")
 
@@ -14,9 +13,8 @@ class TransactionsBusinessLogicTests: IntegrationTestCase {
                 newExpectation.fulfill()
             }.catch { error in
                 XCTFail(error.localizedDescription)
-        }
+            }
 
         waitForExpectations(timeout: 10.0, handler: nil)
     }
-
 }

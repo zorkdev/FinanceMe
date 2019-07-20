@@ -1,24 +1,18 @@
 protocol BalancesTableViewModelDelegate: ViewModelDelegate {
-
     func tableView(forModel: BalancesTableViewModel) -> TableViewType?
     func didTapRefresh()
-
 }
 
 protocol BalancesTableViewModelType: ViewModelType {
-
     func update(endOfMonthSummaryList: EndOfMonthSummaryList)
-
 }
 
 class BalancesTableViewModel: ServiceClient, TableViewModelType {
-
     typealias ServiceProvider = DataServiceProvider
 
     let serviceProvider: ServiceProvider
 
     private enum BalancesSection {
-
         case currentMonth
         case chart
         case endOfMonthSummaries(Date)
@@ -58,11 +52,9 @@ class BalancesTableViewModel: ServiceClient, TableViewModelType {
     init(serviceProvider: ServiceProvider) {
         self.serviceProvider = serviceProvider
     }
-
 }
 
 extension BalancesTableViewModel: BalancesTableViewModelType {
-
     func viewDidLoad() {
         setupTableView()
     }
@@ -75,11 +67,9 @@ extension BalancesTableViewModel: BalancesTableViewModelType {
     func update(endOfMonthSummaryList: EndOfMonthSummaryList) {
         self.endOfMonthSummaryList = endOfMonthSummaryList
     }
-
 }
 
 extension BalancesTableViewModel {
-
     private func setupTableView() {
         guard let tableView = delegate?.tableView(forModel: self) else { return }
         tableView.contentInset = HomeDisplayModel.tableViewInsets
@@ -133,7 +123,7 @@ extension BalancesTableViewModel {
         let currentSummary = EndOfMonthSummary(balance: list.currentMonthSummary.forecast,
                                                created: Date().next(day: payday, direction: .forward))
         var summaries = list.endOfMonthSummaries + [currentSummary]
-        summaries.sort(by: { $0.created < $1.created })
+        summaries.sort { $0.created < $1.created }
         summaries = Array(summaries.suffix(12))
         let cellModel = ChartCellModel(endOfMonthSummaries: summaries).wrap
 
@@ -146,10 +136,10 @@ extension BalancesTableViewModel {
         for date in endOfMonthSummaries.keys.sorted(by: { $0 > $1 }) {
             guard let summariesForDate = endOfMonthSummaries[date] else { continue }
 
-            let cellModels: [CellModelWrapper] = summariesForDate.map({
+            let cellModels: [CellModelWrapper] = summariesForDate.map {
                 let displayModel = EndOfMonthSummaryDisplayModel(date: $0.created, amount: $0.balance)
                 return TransactionCellModel(transaction: displayModel).wrap
-            })
+            }
 
             let title = BalancesSection.endOfMonthSummaries(date).title
             let section = TableViewSection(cellModels: cellModels, title: title)
@@ -159,8 +149,8 @@ extension BalancesTableViewModel {
         return sectionsTemp
     }
 
-    @objc private func didTapRefresh() {
+    @objc
+    private func didTapRefresh() {
         delegate?.didTapRefresh()
     }
-
 }

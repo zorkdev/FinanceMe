@@ -1,7 +1,6 @@
 class LoginViewController: BaseViewController, KeyboardManageable, TableViewContainer {
-
-    @IBOutlet weak var uiTableView: UITableView!
-    @IBOutlet private weak var loginButton: UIButton!
+    @IBOutlet var uiTableView: UITableView!
+    @IBOutlet private var loginButton: UIButton!
 
     var viewModel: LoginViewModelType!
 
@@ -13,20 +12,16 @@ class LoginViewController: BaseViewController, KeyboardManageable, TableViewCont
     @IBAction private func loginButtonTapped(_ sender: UIButton) {
         viewModel.loginButtonTapped()
     }
-
 }
 
 extension LoginViewController: ViewModelInjectable {
-
     func inject(viewModel: ViewModelType) {
         guard let viewModel = viewModel as? LoginViewModelType else { return }
         self.viewModel = viewModel
     }
-
 }
 
 extension LoginViewController: LoginViewModelDelegate {
-
     func updateLoginButton(enabled: Bool) {
         loginButton.isEnabled = enabled
 
@@ -35,5 +30,4 @@ extension LoginViewController: LoginViewModelDelegate {
                                                LoginDisplayModel.buttonDisabledAlpha
         }
     }
-
 }

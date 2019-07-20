@@ -1,9 +1,7 @@
 @testable import MyFinanceKit
 
 class CellModelTypeTests: XCTestCase {
-
     func testCellModelWrapper() {
-
         class TestCellModel: CellModelType {
             static let reuseIdentifier = "TestCellModel"
             let id = 123
@@ -19,5 +17,4 @@ class CellModelTypeTests: XCTestCase {
         XCTAssertEqual(TestCellModel.reuseIdentifier, "TestCellModel")
         XCTAssertEqual(TestCellModel.rowHeight, 60)
     }
-
 }

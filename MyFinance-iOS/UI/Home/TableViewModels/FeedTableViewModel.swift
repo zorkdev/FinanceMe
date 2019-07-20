@@ -1,20 +1,15 @@
 protocol FeedTableViewModelDelegate: ViewModelDelegate {
-
     func tableView(forModel: FeedTableViewModel) -> TableViewType?
     func didTapRefresh()
     func didSelect(transaction: Transaction)
     func didDelete(transaction: Transaction)
-
 }
 
 protocol FeedTableViewModelType: ViewModelType {
-
     func update(transactions: [Transaction])
-
 }
 
 class FeedTableViewModel {
-
     private let refreshControl = UIRefreshControl()
 
     private var transactions = [Date: [Transaction]]() {
@@ -33,11 +28,9 @@ class FeedTableViewModel {
     var tableViewController: TableViewControllerType?
 
     weak var delegate: FeedTableViewModelDelegate?
-
 }
 
 extension FeedTableViewModel: FeedTableViewModelType {
-
     func viewDidLoad() {
         setupTableView()
     }
@@ -52,10 +45,9 @@ extension FeedTableViewModel: FeedTableViewModelType {
             .filter {
                 $0.source == .externalInbound ||
                 $0.source == .externalOutbound
-            }
-            .sorted {
+            }.sorted {
                 $0.created > $1.created
-        }
+            }
 
         var transactionsTemp = [Date: [Transaction]]()
 
@@ -71,11 +63,9 @@ extension FeedTableViewModel: FeedTableViewModelType {
 
         self.transactions = transactionsTemp
     }
-
 }
 
 extension FeedTableViewModel: TableViewModelType {
-
     func didSelect(indexPath: IndexPath) {
         guard let transaction = transaction(at: indexPath) else { return }
         delegate?.didSelect(transaction: transaction)
@@ -85,11 +75,9 @@ extension FeedTableViewModel: TableViewModelType {
         guard let transaction = transaction(at: indexPath) else { return }
         delegate?.didDelete(transaction: transaction)
     }
-
 }
 
 extension FeedTableViewModel {
-
     private func setupTableView() {
         guard let tableView = delegate?.tableView(forModel: self) else { return }
 
@@ -105,10 +93,10 @@ extension FeedTableViewModel {
         for date in transactions.keys.sorted(by: { $0 > $1 }) {
             guard let transactionsForDate = transactions[date] else { continue }
 
-            let cellModels: [CellModelWrapper] = transactionsForDate.map({
+            let cellModels: [CellModelWrapper] = transactionsForDate.map {
                 let displayModel = NormalTransactionDisplayModel(transaction: $0)
                 return TransactionCellModel(transaction: displayModel).wrap
-            })
+            }
 
             let title = Formatters.formatRelative(date: date)
             let section = TableViewSection(cellModels: cellModels, title: title)
@@ -119,12 +107,12 @@ extension FeedTableViewModel {
     }
 
     private func transaction(at indexPath: IndexPath) -> Transaction? {
-        let date = transactions.keys.sorted(by: { $0 > $1 })[indexPath.section]
+        let date = transactions.keys.sorted { $0 > $1 }[indexPath.section]
         return transactions[date]?[indexPath.row]
     }
 
-    @objc private func didTapRefresh() {
+    @objc
+    private func didTapRefresh() {
         delegate?.didTapRefresh()
     }
-
 }

@@ -1,39 +1,30 @@
 import LocalAuthentication
 
 protocol LAContextType {
-
     func createContext() -> LAContextType
     func canEvaluatePolicy(_ policy: LAPolicy, error: NSErrorPointer) -> Bool
     func evaluatePolicy(_ policy: LAPolicy, localizedReason: String, reply: @escaping (Bool, Error?) -> Void)
-
 }
 
 extension LAContext: LAContextType {
-
     func createContext() -> LAContextType {
         return LAContext()
     }
-
 }
 
 protocol AuthViewModelDelegate: ViewModelDelegate {
-
     func updateTryAgain(isHidden: Bool)
     func updateLogo(isHidden: Bool)
-
 }
 
 protocol AuthViewModelType: ViewModelType {
-
     func authenticate()
     func addOcclusion()
     func tryAgainButtonTapped()
-
 }
 
 class AuthViewModel: AuthViewModelType, ServiceClient {
-
-    private struct Constants {
+    private enum Constants {
         static let reason = "Please authenticate to unlock this app."
     }
 
@@ -50,7 +41,8 @@ class AuthViewModel: AuthViewModelType, ServiceClient {
         authenticate()
     }
 
-    @objc func authenticate() {
+    @objc
+    func authenticate() {
         var error: NSError?
 
         let context = serviceProvider.laContext.createContext()
@@ -73,7 +65,7 @@ class AuthViewModel: AuthViewModelType, ServiceClient {
                         self?.delegate?.updateTryAgain(isHidden: false)
                     }
                 }
-        }
+            }
     }
 
     func addOcclusion() {
@@ -91,5 +83,4 @@ class AuthViewModel: AuthViewModelType, ServiceClient {
         guard let delegate = delegate as? AuthViewModelDelegate else { return }
         self.delegate = delegate
     }
-
 }

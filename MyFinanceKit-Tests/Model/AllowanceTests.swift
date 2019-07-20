@@ -1,7 +1,6 @@
 @testable import MyFinanceKit
 
 class AllowanceTests: XCTestCase {
-
     func testDecodeAllowance() {
         let jsonData =
         """
@@ -24,5 +23,4 @@ class AllowanceTests: XCTestCase {
 
         XCTAssertEqual(allowance.formatted, "£10.00")
     }
-
 }

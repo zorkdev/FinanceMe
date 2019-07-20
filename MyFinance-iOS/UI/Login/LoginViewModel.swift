@@ -1,17 +1,12 @@
 protocol LoginViewModelDelegate: TableViewModelDelegate, MessagePresentable {
-
     func updateLoginButton(enabled: Bool)
-
 }
 
 protocol LoginViewModelType: ViewModelType {
-
     func loginButtonTapped()
-
 }
 
 class LoginViewModel: ServiceClient, TableViewModelType {
-
     typealias ServiceProvider = NavigatorProvider
         & NetworkServiceProvider
         & DataServiceProvider
@@ -48,13 +43,11 @@ class LoginViewModel: ServiceClient, TableViewModelType {
         emailModel.viewModelDelegate = self
         passwordModel.viewModelDelegate = self
     }
-
 }
 
 // MARK: - Interface
 
 extension LoginViewModel: LoginViewModelType {
-
     func viewDidLoad() {
         guard let tableView = delegate?.tableView else { return }
         setup(tableView: tableView, cells: [InputTableViewCell.self])
@@ -78,11 +71,9 @@ extension LoginViewModel: LoginViewModelType {
         delegate?.updateLoginButton(enabled: isValid)
         becomeFirstResponder()
     }
-
 }
 
 extension LoginViewModel: TextInputCellModelViewModelDelegate {
-
     func isEnabled(inputCell: InputCellModelForViewModelType) -> Bool { return true }
 
     func returnKeyType(inputCell: InputCellModelForViewModelType) -> UIReturnKeyType { return .done }
@@ -92,13 +83,11 @@ extension LoginViewModel: TextInputCellModelViewModelDelegate {
     }
 
     func defaultValue(textCell: TextInputCellModelForViewModelType) -> String? { return nil }
-
 }
 
 // MARK: - Private methods
 
 extension LoginViewModel {
-
     private func login(credentials: Credentials) {
         delegate?.showSpinner()
         userBusinessLogic.getSession(credentials: credentials)
@@ -109,7 +98,6 @@ extension LoginViewModel {
                 self.delegate?.showError(message: error.localizedDescription)
             }.finally {
                 self.delegate?.hideSpinner()
-        }
+            }
     }
-
 }

@@ -1,11 +1,8 @@
 public protocol Identifiable {
-
     var id: Int { get }
-
 }
 
 public struct CellModelWrapper: Hashable {
-
     public let wrapped: CellModelType
 
     public init(_ cellModelType: CellModelType) {
@@ -19,21 +16,17 @@ public struct CellModelWrapper: Hashable {
     public func hash(into hasher: inout Hasher) {
         hasher.combine(wrapped.id)
     }
-
 }
 
-public protocol CellModelType: class, Identifiable {
-
+public protocol CellModelType: AnyObject, Identifiable {
     static var reuseIdentifier: String { get }
     static var rowHeight: CGFloat { get }
 
     var wrap: CellModelWrapper { get }
     var canEdit: Bool { get }
-
 }
 
 public extension CellModelType {
-
     static var rowHeight: CGFloat { return 60 }
 
     var wrap: CellModelWrapper {
@@ -41,5 +34,4 @@ public extension CellModelType {
     }
 
     var canEdit: Bool { return false }
-
 }

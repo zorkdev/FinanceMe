@@ -1,5 +1,4 @@
 public struct Session: Storeable, Equatable {
-
     enum CodingKeys: String, CodingKey {
         case starlingToken = "sToken"
         case zorkdevToken = "token"
@@ -7,5 +6,4 @@ public struct Session: Storeable, Equatable {
 
     let starlingToken: String
     let zorkdevToken: String
-
 }

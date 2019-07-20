@@ -1,5 +1,4 @@
 public enum AppError: Error, LocalizedError, Equatable {
-
     case unknownError
     case apiPathInvalid
     case urlQueryInvalid
@@ -8,11 +7,9 @@ public enum AppError: Error, LocalizedError, Equatable {
     public var errorDescription: String? {
         return "Sorry, something went wrong. Please try again."
     }
-
 }
 
 public enum APIError: Int, Error, LocalizedError, Equatable {
-
     case badRequest = 400
     case unauthorized = 401
     case forbidden = 403
@@ -31,5 +28,4 @@ public enum APIError: Int, Error, LocalizedError, Equatable {
 
         self = apiError
     }
-
 }

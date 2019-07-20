@@ -2,7 +2,6 @@ import LocalAuthentication
 @testable import MyFinance_iOS
 
 class MockLAContext: LAContextType {
-
     var canEvaluatePolicyReturnValue = true
     var evaluatePolicyReturnValue = true
 
@@ -28,5 +27,4 @@ class MockLAContext: LAContextType {
     func evaluatePolicy(_ policy: LAPolicy, localizedReason: String, reply: @escaping (Bool, Error?) -> Void) {
         reply(evaluatePolicyReturnValue, nil)
     }
-
 }

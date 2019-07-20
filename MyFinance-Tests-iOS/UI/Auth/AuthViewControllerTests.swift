@@ -1,7 +1,6 @@
 @testable import MyFinance_iOS
 
 class AuthViewControllerTests: XCTestCase {
-
     var mockAuthViewModel: MockAuthViewModel!
     var authViewController: AuthViewController!
 
@@ -84,5 +83,4 @@ class AuthViewControllerTests: XCTestCase {
     func testInject() {
         XCTAssertTrue(authViewController.viewModel is MockAuthViewModel)
     }
-
 }

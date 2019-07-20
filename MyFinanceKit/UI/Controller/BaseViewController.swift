@@ -1,15 +1,12 @@
 open class BaseViewController: ViewController {
-
-    open override func viewWillDisappear(_ animated: Bool) {
+    override open func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
 
         view.endEditing(true)
     }
-
 }
 
 extension BaseViewController: UITextFieldDelegate {
-
     public func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         textField.resignFirstResponder()
         return true
@@ -18,11 +15,9 @@ extension BaseViewController: UITextFieldDelegate {
     public func textFieldDidEndEditing(_ textField: UITextField) {
         textField.resignFirstResponder()
     }
-
 }
 
 extension BaseViewController: ViewControllerType {
-
     public var presented: ViewControllerType? {
         return presentedViewController as? ViewControllerType
     }
@@ -39,5 +34,4 @@ extension BaseViewController: ViewControllerType {
             }
         }
     }
-
 }

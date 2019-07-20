@@ -1,5 +1,4 @@
 public struct User: Storeable, Equatable {
-
     public let name: String
     public let payday: Int
     public let startDate: Date
@@ -17,5 +16,4 @@ public struct User: Storeable, Equatable {
         self.largeTransaction = largeTransaction
         self.allowance = allowance
     }
-
 }

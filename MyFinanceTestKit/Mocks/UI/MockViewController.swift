@@ -2,7 +2,6 @@ import PromiseKit
 @testable import MyFinanceKit
 
 class MockViewController: ViewControllerType {
-
     var presented: ViewControllerType?
 
     #if os(iOS)
@@ -11,11 +10,9 @@ class MockViewController: ViewControllerType {
 
     func present(viewController: ViewControllerType, animated: Bool) {}
     func dismiss() -> Promise<Void> { return Promise() }
-
 }
 
 class MockInjectableViewController: ViewControllerType & ViewModelInjectable {
-
     var presented: ViewControllerType?
 
     #if os(iOS)
@@ -29,5 +26,4 @@ class MockInjectableViewController: ViewControllerType & ViewModelInjectable {
     func inject(viewModel: ViewModelType) {
         lastViewModel = viewModel
     }
-
 }

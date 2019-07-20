@@ -1,7 +1,6 @@
 @testable import MyFinanceKit
 
 class TodayDisplayModelTypeTests: XCTestCase {
-
     let displayModel = MockTodayDisplayModel()
 
     func testDefaultAmount() {
@@ -15,5 +14,4 @@ class TodayDisplayModelTypeTests: XCTestCase {
         XCTAssertEqual(positiveAmount.string, "£10.00")
         XCTAssertEqual(negativeAmount.string, "-£10.00")
     }
-
 }

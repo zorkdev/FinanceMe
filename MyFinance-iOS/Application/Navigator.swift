@@ -1,34 +1,27 @@
 enum Scene {
-
     case launch
     case auth
     case login
     case home
     case addTransaction
     case settings
-
 }
 
 struct SceneModel {
-
     let viewController: ViewControllerType
     let viewModel: ViewModelType
-
 }
 
 protocol NavigatorType: BaseNavigatorType {
-
     var appState: AppStateiOSType! { get set }
     func createNavigationStack(scene: Scene, viewModel: ViewModelType?)
     func createAuthStack(viewModel: AuthViewModelType)
     func moveTo(scene: Scene, viewModel: ViewModelType?)
     func showAuthWindow()
     func hideAuthWindow()
-
 }
 
 class Navigator: NavigatorType {
-
     private var authWindow: WindowType?
 
     weak var appState: AppStateiOSType!
@@ -47,7 +40,7 @@ class Navigator: NavigatorType {
     func createAuthStack(viewModel: AuthViewModelType) {
         let scene = create(scene: .auth, viewModel: viewModel)
 
-        guard let frame = window?.frame else { fatalError() }
+        guard let frame = window?.frame else { fatalError("The window is nil.") }
         authWindow = window?.createWindow(frame: frame)
         authWindow?.windowLevel = UIWindow.Level(UIWindow.Level.statusBar.rawValue - 1)
         authWindow?.baseViewController = scene.viewController
@@ -67,14 +60,16 @@ class Navigator: NavigatorType {
         viewControllers.append(scene.viewController)
     }
 
-    @discardableResult func dismiss() -> Promise<Void> {
+    @discardableResult
+    func dismiss() -> Promise<Void> {
         guard let lastViewController = viewControllers.last else { return Promise(error: AppError.unknownError) }
         return lastViewController.dismiss().done {
             self.viewControllers.removeLast()
         }
     }
 
-    @discardableResult func popToRoot() -> Promise<Void> {
+    @discardableResult
+    func popToRoot() -> Promise<Void> {
         var promises = [Promise<Void>]()
         for (index, viewController) in viewControllers.reversed().enumerated() where index < viewControllers.count - 1 {
             promises.append(viewController.dismiss())
@@ -132,5 +127,4 @@ class Navigator: NavigatorType {
         case .auth, .addTransaction, .settings: return .coverVertical
         }
     }
-
 }

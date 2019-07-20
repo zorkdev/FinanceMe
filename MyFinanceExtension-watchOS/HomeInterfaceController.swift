@@ -2,10 +2,9 @@ import WatchKit
 import MyFinanceKit
 
 class HomeInterfaceController: WKInterfaceController {
-
-    @IBOutlet private weak var balanceLabel: WKInterfaceLabel!
-    @IBOutlet private weak var allowanceLabel: WKInterfaceLabel!
-    @IBOutlet private weak var allowanceIconLabel: WKInterfaceLabel!
+    @IBOutlet private var balanceLabel: WKInterfaceLabel!
+    @IBOutlet private var allowanceLabel: WKInterfaceLabel!
+    @IBOutlet private var allowanceIconLabel: WKInterfaceLabel!
 
     private var viewModel: HomeViewModelType!
 
@@ -30,11 +29,9 @@ class HomeInterfaceController: WKInterfaceController {
 
         viewModel.update()
     }
-
 }
 
 extension HomeInterfaceController: TodayViewModelDelegate {
-
     func set(balance: NSAttributedString) {
         balanceLabel.setAttributedText(balance)
     }
@@ -46,5 +43,4 @@ extension HomeInterfaceController: TodayViewModelDelegate {
     func set(allowanceIcon: String) {
         allowanceIconLabel.setText(allowanceIcon)
     }
-
 }

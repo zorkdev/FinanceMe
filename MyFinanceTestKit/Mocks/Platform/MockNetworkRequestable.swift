@@ -2,7 +2,6 @@ import PromiseKit
 import MyFinanceKit
 
 class MockNetworkRequestable: NetworkRequestable {
-
     var lastRequest: URLRequest?
     var returnDataValue: Data?
     var returnErrorValue: Error?
@@ -22,5 +21,4 @@ class MockNetworkRequestable: NetworkRequestable {
 
         return .value(response)
     }
-
 }

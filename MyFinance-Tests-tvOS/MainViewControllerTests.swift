@@ -1,7 +1,6 @@
 @testable import MyFinance_tvOS
 
 class MainViewControllerTests: ServiceClientTestCase {
-
     var mockViewModel: MockTodayPresentable!
     var mainViewController: MainViewController!
 
@@ -25,5 +24,4 @@ class MainViewControllerTests: ServiceClientTestCase {
         mainViewController.set(balance: NSAttributedString(string: "balance"))
         mainViewController.set(allowanceIcon: "icon")
     }
-
 }

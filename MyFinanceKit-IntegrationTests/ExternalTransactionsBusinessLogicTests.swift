@@ -2,7 +2,6 @@ import PromiseKit
 @testable import MyFinanceKit
 
 class ExternalTransactionsBusinessLogicTests: IntegrationTestCase {
-
     func testGetExternalTransactions() {
         let newExpectation = expectation(description: "External transactions fetched")
 
@@ -15,7 +14,7 @@ class ExternalTransactionsBusinessLogicTests: IntegrationTestCase {
                 newExpectation.fulfill()
             }.catch { error in
                 XCTFail(error.localizedDescription)
-        }
+            }
 
         waitForExpectations(timeout: 10.0, handler: nil)
     }
@@ -37,14 +36,13 @@ class ExternalTransactionsBusinessLogicTests: IntegrationTestCase {
                 createdExpectation.fulfill()
                 return externalTransactionsBusinessLogic.update(transaction: transaction)
             }.then { transaction -> Promise<Void> in
-                return externalTransactionsBusinessLogic.delete(transaction: transaction)
+                externalTransactionsBusinessLogic.delete(transaction: transaction)
             }.done {
                 deletedExpectation.fulfill()
             }.catch { error in
                 XCTFail(error.localizedDescription)
-        }
+            }
 
         waitForExpectations(timeout: 10.0, handler: nil)
     }
-
 }

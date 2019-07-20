@@ -1,5 +1,4 @@
 extension Data {
-
     var prettyPrinted: String {
         guard let json = try? JSONSerialization.jsonObject(with: self, options: []),
             let prettyPrintedJSON = try? JSONSerialization.data(withJSONObject: json, options: .prettyPrinted),
@@ -11,5 +10,4 @@ extension Data {
 
         return cleanJSONString
     }
-
 }

@@ -1,5 +1,4 @@
 public struct BalanceBusinessLogic: ServiceClient {
-
     public typealias ServiceProvider = NetworkServiceProvider & DataServiceProvider
     public let serviceProvider: ServiceProvider
 
@@ -17,7 +16,6 @@ public struct BalanceBusinessLogic: ServiceClient {
                 balance.save(dataService: self.serviceProvider.dataService)
 
                 return .value(balance)
-        }
+            }
     }
-
 }

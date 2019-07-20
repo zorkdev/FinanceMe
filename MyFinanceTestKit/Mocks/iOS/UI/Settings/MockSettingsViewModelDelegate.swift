@@ -1,7 +1,6 @@
 @testable import MyFinance_iOS
 
 class MockSettingsViewModelDelegate: SettingsViewModelDelegate {
-
     var lastUpdateButtonsValue: (enabled: Bool, editing: Bool)?
 
     var tableView: TableViewType = MockTableView()
@@ -9,5 +8,4 @@ class MockSettingsViewModelDelegate: SettingsViewModelDelegate {
     func updateButtons(enabled: Bool, editing: Bool) {
         lastUpdateButtonsValue = (enabled: enabled, editing: editing)
     }
-
 }

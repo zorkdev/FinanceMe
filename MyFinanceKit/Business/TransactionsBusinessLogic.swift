@@ -1,5 +1,4 @@
 public struct TransactionsBusinessLogic: ServiceClient {
-
     public typealias ServiceProvider = NetworkServiceProvider
     public let serviceProvider: ServiceProvider
 
@@ -14,8 +13,7 @@ public struct TransactionsBusinessLogic: ServiceClient {
                             parameters: fromTo,
                             body: nil)
             .then { (halResponse: HALResponse<TransactionList>) -> Promise<[Transaction]> in
-                return .value(halResponse.embedded.transactions)
-        }
+                .value(halResponse.embedded.transactions)
+            }
     }
-
 }

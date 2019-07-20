@@ -1,8 +1,7 @@
 class MainViewController: BaseViewController {
-
-    @IBOutlet private weak var balanceLabel: UILabel!
-    @IBOutlet private weak var allowanceLabel: UILabel!
-    @IBOutlet private weak var allowanceIconLabel: UILabel!
+    @IBOutlet private var balanceLabel: UILabel!
+    @IBOutlet private var allowanceLabel: UILabel!
+    @IBOutlet private var allowanceIconLabel: UILabel!
 
     let appState = AppState()
 
@@ -28,14 +27,13 @@ class MainViewController: BaseViewController {
         update()
     }
 
-    @objc func update() {
+    @objc
+    func update() {
         viewModel.updateData()
     }
-
 }
 
 extension MainViewController: TodayViewModelDelegate {
-
     func set(balance: NSAttributedString) {
         balanceLabel.attributedText = balance
     }
@@ -47,5 +45,4 @@ extension MainViewController: TodayViewModelDelegate {
     func set(allowanceIcon: String) {
         allowanceIconLabel.text = allowanceIcon
     }
-
 }

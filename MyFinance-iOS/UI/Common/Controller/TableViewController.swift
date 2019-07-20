@@ -1,21 +1,16 @@
 struct TableViewUpdate {
-
     var insertSections: IndexSet = []
     var deleteSections: IndexSet = []
     var insertRows: [IndexPath] = []
     var deleteRows: [IndexPath] = []
-
 }
 
 protocol TableViewControllerType {
-
     func updateCells()
     func updateCells(tableViewUpdate: TableViewUpdate)
-
 }
 
 class TableViewController: NSObject {
-
     private let tableView: TableViewType
     private let viewModel: TableViewModelType
     private var isLoading = true
@@ -39,11 +34,9 @@ class TableViewController: NSObject {
     private func model(at indexPath: IndexPath) -> CellModelType {
         return viewModel.sections[indexPath.section].cellModels[indexPath.row].wrapped
     }
-
 }
 
 extension TableViewController: TableViewControllerType {
-
     func updateCells() {
         tableView.reloadData()
     }
@@ -56,11 +49,9 @@ extension TableViewController: TableViewControllerType {
         tableView.insertRows(at: tableViewUpdate.insertRows, with: .automatic)
         tableView.endUpdates()
     }
-
 }
 
 extension TableViewController: UITableViewDataSource {
-
     func numberOfSections(in tableView: UITableView) -> Int {
         return viewModel.sections.count
     }
@@ -74,7 +65,7 @@ extension TableViewController: UITableViewDataSource {
         let tableViewCell = tableView
             .dequeueReusableCell(withIdentifier: type(of: cellModel).reuseIdentifier,
                                  for: indexPath)
-        guard let cell = tableViewCell as? TableViewCellForViewModelType else { return UITableViewCell ()}
+        guard let cell = tableViewCell as? TableViewCellForViewModelType else { return UITableViewCell() }
         cell.update(viewModel: cellModel)
 
         return tableViewCell
@@ -109,13 +100,10 @@ extension TableViewController: UITableViewDataSource {
         guard editingStyle == .delete else { return }
         viewModel.didDelete(indexPath: indexPath)
     }
-
 }
 
 extension TableViewController: UITableViewDelegate {
-
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return type(of: model(at: indexPath)).rowHeight
     }
-
 }

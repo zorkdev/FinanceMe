@@ -1,7 +1,6 @@
 @testable import MyFinanceKit
 
 class TransactionsBusinessLogicTests: ServiceClientTestCase {
-
     func testGetTransactions() {
         let newExpectation = expectation(description: "Transactions fetched")
 
@@ -19,7 +18,6 @@ class TransactionsBusinessLogicTests: ServiceClientTestCase {
         let transactionsBusinessLogic = TransactionsBusinessLogic(serviceProvider: mockAppState)
 
         _ = transactionsBusinessLogic.getTransactions(fromTo: expectedFromTo).done { transactions in
-
             XCTAssertEqual(self.mockAppState.mockNetworkService.lastRequest?.api as? API, .starling(.transactions))
             XCTAssertEqual(self.mockAppState.mockNetworkService.lastRequest?.method, .get)
             XCTAssertEqual(self.mockAppState.mockNetworkService.lastRequest?.parameters as? FromToParameters,
@@ -32,5 +30,4 @@ class TransactionsBusinessLogicTests: ServiceClientTestCase {
 
         waitForExpectations(timeout: 10.0, handler: nil)
     }
-
 }

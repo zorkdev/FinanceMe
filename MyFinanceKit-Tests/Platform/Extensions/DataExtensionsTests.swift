@@ -1,7 +1,6 @@
 @testable import MyFinanceKit
 
 class DataExtensionsTests: XCTestCase {
-
     func testPrettyPrinted_Success() {
         let data = "{\"key\":\"value\"}".data(using: .utf8)
 
@@ -26,5 +25,4 @@ class DataExtensionsTests: XCTestCase {
 
         XCTAssertEqual(prettyPrinted, expectedValue)
     }
-
 }

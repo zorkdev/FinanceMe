@@ -1,21 +1,16 @@
 import PushKit
 
-protocol PushNotificationServiceDelegate: class {
-
+protocol PushNotificationServiceDelegate: AnyObject {
     func didReceiveIncomingPush(payload: [AnyHashable: Any])
-
 }
 
-protocol PushNotificationService: class {
-
+protocol PushNotificationService: AnyObject {
     var delegate: PushNotificationServiceDelegate? { get set }
 
     func registerForNotifications()
-
 }
 
 class PushNotificationDefaultService: NSObject, PushNotificationService {
-
     private let sessionService: SessionService
     private let pushRegistry: PKPushRegistry
     private let pushNotificationBusinessLogic: PushNotificationBusinessLogic
@@ -37,15 +32,13 @@ class PushNotificationDefaultService: NSObject, PushNotificationService {
             sessionService.hasSession else { return }
         pushNotificationBusinessLogic.create(deviceToken: DeviceToken(deviceToken: deviceToken))
     }
-
 }
 
 extension PushNotificationDefaultService: PKPushRegistryDelegate {
-
     func pushRegistry(_ registry: PKPushRegistry,
                       didUpdate pushCredentials: PKPushCredentials,
                       for type: PKPushType) {
-        let token = pushCredentials.token.reduce("", {$0 + String(format: "%02X", $1)}).uppercased()
+        let token = pushCredentials.token.reduce(into: "") { $0 += String(format: "%02X", $1) }.uppercased()
         deviceToken = token
         registerForNotifications()
     }
@@ -57,5 +50,4 @@ extension PushNotificationDefaultService: PKPushRegistryDelegate {
         delegate?.didReceiveIncomingPush(payload: payload.dictionaryPayload)
         completion()
     }
-
 }

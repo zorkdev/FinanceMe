@@ -1,7 +1,6 @@
 @testable import MyFinanceKit
 
 class SessionTests: XCTestCase {
-
     func testDecodeSession() {
         let jsonData =
         """
@@ -27,5 +26,4 @@ class SessionTests: XCTestCase {
 
         XCTAssertNotNil(session.urlEncoded())
     }
-
 }

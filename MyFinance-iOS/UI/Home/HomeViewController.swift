@@ -1,19 +1,18 @@
 class HomeViewController: BaseViewController {
+    @IBOutlet private var balanceLabel: UILabel!
+    @IBOutlet private var allowanceLabel: UILabel!
+    @IBOutlet private var allowanceIconLabel: UILabel!
 
-    @IBOutlet private weak var balanceLabel: UILabel!
-    @IBOutlet private weak var allowanceLabel: UILabel!
-    @IBOutlet private weak var allowanceIconLabel: UILabel!
+    @IBOutlet private var feedUITableView: UITableView!
+    @IBOutlet private var regularsUITableView: UITableView!
+    @IBOutlet private var balancesUITableView: UITableView!
 
-    @IBOutlet private weak var feedUITableView: UITableView!
-    @IBOutlet private weak var regularsUITableView: UITableView!
-    @IBOutlet private weak var balancesUITableView: UITableView!
+    @IBOutlet private var transactionsButton: UIButton!
+    @IBOutlet private var regularsButton: UIButton!
+    @IBOutlet private var balanceButton: UIButton!
 
-    @IBOutlet private weak var transactionsButton: UIButton!
-    @IBOutlet private weak var regularsButton: UIButton!
-    @IBOutlet private weak var balanceButton: UIButton!
-
-    @IBOutlet private weak var tabIndicator: UIView!
-    @IBOutlet private weak var scrollView: UIScrollView!
+    @IBOutlet private var tabIndicator: UIView!
+    @IBOutlet private var scrollView: UIScrollView!
 
     var viewModel: HomeViewModelType!
 
@@ -44,20 +43,16 @@ class HomeViewController: BaseViewController {
     @IBAction func addTransactionButtonTapped(_ sender: UIButton) {
         viewModel.addTransactionButtonTapped()
     }
-
 }
 
 extension HomeViewController: ViewModelInjectable {
-
     func inject(viewModel: ViewModelType) {
         guard let viewModel = viewModel as? HomeViewModelType else { return }
         self.viewModel = viewModel
     }
-
 }
 
 extension HomeViewController: HomeViewModelDelegate {
-
     var feedTableView: TableViewType! { return feedUITableView }
     var regularsTableView: TableViewType! { return regularsUITableView }
     var balancesTableView: TableViewType! { return balancesUITableView }
@@ -88,11 +83,9 @@ extension HomeViewController: HomeViewModelDelegate {
         alertController.addAction(cancelAction)
         present(alertController, animated: true, completion: nil)
     }
-
 }
 
 extension HomeViewController: UIScrollViewDelegate {
-
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
         guard scrollView == self.scrollView else { return }
         let offsetRatio = scrollView.contentOffset.x / balancesUITableView.frame.origin.x
@@ -105,5 +98,4 @@ extension HomeViewController: UIScrollViewDelegate {
                               height: tabIndicator.frame.height)
         tabIndicator.frame = newFrame
     }
-
 }

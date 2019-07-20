@@ -1,7 +1,6 @@
 @testable import MyFinance_iOS
 
 class MockLaunchViewModel: LaunchViewModelType {
-
     var didCallViewDidAppear = false
     func viewDidAppear() {
         didCallViewDidAppear = true
@@ -11,5 +10,4 @@ class MockLaunchViewModel: LaunchViewModelType {
     func inject(delegate: ViewModelDelegate) {
         lastInjectValue = delegate
     }
-
 }

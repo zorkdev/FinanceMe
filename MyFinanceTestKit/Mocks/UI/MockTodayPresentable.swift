@@ -1,7 +1,6 @@
 import MyFinanceKit
 
 class MockTodayPresentable: TodayPresentable {
-
     typealias ServiceProvider = NetworkServiceProvider & DataServiceProvider & SessionServiceProvider
     var serviceProvider: ServiceProvider
 
@@ -18,5 +17,4 @@ class MockTodayPresentable: TodayPresentable {
     }
 
     func inject(delegate: ViewModelDelegate) {}
-
 }

@@ -1,5 +1,4 @@
-public struct Validators {
-
+public enum Validators {
     public static func validate(string: String) -> Bool {
         return string.components(separatedBy: .whitespaces).joined().isEmpty == false
     }
@@ -31,5 +30,4 @@ public struct Validators {
 
         return fullEmail.range(of: regex, options: .regularExpression) != nil
     }
-
 }

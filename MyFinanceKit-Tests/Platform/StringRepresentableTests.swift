@@ -1,7 +1,6 @@
 @testable import MyFinanceKit
 
 class StringRepresentableTests: XCTestCase {
-
     class TestModel: StringRepresentable {}
     class TestModelSubclass: TestModel {}
 
@@ -37,5 +36,4 @@ class StringRepresentableTests: XCTestCase {
         let testModel: TestModel? = TestModel()
         XCTAssertEqual(testModel.instanceName, "Optional<TestModel>")
     }
-
 }

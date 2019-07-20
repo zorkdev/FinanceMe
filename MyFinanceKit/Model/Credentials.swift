@@ -1,5 +1,4 @@
 public struct Credentials: JSONCodable, Equatable {
-
     public let email: String
     public let password: String
 
@@ -7,5 +6,4 @@ public struct Credentials: JSONCodable, Equatable {
         self.email = email
         self.password = password
     }
-
 }

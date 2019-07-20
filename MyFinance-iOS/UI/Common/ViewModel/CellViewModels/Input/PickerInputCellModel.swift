@@ -1,24 +1,19 @@
 protocol PickerInputCellModelViewModelDelegate: InputCellModelViewModelDelegate {
-
     func defaultValue(pickerCell: PickerInputCellModelForViewModelType) -> Describable
-
 }
 
 protocol PickerInputCellModelForViewModelType: InputCellModelForViewModelType {
-
     var viewModelDelegate: PickerInputCellModelViewModelDelegate? { get set }
     var currentValue: Describable { get }
 
     func update(value: Describable)
-
 }
 
 class PickerInputCellModel: NSObject {
-
     weak var viewDelegate: InputCellModelViewDelegate?
     weak var viewModelDelegate: PickerInputCellModelViewModelDelegate?
 
-    lazy var toolbar = KeyboardToolbar(doneAction: { self.didEndEditing() })
+    lazy var toolbar = KeyboardToolbar { self.didEndEditing() }
 
     let label: String
 
@@ -46,11 +41,9 @@ class PickerInputCellModel: NSObject {
         picker.delegate = self
         picker.dataSource = self
     }
-
 }
 
 extension PickerInputCellModel: InputCellModelForViewType {
-
     var returnKeyType: UIReturnKeyType { return viewModelDelegate?.returnKeyType(inputCell: self) ?? .done }
     var inputAccessoryView: UIView? { return toolbar.toolbar }
     var inputView: UIView? { return picker }
@@ -74,11 +67,9 @@ extension PickerInputCellModel: InputCellModelForViewType {
     func didEndEditing() {
         viewDelegate?.resignFirstResponder()
     }
-
 }
 
 extension PickerInputCellModel: PickerInputCellModelForViewModelType {
-
     var currentValue: Describable {
         return cachedValue ?? rows.first!
     }
@@ -93,21 +84,17 @@ extension PickerInputCellModel: PickerInputCellModelForViewModelType {
         cachedValue = value
         viewDelegate?.update(value: value.description)
     }
-
 }
 
 extension PickerInputCellModel: UIPickerViewDataSource {
-
     func numberOfComponents(in pickerView: UIPickerView) -> Int { return 1 }
 
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
         return rows.count
     }
-
 }
 
 extension PickerInputCellModel: UIPickerViewDelegate {
-
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
         return rows[row].description
     }
@@ -118,5 +105,4 @@ extension PickerInputCellModel: UIPickerViewDelegate {
         viewDelegate?.update(value: item.description)
         viewModelDelegate?.didChangeValue()
     }
-
 }

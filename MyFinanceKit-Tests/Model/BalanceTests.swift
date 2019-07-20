@@ -1,7 +1,6 @@
 @testable import MyFinanceKit
 
 class BalanceTests: XCTestCase {
-
     func testDecodeBalance() {
         let jsonData =
         """
@@ -24,5 +23,4 @@ class BalanceTests: XCTestCase {
 
         XCTAssertNotNil(balance.encoded())
     }
-
 }

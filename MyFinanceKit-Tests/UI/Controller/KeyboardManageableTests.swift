@@ -1,7 +1,6 @@
 @testable import MyFinanceKit
 
 class KeyboardManageableTests: XCTestCase {
-
     class TestViewController: BaseViewController, KeyboardManageable {}
 
     var testViewController: TestViewController?
@@ -21,5 +20,4 @@ class KeyboardManageableTests: XCTestCase {
         testViewController?.view.addSubview(textField)
         textField.becomeFirstResponder()
     }
-
 }

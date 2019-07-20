@@ -1,7 +1,7 @@
 import MyFinanceKit
 
+// swiftlint:disable force_cast
 class MockAppState: NetworkServiceProvider, DataServiceProvider, SessionServiceProvider {
-
     var dataService: DataService = MockDataService()
     var mockDataService: MockDataService { return dataService as! MockDataService }
 
@@ -10,5 +10,4 @@ class MockAppState: NetworkServiceProvider, DataServiceProvider, SessionServiceP
 
     var sessionService: SessionService = MockSessionService()
     var mockSessionService: MockSessionService { return sessionService as! MockSessionService }
-
 }

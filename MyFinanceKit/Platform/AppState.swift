@@ -1,32 +1,23 @@
 public protocol ServiceClient {
-
     associatedtype ServiceProvider
     var serviceProvider: ServiceProvider { get }
-
 }
 
 public protocol NetworkServiceProvider {
-
     var networkService: NetworkServiceType { get }
-
 }
 
 public protocol DataServiceProvider {
-
     var dataService: DataService { get }
-
 }
 
 public protocol SessionServiceProvider {
-
     var sessionService: SessionService { get }
-
 }
 
-public protocol AppStateType: class, NetworkServiceProvider & DataServiceProvider & SessionServiceProvider {}
+public protocol AppStateType: AnyObject, NetworkServiceProvider & DataServiceProvider & SessionServiceProvider {}
 
 open class AppState: AppStateType {
-
     public let networkService: NetworkServiceType
     public let dataService: DataService
     public let configService: ConfigService
@@ -50,5 +41,4 @@ open class AppState: AppStateType {
         self.configService = configService
         self.sessionService = sessionService
     }
-
 }

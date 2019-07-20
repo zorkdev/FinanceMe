@@ -1,7 +1,6 @@
 @testable import MyFinanceKit
 
 class URLSessionExtensionsTests: XCTestCase {
-
     func testPerformRequest() {
         let newExpectation = expectation(description: "Request performed")
 
@@ -14,5 +13,4 @@ class URLSessionExtensionsTests: XCTestCase {
 
         waitForExpectations(timeout: 10.0, handler: nil)
     }
-
 }

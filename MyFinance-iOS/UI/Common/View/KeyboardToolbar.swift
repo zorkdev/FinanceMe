@@ -1,6 +1,5 @@
 class KeyboardToolbar {
-
-    private struct Constants {
+    private enum Constants {
         static let doneButtonTitle = "Done"
     }
 
@@ -31,8 +30,8 @@ class KeyboardToolbar {
         toolbar.sizeToFit()
     }
 
-    @objc func doneTapped() {
+    @objc
+    func doneTapped() {
         doneAction()
     }
-
 }

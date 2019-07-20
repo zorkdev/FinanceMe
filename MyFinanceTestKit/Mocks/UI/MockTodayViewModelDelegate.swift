@@ -1,7 +1,6 @@
 import MyFinanceKit
 
 class MockTodayViewModelDelegate: TodayViewModelDelegate {
-
     var lastBalance: NSAttributedString?
     var lastAllowance: NSAttributedString?
     var lastAllowanceIcon: String?
@@ -17,5 +16,4 @@ class MockTodayViewModelDelegate: TodayViewModelDelegate {
     func set(allowanceIcon: String) {
         lastAllowanceIcon = allowanceIcon
     }
-
 }

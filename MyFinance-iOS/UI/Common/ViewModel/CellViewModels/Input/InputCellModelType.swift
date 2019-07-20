@@ -1,7 +1,6 @@
 // MARK: - View
 
 struct InputCellDisplayModel {
-
     let placeholderAttributes: [NSAttributedString.Key: Any] = [
         .foregroundColor: ColorPalette.lightText.withAlphaComponent(0.5),
         .font: UIFont.systemFont(ofSize: 18)
@@ -12,21 +11,17 @@ struct InputCellDisplayModel {
     let labelColor = ColorPalette.lightText
     let tintColor = ColorPalette.secondary
     let font = UIFont.systemFont(ofSize: 18)
-
 }
 
-protocol InputCellModelViewDelegate: class {
-
+protocol InputCellModelViewDelegate: AnyObject {
     var currentValue: String { get }
 
     func update(value: String)
     func becomeFirstResponder()
     func resignFirstResponder()
-
 }
 
-protocol InputCellModelForViewType: class {
-
+protocol InputCellModelForViewType: AnyObject {
     var viewDelegate: InputCellModelViewDelegate? { get set }
 
     var displayModel: InputCellDisplayModel { get }
@@ -49,11 +44,9 @@ protocol InputCellModelForViewType: class {
     func willChange(value: String, original: String) -> String
     func didChange(value: String)
     func didEndEditing()
-
 }
 
 extension InputCellModelForViewType {
-
     var displayModel: InputCellDisplayModel { return InputCellDisplayModel() }
 
     var keyboardType: UIKeyboardType { return .default }
@@ -71,29 +64,23 @@ extension InputCellModelForViewType {
     func willBeginEditing() {}
     func willChange(value: String, original: String) -> String { return value }
     func didChange(value: String) {}
-
 }
 
 // MARK: - ViewModel
 
-protocol InputCellModelViewModelDelegate: class {
-
+protocol InputCellModelViewModelDelegate: AnyObject {
     func isEnabled(inputCell: InputCellModelForViewModelType) -> Bool
     func returnKeyType(inputCell: InputCellModelForViewModelType) -> UIReturnKeyType
     func didChangeValue()
-
 }
 
 protocol InputCellModelForViewModelType: CellModelType {
-
     var isValid: Bool { get }
 
     func becomeFirstResponder()
-
 }
 
 extension InputCellModelForViewModelType {
-
     static var reuseIdentifier: String {
         return InputTableViewCell.reuseIdentifier
     }
@@ -101,5 +88,4 @@ extension InputCellModelForViewModelType {
     var id: Int {
         return ObjectIdentifier(self).hashValue
     }
-
 }

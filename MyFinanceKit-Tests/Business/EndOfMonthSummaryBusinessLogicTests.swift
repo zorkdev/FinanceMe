@@ -1,7 +1,6 @@
 @testable import MyFinanceKit
 
 class EndOfMonthSummaryBusinessLogicTests: ServiceClientTestCase {
-
     func testGetEndOfMonthSummaryList() {
         let newExpectation = expectation(description: "EndOfMonthSummaryList fetched")
 
@@ -20,7 +19,6 @@ class EndOfMonthSummaryBusinessLogicTests: ServiceClientTestCase {
         let endOfMonthSummaryBusinessLogic = EndOfMonthSummaryBusinessLogic(serviceProvider: mockAppState)
 
         _ = endOfMonthSummaryBusinessLogic.getEndOfMonthSummaryList().done { endOfMonthSummaryList in
-
             XCTAssertEqual(self.mockAppState.mockNetworkService.lastRequest?.api as? API,
                            .zorkdev(.endOfMonthSummaries))
             XCTAssertEqual(self.mockAppState.mockNetworkService.lastRequest?.method, .get)
@@ -33,5 +31,4 @@ class EndOfMonthSummaryBusinessLogicTests: ServiceClientTestCase {
 
         waitForExpectations(timeout: 10.0, handler: nil)
     }
-
 }

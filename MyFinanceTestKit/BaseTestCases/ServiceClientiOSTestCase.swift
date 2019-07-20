@@ -1,5 +1,4 @@
 class ServiceClientiOSTestCase: XCTestCase {
-
     var mockAppState: MockAppStateiOS!
 
     override func setUp() {
@@ -7,5 +6,4 @@ class ServiceClientiOSTestCase: XCTestCase {
 
         mockAppState = MockAppStateiOS()
     }
-
 }

@@ -1,7 +1,6 @@
 @testable import MyFinanceKit
 
 class JSONCodableTests: XCTestCase {
-
     func testDecode_Success() {
         struct SampleJSON: JSONCodable {
             var string: String
@@ -147,5 +146,4 @@ class JSONCodableTests: XCTestCase {
 
         XCTAssertNil(urlFormEncoded)
     }
-
 }

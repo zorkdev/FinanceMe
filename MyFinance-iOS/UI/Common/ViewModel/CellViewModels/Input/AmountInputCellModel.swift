@@ -1,24 +1,19 @@
 protocol AmountInputCellModelViewModelDelegate: InputCellModelViewModelDelegate {
-
     func defaultValue(amountCell: AmountInputCellModelForViewModelType) -> Double?
-
 }
 
 protocol AmountInputCellModelForViewModelType: InputCellModelForViewModelType {
-
     var viewModelDelegate: AmountInputCellModelViewModelDelegate? { get set }
     var currentValue: Double? { get }
 
     func update(value: Double?)
-
 }
 
 class AmountInputCellModel {
-
     weak var viewDelegate: InputCellModelViewDelegate?
     weak var viewModelDelegate: AmountInputCellModelViewModelDelegate?
 
-    lazy var toolbar = KeyboardToolbar(doneAction: { self.didEndEditing() })
+    lazy var toolbar = KeyboardToolbar { self.didEndEditing() }
 
     let label: String
 
@@ -32,11 +27,9 @@ class AmountInputCellModel {
     private func validate(value: String) -> Bool {
         return Validators.validate(amount: value)
     }
-
 }
 
 extension AmountInputCellModel: InputCellModelForViewType {
-
     var keyboardType: UIKeyboardType { return .decimalPad }
     var returnKeyType: UIReturnKeyType { return viewModelDelegate?.returnKeyType(inputCell: self) ?? .done }
 
@@ -76,11 +69,9 @@ extension AmountInputCellModel: InputCellModelForViewType {
     func didEndEditing() {
         viewDelegate?.resignFirstResponder()
     }
-
 }
 
 extension AmountInputCellModel: AmountInputCellModelForViewModelType {
-
     var currentValue: Double? {
         let valueString = viewDelegate?.currentValue ?? ""
         return Formatters.createAmount(from: valueString)
@@ -104,5 +95,4 @@ extension AmountInputCellModel: AmountInputCellModelForViewModelType {
         cachedValue = valueString
         viewDelegate?.update(value: valueString)
     }
-
 }

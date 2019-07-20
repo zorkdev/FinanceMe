@@ -1,24 +1,17 @@
-protocol AddTransactionViewModelDataDelegate: class {
-
+protocol AddTransactionViewModelDataDelegate: AnyObject {
     func didCreate(transaction: Transaction)
     func didUpdate(transaction: Transaction)
-
 }
 
 protocol AddTransactionViewModelDelegate: TableViewModelDelegate, MessagePresentable {
-
     func updateSaveButton(enabled: Bool)
-
 }
 
 protocol AddTransactionViewModelType: ViewModelType, Dismissable {
-
     func saveButtonTapped()
-
 }
 
 class AddTransactionViewModel: ServiceClient, TableViewModelType {
-
     enum State {
         case add, edit
     }
@@ -78,13 +71,11 @@ class AddTransactionViewModel: ServiceClient, TableViewModelType {
         delegate?.updateSaveButton(enabled: isValid)
         becomeFirstResponder()
     }
-
 }
 
 // MARK: Interface
 
 extension AddTransactionViewModel: AddTransactionViewModelType {
-
     func viewDidLoad() {
         guard let tableView = delegate?.tableView else { return }
         setup(tableView: tableView, cells: [InputTableViewCell.self])
@@ -122,13 +113,10 @@ extension AddTransactionViewModel: AddTransactionViewModelType {
 
             update(transaction: transaction)
         }
-
     }
-
 }
 
 extension AddTransactionViewModel: InputCellModelViewModelDelegate {
-
     func isEnabled(inputCell: InputCellModelForViewModelType) -> Bool { return true }
 
     func returnKeyType(inputCell: InputCellModelForViewModelType) -> UIReturnKeyType { return .done }
@@ -136,14 +124,12 @@ extension AddTransactionViewModel: InputCellModelViewModelDelegate {
     func didChangeValue() {
         delegate?.updateSaveButton(enabled: isValid)
     }
-
 }
 
 extension AddTransactionViewModel: AmountInputCellModelViewModelDelegate {}
 extension AddTransactionViewModel: TextInputCellModelViewModelDelegate {}
 extension AddTransactionViewModel: CategoryInputCellModelViewModelDelegate {}
 extension AddTransactionViewModel: DateInputCellModelViewModelDelegate {
-
     func defaultValue(amountCell: AmountInputCellModelForViewModelType) -> Double? {
         return transaction?.amount
     }
@@ -159,13 +145,11 @@ extension AddTransactionViewModel: DateInputCellModelViewModelDelegate {
     func defaultValue(dateCell: DateInputCellModelForViewModelType) -> Date {
         return transaction?.created ?? Date()
     }
-
 }
 
 // MARK: - Private methods
 
 extension AddTransactionViewModel {
-
     private func save(transaction: Transaction) {
         delegate?.showSpinner()
         externalTransactionsBusinessLogic.create(transaction: transaction)
@@ -177,7 +161,7 @@ extension AddTransactionViewModel {
                 self.delegate?.showError(message: error.localizedDescription)
             }.finally {
                 self.delegate?.hideSpinner()
-        }
+            }
     }
 
     private func update(transaction: Transaction) {
@@ -191,7 +175,6 @@ extension AddTransactionViewModel {
                 self.delegate?.showError(message: error.localizedDescription)
             }.finally {
                 self.delegate?.hideSpinner()
-        }
+            }
     }
-
 }

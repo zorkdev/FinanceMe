@@ -1,7 +1,6 @@
 @testable import MyFinance_iOS
 
 class MockSettingsViewModel: SettingsViewModelType {
-
     var didCallViewDidLoad = false
     var didCallEditButtonTapped = false
     var didCallSaveButtonTapped = false
@@ -44,5 +43,4 @@ class MockSettingsViewModel: SettingsViewModelType {
     func inject(delegate: ViewModelDelegate) {
         lastInjectValue = delegate
     }
-
 }

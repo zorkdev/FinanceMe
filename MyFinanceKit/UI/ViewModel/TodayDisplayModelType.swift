@@ -1,5 +1,4 @@
 public protocol TodayDisplayModelType {
-
     static var defaultAmount: String { get }
     static var positiveColor: Color { get }
     static var negativeColor: Color { get }
@@ -8,11 +7,9 @@ public protocol TodayDisplayModelType {
     static var formatter: NumberFormatter { get }
 
     static func attributedString(from amount: Double) -> NSAttributedString
-
 }
 
 public extension TodayDisplayModelType {
-
     static var defaultAmount: String { return "\(Formatters.currencySymbol)0.00" }
 
     static var formatter: NumberFormatter { return Formatters.currency }
@@ -38,5 +35,4 @@ public extension TodayDisplayModelType {
 
         return attributedString
     }
-
 }

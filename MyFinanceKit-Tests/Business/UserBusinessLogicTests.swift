@@ -1,7 +1,6 @@
 @testable import MyFinanceKit
 
 class UserBusinessLogicTests: ServiceClientTestCase {
-
     func testGetSession() {
         let newExpectation = expectation(description: "Session fetched")
 
@@ -13,7 +12,6 @@ class UserBusinessLogicTests: ServiceClientTestCase {
         let userBusinessLogic = UserBusinessLogic(serviceProvider: mockAppState)
 
         _ = userBusinessLogic.getSession(credentials: credentials).done { session in
-
             XCTAssertEqual(self.mockAppState.mockNetworkService.lastRequest?.api as? API, .zorkdev(.login))
             XCTAssertEqual(self.mockAppState.mockNetworkService.lastRequest?.method, .post)
             XCTAssertNil(self.mockAppState.mockNetworkService.lastRequest?.parameters)
@@ -37,14 +35,13 @@ class UserBusinessLogicTests: ServiceClientTestCase {
         let userBusinessLogic = UserBusinessLogic(serviceProvider: mockAppState)
 
         _ = userBusinessLogic.getCurrentUser().done { user in
-
             XCTAssertEqual(self.mockAppState.mockNetworkService.lastRequest?.api as? API, .zorkdev(.user))
             XCTAssertEqual(self.mockAppState.mockNetworkService.lastRequest?.method, .get)
             XCTAssertNil(self.mockAppState.mockNetworkService.lastRequest?.parameters)
             XCTAssertNil(self.mockAppState.mockNetworkService.lastRequest?.body)
             XCTAssertEqual(user, expectedUser)
             XCTAssertTrue(self.mockAppState.mockDataService.savedValues
-                .contains(where: { ($0 as? User) == expectedUser }) == true)
+                .contains { ($0 as? User) == expectedUser } == true)
 
             newExpectation.fulfill()
         }
@@ -62,19 +59,17 @@ class UserBusinessLogicTests: ServiceClientTestCase {
         let userBusinessLogic = UserBusinessLogic(serviceProvider: mockAppState)
 
         _ = userBusinessLogic.update(user: expectedUser).done { user in
-
             XCTAssertEqual(self.mockAppState.mockNetworkService.lastRequest?.api as? API, .zorkdev(.user))
             XCTAssertEqual(self.mockAppState.mockNetworkService.lastRequest?.method, .patch)
             XCTAssertNil(self.mockAppState.mockNetworkService.lastRequest?.parameters)
             XCTAssertEqual(self.mockAppState.mockNetworkService.lastRequest?.body as? User, expectedUser)
             XCTAssertEqual(user, expectedUser)
             XCTAssertTrue(self.mockAppState.mockDataService.savedValues
-                .contains(where: { ($0 as? User) == expectedUser }) == true)
+                .contains { ($0 as? User) == expectedUser } == true)
 
             newExpectation.fulfill()
         }
 
         waitForExpectations(timeout: 10.0, handler: nil)
     }
-
 }

@@ -2,27 +2,19 @@ import WatchConnectivity
 import LocalAuthentication
 
 protocol NavigatorProvider {
-
     var navigator: NavigatorType { get }
-
 }
 
 protocol PushNotificationServiceProvider {
-
     var pushNotificationService: PushNotificationService { get }
-
 }
 
 protocol WatchServiceProvider {
-
     var watchService: WatchServiceType { get }
-
 }
 
 protocol LAContextProvider {
-
     var laContext: LAContextType { get }
-
 }
 
 protocol AppStateiOSType: AppStateType
@@ -32,7 +24,6 @@ protocol AppStateiOSType: AppStateType
 & PushNotificationServiceProvider {}
 
 class AppStateiOS: AppState, AppStateiOSType {
-
     var navigator: NavigatorType
     let pushNotificationService: PushNotificationService
     let watchService: WatchServiceType
@@ -61,5 +52,4 @@ class AppStateiOS: AppState, AppStateiOSType {
 
         self.navigator.appState = self
     }
-
 }

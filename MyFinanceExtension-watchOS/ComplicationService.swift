@@ -2,26 +2,21 @@ import WatchConnectivity
 import MyFinanceKit
 
 protocol WCSessionType {
-
     static func isSupported() -> Bool
 
     var delegate: WCSessionDelegate? { get set }
 
     func activate()
-
 }
 
 extension WCSession: WCSessionType {}
 
 protocol ComplicationServiceType {
-
     init(wcSession: WCSessionType, dataService: DataService)
     func updateComplication(allowance: Double)
-
 }
 
 class ComplicationService: NSObject, ComplicationServiceType {
-
     private let dataService: DataService
     private var session: WCSessionType?
 
@@ -45,11 +40,9 @@ class ComplicationService: NSObject, ComplicationServiceType {
             CLKComplicationServer.sharedInstance().reloadTimeline(for: complication)
         }
     }
-
 }
 
 extension ComplicationService: WCSessionDelegate {
-
     func session(_ session: WCSession,
                  activationDidCompleteWith activationState: WCSessionActivationState,
                  error: Error?) {}
@@ -58,5 +51,4 @@ extension ComplicationService: WCSessionDelegate {
         guard let allowance = userInfo[Allowance.instanceName] as? Double else { return }
         updateComplication(allowance: allowance)
     }
-
 }

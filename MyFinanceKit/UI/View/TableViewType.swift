@@ -1,5 +1,4 @@
-public protocol TableViewType: class {
-
+public protocol TableViewType: AnyObject {
     var delegate: UITableViewDelegate? { get set }
     var dataSource: UITableViewDataSource? { get set }
     var rowHeight: CGFloat { get set }
@@ -19,7 +18,6 @@ public protocol TableViewType: class {
     func reloadRows(at indexPaths: [IndexPath], with animation: UITableView.RowAnimation)
     func insertRows(at indexPaths: [IndexPath], with animation: UITableView.RowAnimation)
     func deleteRows(at indexPaths: [IndexPath], with animation: UITableView.RowAnimation)
-
 }
 
 extension UITableView: TableViewType {}

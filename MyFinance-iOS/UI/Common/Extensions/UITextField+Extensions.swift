@@ -1,5 +1,4 @@
 extension UITextField {
-
     @IBInspectable var showLeftLabel: Bool {
         get {
             return leftView is UILabel
@@ -46,5 +45,4 @@ extension UITextField {
         leftViewMode = .always
         label.sizeToFit()
     }
-
 }

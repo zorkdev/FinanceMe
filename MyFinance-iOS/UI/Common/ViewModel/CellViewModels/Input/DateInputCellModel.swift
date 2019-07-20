@@ -1,20 +1,15 @@
 protocol DateInputCellModelViewModelDelegate: InputCellModelViewModelDelegate {
-
     func defaultValue(dateCell: DateInputCellModelForViewModelType) -> Date
-
 }
 
 protocol DateInputCellModelForViewModelType: InputCellModelForViewModelType {
-
     var viewModelDelegate: DateInputCellModelViewModelDelegate? { get set }
     var currentValue: Date { get }
 
     func update(value: Date)
-
 }
 
 class DateInputCellModel {
-
     enum Mode {
         case date, dateAndTime
     }
@@ -22,7 +17,7 @@ class DateInputCellModel {
     weak var viewDelegate: InputCellModelViewDelegate?
     weak var viewModelDelegate: DateInputCellModelViewModelDelegate?
 
-    lazy var toolbar = KeyboardToolbar(doneAction: { self.didEndEditing() })
+    lazy var toolbar = KeyboardToolbar { self.didEndEditing() }
 
     let label: String
 
@@ -52,16 +47,15 @@ class DateInputCellModel {
                          for: .valueChanged)
     }
 
-    @objc func pickerDidChange() {
+    @objc
+    func pickerDidChange() {
         cachedValue = picker.date
         viewDelegate?.update(value: formatter.string(from: picker.date))
         viewModelDelegate?.didChangeValue()
     }
-
 }
 
 extension DateInputCellModel: InputCellModelForViewType {
-
     var returnKeyType: UIReturnKeyType { return viewModelDelegate?.returnKeyType(inputCell: self) ?? .done }
     var inputAccessoryView: UIView? { return toolbar.toolbar }
     var inputView: UIView? { return picker }
@@ -90,11 +84,9 @@ extension DateInputCellModel: InputCellModelForViewType {
     func didEndEditing() {
         viewDelegate?.resignFirstResponder()
     }
-
 }
 
 extension DateInputCellModel: DateInputCellModelForViewModelType {
-
     var currentValue: Date {
         return cachedValue ?? Date()
     }
@@ -109,5 +101,4 @@ extension DateInputCellModel: DateInputCellModelForViewModelType {
         cachedValue = value
         viewDelegate?.update(value: formatter.string(from: value))
     }
-
 }

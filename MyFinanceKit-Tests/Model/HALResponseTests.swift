@@ -1,7 +1,6 @@
 @testable import MyFinanceKit
 
 class HALResponseTests: XCTestCase {
-
     func testDecodeHALResponse() {
         let jsonData =
         """
@@ -32,5 +31,4 @@ class HALResponseTests: XCTestCase {
 
         XCTAssertNotNil(halResponse.encoded())
     }
-
 }

@@ -1,7 +1,6 @@
 @testable import MyFinance_iOS
 
 class MockHomeViewModel: HomeViewModelType {
-
     weak var lastInjectValue: ViewModelDelegate?
 
     func settingsButtonTapped() {}
@@ -15,5 +14,4 @@ class MockHomeViewModel: HomeViewModelType {
     func didUpdate(transaction: Transaction) {}
     func didUpdate(user: User) {}
     func didReconcile() {}
-
 }

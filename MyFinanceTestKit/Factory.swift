@@ -1,7 +1,6 @@
 @testable import MyFinanceKit
 
-struct Factory {
-
+enum Factory {
     static func makeSession() -> Session {
         return Session(starlingToken: "starlingToken",
                        zorkdevToken: "zorkdevToken")
@@ -27,5 +26,4 @@ struct Factory {
                            narrative: "Test",
                            source: .fasterPaymentsIn)
     }
-
 }

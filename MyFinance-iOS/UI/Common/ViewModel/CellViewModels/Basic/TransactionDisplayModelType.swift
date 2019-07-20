@@ -1,20 +1,15 @@
 protocol TransactionPresentable: Identifiable {
-
     var narrative: String { get }
     var amount: String { get }
     var amountColor: Color { get }
     var canEdit: Bool { get }
-
 }
 
 protocol TransactionDisplayModelType {
-
     var amountDisplayModel: AmountDisplayModelType { get }
-
 }
 
 struct NormalTransactionDisplayModel: TransactionPresentable, TransactionDisplayModelType {
-
     let narrative: String
     let amount: String
     let amountColor: Color
@@ -28,11 +23,9 @@ struct NormalTransactionDisplayModel: TransactionPresentable, TransactionDisplay
         amountColor = amountDisplayModel.color(forAmount: transaction.amount)
         id = transaction.hashValue
     }
-
 }
 
 struct MonthlyAllowanceDisplayModel: TransactionPresentable, TransactionDisplayModelType {
-
     let narrative = "Monthly Allowance"
     let amount: String
     let amountColor: Color
@@ -45,11 +38,9 @@ struct MonthlyAllowanceDisplayModel: TransactionPresentable, TransactionDisplayM
         amountColor = amountDisplayModel.color(forAmount: amount)
         id = amount.hashValue
     }
-
 }
 
 struct EndOfMonthSummaryDisplayModel: TransactionPresentable, TransactionDisplayModelType, Identifiable {
-
     let narrative: String
     let amount: String
     let amountColor: Color
@@ -63,5 +54,4 @@ struct EndOfMonthSummaryDisplayModel: TransactionPresentable, TransactionDisplay
         amountColor = amountDisplayModel.color(forAmount: amount)
         id = date.hashValue
     }
-
 }

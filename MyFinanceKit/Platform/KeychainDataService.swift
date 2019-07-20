@@ -1,5 +1,4 @@
 public class KeychainDataService: DataService {
-
     private let service: String
     private let accessGroup: String
 
@@ -8,7 +7,8 @@ public class KeychainDataService: DataService {
         self.accessGroup = configService.accessGroup
     }
 
-    @discardableResult public func save(value: JSONEncodable, key: String) -> DataServiceStatus {
+    @discardableResult
+    public func save(value: JSONEncodable, key: String) -> DataServiceStatus {
         guard let data = value.encoded() else { return .failure }
 
         var query = createQuery(key: key)
@@ -39,7 +39,8 @@ public class KeychainDataService: DataService {
         return value
     }
 
-    @discardableResult public func delete(key: String) -> DataServiceStatus {
+    @discardableResult
+    public func delete(key: String) -> DataServiceStatus {
         let query = createQuery(key: key) as CFDictionary
         let status = SecItemDelete(query)
 
@@ -59,13 +60,11 @@ public class KeychainDataService: DataService {
             _ = SecItemDelete(query)
         }
     }
-
 }
 
 // MARK: - Private methods
 
 extension KeychainDataService {
-
     private func update(value: Data, key: String) -> DataServiceStatus {
         let query = createQuery(key: key) as CFDictionary
         let updateDictionary = [kSecValueData: value] as CFDictionary
@@ -85,5 +84,4 @@ extension KeychainDataService {
 
         return query
     }
-
 }

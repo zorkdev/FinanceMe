@@ -1,20 +1,15 @@
 protocol RegularsTableViewModelDelegate: ViewModelDelegate {
-
     func tableView(forModel: RegularsTableViewModel) -> TableViewType?
     func didTapRefresh()
     func didSelect(transaction: Transaction)
     func didDelete(transaction: Transaction)
-
 }
 
 protocol RegularsTableViewModelType: ViewModelType {
-
     func update(transactions: [Transaction])
-
 }
 
 class RegularsTableViewModel {
-
     private enum RegularsSection: Int {
         case monthlyAllowance, inbound, outbound
 
@@ -45,11 +40,9 @@ class RegularsTableViewModel {
     var tableViewController: TableViewControllerType?
 
     weak var delegate: RegularsTableViewModelDelegate?
-
 }
 
 extension RegularsTableViewModel: RegularsTableViewModelType {
-
     func viewDidLoad() {
         setupTableView()
     }
@@ -89,11 +82,9 @@ extension RegularsTableViewModel: RegularsTableViewModelType {
 
         self.transactions = transactionsTemp
     }
-
 }
 
 extension RegularsTableViewModel: TableViewModelType {
-
     func didSelect(indexPath: IndexPath) {
         guard let transaction = transaction(at: indexPath) else { return }
         delegate?.didSelect(transaction: transaction)
@@ -103,11 +94,9 @@ extension RegularsTableViewModel: TableViewModelType {
         guard let transaction = transaction(at: indexPath) else { return }
         delegate?.didDelete(transaction: transaction)
     }
-
 }
 
 extension RegularsTableViewModel {
-
     private func setupTableView() {
         guard let tableView = delegate?.tableView(forModel: self) else { return }
 
@@ -122,18 +111,18 @@ extension RegularsTableViewModel {
 
         sectionsTemp.append(createMonthlyAllowanceSection())
 
-        let inboundCellModels: [CellModelWrapper] = transactions[.inbound]?.map({
+        let inboundCellModels: [CellModelWrapper] = transactions[.inbound]?.map {
             let displayModel = NormalTransactionDisplayModel(transaction: $0)
             return TransactionCellModel(transaction: displayModel).wrap
-        }) ?? []
+        } ?? []
         let inboundSection = TableViewSection(cellModels: inboundCellModels,
                                               title: RegularsSection.inbound.title)
         sectionsTemp.append(inboundSection)
 
-        let outboundCellModels: [CellModelWrapper] = transactions[.outbound]?.map({
+        let outboundCellModels: [CellModelWrapper] = transactions[.outbound]?.map {
             let displayModel = NormalTransactionDisplayModel(transaction: $0)
             return TransactionCellModel(transaction: displayModel).wrap
-        }) ?? []
+        } ?? []
         let outboundSection = TableViewSection(cellModels: outboundCellModels,
                                                title: RegularsSection.outbound.title)
         sectionsTemp.append(outboundSection)
@@ -143,8 +132,8 @@ extension RegularsTableViewModel {
 
     private func createMonthlyAllowanceSection() -> TableViewSection {
         let monthlyAllowance = transactions
-            .flatMap({ $0.value })
-            .compactMap({ $0.amount })
+            .flatMap { $0.value }
+            .compactMap { $0.amount }
             .reduce(0, +)
 
         let cellModel = TransactionCellModel(transaction: MonthlyAllowanceDisplayModel(amount: monthlyAllowance)).wrap
@@ -173,8 +162,8 @@ extension RegularsTableViewModel {
         }
     }
 
-    @objc private func didTapRefresh() {
+    @objc
+    private func didTapRefresh() {
         delegate?.didTapRefresh()
     }
-
 }

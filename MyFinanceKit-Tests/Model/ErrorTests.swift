@@ -2,7 +2,6 @@ import PromiseKit
 @testable import MyFinanceKit
 
 class ErrorTests: XCTestCase {
-
     private func createPMKHTTPError(with statusCode: Int) -> PMKHTTPError {
         let url = URL(string: "http://www.test.com")!
         let httpURLResponse = HTTPURLResponse(url: url,
@@ -68,5 +67,4 @@ class ErrorTests: XCTestCase {
         XCTAssertNotNil(apiError)
         XCTAssertEqual(apiError, APIError.serverError)
     }
-
 }

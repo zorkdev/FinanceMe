@@ -1,5 +1,4 @@
 class AppDelegate: UIResponder, UIApplicationDelegate {
-
     var appState: AppStateiOSType!
     var authViewModel: AuthViewModelType!
 
@@ -28,5 +27,4 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func applicationDidEnterBackground(_ application: UIApplication) {
         authViewModel.addOcclusion()
     }
-
 }

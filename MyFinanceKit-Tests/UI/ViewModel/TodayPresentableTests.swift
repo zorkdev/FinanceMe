@@ -1,7 +1,6 @@
 @testable import MyFinanceKit
 
 class TodayPresentableTests: ServiceClientTestCase {
-
     var mockTodayPresentable: MockTodayPresentable!
     var mockTodayDisplayModel: MockTodayDisplayModel!
 
@@ -55,9 +54,9 @@ class TodayPresentableTests: ServiceClientTestCase {
             XCTAssertEqual(self.mockTodayViewModelDelegate.lastAllowance?.string, "£100.22")
             XCTAssertEqual(self.mockTodayViewModelDelegate.lastAllowanceIcon, "😇")
             XCTAssertTrue(self.mockAppState.mockDataService.savedValues
-                .contains(where: { ($0 as? User) == expectedUser }) == true)
+                .contains { ($0 as? User) == expectedUser } == true)
             XCTAssertTrue(self.mockAppState.mockDataService.savedValues
-                .contains(where: { ($0 as? Balance) == expectedBalance }) == true)
+                .contains { ($0 as? Balance) == expectedBalance } == true)
         }
     }
 
@@ -71,7 +70,7 @@ class TodayPresentableTests: ServiceClientTestCase {
             XCTAssertEqual(self.mockTodayViewModelDelegate.lastAllowance?.string, "£100.22")
             XCTAssertEqual(self.mockTodayViewModelDelegate.lastAllowanceIcon, "😇")
             XCTAssertTrue(self.mockAppState.mockDataService.savedValues
-                .contains(where: { ($0 as? User) == expectedUser }) == true)
+                .contains { ($0 as? User) == expectedUser } == true)
         }
     }
 
@@ -84,8 +83,7 @@ class TodayPresentableTests: ServiceClientTestCase {
         _ = mockTodayPresentable!.getBalance().done {
         XCTAssertEqual(self.mockTodayViewModelDelegate.lastBalance?.string, "£20.00")
         XCTAssertTrue(self.mockAppState.mockDataService.savedValues
-            .contains(where: { ($0 as? Balance) == expectedBalance }) == true)
+            .contains { ($0 as? Balance) == expectedBalance } == true)
         }
     }
-
 }

@@ -5,7 +5,6 @@ private let calendar: Calendar = {
 }()
 
 public extension Date {
-
     static let daysInWeek = 7
 
     var isToday: Bool {
@@ -81,5 +80,4 @@ public extension Date {
     func numberOfDays(from: Date) -> Int {
         return calendar.dateComponents([.day], from: from.startOfDay, to: self.startOfDay).day!
     }
-
 }

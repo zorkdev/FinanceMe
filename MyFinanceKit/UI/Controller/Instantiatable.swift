@@ -1,23 +1,18 @@
-extension ViewController {
-
-    public static let storyboardId = "Main"
-
+public extension ViewController {
+    static let storyboardId = "Main"
 }
 
 public protocol Instantiatable {
-
     static var storyboardId: String { get }
     static var bundle: Bundle { get }
-
 }
 
-extension Instantiatable where Self: ViewController {
-
-    public static var bundle: Bundle {
+public extension Instantiatable where Self: ViewController {
+    static var bundle: Bundle {
         return Bundle(for: Self.self)
     }
 
-    public static func instantiate() -> Self {
+    static func instantiate() -> Self {
         #if os(iOS) || os(tvOS)
         let viewController = (UIStoryboard(name: storyboardId, bundle: bundle)
             .instantiateViewController(withIdentifier: Self.instanceName) as? Self)!
@@ -32,7 +27,6 @@ extension Instantiatable where Self: ViewController {
 
         return viewController
     }
-
 }
 
 extension ViewController: Instantiatable {}

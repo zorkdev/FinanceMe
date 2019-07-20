@@ -1,7 +1,6 @@
 @testable import MyFinance_iOS
 
 class AppDelegateTests: XCTestCase {
-
     func testLifecycle() {
         let newExpectation = expectation(description: "Expectation")
 
@@ -32,5 +31,4 @@ class AppDelegateTests: XCTestCase {
 
         waitForExpectations(timeout: 1.0, handler: nil)
     }
-
 }

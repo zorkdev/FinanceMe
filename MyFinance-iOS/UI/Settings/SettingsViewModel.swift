@@ -1,18 +1,13 @@
-protocol SettingsViewModelDataDelegate: class {
-
+protocol SettingsViewModelDataDelegate: AnyObject {
     func didUpdate(user: User)
     func didReconcile()
-
 }
 
 protocol SettingsViewModelDelegate: TableViewModelDelegate, MessagePresentable {
-
     func updateButtons(enabled: Bool, editing: Bool)
-
 }
 
 protocol SettingsViewModelType: ViewModelType, Dismissable {
-
     var saveButtonTitle: String { get }
     var editButtonTitle: String { get }
     var reconcileButtonTitle: String { get }
@@ -20,11 +15,9 @@ protocol SettingsViewModelType: ViewModelType, Dismissable {
     func saveButtonTapped()
     func editButtonTapped()
     func reconcileButtonTapped()
-
 }
 
 class SettingsViewModel: ServiceClient, TableViewModelType {
-
     typealias ServiceProvider = NavigatorProvider
         & NetworkServiceProvider
         & DataServiceProvider
@@ -80,13 +73,11 @@ class SettingsViewModel: ServiceClient, TableViewModelType {
     func didFinishLoadingTableView() {
         updateButtons()
     }
-
 }
 
 // MARK: Interface
 
 extension SettingsViewModel: SettingsViewModelType {
-
     var saveButtonTitle: String {
         return isEditing ? SettingsDisplayModel.saveButtonTitle : SettingsDisplayModel.logOutButtonTitle
     }
@@ -110,7 +101,7 @@ extension SettingsViewModel: SettingsViewModelType {
     }
 
     func editButtonTapped() {
-        isEditing = !isEditing
+        isEditing.toggle()
         if isEditing == false { setupDefaults() }
         tableViewController?.updateCells()
         updateButtons()
@@ -129,7 +120,6 @@ extension SettingsViewModel: SettingsViewModelType {
                             startDate: startDate,
                             largeTransaction: largeTransaction)
             save(user: user)
-
         } else {
             logOut()
         }
@@ -138,11 +128,9 @@ extension SettingsViewModel: SettingsViewModelType {
     func reconcileButtonTapped() {
         reconcile()
     }
-
 }
 
 extension SettingsViewModel: InputCellModelViewModelDelegate {
-
     func isEnabled(inputCell: InputCellModelForViewModelType) -> Bool {
         return isEditing
     }
@@ -152,14 +140,12 @@ extension SettingsViewModel: InputCellModelViewModelDelegate {
     func didChangeValue() {
         updateButtons()
     }
-
 }
 
 extension SettingsViewModel: AmountInputCellModelViewModelDelegate {}
 extension SettingsViewModel: TextInputCellModelViewModelDelegate {}
 extension SettingsViewModel: PaydayInputCellModelViewModelDelegate {}
 extension SettingsViewModel: DateInputCellModelViewModelDelegate {
-
     func defaultValue(amountCell: AmountInputCellModelForViewModelType) -> Double? {
         return User.load(dataService: serviceProvider.dataService)?.largeTransaction ?? 0
     }
@@ -178,13 +164,11 @@ extension SettingsViewModel: DateInputCellModelViewModelDelegate {
     func defaultValue(dateCell: DateInputCellModelForViewModelType) -> Date {
         return User.load(dataService: serviceProvider.dataService)?.startDate ?? Date()
     }
-
 }
 
 // MARK: - Private methods
 
 extension SettingsViewModel {
-
     private func setupDefaults() {
         guard let user = User.load(dataService: serviceProvider.dataService) else { return }
 
@@ -215,7 +199,7 @@ extension SettingsViewModel {
                 self.delegate?.showError(message: error.localizedDescription)
             }.finally {
                 self.delegate?.hideSpinner()
-        }
+            }
     }
 
     private func reconcile() {
@@ -228,7 +212,6 @@ extension SettingsViewModel {
                 self.delegate?.showError(message: error.localizedDescription)
             }.finally {
                 self.delegate?.hideSpinner()
-        }
+            }
     }
-
 }

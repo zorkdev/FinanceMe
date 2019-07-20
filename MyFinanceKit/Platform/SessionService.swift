@@ -5,7 +5,6 @@ public protocol SessionService {
 }
 
 public class SessionDefaultService: SessionService {
-
     let dataService: DataService
 
     public var hasSession: Bool {
@@ -23,17 +22,15 @@ public class SessionDefaultService: SessionService {
     public func save(session: Session) {
         session.save(dataService: dataService)
     }
-
 }
 
 public class SessionFileService: SessionDefaultService {
-
-    private struct Constants {
+    private enum Constants {
         static let configFilename = "config"
         static let configExtension = "json"
     }
 
-    public override init(dataService: DataService) {
+    override public init(dataService: DataService) {
         super.init(dataService: dataService)
 
         if Session.load(dataService: dataService) == nil { loadSessionFromBundle() }
@@ -49,5 +46,4 @@ public class SessionFileService: SessionDefaultService {
 
         session.save(dataService: dataService)
     }
-
 }

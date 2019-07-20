@@ -1,7 +1,6 @@
 @testable import MyFinanceKit
 
 class AppStateTests: XCTestCase {
-
     func testInit() {
         let appState = AppState()
 
@@ -21,5 +20,4 @@ class AppStateTests: XCTestCase {
         XCTAssertTrue(appState.configService is MockConfigService)
         XCTAssertTrue(appState.sessionService is MockSessionService)
     }
-
 }

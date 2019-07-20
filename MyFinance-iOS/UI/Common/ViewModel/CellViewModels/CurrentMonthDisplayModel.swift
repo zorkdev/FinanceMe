@@ -1,5 +1,4 @@
 struct CurrentMonthDisplayModel: TodayDisplayModelType, Identifiable {
-
     static let positiveColor = ColorPalette.green
     static let negativeColor = ColorPalette.red
     static let largeFontSize: CGFloat = 30
@@ -22,5 +21,4 @@ struct CurrentMonthDisplayModel: TodayDisplayModelType, Identifiable {
         allowance = createString(currentMonthSummary.allowance)
         id = currentMonthSummary.hashValue
     }
-
 }

@@ -1,9 +1,8 @@
 class SettingsViewController: BaseViewController, KeyboardManageable, TableViewContainer {
-
-    @IBOutlet weak var uiTableView: UITableView!
-    @IBOutlet weak var editButton: UIButton!
-    @IBOutlet weak var reconcileButton: UIButton!
-    @IBOutlet weak var saveButton: UIButton!
+    @IBOutlet var uiTableView: UITableView!
+    @IBOutlet var editButton: UIButton!
+    @IBOutlet var reconcileButton: UIButton!
+    @IBOutlet var saveButton: UIButton!
 
     var viewModel: SettingsViewModelType!
 
@@ -28,20 +27,16 @@ class SettingsViewController: BaseViewController, KeyboardManageable, TableViewC
     @IBAction func dismissTapped(_ sender: UIButton) {
         viewModel.dismissTapped()
     }
-
 }
 
 extension SettingsViewController: ViewModelInjectable {
-
     func inject(viewModel: ViewModelType) {
         guard let viewModel = viewModel as? SettingsViewModelType else { return }
         self.viewModel = viewModel
     }
-
 }
 
 extension SettingsViewController: SettingsViewModelDelegate {
-
     func updateButtons(enabled: Bool, editing: Bool) {
         saveButton.isEnabled = enabled
         reconcileButton.isEnabled = !editing
@@ -55,5 +50,4 @@ extension SettingsViewController: SettingsViewModelDelegate {
                 SettingsDisplayModel.buttonDisabledAlpha
         }
     }
-
 }

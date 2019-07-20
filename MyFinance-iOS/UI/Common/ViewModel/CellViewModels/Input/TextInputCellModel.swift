@@ -1,20 +1,15 @@
 protocol TextInputCellModelViewModelDelegate: InputCellModelViewModelDelegate {
-
     func defaultValue(textCell: TextInputCellModelForViewModelType) -> String?
-
 }
 
 protocol TextInputCellModelForViewModelType: InputCellModelForViewModelType {
-
     var viewModelDelegate: TextInputCellModelViewModelDelegate? { get set }
     var currentValue: String? { get }
 
     func update(value: String)
-
 }
 
 class TextInputCellModel {
-
     weak var viewDelegate: InputCellModelViewDelegate?
     weak var viewModelDelegate: TextInputCellModelViewModelDelegate?
 
@@ -40,11 +35,9 @@ class TextInputCellModel {
     func willChange(value: String, original: String) -> String {
         return value
     }
-
 }
 
 extension TextInputCellModel: InputCellModelForViewType {
-
     var returnKeyType: UIReturnKeyType { return viewModelDelegate?.returnKeyType(inputCell: self) ?? .done }
 
     var isEnabled: Bool {
@@ -69,11 +62,9 @@ extension TextInputCellModel: InputCellModelForViewType {
     func didEndEditing() {
         viewDelegate?.resignFirstResponder()
     }
-
 }
 
 extension TextInputCellModel: TextInputCellModelForViewModelType {
-
     var currentValue: String? {
         return viewDelegate?.currentValue
     }
@@ -92,5 +83,4 @@ extension TextInputCellModel: TextInputCellModelForViewModelType {
         cachedValue = value
         viewDelegate?.update(value: value)
     }
-
 }

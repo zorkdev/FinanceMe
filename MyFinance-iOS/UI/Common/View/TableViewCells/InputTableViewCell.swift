@@ -1,6 +1,5 @@
 class InputTableViewCell: UITableViewCell {
-
-    @IBOutlet private weak var textField: UITextField!
+    @IBOutlet private var textField: UITextField!
 
     private weak var viewModel: InputCellModelForViewType?
 
@@ -26,11 +25,9 @@ class InputTableViewCell: UITableViewCell {
         textField.isUserInteractionEnabled = viewModel.isEnabled
         textField.isSecureTextEntry = viewModel.isSecureTextEntry
     }
-
 }
 
 extension InputTableViewCell: TableViewCellForViewModelType {
-
     func update(viewModel: CellModelType) {
         guard let viewModel = viewModel as? InputCellModelForViewType else { return }
 
@@ -42,11 +39,9 @@ extension InputTableViewCell: TableViewCellForViewModelType {
 
         setup()
     }
-
 }
 
 extension InputTableViewCell: InputCellModelViewDelegate {
-
     var currentValue: String {
         return textField.text ?? ""
     }
@@ -62,11 +57,9 @@ extension InputTableViewCell: InputCellModelViewDelegate {
     func resignFirstResponder() {
         textField.resignFirstResponder()
     }
-
 }
 
 extension InputTableViewCell: UITextFieldDelegate {
-
     func textFieldShouldBeginEditing(_ textField: UITextField) -> Bool {
         viewModel?.willBeginEditing()
         return true
@@ -89,5 +82,4 @@ extension InputTableViewCell: UITextFieldDelegate {
         viewModel?.didEndEditing()
         return true
     }
-
 }

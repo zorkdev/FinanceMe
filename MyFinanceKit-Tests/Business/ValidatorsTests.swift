@@ -1,7 +1,6 @@
 @testable import MyFinanceKit
 
 class ValidatorsTests: XCTestCase {
-
     func testValidateString() {
         XCTAssertTrue(Validators.validate(string: "test"))
         XCTAssertFalse(Validators.validate(string: " "))
@@ -112,5 +111,4 @@ class ValidatorsTests: XCTestCase {
         XCTAssertFalse(Validators.validate(fullEmail: "@"))
         XCTAssertFalse(Validators.validate(fullEmail: "."))
     }
-
 }

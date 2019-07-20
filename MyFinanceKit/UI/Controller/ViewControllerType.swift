@@ -7,7 +7,6 @@ public typealias ViewController = WKInterfaceController
 #endif
 
 public protocol ViewControllerType: ViewModelDelegate {
-
     var presented: ViewControllerType? { get }
 
     #if os(iOS)
@@ -16,11 +15,8 @@ public protocol ViewControllerType: ViewModelDelegate {
 
     func present(viewController: ViewControllerType, animated: Bool)
     func dismiss() -> Promise<Void>
-
 }
 
 public protocol ViewModelInjectable {
-
     func inject(viewModel: ViewModelType)
-
 }

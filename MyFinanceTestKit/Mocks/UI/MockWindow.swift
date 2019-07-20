@@ -1,10 +1,10 @@
 class MockWindow: WindowType {
-
-    var frame: CGRect = CGRect.zero
+    var frame: CGRect = .zero
     var windowLevel: UIWindow.Level = .normal
     var isHidden: Bool = false
     var baseViewController: ViewControllerType?
 
+    // swiftlint:disable discouraged_optional_boolean
     var lastEndEditingValue: Bool?
     var lastCreateWindow: MockWindow?
     var didCallMakeKeyAndVisible = false
@@ -27,5 +27,4 @@ class MockWindow: WindowType {
         lastCreateWindow = window
         return window
     }
-
 }

@@ -1,7 +1,6 @@
 import WatchConnectivity
 
 protocol WCSessionType {
-
     static func isSupported() -> Bool
 
     var delegate: WCSessionDelegate? { get set }
@@ -10,22 +9,18 @@ protocol WCSessionType {
 
     func activate()
     func transferCurrentComplicationUserInfo(_ userInfo: [String: Any]) -> WCSessionUserInfoTransfer
-
 }
 
 extension WCSession: WCSessionType {}
 
 protocol WatchServiceType {
-
     init(wcSession: WCSessionType,
          dataService: DataService,
          pushNotificationService: PushNotificationService)
     func updateComplication()
-
 }
 
 class WatchService: NSObject, WatchServiceType {
-
     private let dataService: DataService
     private var session: WCSessionType?
 
@@ -55,21 +50,17 @@ class WatchService: NSObject, WatchServiceType {
         _ = session?.transferCurrentComplicationUserInfo(data)
         allowance.save(dataService: dataService)
     }
-
 }
 
 extension WatchService: WCSessionDelegate {
-
     public func session(_ session: WCSession,
                         activationDidCompleteWith activationState: WCSessionActivationState,
                         error: Error?) {}
     public func sessionDidBecomeInactive(_ session: WCSession) {}
     public func sessionDidDeactivate(_ session: WCSession) {}
-
 }
 
 extension WatchService: PushNotificationServiceDelegate {
-
     func didReceiveIncomingPush(payload: [AnyHashable: Any]) {
         guard let allowance = payload["allowance"] as? Double,
             var user = User.load(dataService: dataService) else { return }
@@ -77,5 +68,4 @@ extension WatchService: PushNotificationServiceDelegate {
         user.save(dataService: dataService)
         updateComplication()
     }
-
 }

@@ -2,7 +2,6 @@ import PromiseKit
 @testable import MyFinance_iOS
 
 class MockNavigator: NavigatorType {
-
     weak var appState: AppStateiOSType!
     var window: WindowType?
     var viewControllers = [ViewControllerType]()
@@ -26,11 +25,13 @@ class MockNavigator: NavigatorType {
         lastMoveToValue = (scene, viewModel)
     }
 
-    @discardableResult func dismiss() -> Promise<Void> {
+    @discardableResult
+    func dismiss() -> Promise<Void> {
         return Promise()
     }
 
-    @discardableResult func popToRoot() -> Promise<Void> {
+    @discardableResult
+    func popToRoot() -> Promise<Void> {
         return Promise()
     }
 
@@ -43,5 +44,4 @@ class MockNavigator: NavigatorType {
     func hideAuthWindow() {
         didCallHideAuthWindow = true
     }
-
 }

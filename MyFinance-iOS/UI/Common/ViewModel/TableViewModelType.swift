@@ -1,5 +1,4 @@
 struct TableViewSection: Hashable {
-
     let id = UUID()
     let title: String?
 
@@ -21,44 +20,34 @@ struct TableViewSection: Hashable {
     static func == (lhs: TableViewSection, rhs: TableViewSection) -> Bool {
         return lhs.hashValue == rhs.hashValue
     }
-
 }
 
 protocol TableViewContainer: TableViewModelDelegate {
-
     var uiTableView: UITableView! { get }
-
 }
 
 extension TableViewContainer {
-
     var tableView: TableViewType { return uiTableView as TableViewType }
-
 }
 
 protocol TableViewModelDelegate: ViewModelDelegate {
-
     var tableView: TableViewType { get }
-
 }
 
-protocol TableViewModelType: class {
-
+protocol TableViewModelType: AnyObject {
     var sections: [TableViewSection] { get }
     var tableViewController: TableViewControllerType? { get set }
 
     func didFinishLoadingTableView()
     func didSelect(indexPath: IndexPath)
     func didDelete(indexPath: IndexPath)
-
 }
 
 extension TableViewModelType {
-
     var isValid: Bool {
         return sections
-            .flatMap({ $0.cellModels })
-            .compactMap({ ($0.wrapped as? InputCellModelForViewModelType)?.isValid })
+            .flatMap { $0.cellModels }
+            .compactMap { ($0.wrapped as? InputCellModelForViewModelType)?.isValid }
             .allSatisfy { $0 }
     }
 
@@ -88,8 +77,8 @@ extension TableViewModelType {
                 continue
             }
 
-            let deletionIndexPaths = rowsDiff.deletions.map({ IndexPath(row: $0, section: oldIndex) })
-            let insertionIndexPaths = rowsDiff.insertions.map({ IndexPath(row: $0, section: index) })
+            let deletionIndexPaths = rowsDiff.deletions.map { IndexPath(row: $0, section: oldIndex) }
+            let insertionIndexPaths = rowsDiff.insertions.map { IndexPath(row: $0, section: index) }
 
             tableViewUpdate.deleteRows.append(contentsOf: deletionIndexPaths)
             tableViewUpdate.insertRows.append(contentsOf: insertionIndexPaths)
@@ -101,5 +90,4 @@ extension TableViewModelType {
     func becomeFirstResponder() {
         (sections.first?.cellModels.first?.wrapped as? InputCellModelForViewModelType)?.becomeFirstResponder()
     }
-
 }

@@ -1,5 +1,4 @@
 public struct EndOfMonthSummaryBusinessLogic: ServiceClient {
-
     public typealias ServiceProvider = NetworkServiceProvider
     public let serviceProvider: ServiceProvider
 
@@ -14,5 +13,4 @@ public struct EndOfMonthSummaryBusinessLogic: ServiceClient {
                             parameters: nil,
                             body: nil)
     }
-
 }

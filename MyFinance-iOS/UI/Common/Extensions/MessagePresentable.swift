@@ -2,15 +2,12 @@ import SwiftMessages
 import NVActivityIndicatorView
 
 public protocol MessagePresentable {
-
     func showError(message: String)
     func showSpinner()
     func hideSpinner()
-
 }
 
-private struct MessageConstants {
-
+private enum MessageConstants {
     static let errorBannerTitle = "Uh-oh!"
     static let errorBannerIcons = ["🤔", "😳", "🙄", "😶", "😱"]
     static let errorBannerCloseImage = "close"
@@ -18,11 +15,9 @@ private struct MessageConstants {
     static let successBannerIcon = "😇"
 
     static let spinnerTitle = "Doing some magic... 😬"
-
 }
 
 public extension MessagePresentable {
-
     func showError(message: String) {
         let view = MessageView.viewFromNib(layout: .messageView)
         view.configureTheme(.error)
@@ -36,8 +31,7 @@ public extension MessagePresentable {
                               iconImage: nil,
                               iconText: iconText,
                               buttonImage: buttonImage,
-                              buttonTitle: nil,
-                              buttonTapHandler: { _ in SwiftMessages.hide() })
+                              buttonTitle: nil) { _ in SwiftMessages.hide() }
 
         view.button?.backgroundColor = .clear
         view.button?.tintColor = .white
@@ -89,7 +83,6 @@ public extension MessagePresentable {
     func hideSpinner() {
         NVActivityIndicatorPresenter.sharedInstance.stopAnimating(nil)
     }
-
 }
 
 extension BaseViewController: MessagePresentable {}

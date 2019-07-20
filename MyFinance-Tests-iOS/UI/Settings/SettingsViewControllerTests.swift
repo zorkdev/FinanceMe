@@ -1,7 +1,6 @@
 @testable import MyFinance_iOS
 
 class SettingsViewControllerTests: XCTestCase {
-
     var mockSettingsViewModel: MockSettingsViewModel!
     var settingsViewController: SettingsViewController!
 
@@ -48,5 +47,4 @@ class SettingsViewControllerTests: XCTestCase {
         XCTAssertFalse(settingsViewController.saveButton.isEnabled)
         XCTAssertEqual(settingsViewController.saveButton.alpha, SettingsDisplayModel.buttonDisabledAlpha)
     }
-
 }

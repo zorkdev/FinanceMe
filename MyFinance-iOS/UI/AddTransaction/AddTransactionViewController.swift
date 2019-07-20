@@ -1,7 +1,6 @@
 class AddTransactionViewController: BaseViewController, KeyboardManageable, TableViewContainer {
-
-    @IBOutlet weak var uiTableView: UITableView!
-    @IBOutlet private weak var saveButton: UIButton!
+    @IBOutlet var uiTableView: UITableView!
+    @IBOutlet private var saveButton: UIButton!
 
     private var viewModel: AddTransactionViewModelType!
 
@@ -17,20 +16,16 @@ class AddTransactionViewController: BaseViewController, KeyboardManageable, Tabl
     @IBAction func dismissTapped(_ sender: UIButton) {
         viewModel.dismissTapped()
     }
-
 }
 
 extension AddTransactionViewController: ViewModelInjectable {
-
     func inject(viewModel: ViewModelType) {
         guard let viewModel = viewModel as? AddTransactionViewModelType else { return }
         self.viewModel = viewModel
     }
-
 }
 
 extension AddTransactionViewController: AddTransactionViewModelDelegate {
-
     func updateSaveButton(enabled: Bool) {
         saveButton.isEnabled = enabled
 
@@ -39,5 +34,4 @@ extension AddTransactionViewController: AddTransactionViewModelDelegate {
                                               AddTransactionDisplayModel.buttonDisabledAlpha
         }
     }
-
 }

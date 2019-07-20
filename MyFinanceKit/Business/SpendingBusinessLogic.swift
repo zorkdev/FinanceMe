@@ -1,5 +1,4 @@
 public struct SpendingBusinessLogic {
-
     public init() {}
 
     public func allowanceIcon(for user: User) -> String {
@@ -16,5 +15,4 @@ public struct SpendingBusinessLogic {
         default: return ""
         }
     }
-
 }

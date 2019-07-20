@@ -1,7 +1,6 @@
 @testable import MyFinanceKit
 
 class BaseNavigatorTypeTests: XCTestCase {
-
     func testInject_Success() {
         let mockBaseNavigator = MockBaseNavigator()
         let mockInjectableViewController = MockInjectableViewController()
@@ -24,5 +23,4 @@ class BaseNavigatorTypeTests: XCTestCase {
 
         XCTAssertTrue(mockViewModel.lastDelegate is MockViewController)
     }
-
 }

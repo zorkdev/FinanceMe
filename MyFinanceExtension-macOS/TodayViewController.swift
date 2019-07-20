@@ -1,10 +1,9 @@
 import NotificationCenter
 
 class TodayViewController: NSViewController {
-
-    @IBOutlet private weak var balanceLabel: NSTextField!
-    @IBOutlet private weak var allowanceLabel: NSTextField!
-    @IBOutlet private weak var allowanceIconLabel: NSTextField!
+    @IBOutlet private var balanceLabel: NSTextField!
+    @IBOutlet private var allowanceLabel: NSTextField!
+    @IBOutlet private var allowanceIconLabel: NSTextField!
 
     let appState = AppStatemacOS()
 
@@ -22,11 +21,9 @@ class TodayViewController: NSViewController {
         viewModel.inject(delegate: self)
         viewModel.viewDidLoad()
     }
-
 }
 
 extension TodayViewController: TodayViewModelDelegate {
-
     func set(balance: NSAttributedString) {
         balanceLabel.attributedStringValue = balance
     }
@@ -44,11 +41,9 @@ extension TodayViewController: TodayViewModelDelegate {
     func set(allowanceIcon: String) {
         allowanceIconLabel.stringValue = allowanceIcon
     }
-
 }
 
 extension TodayViewController: NCWidgetProviding {
-
     func widgetPerformUpdate(completionHandler: (@escaping (NCUpdateResult) -> Void)) {
         viewModel.updateData().done {
             completionHandler(.newData)
@@ -57,5 +52,4 @@ extension TodayViewController: NCWidgetProviding {
             completionHandler(.failed)
         }
     }
-
 }

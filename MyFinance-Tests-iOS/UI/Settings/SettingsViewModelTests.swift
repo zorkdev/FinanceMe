@@ -1,7 +1,6 @@
 @testable import MyFinance_iOS
 
 class SettingsViewModelTests: ServiceClientiOSTestCase {
-
     //swiftlint:disable weak_delegate
     var mockSettingsViewModelDelegate: MockSettingsViewModelDelegate!
     var mockSettingsViewModelDataDelegate: MockSettingsViewModelDataDelegate!
@@ -38,13 +37,13 @@ class SettingsViewModelTests: ServiceClientiOSTestCase {
         XCTAssertEqual(settingsViewModel.sections.count, 1)
         XCTAssertEqual(settingsViewModel.sections.first?.cellModels.count, 4)
         XCTAssertTrue(settingsViewModel.sections.first?.cellModels
-            .contains(where: { $0.wrapped is AmountInputCellModel }) == true)
+            .contains { $0.wrapped is AmountInputCellModel } == true)
         XCTAssertTrue(settingsViewModel.sections.first?.cellModels
-            .contains(where: { $0.wrapped is DateInputCellModel }) == true)
+            .contains { $0.wrapped is DateInputCellModel } == true)
         XCTAssertTrue(settingsViewModel.sections.first?.cellModels
-            .contains(where: { $0.wrapped is TextInputCellModel }) == true)
+            .contains { $0.wrapped is TextInputCellModel } == true)
         XCTAssertTrue(settingsViewModel.sections.first?.cellModels
-            .contains(where: { $0.wrapped is PaydayInputCellModel }) == true)
+            .contains { $0.wrapped is PaydayInputCellModel } == true)
         XCTAssertNil(settingsViewModel.tableViewController)
     }
 
@@ -82,5 +81,4 @@ class SettingsViewModelTests: ServiceClientiOSTestCase {
 
         XCTAssertNotNil(mockTableViewController.lastUpdateCellsValue)
     }
-
 }

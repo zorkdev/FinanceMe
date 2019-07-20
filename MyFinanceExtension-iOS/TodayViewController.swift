@@ -1,12 +1,11 @@
 import NotificationCenter
 
 class TodayViewController: ViewController {
-
-    @IBOutlet private weak var primaryVibrancyEffectView: UIVisualEffectView!
-    @IBOutlet private weak var secondaryVibrancyEffectView: UIVisualEffectView!
-    @IBOutlet private weak var balanceLabel: UILabel!
-    @IBOutlet private weak var allowanceLabel: UILabel!
-    @IBOutlet private weak var allowanceIconLabel: UILabel!
+    @IBOutlet private var primaryVibrancyEffectView: UIVisualEffectView!
+    @IBOutlet private var secondaryVibrancyEffectView: UIVisualEffectView!
+    @IBOutlet private var balanceLabel: UILabel!
+    @IBOutlet private var allowanceLabel: UILabel!
+    @IBOutlet private var allowanceIconLabel: UILabel!
 
     let appState = AppState()
 
@@ -27,11 +26,9 @@ class TodayViewController: ViewController {
         guard let url = URL(string: appState.configService.urlScheme) else { return }
         extensionContext?.open(url, completionHandler: nil)
     }
-
 }
 
 extension TodayViewController: TodayViewModelDelegate {
-
     func set(balance: NSAttributedString) {
         balanceLabel.attributedText = balance
     }
@@ -43,11 +40,9 @@ extension TodayViewController: TodayViewModelDelegate {
     func set(allowanceIcon: String) {
         allowanceIconLabel.text = allowanceIcon
     }
-
 }
 
 extension TodayViewController: NCWidgetProviding {
-
     func widgetPerformUpdate(completionHandler: (@escaping (NCUpdateResult) -> Void)) {
         viewModel.updateData().done {
             completionHandler(.newData)
@@ -56,5 +51,4 @@ extension TodayViewController: NCWidgetProviding {
             completionHandler(.failed)
         }
     }
-
 }

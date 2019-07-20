@@ -1,7 +1,6 @@
 class AuthViewController: BaseViewController {
-
-    @IBOutlet weak var logoImageView: UIImageView!
-    @IBOutlet weak var tryAgainView: UIView!
+    @IBOutlet var logoImageView: UIImageView!
+    @IBOutlet var tryAgainView: UIView!
 
     var viewModel: AuthViewModelType!
 
@@ -23,20 +22,16 @@ class AuthViewController: BaseViewController {
             }
         }
     }
-
 }
 
 extension AuthViewController: ViewModelInjectable {
-
     func inject(viewModel: ViewModelType) {
         guard let viewModel = viewModel as? AuthViewModelType else { return }
         self.viewModel = viewModel
     }
-
 }
 
 extension AuthViewController: AuthViewModelDelegate {
-
     func updateTryAgain(isHidden: Bool) {
         animate(view: tryAgainView, isHidden: isHidden)
     }
@@ -44,5 +39,4 @@ extension AuthViewController: AuthViewModelDelegate {
     func updateLogo(isHidden: Bool) {
         animate(view: logoImageView, isHidden: isHidden)
     }
-
 }

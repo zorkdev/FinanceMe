@@ -1,7 +1,6 @@
 @testable import MyFinanceKit
 
 class PaydayTests: XCTestCase {
-
     func testPayday() {
         let payday = Payday(intValue: 1)
 
@@ -12,8 +11,7 @@ class PaydayTests: XCTestCase {
 
     func testPaydays() {
         for index in 1...28 {
-            XCTAssertTrue(Paydays.values.map({ $0.intValue }).contains(index))
+            XCTAssertTrue(Paydays.values.map { $0.intValue }.contains(index))
         }
     }
-
 }

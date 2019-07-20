@@ -1,12 +1,9 @@
 public protocol APIType {
-
     var url: URL? { get }
     func token(session: Session) -> String
-
 }
 
 public enum API: APIType, Equatable {
-
     case starling(StarlingAPI)
     case zorkdev(ZorkdevAPI)
 
@@ -23,11 +20,9 @@ public enum API: APIType, Equatable {
         case let .zorkdev(zorkdevAPI): return zorkdevAPI.token(session: session)
         }
     }
-
 }
 
 public enum StarlingAPI: APIType, Equatable {
-
     static let baseURL = "https://api.starlingbank.com/api/v1/"
 
     case balance
@@ -47,11 +42,9 @@ public enum StarlingAPI: APIType, Equatable {
     public func token(session: Session) -> String {
         return session.starlingToken
     }
-
 }
 
 public enum ZorkdevAPI: APIType, Equatable {
-
     static let baseURL = "https://zorkdev.herokuapp.com/api/"
 
     case login
@@ -81,11 +74,9 @@ public enum ZorkdevAPI: APIType, Equatable {
     public func token(session: Session) -> String {
         return session.zorkdevToken
     }
-
 }
 
 public struct FromToParameters: JSONCodable, Equatable {
-
     public static var decodeDateFormatter: DateFormatter {
         return Formatters.apiDate
     }
@@ -101,5 +92,4 @@ public struct FromToParameters: JSONCodable, Equatable {
         self.from = from
         self.to = to
     }
-
 }

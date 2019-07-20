@@ -1,8 +1,7 @@
 class CurrentMonthTableViewCell: UITableViewCell {
-
-    @IBOutlet weak var forecastLabel: UILabel!
-    @IBOutlet weak var spendingLabel: UILabel!
-    @IBOutlet weak var allowanceLabel: UILabel!
+    @IBOutlet var forecastLabel: UILabel!
+    @IBOutlet var spendingLabel: UILabel!
+    @IBOutlet var allowanceLabel: UILabel!
 
     private weak var viewModel: CurrentMonthCellModelForViewType?
 
@@ -12,11 +11,9 @@ class CurrentMonthTableViewCell: UITableViewCell {
         viewModel?.viewDelegate = nil
         viewModel = nil
     }
-
 }
 
 extension CurrentMonthTableViewCell: TableViewCellForViewModelType {
-
     func update(viewModel: CellModelType) {
         guard let viewModel = viewModel as? CurrentMonthCellModelForViewType else { return }
 
@@ -25,11 +22,9 @@ extension CurrentMonthTableViewCell: TableViewCellForViewModelType {
 
         update()
     }
-
 }
 
 extension CurrentMonthTableViewCell: CurrentMonthCellModelViewDelegate {
-
     func update() {
         guard let viewModel = viewModel else { return }
 
@@ -37,5 +32,4 @@ extension CurrentMonthTableViewCell: CurrentMonthCellModelViewDelegate {
         spendingLabel.attributedText = viewModel.spending
         allowanceLabel.attributedText = viewModel.allowance
     }
-
 }

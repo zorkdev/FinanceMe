@@ -1,7 +1,6 @@
 @testable import MyFinanceKit
 
 class DateExtensionsTests: XCTestCase {
-
     let calendar: Calendar = {
         var calendar = Calendar(identifier: .gregorian)
         calendar.locale = Locale(identifier: "en_GB")
@@ -40,7 +39,7 @@ class DateExtensionsTests: XCTestCase {
         let now = Date()
 
         let components = calendar.dateComponents([.year, .month, .day],
-                                                         from: now)
+                                                 from: now)
 
         let startOfDay = calendar.date(from: components)
 
@@ -51,7 +50,7 @@ class DateExtensionsTests: XCTestCase {
         let now = Date()
 
         let components = calendar.dateComponents([.yearForWeekOfYear, .weekOfYear],
-                                                         from: now)
+                                                 from: now)
 
         let startOfWeek = calendar.date(from: components)
 
@@ -62,7 +61,7 @@ class DateExtensionsTests: XCTestCase {
         let now = Date()
 
         let components = calendar.dateComponents([.year],
-                                                         from: now)
+                                                 from: now)
 
         let startOfYear = calendar.date(from: components)
 
@@ -73,7 +72,7 @@ class DateExtensionsTests: XCTestCase {
         let now = Date()
 
         let components = calendar.dateComponents([.yearForWeekOfYear, .weekOfYear],
-                                                         from: now)
+                                                 from: now)
         let startOfWeek = calendar.date(from: components)!
 
         var newComponents = DateComponents()
@@ -160,5 +159,4 @@ class DateExtensionsTests: XCTestCase {
 
         XCTAssertEqual(january10.next(day: day, direction: .forward), february5)
     }
-
 }

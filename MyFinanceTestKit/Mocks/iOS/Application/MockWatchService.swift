@@ -1,7 +1,6 @@
 @testable import MyFinance_iOS
 
 class MockWatchService: WatchServiceType {
-
     var didCallUpdateComplication = false
 
     init() {}
@@ -13,5 +12,4 @@ class MockWatchService: WatchServiceType {
     func updateComplication() {
         didCallUpdateComplication = true
     }
-
 }

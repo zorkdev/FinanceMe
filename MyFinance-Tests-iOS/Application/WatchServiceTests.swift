@@ -2,7 +2,6 @@ import WatchConnectivity
 @testable import MyFinance_iOS
 
 class WatchServiceTests: XCTestCase {
-
     var mockWCSession: MockWCSession!
     var mockDataService: MockDataService!
     var mockPushNotificationService: MockPushNotificationService!
@@ -55,7 +54,7 @@ class WatchServiceTests: XCTestCase {
         watchService.updateComplication()
 
         XCTAssertTrue(mockDataService.savedValues
-            .contains(where: { ($0 as? Allowance) == expectedAllowance }) == true)
+            .contains { ($0 as? Allowance) == expectedAllowance } == true)
         XCTAssertEqual(mockWCSession.lastTransfer as? [String: Double], expectedUserInfo)
     }
 
@@ -126,5 +125,4 @@ class WatchServiceTests: XCTestCase {
         watchService.sessionDidBecomeInactive(WCSession.default)
         watchService.sessionDidDeactivate(WCSession.default)
     }
-
 }

@@ -2,7 +2,6 @@ import PromiseKit
 @testable import MyFinanceKit
 
 class MockBaseNavigator: BaseNavigatorType {
-
     var window: WindowType?
     var viewControllers: [ViewControllerType] = []
 
@@ -11,5 +10,4 @@ class MockBaseNavigator: BaseNavigatorType {
     required init(window: WindowType) {}
     func dismiss() -> Promise<Void> { return Promise() }
     func popToRoot() -> Promise<Void> { return Promise() }
-
 }

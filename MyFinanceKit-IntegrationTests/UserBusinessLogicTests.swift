@@ -1,7 +1,6 @@
 @testable import MyFinanceKit
 
 class UserBusinessLogicTests: IntegrationTestCase {
-
     func testGetSession() {
         let newExpectation = expectation(description: "User logged in")
 
@@ -14,7 +13,7 @@ class UserBusinessLogicTests: IntegrationTestCase {
                 newExpectation.fulfill()
             }.catch { error in
                 XCTFail(error.localizedDescription)
-        }
+            }
 
         waitForExpectations(timeout: 10.0, handler: nil)
     }
@@ -29,7 +28,7 @@ class UserBusinessLogicTests: IntegrationTestCase {
                 newExpectation.fulfill()
             }.catch { error in
                 XCTFail(error.localizedDescription)
-        }
+            }
 
         waitForExpectations(timeout: 10.0, handler: nil)
     }
@@ -46,9 +45,8 @@ class UserBusinessLogicTests: IntegrationTestCase {
                 newExpectation.fulfill()
             }.catch { error in
                 XCTFail(error.localizedDescription)
-        }
+            }
 
         waitForExpectations(timeout: 10.0, handler: nil)
     }
-
 }

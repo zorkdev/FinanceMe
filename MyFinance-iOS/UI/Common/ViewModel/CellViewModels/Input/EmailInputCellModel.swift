@@ -1,5 +1,4 @@
 class EmailInputCellModel: TextInputCellModel {
-
     override var keyboardType: UIKeyboardType { return .emailAddress }
     override var textContentType: UITextContentType { return .emailAddress }
     override var autocapitalizationType: UITextAutocapitalizationType { return .none }
@@ -16,5 +15,4 @@ class EmailInputCellModel: TextInputCellModel {
         let sanitisedValue = Formatters.sanitise(email: value)
         return Validators.validate(email: sanitisedValue) ? sanitisedValue : original
     }
-
 }

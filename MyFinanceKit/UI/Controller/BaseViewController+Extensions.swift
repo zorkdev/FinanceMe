@@ -1,29 +1,26 @@
 public protocol KeyboardManageable {}
 
 extension BaseViewController {
-
-    open override var preferredStatusBarStyle: UIStatusBarStyle {
+    override open var preferredStatusBarStyle: UIStatusBarStyle {
         return .lightContent
     }
 
-    open override func viewWillAppear(_ animated: Bool) {
+    override open func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
 
         if self is KeyboardManageable { registerForKeyboardNotifications() }
     }
 
-    open override func viewDidDisappear(_ animated: Bool) {
+    override open func viewDidDisappear(_ animated: Bool) {
         super.viewDidDisappear(animated)
 
         if self is KeyboardManageable { deRegisterForKeyboardNotifications() }
     }
-
 }
 
 // MARK: - Keyboard
 
 extension BaseViewController {
-
     func registerForKeyboardNotifications() {
         NotificationCenter.default.addObserver(self,
                                                selector: #selector(keyboardChanged),
@@ -44,7 +41,8 @@ extension BaseViewController {
                                                   object: nil)
     }
 
-    @objc private func keyboardChanged(_ notification: Notification) {
+    @objc
+    private func keyboardChanged(_ notification: Notification) {
         guard let userInfo = notification.userInfo,
             let keyboardFrame = userInfo[UIResponder.keyboardFrameEndUserInfoKey] as? CGRect,
             let duration = userInfo[UIResponder.keyboardAnimationDurationUserInfoKey] as? Double,
@@ -61,5 +59,4 @@ extension BaseViewController {
             self.view.frame = newFrame
         }, completion: nil)
     }
-
 }

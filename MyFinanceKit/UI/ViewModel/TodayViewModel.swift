@@ -1,5 +1,4 @@
 open class TodayViewModel: TodayPresentable, ServiceClient {
-
     public let serviceProvider: ServiceProvider
     public let displayModel: TodayDisplayModelType
     public weak var delegate: TodayViewModelDelegate?
@@ -14,5 +13,4 @@ open class TodayViewModel: TodayPresentable, ServiceClient {
         guard let delegate = delegate as? TodayViewModelDelegate else { return }
         self.delegate = delegate
     }
-
 }

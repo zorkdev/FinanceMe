@@ -1,7 +1,6 @@
 @testable import MyFinanceKit
 
 class EndOfMonthSummaryBusinessLogicTests: IntegrationTestCase {
-
     func testGetEndOfMonthSummaryList() {
         let newExpectation = expectation(description: "EndOfMonthSummaryList fetched")
 
@@ -12,9 +11,8 @@ class EndOfMonthSummaryBusinessLogicTests: IntegrationTestCase {
                 newExpectation.fulfill()
             }.catch { error in
                 XCTFail(error.localizedDescription)
-        }
+            }
 
         waitForExpectations(timeout: 10.0, handler: nil)
     }
-
 }

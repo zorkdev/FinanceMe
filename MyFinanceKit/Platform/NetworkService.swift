@@ -7,13 +7,10 @@ public enum HTTPMethod: String {
 }
 
 public protocol NetworkRequestable {
-
     func perform(request: URLRequest) -> Promise<(data: Data, response: URLResponse)>
-
 }
 
 public protocol NetworkServiceType {
-
     func performRequest<T: JSONDecodable>(api: APIType,
                                           method: HTTPMethod,
                                           parameters: JSONEncodable?,
@@ -23,12 +20,10 @@ public protocol NetworkServiceType {
                         method: HTTPMethod,
                         parameters: JSONEncodable?,
                         body: JSONEncodable?) -> Promise<Data>
-
 }
 
 public class NetworkService: NetworkServiceType {
-
-    private struct Constants {
+    private enum Constants {
         static let authHeaderKey = "Authorization"
         static let contentKey = "Accept"
         static let contentTypeKey = "Content-Type"
@@ -36,9 +31,7 @@ public class NetworkService: NetworkServiceType {
         static let encodingKey = "Accept-Encoding"
         static let encodingValue = "gzip, deflate"
 
-        static let authHeaderValue: (String) -> String = {
-            return "Bearer \($0)"
-        }
+        static let authHeaderValue: (String) -> String = { "Bearer \($0)" }
     }
 
     private let networkService: NetworkRequestable
@@ -67,14 +60,13 @@ public class NetworkService: NetworkServiceType {
                 }
 
                 return .value(instance)
-        }
+            }
     }
 
     public func performRequest(api: APIType,
                                method: HTTPMethod,
                                parameters: JSONEncodable? = nil,
                                body: JSONEncodable? = nil) -> Promise<Data> {
-
         guard let request = createRequest(api: api,
                                           method: method,
                                           parameters: parameters,
@@ -94,7 +86,6 @@ public class NetworkService: NetworkServiceType {
                         print(NetworkService.createResponseString(response.data))
                     }
                     seal.fulfill(response.data)
-
                 }.catch { error in
                     if self.configService.isLoggingEnabled {
                         print(NetworkService.createResponseString(error))
@@ -105,7 +96,7 @@ public class NetworkService: NetworkServiceType {
                     } else {
                         seal.reject(error)
                     }
-            }
+                }
         }
     }
 
@@ -113,7 +104,6 @@ public class NetworkService: NetworkServiceType {
                                method: HTTPMethod,
                                parameters: JSONEncodable?,
                                body: JSONEncodable?) -> URLRequest? {
-
         guard let url = api.url,
             var urlComponents = URLComponents(url: url, resolvingAgainstBaseURL: false) else { return nil }
 
@@ -141,13 +131,11 @@ public class NetworkService: NetworkServiceType {
 
         return request
     }
-
 }
 
 // MARK: - Debug prints
 
 extension NetworkService {
-
     static func createRequestString(_ request: URLRequest) -> String {
         return
             """
@@ -181,5 +169,4 @@ extension NetworkService {
 
             """
     }
-
 }

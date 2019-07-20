@@ -3,7 +3,6 @@ import MyFinanceKit
 @testable import FinanceMe
 
 class AppStatemacOSTests: XCTestCase {
-
     func testInit() {
         let appState = AppStatemacOS()
 
@@ -11,5 +10,4 @@ class AppStatemacOSTests: XCTestCase {
         XCTAssertTrue(appState.dataService is KeychainDataService)
         XCTAssertTrue(appState.sessionService is SessionFileService)
     }
-
 }

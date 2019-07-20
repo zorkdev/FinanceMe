@@ -3,7 +3,6 @@ import PromiseKit
 
 //swiftlint:disable type_body_length
 class NetworkServiceTests: XCTestCase {
-
     var mockNetworkRequestable = MockNetworkRequestable()
     let mockConfigService = MockConfigService()
     var mockSessionService = MockSessionService()
@@ -46,7 +45,7 @@ class NetworkServiceTests: XCTestCase {
                 XCTAssertNil(headers["Content-Type"])
 
                 newExpectation.fulfill()
-        }
+            }
 
         waitForExpectations(timeout: 10.0, handler: nil)
     }
@@ -92,7 +91,7 @@ class NetworkServiceTests: XCTestCase {
                 XCTAssertEqual(headers["Content-Type"], "application/json")
 
                 newExpectation.fulfill()
-        }
+            }
 
         waitForExpectations(timeout: 10.0, handler: nil)
     }
@@ -114,7 +113,7 @@ class NetworkServiceTests: XCTestCase {
             .catch { error in
                 XCTAssertEqual(error as? AppError, AppError.apiPathInvalid)
                 newExpectation.fulfill()
-        }
+            }
 
         waitForExpectations(timeout: 10.0, handler: nil)
     }
@@ -135,7 +134,7 @@ class NetworkServiceTests: XCTestCase {
             .catch { error in
                 XCTAssertEqual(error as? APIError, APIError.badRequest)
                 newExpectation.fulfill()
-        }
+            }
 
         waitForExpectations(timeout: 10.0, handler: nil)
     }
@@ -144,8 +143,8 @@ class NetworkServiceTests: XCTestCase {
         let newExpectation = expectation(description: "Network call unsuccessful - URLError error")
 
         let nsError = NSError(domain: NSURLErrorDomain,
-                            code: URLError.notConnectedToInternet.rawValue,
-                            userInfo: nil)
+                              code: URLError.notConnectedToInternet.rawValue,
+                              userInfo: nil)
 
         mockNetworkRequestable.returnErrorValue = nsError
 
@@ -160,7 +159,7 @@ class NetworkServiceTests: XCTestCase {
             .catch { error in
                 XCTAssertEqual(error as NSError, nsError)
                 newExpectation.fulfill()
-        }
+            }
 
         waitForExpectations(timeout: 10.0, handler: nil)
     }
@@ -200,7 +199,7 @@ class NetworkServiceTests: XCTestCase {
                 XCTAssertEqual(headers["Content-Type"], "application/json")
 
                 newExpectation.fulfill()
-        }
+            }
 
         waitForExpectations(timeout: 10.0, handler: nil)
     }
@@ -224,12 +223,11 @@ class NetworkServiceTests: XCTestCase {
                                           method: .get,
                                           parameters: nil,
                                           body: body)
-            .done { (_: Body) in
-                return
-            }.catch { error in
+            .done { (_: Body) in }
+            .catch { error in
                 XCTAssertEqual(error as? AppError, expectedError)
                 newExpectation.fulfill()
-        }
+            }
 
         waitForExpectations(timeout: 10.0, handler: nil)
     }
@@ -292,5 +290,4 @@ class NetworkServiceTests: XCTestCase {
 
         XCTAssertEqual(string, expectedValue)
     }
-
 }

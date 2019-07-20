@@ -1,7 +1,6 @@
 @testable import MyFinanceKit
 
 class UIWindowTests: XCTestCase {
-
     func testCreateWindow() {
         let expectedFrame = CGRect(x: 0, y: 0, width: 10, height: 20)
         let window = UIWindow()
@@ -15,5 +14,4 @@ class UIWindowTests: XCTestCase {
         window.baseViewController = viewController
         XCTAssertEqual(window.baseViewController as? BaseViewController, viewController)
     }
-
 }

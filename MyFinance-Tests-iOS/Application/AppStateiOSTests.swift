@@ -2,7 +2,6 @@ import LocalAuthentication
 @testable import MyFinance_iOS
 
 class AppStateiOSTests: XCTestCase {
-
     func testInit() {
         let appState = AppStateiOS()
 
@@ -13,5 +12,4 @@ class AppStateiOSTests: XCTestCase {
         XCTAssertTrue(appState.laContext is LAContext)
         XCTAssertTrue(appState.navigator is Navigator)
     }
-
 }

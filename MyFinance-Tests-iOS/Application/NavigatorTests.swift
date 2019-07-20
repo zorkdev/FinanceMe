@@ -1,7 +1,6 @@
 @testable import MyFinance_iOS
 
 class NavigatorTests: XCTestCase {
-
     typealias ViewController = UIViewController
 
     var mockWindow: MockWindow!
@@ -105,5 +104,4 @@ class NavigatorTests: XCTestCase {
         navigator.hideAuthWindow()
         XCTAssertTrue(mockAuthWindow.isHidden)
     }
-
 }

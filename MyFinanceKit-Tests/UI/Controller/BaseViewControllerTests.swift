@@ -1,7 +1,6 @@
 @testable import MyFinanceKit
 
 class BaseViewControllerTests: XCTestCase {
-
     class TestViewController: BaseViewController {}
 
     var testViewController: TestViewController?
@@ -39,5 +38,4 @@ class BaseViewControllerTests: XCTestCase {
         XCTAssertTrue(testViewController?.textFieldShouldReturn(UITextField()) == true)
         testViewController?.textFieldDidEndEditing(UITextField())
     }
-
 }

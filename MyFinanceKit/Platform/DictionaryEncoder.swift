@@ -1,7 +1,6 @@
 import Foundation
 
 public class URLFormEncoder {
-
     private let dateFormatter: DateFormatter
 
     public init(dateFormatter: DateFormatter = Formatters.apiDateTime) {
@@ -15,11 +14,9 @@ public class URLFormEncoder {
 
         return queryItems
     }
-
 }
 
 public class DictionaryEncoder {
-
     private let dateFormatter: DateFormatter
 
     public init(dateFormatter: DateFormatter = Formatters.apiDateTime) {
@@ -32,11 +29,9 @@ public class DictionaryEncoder {
 
         return encoder.container.value
     }
-
 }
 
 private class InternalDictionaryEncoder: Encoder {
-
     var codingPath = [CodingKey]()
     var userInfo = [CodingUserInfoKey: Any]()
     var container = DictionaryContainer()
@@ -58,17 +53,13 @@ private class InternalDictionaryEncoder: Encoder {
     func singleValueContainer() -> SingleValueEncodingContainer {
         return ThrowingSingleValueEncodingContainer()
     }
-
 }
 
 private class DictionaryContainer {
-
     var value = [String: String]()
-
 }
 
 private struct DictionaryKeyedEncodingContainer<Key: CodingKey>: KeyedEncodingContainerProtocol {
-
     let codingPath = [CodingKey]()
     let encoder: InternalDictionaryEncoder
     var container: DictionaryContainer
@@ -110,11 +101,9 @@ private struct DictionaryKeyedEncodingContainer<Key: CodingKey>: KeyedEncodingCo
     func superEncoder(forKey key: Key) -> Encoder {
         return encoder
     }
-
 }
 
 private struct ThrowingNestedKeyedEncodingContainer<Key: CodingKey>: KeyedEncodingContainerProtocol {
-
     let codingPath = [CodingKey]()
     let encoder: Encoder
 
@@ -150,11 +139,9 @@ private struct ThrowingNestedKeyedEncodingContainer<Key: CodingKey>: KeyedEncodi
     func superEncoder(forKey key: Key) -> Encoder {
         return encoder
     }
-
 }
 
 private struct ThrowingUnkeyedEncodingContainer: UnkeyedEncodingContainer {
-
     let codingPath = [CodingKey]()
     let encoder: Encoder
     let count = 0
@@ -187,11 +174,9 @@ private struct ThrowingUnkeyedEncodingContainer: UnkeyedEncodingContainer {
     func superEncoder() -> Encoder {
         return encoder
     }
-
 }
 
 private struct ThrowingSingleValueEncodingContainer: SingleValueEncodingContainer {
-
     let codingPath = [CodingKey]()
 
     func encodeNil() throws {
@@ -205,5 +190,4 @@ private struct ThrowingSingleValueEncodingContainer: SingleValueEncodingContaine
                                             debugDescription: "Single value containers are not supported.")
         throw EncodingError.invalidValue(value, context)
     }
-
 }

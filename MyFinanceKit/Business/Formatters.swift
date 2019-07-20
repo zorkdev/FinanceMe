@@ -1,16 +1,10 @@
-public struct Formatters {
-
+public enum Formatters {
     public static let locale = Locale(identifier: "en_GB")
     public static let apiLocale = Locale(identifier: "en_US_POSIX")
     public static let apiTimeZone = Foundation.TimeZone(abbreviation: "UTC")
 
-    public static let currencySymbol = {
-        return locale.currencySymbol!
-    }()
-
-    public static let decimalSeparator = {
-        return locale.decimalSeparator!
-    }()
+    public static let currencySymbol = { locale.currencySymbol! }()
+    public static let decimalSeparator = { locale.decimalSeparator! }()
 
     public static let apiDate: DateFormatter = {
         let formatter = DateFormatter()
@@ -172,5 +166,4 @@ public struct Formatters {
             return dateWithYear.string(from: date)
         }
     }
-
 }

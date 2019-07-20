@@ -1,7 +1,6 @@
 @testable import MyFinanceKit
 
 class CredentialsTests: XCTestCase {
-
     func testDecodeCredentials() {
         let jsonData =
         """
@@ -27,5 +26,4 @@ class CredentialsTests: XCTestCase {
 
         XCTAssertNotNil(session.urlEncoded())
     }
-
 }

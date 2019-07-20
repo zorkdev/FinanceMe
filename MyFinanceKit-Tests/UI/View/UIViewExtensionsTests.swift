@@ -1,7 +1,6 @@
 @testable import MyFinanceKit
 
 class UIViewExtensionsTests: XCTestCase {
-
     func testLayerCornerRadius() {
         let view = UIView()
 
@@ -44,5 +43,4 @@ class UIViewExtensionsTests: XCTestCase {
         view.layer.shadowColor = Color.blue.cgColor
         XCTAssertEqual(view.shadowColor, .blue)
     }
-
 }

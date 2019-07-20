@@ -2,7 +2,6 @@ import WatchConnectivity
 @testable import MyFinance_iOS
 
 class MockWCSession: WCSessionType {
-
     static var isSupportedValue = true
 
     static func isSupported() -> Bool {
@@ -27,5 +26,4 @@ class MockWCSession: WCSessionType {
         lastTransfer = userInfo
         return WCSessionUserInfoTransfer()
     }
-
 }
