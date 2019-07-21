@@ -1,5 +1,4 @@
-import PromiseKit
-@testable import MyFinanceKit
+import MyFinanceKit
 
 class MockViewModel: ViewModelType {
     //swiftlint:disable:next weak_delegate

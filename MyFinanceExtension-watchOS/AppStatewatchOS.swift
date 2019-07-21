@@ -2,6 +2,7 @@ import WatchConnectivity
 import MyFinanceKit
 
 protocol ComplicationServiceProvider {
+    // swiftlint:disable:next unused_declaration
     var complicationService: ComplicationServiceType { get }
 }
 

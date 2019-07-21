@@ -3,6 +3,7 @@ public extension ViewController {
 }
 
 public protocol Instantiatable {
+    // swiftlint:disable:next unused_declaration
     static var storyboardId: String { get }
     static var bundle: Bundle { get }
 }
@@ -12,6 +13,7 @@ public extension Instantiatable where Self: ViewController {
         return Bundle(for: Self.self)
     }
 
+    // swiftlint:disable:next unused_declaration
     static func instantiate() -> Self {
         #if os(iOS) || os(tvOS)
         let viewController = (UIStoryboard(name: storyboardId, bundle: bundle)

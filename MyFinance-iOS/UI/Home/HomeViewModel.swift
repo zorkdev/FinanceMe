@@ -1,5 +1,3 @@
-import NotificationCenter
-
 class HomeViewModel: ServiceClient {
     typealias ServiceProvider = NavigatorProvider
         & NetworkServiceProvider

@@ -33,6 +33,7 @@ public extension JSONEncodable {
         return Formatters.apiDateTime
     }
 
+    // swiftlint:disable:next unused_declaration
     var prettyPrinted: String {
         guard let data = self.encoded(prettyPrinted: true),
             let string = String(data: data, encoding: .utf8) else { return "nil" }

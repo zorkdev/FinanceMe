@@ -1,6 +1,7 @@
 public protocol TableViewType: AnyObject {
     var delegate: UITableViewDelegate? { get set }
     var dataSource: UITableViewDataSource? { get set }
+    // swiftlint:disable:next unused_declaration
     var rowHeight: CGFloat { get set }
     var contentInset: UIEdgeInsets { get set }
 
@@ -12,10 +13,8 @@ public protocol TableViewType: AnyObject {
     func reloadData()
     func beginUpdates()
     func endUpdates()
-    func reloadSections(_ sections: IndexSet, with animation: UITableView.RowAnimation)
     func insertSections(_ sections: IndexSet, with animation: UITableView.RowAnimation)
     func deleteSections(_ sections: IndexSet, with animation: UITableView.RowAnimation)
-    func reloadRows(at indexPaths: [IndexPath], with animation: UITableView.RowAnimation)
     func insertRows(at indexPaths: [IndexPath], with animation: UITableView.RowAnimation)
     func deleteRows(at indexPaths: [IndexPath], with animation: UITableView.RowAnimation)
 }

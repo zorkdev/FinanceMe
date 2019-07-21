@@ -16,21 +16,6 @@ public class URLFormEncoder {
     }
 }
 
-public class DictionaryEncoder {
-    private let dateFormatter: DateFormatter
-
-    public init(dateFormatter: DateFormatter = Formatters.apiDateTime) {
-        self.dateFormatter = dateFormatter
-    }
-
-    public func encode<T: Encodable>(_ value: T) throws -> [String: String] {
-        let encoder = InternalDictionaryEncoder(dateFormatter: dateFormatter)
-        try value.encode(to: encoder)
-
-        return encoder.container.value
-    }
-}
-
 private class InternalDictionaryEncoder: Encoder {
     var codingPath = [CodingKey]()
     var userInfo = [CodingUserInfoKey: Any]()

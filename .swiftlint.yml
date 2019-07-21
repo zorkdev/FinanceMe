@@ -1,5 +1,5 @@
 excluded:
-- Pods
+  - Pods
 
 identifier_name:
   min_length: 2

@@ -994,6 +994,7 @@
 		9A44BECE208567BC00B0A8D3 /* CODE_OF_CONDUCT.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = CODE_OF_CONDUCT.md; sourceTree = "<group>"; };
 		9A44BECF208567C500B0A8D3 /* LICENSE */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		9A44C4B4205DA05B00BFC443 /* UITextField+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+Extensions.swift"; sourceTree = "<group>"; };
+		9A4516DE22E47EA5004E9197 /* analyze.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = analyze.sh; sourceTree = "<group>"; };
 		9A4F55052023C3FC00DBF68F /* Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Bridging-Header.h"; sourceTree = "<group>"; };
 		9A4F55062023C4A700DBF68F /* Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Bridging-Header.h"; sourceTree = "<group>"; };
 		9A4F55302023C7A900DBF68F /* MyFinanceKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MyFinanceKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -2098,6 +2099,7 @@
 				9A85618A2027921800A26F12 /* Podfile */,
 				9A8561882027920600A26F12 /* .gitignore */,
 				9A8561892027920D00A26F12 /* .swiftlint.yml */,
+				9A4516DE22E47EA5004E9197 /* analyze.sh */,
 				9A8BF8332085474900FF4688 /* codecov.yml */,
 				9ACA782C21A9BCF20099613B /* ExportOptions.plist */,
 			);

@@ -1,5 +1,7 @@
 public protocol BaseNavigatorType {
+    // swiftlint:disable:next unused_declaration
     var window: WindowType? { get set }
+    // swiftlint:disable:next unused_declaration
     var viewControllers: [ViewControllerType] { get set }
 
     init(window: WindowType)

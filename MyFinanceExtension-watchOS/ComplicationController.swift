@@ -1,6 +1,7 @@
 import ClockKit
 import MyFinanceKit
 
+// swiftlint:disable:next unused_declaration
 class ComplicationController: NSObject, CLKComplicationDataSource {
     func getSupportedTimeTravelDirections(
         for complication: CLKComplication,
