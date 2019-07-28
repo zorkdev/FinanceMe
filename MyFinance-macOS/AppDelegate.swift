@@ -1,1 +1,0 @@
-class AppDelegate: NSObject, NSApplicationDelegate {}
