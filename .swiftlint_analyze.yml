@@ -1,0 +1,15 @@
+excluded:
+  - FinanceMe/FinanceMeTests-iOS
+  - FinanceMe/FinanceMeTests-tvOS
+  - FinanceMe/FinanceMeTests-macOS
+  - FinanceMe/FinanceMeUITests-iOS
+  - FinanceMe/FinanceMeUITests-tvOS
+  - FinanceMe/FinanceMeUITests-macOS
+  - FinanceMeKit/FinanceMeKitTests
+
+unused_declaration:
+  include_public_and_open: true
+
+analyzer_rules:
+  - unused_import
+  - unused_declaration

@@ -1,0 +1,25 @@
+{
+  "configurations" : [
+    {
+      "name" : "Configuration 1",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+    "language" : "en-GB",
+    "region" : "GB",
+    "testExecutionOrdering" : "random"
+  },
+  "testTargets" : [
+    {
+      "target" : {
+        "containerPath" : "container:FinanceMeKit\/FinanceMeKit.xcodeproj",
+        "identifier" : "9A35A97122EDF0400086BD2A",
+        "name" : "FinanceMeKitTests-tvOS"
+      }
+    }
+  ],
+  "version" : 1
+}

@@ -1,0 +1,39 @@
+{
+  "configurations" : [
+    {
+      "name" : "Configuration 1",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+    "language" : "en-GB",
+    "region" : "GB",
+    "testExecutionOrdering" : "random"
+  },
+  "testTargets" : [
+    {
+      "target" : {
+        "containerPath" : "container:FinanceMe\/FinanceMe.xcodeproj",
+        "identifier" : "9A12DBD422EF66A9000226A9",
+        "name" : "FinanceMeTests-macOS"
+      }
+    },
+    {
+      "target" : {
+        "containerPath" : "container:FinanceMe\/FinanceMe.xcodeproj",
+        "identifier" : "9A12DC1622EF6A65000226A9",
+        "name" : "FinanceMeUITests-macOS"
+      }
+    },
+    {
+      "target" : {
+        "containerPath" : "container:FinanceMeKit\/FinanceMeKit.xcodeproj",
+        "identifier" : "9A35A98222EDF1030086BD2A",
+        "name" : "FinanceMeKitTests-macOS"
+      }
+    }
+  ],
+  "version" : 1
+}

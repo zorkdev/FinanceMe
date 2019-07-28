@@ -1,0 +1,2191 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 52;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		9A12DB9D22EF10E7000226A9 /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A12DB9C22EF10E7000226A9 /* NotificationCenter.framework */; };
+		9A12DBA022EF10E7000226A9 /* TodayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A12DB9F22EF10E7000226A9 /* TodayViewController.swift */; };
+		9A12DBA322EF10E7000226A9 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9A12DBA122EF10E7000226A9 /* MainInterface.storyboard */; };
+		9A12DBA722EF10E7000226A9 /* FinanceMeExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 9A12DB9B22EF10E7000226A9 /* FinanceMeExtension.appex */; platformFilter = ios; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		9A12DBB322EF1233000226A9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A12DBB222EF1233000226A9 /* AppDelegate.swift */; };
+		9A12DBB522EF1233000226A9 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A12DBB422EF1233000226A9 /* ContentView.swift */; };
+		9A12DBB722EF1234000226A9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9A12DBB622EF1234000226A9 /* Assets.xcassets */; };
+		9A12DBBD22EF1234000226A9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9A12DBBB22EF1234000226A9 /* Main.storyboard */; };
+		9A12DBCA22EF668B000226A9 /* FinanceMeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A12DBC922EF668B000226A9 /* FinanceMeTests.swift */; };
+		9A12DBD822EF66A9000226A9 /* FinanceMeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A12DBD722EF66A9000226A9 /* FinanceMeTests.swift */; };
+		9A12DBE422EF675A000226A9 /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A12DB9C22EF10E7000226A9 /* NotificationCenter.framework */; };
+		9A12DBE722EF675A000226A9 /* TodayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A12DBE622EF675A000226A9 /* TodayViewController.swift */; };
+		9A12DBEA22EF675A000226A9 /* TodayViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9A12DBE822EF675A000226A9 /* TodayViewController.xib */; };
+		9A12DBEE22EF675A000226A9 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9A12DBEC22EF675A000226A9 /* InfoPlist.strings */; };
+		9A12DBF222EF675A000226A9 /* FinanceMeExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 9A12DBE322EF675A000226A9 /* FinanceMeExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		9A12DBFE22EF69A8000226A9 /* FinanceMeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A12DBFD22EF69A8000226A9 /* FinanceMeUITests.swift */; };
+		9A12DC0C22EF6A25000226A9 /* FinanceMeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A12DC0B22EF6A25000226A9 /* FinanceMeUITests.swift */; };
+		9A12DC1A22EF6A65000226A9 /* FinanceMeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A12DC1922EF6A65000226A9 /* FinanceMeUITests.swift */; };
+		9A35A89322EDD55B0086BD2A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A35A89222EDD55B0086BD2A /* AppDelegate.swift */; };
+		9A35A89522EDD55B0086BD2A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A35A89422EDD55B0086BD2A /* SceneDelegate.swift */; };
+		9A35A89722EDD55B0086BD2A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A35A89622EDD55B0086BD2A /* ContentView.swift */; };
+		9A35A89922EDD55C0086BD2A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9A35A89822EDD55C0086BD2A /* Assets.xcassets */; };
+		9A35A89F22EDD55C0086BD2A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9A35A89D22EDD55C0086BD2A /* LaunchScreen.storyboard */; };
+		9A35A8D722EDD9B90086BD2A /* FinanceMeKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A35A8D622EDD9B90086BD2A /* FinanceMeKit.framework */; };
+		9A35A8D822EDD9B90086BD2A /* FinanceMeKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9A35A8D622EDD9B90086BD2A /* FinanceMeKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		9A35A90122EDDD580086BD2A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A35A90022EDDD580086BD2A /* AppDelegate.swift */; };
+		9A35A90322EDDD580086BD2A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A35A90222EDDD580086BD2A /* ContentView.swift */; };
+		9A35A90522EDDD5A0086BD2A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9A35A90422EDDD5A0086BD2A /* Assets.xcassets */; };
+		9A35A91F22EDDFB90086BD2A /* FinanceMeKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A35A91E22EDDFB90086BD2A /* FinanceMeKit.framework */; };
+		9A35A92022EDDFB90086BD2A /* FinanceMeKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9A35A91E22EDDFB90086BD2A /* FinanceMeKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		9A35A92C22EDE1140086BD2A /* FinanceMeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A35A92B22EDE1140086BD2A /* FinanceMeTests.swift */; };
+		9AF87E9F22EF91FD009E786C /* FinanceMeApp.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 9AF87E9E22EF91FD009E786C /* FinanceMeApp.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		9AF87EA522EF91FD009E786C /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9AF87EA322EF91FD009E786C /* Interface.storyboard */; };
+		9AF87EA722EF91FF009E786C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9AF87EA622EF91FF009E786C /* Assets.xcassets */; };
+		9AF87EAE22EF91FF009E786C /* FinanceMeExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 9AF87EAD22EF91FF009E786C /* FinanceMeExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		9AF87EB322EF91FF009E786C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AF87EB222EF91FF009E786C /* ContentView.swift */; };
+		9AF87EB522EF91FF009E786C /* HostingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AF87EB422EF91FF009E786C /* HostingController.swift */; };
+		9AF87EB722EF91FF009E786C /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AF87EB622EF91FF009E786C /* ExtensionDelegate.swift */; };
+		9AF87EB922EF91FF009E786C /* ComplicationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AF87EB822EF91FF009E786C /* ComplicationController.swift */; };
+		9AF87ED922EF9A5D009E786C /* FinanceMeKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AF87ED822EF9A5D009E786C /* FinanceMeKit.framework */; };
+		9AF87EDA22EF9A5D009E786C /* FinanceMeKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9AF87ED822EF9A5D009E786C /* FinanceMeKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		9AF87EDD22EF9B30009E786C /* FinanceMeKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AF87EDC22EF9B30009E786C /* FinanceMeKit.framework */; };
+		9AF87EDE22EF9B30009E786C /* FinanceMeKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9AF87EDC22EF9B30009E786C /* FinanceMeKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		9AF87EE122EF9B7D009E786C /* FinanceMeKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AF87EE022EF9B7D009E786C /* FinanceMeKit.framework */; };
+		9AF87EE222EF9B7D009E786C /* FinanceMeKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9AF87EE022EF9B7D009E786C /* FinanceMeKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		9AF87EE522EF9BEE009E786C /* FinanceMeKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AF87EE422EF9BEE009E786C /* FinanceMeKit.framework */; };
+		9AF87EE622EF9BEE009E786C /* FinanceMeKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9AF87EE422EF9BEE009E786C /* FinanceMeKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		9AF87EE922EF9BF5009E786C /* FinanceMeKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AF87EE822EF9BF5009E786C /* FinanceMeKit.framework */; };
+		9AF87EEA22EF9BF5009E786C /* FinanceMeKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9AF87EE822EF9BF5009E786C /* FinanceMeKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		9A12DBA522EF10E7000226A9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9A35A88722EDD55B0086BD2A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9A12DB9A22EF10E7000226A9;
+			remoteInfo = "FinanceMeExtension-iOS";
+		};
+		9A12DBCC22EF668B000226A9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9A35A88722EDD55B0086BD2A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9A35A8FD22EDDD580086BD2A;
+			remoteInfo = "FinanceMe-tvOS";
+		};
+		9A12DBDA22EF66A9000226A9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9A35A88722EDD55B0086BD2A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9A12DBAF22EF1233000226A9;
+			remoteInfo = "FinanceMe-macOS";
+		};
+		9A12DBF022EF675A000226A9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9A35A88722EDD55B0086BD2A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9A12DBE222EF675A000226A9;
+			remoteInfo = "FinanceMeExtension-macOS";
+		};
+		9A12DC0022EF69A8000226A9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9A35A88722EDD55B0086BD2A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9A35A88E22EDD55B0086BD2A;
+			remoteInfo = "FinanceMe-iOS";
+		};
+		9A12DC0E22EF6A25000226A9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9A35A88722EDD55B0086BD2A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9A35A8FD22EDDD580086BD2A;
+			remoteInfo = "FinanceMe-tvOS";
+		};
+		9A12DC1C22EF6A65000226A9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9A35A88722EDD55B0086BD2A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9A12DBAF22EF1233000226A9;
+			remoteInfo = "FinanceMe-macOS";
+		};
+		9A35A92E22EDE1140086BD2A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9A35A88722EDD55B0086BD2A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9A35A88E22EDD55B0086BD2A;
+			remoteInfo = "FinanceMe-iOS";
+		};
+		9AF87EA022EF91FD009E786C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9A35A88722EDD55B0086BD2A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9AF87E9D22EF91FD009E786C;
+			remoteInfo = "FinanceMe-watchOS WatchKit App";
+		};
+		9AF87EAF22EF91FF009E786C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9A35A88722EDD55B0086BD2A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9AF87EAC22EF91FF009E786C;
+			remoteInfo = "FinanceMe-watchOS WatchKit Extension";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		9A12DBA822EF10E7000226A9 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				9A12DBA722EF10E7000226A9 /* FinanceMeExtension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9A12DBF322EF675A000226A9 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				9A12DBF222EF675A000226A9 /* FinanceMeExtension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9A35A8D922EDD9B90086BD2A /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				9A35A8D822EDD9B90086BD2A /* FinanceMeKit.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9A35A92122EDDFB90086BD2A /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				9A35A92022EDDFB90086BD2A /* FinanceMeKit.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9AF87EC222EF9200009E786C /* Embed Watch Content */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
+			dstSubfolderSpec = 16;
+			files = (
+				9AF87E9F22EF91FD009E786C /* FinanceMeApp.app in Embed Watch Content */,
+			);
+			name = "Embed Watch Content";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9AF87EC522EF9200009E786C /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				9AF87EAE22EF91FF009E786C /* FinanceMeExtension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9AF87EDB22EF9A5D009E786C /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				9AF87EDA22EF9A5D009E786C /* FinanceMeKit.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9AF87EDF22EF9B31009E786C /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				9AF87EDE22EF9B30009E786C /* FinanceMeKit.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9AF87EE322EF9B7D009E786C /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				9AF87EE222EF9B7D009E786C /* FinanceMeKit.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9AF87EE722EF9BEE009E786C /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				9AF87EE622EF9BEE009E786C /* FinanceMeKit.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9AF87EEB22EF9BF6009E786C /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				9AF87EEA22EF9BF5009E786C /* FinanceMeKit.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		9A12DB6722EF0AAE000226A9 /* FinanceMeKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = FinanceMeKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9A12DB6B22EF0B9B000226A9 /* FinanceMe.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = FinanceMe.entitlements; sourceTree = "<group>"; };
+		9A12DB9B22EF10E7000226A9 /* FinanceMeExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = FinanceMeExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		9A12DB9C22EF10E7000226A9 /* NotificationCenter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NotificationCenter.framework; path = System/Library/Frameworks/NotificationCenter.framework; sourceTree = SDKROOT; };
+		9A12DB9F22EF10E7000226A9 /* TodayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayViewController.swift; sourceTree = "<group>"; };
+		9A12DBA222EF10E7000226A9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
+		9A12DBA422EF10E7000226A9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9A12DBB022EF1233000226A9 /* FinanceMe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FinanceMe.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		9A12DBB222EF1233000226A9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		9A12DBB422EF1233000226A9 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		9A12DBB622EF1234000226A9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		9A12DBBC22EF1234000226A9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		9A12DBBE22EF1234000226A9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9A12DBBF22EF1234000226A9 /* FinanceMe.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = FinanceMe.entitlements; sourceTree = "<group>"; };
+		9A12DBC722EF668B000226A9 /* FinanceMeTests-tvOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "FinanceMeTests-tvOS.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		9A12DBC922EF668B000226A9 /* FinanceMeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinanceMeTests.swift; sourceTree = "<group>"; };
+		9A12DBCB22EF668B000226A9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9A12DBD522EF66A9000226A9 /* FinanceMeTests-macOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "FinanceMeTests-macOS.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		9A12DBD722EF66A9000226A9 /* FinanceMeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinanceMeTests.swift; sourceTree = "<group>"; };
+		9A12DBD922EF66A9000226A9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9A12DBE322EF675A000226A9 /* FinanceMeExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = FinanceMeExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		9A12DBE622EF675A000226A9 /* TodayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayViewController.swift; sourceTree = "<group>"; };
+		9A12DBE922EF675A000226A9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/TodayViewController.xib; sourceTree = "<group>"; };
+		9A12DBEB22EF675A000226A9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9A12DBED22EF675A000226A9 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		9A12DBEF22EF675A000226A9 /* FinanceMeExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = FinanceMeExtension.entitlements; sourceTree = "<group>"; };
+		9A12DBFB22EF69A8000226A9 /* FinanceMeUITests-iOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "FinanceMeUITests-iOS.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		9A12DBFD22EF69A8000226A9 /* FinanceMeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinanceMeUITests.swift; sourceTree = "<group>"; };
+		9A12DBFF22EF69A8000226A9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9A12DC0922EF6A25000226A9 /* FinanceMeUITests-tvOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "FinanceMeUITests-tvOS.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		9A12DC0B22EF6A25000226A9 /* FinanceMeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinanceMeUITests.swift; sourceTree = "<group>"; };
+		9A12DC0D22EF6A25000226A9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9A12DC1722EF6A65000226A9 /* FinanceMeUITests-macOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "FinanceMeUITests-macOS.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		9A12DC1922EF6A65000226A9 /* FinanceMeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinanceMeUITests.swift; sourceTree = "<group>"; };
+		9A12DC1B22EF6A65000226A9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9A12DC2422EF6C05000226A9 /* FinanceMe-tvOS.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = "FinanceMe-tvOS.xctestplan"; sourceTree = "<group>"; };
+		9A12DC2522EF6C47000226A9 /* FinanceMe-macOS.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = "FinanceMe-macOS.xctestplan"; sourceTree = "<group>"; };
+		9A35A88F22EDD55B0086BD2A /* FinanceMe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FinanceMe.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		9A35A89222EDD55B0086BD2A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		9A35A89422EDD55B0086BD2A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		9A35A89622EDD55B0086BD2A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		9A35A89822EDD55C0086BD2A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		9A35A89E22EDD55C0086BD2A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		9A35A8A022EDD55C0086BD2A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9A35A8D622EDD9B90086BD2A /* FinanceMeKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = FinanceMeKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9A35A8FE22EDDD580086BD2A /* FinanceMe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FinanceMe.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		9A35A90022EDDD580086BD2A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		9A35A90222EDDD580086BD2A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		9A35A90422EDDD5A0086BD2A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		9A35A90922EDDD5A0086BD2A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9A35A91A22EDDEF60086BD2A /* FinanceMeKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = FinanceMeKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9A35A91E22EDDFB90086BD2A /* FinanceMeKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = FinanceMeKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9A35A92922EDE1140086BD2A /* FinanceMeTests-iOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "FinanceMeTests-iOS.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		9A35A92B22EDE1140086BD2A /* FinanceMeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinanceMeTests.swift; sourceTree = "<group>"; };
+		9A35A92D22EDE1140086BD2A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9A35A93322EDE1A10086BD2A /* FinanceMe-iOS.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = "FinanceMe-iOS.xctestplan"; sourceTree = "<group>"; };
+		9A35A93722EDE54C0086BD2A /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; name = .gitignore; path = ../.gitignore; sourceTree = "<group>"; };
+		9A35A93822EDE5FC0086BD2A /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text; name = .swiftlint.yml; path = ../.swiftlint.yml; sourceTree = "<group>"; };
+		9A35A93922EDE5FC0086BD2A /* ExportOptions.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = ExportOptions.plist; path = ../ExportOptions.plist; sourceTree = "<group>"; };
+		9A35A93A22EDE5FC0086BD2A /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		9A35A93B22EDE5FC0086BD2A /* config.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = config.json; path = ../config.json; sourceTree = "<group>"; };
+		9A35A93C22EDE5FC0086BD2A /* CODE_OF_CONDUCT.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; name = CODE_OF_CONDUCT.md; path = ../CODE_OF_CONDUCT.md; sourceTree = "<group>"; };
+		9A35A93D22EDE5FC0086BD2A /* LICENSE */ = {isa = PBXFileReference; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		9A35A93E22EDE70C0086BD2A /* Brewfile */ = {isa = PBXFileReference; lastKnownFileType = text; name = Brewfile; path = ../Brewfile; sourceTree = "<group>"; };
+		9A35A93F22EDE7B90086BD2A /* .swiftlint_analyze.yml */ = {isa = PBXFileReference; lastKnownFileType = text; name = .swiftlint_analyze.yml; path = ../.swiftlint_analyze.yml; sourceTree = "<group>"; };
+		9A35A94022EDE8320086BD2A /* analyze.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; name = analyze.sh; path = ../analyze.sh; sourceTree = "<group>"; };
+		9AF87E9B22EF91FD009E786C /* FinanceMe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FinanceMe.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		9AF87E9E22EF91FD009E786C /* FinanceMeApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FinanceMeApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		9AF87EA422EF91FD009E786C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
+		9AF87EA622EF91FF009E786C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		9AF87EA822EF91FF009E786C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9AF87EAD22EF91FF009E786C /* FinanceMeExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = FinanceMeExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		9AF87EB222EF91FF009E786C /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		9AF87EB422EF91FF009E786C /* HostingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HostingController.swift; sourceTree = "<group>"; };
+		9AF87EB622EF91FF009E786C /* ExtensionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionDelegate.swift; sourceTree = "<group>"; };
+		9AF87EB822EF91FF009E786C /* ComplicationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComplicationController.swift; sourceTree = "<group>"; };
+		9AF87EBF22EF9200009E786C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9AF87ECB22EF99D5009E786C /* FinanceMeKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = FinanceMeKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9AF87ED022EF99EF009E786C /* FinanceMeKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = FinanceMeKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9AF87ED422EF9A02009E786C /* FinanceMeKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = FinanceMeKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9AF87ED822EF9A5D009E786C /* FinanceMeKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = FinanceMeKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9AF87EDC22EF9B30009E786C /* FinanceMeKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = FinanceMeKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9AF87EE022EF9B7D009E786C /* FinanceMeKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = FinanceMeKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9AF87EE422EF9BEE009E786C /* FinanceMeKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = FinanceMeKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9AF87EE822EF9BF5009E786C /* FinanceMeKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = FinanceMeKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		9A12DB9822EF10E7000226A9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9AF87ED922EF9A5D009E786C /* FinanceMeKit.framework in Frameworks */,
+				9A12DB9D22EF10E7000226A9 /* NotificationCenter.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9A12DBAD22EF1233000226A9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9AF87EDD22EF9B30009E786C /* FinanceMeKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9A12DBC422EF668B000226A9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9A12DBD222EF66A9000226A9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9A12DBE022EF675A000226A9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9AF87EE122EF9B7D009E786C /* FinanceMeKit.framework in Frameworks */,
+				9A12DBE422EF675A000226A9 /* NotificationCenter.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9A12DBF822EF69A8000226A9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9A12DC0622EF6A25000226A9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9A12DC1422EF6A65000226A9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9A35A88C22EDD55B0086BD2A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9A35A8D722EDD9B90086BD2A /* FinanceMeKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9A35A8FB22EDDD580086BD2A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9A35A91F22EDDFB90086BD2A /* FinanceMeKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9A35A92622EDE1140086BD2A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9AF87EAA22EF91FF009E786C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9AF87EE522EF9BEE009E786C /* FinanceMeKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9AF87ECE22EF99D5009E786C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9AF87EE922EF9BF5009E786C /* FinanceMeKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		9A12DB9E22EF10E7000226A9 /* FinanceMeExtension-iOS */ = {
+			isa = PBXGroup;
+			children = (
+				9A12DBA422EF10E7000226A9 /* Info.plist */,
+				9A12DBA122EF10E7000226A9 /* MainInterface.storyboard */,
+				9A12DB9F22EF10E7000226A9 /* TodayViewController.swift */,
+			);
+			path = "FinanceMeExtension-iOS";
+			sourceTree = "<group>";
+		};
+		9A12DBB122EF1233000226A9 /* FinanceMe-macOS */ = {
+			isa = PBXGroup;
+			children = (
+				9A12DBBE22EF1234000226A9 /* Info.plist */,
+				9A12DBBF22EF1234000226A9 /* FinanceMe.entitlements */,
+				9A12DBBB22EF1234000226A9 /* Main.storyboard */,
+				9A12DBB222EF1233000226A9 /* AppDelegate.swift */,
+				9A12DBB422EF1233000226A9 /* ContentView.swift */,
+				9A12DBB622EF1234000226A9 /* Assets.xcassets */,
+			);
+			path = "FinanceMe-macOS";
+			sourceTree = "<group>";
+		};
+		9A12DBC822EF668B000226A9 /* FinanceMeTests-tvOS */ = {
+			isa = PBXGroup;
+			children = (
+				9A12DBCB22EF668B000226A9 /* Info.plist */,
+				9A12DC2422EF6C05000226A9 /* FinanceMe-tvOS.xctestplan */,
+				9A12DBC922EF668B000226A9 /* FinanceMeTests.swift */,
+			);
+			path = "FinanceMeTests-tvOS";
+			sourceTree = "<group>";
+		};
+		9A12DBD622EF66A9000226A9 /* FinanceMeTests-macOS */ = {
+			isa = PBXGroup;
+			children = (
+				9A12DBD922EF66A9000226A9 /* Info.plist */,
+				9A12DC2522EF6C47000226A9 /* FinanceMe-macOS.xctestplan */,
+				9A12DBD722EF66A9000226A9 /* FinanceMeTests.swift */,
+			);
+			path = "FinanceMeTests-macOS";
+			sourceTree = "<group>";
+		};
+		9A12DBE522EF675A000226A9 /* FinanceMeExtension-macOS */ = {
+			isa = PBXGroup;
+			children = (
+				9A12DBEB22EF675A000226A9 /* Info.plist */,
+				9A12DBEF22EF675A000226A9 /* FinanceMeExtension.entitlements */,
+				9A12DBE822EF675A000226A9 /* TodayViewController.xib */,
+				9A12DBE622EF675A000226A9 /* TodayViewController.swift */,
+				9A12DBEC22EF675A000226A9 /* InfoPlist.strings */,
+			);
+			path = "FinanceMeExtension-macOS";
+			sourceTree = "<group>";
+		};
+		9A12DBFC22EF69A8000226A9 /* FinanceMeUITests-iOS */ = {
+			isa = PBXGroup;
+			children = (
+				9A12DBFF22EF69A8000226A9 /* Info.plist */,
+				9A12DBFD22EF69A8000226A9 /* FinanceMeUITests.swift */,
+			);
+			path = "FinanceMeUITests-iOS";
+			sourceTree = "<group>";
+		};
+		9A12DC0A22EF6A25000226A9 /* FinanceMeUITests-tvOS */ = {
+			isa = PBXGroup;
+			children = (
+				9A12DC0D22EF6A25000226A9 /* Info.plist */,
+				9A12DC0B22EF6A25000226A9 /* FinanceMeUITests.swift */,
+			);
+			path = "FinanceMeUITests-tvOS";
+			sourceTree = "<group>";
+		};
+		9A12DC1822EF6A65000226A9 /* FinanceMeUITests-macOS */ = {
+			isa = PBXGroup;
+			children = (
+				9A12DC1B22EF6A65000226A9 /* Info.plist */,
+				9A12DC1922EF6A65000226A9 /* FinanceMeUITests.swift */,
+			);
+			path = "FinanceMeUITests-macOS";
+			sourceTree = "<group>";
+		};
+		9A35A88622EDD55B0086BD2A = {
+			isa = PBXGroup;
+			children = (
+				9A35A93522EDE4DC0086BD2A /* Supporting Files */,
+				9A35A89122EDD55B0086BD2A /* FinanceMe-iOS */,
+				9A12DB9E22EF10E7000226A9 /* FinanceMeExtension-iOS */,
+				9AF87EA222EF91FD009E786C /* FinanceMe-watchOS */,
+				9AF87EB122EF91FF009E786C /* FinanceMeExtension-watchOS */,
+				9A35A8FF22EDDD580086BD2A /* FinanceMe-tvOS */,
+				9A12DBB122EF1233000226A9 /* FinanceMe-macOS */,
+				9A12DBE522EF675A000226A9 /* FinanceMeExtension-macOS */,
+				9A35A92A22EDE1140086BD2A /* FinanceMeTests-iOS */,
+				9A12DBC822EF668B000226A9 /* FinanceMeTests-tvOS */,
+				9A12DBD622EF66A9000226A9 /* FinanceMeTests-macOS */,
+				9A12DBFC22EF69A8000226A9 /* FinanceMeUITests-iOS */,
+				9A12DC0A22EF6A25000226A9 /* FinanceMeUITests-tvOS */,
+				9A12DC1822EF6A65000226A9 /* FinanceMeUITests-macOS */,
+				9A35A89022EDD55B0086BD2A /* Products */,
+				9A35A8BC22EDD8720086BD2A /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		9A35A89022EDD55B0086BD2A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				9A35A88F22EDD55B0086BD2A /* FinanceMe.app */,
+				9A12DB9B22EF10E7000226A9 /* FinanceMeExtension.appex */,
+				9AF87E9B22EF91FD009E786C /* FinanceMe.app */,
+				9AF87E9E22EF91FD009E786C /* FinanceMeApp.app */,
+				9AF87EAD22EF91FF009E786C /* FinanceMeExtension.appex */,
+				9A35A8FE22EDDD580086BD2A /* FinanceMe.app */,
+				9A12DBB022EF1233000226A9 /* FinanceMe.app */,
+				9A12DBE322EF675A000226A9 /* FinanceMeExtension.appex */,
+				9A35A92922EDE1140086BD2A /* FinanceMeTests-iOS.xctest */,
+				9A12DBC722EF668B000226A9 /* FinanceMeTests-tvOS.xctest */,
+				9A12DBD522EF66A9000226A9 /* FinanceMeTests-macOS.xctest */,
+				9A12DBFB22EF69A8000226A9 /* FinanceMeUITests-iOS.xctest */,
+				9A12DC0922EF6A25000226A9 /* FinanceMeUITests-tvOS.xctest */,
+				9A12DC1722EF6A65000226A9 /* FinanceMeUITests-macOS.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		9A35A89122EDD55B0086BD2A /* FinanceMe-iOS */ = {
+			isa = PBXGroup;
+			children = (
+				9A35A8A022EDD55C0086BD2A /* Info.plist */,
+				9A12DB6B22EF0B9B000226A9 /* FinanceMe.entitlements */,
+				9A35A89222EDD55B0086BD2A /* AppDelegate.swift */,
+				9A35A89422EDD55B0086BD2A /* SceneDelegate.swift */,
+				9A35A89D22EDD55C0086BD2A /* LaunchScreen.storyboard */,
+				9A35A89622EDD55B0086BD2A /* ContentView.swift */,
+				9A35A89822EDD55C0086BD2A /* Assets.xcassets */,
+			);
+			path = "FinanceMe-iOS";
+			sourceTree = "<group>";
+		};
+		9A35A8BC22EDD8720086BD2A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9AF87EE822EF9BF5009E786C /* FinanceMeKit.framework */,
+				9AF87EE422EF9BEE009E786C /* FinanceMeKit.framework */,
+				9AF87EE022EF9B7D009E786C /* FinanceMeKit.framework */,
+				9AF87EDC22EF9B30009E786C /* FinanceMeKit.framework */,
+				9AF87ED822EF9A5D009E786C /* FinanceMeKit.framework */,
+				9AF87ED422EF9A02009E786C /* FinanceMeKit.framework */,
+				9AF87ED022EF99EF009E786C /* FinanceMeKit.framework */,
+				9AF87ECB22EF99D5009E786C /* FinanceMeKit.framework */,
+				9A12DB6722EF0AAE000226A9 /* FinanceMeKit.framework */,
+				9A35A91E22EDDFB90086BD2A /* FinanceMeKit.framework */,
+				9A35A91A22EDDEF60086BD2A /* FinanceMeKit.framework */,
+				9A35A8D622EDD9B90086BD2A /* FinanceMeKit.framework */,
+				9A12DB9C22EF10E7000226A9 /* NotificationCenter.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		9A35A8FF22EDDD580086BD2A /* FinanceMe-tvOS */ = {
+			isa = PBXGroup;
+			children = (
+				9A35A90922EDDD5A0086BD2A /* Info.plist */,
+				9A35A90022EDDD580086BD2A /* AppDelegate.swift */,
+				9A35A90222EDDD580086BD2A /* ContentView.swift */,
+				9A35A90422EDDD5A0086BD2A /* Assets.xcassets */,
+			);
+			path = "FinanceMe-tvOS";
+			sourceTree = "<group>";
+		};
+		9A35A92A22EDE1140086BD2A /* FinanceMeTests-iOS */ = {
+			isa = PBXGroup;
+			children = (
+				9A35A92D22EDE1140086BD2A /* Info.plist */,
+				9A35A93322EDE1A10086BD2A /* FinanceMe-iOS.xctestplan */,
+				9A35A92B22EDE1140086BD2A /* FinanceMeTests.swift */,
+			);
+			path = "FinanceMeTests-iOS";
+			sourceTree = "<group>";
+		};
+		9A35A93522EDE4DC0086BD2A /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				9A35A93A22EDE5FC0086BD2A /* README.md */,
+				9A35A93C22EDE5FC0086BD2A /* CODE_OF_CONDUCT.md */,
+				9A35A93D22EDE5FC0086BD2A /* LICENSE */,
+				9A35A93E22EDE70C0086BD2A /* Brewfile */,
+				9A35A93722EDE54C0086BD2A /* .gitignore */,
+				9A35A93822EDE5FC0086BD2A /* .swiftlint.yml */,
+				9A35A93F22EDE7B90086BD2A /* .swiftlint_analyze.yml */,
+				9A35A94022EDE8320086BD2A /* analyze.sh */,
+				9A35A93B22EDE5FC0086BD2A /* config.json */,
+				9A35A93922EDE5FC0086BD2A /* ExportOptions.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		9AF87EA222EF91FD009E786C /* FinanceMe-watchOS */ = {
+			isa = PBXGroup;
+			children = (
+				9AF87EA822EF91FF009E786C /* Info.plist */,
+				9AF87EA322EF91FD009E786C /* Interface.storyboard */,
+				9AF87EA622EF91FF009E786C /* Assets.xcassets */,
+			);
+			path = "FinanceMe-watchOS";
+			sourceTree = "<group>";
+		};
+		9AF87EB122EF91FF009E786C /* FinanceMeExtension-watchOS */ = {
+			isa = PBXGroup;
+			children = (
+				9AF87EBF22EF9200009E786C /* Info.plist */,
+				9AF87EB622EF91FF009E786C /* ExtensionDelegate.swift */,
+				9AF87EB422EF91FF009E786C /* HostingController.swift */,
+				9AF87EB822EF91FF009E786C /* ComplicationController.swift */,
+				9AF87EB222EF91FF009E786C /* ContentView.swift */,
+			);
+			path = "FinanceMeExtension-watchOS";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		9A12DB9A22EF10E7000226A9 /* FinanceMeExtension-iOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9A12DBAB22EF10E7000226A9 /* Build configuration list for PBXNativeTarget "FinanceMeExtension-iOS" */;
+			buildPhases = (
+				9A12DB9722EF10E7000226A9 /* Sources */,
+				9A12DB9822EF10E7000226A9 /* Frameworks */,
+				9A12DB9922EF10E7000226A9 /* Resources */,
+				9AF87EDB22EF9A5D009E786C /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "FinanceMeExtension-iOS";
+			productName = "FinanceMeExtension-iOS";
+			productReference = 9A12DB9B22EF10E7000226A9 /* FinanceMeExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+		9A12DBAF22EF1233000226A9 /* FinanceMe-macOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9A12DBC222EF1234000226A9 /* Build configuration list for PBXNativeTarget "FinanceMe-macOS" */;
+			buildPhases = (
+				9A12DBAC22EF1233000226A9 /* Sources */,
+				9A12DBAD22EF1233000226A9 /* Frameworks */,
+				9A12DBAE22EF1233000226A9 /* Resources */,
+				9A12DBF322EF675A000226A9 /* Embed App Extensions */,
+				9AF87EDF22EF9B31009E786C /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				9A12DBF122EF675A000226A9 /* PBXTargetDependency */,
+			);
+			name = "FinanceMe-macOS";
+			productName = "FinanceMe-macOS";
+			productReference = 9A12DBB022EF1233000226A9 /* FinanceMe.app */;
+			productType = "com.apple.product-type.application";
+		};
+		9A12DBC622EF668B000226A9 /* FinanceMeTests-tvOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9A12DBD022EF668B000226A9 /* Build configuration list for PBXNativeTarget "FinanceMeTests-tvOS" */;
+			buildPhases = (
+				9A12DBC322EF668B000226A9 /* Sources */,
+				9A12DBC422EF668B000226A9 /* Frameworks */,
+				9A12DBC522EF668B000226A9 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				9A12DBCD22EF668B000226A9 /* PBXTargetDependency */,
+			);
+			name = "FinanceMeTests-tvOS";
+			productName = "FinanceMeTests-tvOS";
+			productReference = 9A12DBC722EF668B000226A9 /* FinanceMeTests-tvOS.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		9A12DBD422EF66A9000226A9 /* FinanceMeTests-macOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9A12DBDC22EF66A9000226A9 /* Build configuration list for PBXNativeTarget "FinanceMeTests-macOS" */;
+			buildPhases = (
+				9A12DBD122EF66A9000226A9 /* Sources */,
+				9A12DBD222EF66A9000226A9 /* Frameworks */,
+				9A12DBD322EF66A9000226A9 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				9A12DBDB22EF66A9000226A9 /* PBXTargetDependency */,
+			);
+			name = "FinanceMeTests-macOS";
+			productName = "FinanceMeTests-macOS";
+			productReference = 9A12DBD522EF66A9000226A9 /* FinanceMeTests-macOS.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		9A12DBE222EF675A000226A9 /* FinanceMeExtension-macOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9A12DBF622EF675A000226A9 /* Build configuration list for PBXNativeTarget "FinanceMeExtension-macOS" */;
+			buildPhases = (
+				9A12DBDF22EF675A000226A9 /* Sources */,
+				9A12DBE022EF675A000226A9 /* Frameworks */,
+				9A12DBE122EF675A000226A9 /* Resources */,
+				9AF87EE322EF9B7D009E786C /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "FinanceMeExtension-macOS";
+			productName = "FinanceMeExtension-macOS";
+			productReference = 9A12DBE322EF675A000226A9 /* FinanceMeExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+		9A12DBFA22EF69A8000226A9 /* FinanceMeUITests-iOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9A12DC0422EF69A8000226A9 /* Build configuration list for PBXNativeTarget "FinanceMeUITests-iOS" */;
+			buildPhases = (
+				9A12DBF722EF69A8000226A9 /* Sources */,
+				9A12DBF822EF69A8000226A9 /* Frameworks */,
+				9A12DBF922EF69A8000226A9 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				9A12DC0122EF69A8000226A9 /* PBXTargetDependency */,
+			);
+			name = "FinanceMeUITests-iOS";
+			productName = "FinanceMeUITests-iOS";
+			productReference = 9A12DBFB22EF69A8000226A9 /* FinanceMeUITests-iOS.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+		9A12DC0822EF6A25000226A9 /* FinanceMeUITests-tvOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9A12DC1022EF6A25000226A9 /* Build configuration list for PBXNativeTarget "FinanceMeUITests-tvOS" */;
+			buildPhases = (
+				9A12DC0522EF6A25000226A9 /* Sources */,
+				9A12DC0622EF6A25000226A9 /* Frameworks */,
+				9A12DC0722EF6A25000226A9 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				9A12DC0F22EF6A25000226A9 /* PBXTargetDependency */,
+			);
+			name = "FinanceMeUITests-tvOS";
+			productName = "FinanceMeUITests-tvOS";
+			productReference = 9A12DC0922EF6A25000226A9 /* FinanceMeUITests-tvOS.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+		9A12DC1622EF6A65000226A9 /* FinanceMeUITests-macOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9A12DC1E22EF6A65000226A9 /* Build configuration list for PBXNativeTarget "FinanceMeUITests-macOS" */;
+			buildPhases = (
+				9A12DC1322EF6A65000226A9 /* Sources */,
+				9A12DC1422EF6A65000226A9 /* Frameworks */,
+				9A12DC1522EF6A65000226A9 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				9A12DC1D22EF6A65000226A9 /* PBXTargetDependency */,
+			);
+			name = "FinanceMeUITests-macOS";
+			productName = "FinanceMeUITests-macOS";
+			productReference = 9A12DC1722EF6A65000226A9 /* FinanceMeUITests-macOS.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+		9A35A88E22EDD55B0086BD2A /* FinanceMe-iOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9A35A8A322EDD55C0086BD2A /* Build configuration list for PBXNativeTarget "FinanceMe-iOS" */;
+			buildPhases = (
+				9A35A88B22EDD55B0086BD2A /* Sources */,
+				9A35A88C22EDD55B0086BD2A /* Frameworks */,
+				9A35A88D22EDD55B0086BD2A /* Resources */,
+				9A35A8D922EDD9B90086BD2A /* Embed Frameworks */,
+				9A12DBA822EF10E7000226A9 /* Embed App Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				9A12DBA622EF10E7000226A9 /* PBXTargetDependency */,
+			);
+			name = "FinanceMe-iOS";
+			productName = "FinanceMe-iOS";
+			productReference = 9A35A88F22EDD55B0086BD2A /* FinanceMe.app */;
+			productType = "com.apple.product-type.application";
+		};
+		9A35A8FD22EDDD580086BD2A /* FinanceMe-tvOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9A35A90C22EDDD5A0086BD2A /* Build configuration list for PBXNativeTarget "FinanceMe-tvOS" */;
+			buildPhases = (
+				9A35A8FA22EDDD580086BD2A /* Sources */,
+				9A35A8FB22EDDD580086BD2A /* Frameworks */,
+				9A35A8FC22EDDD580086BD2A /* Resources */,
+				9A35A92122EDDFB90086BD2A /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "FinanceMe-tvOS";
+			productName = "FinanceMe-tvOS";
+			productReference = 9A35A8FE22EDDD580086BD2A /* FinanceMe.app */;
+			productType = "com.apple.product-type.application";
+		};
+		9A35A92822EDE1140086BD2A /* FinanceMeTests-iOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9A35A93222EDE1140086BD2A /* Build configuration list for PBXNativeTarget "FinanceMeTests-iOS" */;
+			buildPhases = (
+				9A35A92522EDE1140086BD2A /* Sources */,
+				9A35A92622EDE1140086BD2A /* Frameworks */,
+				9A35A92722EDE1140086BD2A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				9A35A92F22EDE1140086BD2A /* PBXTargetDependency */,
+			);
+			name = "FinanceMeTests-iOS";
+			productName = "FinanceMeTests-iOS";
+			productReference = 9A35A92922EDE1140086BD2A /* FinanceMeTests-iOS.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		9AF87E9A22EF91FD009E786C /* FinanceMe-watchOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9AF87ECA22EF9200009E786C /* Build configuration list for PBXNativeTarget "FinanceMe-watchOS" */;
+			buildPhases = (
+				9AF87E9922EF91FD009E786C /* Resources */,
+				9AF87EC222EF9200009E786C /* Embed Watch Content */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				9AF87EA122EF91FD009E786C /* PBXTargetDependency */,
+			);
+			name = "FinanceMe-watchOS";
+			productName = "FinanceMe-watchOS";
+			productReference = 9AF87E9B22EF91FD009E786C /* FinanceMe.app */;
+			productType = "com.apple.product-type.application.watchapp2-container";
+		};
+		9AF87E9D22EF91FD009E786C /* FinanceMeApp-watchOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9AF87EC922EF9200009E786C /* Build configuration list for PBXNativeTarget "FinanceMeApp-watchOS" */;
+			buildPhases = (
+				9AF87E9C22EF91FD009E786C /* Resources */,
+				9AF87EC522EF9200009E786C /* Embed App Extensions */,
+				9AF87ECE22EF99D5009E786C /* Frameworks */,
+				9AF87EEB22EF9BF6009E786C /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				9AF87EB022EF91FF009E786C /* PBXTargetDependency */,
+			);
+			name = "FinanceMeApp-watchOS";
+			productName = "FinanceMe-watchOS WatchKit App";
+			productReference = 9AF87E9E22EF91FD009E786C /* FinanceMeApp.app */;
+			productType = "com.apple.product-type.application.watchapp2";
+		};
+		9AF87EAC22EF91FF009E786C /* FinanceMeExtension-watchOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9AF87EC822EF9200009E786C /* Build configuration list for PBXNativeTarget "FinanceMeExtension-watchOS" */;
+			buildPhases = (
+				9AF87EA922EF91FF009E786C /* Sources */,
+				9AF87EAA22EF91FF009E786C /* Frameworks */,
+				9AF87EAB22EF91FF009E786C /* Resources */,
+				9AF87EE722EF9BEE009E786C /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "FinanceMeExtension-watchOS";
+			productName = "FinanceMe-watchOS WatchKit Extension";
+			productReference = 9AF87EAD22EF91FF009E786C /* FinanceMeExtension.appex */;
+			productType = "com.apple.product-type.watchkit2-extension";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		9A35A88722EDD55B0086BD2A /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1100;
+				LastUpgradeCheck = 1100;
+				ORGANIZATIONNAME = Zorkdev;
+				TargetAttributes = {
+					9A12DB9A22EF10E7000226A9 = {
+						CreatedOnToolsVersion = 11.0;
+					};
+					9A12DBAF22EF1233000226A9 = {
+						CreatedOnToolsVersion = 11.0;
+					};
+					9A12DBC622EF668B000226A9 = {
+						CreatedOnToolsVersion = 11.0;
+						TestTargetID = 9A35A8FD22EDDD580086BD2A;
+					};
+					9A12DBD422EF66A9000226A9 = {
+						CreatedOnToolsVersion = 11.0;
+						TestTargetID = 9A12DBAF22EF1233000226A9;
+					};
+					9A12DBE222EF675A000226A9 = {
+						CreatedOnToolsVersion = 11.0;
+					};
+					9A12DBFA22EF69A8000226A9 = {
+						CreatedOnToolsVersion = 11.0;
+						TestTargetID = 9A35A88E22EDD55B0086BD2A;
+					};
+					9A12DC0822EF6A25000226A9 = {
+						CreatedOnToolsVersion = 11.0;
+						TestTargetID = 9A35A8FD22EDDD580086BD2A;
+					};
+					9A12DC1622EF6A65000226A9 = {
+						CreatedOnToolsVersion = 11.0;
+						TestTargetID = 9A12DBAF22EF1233000226A9;
+					};
+					9A35A88E22EDD55B0086BD2A = {
+						CreatedOnToolsVersion = 11.0;
+					};
+					9A35A8FD22EDDD580086BD2A = {
+						CreatedOnToolsVersion = 11.0;
+					};
+					9A35A92822EDE1140086BD2A = {
+						CreatedOnToolsVersion = 11.0;
+						TestTargetID = 9A35A88E22EDD55B0086BD2A;
+					};
+					9AF87E9A22EF91FD009E786C = {
+						CreatedOnToolsVersion = 11.0;
+					};
+					9AF87E9D22EF91FD009E786C = {
+						CreatedOnToolsVersion = 11.0;
+					};
+					9AF87EAC22EF91FF009E786C = {
+						CreatedOnToolsVersion = 11.0;
+					};
+				};
+			};
+			buildConfigurationList = 9A35A88A22EDD55B0086BD2A /* Build configuration list for PBXProject "FinanceMe" */;
+			compatibilityVersion = "Xcode 11.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 9A35A88622EDD55B0086BD2A;
+			productRefGroup = 9A35A89022EDD55B0086BD2A /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				9A35A88E22EDD55B0086BD2A /* FinanceMe-iOS */,
+				9A12DB9A22EF10E7000226A9 /* FinanceMeExtension-iOS */,
+				9AF87E9A22EF91FD009E786C /* FinanceMe-watchOS */,
+				9AF87E9D22EF91FD009E786C /* FinanceMeApp-watchOS */,
+				9AF87EAC22EF91FF009E786C /* FinanceMeExtension-watchOS */,
+				9A35A8FD22EDDD580086BD2A /* FinanceMe-tvOS */,
+				9A12DBAF22EF1233000226A9 /* FinanceMe-macOS */,
+				9A12DBE222EF675A000226A9 /* FinanceMeExtension-macOS */,
+				9A35A92822EDE1140086BD2A /* FinanceMeTests-iOS */,
+				9A12DBC622EF668B000226A9 /* FinanceMeTests-tvOS */,
+				9A12DBD422EF66A9000226A9 /* FinanceMeTests-macOS */,
+				9A12DBFA22EF69A8000226A9 /* FinanceMeUITests-iOS */,
+				9A12DC0822EF6A25000226A9 /* FinanceMeUITests-tvOS */,
+				9A12DC1622EF6A65000226A9 /* FinanceMeUITests-macOS */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		9A12DB9922EF10E7000226A9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9A12DBA322EF10E7000226A9 /* MainInterface.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9A12DBAE22EF1233000226A9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9A12DBBD22EF1234000226A9 /* Main.storyboard in Resources */,
+				9A12DBB722EF1234000226A9 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9A12DBC522EF668B000226A9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9A12DBD322EF66A9000226A9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9A12DBE122EF675A000226A9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9A12DBEA22EF675A000226A9 /* TodayViewController.xib in Resources */,
+				9A12DBEE22EF675A000226A9 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9A12DBF922EF69A8000226A9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9A12DC0722EF6A25000226A9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9A12DC1522EF6A65000226A9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9A35A88D22EDD55B0086BD2A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9A35A89F22EDD55C0086BD2A /* LaunchScreen.storyboard in Resources */,
+				9A35A89922EDD55C0086BD2A /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9A35A8FC22EDDD580086BD2A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9A35A90522EDDD5A0086BD2A /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9A35A92722EDE1140086BD2A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9AF87E9922EF91FD009E786C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9AF87E9C22EF91FD009E786C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9AF87EA722EF91FF009E786C /* Assets.xcassets in Resources */,
+				9AF87EA522EF91FD009E786C /* Interface.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9AF87EAB22EF91FF009E786C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		9A12DB9722EF10E7000226A9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9A12DBA022EF10E7000226A9 /* TodayViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9A12DBAC22EF1233000226A9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9A12DBB522EF1233000226A9 /* ContentView.swift in Sources */,
+				9A12DBB322EF1233000226A9 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9A12DBC322EF668B000226A9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9A12DBCA22EF668B000226A9 /* FinanceMeTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9A12DBD122EF66A9000226A9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9A12DBD822EF66A9000226A9 /* FinanceMeTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9A12DBDF22EF675A000226A9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9A12DBE722EF675A000226A9 /* TodayViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9A12DBF722EF69A8000226A9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9A12DBFE22EF69A8000226A9 /* FinanceMeUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9A12DC0522EF6A25000226A9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9A12DC0C22EF6A25000226A9 /* FinanceMeUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9A12DC1322EF6A65000226A9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9A12DC1A22EF6A65000226A9 /* FinanceMeUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9A35A88B22EDD55B0086BD2A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9A35A89322EDD55B0086BD2A /* AppDelegate.swift in Sources */,
+				9A35A89522EDD55B0086BD2A /* SceneDelegate.swift in Sources */,
+				9A35A89722EDD55B0086BD2A /* ContentView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9A35A8FA22EDDD580086BD2A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9A35A90322EDDD580086BD2A /* ContentView.swift in Sources */,
+				9A35A90122EDDD580086BD2A /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9A35A92522EDE1140086BD2A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9A35A92C22EDE1140086BD2A /* FinanceMeTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9AF87EA922EF91FF009E786C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9AF87EB522EF91FF009E786C /* HostingController.swift in Sources */,
+				9AF87EB922EF91FF009E786C /* ComplicationController.swift in Sources */,
+				9AF87EB322EF91FF009E786C /* ContentView.swift in Sources */,
+				9AF87EB722EF91FF009E786C /* ExtensionDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		9A12DBA622EF10E7000226A9 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			platformFilter = ios;
+			target = 9A12DB9A22EF10E7000226A9 /* FinanceMeExtension-iOS */;
+			targetProxy = 9A12DBA522EF10E7000226A9 /* PBXContainerItemProxy */;
+		};
+		9A12DBCD22EF668B000226A9 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 9A35A8FD22EDDD580086BD2A /* FinanceMe-tvOS */;
+			targetProxy = 9A12DBCC22EF668B000226A9 /* PBXContainerItemProxy */;
+		};
+		9A12DBDB22EF66A9000226A9 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 9A12DBAF22EF1233000226A9 /* FinanceMe-macOS */;
+			targetProxy = 9A12DBDA22EF66A9000226A9 /* PBXContainerItemProxy */;
+		};
+		9A12DBF122EF675A000226A9 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 9A12DBE222EF675A000226A9 /* FinanceMeExtension-macOS */;
+			targetProxy = 9A12DBF022EF675A000226A9 /* PBXContainerItemProxy */;
+		};
+		9A12DC0122EF69A8000226A9 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 9A35A88E22EDD55B0086BD2A /* FinanceMe-iOS */;
+			targetProxy = 9A12DC0022EF69A8000226A9 /* PBXContainerItemProxy */;
+		};
+		9A12DC0F22EF6A25000226A9 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 9A35A8FD22EDDD580086BD2A /* FinanceMe-tvOS */;
+			targetProxy = 9A12DC0E22EF6A25000226A9 /* PBXContainerItemProxy */;
+		};
+		9A12DC1D22EF6A65000226A9 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 9A12DBAF22EF1233000226A9 /* FinanceMe-macOS */;
+			targetProxy = 9A12DC1C22EF6A65000226A9 /* PBXContainerItemProxy */;
+		};
+		9A35A92F22EDE1140086BD2A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 9A35A88E22EDD55B0086BD2A /* FinanceMe-iOS */;
+			targetProxy = 9A35A92E22EDE1140086BD2A /* PBXContainerItemProxy */;
+		};
+		9AF87EA122EF91FD009E786C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 9AF87E9D22EF91FD009E786C /* FinanceMeApp-watchOS */;
+			targetProxy = 9AF87EA022EF91FD009E786C /* PBXContainerItemProxy */;
+		};
+		9AF87EB022EF91FF009E786C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 9AF87EAC22EF91FF009E786C /* FinanceMeExtension-watchOS */;
+			targetProxy = 9AF87EAF22EF91FF009E786C /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		9A12DBA122EF10E7000226A9 /* MainInterface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9A12DBA222EF10E7000226A9 /* Base */,
+			);
+			name = MainInterface.storyboard;
+			sourceTree = "<group>";
+		};
+		9A12DBBB22EF1234000226A9 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9A12DBBC22EF1234000226A9 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		9A12DBE822EF675A000226A9 /* TodayViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9A12DBE922EF675A000226A9 /* Base */,
+			);
+			name = TodayViewController.xib;
+			sourceTree = "<group>";
+		};
+		9A12DBEC22EF675A000226A9 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9A12DBED22EF675A000226A9 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		9A35A89D22EDD55C0086BD2A /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9A35A89E22EDD55C0086BD2A /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		9AF87EA322EF91FD009E786C /* Interface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9AF87EA422EF91FD009E786C /* Base */,
+			);
+			name = Interface.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		9A12DBA922EF10E7000226A9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = WX9VZ58J6W;
+				INFOPLIST_FILE = "FinanceMeExtension-iOS/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.zorkdev.FinanceMe.iOS.TodayExtension;
+				PRODUCT_NAME = FinanceMeExtension;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		9A12DBAA22EF10E7000226A9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = WX9VZ58J6W;
+				INFOPLIST_FILE = "FinanceMeExtension-iOS/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.zorkdev.FinanceMe.iOS.TodayExtension;
+				PRODUCT_NAME = FinanceMeExtension;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		9A12DBC022EF1234000226A9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "FinanceMe-macOS/FinanceMe.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_ASSET_PATHS = "";
+				DEVELOPMENT_TEAM = WX9VZ58J6W;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = "FinanceMe-macOS/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				PRODUCT_BUNDLE_IDENTIFIER = com.inqredi.FinanceMe.macOS;
+				PRODUCT_NAME = FinanceMe;
+				SDKROOT = macosx;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		9A12DBC122EF1234000226A9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "FinanceMe-macOS/FinanceMe.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_ASSET_PATHS = "";
+				DEVELOPMENT_TEAM = WX9VZ58J6W;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = "FinanceMe-macOS/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				PRODUCT_BUNDLE_IDENTIFIER = com.inqredi.FinanceMe.macOS;
+				PRODUCT_NAME = FinanceMe;
+				SDKROOT = macosx;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		9A12DBCE22EF668B000226A9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = WX9VZ58J6W;
+				INFOPLIST_FILE = "FinanceMeTests-tvOS/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.inqredi.FinanceMeTests-tvOS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = appletvos;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 3;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FinanceMe.app/FinanceMe";
+				TVOS_DEPLOYMENT_TARGET = 13.0;
+			};
+			name = Debug;
+		};
+		9A12DBCF22EF668B000226A9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = WX9VZ58J6W;
+				INFOPLIST_FILE = "FinanceMeTests-tvOS/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.inqredi.FinanceMeTests-tvOS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = appletvos;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 3;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FinanceMe.app/FinanceMe";
+				TVOS_DEPLOYMENT_TARGET = 13.0;
+			};
+			name = Release;
+		};
+		9A12DBDD22EF66A9000226A9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = WX9VZ58J6W;
+				INFOPLIST_FILE = "FinanceMeTests-macOS/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.inqredi.FinanceMeTests-macOS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FinanceMe.app/Contents/MacOS/FinanceMe";
+			};
+			name = Debug;
+		};
+		9A12DBDE22EF66A9000226A9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = WX9VZ58J6W;
+				INFOPLIST_FILE = "FinanceMeTests-macOS/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.inqredi.FinanceMeTests-macOS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FinanceMe.app/Contents/MacOS/FinanceMe";
+			};
+			name = Release;
+		};
+		9A12DBF422EF675A000226A9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = "FinanceMeExtension-macOS/FinanceMeExtension.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = WX9VZ58J6W;
+				ENABLE_HARDENED_RUNTIME = YES;
+				INFOPLIST_FILE = "FinanceMeExtension-macOS/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@executable_path/../../../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.inqredi.FinanceMe.macOS.TodayExtension;
+				PRODUCT_NAME = FinanceMeExtension;
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		9A12DBF522EF675A000226A9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = "FinanceMeExtension-macOS/FinanceMeExtension.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = WX9VZ58J6W;
+				ENABLE_HARDENED_RUNTIME = YES;
+				INFOPLIST_FILE = "FinanceMeExtension-macOS/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@executable_path/../../../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.inqredi.FinanceMe.macOS.TodayExtension;
+				PRODUCT_NAME = FinanceMeExtension;
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		9A12DC0222EF69A8000226A9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = WX9VZ58J6W;
+				INFOPLIST_FILE = "FinanceMeUITests-iOS/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.inqredi.FinanceMeUITests-iOS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "FinanceMe-iOS";
+			};
+			name = Debug;
+		};
+		9A12DC0322EF69A8000226A9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = WX9VZ58J6W;
+				INFOPLIST_FILE = "FinanceMeUITests-iOS/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.inqredi.FinanceMeUITests-iOS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "FinanceMe-iOS";
+			};
+			name = Release;
+		};
+		9A12DC1122EF6A25000226A9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = WX9VZ58J6W;
+				INFOPLIST_FILE = "FinanceMeUITests-tvOS/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.inqredi.FinanceMeUITests-tvOS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = appletvos;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 3;
+				TEST_TARGET_NAME = "FinanceMe-tvOS";
+				TVOS_DEPLOYMENT_TARGET = 13.0;
+			};
+			name = Debug;
+		};
+		9A12DC1222EF6A25000226A9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = WX9VZ58J6W;
+				INFOPLIST_FILE = "FinanceMeUITests-tvOS/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.inqredi.FinanceMeUITests-tvOS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = appletvos;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 3;
+				TEST_TARGET_NAME = "FinanceMe-tvOS";
+				TVOS_DEPLOYMENT_TARGET = 13.0;
+			};
+			name = Release;
+		};
+		9A12DC1F22EF6A65000226A9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = WX9VZ58J6W;
+				INFOPLIST_FILE = "FinanceMeUITests-macOS/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.inqredi.FinanceMeUITests-macOS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = "FinanceMe-macOS";
+			};
+			name = Debug;
+		};
+		9A12DC2022EF6A65000226A9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = WX9VZ58J6W;
+				INFOPLIST_FILE = "FinanceMeUITests-macOS/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.inqredi.FinanceMeUITests-macOS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = "FinanceMe-macOS";
+			};
+			name = Release;
+		};
+		9A35A8A122EDD55C0086BD2A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		9A35A8A222EDD55C0086BD2A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		9A35A8A422EDD55C0086BD2A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "FinanceMe-iOS/FinanceMe.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				DERIVE_MACCATALYST_PRODUCT_BUNDLE_IDENTIFIER = YES;
+				DEVELOPMENT_ASSET_PATHS = "";
+				DEVELOPMENT_TEAM = WX9VZ58J6W;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = "FinanceMe-iOS/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.zorkdev.FinanceMe.iOS;
+				PRODUCT_NAME = FinanceMe;
+				SUPPORTS_MACCATALYST = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		9A35A8A522EDD55C0086BD2A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "FinanceMe-iOS/FinanceMe.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				DERIVE_MACCATALYST_PRODUCT_BUNDLE_IDENTIFIER = YES;
+				DEVELOPMENT_ASSET_PATHS = "";
+				DEVELOPMENT_TEAM = WX9VZ58J6W;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = "FinanceMe-iOS/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.zorkdev.FinanceMe.iOS;
+				PRODUCT_NAME = FinanceMe;
+				SUPPORTS_MACCATALYST = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		9A35A90A22EDDD5A0086BD2A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "";
+				DEVELOPMENT_TEAM = WX9VZ58J6W;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = "FinanceMe-tvOS/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.zorkdev.FinanceMe.tvOS;
+				PRODUCT_NAME = FinanceMe;
+				SDKROOT = appletvos;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 13.0;
+			};
+			name = Debug;
+		};
+		9A35A90B22EDDD5A0086BD2A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "";
+				DEVELOPMENT_TEAM = WX9VZ58J6W;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = "FinanceMe-tvOS/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.zorkdev.FinanceMe.tvOS;
+				PRODUCT_NAME = FinanceMe;
+				SDKROOT = appletvos;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 13.0;
+			};
+			name = Release;
+		};
+		9A35A93022EDE1140086BD2A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = WX9VZ58J6W;
+				INFOPLIST_FILE = "FinanceMeTests-iOS/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.zorkdev.FinanceMeTests.iOS;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FinanceMe.app/FinanceMe";
+			};
+			name = Debug;
+		};
+		9A35A93122EDE1140086BD2A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = WX9VZ58J6W;
+				INFOPLIST_FILE = "FinanceMeTests-iOS/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.zorkdev.FinanceMeTests.iOS;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FinanceMe.app/FinanceMe";
+			};
+			name = Release;
+		};
+		9AF87EC022EF9200009E786C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = WX9VZ58J6W;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.inqredi.FinanceMe.watchOS;
+				PRODUCT_NAME = FinanceMe;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		9AF87EC122EF9200009E786C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = WX9VZ58J6W;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.inqredi.FinanceMe.watchOS;
+				PRODUCT_NAME = FinanceMe;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		9AF87EC322EF9200009E786C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = WX9VZ58J6W;
+				IBSC_MODULE = FinanceMeExtension;
+				INFOPLIST_FILE = "FinanceMe-watchOS/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.inqredi.FinanceMe.watchOS.watchkitapp;
+				PRODUCT_NAME = FinanceMeApp;
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 6.0;
+			};
+			name = Debug;
+		};
+		9AF87EC422EF9200009E786C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = WX9VZ58J6W;
+				IBSC_MODULE = FinanceMeExtension;
+				INFOPLIST_FILE = "FinanceMe-watchOS/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.inqredi.FinanceMe.watchOS.watchkitapp;
+				PRODUCT_NAME = FinanceMeApp;
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 6.0;
+			};
+			name = Release;
+		};
+		9AF87EC622EF9200009E786C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "";
+				DEVELOPMENT_TEAM = WX9VZ58J6W;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = "FinanceMeExtension-watchOS/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.inqredi.FinanceMe.watchOS.watchkitapp.watchkitextension;
+				PRODUCT_NAME = FinanceMeExtension;
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 6.0;
+			};
+			name = Debug;
+		};
+		9AF87EC722EF9200009E786C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "";
+				DEVELOPMENT_TEAM = WX9VZ58J6W;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = "FinanceMeExtension-watchOS/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.inqredi.FinanceMe.watchOS.watchkitapp.watchkitextension;
+				PRODUCT_NAME = FinanceMeExtension;
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 6.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		9A12DBAB22EF10E7000226A9 /* Build configuration list for PBXNativeTarget "FinanceMeExtension-iOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9A12DBA922EF10E7000226A9 /* Debug */,
+				9A12DBAA22EF10E7000226A9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9A12DBC222EF1234000226A9 /* Build configuration list for PBXNativeTarget "FinanceMe-macOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9A12DBC022EF1234000226A9 /* Debug */,
+				9A12DBC122EF1234000226A9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9A12DBD022EF668B000226A9 /* Build configuration list for PBXNativeTarget "FinanceMeTests-tvOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9A12DBCE22EF668B000226A9 /* Debug */,
+				9A12DBCF22EF668B000226A9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9A12DBDC22EF66A9000226A9 /* Build configuration list for PBXNativeTarget "FinanceMeTests-macOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9A12DBDD22EF66A9000226A9 /* Debug */,
+				9A12DBDE22EF66A9000226A9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9A12DBF622EF675A000226A9 /* Build configuration list for PBXNativeTarget "FinanceMeExtension-macOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9A12DBF422EF675A000226A9 /* Debug */,
+				9A12DBF522EF675A000226A9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9A12DC0422EF69A8000226A9 /* Build configuration list for PBXNativeTarget "FinanceMeUITests-iOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9A12DC0222EF69A8000226A9 /* Debug */,
+				9A12DC0322EF69A8000226A9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9A12DC1022EF6A25000226A9 /* Build configuration list for PBXNativeTarget "FinanceMeUITests-tvOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9A12DC1122EF6A25000226A9 /* Debug */,
+				9A12DC1222EF6A25000226A9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9A12DC1E22EF6A65000226A9 /* Build configuration list for PBXNativeTarget "FinanceMeUITests-macOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9A12DC1F22EF6A65000226A9 /* Debug */,
+				9A12DC2022EF6A65000226A9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9A35A88A22EDD55B0086BD2A /* Build configuration list for PBXProject "FinanceMe" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9A35A8A122EDD55C0086BD2A /* Debug */,
+				9A35A8A222EDD55C0086BD2A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9A35A8A322EDD55C0086BD2A /* Build configuration list for PBXNativeTarget "FinanceMe-iOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9A35A8A422EDD55C0086BD2A /* Debug */,
+				9A35A8A522EDD55C0086BD2A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9A35A90C22EDDD5A0086BD2A /* Build configuration list for PBXNativeTarget "FinanceMe-tvOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9A35A90A22EDDD5A0086BD2A /* Debug */,
+				9A35A90B22EDDD5A0086BD2A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9A35A93222EDE1140086BD2A /* Build configuration list for PBXNativeTarget "FinanceMeTests-iOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9A35A93022EDE1140086BD2A /* Debug */,
+				9A35A93122EDE1140086BD2A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9AF87EC822EF9200009E786C /* Build configuration list for PBXNativeTarget "FinanceMeExtension-watchOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9AF87EC622EF9200009E786C /* Debug */,
+				9AF87EC722EF9200009E786C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9AF87EC922EF9200009E786C /* Build configuration list for PBXNativeTarget "FinanceMeApp-watchOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9AF87EC322EF9200009E786C /* Debug */,
+				9AF87EC422EF9200009E786C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9AF87ECA22EF9200009E786C /* Build configuration list for PBXNativeTarget "FinanceMe-watchOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9AF87EC022EF9200009E786C /* Debug */,
+				9AF87EC122EF9200009E786C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 9A35A88722EDD55B0086BD2A /* Project object */;
+}
