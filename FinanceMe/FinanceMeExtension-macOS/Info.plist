@@ -38,5 +38,7 @@
 	</dict>
 	<key>NSHumanReadableCopyright</key>
 	<string>Copyright © 2019 Zorkdev. All rights reserved.</string>
+	<key>TeamID</key>
+	<string>$(AppIdentifierPrefix)</string>
 </dict>
 </plist>

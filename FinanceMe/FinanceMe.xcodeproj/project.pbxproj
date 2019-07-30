@@ -15,8 +15,8 @@
 		9A12DBB522EF1233000226A9 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A12DBB422EF1233000226A9 /* ContentView.swift */; };
 		9A12DBB722EF1234000226A9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9A12DBB622EF1234000226A9 /* Assets.xcassets */; };
 		9A12DBBD22EF1234000226A9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9A12DBBB22EF1234000226A9 /* Main.storyboard */; };
-		9A12DBCA22EF668B000226A9 /* FinanceMeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A12DBC922EF668B000226A9 /* FinanceMeTests.swift */; };
-		9A12DBD822EF66A9000226A9 /* FinanceMeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A12DBD722EF66A9000226A9 /* FinanceMeTests.swift */; };
+		9A12DBCA22EF668B000226A9 /* ContentViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A12DBC922EF668B000226A9 /* ContentViewTests.swift */; };
+		9A12DBD822EF66A9000226A9 /* ContentViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A12DBD722EF66A9000226A9 /* ContentViewTests.swift */; };
 		9A12DBE422EF675A000226A9 /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A12DB9C22EF10E7000226A9 /* NotificationCenter.framework */; };
 		9A12DBE722EF675A000226A9 /* TodayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A12DBE622EF675A000226A9 /* TodayViewController.swift */; };
 		9A12DBEA22EF675A000226A9 /* TodayViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9A12DBE822EF675A000226A9 /* TodayViewController.xib */; };
@@ -37,7 +37,19 @@
 		9A35A90522EDDD5A0086BD2A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9A35A90422EDDD5A0086BD2A /* Assets.xcassets */; };
 		9A35A91F22EDDFB90086BD2A /* FinanceMeKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A35A91E22EDDFB90086BD2A /* FinanceMeKit.framework */; };
 		9A35A92022EDDFB90086BD2A /* FinanceMeKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9A35A91E22EDDFB90086BD2A /* FinanceMeKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		9A35A92C22EDE1140086BD2A /* FinanceMeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A35A92B22EDE1140086BD2A /* FinanceMeTests.swift */; };
+		9AADAACE22F62F7800C6C290 /* FinanceMeTestKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AADAACD22F62F7800C6C290 /* FinanceMeTestKit.framework */; };
+		9AADAAEC22F632B500C6C290 /* FinanceMeTestKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AADAAEB22F632B500C6C290 /* FinanceMeTestKit.framework */; };
+		9AADAAEE22F632D600C6C290 /* FinanceMeTestKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AADAAED22F632D600C6C290 /* FinanceMeTestKit.framework */; };
+		9AADAAF322F635DE00C6C290 /* TestConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AE4E4C922F4CD5600B34E81 /* TestConfig.swift */; };
+		9AADAAF522F6360900C6C290 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AADAAF422F6360900C6C290 /* main.swift */; };
+		9AADAAF822F6374100C6C290 /* TestConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AE4E4C922F4CD5600B34E81 /* TestConfig.swift */; };
+		9AADAAFA22F638CC00C6C290 /* TodayViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AADAAF922F638CC00C6C290 /* TodayViewControllerTests.swift */; };
+		9AADAAFB22F638E900C6C290 /* TodayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A12DBE622EF675A000226A9 /* TodayViewController.swift */; };
+		9AE4E4C622F4CC0600B34E81 /* ContentViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AE4E4C522F4CC0600B34E81 /* ContentViewTests.swift */; };
+		9AE4E4C822F4CD2500B34E81 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AE4E4C722F4CD2500B34E81 /* main.swift */; };
+		9AE4E4CA22F4CD5600B34E81 /* TestConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AE4E4C922F4CD5600B34E81 /* TestConfig.swift */; };
+		9AE4E4CD22F4D08800B34E81 /* TodayViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AE4E4CC22F4D08800B34E81 /* TodayViewControllerTests.swift */; };
+		9AE4E4CE22F4D36300B34E81 /* TodayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A12DB9F22EF10E7000226A9 /* TodayViewController.swift */; };
 		9AF87E9F22EF91FD009E786C /* FinanceMeApp.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 9AF87E9E22EF91FD009E786C /* FinanceMeApp.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		9AF87EA522EF91FD009E786C /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9AF87EA322EF91FD009E786C /* Interface.storyboard */; };
 		9AF87EA722EF91FF009E786C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9AF87EA622EF91FF009E786C /* Assets.xcassets */; };
@@ -271,10 +283,10 @@
 		9A12DBBE22EF1234000226A9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9A12DBBF22EF1234000226A9 /* FinanceMe.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = FinanceMe.entitlements; sourceTree = "<group>"; };
 		9A12DBC722EF668B000226A9 /* FinanceMeTests-tvOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "FinanceMeTests-tvOS.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		9A12DBC922EF668B000226A9 /* FinanceMeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinanceMeTests.swift; sourceTree = "<group>"; };
+		9A12DBC922EF668B000226A9 /* ContentViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewTests.swift; sourceTree = "<group>"; };
 		9A12DBCB22EF668B000226A9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9A12DBD522EF66A9000226A9 /* FinanceMeTests-macOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "FinanceMeTests-macOS.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		9A12DBD722EF66A9000226A9 /* FinanceMeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinanceMeTests.swift; sourceTree = "<group>"; };
+		9A12DBD722EF66A9000226A9 /* ContentViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewTests.swift; sourceTree = "<group>"; };
 		9A12DBD922EF66A9000226A9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9A12DBE322EF675A000226A9 /* FinanceMeExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = FinanceMeExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		9A12DBE622EF675A000226A9 /* TodayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayViewController.swift; sourceTree = "<group>"; };
@@ -309,7 +321,6 @@
 		9A35A91A22EDDEF60086BD2A /* FinanceMeKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = FinanceMeKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9A35A91E22EDDFB90086BD2A /* FinanceMeKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = FinanceMeKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9A35A92922EDE1140086BD2A /* FinanceMeTests-iOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "FinanceMeTests-iOS.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		9A35A92B22EDE1140086BD2A /* FinanceMeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinanceMeTests.swift; sourceTree = "<group>"; };
 		9A35A92D22EDE1140086BD2A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9A35A93322EDE1A10086BD2A /* FinanceMe-iOS.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = "FinanceMe-iOS.xctestplan"; sourceTree = "<group>"; };
 		9A35A93722EDE54C0086BD2A /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; name = .gitignore; path = ../.gitignore; sourceTree = "<group>"; };
@@ -322,6 +333,15 @@
 		9A35A93E22EDE70C0086BD2A /* Brewfile */ = {isa = PBXFileReference; lastKnownFileType = text; name = Brewfile; path = ../Brewfile; sourceTree = "<group>"; };
 		9A35A93F22EDE7B90086BD2A /* .swiftlint_analyze.yml */ = {isa = PBXFileReference; lastKnownFileType = text; name = .swiftlint_analyze.yml; path = ../.swiftlint_analyze.yml; sourceTree = "<group>"; };
 		9A35A94022EDE8320086BD2A /* analyze.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; name = analyze.sh; path = ../analyze.sh; sourceTree = "<group>"; };
+		9AADAACD22F62F7800C6C290 /* FinanceMeTestKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = FinanceMeTestKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9AADAAEB22F632B500C6C290 /* FinanceMeTestKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = FinanceMeTestKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9AADAAED22F632D600C6C290 /* FinanceMeTestKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = FinanceMeTestKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9AADAAF422F6360900C6C290 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		9AADAAF922F638CC00C6C290 /* TodayViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayViewControllerTests.swift; sourceTree = "<group>"; };
+		9AE4E4C522F4CC0600B34E81 /* ContentViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewTests.swift; sourceTree = "<group>"; };
+		9AE4E4C722F4CD2500B34E81 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		9AE4E4C922F4CD5600B34E81 /* TestConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestConfig.swift; sourceTree = "<group>"; };
+		9AE4E4CC22F4D08800B34E81 /* TodayViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayViewControllerTests.swift; sourceTree = "<group>"; };
 		9AF87E9B22EF91FD009E786C /* FinanceMe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FinanceMe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9AF87E9E22EF91FD009E786C /* FinanceMeApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FinanceMeApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9AF87EA422EF91FD009E786C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
@@ -365,6 +385,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9AADAAEC22F632B500C6C290 /* FinanceMeTestKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -372,6 +393,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9AADAAEE22F632D600C6C290 /* FinanceMeTestKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -425,6 +447,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9AADAACE22F62F7800C6C290 /* FinanceMeTestKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -475,7 +498,7 @@
 			children = (
 				9A12DBCB22EF668B000226A9 /* Info.plist */,
 				9A12DC2422EF6C05000226A9 /* FinanceMe-tvOS.xctestplan */,
-				9A12DBC922EF668B000226A9 /* FinanceMeTests.swift */,
+				9A12DBC922EF668B000226A9 /* ContentViewTests.swift */,
 			);
 			path = "FinanceMeTests-tvOS";
 			sourceTree = "<group>";
@@ -485,7 +508,8 @@
 			children = (
 				9A12DBD922EF66A9000226A9 /* Info.plist */,
 				9A12DC2522EF6C47000226A9 /* FinanceMe-macOS.xctestplan */,
-				9A12DBD722EF66A9000226A9 /* FinanceMeTests.swift */,
+				9A12DBD722EF66A9000226A9 /* ContentViewTests.swift */,
+				9AADAAF922F638CC00C6C290 /* TodayViewControllerTests.swift */,
 			);
 			path = "FinanceMeTests-macOS";
 			sourceTree = "<group>";
@@ -575,13 +599,9 @@
 		9A35A89122EDD55B0086BD2A /* FinanceMe-iOS */ = {
 			isa = PBXGroup;
 			children = (
-				9A35A8A022EDD55C0086BD2A /* Info.plist */,
-				9A12DB6B22EF0B9B000226A9 /* FinanceMe.entitlements */,
-				9A35A89222EDD55B0086BD2A /* AppDelegate.swift */,
-				9A35A89422EDD55B0086BD2A /* SceneDelegate.swift */,
-				9A35A89D22EDD55C0086BD2A /* LaunchScreen.storyboard */,
-				9A35A89622EDD55B0086BD2A /* ContentView.swift */,
-				9A35A89822EDD55C0086BD2A /* Assets.xcassets */,
+				9AE4E4BE22F4C6FD00B34E81 /* Application */,
+				9AE4E4BF22F4C73700B34E81 /* UI */,
+				9AE4E4C022F4C74300B34E81 /* Resources */,
 			);
 			path = "FinanceMe-iOS";
 			sourceTree = "<group>";
@@ -589,6 +609,9 @@
 		9A35A8BC22EDD8720086BD2A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				9AADAAED22F632D600C6C290 /* FinanceMeTestKit.framework */,
+				9AADAAEB22F632B500C6C290 /* FinanceMeTestKit.framework */,
+				9AADAACD22F62F7800C6C290 /* FinanceMeTestKit.framework */,
 				9AF87EE822EF9BF5009E786C /* FinanceMeKit.framework */,
 				9AF87EE422EF9BEE009E786C /* FinanceMeKit.framework */,
 				9AF87EE022EF9B7D009E786C /* FinanceMeKit.framework */,
@@ -610,6 +633,7 @@
 			isa = PBXGroup;
 			children = (
 				9A35A90922EDDD5A0086BD2A /* Info.plist */,
+				9AADAAF422F6360900C6C290 /* main.swift */,
 				9A35A90022EDDD580086BD2A /* AppDelegate.swift */,
 				9A35A90222EDDD580086BD2A /* ContentView.swift */,
 				9A35A90422EDDD5A0086BD2A /* Assets.xcassets */,
@@ -620,9 +644,11 @@
 		9A35A92A22EDE1140086BD2A /* FinanceMeTests-iOS */ = {
 			isa = PBXGroup;
 			children = (
-				9A35A92D22EDE1140086BD2A /* Info.plist */,
+				9AE4E4C122F4C82C00B34E81 /* Application */,
+				9AE4E4C422F4CBC800B34E81 /* UI */,
+				9AE4E4CB22F4D05E00B34E81 /* Extension */,
 				9A35A93322EDE1A10086BD2A /* FinanceMe-iOS.xctestplan */,
-				9A35A92B22EDE1140086BD2A /* FinanceMeTests.swift */,
+				9A35A92D22EDE1140086BD2A /* Info.plist */,
 			);
 			path = "FinanceMeTests-iOS";
 			sourceTree = "<group>";
@@ -642,6 +668,59 @@
 				9A35A93922EDE5FC0086BD2A /* ExportOptions.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		9AE4E4BE22F4C6FD00B34E81 /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				9A35A8A022EDD55C0086BD2A /* Info.plist */,
+				9A12DB6B22EF0B9B000226A9 /* FinanceMe.entitlements */,
+				9AE4E4C722F4CD2500B34E81 /* main.swift */,
+				9A35A89222EDD55B0086BD2A /* AppDelegate.swift */,
+				9A35A89422EDD55B0086BD2A /* SceneDelegate.swift */,
+				9AE4E4C922F4CD5600B34E81 /* TestConfig.swift */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		9AE4E4BF22F4C73700B34E81 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				9A35A89D22EDD55C0086BD2A /* LaunchScreen.storyboard */,
+				9A35A89622EDD55B0086BD2A /* ContentView.swift */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		9AE4E4C022F4C74300B34E81 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				9A35A89822EDD55C0086BD2A /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		9AE4E4C122F4C82C00B34E81 /* Application */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		9AE4E4C422F4CBC800B34E81 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				9AE4E4C522F4CC0600B34E81 /* ContentViewTests.swift */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		9AE4E4CB22F4D05E00B34E81 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				9AE4E4CC22F4D08800B34E81 /* TodayViewControllerTests.swift */,
+			);
+			path = Extension;
 			sourceTree = "<group>";
 		};
 		9AF87EA222EF91FD009E786C /* FinanceMe-watchOS */ = {
@@ -1141,6 +1220,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9A12DBB522EF1233000226A9 /* ContentView.swift in Sources */,
+				9AADAAF822F6374100C6C290 /* TestConfig.swift in Sources */,
 				9A12DBB322EF1233000226A9 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1149,7 +1229,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9A12DBCA22EF668B000226A9 /* FinanceMeTests.swift in Sources */,
+				9A12DBCA22EF668B000226A9 /* ContentViewTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1157,7 +1237,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9A12DBD822EF66A9000226A9 /* FinanceMeTests.swift in Sources */,
+				9AADAAFA22F638CC00C6C290 /* TodayViewControllerTests.swift in Sources */,
+				9A12DBD822EF66A9000226A9 /* ContentViewTests.swift in Sources */,
+				9AADAAFB22F638E900C6C290 /* TodayViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1199,6 +1281,8 @@
 			files = (
 				9A35A89322EDD55B0086BD2A /* AppDelegate.swift in Sources */,
 				9A35A89522EDD55B0086BD2A /* SceneDelegate.swift in Sources */,
+				9AE4E4CA22F4CD5600B34E81 /* TestConfig.swift in Sources */,
+				9AE4E4C822F4CD2500B34E81 /* main.swift in Sources */,
 				9A35A89722EDD55B0086BD2A /* ContentView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1209,6 +1293,8 @@
 			files = (
 				9A35A90322EDDD580086BD2A /* ContentView.swift in Sources */,
 				9A35A90122EDDD580086BD2A /* AppDelegate.swift in Sources */,
+				9AADAAF522F6360900C6C290 /* main.swift in Sources */,
+				9AADAAF322F635DE00C6C290 /* TestConfig.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1216,7 +1302,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9A35A92C22EDE1140086BD2A /* FinanceMeTests.swift in Sources */,
+				9AE4E4CD22F4D08800B34E81 /* TodayViewControllerTests.swift in Sources */,
+				9AE4E4C622F4CC0600B34E81 /* ContentViewTests.swift in Sources */,
+				9AE4E4CE22F4D36300B34E81 /* TodayViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1798,13 +1886,13 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = "FinanceMe-iOS/FinanceMe.entitlements";
+				CODE_SIGN_ENTITLEMENTS = "FinanceMe-iOS/Application/FinanceMe.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				DERIVE_MACCATALYST_PRODUCT_BUNDLE_IDENTIFIER = YES;
 				DEVELOPMENT_ASSET_PATHS = "";
 				DEVELOPMENT_TEAM = WX9VZ58J6W;
 				ENABLE_PREVIEWS = YES;
-				INFOPLIST_FILE = "FinanceMe-iOS/Info.plist";
+				INFOPLIST_FILE = "FinanceMe-iOS/Application/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1822,13 +1910,13 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = "FinanceMe-iOS/FinanceMe.entitlements";
+				CODE_SIGN_ENTITLEMENTS = "FinanceMe-iOS/Application/FinanceMe.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				DERIVE_MACCATALYST_PRODUCT_BUNDLE_IDENTIFIER = YES;
 				DEVELOPMENT_ASSET_PATHS = "";
 				DEVELOPMENT_TEAM = WX9VZ58J6W;
 				ENABLE_PREVIEWS = YES;
-				INFOPLIST_FILE = "FinanceMe-iOS/Info.plist";
+				INFOPLIST_FILE = "FinanceMe-iOS/Application/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

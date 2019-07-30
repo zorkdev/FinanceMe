@@ -3,7 +3,7 @@ import FinanceMeKit
 
 struct ContentView: View {
     var body: some View {
-        Text(Content.content)
+        Text(AmountViewModel(value: Decimal(string: "10")!).string)
             .frame(maxWidth: .infinity, maxHeight: .infinity)
     }
 }

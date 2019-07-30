@@ -8,15 +8,58 @@
 
 /* Begin PBXBuildFile section */
 		9A35A8D022EDD9020086BD2A /* FinanceMeKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 9A35A8CE22EDD9020086BD2A /* FinanceMeKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		9A35A92322EDE0160086BD2A /* Content.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A35A92222EDE0160086BD2A /* Content.swift */; };
-		9A35A92422EDE0160086BD2A /* Content.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A35A92222EDE0160086BD2A /* Content.swift */; };
-		9A35A95022EDEC320086BD2A /* Content.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A35A92222EDE0160086BD2A /* Content.swift */; };
-		9A35A95E22EDECF10086BD2A /* Content.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A35A92222EDE0160086BD2A /* Content.swift */; };
-		9A35A96622EDEDAF0086BD2A /* FinanceMeKitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A35A96522EDEDAF0086BD2A /* FinanceMeKitTests.swift */; };
 		9A35A96822EDEDAF0086BD2A /* FinanceMeKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A35A8CB22EDD9020086BD2A /* FinanceMeKit.framework */; };
 		9A35A97722EDF0400086BD2A /* FinanceMeKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A35A91222EDDE620086BD2A /* FinanceMeKit.framework */; };
-		9A35A97E22EDF07B0086BD2A /* FinanceMeKitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A35A96522EDEDAF0086BD2A /* FinanceMeKitTests.swift */; };
 		9A35A98822EDF1030086BD2A /* FinanceMeKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A35A95622EDEC680086BD2A /* FinanceMeKit.framework */; };
+		9AADAAC322F62CDF00C6C290 /* FinanceMeTestKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 9AADAAC122F62CDF00C6C290 /* FinanceMeTestKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9AADAAC822F62D5C00C6C290 /* XCTestCase+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AADAAC722F62D5C00C6C290 /* XCTestCase+Extensions.swift */; };
+		9AADAAE922F6329C00C6C290 /* XCTestCase+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AADAAC722F62D5C00C6C290 /* XCTestCase+Extensions.swift */; };
+		9AADAAEA22F6329D00C6C290 /* XCTestCase+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AADAAC722F62D5C00C6C290 /* XCTestCase+Extensions.swift */; };
+		9AADAAF022F6331600C6C290 /* FinanceMeTestKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AADAABF22F62CDF00C6C290 /* FinanceMeTestKit.framework */; };
+		9AADAAF122F6333200C6C290 /* FinanceMeTestKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AADAAD422F6319D00C6C290 /* FinanceMeTestKit.framework */; };
+		9AADAAF222F6333B00C6C290 /* FinanceMeTestKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AADAAE122F631CA00C6C290 /* FinanceMeTestKit.framework */; };
+		9AADAAFD22F63A1800C6C290 /* ConfigService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AADAAFC22F63A1800C6C290 /* ConfigService.swift */; };
+		9AADAAFE22F63A1800C6C290 /* ConfigService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AADAAFC22F63A1800C6C290 /* ConfigService.swift */; };
+		9AADAAFF22F63A1800C6C290 /* ConfigService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AADAAFC22F63A1800C6C290 /* ConfigService.swift */; };
+		9AADAB0022F63A1800C6C290 /* ConfigService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AADAAFC22F63A1800C6C290 /* ConfigService.swift */; };
+		9ABFBC9D22EFD32A00E01785 /* Decimal+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ABFBC9C22EFD32A00E01785 /* Decimal+Extensions.swift */; };
+		9ABFBC9E22EFD32A00E01785 /* Decimal+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ABFBC9C22EFD32A00E01785 /* Decimal+Extensions.swift */; };
+		9ABFBC9F22EFD32A00E01785 /* Decimal+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ABFBC9C22EFD32A00E01785 /* Decimal+Extensions.swift */; };
+		9ABFBCA022EFD32A00E01785 /* Decimal+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ABFBC9C22EFD32A00E01785 /* Decimal+Extensions.swift */; };
+		9ABFBCA322EFD3D100E01785 /* AmountViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ABFBCA222EFD3D100E01785 /* AmountViewModel.swift */; };
+		9ABFBCA422EFD3D100E01785 /* AmountViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ABFBCA222EFD3D100E01785 /* AmountViewModel.swift */; };
+		9ABFBCA522EFD3D100E01785 /* AmountViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ABFBCA222EFD3D100E01785 /* AmountViewModel.swift */; };
+		9ABFBCA622EFD3D100E01785 /* AmountViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ABFBCA222EFD3D100E01785 /* AmountViewModel.swift */; };
+		9ABFBCA822EFD60200E01785 /* Formatters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ABFBCA722EFD60200E01785 /* Formatters.swift */; };
+		9ABFBCA922EFD60200E01785 /* Formatters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ABFBCA722EFD60200E01785 /* Formatters.swift */; };
+		9ABFBCAA22EFD60200E01785 /* Formatters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ABFBCA722EFD60200E01785 /* Formatters.swift */; };
+		9ABFBCAB22EFD60200E01785 /* Formatters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ABFBCA722EFD60200E01785 /* Formatters.swift */; };
+		9ABFBCAF22EFD73900E01785 /* Codable+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ABFBCAE22EFD73900E01785 /* Codable+Extensions.swift */; };
+		9ABFBCB022EFD73900E01785 /* Codable+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ABFBCAE22EFD73900E01785 /* Codable+Extensions.swift */; };
+		9ABFBCB122EFD73900E01785 /* Codable+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ABFBCAE22EFD73900E01785 /* Codable+Extensions.swift */; };
+		9ABFBCB222EFD73900E01785 /* Codable+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ABFBCAE22EFD73900E01785 /* Codable+Extensions.swift */; };
+		9ABFBCB422EFDE4C00E01785 /* NumberFormatter+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ABFBCB322EFDE4C00E01785 /* NumberFormatter+Extensions.swift */; };
+		9ABFBCB522EFDE4C00E01785 /* NumberFormatter+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ABFBCB322EFDE4C00E01785 /* NumberFormatter+Extensions.swift */; };
+		9ABFBCB622EFDE4C00E01785 /* NumberFormatter+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ABFBCB322EFDE4C00E01785 /* NumberFormatter+Extensions.swift */; };
+		9ABFBCB722EFDE4C00E01785 /* NumberFormatter+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ABFBCB322EFDE4C00E01785 /* NumberFormatter+Extensions.swift */; };
+		9AE4E24922F4B95800B34E81 /* DecimalExtensionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AE4E24822F4B95800B34E81 /* DecimalExtensionsTests.swift */; };
+		9AE4E24A22F4B95800B34E81 /* DecimalExtensionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AE4E24822F4B95800B34E81 /* DecimalExtensionsTests.swift */; };
+		9AE4E24B22F4B95800B34E81 /* DecimalExtensionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AE4E24822F4B95800B34E81 /* DecimalExtensionsTests.swift */; };
+		9AE4E24E22F4BAD300B34E81 /* NumberFormatterExtensionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AE4E24D22F4BAD300B34E81 /* NumberFormatterExtensionsTests.swift */; };
+		9AE4E24F22F4BAD300B34E81 /* NumberFormatterExtensionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AE4E24D22F4BAD300B34E81 /* NumberFormatterExtensionsTests.swift */; };
+		9AE4E25022F4BAD300B34E81 /* NumberFormatterExtensionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AE4E24D22F4BAD300B34E81 /* NumberFormatterExtensionsTests.swift */; };
+		9AE4E25122F4BB2000B34E81 /* FinanceMeKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 9A35A8CE22EDD9020086BD2A /* FinanceMeKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9AE4E25222F4BB2100B34E81 /* FinanceMeKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 9A35A8CE22EDD9020086BD2A /* FinanceMeKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9AE4E25322F4BB2200B34E81 /* FinanceMeKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 9A35A8CE22EDD9020086BD2A /* FinanceMeKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9AE4E25522F4BC3200B34E81 /* CodableExtensionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AE4E25422F4BC3200B34E81 /* CodableExtensionsTests.swift */; };
+		9AE4E25622F4BC3200B34E81 /* CodableExtensionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AE4E25422F4BC3200B34E81 /* CodableExtensionsTests.swift */; };
+		9AE4E25722F4BC3200B34E81 /* CodableExtensionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AE4E25422F4BC3200B34E81 /* CodableExtensionsTests.swift */; };
+		9AE4E4B422F4C36B00B34E81 /* FormattersTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AE4E4B322F4C36B00B34E81 /* FormattersTests.swift */; };
+		9AE4E4B522F4C36B00B34E81 /* FormattersTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AE4E4B322F4C36B00B34E81 /* FormattersTests.swift */; };
+		9AE4E4B622F4C36B00B34E81 /* FormattersTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AE4E4B322F4C36B00B34E81 /* FormattersTests.swift */; };
+		9AE4E4BB22F4C48200B34E81 /* AmountViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AE4E4BA22F4C48200B34E81 /* AmountViewModelTests.swift */; };
+		9AE4E4BC22F4C48200B34E81 /* AmountViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AE4E4BA22F4C48200B34E81 /* AmountViewModelTests.swift */; };
+		9AE4E4BD22F4C48200B34E81 /* AmountViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AE4E4BA22F4C48200B34E81 /* AmountViewModelTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,21 +87,36 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		9A12DC2122EF6AF3000226A9 /* FinanceMeKit-iOS.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; name = "FinanceMeKit-iOS.xctestplan"; path = "../../../../../../System/Volumes/Data/Users/Attila/Dev/FinanceMe/FinanceMeKit/FinanceMeKitTests/FinanceMeKit-iOS.xctestplan"; sourceTree = "<group>"; };
-		9A12DC2222EF6B37000226A9 /* FinanceMeKit-tvOS.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; name = "FinanceMeKit-tvOS.xctestplan"; path = "../../../../../../System/Volumes/Data/Users/Attila/Dev/FinanceMe/FinanceMeKit/FinanceMeKitTests/FinanceMeKit-tvOS.xctestplan"; sourceTree = "<group>"; };
-		9A12DC2322EF6B59000226A9 /* FinanceMeKit-macOS.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; name = "FinanceMeKit-macOS.xctestplan"; path = "../../../../../../System/Volumes/Data/Users/Attila/Dev/FinanceMe/FinanceMeKit/FinanceMeKitTests/FinanceMeKit-macOS.xctestplan"; sourceTree = "<group>"; };
+		9A12DC2122EF6AF3000226A9 /* FinanceMeKit-iOS.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = "FinanceMeKit-iOS.xctestplan"; sourceTree = "<group>"; };
+		9A12DC2222EF6B37000226A9 /* FinanceMeKit-tvOS.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = "FinanceMeKit-tvOS.xctestplan"; sourceTree = "<group>"; };
+		9A12DC2322EF6B59000226A9 /* FinanceMeKit-macOS.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = "FinanceMeKit-macOS.xctestplan"; sourceTree = "<group>"; };
 		9A35A8CB22EDD9020086BD2A /* FinanceMeKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = FinanceMeKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9A35A8CE22EDD9020086BD2A /* FinanceMeKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FinanceMeKit.h; sourceTree = "<group>"; };
 		9A35A8CF22EDD9020086BD2A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9A35A91222EDDE620086BD2A /* FinanceMeKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = FinanceMeKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		9A35A92222EDE0160086BD2A /* Content.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Content.swift; sourceTree = "<group>"; };
 		9A35A94822EDEB590086BD2A /* FinanceMeKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = FinanceMeKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9A35A95622EDEC680086BD2A /* FinanceMeKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = FinanceMeKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9A35A96322EDEDAF0086BD2A /* FinanceMeKitTests-iOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "FinanceMeKitTests-iOS.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		9A35A96522EDEDAF0086BD2A /* FinanceMeKitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinanceMeKitTests.swift; sourceTree = "<group>"; };
 		9A35A96722EDEDAF0086BD2A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9A35A97222EDF0400086BD2A /* FinanceMeKitTests-tvOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "FinanceMeKitTests-tvOS.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9A35A98322EDF1030086BD2A /* FinanceMeKitTests-macOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "FinanceMeKitTests-macOS.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		9AADAABF22F62CDF00C6C290 /* FinanceMeTestKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = FinanceMeTestKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9AADAAC122F62CDF00C6C290 /* FinanceMeTestKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FinanceMeTestKit.h; sourceTree = "<group>"; };
+		9AADAAC222F62CDF00C6C290 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9AADAAC722F62D5C00C6C290 /* XCTestCase+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "XCTestCase+Extensions.swift"; sourceTree = "<group>"; };
+		9AADAAD422F6319D00C6C290 /* FinanceMeTestKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = FinanceMeTestKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9AADAAE122F631CA00C6C290 /* FinanceMeTestKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = FinanceMeTestKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9AADAAFC22F63A1800C6C290 /* ConfigService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigService.swift; sourceTree = "<group>"; };
+		9ABFBC9C22EFD32A00E01785 /* Decimal+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Decimal+Extensions.swift"; sourceTree = "<group>"; };
+		9ABFBCA222EFD3D100E01785 /* AmountViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AmountViewModel.swift; sourceTree = "<group>"; };
+		9ABFBCA722EFD60200E01785 /* Formatters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Formatters.swift; sourceTree = "<group>"; };
+		9ABFBCAE22EFD73900E01785 /* Codable+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Codable+Extensions.swift"; sourceTree = "<group>"; };
+		9ABFBCB322EFDE4C00E01785 /* NumberFormatter+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NumberFormatter+Extensions.swift"; sourceTree = "<group>"; };
+		9AE4E24822F4B95800B34E81 /* DecimalExtensionsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DecimalExtensionsTests.swift; sourceTree = "<group>"; };
+		9AE4E24D22F4BAD300B34E81 /* NumberFormatterExtensionsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberFormatterExtensionsTests.swift; sourceTree = "<group>"; };
+		9AE4E25422F4BC3200B34E81 /* CodableExtensionsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodableExtensionsTests.swift; sourceTree = "<group>"; };
+		9AE4E4B322F4C36B00B34E81 /* FormattersTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormattersTests.swift; sourceTree = "<group>"; };
+		9AE4E4BA22F4C48200B34E81 /* AmountViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AmountViewModelTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +152,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9AADAAF022F6331600C6C290 /* FinanceMeTestKit.framework in Frameworks */,
 				9A35A96822EDEDAF0086BD2A /* FinanceMeKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -102,6 +161,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9AADAAF122F6333200C6C290 /* FinanceMeTestKit.framework in Frameworks */,
 				9A35A97722EDF0400086BD2A /* FinanceMeKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -110,7 +170,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9AADAAF222F6333B00C6C290 /* FinanceMeTestKit.framework in Frameworks */,
 				9A35A98822EDF1030086BD2A /* FinanceMeKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9AADAABC22F62CDF00C6C290 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9AADAAD122F6319D00C6C290 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9AADAADE22F631CA00C6C290 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -121,8 +203,10 @@
 			isa = PBXGroup;
 			children = (
 				9A35A8CD22EDD9020086BD2A /* FinanceMeKit */,
+				9AADAAC022F62CDF00C6C290 /* FinanceMeTestKit */,
 				9A35A96422EDEDAF0086BD2A /* FinanceMeKitTests */,
 				9A35A8CC22EDD9020086BD2A /* Products */,
+				9AADAAEF22F6331600C6C290 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -136,6 +220,9 @@
 				9A35A96322EDEDAF0086BD2A /* FinanceMeKitTests-iOS.xctest */,
 				9A35A97222EDF0400086BD2A /* FinanceMeKitTests-tvOS.xctest */,
 				9A35A98322EDF1030086BD2A /* FinanceMeKitTests-macOS.xctest */,
+				9AADAABF22F62CDF00C6C290 /* FinanceMeTestKit.framework */,
+				9AADAAD422F6319D00C6C290 /* FinanceMeTestKit.framework */,
+				9AADAAE122F631CA00C6C290 /* FinanceMeTestKit.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -144,7 +231,10 @@
 			isa = PBXGroup;
 			children = (
 				9ABFBC9922EFD23B00E01785 /* Framework */,
-				9A35A92222EDE0160086BD2A /* Content.swift */,
+				9ABFBC9A22EFD2F400E01785 /* Platform */,
+				9ABFBCAC22EFD70800E01785 /* Model */,
+				9ABFBCAD22EFD71600E01785 /* Business */,
+				9ABFBCA122EFD3B800E01785 /* UI */,
 			);
 			path = FinanceMeKit;
 			sourceTree = "<group>";
@@ -152,13 +242,33 @@
 		9A35A96422EDEDAF0086BD2A /* FinanceMeKitTests */ = {
 			isa = PBXGroup;
 			children = (
-				9A35A96722EDEDAF0086BD2A /* Info.plist */,
+				9AE4E24622F4B92500B34E81 /* Platform */,
+				9AE4E4B722F4C45000B34E81 /* Model */,
+				9AE4E4B822F4C45C00B34E81 /* Business */,
+				9AE4E4B922F4C46400B34E81 /* UI */,
 				9A12DC2122EF6AF3000226A9 /* FinanceMeKit-iOS.xctestplan */,
 				9A12DC2222EF6B37000226A9 /* FinanceMeKit-tvOS.xctestplan */,
 				9A12DC2322EF6B59000226A9 /* FinanceMeKit-macOS.xctestplan */,
-				9A35A96522EDEDAF0086BD2A /* FinanceMeKitTests.swift */,
+				9A35A96722EDEDAF0086BD2A /* Info.plist */,
 			);
 			path = FinanceMeKitTests;
+			sourceTree = "<group>";
+		};
+		9AADAAC022F62CDF00C6C290 /* FinanceMeTestKit */ = {
+			isa = PBXGroup;
+			children = (
+				9AADAAC222F62CDF00C6C290 /* Info.plist */,
+				9AADAAC122F62CDF00C6C290 /* FinanceMeTestKit.h */,
+				9AADAAC722F62D5C00C6C290 /* XCTestCase+Extensions.swift */,
+			);
+			path = FinanceMeTestKit;
+			sourceTree = "<group>";
+		};
+		9AADAAEF22F6331600C6C290 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		9ABFBC9922EFD23B00E01785 /* Framework */ = {
@@ -168,6 +278,89 @@
 				9A35A8CE22EDD9020086BD2A /* FinanceMeKit.h */,
 			);
 			path = Framework;
+			sourceTree = "<group>";
+		};
+		9ABFBC9A22EFD2F400E01785 /* Platform */ = {
+			isa = PBXGroup;
+			children = (
+				9ABFBC9B22EFD30100E01785 /* Extensions */,
+				9AADAAFC22F63A1800C6C290 /* ConfigService.swift */,
+				9ABFBCA722EFD60200E01785 /* Formatters.swift */,
+			);
+			path = Platform;
+			sourceTree = "<group>";
+		};
+		9ABFBC9B22EFD30100E01785 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				9ABFBC9C22EFD32A00E01785 /* Decimal+Extensions.swift */,
+				9ABFBCB322EFDE4C00E01785 /* NumberFormatter+Extensions.swift */,
+				9ABFBCAE22EFD73900E01785 /* Codable+Extensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		9ABFBCA122EFD3B800E01785 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				9ABFBCA222EFD3D100E01785 /* AmountViewModel.swift */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		9ABFBCAC22EFD70800E01785 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		9ABFBCAD22EFD71600E01785 /* Business */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Business;
+			sourceTree = "<group>";
+		};
+		9AE4E24622F4B92500B34E81 /* Platform */ = {
+			isa = PBXGroup;
+			children = (
+				9AE4E24722F4B92C00B34E81 /* Extensions */,
+				9AE4E4B322F4C36B00B34E81 /* FormattersTests.swift */,
+			);
+			path = Platform;
+			sourceTree = "<group>";
+		};
+		9AE4E24722F4B92C00B34E81 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				9AE4E24822F4B95800B34E81 /* DecimalExtensionsTests.swift */,
+				9AE4E24D22F4BAD300B34E81 /* NumberFormatterExtensionsTests.swift */,
+				9AE4E25422F4BC3200B34E81 /* CodableExtensionsTests.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		9AE4E4B722F4C45000B34E81 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		9AE4E4B822F4C45C00B34E81 /* Business */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Business;
+			sourceTree = "<group>";
+		};
+		9AE4E4B922F4C46400B34E81 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				9AE4E4BA22F4C48200B34E81 /* AmountViewModelTests.swift */,
+			);
+			path = UI;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -185,6 +378,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9AE4E25222F4BB2100B34E81 /* FinanceMeKit.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -192,10 +386,34 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9AE4E25122F4BB2000B34E81 /* FinanceMeKit.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		9A35A95122EDEC680086BD2A /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9AE4E25322F4BB2200B34E81 /* FinanceMeKit.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9AADAABA22F62CDF00C6C290 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9AADAAC322F62CDF00C6C290 /* FinanceMeTestKit.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9AADAACF22F6319D00C6C290 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9AADAADC22F631CA00C6C290 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -335,6 +553,60 @@
 			productReference = 9A35A98322EDF1030086BD2A /* FinanceMeKitTests-macOS.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		9AADAABE22F62CDF00C6C290 /* FinanceMeTestKit-iOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9AADAAC622F62CDF00C6C290 /* Build configuration list for PBXNativeTarget "FinanceMeTestKit-iOS" */;
+			buildPhases = (
+				9AADAABA22F62CDF00C6C290 /* Headers */,
+				9AADAABB22F62CDF00C6C290 /* Sources */,
+				9AADAABC22F62CDF00C6C290 /* Frameworks */,
+				9AADAABD22F62CDF00C6C290 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "FinanceMeTestKit-iOS";
+			productName = FinanceMeTestKit;
+			productReference = 9AADAABF22F62CDF00C6C290 /* FinanceMeTestKit.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		9AADAAD322F6319D00C6C290 /* FinanceMeTestKit-tvOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9AADAAD922F6319D00C6C290 /* Build configuration list for PBXNativeTarget "FinanceMeTestKit-tvOS" */;
+			buildPhases = (
+				9AADAACF22F6319D00C6C290 /* Headers */,
+				9AADAAD022F6319D00C6C290 /* Sources */,
+				9AADAAD122F6319D00C6C290 /* Frameworks */,
+				9AADAAD222F6319D00C6C290 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "FinanceMeTestKit-tvOS";
+			productName = "FinanceMeTestKit-tvOS";
+			productReference = 9AADAAD422F6319D00C6C290 /* FinanceMeTestKit.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		9AADAAE022F631CA00C6C290 /* FinanceMeTestKit-macOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9AADAAE622F631CB00C6C290 /* Build configuration list for PBXNativeTarget "FinanceMeTestKit-macOS" */;
+			buildPhases = (
+				9AADAADC22F631CA00C6C290 /* Headers */,
+				9AADAADD22F631CA00C6C290 /* Sources */,
+				9AADAADE22F631CA00C6C290 /* Frameworks */,
+				9AADAADF22F631CA00C6C290 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "FinanceMeTestKit-macOS";
+			productName = "FinanceMeTestKit-macOS";
+			productReference = 9AADAAE122F631CA00C6C290 /* FinanceMeTestKit.framework */;
+			productType = "com.apple.product-type.framework";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -367,6 +639,17 @@
 					};
 					9A35A98222EDF1030086BD2A = {
 						CreatedOnToolsVersion = 11.0;
+						LastSwiftMigration = 1100;
+					};
+					9AADAABE22F62CDF00C6C290 = {
+						CreatedOnToolsVersion = 11.0;
+						LastSwiftMigration = 1100;
+					};
+					9AADAAD322F6319D00C6C290 = {
+						CreatedOnToolsVersion = 11.0;
+					};
+					9AADAAE022F631CA00C6C290 = {
+						CreatedOnToolsVersion = 11.0;
 					};
 				};
 			};
@@ -387,6 +670,9 @@
 				9A35A94722EDEB590086BD2A /* FinanceMeKit-watchOS */,
 				9A35A91122EDDE620086BD2A /* FinanceMeKit-tvOS */,
 				9A35A95522EDEC680086BD2A /* FinanceMeKit-macOS */,
+				9AADAABE22F62CDF00C6C290 /* FinanceMeTestKit-iOS */,
+				9AADAAD322F6319D00C6C290 /* FinanceMeTestKit-tvOS */,
+				9AADAAE022F631CA00C6C290 /* FinanceMeTestKit-macOS */,
 				9A35A96222EDEDAF0086BD2A /* FinanceMeKitTests-iOS */,
 				9A35A97122EDF0400086BD2A /* FinanceMeKitTests-tvOS */,
 				9A35A98222EDF1030086BD2A /* FinanceMeKitTests-macOS */,
@@ -438,6 +724,27 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		9A35A98122EDF1030086BD2A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9AADAABD22F62CDF00C6C290 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9AADAAD222F6319D00C6C290 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9AADAADF22F631CA00C6C290 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -526,7 +833,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9A35A92322EDE0160086BD2A /* Content.swift in Sources */,
+				9ABFBCA322EFD3D100E01785 /* AmountViewModel.swift in Sources */,
+				9ABFBCB422EFDE4C00E01785 /* NumberFormatter+Extensions.swift in Sources */,
+				9ABFBCA822EFD60200E01785 /* Formatters.swift in Sources */,
+				9AADAAFD22F63A1800C6C290 /* ConfigService.swift in Sources */,
+				9ABFBCAF22EFD73900E01785 /* Codable+Extensions.swift in Sources */,
+				9ABFBC9D22EFD32A00E01785 /* Decimal+Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -534,7 +846,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9A35A92422EDE0160086BD2A /* Content.swift in Sources */,
+				9ABFBCA522EFD3D100E01785 /* AmountViewModel.swift in Sources */,
+				9ABFBCB622EFDE4C00E01785 /* NumberFormatter+Extensions.swift in Sources */,
+				9ABFBCAA22EFD60200E01785 /* Formatters.swift in Sources */,
+				9AADAAFF22F63A1800C6C290 /* ConfigService.swift in Sources */,
+				9ABFBCB122EFD73900E01785 /* Codable+Extensions.swift in Sources */,
+				9ABFBC9F22EFD32A00E01785 /* Decimal+Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -542,7 +859,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9A35A95022EDEC320086BD2A /* Content.swift in Sources */,
+				9ABFBCA422EFD3D100E01785 /* AmountViewModel.swift in Sources */,
+				9ABFBCB522EFDE4C00E01785 /* NumberFormatter+Extensions.swift in Sources */,
+				9ABFBCA922EFD60200E01785 /* Formatters.swift in Sources */,
+				9AADAAFE22F63A1800C6C290 /* ConfigService.swift in Sources */,
+				9ABFBCB022EFD73900E01785 /* Codable+Extensions.swift in Sources */,
+				9ABFBC9E22EFD32A00E01785 /* Decimal+Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -550,7 +872,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9A35A95E22EDECF10086BD2A /* Content.swift in Sources */,
+				9ABFBCA622EFD3D100E01785 /* AmountViewModel.swift in Sources */,
+				9ABFBCB722EFDE4C00E01785 /* NumberFormatter+Extensions.swift in Sources */,
+				9ABFBCAB22EFD60200E01785 /* Formatters.swift in Sources */,
+				9AADAB0022F63A1800C6C290 /* ConfigService.swift in Sources */,
+				9ABFBCB222EFD73900E01785 /* Codable+Extensions.swift in Sources */,
+				9ABFBCA022EFD32A00E01785 /* Decimal+Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -558,7 +885,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9A35A96622EDEDAF0086BD2A /* FinanceMeKitTests.swift in Sources */,
+				9AE4E25522F4BC3200B34E81 /* CodableExtensionsTests.swift in Sources */,
+				9AE4E4B422F4C36B00B34E81 /* FormattersTests.swift in Sources */,
+				9AE4E24E22F4BAD300B34E81 /* NumberFormatterExtensionsTests.swift in Sources */,
+				9AE4E24922F4B95800B34E81 /* DecimalExtensionsTests.swift in Sources */,
+				9AE4E4BB22F4C48200B34E81 /* AmountViewModelTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -566,7 +897,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9A35A97E22EDF07B0086BD2A /* FinanceMeKitTests.swift in Sources */,
+				9AE4E25622F4BC3200B34E81 /* CodableExtensionsTests.swift in Sources */,
+				9AE4E4B522F4C36B00B34E81 /* FormattersTests.swift in Sources */,
+				9AE4E24F22F4BAD300B34E81 /* NumberFormatterExtensionsTests.swift in Sources */,
+				9AE4E24A22F4B95800B34E81 /* DecimalExtensionsTests.swift in Sources */,
+				9AE4E4BC22F4C48200B34E81 /* AmountViewModelTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -574,6 +909,35 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9AE4E25722F4BC3200B34E81 /* CodableExtensionsTests.swift in Sources */,
+				9AE4E4B622F4C36B00B34E81 /* FormattersTests.swift in Sources */,
+				9AE4E25022F4BAD300B34E81 /* NumberFormatterExtensionsTests.swift in Sources */,
+				9AE4E24B22F4B95800B34E81 /* DecimalExtensionsTests.swift in Sources */,
+				9AE4E4BD22F4C48200B34E81 /* AmountViewModelTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9AADAABB22F62CDF00C6C290 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9AADAAC822F62D5C00C6C290 /* XCTestCase+Extensions.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9AADAAD022F6319D00C6C290 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9AADAAE922F6329C00C6C290 /* XCTestCase+Extensions.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9AADAADD22F631CA00C6C290 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9AADAAEA22F6329D00C6C290 /* XCTestCase+Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1015,6 +1379,29 @@
 		9A35A98C22EDF1030086BD2A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = WX9VZ58J6W;
+				INFOPLIST_FILE = FinanceMeKitTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				PRODUCT_BUNDLE_IDENTIFIER = com.zorkdev.FinanceMeKitTests.macOS;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		9A35A98D22EDF1030086BD2A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = WX9VZ58J6W;
@@ -1030,24 +1417,165 @@
 				SDKROOT = macosx;
 				SWIFT_VERSION = 5.0;
 			};
+			name = Release;
+		};
+		9AADAAC422F62CDF00C6C290 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = WX9VZ58J6W;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = "$(PLATFORM_DIR)/Developer/Library/Frameworks";
+				INFOPLIST_FILE = FinanceMeTestKit/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.zorkdev.FinanceMeTestKit.iOS;
+				PRODUCT_NAME = FinanceMeTestKit;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
 			name = Debug;
 		};
-		9A35A98D22EDF1030086BD2A /* Release */ = {
+		9AADAAC522F62CDF00C6C290 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = WX9VZ58J6W;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = "$(PLATFORM_DIR)/Developer/Library/Frameworks";
+				INFOPLIST_FILE = FinanceMeTestKit/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.zorkdev.FinanceMeTestKit.iOS;
+				PRODUCT_NAME = FinanceMeTestKit;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		9AADAADA22F6319D00C6C290 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = WX9VZ58J6W;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = "$(PLATFORM_DIR)/Developer/Library/Frameworks";
+				INFOPLIST_FILE = FinanceMeTestKit/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.zorkdev.FinanceMeTestKit.tvOS;
+				PRODUCT_NAME = FinanceMeTestKit;
+				SDKROOT = appletvos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 13.0;
+			};
+			name = Debug;
+		};
+		9AADAADB22F6319D00C6C290 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = WX9VZ58J6W;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = "$(PLATFORM_DIR)/Developer/Library/Frameworks";
+				INFOPLIST_FILE = FinanceMeTestKit/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.zorkdev.FinanceMeTestKit.tvOS;
+				PRODUCT_NAME = FinanceMeTestKit;
+				SDKROOT = appletvos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 13.0;
+			};
+			name = Release;
+		};
+		9AADAAE722F631CB00C6C290 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
+				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = WX9VZ58J6W;
-				INFOPLIST_FILE = FinanceMeKitTests/Info.plist;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = "$(PLATFORM_DIR)/Developer/Library/Frameworks";
+				INFOPLIST_FILE = FinanceMeTestKit/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
-					"@loader_path/../Frameworks",
+					"@loader_path/Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.15;
-				PRODUCT_BUNDLE_IDENTIFIER = com.zorkdev.FinanceMeKitTests.macOS;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.zorkdev.FinanceMeTestKit.macOS;
+				PRODUCT_NAME = FinanceMeTestKit;
 				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		9AADAAE822F631CB00C6C290 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = WX9VZ58J6W;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = "$(PLATFORM_DIR)/Developer/Library/Frameworks";
+				INFOPLIST_FILE = FinanceMeTestKit/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				PRODUCT_BUNDLE_IDENTIFIER = com.zorkdev.FinanceMeTestKit.macOS;
+				PRODUCT_NAME = FinanceMeTestKit;
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
@@ -1123,6 +1651,33 @@
 			buildConfigurations = (
 				9A35A98C22EDF1030086BD2A /* Debug */,
 				9A35A98D22EDF1030086BD2A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9AADAAC622F62CDF00C6C290 /* Build configuration list for PBXNativeTarget "FinanceMeTestKit-iOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9AADAAC422F62CDF00C6C290 /* Debug */,
+				9AADAAC522F62CDF00C6C290 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9AADAAD922F6319D00C6C290 /* Build configuration list for PBXNativeTarget "FinanceMeTestKit-tvOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9AADAADA22F6319D00C6C290 /* Debug */,
+				9AADAADB22F6319D00C6C290 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9AADAAE622F631CB00C6C290 /* Build configuration list for PBXNativeTarget "FinanceMeTestKit-macOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9AADAAE722F631CB00C6C290 /* Debug */,
+				9AADAAE822F631CB00C6C290 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

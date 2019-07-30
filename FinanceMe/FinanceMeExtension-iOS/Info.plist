@@ -27,5 +27,7 @@
 		<key>NSExtensionPointIdentifier</key>
 		<string>com.apple.widget-extension</string>
 	</dict>
+	<key>TeamID</key>
+	<string>$(AppIdentifierPrefix)</string>
 </dict>
 </plist>
