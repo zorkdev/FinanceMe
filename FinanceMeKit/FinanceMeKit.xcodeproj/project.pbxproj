@@ -22,6 +22,11 @@
 		9AADAAFE22F63A1800C6C290 /* ConfigService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AADAAFC22F63A1800C6C290 /* ConfigService.swift */; };
 		9AADAAFF22F63A1800C6C290 /* ConfigService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AADAAFC22F63A1800C6C290 /* ConfigService.swift */; };
 		9AADAB0022F63A1800C6C290 /* ConfigService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AADAAFC22F63A1800C6C290 /* ConfigService.swift */; };
+		9AADAB2822F6410600C6C290 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AADAB2722F6410600C6C290 /* main.swift */; };
+		9AADAB3422F6410800C6C290 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9AADAB3222F6410800C6C290 /* LaunchScreen.storyboard */; };
+		9AADAB3C22F643DC00C6C290 /* DefaultConfigServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AADAB3B22F643DC00C6C290 /* DefaultConfigServiceTests.swift */; };
+		9AADAB3D22F643DC00C6C290 /* DefaultConfigServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AADAB3B22F643DC00C6C290 /* DefaultConfigServiceTests.swift */; };
+		9AADAB3E22F643DC00C6C290 /* DefaultConfigServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AADAB3B22F643DC00C6C290 /* DefaultConfigServiceTests.swift */; };
 		9ABFBC9D22EFD32A00E01785 /* Decimal+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ABFBC9C22EFD32A00E01785 /* Decimal+Extensions.swift */; };
 		9ABFBC9E22EFD32A00E01785 /* Decimal+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ABFBC9C22EFD32A00E01785 /* Decimal+Extensions.swift */; };
 		9ABFBC9F22EFD32A00E01785 /* Decimal+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ABFBC9C22EFD32A00E01785 /* Decimal+Extensions.swift */; };
@@ -84,6 +89,13 @@
 			remoteGlobalIDString = 9A35A95522EDEC680086BD2A;
 			remoteInfo = "FinanceMeKit-macOS";
 		};
+		9AADAB3F22F6445E00C6C290 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9A35A8C222EDD9020086BD2A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9AADAB2422F6410600C6C290;
+			remoteInfo = FinanceMeKitTestsHost;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
@@ -107,6 +119,12 @@
 		9AADAAD422F6319D00C6C290 /* FinanceMeTestKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = FinanceMeTestKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9AADAAE122F631CA00C6C290 /* FinanceMeTestKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = FinanceMeTestKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9AADAAFC22F63A1800C6C290 /* ConfigService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigService.swift; sourceTree = "<group>"; };
+		9AADAB2522F6410600C6C290 /* FinanceMeKitTestsHost-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "FinanceMeKitTestsHost-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		9AADAB2722F6410600C6C290 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		9AADAB3322F6410800C6C290 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		9AADAB3522F6410800C6C290 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9AADAB3B22F643DC00C6C290 /* DefaultConfigServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultConfigServiceTests.swift; sourceTree = "<group>"; };
+		9AADAB4122F6452700C6C290 /* FinanceMeKitTestsHost-iOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "FinanceMeKitTestsHost-iOS.entitlements"; sourceTree = "<group>"; };
 		9ABFBC9C22EFD32A00E01785 /* Decimal+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Decimal+Extensions.swift"; sourceTree = "<group>"; };
 		9ABFBCA222EFD3D100E01785 /* AmountViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AmountViewModel.swift; sourceTree = "<group>"; };
 		9ABFBCA722EFD60200E01785 /* Formatters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Formatters.swift; sourceTree = "<group>"; };
@@ -196,6 +214,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		9AADAB2222F6410600C6C290 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -205,6 +230,7 @@
 				9A35A8CD22EDD9020086BD2A /* FinanceMeKit */,
 				9AADAAC022F62CDF00C6C290 /* FinanceMeTestKit */,
 				9A35A96422EDEDAF0086BD2A /* FinanceMeKitTests */,
+				9AADAB2622F6410600C6C290 /* FinanceMeKitTestsHost */,
 				9A35A8CC22EDD9020086BD2A /* Products */,
 				9AADAAEF22F6331600C6C290 /* Frameworks */,
 			);
@@ -223,6 +249,7 @@
 				9AADAABF22F62CDF00C6C290 /* FinanceMeTestKit.framework */,
 				9AADAAD422F6319D00C6C290 /* FinanceMeTestKit.framework */,
 				9AADAAE122F631CA00C6C290 /* FinanceMeTestKit.framework */,
+				9AADAB2522F6410600C6C290 /* FinanceMeKitTestsHost-iOS.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -269,6 +296,17 @@
 			children = (
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		9AADAB2622F6410600C6C290 /* FinanceMeKitTestsHost */ = {
+			isa = PBXGroup;
+			children = (
+				9AADAB3522F6410800C6C290 /* Info.plist */,
+				9AADAB4122F6452700C6C290 /* FinanceMeKitTestsHost-iOS.entitlements */,
+				9AADAB2722F6410600C6C290 /* main.swift */,
+				9AADAB3222F6410800C6C290 /* LaunchScreen.storyboard */,
+			);
+			path = FinanceMeKitTestsHost;
 			sourceTree = "<group>";
 		};
 		9ABFBC9922EFD23B00E01785 /* Framework */ = {
@@ -326,6 +364,7 @@
 			isa = PBXGroup;
 			children = (
 				9AE4E24722F4B92C00B34E81 /* Extensions */,
+				9AADAB3B22F643DC00C6C290 /* DefaultConfigServiceTests.swift */,
 				9AE4E4B322F4C36B00B34E81 /* FormattersTests.swift */,
 			);
 			path = Platform;
@@ -511,6 +550,7 @@
 			);
 			dependencies = (
 				9A35A96A22EDEDAF0086BD2A /* PBXTargetDependency */,
+				9AADAB4022F6445E00C6C290 /* PBXTargetDependency */,
 			);
 			name = "FinanceMeKitTests-iOS";
 			productName = FinanceMeKitTests;
@@ -607,6 +647,23 @@
 			productReference = 9AADAAE122F631CA00C6C290 /* FinanceMeTestKit.framework */;
 			productType = "com.apple.product-type.framework";
 		};
+		9AADAB2422F6410600C6C290 /* FinanceMeKitTestsHost-iOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9AADAB3822F6410800C6C290 /* Build configuration list for PBXNativeTarget "FinanceMeKitTestsHost-iOS" */;
+			buildPhases = (
+				9AADAB2122F6410600C6C290 /* Sources */,
+				9AADAB2222F6410600C6C290 /* Frameworks */,
+				9AADAB2322F6410600C6C290 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "FinanceMeKitTestsHost-iOS";
+			productName = FinanceMeKitTestsHost;
+			productReference = 9AADAB2522F6410600C6C290 /* FinanceMeKitTestsHost-iOS.app */;
+			productType = "com.apple.product-type.application";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -633,6 +690,7 @@
 					};
 					9A35A96222EDEDAF0086BD2A = {
 						CreatedOnToolsVersion = 11.0;
+						TestTargetID = 9AADAB2422F6410600C6C290;
 					};
 					9A35A97122EDF0400086BD2A = {
 						CreatedOnToolsVersion = 11.0;
@@ -649,6 +707,9 @@
 						CreatedOnToolsVersion = 11.0;
 					};
 					9AADAAE022F631CA00C6C290 = {
+						CreatedOnToolsVersion = 11.0;
+					};
+					9AADAB2422F6410600C6C290 = {
 						CreatedOnToolsVersion = 11.0;
 					};
 				};
@@ -676,6 +737,7 @@
 				9A35A96222EDEDAF0086BD2A /* FinanceMeKitTests-iOS */,
 				9A35A97122EDF0400086BD2A /* FinanceMeKitTests-tvOS */,
 				9A35A98222EDF1030086BD2A /* FinanceMeKitTests-macOS */,
+				9AADAB2422F6410600C6C290 /* FinanceMeKitTestsHost-iOS */,
 			);
 		};
 /* End PBXProject section */
@@ -748,6 +810,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9AADAB2322F6410600C6C290 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9AADAB3422F6410800C6C290 /* LaunchScreen.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -888,6 +958,7 @@
 				9AE4E25522F4BC3200B34E81 /* CodableExtensionsTests.swift in Sources */,
 				9AE4E4B422F4C36B00B34E81 /* FormattersTests.swift in Sources */,
 				9AE4E24E22F4BAD300B34E81 /* NumberFormatterExtensionsTests.swift in Sources */,
+				9AADAB3C22F643DC00C6C290 /* DefaultConfigServiceTests.swift in Sources */,
 				9AE4E24922F4B95800B34E81 /* DecimalExtensionsTests.swift in Sources */,
 				9AE4E4BB22F4C48200B34E81 /* AmountViewModelTests.swift in Sources */,
 			);
@@ -900,6 +971,7 @@
 				9AE4E25622F4BC3200B34E81 /* CodableExtensionsTests.swift in Sources */,
 				9AE4E4B522F4C36B00B34E81 /* FormattersTests.swift in Sources */,
 				9AE4E24F22F4BAD300B34E81 /* NumberFormatterExtensionsTests.swift in Sources */,
+				9AADAB3D22F643DC00C6C290 /* DefaultConfigServiceTests.swift in Sources */,
 				9AE4E24A22F4B95800B34E81 /* DecimalExtensionsTests.swift in Sources */,
 				9AE4E4BC22F4C48200B34E81 /* AmountViewModelTests.swift in Sources */,
 			);
@@ -912,6 +984,7 @@
 				9AE4E25722F4BC3200B34E81 /* CodableExtensionsTests.swift in Sources */,
 				9AE4E4B622F4C36B00B34E81 /* FormattersTests.swift in Sources */,
 				9AE4E25022F4BAD300B34E81 /* NumberFormatterExtensionsTests.swift in Sources */,
+				9AADAB3E22F643DC00C6C290 /* DefaultConfigServiceTests.swift in Sources */,
 				9AE4E24B22F4B95800B34E81 /* DecimalExtensionsTests.swift in Sources */,
 				9AE4E4BD22F4C48200B34E81 /* AmountViewModelTests.swift in Sources */,
 			);
@@ -941,6 +1014,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		9AADAB2122F6410600C6C290 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9AADAB2822F6410600C6C290 /* main.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -959,7 +1040,23 @@
 			target = 9A35A95522EDEC680086BD2A /* FinanceMeKit-macOS */;
 			targetProxy = 9A35A98922EDF1030086BD2A /* PBXContainerItemProxy */;
 		};
+		9AADAB4022F6445E00C6C290 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 9AADAB2422F6410600C6C290 /* FinanceMeKitTestsHost-iOS */;
+			targetProxy = 9AADAB3F22F6445E00C6C290 /* PBXContainerItemProxy */;
+		};
 /* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		9AADAB3222F6410800C6C290 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9AADAB3322F6410800C6C290 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		9A35A8D122EDD9020086BD2A /* Debug */ = {
@@ -1315,6 +1412,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FinanceMeKitTestsHost.app/FinanceMeKitTestsHost";
 			};
 			name = Debug;
 		};
@@ -1333,6 +1431,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FinanceMeKitTestsHost.app/FinanceMeKitTestsHost";
 			};
 			name = Release;
 		};
@@ -1580,6 +1679,52 @@
 			};
 			name = Release;
 		};
+		9AADAB3622F6410800C6C290 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "FinanceMeKitTestsHost/FinanceMeKitTestsHost-iOS.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				DERIVE_MACCATALYST_PRODUCT_BUNDLE_IDENTIFIER = YES;
+				DEVELOPMENT_ASSET_PATHS = "";
+				DEVELOPMENT_TEAM = WX9VZ58J6W;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = FinanceMeKitTestsHost/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.zorkdev.FinanceMeKitTestsHost.iOS;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_MACCATALYST = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		9AADAB3722F6410800C6C290 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "FinanceMeKitTestsHost/FinanceMeKitTestsHost-iOS.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				DERIVE_MACCATALYST_PRODUCT_BUNDLE_IDENTIFIER = YES;
+				DEVELOPMENT_ASSET_PATHS = "";
+				DEVELOPMENT_TEAM = WX9VZ58J6W;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = FinanceMeKitTestsHost/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.zorkdev.FinanceMeKitTestsHost.iOS;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_MACCATALYST = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -1678,6 +1823,15 @@
 			buildConfigurations = (
 				9AADAAE722F631CB00C6C290 /* Debug */,
 				9AADAAE822F631CB00C6C290 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9AADAB3822F6410800C6C290 /* Build configuration list for PBXNativeTarget "FinanceMeKitTestsHost-iOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9AADAB3622F6410800C6C290 /* Debug */,
+				9AADAB3722F6410800C6C290 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
