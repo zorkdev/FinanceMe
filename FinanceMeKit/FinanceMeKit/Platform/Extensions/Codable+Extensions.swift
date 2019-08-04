@@ -1,22 +1,28 @@
-public extension Decodable {
-    init(from json: Data) throws {
+public extension JSONDecoder {
+    static var `default`: JSONDecoder {
         let decoder = JSONDecoder()
         decoder.dateDecodingStrategy = .iso8601
-        self = try decoder.decode(Self.self, from: json)
+        return decoder
+    }
+}
+
+public extension Decodable {
+    init(from json: Data) throws {
+        self = try JSONDecoder.default.decode(Self.self, from: json)
     }
 }
 
 public extension Encodable {
     var prettyPrinted: String {
-        guard let data = try? self.jsonEncoded(prettyPrinted: true),
+        guard let data = try? self.jsonEncoded(prettyPrinted: true).get(),
             let string = String(data: data, encoding: .utf8) else { return "nil" }
         return string.replacingOccurrences(of: "\\", with: "")
     }
 
-    func jsonEncoded(prettyPrinted: Bool = false) throws -> Data {
+    func jsonEncoded(prettyPrinted: Bool = false) -> Result<Data, Error> {
         let encoder = JSONEncoder()
         encoder.outputFormatting = prettyPrinted ? .prettyPrinted : []
         encoder.dateEncodingStrategy = .iso8601
-        return try encoder.encode(self)
+        return Result { try encoder.encode(self) }
     }
 }

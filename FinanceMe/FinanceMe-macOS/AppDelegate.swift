@@ -1,5 +1,6 @@
 import Cocoa
 import SwiftUI
+import FinanceMeKit
 
 @NSApplicationMain
 class AppDelegate: NSObject, NSApplicationDelegate {

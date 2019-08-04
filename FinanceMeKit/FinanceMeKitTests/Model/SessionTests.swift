@@ -33,11 +33,11 @@ class SessionTests: XCTestCase {
             }
             """
 
-        do {
-            let data = try value.jsonEncoded(prettyPrinted: true)
+        switch value.jsonEncoded(prettyPrinted: true) {
+        case .success(let data):
             let string = String(data: data, encoding: .utf8)!
             XCTAssertEqual(string, expectedValue)
-        } catch {
+        case .failure(let error):
             XCTFail(error.localizedDescription)
         }
     }

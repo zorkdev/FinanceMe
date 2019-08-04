@@ -1,5 +1,6 @@
 import UIKit
 import SwiftUI
+import FinanceMeKit
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     var window: UIWindow?

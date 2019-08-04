@@ -1,4 +1,5 @@
 import UIKit
+import FinanceMeKit
 
 var appDelegateName: String? = NSStringFromClass(AppDelegate.self)
 

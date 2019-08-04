@@ -10,9 +10,10 @@ public class KeychainDataService: DataService {
     @discardableResult
     public func save(value: Encodable, key: String) -> Result<Void, Error> {
         let data: Data
-        do {
-            data = try value.jsonEncoded()
-        } catch { return .failure(error) }
+        switch value.jsonEncoded() {
+        case .success(let encodedData): data = encodedData
+        case .failure(let error): return .failure(error)
+        }
 
         var query = createQuery(key: key)
         query[kSecValueData] = data

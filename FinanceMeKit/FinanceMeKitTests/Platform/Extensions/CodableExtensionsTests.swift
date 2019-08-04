@@ -7,6 +7,15 @@ class CodableExtensionsTests: XCTestCase {
         var date: Date
     }
 
+    func testDefaultJSONDecoder() {
+        let decoder = JSONDecoder.default
+
+        guard case .iso8601 = decoder.dateDecodingStrategy else {
+            XCTFail("Wrong date decoding strategy.")
+            return
+        }
+    }
+
     func testDecode_Success() {
         let dateString = "2019-01-01T00:00:00Z"
         let date = ISO8601DateFormatter().date(from: dateString)!
@@ -50,17 +59,17 @@ class CodableExtensionsTests: XCTestCase {
         let model = Model(string: "value",
                           date: date)
 
-        do {
-            let data = try model.jsonEncoded()
+        switch model.jsonEncoded() {
+        case .success(let data):
             let string = String(data: data, encoding: .utf8)!
             XCTAssertEqual(string, expectedValue)
-        } catch {
+        case .failure(let error):
             XCTFail(error.localizedDescription)
         }
     }
 
     func testEncode_Failure() {
-        XCTAssertThrowsError(try Double.nan.jsonEncoded())
+        XCTAssertThrowsError(try Double.nan.jsonEncoded().get())
     }
 
     func testEncodePrettyPrinted() {
@@ -72,11 +81,11 @@ class CodableExtensionsTests: XCTestCase {
             }
             """
 
-        do {
-            let data = try dict.jsonEncoded(prettyPrinted: true)
+        switch dict.jsonEncoded(prettyPrinted: true) {
+        case .success(let data):
             let string = String(data: data, encoding: .utf8)!
             XCTAssertEqual(string, expectedValue)
-        } catch {
+        case .failure(let error):
             XCTFail(error.localizedDescription)
         }
     }

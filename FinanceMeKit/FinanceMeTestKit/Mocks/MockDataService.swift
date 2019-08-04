@@ -18,9 +18,8 @@ public class MockDataService: DataService {
 
         if let saveReturnValue = saveReturnValue {
             return saveReturnValue
-        } else {
-            return .success(())
         }
+        return .failure(NoReturnValueProviderError(function: #function))
     }
 
     public func load<T: Decodable>(key: String) -> T? {
@@ -30,9 +29,8 @@ public class MockDataService: DataService {
             let value = loadReturnValues[index] as? T
             loadReturnValues.remove(at: index)
             return value
-        } else {
-            return nil
         }
+        return nil
     }
 
     public func removeAll() {

@@ -3,9 +3,7 @@ public protocol StringRepresentable {
 }
 
 public extension StringRepresentable {
-    static var instanceName: String {
-        return String(describing: self)
-    }
+    static var instanceName: String { String(describing: self) }
 }
 
 extension Array: StringRepresentable {}
