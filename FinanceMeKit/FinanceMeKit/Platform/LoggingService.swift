@@ -1,0 +1,39 @@
+import os.log
+
+public enum LogType: String {
+    case info = "🔵"
+    case error = "🔴"
+}
+
+public protocol LoggingService {
+    func log(title: String, content: String, type: LogType)
+}
+
+public extension LoggingService {
+    func log(title: String, content: String) {
+        log(title: title, content: content, type: .info)
+    }
+}
+
+public struct DefaultLoggingService: LoggingService {
+    private let log: OSLog
+
+    init(configService: ConfigService) {
+        log = OSLog(subsystem: configService.productName, category: "Debug")
+    }
+
+    public func log(title: String, content: String, type: LogType) {
+        let logString = Self.createLogString(title: title, content: content, type: type)
+        os_log("%@", log: log, type: .debug, logString)
+    }
+
+    static func createLogString(title: String, content: String, type: LogType) -> String {
+        """
+
+        \(type.rawValue) ********** \(title) *********
+        \(content)
+        *********************************
+
+        """
+    }
+}

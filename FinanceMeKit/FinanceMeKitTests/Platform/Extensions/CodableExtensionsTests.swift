@@ -52,7 +52,7 @@ class CodableExtensionsTests: XCTestCase {
 
         do {
             let data = try model.jsonEncoded()
-            let string = String(data: data, encoding: .utf8)
+            let string = String(data: data, encoding: .utf8)!
             XCTAssertEqual(string, expectedValue)
         } catch {
             XCTFail(error.localizedDescription)
@@ -74,7 +74,7 @@ class CodableExtensionsTests: XCTestCase {
 
         do {
             let data = try dict.jsonEncoded(prettyPrinted: true)
-            let string = String(data: data, encoding: .utf8)
+            let string = String(data: data, encoding: .utf8)!
             XCTAssertEqual(string, expectedValue)
         } catch {
             XCTFail(error.localizedDescription)
