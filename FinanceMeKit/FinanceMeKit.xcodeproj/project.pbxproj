@@ -176,6 +176,9 @@
 		9AFA47D722F87712003B2992 /* APIsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AFA47D622F87712003B2992 /* APIsTests.swift */; };
 		9AFA47D822F87712003B2992 /* APIsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AFA47D622F87712003B2992 /* APIsTests.swift */; };
 		9AFA47D922F87712003B2992 /* APIsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AFA47D622F87712003B2992 /* APIsTests.swift */; };
+		9AFA47DB22F8A17A003B2992 /* AuthenticationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AFA47DA22F8A17A003B2992 /* AuthenticationService.swift */; };
+		9AFA47DD22F8A660003B2992 /* LAContextAuthenticationServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AFA47DC22F8A660003B2992 /* LAContextAuthenticationServiceTests.swift */; };
+		9AFA47DF22F8A6A9003B2992 /* MockLAContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AFA47DE22F8A6A9003B2992 /* MockLAContext.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -297,6 +300,9 @@
 		9AFA47CE22F87587003B2992 /* URLSessionExtensionsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionExtensionsTests.swift; sourceTree = "<group>"; };
 		9AFA47D222F87663003B2992 /* ErrorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorTests.swift; sourceTree = "<group>"; };
 		9AFA47D622F87712003B2992 /* APIsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIsTests.swift; sourceTree = "<group>"; };
+		9AFA47DA22F8A17A003B2992 /* AuthenticationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationService.swift; sourceTree = "<group>"; };
+		9AFA47DC22F8A660003B2992 /* LAContextAuthenticationServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LAContextAuthenticationServiceTests.swift; sourceTree = "<group>"; };
+		9AFA47DE22F8A6A9003B2992 /* MockLAContext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockLAContext.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -486,6 +492,7 @@
 		9AADABFD22F701DA00C6C290 /* Mocks */ = {
 			isa = PBXGroup;
 			children = (
+				9AFA47DE22F8A6A9003B2992 /* MockLAContext.swift */,
 				9A375B1122F7A55D00E598AB /* MockNetworkRequestable.swift */,
 				9A375B0D22F7A4EF00E598AB /* MockSessionService.swift */,
 				9ADD21CA22F71A94006F98CA /* MockDataService.swift */,
@@ -520,6 +527,7 @@
 			isa = PBXGroup;
 			children = (
 				9ABFBC9B22EFD30100E01785 /* Extensions */,
+				9AFA47DA22F8A17A003B2992 /* AuthenticationService.swift */,
 				9ADD21E722F7248B006F98CA /* NetworkService.swift */,
 				9ADD21D622F71D3F006F98CA /* SessionService.swift */,
 				9AADAC0822F7037E00C6C290 /* DataService.swift */,
@@ -574,6 +582,7 @@
 			isa = PBXGroup;
 			children = (
 				9AE4E24722F4B92C00B34E81 /* Extensions */,
+				9AFA47DC22F8A660003B2992 /* LAContextAuthenticationServiceTests.swift */,
 				9A375B0522F7A44F00E598AB /* DefaultNetworkServiceTests.swift */,
 				9ADD21DB22F720E6006F98CA /* DefaultSessionServiceTests.swift */,
 				9ADD21C622F71A10006F98CA /* StoreableTests.swift */,
@@ -1200,6 +1209,7 @@
 				9ADD21D222F71D11006F98CA /* Session.swift in Sources */,
 				9ABFBC9D22EFD32A00E01785 /* Decimal+Extensions.swift in Sources */,
 				9A375B1A22F7AEF600E598AB /* Data+Extensions.swift in Sources */,
+				9AFA47DB22F8A17A003B2992 /* AuthenticationService.swift in Sources */,
 				9AADAC0E22F7046C00C6C290 /* Error.swift in Sources */,
 				9ADD21ED22F7288B006F98CA /* APIs.swift in Sources */,
 				9AADAC0422F7033B00C6C290 /* StringRepresentable.swift in Sources */,
@@ -1289,6 +1299,7 @@
 				9ADD21E422F722E9006F98CA /* SessionTests.swift in Sources */,
 				9AFA47D722F87712003B2992 /* APIsTests.swift in Sources */,
 				9AE4E25522F4BC3200B34E81 /* CodableExtensionsTests.swift in Sources */,
+				9AFA47DD22F8A660003B2992 /* LAContextAuthenticationServiceTests.swift in Sources */,
 				9ADD21DC22F720E6006F98CA /* DefaultSessionServiceTests.swift in Sources */,
 				9AE4E4B422F4C36B00B34E81 /* FormattersTests.swift in Sources */,
 				9AE4E24E22F4BAD300B34E81 /* NumberFormatterExtensionsTests.swift in Sources */,
@@ -1361,6 +1372,7 @@
 				9A375B0A22F7A4B800E598AB /* MockLoggingService.swift in Sources */,
 				9ADD21E022F721C8006F98CA /* Factory.swift in Sources */,
 				9A375B0E22F7A4EF00E598AB /* MockSessionService.swift in Sources */,
+				9AFA47DF22F8A6A9003B2992 /* MockLAContext.swift in Sources */,
 				9AFA47BD22F84B43003B2992 /* Result+Extensions.swift in Sources */,
 				9AADAAC822F62D5C00C6C290 /* XCTestCase+Extensions.swift in Sources */,
 				9AADAC0022F7020700C6C290 /* MockConfigService.swift in Sources */,
