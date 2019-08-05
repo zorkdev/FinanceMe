@@ -330,6 +330,9 @@
 		9A35A93E22EDE70C0086BD2A /* Brewfile */ = {isa = PBXFileReference; lastKnownFileType = text; name = Brewfile; path = ../Brewfile; sourceTree = "<group>"; };
 		9A35A93F22EDE7B90086BD2A /* .swiftlint_analyze.yml */ = {isa = PBXFileReference; lastKnownFileType = text; name = .swiftlint_analyze.yml; path = ../.swiftlint_analyze.yml; sourceTree = "<group>"; };
 		9A35A94022EDE8320086BD2A /* analyze.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; name = analyze.sh; path = ../analyze.sh; sourceTree = "<group>"; };
+		9AA805AC22F8DC2200B40516 /* FinanceMeExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = FinanceMeExtension.entitlements; sourceTree = "<group>"; };
+		9AA805AD22F8DC4000B40516 /* FinanceMe.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = FinanceMe.entitlements; sourceTree = "<group>"; };
+		9AA805AE22F8DCFF00B40516 /* FinanceMeExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = FinanceMeExtension.entitlements; sourceTree = "<group>"; };
 		9AADAACD22F62F7800C6C290 /* FinanceMeTestKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = FinanceMeTestKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9AADAAEB22F632B500C6C290 /* FinanceMeTestKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = FinanceMeTestKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9AADAAED22F632D600C6C290 /* FinanceMeTestKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = FinanceMeTestKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -470,6 +473,7 @@
 			isa = PBXGroup;
 			children = (
 				9A12DBA422EF10E7000226A9 /* Info.plist */,
+				9AA805AC22F8DC2200B40516 /* FinanceMeExtension.entitlements */,
 				9A12DBA122EF10E7000226A9 /* MainInterface.storyboard */,
 				9A12DB9F22EF10E7000226A9 /* TodayViewController.swift */,
 			);
@@ -628,6 +632,7 @@
 		9A35A8FF22EDDD580086BD2A /* FinanceMe-tvOS */ = {
 			isa = PBXGroup;
 			children = (
+				9AA805AD22F8DC4000B40516 /* FinanceMe.entitlements */,
 				9A35A90922EDDD5A0086BD2A /* Info.plist */,
 				9AADAAF422F6360900C6C290 /* main.swift */,
 				9A35A90022EDDD580086BD2A /* AppDelegate.swift */,
@@ -731,6 +736,7 @@
 		9AF87EB122EF91FF009E786C /* FinanceMeExtension-watchOS */ = {
 			isa = PBXGroup;
 			children = (
+				9AA805AE22F8DCFF00B40516 /* FinanceMeExtension.entitlements */,
 				9AF87EBF22EF9200009E786C /* Info.plist */,
 				9AF87EB622EF91FF009E786C /* ExtensionDelegate.swift */,
 				9AF87EB422EF91FF009E786C /* HostingController.swift */,
@@ -1422,6 +1428,7 @@
 		9A12DBA922EF10E7000226A9 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = "FinanceMeExtension-iOS/FinanceMeExtension.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = WX9VZ58J6W;
 				INFOPLIST_FILE = "FinanceMeExtension-iOS/Info.plist";
@@ -1441,6 +1448,7 @@
 		9A12DBAA22EF10E7000226A9 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = "FinanceMeExtension-iOS/FinanceMeExtension.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = WX9VZ58J6W;
 				INFOPLIST_FILE = "FinanceMeExtension-iOS/Info.plist";
@@ -1475,7 +1483,7 @@
 					"@executable_path/../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.15;
-				PRODUCT_BUNDLE_IDENTIFIER = com.inqredi.FinanceMe;
+				PRODUCT_BUNDLE_IDENTIFIER = com.zorkdev.FinanceMe;
 				PRODUCT_NAME = FinanceMe;
 				SDKROOT = macosx;
 				SWIFT_VERSION = 5.0;
@@ -1500,7 +1508,7 @@
 					"@executable_path/../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.15;
-				PRODUCT_BUNDLE_IDENTIFIER = com.inqredi.FinanceMe;
+				PRODUCT_BUNDLE_IDENTIFIER = com.zorkdev.FinanceMe;
 				PRODUCT_NAME = FinanceMe;
 				SDKROOT = macosx;
 				SWIFT_VERSION = 5.0;
@@ -1519,7 +1527,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.inqredi.FinanceMeTests-tvOS";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.zorkdev.FinanceMeTests-tvOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = appletvos;
 				SWIFT_VERSION = 5.0;
@@ -1541,7 +1549,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.inqredi.FinanceMeTests-tvOS";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.zorkdev.FinanceMeTests-tvOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = appletvos;
 				SWIFT_VERSION = 5.0;
@@ -1564,7 +1572,7 @@
 					"@executable_path/../Frameworks",
 					"@loader_path/../Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.inqredi.FinanceMeTests-macOS";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.zorkdev.FinanceMeTests-macOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
 				SWIFT_VERSION = 5.0;
@@ -1585,7 +1593,7 @@
 					"@executable_path/../Frameworks",
 					"@loader_path/../Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.inqredi.FinanceMeTests-macOS";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.zorkdev.FinanceMeTests-macOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
 				SWIFT_VERSION = 5.0;
@@ -1607,7 +1615,7 @@
 					"@executable_path/../Frameworks",
 					"@executable_path/../../../../Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.inqredi.FinanceMe.TodayExtension;
+				PRODUCT_BUNDLE_IDENTIFIER = com.zorkdev.FinanceMe.TodayExtension;
 				PRODUCT_NAME = FinanceMeExtension;
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
@@ -1629,7 +1637,7 @@
 					"@executable_path/../Frameworks",
 					"@executable_path/../../../../Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.inqredi.FinanceMe.TodayExtension;
+				PRODUCT_BUNDLE_IDENTIFIER = com.zorkdev.FinanceMe.TodayExtension;
 				PRODUCT_NAME = FinanceMeExtension;
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
@@ -1648,7 +1656,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.inqredi.FinanceMeUITests-iOS";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.zorkdev.FinanceMeUITests-iOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -1667,7 +1675,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.inqredi.FinanceMeUITests-iOS";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.zorkdev.FinanceMeUITests-iOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -1686,7 +1694,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.inqredi.FinanceMeUITests-tvOS";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.zorkdev.FinanceMeUITests-tvOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = appletvos;
 				SWIFT_VERSION = 5.0;
@@ -1707,7 +1715,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.inqredi.FinanceMeUITests-tvOS";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.zorkdev.FinanceMeUITests-tvOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = appletvos;
 				SWIFT_VERSION = 5.0;
@@ -1729,7 +1737,7 @@
 					"@executable_path/../Frameworks",
 					"@loader_path/../Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.inqredi.FinanceMeUITests-macOS";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.zorkdev.FinanceMeUITests-macOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
 				SWIFT_VERSION = 5.0;
@@ -1749,7 +1757,7 @@
 					"@executable_path/../Frameworks",
 					"@loader_path/../Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.inqredi.FinanceMeUITests-macOS";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.zorkdev.FinanceMeUITests-macOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
 				SWIFT_VERSION = 5.0;
@@ -1926,6 +1934,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_ENTITLEMENTS = "FinanceMe-tvOS/FinanceMe.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "";
 				DEVELOPMENT_TEAM = WX9VZ58J6W;
@@ -1949,6 +1958,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_ENTITLEMENTS = "FinanceMe-tvOS/FinanceMe.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "";
 				DEVELOPMENT_TEAM = WX9VZ58J6W;
@@ -2014,7 +2024,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = WX9VZ58J6W;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.inqredi.FinanceMe;
+				PRODUCT_BUNDLE_IDENTIFIER = com.zorkdev.FinanceMe;
 				PRODUCT_NAME = FinanceMe;
 				SWIFT_VERSION = 5.0;
 			};
@@ -2027,7 +2037,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = WX9VZ58J6W;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.inqredi.FinanceMe;
+				PRODUCT_BUNDLE_IDENTIFIER = com.zorkdev.FinanceMe;
 				PRODUCT_NAME = FinanceMe;
 				SWIFT_VERSION = 5.0;
 			};
@@ -2046,7 +2056,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.inqredi.FinanceMe.watchkitapp;
+				PRODUCT_BUNDLE_IDENTIFIER = com.zorkdev.FinanceMe.watchkitapp;
 				PRODUCT_NAME = FinanceMeApp;
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
@@ -2069,7 +2079,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.inqredi.FinanceMe.watchkitapp;
+				PRODUCT_BUNDLE_IDENTIFIER = com.zorkdev.FinanceMe.watchkitapp;
 				PRODUCT_NAME = FinanceMeApp;
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
@@ -2083,6 +2093,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CODE_SIGN_ENTITLEMENTS = "FinanceMeExtension-watchOS/FinanceMeExtension.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "";
 				DEVELOPMENT_TEAM = WX9VZ58J6W;
@@ -2093,7 +2104,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.inqredi.FinanceMe.watchkitapp.watchkitextension;
+				PRODUCT_BUNDLE_IDENTIFIER = com.zorkdev.FinanceMe.watchkitapp.watchkitextension;
 				PRODUCT_NAME = FinanceMeExtension;
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
@@ -2107,6 +2118,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CODE_SIGN_ENTITLEMENTS = "FinanceMeExtension-watchOS/FinanceMeExtension.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "";
 				DEVELOPMENT_TEAM = WX9VZ58J6W;
@@ -2117,7 +2129,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.inqredi.FinanceMe.watchkitapp.watchkitextension;
+				PRODUCT_BUNDLE_IDENTIFIER = com.zorkdev.FinanceMe.watchkitapp.watchkitextension;
 				PRODUCT_NAME = FinanceMeExtension;
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;

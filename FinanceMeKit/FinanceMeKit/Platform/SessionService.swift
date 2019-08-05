@@ -1,3 +1,7 @@
+public protocol SessionServiceProvider {
+    var sessionService: SessionService { get }
+}
+
 public protocol SessionService {
     var hasSession: Bool { get }
     var session: Session? { get }

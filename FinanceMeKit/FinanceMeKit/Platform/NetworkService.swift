@@ -1,5 +1,9 @@
 import Combine
 
+public protocol NetworkServiceProvider {
+    var networkService: NetworkService { get }
+}
+
 public enum HTTPMethod: String {
     case post = "POST"
     case get = "GET"

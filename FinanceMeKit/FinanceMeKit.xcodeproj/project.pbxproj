@@ -30,6 +30,18 @@
 		9A375B1B22F7AEF600E598AB /* Data+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A375B1922F7AEF600E598AB /* Data+Extensions.swift */; };
 		9A375B1C22F7AEF600E598AB /* Data+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A375B1922F7AEF600E598AB /* Data+Extensions.swift */; };
 		9A375B1D22F7AEF600E598AB /* Data+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A375B1922F7AEF600E598AB /* Data+Extensions.swift */; };
+		9AA8059722F8BD7C00B40516 /* AppState-iOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AA8059622F8BD7C00B40516 /* AppState-iOS.swift */; };
+		9AA8059922F8BDC700B40516 /* ServiceClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AA8059822F8BDC700B40516 /* ServiceClient.swift */; };
+		9AA8059A22F8BDC700B40516 /* ServiceClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AA8059822F8BDC700B40516 /* ServiceClient.swift */; };
+		9AA8059B22F8BDC700B40516 /* ServiceClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AA8059822F8BDC700B40516 /* ServiceClient.swift */; };
+		9AA8059C22F8BDC700B40516 /* ServiceClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AA8059822F8BDC700B40516 /* ServiceClient.swift */; };
+		9AA805A222F8C17400B40516 /* AppStateTests-iOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AA805A122F8C17400B40516 /* AppStateTests-iOS.swift */; };
+		9AA805A322F8C17A00B40516 /* AppStateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AA8059D22F8C15F00B40516 /* AppStateTests.swift */; };
+		9AA805A422F8C17B00B40516 /* AppStateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AA8059D22F8C15F00B40516 /* AppStateTests.swift */; };
+		9AA805A622F8D01C00B40516 /* MockNetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AA805A522F8D01C00B40516 /* MockNetworkService.swift */; };
+		9AA805A722F8D01C00B40516 /* MockNetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AA805A522F8D01C00B40516 /* MockNetworkService.swift */; };
+		9AA805A822F8D01C00B40516 /* MockNetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AA805A522F8D01C00B40516 /* MockNetworkService.swift */; };
+		9AA805AA22F8D23D00B40516 /* MockAuthenticationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AA805A922F8D23D00B40516 /* MockAuthenticationService.swift */; };
 		9AADAAC322F62CDF00C6C290 /* FinanceMeTestKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 9AADAAC122F62CDF00C6C290 /* FinanceMeTestKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		9AADAAC822F62D5C00C6C290 /* XCTestCase+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AADAAC722F62D5C00C6C290 /* XCTestCase+Extensions.swift */; };
 		9AADAAE922F6329C00C6C290 /* XCTestCase+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AADAAC722F62D5C00C6C290 /* XCTestCase+Extensions.swift */; };
@@ -179,6 +191,9 @@
 		9AFA47DB22F8A17A003B2992 /* AuthenticationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AFA47DA22F8A17A003B2992 /* AuthenticationService.swift */; };
 		9AFA47DD22F8A660003B2992 /* LAContextAuthenticationServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AFA47DC22F8A660003B2992 /* LAContextAuthenticationServiceTests.swift */; };
 		9AFA47DF22F8A6A9003B2992 /* MockLAContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AFA47DE22F8A6A9003B2992 /* MockLAContext.swift */; };
+		9AFA47E222F8B223003B2992 /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AFA47E022F8B223003B2992 /* AppState.swift */; };
+		9AFA47E322F8B223003B2992 /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AFA47E022F8B223003B2992 /* AppState.swift */; };
+		9AFA47E422F8B223003B2992 /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AFA47E022F8B223003B2992 /* AppState.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -246,6 +261,12 @@
 		9A375B1122F7A55D00E598AB /* MockNetworkRequestable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockNetworkRequestable.swift; sourceTree = "<group>"; };
 		9A375B1522F7A92D00E598AB /* Error.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Error.swift; sourceTree = "<group>"; };
 		9A375B1922F7AEF600E598AB /* Data+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Data+Extensions.swift"; sourceTree = "<group>"; };
+		9AA8059622F8BD7C00B40516 /* AppState-iOS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AppState-iOS.swift"; sourceTree = "<group>"; };
+		9AA8059822F8BDC700B40516 /* ServiceClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceClient.swift; sourceTree = "<group>"; };
+		9AA8059D22F8C15F00B40516 /* AppStateTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStateTests.swift; sourceTree = "<group>"; };
+		9AA805A122F8C17400B40516 /* AppStateTests-iOS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AppStateTests-iOS.swift"; sourceTree = "<group>"; };
+		9AA805A522F8D01C00B40516 /* MockNetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockNetworkService.swift; sourceTree = "<group>"; };
+		9AA805A922F8D23D00B40516 /* MockAuthenticationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockAuthenticationService.swift; sourceTree = "<group>"; };
 		9AADAABF22F62CDF00C6C290 /* FinanceMeTestKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = FinanceMeTestKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9AADAAC122F62CDF00C6C290 /* FinanceMeTestKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FinanceMeTestKit.h; sourceTree = "<group>"; };
 		9AADAAC222F62CDF00C6C290 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -303,6 +324,7 @@
 		9AFA47DA22F8A17A003B2992 /* AuthenticationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationService.swift; sourceTree = "<group>"; };
 		9AFA47DC22F8A660003B2992 /* LAContextAuthenticationServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LAContextAuthenticationServiceTests.swift; sourceTree = "<group>"; };
 		9AFA47DE22F8A6A9003B2992 /* MockLAContext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockLAContext.swift; sourceTree = "<group>"; };
+		9AFA47E022F8B223003B2992 /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -492,12 +514,14 @@
 		9AADABFD22F701DA00C6C290 /* Mocks */ = {
 			isa = PBXGroup;
 			children = (
-				9AFA47DE22F8A6A9003B2992 /* MockLAContext.swift */,
+				9AA805A522F8D01C00B40516 /* MockNetworkService.swift */,
 				9A375B1122F7A55D00E598AB /* MockNetworkRequestable.swift */,
 				9A375B0D22F7A4EF00E598AB /* MockSessionService.swift */,
 				9ADD21CA22F71A94006F98CA /* MockDataService.swift */,
 				9A375B0922F7A4B800E598AB /* MockLoggingService.swift */,
 				9AADABFF22F7020700C6C290 /* MockConfigService.swift */,
+				9AA805A922F8D23D00B40516 /* MockAuthenticationService.swift */,
+				9AFA47DE22F8A6A9003B2992 /* MockLAContext.swift */,
 				9ADD21DF22F721C8006F98CA /* Factory.swift */,
 			);
 			path = Mocks;
@@ -527,6 +551,9 @@
 			isa = PBXGroup;
 			children = (
 				9ABFBC9B22EFD30100E01785 /* Extensions */,
+				9AFA47E022F8B223003B2992 /* AppState.swift */,
+				9AA8059622F8BD7C00B40516 /* AppState-iOS.swift */,
+				9AA8059822F8BDC700B40516 /* ServiceClient.swift */,
 				9AFA47DA22F8A17A003B2992 /* AuthenticationService.swift */,
 				9ADD21E722F7248B006F98CA /* NetworkService.swift */,
 				9ADD21D622F71D3F006F98CA /* SessionService.swift */,
@@ -582,6 +609,8 @@
 			isa = PBXGroup;
 			children = (
 				9AE4E24722F4B92C00B34E81 /* Extensions */,
+				9AA8059D22F8C15F00B40516 /* AppStateTests.swift */,
+				9AA805A122F8C17400B40516 /* AppStateTests-iOS.swift */,
 				9AFA47DC22F8A660003B2992 /* LAContextAuthenticationServiceTests.swift */,
 				9A375B0522F7A44F00E598AB /* DefaultNetworkServiceTests.swift */,
 				9ADD21DB22F720E6006F98CA /* DefaultSessionServiceTests.swift */,
@@ -1195,11 +1224,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				9AADAC0922F7037E00C6C290 /* DataService.swift in Sources */,
+				9AA8059722F8BD7C00B40516 /* AppState-iOS.swift in Sources */,
 				9AADABF522F7008300C6C290 /* LoggingService.swift in Sources */,
 				9ABFBCA322EFD3D100E01785 /* AmountViewModel.swift in Sources */,
 				9AFA47C122F85FD3003B2992 /* TestConfig.swift in Sources */,
 				9ABFBCB422EFDE4C00E01785 /* NumberFormatter+Extensions.swift in Sources */,
 				9ABFBCA822EFD60200E01785 /* Formatters.swift in Sources */,
+				9AA8059922F8BDC700B40516 /* ServiceClient.swift in Sources */,
 				9AADAC1322F7052700C6C290 /* KeychainDataService.swift in Sources */,
 				9ADD21E822F7248B006F98CA /* NetworkService.swift in Sources */,
 				9AADAAFD22F63A1800C6C290 /* ConfigService.swift in Sources */,
@@ -1222,6 +1253,7 @@
 			files = (
 				9AADAC0B22F7037E00C6C290 /* DataService.swift in Sources */,
 				9AADABF722F7008300C6C290 /* LoggingService.swift in Sources */,
+				9AFA47E322F8B223003B2992 /* AppState.swift in Sources */,
 				9ABFBCA522EFD3D100E01785 /* AmountViewModel.swift in Sources */,
 				9AFA47C322F85FD3003B2992 /* TestConfig.swift in Sources */,
 				9ABFBCB622EFDE4C00E01785 /* NumberFormatter+Extensions.swift in Sources */,
@@ -1229,6 +1261,7 @@
 				9AADAC1522F7052700C6C290 /* KeychainDataService.swift in Sources */,
 				9ADD21EA22F7248B006F98CA /* NetworkService.swift in Sources */,
 				9AADAAFF22F63A1800C6C290 /* ConfigService.swift in Sources */,
+				9AA8059B22F8BDC700B40516 /* ServiceClient.swift in Sources */,
 				9ADD21F422F735C8006F98CA /* URLSession+Extensions.swift in Sources */,
 				9ADD21D922F71D3F006F98CA /* SessionService.swift in Sources */,
 				9ABFBCB122EFD73900E01785 /* Codable+Extensions.swift in Sources */,
@@ -1247,6 +1280,7 @@
 			files = (
 				9AADAC0A22F7037E00C6C290 /* DataService.swift in Sources */,
 				9AADABF622F7008300C6C290 /* LoggingService.swift in Sources */,
+				9AFA47E222F8B223003B2992 /* AppState.swift in Sources */,
 				9ABFBCA422EFD3D100E01785 /* AmountViewModel.swift in Sources */,
 				9ABFBCB522EFDE4C00E01785 /* NumberFormatter+Extensions.swift in Sources */,
 				9ABFBCA922EFD60200E01785 /* Formatters.swift in Sources */,
@@ -1254,6 +1288,7 @@
 				9ADD21E922F7248B006F98CA /* NetworkService.swift in Sources */,
 				9AADAAFE22F63A1800C6C290 /* ConfigService.swift in Sources */,
 				9ADD21F322F735C8006F98CA /* URLSession+Extensions.swift in Sources */,
+				9AA8059A22F8BDC700B40516 /* ServiceClient.swift in Sources */,
 				9ADD21D822F71D3F006F98CA /* SessionService.swift in Sources */,
 				9ABFBCB022EFD73900E01785 /* Codable+Extensions.swift in Sources */,
 				9AFA47C922F8615F003B2992 /* TestConfig.swift in Sources */,
@@ -1272,6 +1307,7 @@
 			files = (
 				9AADAC0C22F7037E00C6C290 /* DataService.swift in Sources */,
 				9AADABF822F7008300C6C290 /* LoggingService.swift in Sources */,
+				9AFA47E422F8B223003B2992 /* AppState.swift in Sources */,
 				9ABFBCA622EFD3D100E01785 /* AmountViewModel.swift in Sources */,
 				9AFA47C422F85FD3003B2992 /* TestConfig.swift in Sources */,
 				9ABFBCB722EFDE4C00E01785 /* NumberFormatter+Extensions.swift in Sources */,
@@ -1279,6 +1315,7 @@
 				9AADAC1622F7052700C6C290 /* KeychainDataService.swift in Sources */,
 				9ADD21EB22F7248B006F98CA /* NetworkService.swift in Sources */,
 				9AADAB0022F63A1800C6C290 /* ConfigService.swift in Sources */,
+				9AA8059C22F8BDC700B40516 /* ServiceClient.swift in Sources */,
 				9ADD21F522F735C8006F98CA /* URLSession+Extensions.swift in Sources */,
 				9ADD21DA22F71D3F006F98CA /* SessionService.swift in Sources */,
 				9ABFBCB222EFD73900E01785 /* Codable+Extensions.swift in Sources */,
@@ -1296,6 +1333,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9A375B0622F7A44F00E598AB /* DefaultNetworkServiceTests.swift in Sources */,
+				9AA805A222F8C17400B40516 /* AppStateTests-iOS.swift in Sources */,
 				9ADD21E422F722E9006F98CA /* SessionTests.swift in Sources */,
 				9AFA47D722F87712003B2992 /* APIsTests.swift in Sources */,
 				9AE4E25522F4BC3200B34E81 /* CodableExtensionsTests.swift in Sources */,
@@ -1331,6 +1369,7 @@
 				9AADAB3D22F643DC00C6C290 /* DefaultConfigServiceTests.swift in Sources */,
 				9AFA47D422F87663003B2992 /* ErrorTests.swift in Sources */,
 				9AADABFB22F7018D00C6C290 /* DefaultLoggingServiceTests.swift in Sources */,
+				9AA805A322F8C17A00B40516 /* AppStateTests.swift in Sources */,
 				9AE4E24A22F4B95800B34E81 /* DecimalExtensionsTests.swift in Sources */,
 				9AFA47CC22F87440003B2992 /* DataExtensionsTests.swift in Sources */,
 				9AE4E4BC22F4C48200B34E81 /* AmountViewModelTests.swift in Sources */,
@@ -1355,6 +1394,7 @@
 				9AADAB3E22F643DC00C6C290 /* DefaultConfigServiceTests.swift in Sources */,
 				9AFA47D522F87663003B2992 /* ErrorTests.swift in Sources */,
 				9AADABFC22F7018D00C6C290 /* DefaultLoggingServiceTests.swift in Sources */,
+				9AA805A422F8C17B00B40516 /* AppStateTests.swift in Sources */,
 				9AE4E24B22F4B95800B34E81 /* DecimalExtensionsTests.swift in Sources */,
 				9AFA47CD22F87440003B2992 /* DataExtensionsTests.swift in Sources */,
 				9AE4E4BD22F4C48200B34E81 /* AmountViewModelTests.swift in Sources */,
@@ -1368,6 +1408,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9AA805A622F8D01C00B40516 /* MockNetworkService.swift in Sources */,
 				9A375B1622F7A92D00E598AB /* Error.swift in Sources */,
 				9A375B0A22F7A4B800E598AB /* MockLoggingService.swift in Sources */,
 				9ADD21E022F721C8006F98CA /* Factory.swift in Sources */,
@@ -1379,6 +1420,7 @@
 				9ADD21CB22F71A94006F98CA /* MockDataService.swift in Sources */,
 				9AFA47B922F84AEF003B2992 /* Publisher+Extensions.swift in Sources */,
 				9A375B1222F7A55D00E598AB /* MockNetworkRequestable.swift in Sources */,
+				9AA805AA22F8D23D00B40516 /* MockAuthenticationService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1390,6 +1432,7 @@
 				9A375B0B22F7A4B800E598AB /* MockLoggingService.swift in Sources */,
 				9ADD21E122F721C8006F98CA /* Factory.swift in Sources */,
 				9A375B0F22F7A4EF00E598AB /* MockSessionService.swift in Sources */,
+				9AA805A722F8D01C00B40516 /* MockNetworkService.swift in Sources */,
 				9AFA47BE22F84B43003B2992 /* Result+Extensions.swift in Sources */,
 				9AADAAE922F6329C00C6C290 /* XCTestCase+Extensions.swift in Sources */,
 				9AADAC0122F7020700C6C290 /* MockConfigService.swift in Sources */,
@@ -1407,6 +1450,7 @@
 				9A375B0C22F7A4B800E598AB /* MockLoggingService.swift in Sources */,
 				9ADD21E222F721C8006F98CA /* Factory.swift in Sources */,
 				9A375B1022F7A4EF00E598AB /* MockSessionService.swift in Sources */,
+				9AA805A822F8D01C00B40516 /* MockNetworkService.swift in Sources */,
 				9AFA47BF22F84B43003B2992 /* Result+Extensions.swift in Sources */,
 				9AADAAEA22F6329D00C6C290 /* XCTestCase+Extensions.swift in Sources */,
 				9AADAC0222F7020700C6C290 /* MockConfigService.swift in Sources */,
@@ -2169,6 +2213,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
+				CODE_SIGN_ENTITLEMENTS = FinanceMeKitTestsHost/FinanceMeKitTestsHost.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "";
 				DEVELOPMENT_TEAM = WX9VZ58J6W;
@@ -2191,6 +2236,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
+				CODE_SIGN_ENTITLEMENTS = FinanceMeKitTestsHost/FinanceMeKitTestsHost.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "";
 				DEVELOPMENT_TEAM = WX9VZ58J6W;

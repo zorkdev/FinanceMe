@@ -21,7 +21,7 @@ class StoreableTests: XCTestCase {
 
         XCTAssertFalse(dataService.savedValues.isEmpty)
         XCTAssertTrue(dataService.savedValues.contains { ($0 as? Model) == model })
-        XCTAssertEqual(dataService.lastSavedKey, "Model")
+        XCTAssertEqual(dataService.lastSaveKey, "Model")
     }
 
     func testLoad_Success() {
@@ -32,7 +32,7 @@ class StoreableTests: XCTestCase {
 
         XCTAssertNotNil(loadedItem)
         XCTAssertEqual(loadedItem!, model)
-        XCTAssertEqual(dataService.lastLoadedKey, "Model")
+        XCTAssertEqual(dataService.lastLoadKey, "Model")
     }
 
     func testAll_Success() {
@@ -43,7 +43,7 @@ class StoreableTests: XCTestCase {
 
         XCTAssertNotNil(loadedItem)
         XCTAssertEqual(loadedItem, models)
-        XCTAssertEqual(dataService.lastLoadedKey, "Array<Model>")
+        XCTAssertEqual(dataService.lastLoadKey, "Array<Model>")
     }
 
     func testAllEmpty_Success() {
@@ -53,6 +53,6 @@ class StoreableTests: XCTestCase {
 
         XCTAssertNotNil(loadedItem)
         XCTAssertEqual(loadedItem, [])
-        XCTAssertEqual(dataService.lastLoadedKey, "Array<Model>")
+        XCTAssertEqual(dataService.lastLoadKey, "Array<Model>")
     }
 }

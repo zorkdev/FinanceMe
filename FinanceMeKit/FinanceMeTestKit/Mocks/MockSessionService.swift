@@ -6,9 +6,9 @@ public class MockSessionService: SessionService {
 
     public init() {}
 
-    public var lastSaveValue: Session?
+    public var lastSaveParam: Session?
     public func save(session: Session) {
-        lastSaveValue = session
+        lastSaveParam = session
     }
 
     public var didCallLogOut = false

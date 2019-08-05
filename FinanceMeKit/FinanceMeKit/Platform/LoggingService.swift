@@ -1,5 +1,9 @@
 import os.log
 
+public protocol LoggingServiceProvider {
+    var loggingService: LoggingService { get }
+}
+
 public enum LogType: String {
     case info = "🔵"
     case error = "🔴"

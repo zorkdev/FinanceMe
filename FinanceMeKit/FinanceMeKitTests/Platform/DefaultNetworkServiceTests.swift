@@ -40,11 +40,10 @@ class DefaultNetworkServiceTests: XCTestCase {
         let session = Factory.makeSession()
         sessionService.session = session
         let data = Data()
-        networkRequestable.returnDataValue = data
-        networkRequestable.returnURLResponseValue = urlResponse
+        networkRequestable.performReturnValue = .success((data: data, response: urlResponse))
 
         networkService.perform(api: api, method: .get, body: nil).assertSuccess(self) { response in
-            let request = self.networkRequestable.lastRequest!
+            let request = self.networkRequestable.lastPerformParam!
             let headers = request.allHTTPHeaderFields!
 
             XCTAssertEqual(request.url, self.api.url)
@@ -64,8 +63,7 @@ class DefaultNetworkServiceTests: XCTestCase {
         let session = Factory.makeSession()
         sessionService.session = session
         let data = Data()
-        networkRequestable.returnDataValue = data
-        networkRequestable.returnURLResponseValue = urlResponse
+        networkRequestable.performReturnValue = .success((data: data, response: urlResponse))
         let body = Body()
         let expectedBody =
             """
@@ -73,7 +71,7 @@ class DefaultNetworkServiceTests: XCTestCase {
             """.data(using: .utf8)!
 
         networkService.perform(api: api, method: .post, body: body).assertSuccess(self) { response in
-            let request = self.networkRequestable.lastRequest!
+            let request = self.networkRequestable.lastPerformParam!
             let headers = request.allHTTPHeaderFields!
 
             XCTAssertEqual(request.url, self.api.url)
@@ -93,11 +91,10 @@ class DefaultNetworkServiceTests: XCTestCase {
         let session = Factory.makeSession()
         sessionService.session = session
         let body = Body()
-        networkRequestable.returnDataValue = body.jsonEncoded().forceGet()
-        networkRequestable.returnURLResponseValue = urlResponse
+        networkRequestable.performReturnValue = .success((data: body.jsonEncoded().forceGet(), response: urlResponse))
 
         networkService.perform(api: api, method: .get, body: nil).assertSuccess(self) { (response: Body) in
-            let request = self.networkRequestable.lastRequest!
+            let request = self.networkRequestable.lastPerformParam!
             let headers = request.allHTTPHeaderFields!
 
             XCTAssertEqual(request.url, self.api.url)
@@ -115,10 +112,10 @@ class DefaultNetworkServiceTests: XCTestCase {
 
     func testPerformURLError_Failure() {
         let expectedError = URLError(.badServerResponse)
-        networkRequestable.returnErrorValue = expectedError
+        networkRequestable.performReturnValue = .failure(expectedError)
 
         networkService.perform(api: api, method: .get, body: nil).assertFailure(self) { error in
-            let request = self.networkRequestable.lastRequest!
+            let request = self.networkRequestable.lastPerformParam!
             let headers = request.allHTTPHeaderFields!
 
             XCTAssertEqual(request.url, self.api.url)
@@ -135,14 +132,14 @@ class DefaultNetworkServiceTests: XCTestCase {
 
     func testPerformHTTPURLResponseError_Failure() {
         let expectedError = HTTPError(code: 1)!
-        networkRequestable.returnDataValue = Data()
-        networkRequestable.returnURLResponseValue = URLResponse(url: api.url,
-                                                                mimeType: nil,
-                                                                expectedContentLength: 0,
-                                                                textEncodingName: nil)
+        let urlResponse = URLResponse(url: api.url,
+                                      mimeType: nil,
+                                      expectedContentLength: 0,
+                                      textEncodingName: nil)
+        networkRequestable.performReturnValue = .success((data: Data(), response: urlResponse))
 
         networkService.perform(api: api, method: .get, body: nil).assertFailure(self) { error in
-            XCTAssertNotNil(self.networkRequestable.lastRequest)
+            XCTAssertNotNil(self.networkRequestable.lastPerformParam)
             XCTAssertNotNil(self.loggingService.lastLogParams)
             XCTAssertEqual(error as? HTTPError, expectedError)
         }
@@ -150,14 +147,14 @@ class DefaultNetworkServiceTests: XCTestCase {
 
     func testPerformHTTPError_Failure() {
         let expectedError = HTTPError(code: 400)!
-        networkRequestable.returnDataValue = Data()
-        networkRequestable.returnURLResponseValue = HTTPURLResponse(url: api.url,
-                                                                    statusCode: expectedError.code,
-                                                                    httpVersion: nil,
-                                                                    headerFields: nil)! as URLResponse
+        let urlResponse = HTTPURLResponse(url: api.url,
+                                          statusCode: expectedError.code,
+                                          httpVersion: nil,
+                                          headerFields: nil)!
+        networkRequestable.performReturnValue = .success((data: Data(), response: urlResponse))
 
         networkService.perform(api: api, method: .get, body: nil).assertFailure(self) { error in
-            XCTAssertNotNil(self.networkRequestable.lastRequest)
+            XCTAssertNotNil(self.networkRequestable.lastPerformParam)
             XCTAssertNotNil(self.loggingService.lastLogParams)
             XCTAssertEqual(error as? HTTPError, expectedError)
         }
@@ -165,7 +162,7 @@ class DefaultNetworkServiceTests: XCTestCase {
 
     func testPerformEncodingError_Failure() {
         networkService.perform(api: api, method: .post, body: Double.nan).assertFailure(self) { error in
-            XCTAssertNil(self.networkRequestable.lastRequest)
+            XCTAssertNil(self.networkRequestable.lastPerformParam)
             XCTAssertNil(self.loggingService.lastLogParams)
             XCTAssertTrue(error is EncodingError)
         }

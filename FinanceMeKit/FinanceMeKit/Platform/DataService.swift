@@ -1,3 +1,7 @@
+public protocol DataServiceProvider {
+    var dataService: DataService { get }
+}
+
 public protocol Storeable: Codable & StringRepresentable {
     static func load(dataService: DataService) -> Self?
     static func all(dataService: DataService) -> [Self]

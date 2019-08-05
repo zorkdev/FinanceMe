@@ -1,6 +1,10 @@
 import Combine
 import LocalAuthentication
 
+public protocol AuthenticationServiceProvider {
+    var authenticationService: AuthenticationService { get }
+}
+
 public protocol LAContextType {
     init()
     func canEvaluatePolicy(_ policy: LAPolicy, error: NSErrorPointer) -> Bool

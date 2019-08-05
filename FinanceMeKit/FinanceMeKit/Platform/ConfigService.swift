@@ -1,3 +1,7 @@
+public protocol ConfigServiceProvider {
+    var configService: ConfigService { get }
+}
+
 public protocol ConfigService {
     var urlScheme: String { get }
     var productName: String { get }
