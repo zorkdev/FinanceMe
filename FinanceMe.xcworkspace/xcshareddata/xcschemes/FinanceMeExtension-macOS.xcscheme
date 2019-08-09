@@ -43,16 +43,6 @@
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
-         <TestableReference
-            skipped = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "9A12DC1622EF6A65000226A9"
-               BuildableName = "FinanceMeUITests-macOS.xctest"
-               BlueprintName = "FinanceMeUITests-macOS"
-               ReferencedContainer = "container:FinanceMe/FinanceMe.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
       </Testables>
    </TestAction>
    <LaunchAction
@@ -67,8 +57,12 @@
       debugServiceExtension = "internal"
       allowLocationSimulation = "YES"
       launchAutomaticallySubstyle = "2">
-      <BuildableProductRunnable
-         runnableDebuggingMode = "0">
+      <RemoteRunnable
+         runnableDebuggingMode = "0"
+         BundleIdentifier = "com.apple.notificationcenter.widgetsimulator"
+         RemotePath = "/System/Library/Frameworks/NotificationCenter.framework/Versions/A/Resources/Widget Simulator.app">
+      </RemoteRunnable>
+      <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "9A12DBAF22EF1233000226A9"
@@ -76,7 +70,7 @@
             BlueprintName = "FinanceMe-macOS"
             ReferencedContainer = "container:FinanceMe/FinanceMe.xcodeproj">
          </BuildableReference>
-      </BuildableProductRunnable>
+      </MacroExpansion>
    </LaunchAction>
    <ProfileAction
       buildConfiguration = "Release"

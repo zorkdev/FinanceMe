@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		9A12DB9D22EF10E7000226A9 /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A12DB9C22EF10E7000226A9 /* NotificationCenter.framework */; };
 		9A12DBA022EF10E7000226A9 /* TodayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A12DB9F22EF10E7000226A9 /* TodayViewController.swift */; };
-		9A12DBA322EF10E7000226A9 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9A12DBA122EF10E7000226A9 /* MainInterface.storyboard */; };
 		9A12DBA722EF10E7000226A9 /* FinanceMeExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 9A12DB9B22EF10E7000226A9 /* FinanceMeExtension.appex */; platformFilter = ios; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		9A12DBB322EF1233000226A9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A12DBB222EF1233000226A9 /* AppDelegate.swift */; };
 		9A12DBB522EF1233000226A9 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A12DBB422EF1233000226A9 /* ContentView.swift */; };
@@ -270,7 +269,6 @@
 		9A12DB9B22EF10E7000226A9 /* FinanceMeExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = FinanceMeExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		9A12DB9C22EF10E7000226A9 /* NotificationCenter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NotificationCenter.framework; path = System/Library/Frameworks/NotificationCenter.framework; sourceTree = SDKROOT; };
 		9A12DB9F22EF10E7000226A9 /* TodayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayViewController.swift; sourceTree = "<group>"; };
-		9A12DBA222EF10E7000226A9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
 		9A12DBA422EF10E7000226A9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9A12DBB022EF1233000226A9 /* FinanceMe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FinanceMe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9A12DBB222EF1233000226A9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -474,7 +472,6 @@
 			children = (
 				9A12DBA422EF10E7000226A9 /* Info.plist */,
 				9AA805AC22F8DC2200B40516 /* FinanceMeExtension.entitlements */,
-				9A12DBA122EF10E7000226A9 /* MainInterface.storyboard */,
 				9A12DB9F22EF10E7000226A9 /* TodayViewController.swift */,
 			);
 			path = "FinanceMeExtension-iOS";
@@ -1101,7 +1098,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9A12DBA322EF10E7000226A9 /* MainInterface.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1374,14 +1370,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		9A12DBA122EF10E7000226A9 /* MainInterface.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				9A12DBA222EF10E7000226A9 /* Base */,
-			);
-			name = MainInterface.storyboard;
-			sourceTree = "<group>";
-		};
 		9A12DBBB22EF1234000226A9 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
