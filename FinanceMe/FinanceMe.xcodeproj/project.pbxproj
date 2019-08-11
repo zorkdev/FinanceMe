@@ -629,8 +629,8 @@
 		9A35A8FF22EDDD580086BD2A /* FinanceMe-tvOS */ = {
 			isa = PBXGroup;
 			children = (
-				9AA805AD22F8DC4000B40516 /* FinanceMe.entitlements */,
 				9A35A90922EDDD5A0086BD2A /* Info.plist */,
+				9AA805AD22F8DC4000B40516 /* FinanceMe.entitlements */,
 				9AADAAF422F6360900C6C290 /* main.swift */,
 				9A35A90022EDDD580086BD2A /* AppDelegate.swift */,
 				9A35A90222EDDD580086BD2A /* ContentView.swift */,
@@ -733,8 +733,8 @@
 		9AF87EB122EF91FF009E786C /* FinanceMeExtension-watchOS */ = {
 			isa = PBXGroup;
 			children = (
-				9AA805AE22F8DCFF00B40516 /* FinanceMeExtension.entitlements */,
 				9AF87EBF22EF9200009E786C /* Info.plist */,
+				9AA805AE22F8DCFF00B40516 /* FinanceMeExtension.entitlements */,
 				9AF87EB622EF91FF009E786C /* ExtensionDelegate.swift */,
 				9AF87EB422EF91FF009E786C /* HostingController.swift */,
 				9AF87EB822EF91FF009E786C /* ComplicationController.swift */,

@@ -17,7 +17,7 @@ public protocol APIType {
     func token(session: Session) -> String
 }
 
-public protocol NetworkRequestable {
+protocol NetworkRequestable {
     func perform(request: URLRequest) -> AnyPublisher<(data: Data, response: URLResponse), URLError>
 }
 
@@ -34,7 +34,7 @@ public extension NetworkService {
     }
 }
 
-public class DefaultNetworkService: NetworkService {
+class DefaultNetworkService: NetworkService {
     private enum Constants {
         static let authHeaderKey = "Authorization"
         static let contentKey = "Accept"
@@ -48,15 +48,15 @@ public class DefaultNetworkService: NetworkService {
     private let loggingService: LoggingService
     private let sessionService: SessionService
 
-    public init(networkRequestable: NetworkRequestable,
-                loggingService: LoggingService,
-                sessionService: SessionService) {
+    init(networkRequestable: NetworkRequestable,
+         loggingService: LoggingService,
+         sessionService: SessionService) {
         self.networkRequestable = networkRequestable
         self.loggingService = loggingService
         self.sessionService = sessionService
     }
 
-    public func perform(api: APIType, method: HTTPMethod, body: Encodable?) -> AnyPublisher<Data, Error> {
+    func perform(api: APIType, method: HTTPMethod, body: Encodable?) -> AnyPublisher<Data, Error> {
         let request: URLRequest
         switch createURLRequest(api: api, method: method, body: body) {
         case .success(let urlRequest): request = urlRequest

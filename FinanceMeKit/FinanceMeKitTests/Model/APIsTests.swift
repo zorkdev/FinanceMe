@@ -21,13 +21,13 @@ class APIsTests: XCTestCase {
         XCTAssertEqual(ZorkdevAPI.transaction(uuid).url.absoluteString,
                        "https://zorkdev.herokuapp.com/api/transactions/\(uuid.uuidString)")
 
-        XCTAssertEqual(ZorkdevAPI.user.token(session: Factory.makeSession()), "token")
+        XCTAssertEqual(ZorkdevAPI.user.token(session: Session.stub), "token")
     }
 
     func testStarlingAPI() {
         XCTAssertEqual(StarlingAPI.balance.url.absoluteString,
                        "https://api.starlingbank.com/api/v1/accounts/balance")
 
-        XCTAssertEqual(StarlingAPI.balance.token(session: Factory.makeSession()), "sToken")
+        XCTAssertEqual(StarlingAPI.balance.token(session: Session.stub), "sToken")
     }
 }

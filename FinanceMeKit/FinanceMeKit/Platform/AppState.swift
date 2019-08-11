@@ -21,16 +21,4 @@ public class AppState: AppStateType {
                                                loggingService: loggingService,
                                                sessionService: sessionService)
     }
-
-    public init(networkService: NetworkService,
-                sessionService: SessionService,
-                dataService: DataService,
-                loggingService: LoggingService,
-                configService: ConfigService) {
-        self.networkService = networkService
-        self.sessionService = sessionService
-        self.dataService = dataService
-        self.loggingService = loggingService
-        self.configService = configService
-    }
 }

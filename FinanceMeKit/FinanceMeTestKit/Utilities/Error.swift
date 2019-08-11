@@ -6,4 +6,6 @@ public struct NoReturnValueProviderError: Error {
     }
 }
 
-public struct TestError: Error {}
+public struct TestError: Error {
+    public init() {}
+}

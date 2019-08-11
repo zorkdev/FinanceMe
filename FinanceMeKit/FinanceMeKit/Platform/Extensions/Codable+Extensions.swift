@@ -1,4 +1,4 @@
-public extension JSONDecoder {
+extension JSONDecoder {
     static var `default`: JSONDecoder {
         let decoder = JSONDecoder()
         decoder.dateDecodingStrategy = .iso8601
@@ -6,13 +6,13 @@ public extension JSONDecoder {
     }
 }
 
-public extension Decodable {
+extension Decodable {
     init(from json: Data) throws {
         self = try JSONDecoder.default.decode(Self.self, from: json)
     }
 }
 
-public extension Encodable {
+extension Encodable {
     var prettyPrinted: String {
         guard let data = try? self.jsonEncoded(prettyPrinted: true).get(),
             let string = String(data: data, encoding: .utf8) else { return "nil" }

@@ -19,14 +19,14 @@ public extension LoggingService {
     }
 }
 
-public struct DefaultLoggingService: LoggingService {
+class DefaultLoggingService: LoggingService {
     private let log: OSLog
 
     init(configService: ConfigService) {
         log = OSLog(subsystem: configService.productName, category: "Debug")
     }
 
-    public func log(title: String, content: String, type: LogType) {
+    func log(title: String, content: String, type: LogType) {
         let logString = Self.createLogString(title: title, content: content, type: type)
         os_log("%@", log: log, type: .debug, logString)
     }

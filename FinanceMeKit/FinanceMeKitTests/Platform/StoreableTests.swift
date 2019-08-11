@@ -34,25 +34,4 @@ class StoreableTests: XCTestCase {
         XCTAssertEqual(loadedItem!, model)
         XCTAssertEqual(dataService.lastLoadKey, "Model")
     }
-
-    func testAll_Success() {
-        let models = [Model(variable: "value")]
-        dataService.loadReturnValues = [models]
-
-        let loadedItem = Model.all(dataService: dataService)
-
-        XCTAssertNotNil(loadedItem)
-        XCTAssertEqual(loadedItem, models)
-        XCTAssertEqual(dataService.lastLoadKey, "Array<Model>")
-    }
-
-    func testAllEmpty_Success() {
-        dataService.loadReturnValues = []
-
-        let loadedItem = Model.all(dataService: dataService)
-
-        XCTAssertNotNil(loadedItem)
-        XCTAssertEqual(loadedItem, [])
-        XCTAssertEqual(dataService.lastLoadKey, "Array<Model>")
-    }
 }

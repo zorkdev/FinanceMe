@@ -10,21 +10,21 @@ public protocol SessionService {
     func logOut()
 }
 
-public class DefaultSessionService: SessionService {
+class DefaultSessionService: SessionService {
     private let dataService: DataService
 
-    public var hasSession: Bool { session != nil }
-    public var session: Session? { Session.load(dataService: dataService) }
+    var hasSession: Bool { session != nil }
+    var session: Session? { Session.load(dataService: dataService) }
 
-    public init(dataService: DataService) {
+    init(dataService: DataService) {
         self.dataService = dataService
     }
 
-    public func save(session: Session) {
+    func save(session: Session) {
         session.save(dataService: dataService)
     }
 
-    public func logOut() {
+    func logOut() {
         dataService.removeAll()
     }
 }

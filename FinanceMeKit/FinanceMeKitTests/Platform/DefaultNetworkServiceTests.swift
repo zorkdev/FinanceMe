@@ -37,7 +37,7 @@ class DefaultNetworkServiceTests: XCTestCase {
     }
 
     func testPerform_Success() {
-        let session = Factory.makeSession()
+        let session = Session.stub
         sessionService.session = session
         let data = Data()
         networkRequestable.performReturnValue = .success((data: data, response: urlResponse))
@@ -60,7 +60,7 @@ class DefaultNetworkServiceTests: XCTestCase {
     }
 
     func testPerformWithBody_Success() {
-        let session = Factory.makeSession()
+        let session = Session.stub
         sessionService.session = session
         let data = Data()
         networkRequestable.performReturnValue = .success((data: data, response: urlResponse))
@@ -88,7 +88,7 @@ class DefaultNetworkServiceTests: XCTestCase {
     }
 
     func testPerformDecodable_Success() {
-        let session = Factory.makeSession()
+        let session = Session.stub
         sessionService.session = session
         let body = Body()
         networkRequestable.performReturnValue = .success((data: body.jsonEncoded().forceGet(), response: urlResponse))

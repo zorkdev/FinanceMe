@@ -2,20 +2,25 @@ import XCTest
 import FinanceMeTestKit
 @testable import FinanceMeKit
 
-class SessionTests: XCTestCase {
+class BalanceTests: XCTestCase {
     func testDecode() {
         let jsonData =
             """
             {
-                "sToken": "sToken",
-                "token": "token"
+                "amount": 100,
+                "pendingTransactions": 90.22,
+                "effectiveBalance": 100.1,
+                "acceptedOverdraft": 100,
+                "clearedBalance": 100,
+                "currency": "GBP",
+                "availableToSpend": 100
             }
             """.data(using: .utf8)!
 
-        let expectedValue = Session.stub
+        let expectedValue = Balance.stub
 
         do {
-            let value = try Session(from: jsonData)
+            let value = try Balance(from: jsonData)
             XCTAssertEqual(value, expectedValue)
         } catch {
             XCTFail(error.localizedDescription)
@@ -23,13 +28,12 @@ class SessionTests: XCTestCase {
     }
 
     func testEncode() {
-        let value = Session.stub
+        let value = Balance.stub
 
         let expectedValue =
             """
             {
-              "token" : "token",
-              "sToken" : "sToken"
+              "effectiveBalance" : 100.1
             }
             """
 

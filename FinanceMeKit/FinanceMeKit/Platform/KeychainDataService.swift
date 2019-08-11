@@ -1,14 +1,14 @@
-public class KeychainDataService: DataService {
+class KeychainDataService: DataService {
     private let service: String
     private let accessGroup: String
 
-    public init(configService: ConfigService) {
+    init(configService: ConfigService) {
         self.service = configService.productName
         self.accessGroup = configService.accessGroup
     }
 
     @discardableResult
-    public func save(value: Encodable, key: String) -> Result<Void, Error> {
+    func save(value: Encodable, key: String) -> Result<Void, Error> {
         let data: Data
         switch value.jsonEncoded() {
         case .success(let encodedData): data = encodedData
@@ -28,7 +28,7 @@ public class KeychainDataService: DataService {
         }
     }
 
-    public func load<T: Decodable>(key: String) -> T? {
+    func load<T: Decodable>(key: String) -> T? {
         var query = createQuery(key: key)
         query[kSecMatchLimit] = kSecMatchLimitOne
         query[kSecReturnData] = kCFBooleanTrue
@@ -43,7 +43,7 @@ public class KeychainDataService: DataService {
         return value
     }
 
-    public func removeAll() {
+    func removeAll() {
         let secClasses = [kSecClassGenericPassword,
                           kSecClassGenericPassword,
                           kSecClassCertificate,

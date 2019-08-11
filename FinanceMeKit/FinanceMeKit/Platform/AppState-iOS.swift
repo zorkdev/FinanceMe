@@ -28,18 +28,4 @@ public class AppState: AppStateType {
                                                                laContextType: LAContext.self,
                                                                reason: authReason)
     }
-
-    public init(networkService: NetworkService,
-                sessionService: SessionService,
-                dataService: DataService,
-                loggingService: LoggingService,
-                configService: ConfigService,
-                authenticationService: AuthenticationService) {
-        self.networkService = networkService
-        self.sessionService = sessionService
-        self.dataService = dataService
-        self.loggingService = loggingService
-        self.configService = configService
-        self.authenticationService = authenticationService
-    }
 }

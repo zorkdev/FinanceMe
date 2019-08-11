@@ -2,20 +2,20 @@ import XCTest
 import FinanceMeTestKit
 @testable import FinanceMeKit
 
-class SessionTests: XCTestCase {
+class CredentialsTests: XCTestCase {
     func testDecode() {
         let jsonData =
             """
             {
-                "sToken": "sToken",
-                "token": "token"
+                "email": "user@example.com",
+                "password": "password"
             }
             """.data(using: .utf8)!
 
-        let expectedValue = Session.stub
+        let expectedValue = Credentials.stub
 
         do {
-            let value = try Session(from: jsonData)
+            let value = try Credentials(from: jsonData)
             XCTAssertEqual(value, expectedValue)
         } catch {
             XCTFail(error.localizedDescription)
@@ -23,13 +23,13 @@ class SessionTests: XCTestCase {
     }
 
     func testEncode() {
-        let value = Session.stub
+        let value = Credentials.stub
 
         let expectedValue =
             """
             {
-              "token" : "token",
-              "sToken" : "sToken"
+              "email" : "user@example.com",
+              "password" : "password"
             }
             """
 

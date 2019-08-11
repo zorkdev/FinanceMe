@@ -5,7 +5,7 @@ public protocol AuthenticationServiceProvider {
     var authenticationService: AuthenticationService { get }
 }
 
-public protocol LAContextType {
+protocol LAContextType {
     init()
     func canEvaluatePolicy(_ policy: LAPolicy, error: NSErrorPointer) -> Bool
     func evaluatePolicy(_ policy: LAPolicy, localizedReason: String, reply: @escaping (Bool, Error?) -> Void)
@@ -19,8 +19,8 @@ public protocol AuthenticationService {
     func invalidate()
 }
 
-public class LAContextAuthenticationService: AuthenticationService {
-    public enum AuthenticationError: Error {
+class LAContextAuthenticationService: AuthenticationService {
+    enum AuthenticationError: Error {
         case missingSession
     }
 
@@ -29,15 +29,15 @@ public class LAContextAuthenticationService: AuthenticationService {
     private let reason: String
     private var context: LAContextType?
 
-    public init(sessionService: SessionService,
-                laContextType: LAContextType.Type,
-                reason: String) {
+    init(sessionService: SessionService,
+         laContextType: LAContextType.Type,
+         reason: String) {
         self.sessionService = sessionService
         self.laContextType = laContextType
         self.reason = reason
     }
 
-    public func authenticate() -> AnyPublisher<Void, Error> {
+    func authenticate() -> AnyPublisher<Void, Error> {
         var error: NSError?
         let context = laContextType.init()
         self.context = context
@@ -59,7 +59,7 @@ public class LAContextAuthenticationService: AuthenticationService {
         }.eraseToAnyPublisher()
     }
 
-    public func invalidate() {
+    func invalidate() {
         context?.invalidate()
     }
 }

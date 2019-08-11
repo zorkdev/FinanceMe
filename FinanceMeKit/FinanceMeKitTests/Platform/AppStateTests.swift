@@ -12,18 +12,4 @@ class AppStateTests: XCTestCase {
         XCTAssertTrue(appState.loggingService is DefaultLoggingService)
         XCTAssertTrue(appState.configService is DefaultConfigService)
     }
-
-    func testInitWithParameters() {
-        let appState = AppState(networkService: MockNetworkService(),
-                                sessionService: MockSessionService(),
-                                dataService: MockDataService(),
-                                loggingService: MockLoggingService(),
-                                configService: MockConfigService())
-
-        XCTAssertTrue(appState.networkService is MockNetworkService)
-        XCTAssertTrue(appState.sessionService is MockSessionService)
-        XCTAssertTrue(appState.dataService is MockDataService)
-        XCTAssertTrue(appState.loggingService is MockLoggingService)
-        XCTAssertTrue(appState.configService is MockConfigService)
-    }
 }

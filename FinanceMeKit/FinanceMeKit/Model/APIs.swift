@@ -1,4 +1,4 @@
-public enum ZorkdevAPI: APIType, Equatable {
+enum ZorkdevAPI: APIType, Equatable {
     case login
     case user
     case transactions
@@ -26,14 +26,14 @@ public enum ZorkdevAPI: APIType, Equatable {
         }
     }
 
-    public var url: URL { URL(string: Self.baseURL + path)! }
+    var url: URL { URL(string: Self.baseURL + path)! }
 
-    public func token(session: Session) -> String {
+    func token(session: Session) -> String {
         session.token
     }
 }
 
-public enum StarlingAPI: APIType, Equatable {
+enum StarlingAPI: APIType, Equatable {
     case balance
 
     private static let baseURL: String = {
@@ -49,9 +49,9 @@ public enum StarlingAPI: APIType, Equatable {
         }
     }
 
-    public var url: URL { URL(string: Self.baseURL + path)! }
+    var url: URL { URL(string: Self.baseURL + path)! }
 
-    public func token(session: Session) -> String {
+    func token(session: Session) -> String {
         session.sToken
     }
 }

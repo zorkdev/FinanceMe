@@ -1,4 +1,4 @@
-public extension NumberFormatter {
+extension NumberFormatter {
     func string(from decimal: Decimal) -> String {
         string(from: decimal as NSDecimalNumber)!
     }

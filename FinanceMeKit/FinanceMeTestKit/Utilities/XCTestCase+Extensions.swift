@@ -7,3 +7,12 @@ public extension XCTestCase {
         waitForExpectations(timeout: 10, handler: nil)
     }
 }
+
+open class ServiceClientTestCase: XCTestCase {
+    public var appState: MockAppState!
+
+    override open func setUp() {
+        super.setUp()
+        appState = MockAppState()
+    }
+}

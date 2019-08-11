@@ -13,7 +13,7 @@ class DefaultSessionServiceTests: XCTestCase {
     }
 
     func testGetSession_Success() {
-        let expectedSession = Factory.makeSession()
+        let expectedSession = Session.stub
         dataService.loadReturnValues = [expectedSession, expectedSession]
 
         XCTAssertEqual(sessionService.session, expectedSession)
@@ -26,7 +26,7 @@ class DefaultSessionServiceTests: XCTestCase {
     }
 
     func testSaveSession() {
-        let expectedSession = Factory.makeSession()
+        let expectedSession = Session.stub
 
         sessionService.save(session: expectedSession)
 
