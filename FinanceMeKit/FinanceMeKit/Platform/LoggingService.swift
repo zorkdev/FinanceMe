@@ -1,19 +1,15 @@
 import os.log
 
-public protocol LoggingServiceProvider {
-    var loggingService: LoggingService { get }
-}
-
-public enum LogType: String {
+enum LogType: String {
     case info = "🔵"
     case error = "🔴"
 }
 
-public protocol LoggingService {
+protocol LoggingService {
     func log(title: String, content: String, type: LogType)
 }
 
-public extension LoggingService {
+extension LoggingService {
     func log(title: String, content: String) {
         log(title: title, content: content, type: .info)
     }

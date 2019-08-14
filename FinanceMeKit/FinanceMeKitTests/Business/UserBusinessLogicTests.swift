@@ -2,74 +2,65 @@ import XCTest
 import FinanceMeTestKit
 @testable import FinanceMeKit
 
-class UserBusinessLogicTests: ServiceClientTestCase {
+class UserBusinessLogicTests: XCTestCase {
+    var networkService: MockNetworkService!
+    var dataService: MockDataService!
     var businessLogic: UserBusinessLogic!
 
     override func setUp() {
         super.setUp()
-        businessLogic = UserBusinessLogic(serviceProvider: appState)
-    }
-
-    func testLogin_Success() {
-        let expectedBody = Credentials.stub
-        let expectedValue = Session.stub
-        appState.mockNetworkService.performReturnValues = [expectedValue.jsonEncoded()]
-
-        businessLogic.login(credentials: expectedBody).assertSuccess(self) {
-            XCTAssertEqual(self.appState.mockNetworkService.lastPerformParams?.api as? ZorkdevAPI, .login)
-            XCTAssertEqual(self.appState.mockNetworkService.lastPerformParams?.method, .post)
-            XCTAssertEqual(self.appState.mockNetworkService.lastPerformParams?.body as? Credentials, expectedBody)
-            XCTAssertEqual(self.appState.mockSessionService.lastSaveParam, expectedValue)
-        }
-    }
-
-    func testLogin_Failure() {
-        appState.mockNetworkService.performReturnValues = [.failure(TestError())]
-
-        businessLogic.login(credentials: Credentials.stub).assertFailure(self) { error in
-            XCTAssertTrue(error is TestError)
-        }
+        networkService = MockNetworkService()
+        dataService = MockDataService()
+        businessLogic = UserBusinessLogic(networkService: networkService, dataService: dataService)
     }
 
     func testGetUser_Success() {
         let expectedValue = User.stub
-        appState.mockNetworkService.performReturnValues = [expectedValue.jsonEncoded()]
+        networkService.performReturnValues = [expectedValue.jsonEncoded()]
+        dataService.saveReturnValue = .success(())
 
-        businessLogic.getUser().assertSuccess(self) { value in
-            XCTAssertEqual(self.appState.mockNetworkService.lastPerformParams?.api as? ZorkdevAPI, .user)
-            XCTAssertEqual(self.appState.mockNetworkService.lastPerformParams?.method, .get)
-            XCTAssertNil(self.appState.mockNetworkService.lastPerformParams?.body)
-            XCTAssertEqual(self.appState.mockDataService.savedValues.first as? User, expectedValue)
-            XCTAssertEqual(value, expectedValue)
+        businessLogic.getUser().assertSuccess(self) {
+            XCTAssertEqual(self.networkService.lastPerformParams?.api as? API, .user)
+            XCTAssertEqual(self.networkService.lastPerformParams?.method, .get)
+            XCTAssertNil(self.networkService.lastPerformParams?.body)
+            XCTAssertEqual(self.dataService.savedValues.first as? User, expectedValue)
         }
+
+        businessLogic.user.assertSuccess(self) { XCTAssertEqual($0, expectedValue) }
     }
 
     func testGetUser_Failure() {
-        appState.mockNetworkService.performReturnValues = [.failure(TestError())]
+        networkService.performReturnValues = [.failure(TestError())]
 
         businessLogic.getUser().assertFailure(self) { error in
             XCTAssertTrue(error is TestError)
         }
+
+        businessLogic.user.assertSuccess(self) { XCTAssertNil($0) }
     }
 
     func testUpdate_Success() {
         let expectedValue = User.stub
-        appState.mockNetworkService.performReturnValues = [expectedValue.jsonEncoded()]
+        networkService.performReturnValues = [expectedValue.jsonEncoded()]
+        dataService.saveReturnValue = .success(())
 
-        businessLogic.update(user: expectedValue).assertSuccess(self) { value in
-            XCTAssertEqual(self.appState.mockNetworkService.lastPerformParams?.api as? ZorkdevAPI, .user)
-            XCTAssertEqual(self.appState.mockNetworkService.lastPerformParams?.method, .patch)
-            XCTAssertEqual(self.appState.mockNetworkService.lastPerformParams?.body as? User, expectedValue)
-            XCTAssertEqual(self.appState.mockDataService.savedValues.first as? User, expectedValue)
-            XCTAssertEqual(value, expectedValue)
+        businessLogic.update(user: expectedValue).assertSuccess(self) {
+            XCTAssertEqual(self.networkService.lastPerformParams?.api as? API, .user)
+            XCTAssertEqual(self.networkService.lastPerformParams?.method, .patch)
+            XCTAssertEqual(self.networkService.lastPerformParams?.body as? User, expectedValue)
+            XCTAssertEqual(self.dataService.savedValues.first as? User, expectedValue)
         }
+
+        businessLogic.user.assertSuccess(self) { XCTAssertEqual($0, expectedValue) }
     }
 
     func testUpdate_Failure() {
-        appState.mockNetworkService.performReturnValues = [.failure(TestError())]
+        networkService.performReturnValues = [.failure(TestError())]
 
         businessLogic.update(user: User.stub).assertFailure(self) { error in
             XCTAssertTrue(error is TestError)
         }
+
+        businessLogic.user.assertSuccess(self) { XCTAssertNil($0) }
     }
 }

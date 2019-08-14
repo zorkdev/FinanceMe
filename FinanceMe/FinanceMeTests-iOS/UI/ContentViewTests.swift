@@ -3,7 +3,6 @@ import XCTest
 
 class ContentViewTests: XCTestCase {
     func testView() {
-        _ = ContentView().body
-        XCTAssertTrue(ContentViewPreviews.previews is ContentView)
+        assert(view: ContentView(), previews: ContentViewPreviews.self)
     }
 }

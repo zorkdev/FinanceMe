@@ -11,5 +11,7 @@ class AppStateTests: XCTestCase {
         XCTAssertTrue(appState.dataService is KeychainDataService)
         XCTAssertTrue(appState.loggingService is DefaultLoggingService)
         XCTAssertTrue(appState.configService is DefaultConfigService)
+        XCTAssertTrue(appState.sessionBusinessLogic is SessionBusinessLogic)
+        XCTAssertTrue(appState.userBusinessLogic is UserBusinessLogic)
     }
 }

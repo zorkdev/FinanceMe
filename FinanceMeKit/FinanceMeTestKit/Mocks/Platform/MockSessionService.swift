@@ -1,4 +1,4 @@
-import FinanceMeKit
+@testable import FinanceMeKit
 
 public class MockSessionService: SessionService {
     public var hasSession: Bool = false
@@ -7,8 +7,10 @@ public class MockSessionService: SessionService {
     public init() {}
 
     public var lastSaveParam: Session?
-    public func save(session: Session) {
+    public var saveReturnValue: Result<Void, Error>?
+    public func save(session: Session) -> Result<Void, Error> {
         lastSaveParam = session
+        return saveReturnValue ?? .failure(NoReturnValueProviderError(function: #function))
     }
 
     public var didCallLogOut = false

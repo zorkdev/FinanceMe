@@ -1,4 +1,4 @@
-import FinanceMeKit
+@testable import FinanceMeKit
 
 public class MockDataService: DataService {
     public init() {}

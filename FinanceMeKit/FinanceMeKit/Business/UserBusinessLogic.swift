@@ -1,47 +1,44 @@
 import Combine
 
 public protocol UserBusinessLogicType {
-    func login(credentials: Credentials) -> AnyPublisher<Void, Error>
-    func getUser() -> AnyPublisher<User, Error>
-    func update(user: User) -> AnyPublisher<User, Error>
+    var user: AnyPublisher<User?, Never> { get }
+    func getUser() -> AnyPublisher<Void, Error>
+    func update(user: User) -> AnyPublisher<Void, Error>
 }
 
-public struct UserBusinessLogic: UserBusinessLogicType, ServiceClient {
-    public let serviceProvider: NetworkServiceProvider & DataServiceProvider & SessionServiceProvider
+class UserBusinessLogic: UserBusinessLogicType {
+    private let networkService: NetworkService
+    private let dataService: DataService
 
-    public init(serviceProvider: ServiceProvider) {
-        self.serviceProvider = serviceProvider
+    @Published private var internalUser: User?
+
+    var user: AnyPublisher<User?, Never> { $internalUser.eraseToAnyPublisher() }
+
+    init(networkService: NetworkService, dataService: DataService) {
+        self.networkService = networkService
+        self.dataService = dataService
+        self.internalUser = User.load(dataService: dataService)
     }
 
-    public func login(credentials: Credentials) -> AnyPublisher<Void, Error> {
-        serviceProvider.networkService
-            .perform(api: ZorkdevAPI.login,
-                     method: .post,
-                     body: credentials)
-            .map { (session: Session) in
-                self.serviceProvider.sessionService.save(session: session)
-            }.eraseToAnyPublisher()
-    }
-
-    public func getUser() -> AnyPublisher<User, Error> {
-        serviceProvider.networkService
-            .perform(api: ZorkdevAPI.user,
+    func getUser() -> AnyPublisher<Void, Error> {
+        networkService
+            .perform(api: API.user,
                      method: .get,
                      body: nil)
-            .map { (user: User) in
-                user.save(dataService: self.serviceProvider.dataService)
-                return user
+            .tryMap { (user: User) in
+                if case .failure(let error) = user.save(dataService: self.dataService) { throw error }
+                self.internalUser = user
             }.eraseToAnyPublisher()
     }
 
-    public func update(user: User) -> AnyPublisher<User, Error> {
-        serviceProvider.networkService
-            .perform(api: ZorkdevAPI.user,
+    func update(user: User) -> AnyPublisher<Void, Error> {
+        networkService
+            .perform(api: API.user,
                      method: .patch,
                      body: user)
-            .map { (user: User) in
-                user.save(dataService: self.serviceProvider.dataService)
-                return user
+            .tryMap { (user: User) in
+                if case .failure(let error) = user.save(dataService: self.dataService) { throw error }
+                self.internalUser = user
             }.eraseToAnyPublisher()
     }
 }

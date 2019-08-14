@@ -1,10 +1,6 @@
 import Combine
 import LocalAuthentication
 
-public protocol AuthenticationServiceProvider {
-    var authenticationService: AuthenticationService { get }
-}
-
 protocol LAContextType {
     init()
     func canEvaluatePolicy(_ policy: LAPolicy, error: NSErrorPointer) -> Bool
@@ -14,8 +10,8 @@ protocol LAContextType {
 
 extension LAContext: LAContextType {}
 
-public protocol AuthenticationService {
-    func authenticate() -> AnyPublisher<Void, Error>
+protocol AuthenticationService {
+    func authenticate(reason: String) -> AnyPublisher<Void, Error>
     func invalidate()
 }
 
@@ -26,18 +22,15 @@ class LAContextAuthenticationService: AuthenticationService {
 
     private let sessionService: SessionService
     private let laContextType: LAContextType.Type
-    private let reason: String
     private var context: LAContextType?
 
     init(sessionService: SessionService,
-         laContextType: LAContextType.Type,
-         reason: String) {
+         laContextType: LAContextType.Type) {
         self.sessionService = sessionService
         self.laContextType = laContextType
-        self.reason = reason
     }
 
-    func authenticate() -> AnyPublisher<Void, Error> {
+    func authenticate(reason: String) -> AnyPublisher<Void, Error> {
         var error: NSError?
         let context = laContextType.init()
         self.context = context
@@ -48,7 +41,7 @@ class LAContextAuthenticationService: AuthenticationService {
         }
 
         return Future { promise in
-            context.evaluatePolicy(.deviceOwnerAuthentication, localizedReason: self.reason) { success, error in
+            context.evaluatePolicy(.deviceOwnerAuthentication, localizedReason: reason) { success, error in
                 defer { self.context = nil }
                 guard success else {
                     promise(.failure(error!))

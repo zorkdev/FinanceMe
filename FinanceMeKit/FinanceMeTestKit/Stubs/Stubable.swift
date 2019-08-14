@@ -9,7 +9,7 @@ extension Credentials: Stubable {
 }
 
 extension Session: Stubable {
-    public static var stub: Session { Session(sToken: "sToken", token: "token") }
+    public static var stub: Session { Session(token: "token") }
 }
 
 extension User: Stubable {
@@ -17,9 +17,6 @@ extension User: Stubable {
                                         payday: 10,
                                         startDate: ISO8601DateFormatter().date(from: "2019-01-01T00:00:00Z")!,
                                         largeTransaction: Decimal(string: "10")!,
-                                        allowance: Decimal(string: "100.22")!) }
-}
-
-extension Balance: Stubable {
-    public static var stub: Balance { Balance(effectiveBalance: Decimal(string: "100.1")!) }
+                                        allowance: Decimal(string: "100.22")!,
+                                        balance: Decimal(string: "211.20")!) }
 }

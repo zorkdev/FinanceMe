@@ -1,16 +1,17 @@
-public protocol AppStateType: AnyObject,
-NetworkServiceProvider
-& SessionServiceProvider
-& DataServiceProvider
-& LoggingServiceProvider
-& ConfigServiceProvider {}
+public protocol AppStateType: AnyObject {
+    var sessionBusinessLogic: SessionBusinessLogicType { get }
+    var userBusinessLogic: UserBusinessLogicType { get }
+}
 
 public class AppState: AppStateType {
-    public let networkService: NetworkService
-    public let sessionService: SessionService
-    public let dataService: DataService
-    public let loggingService: LoggingService
-    public let configService: ConfigService
+    let networkService: NetworkService
+    let sessionService: SessionService
+    let dataService: DataService
+    let loggingService: LoggingService
+    let configService: ConfigService
+
+    public let sessionBusinessLogic: SessionBusinessLogicType
+    public let userBusinessLogic: UserBusinessLogicType
 
     public init() {
         configService = DefaultConfigService()
@@ -20,5 +21,10 @@ public class AppState: AppStateType {
         networkService = DefaultNetworkService(networkRequestable: URLSession.shared,
                                                loggingService: loggingService,
                                                sessionService: sessionService)
+
+        sessionBusinessLogic = SessionBusinessLogic(networkService: networkService,
+                                                    sessionService: sessionService)
+        userBusinessLogic = UserBusinessLogic(networkService: networkService,
+                                              dataService: dataService)
     }
 }

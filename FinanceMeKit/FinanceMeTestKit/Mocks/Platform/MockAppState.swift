@@ -1,4 +1,4 @@
-import FinanceMeKit
+@testable import FinanceMeKit
 
 // swiftlint:disable force_cast
 public class MockAppState: AppStateType {
@@ -16,4 +16,10 @@ public class MockAppState: AppStateType {
 
     public var configService: ConfigService = MockConfigService()
     public var mockConfigService: MockConfigService { configService as! MockConfigService }
+
+    public var sessionBusinessLogic: SessionBusinessLogicType = MockSessionBusinessLogic()
+    public var mockSessionBusinessLogic: MockSessionBusinessLogic { sessionBusinessLogic as! MockSessionBusinessLogic }
+
+    public var userBusinessLogic: UserBusinessLogicType = MockUserBusinessLogic()
+    public var mockUserBusinessLogic: MockUserBusinessLogic { userBusinessLogic as! MockUserBusinessLogic }
 }

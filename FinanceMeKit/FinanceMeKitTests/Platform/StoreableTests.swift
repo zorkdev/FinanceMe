@@ -16,8 +16,12 @@ class StoreableTests: XCTestCase {
 
     func testSave_Success() {
         let model = Model(variable: "value")
+        dataService.saveReturnValue = .success(())
 
-        model.save(dataService: dataService)
+        guard case .success = model.save(dataService: dataService) else {
+            XCTFail("Should not have thrown error.")
+            return
+        }
 
         XCTAssertFalse(dataService.savedValues.isEmpty)
         XCTAssertTrue(dataService.savedValues.contains { ($0 as? Model) == model })

@@ -8,8 +8,8 @@ public struct AmountViewModel {
         let formatter = NumberFormatter()
         formatter.locale = Formatters.locale
         formatter.numberStyle = .decimal
-        formatter.negativePrefix = ""
         formatter.maximumFractionDigits = 0
+        formatter.roundingMode = .floor
         return formatter
     }()
 
@@ -17,11 +17,8 @@ public struct AmountViewModel {
         let formatter = NumberFormatter()
         formatter.locale = Formatters.locale
         formatter.numberStyle = .decimal
-        formatter.negativePrefix = ""
-        formatter.decimalSeparator = ""
-        formatter.maximumIntegerDigits = 0
-        formatter.minimumFractionDigits = 2
-        formatter.maximumFractionDigits = 2
+        formatter.minimumIntegerDigits = 2
+        formatter.maximumFractionDigits = 0
         return formatter
     }()
 
@@ -46,9 +43,9 @@ public struct AmountViewModel {
         }
 
         currencySymbol = Formatters.locale.currencySymbol!
-        integer = Self.integerFormatter.string(for: value)!
+        integer = Self.integerFormatter.string(for: value.integer)!
         decimalSeparator = Formatters.locale.decimalSeparator!
-        fraction = Self.fractionFormatter.string(for: value)!
+        fraction = Self.fractionFormatter.string(for: value.fraction)!
         string = sign + currencySymbol + integer + decimalSeparator + fraction
     }
 }

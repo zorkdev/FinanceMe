@@ -11,7 +11,8 @@ class UserTests: XCTestCase {
                 "payday": 10,
                 "startDate": "2019-01-01T00:00:00Z",
                 "largeTransaction": 10,
-                "allowance": 100.22
+                "allowance": 100.22,
+                "balance" : 211.2
             }
             """.data(using: .utf8)!
 
@@ -31,6 +32,7 @@ class UserTests: XCTestCase {
         let expectedValue =
             """
             {
+              "balance" : 211.2,
               "allowance" : 100.22,
               "startDate" : "2019-01-01T00:00:00Z",
               "name" : "Name",

@@ -2,8 +2,6 @@ import Cocoa
 import NotificationCenter
 import FinanceMeKit
 
-extension NSViewController: StringRepresentable {}
-
 class TodayViewController: NSViewController, NCWidgetProviding {
     override var nibName: NSNib.Name? { NSNib.Name(Self.instanceName) }
 

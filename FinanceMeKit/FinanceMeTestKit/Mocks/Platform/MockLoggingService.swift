@@ -1,4 +1,4 @@
-import FinanceMeKit
+@testable import FinanceMeKit
 
 public class MockLoggingService: LoggingService {
     public init() {}

@@ -1,10 +1,6 @@
 import Combine
 
-public protocol NetworkServiceProvider {
-    var networkService: NetworkService { get }
-}
-
-public enum HTTPMethod: String {
+enum HTTPMethod: String {
     case post = "POST"
     case get = "GET"
     case put = "PUT"
@@ -12,21 +8,20 @@ public enum HTTPMethod: String {
     case delete = "DELETE"
 }
 
-public protocol APIType {
+protocol APIType {
     var url: URL { get }
-    func token(session: Session) -> String
 }
 
 protocol NetworkRequestable {
     func perform(request: URLRequest) -> AnyPublisher<(data: Data, response: URLResponse), URLError>
 }
 
-public protocol NetworkService {
+protocol NetworkService {
     func perform(api: APIType, method: HTTPMethod, body: Encodable?) -> AnyPublisher<Data, Error>
     func perform<T: Decodable>(api: APIType, method: HTTPMethod, body: Encodable?) -> AnyPublisher<T, Error>
 }
 
-public extension NetworkService {
+extension NetworkService {
     func perform<T: Decodable>(api: APIType, method: HTTPMethod, body: Encodable?) -> AnyPublisher<T, Error> {
         perform(api: api, method: method, body: body)
             .decode(type: T.self, decoder: JSONDecoder.default)
@@ -67,6 +62,8 @@ class DefaultNetworkService: NetworkService {
             title: "API Request",
             content: Self.createRequestString(request))
 
+        let startTime = CFAbsoluteTimeGetCurrent()
+
         return networkRequestable.perform(request: request)
             .tryMap { response in
                 guard let urlResponse = response.response as? HTTPURLResponse else {
@@ -86,9 +83,11 @@ class DefaultNetworkService: NetworkService {
                     throw error
                 }
 
+                let endTime = CFAbsoluteTimeGetCurrent() - startTime
+
                 self.loggingService.log(
                     title: "API Response",
-                    content: Self.createResponseString(response.data, response: urlResponse))
+                    content: Self.createResponseString(response.data, response: urlResponse, time: endTime))
                 return response.data
             }.mapError { error in
                 self.loggingService.log(
@@ -110,12 +109,11 @@ private extension DefaultNetworkService {
         switch body?.jsonEncoded() {
         case .success(let data): request.httpBody = data
         case .failure(let error): return .failure(error)
-        case .none: break
+        case nil: break
         }
 
         if let session = sessionService.session {
-            let token = api.token(session: session)
-            request.setValue(Constants.authHeaderValue(token), forHTTPHeaderField: Constants.authHeaderKey)
+            request.setValue(Constants.authHeaderValue(session.token), forHTTPHeaderField: Constants.authHeaderKey)
         }
 
         return .success(request)
@@ -135,8 +133,9 @@ extension DefaultNetworkService {
         """
     }
 
-    static func createResponseString(_ data: Data, response: HTTPURLResponse) -> String {
+    static func createResponseString(_ data: Data, response: HTTPURLResponse, time: TimeInterval) -> String {
         """
+        Response time: \(Int(time * 1000))ms
         ----- URL -----
         \(response.url!.absoluteString)
         --- Status ----

@@ -1,6 +1,7 @@
 {
   "configurations" : [
     {
+      "id" : "9368322D-23A1-4665-A614-2FCAAA391186",
       "name" : "Configuration 1",
       "options" : {
 
@@ -8,6 +9,25 @@
     }
   ],
   "defaultOptions" : {
+    "codeCoverage" : {
+      "targets" : [
+        {
+          "containerPath" : "container:FinanceMe\/FinanceMe.xcodeproj",
+          "identifier" : "9A35A88E22EDD55B0086BD2A",
+          "name" : "FinanceMe-iOS"
+        },
+        {
+          "containerPath" : "container:FinanceMeKit\/FinanceMeKit.xcodeproj",
+          "identifier" : "9A35A8CA22EDD9020086BD2A",
+          "name" : "FinanceMeKit-iOS"
+        },
+        {
+          "containerPath" : "container:FinanceMe\/FinanceMe.xcodeproj",
+          "identifier" : "9A12DB9A22EF10E7000226A9",
+          "name" : "FinanceMeExtension-iOS"
+        }
+      ]
+    },
     "language" : "en-GB",
     "region" : "GB",
     "testExecutionOrdering" : "random"

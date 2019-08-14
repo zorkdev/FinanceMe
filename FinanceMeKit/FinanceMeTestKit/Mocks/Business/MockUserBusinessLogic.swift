@@ -2,6 +2,9 @@ import Combine
 import FinanceMeKit
 
 public class MockUserBusinessLogic: UserBusinessLogicType {
+    @Published public var userReturnValue: User?
+    public var user: AnyPublisher<User?, Never> { $userReturnValue.eraseToAnyPublisher() }
+
     public init() {}
 
     public var lastLoginParam: Credentials?
@@ -12,15 +15,17 @@ public class MockUserBusinessLogic: UserBusinessLogicType {
         return returnValue.publisher.eraseToAnyPublisher()
     }
 
-    public var getUserReturnValue: Result<User, Error>?
-    public func getUser() -> AnyPublisher<User, Error> {
+    public var didCallGetUser = false
+    public var getUserReturnValue: Result<Void, Error>?
+    public func getUser() -> AnyPublisher<Void, Error> {
+        didCallGetUser = true
         let returnValue = getUserReturnValue ?? .failure(NoReturnValueProviderError(function: #function))
         return returnValue.publisher.eraseToAnyPublisher()
     }
 
     public var lastUpdateParam: User?
-    public var updateReturnValue: Result<User, Error>?
-    public func update(user: User) -> AnyPublisher<User, Error> {
+    public var updateReturnValue: Result<Void, Error>?
+    public func update(user: User) -> AnyPublisher<Void, Error> {
         lastUpdateParam = user
         let returnValue = updateReturnValue ?? .failure(NoReturnValueProviderError(function: #function))
         return returnValue.publisher.eraseToAnyPublisher()

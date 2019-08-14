@@ -1,6 +1,7 @@
 {
   "configurations" : [
     {
+      "id" : "B3E3AB29-7B54-4A40-BF46-790EE12DED24",
       "name" : "Configuration 1",
       "options" : {
 
@@ -8,6 +9,15 @@
     }
   ],
   "defaultOptions" : {
+    "codeCoverage" : {
+      "targets" : [
+        {
+          "containerPath" : "container:FinanceMeKit\/FinanceMeKit.xcodeproj",
+          "identifier" : "9A35A95522EDEC680086BD2A",
+          "name" : "FinanceMeKit-macOS"
+        }
+      ]
+    },
     "language" : "en-GB",
     "region" : "GB",
     "testExecutionOrdering" : "random"

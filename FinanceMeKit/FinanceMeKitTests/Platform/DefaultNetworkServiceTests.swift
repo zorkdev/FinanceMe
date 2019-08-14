@@ -222,6 +222,7 @@ class DefaultNetworkServiceTests: XCTestCase {
 
         let expectedValue =
             """
+            Response time: 1000ms
             ----- URL -----
             https://www.apple.com
             --- Status ----
@@ -236,7 +237,7 @@ class DefaultNetworkServiceTests: XCTestCase {
             }
             """
 
-        XCTAssertEqual(DefaultNetworkService.createResponseString(data, response: response), expectedValue)
+        XCTAssertEqual(DefaultNetworkService.createResponseString(data, response: response, time: 1), expectedValue)
     }
 
     func testPrintErrorResponse() {

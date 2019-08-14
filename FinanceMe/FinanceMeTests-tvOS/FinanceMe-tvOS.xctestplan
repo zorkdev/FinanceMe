@@ -1,6 +1,7 @@
 {
   "configurations" : [
     {
+      "id" : "CCF33415-32CE-4DD4-A6F6-E7E65E46D88E",
       "name" : "Configuration 1",
       "options" : {
 
@@ -8,6 +9,20 @@
     }
   ],
   "defaultOptions" : {
+    "codeCoverage" : {
+      "targets" : [
+        {
+          "containerPath" : "container:FinanceMe\/FinanceMe.xcodeproj",
+          "identifier" : "9A35A8FD22EDDD580086BD2A",
+          "name" : "FinanceMe-tvOS"
+        },
+        {
+          "containerPath" : "container:FinanceMeKit\/FinanceMeKit.xcodeproj",
+          "identifier" : "9A35A91122EDDE620086BD2A",
+          "name" : "FinanceMeKit-tvOS"
+        }
+      ]
+    },
     "language" : "en-GB",
     "region" : "GB",
     "testExecutionOrdering" : "random"

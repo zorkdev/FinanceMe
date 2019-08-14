@@ -7,3 +7,9 @@ public extension StringRepresentable {
 }
 
 extension Array: StringRepresentable {}
+
+#if os(macOS)
+import AppKit
+
+extension NSViewController: StringRepresentable {}
+#endif

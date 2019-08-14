@@ -4,7 +4,7 @@ import FinanceMeTestKit
 
 class AppStateTests: XCTestCase {
     func testInit() {
-        let appState = AppState(authReason: "Test")
+        let appState = AppState()
 
         XCTAssertTrue(appState.networkService is DefaultNetworkService)
         XCTAssertTrue(appState.sessionService is DefaultSessionService)
@@ -12,5 +12,7 @@ class AppStateTests: XCTestCase {
         XCTAssertTrue(appState.loggingService is DefaultLoggingService)
         XCTAssertTrue(appState.configService is DefaultConfigService)
         XCTAssertTrue(appState.authenticationService is LAContextAuthenticationService)
+        XCTAssertTrue(appState.sessionBusinessLogic is SessionBusinessLogic)
+        XCTAssertTrue(appState.userBusinessLogic is UserBusinessLogic)
     }
 }

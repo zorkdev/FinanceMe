@@ -10,8 +10,7 @@ class LAContextAuthenticationServiceTests: XCTestCase {
         super.setUp()
         sessionService = MockSessionService()
         authenticationService = LAContextAuthenticationService(sessionService: sessionService,
-                                                               laContextType: MockLAContext.self,
-                                                               reason: "Test")
+                                                               laContextType: MockLAContext.self)
     }
 
     func testAuthenticate_Success() {
@@ -19,7 +18,7 @@ class LAContextAuthenticationServiceTests: XCTestCase {
         MockLAContext.canEvaluatePolicyReturnValue = true
         MockLAContext.evaluatePolicyReturnValue = true
 
-        authenticationService.authenticate().assertSuccess(self) {
+        authenticationService.authenticate(reason: "Test").assertSuccess(self) {
             XCTAssertEqual(MockLAContext.lastLocalizedReason, "Test")
         }
     }
@@ -29,7 +28,7 @@ class LAContextAuthenticationServiceTests: XCTestCase {
         MockLAContext.canEvaluatePolicyReturnValue = true
         MockLAContext.evaluatePolicyReturnValue = true
 
-        authenticationService.authenticate().assertFailure(self) { _ in }
+        authenticationService.authenticate(reason: "Test").assertFailure(self) { _ in }
     }
 
     func testAuthenticateCannotEvaluate_Failure() {
@@ -37,7 +36,7 @@ class LAContextAuthenticationServiceTests: XCTestCase {
         MockLAContext.canEvaluatePolicyReturnValue = false
         MockLAContext.evaluatePolicyReturnValue = true
 
-        authenticationService.authenticate().assertFailure(self) { _ in }
+        authenticationService.authenticate(reason: "Test").assertFailure(self) { _ in }
     }
 
     func testAuthenticateEvaluation_Failure() {
@@ -45,7 +44,7 @@ class LAContextAuthenticationServiceTests: XCTestCase {
         MockLAContext.canEvaluatePolicyReturnValue = true
         MockLAContext.evaluatePolicyReturnValue = false
 
-        authenticationService.authenticate().assertFailure(self) { _ in }
+        authenticationService.authenticate(reason: "Test").assertFailure(self) { _ in }
     }
 
     func testInvalidate() {
@@ -54,7 +53,7 @@ class LAContextAuthenticationServiceTests: XCTestCase {
         MockLAContext.evaluatePolicyReturnValue = true
         MockLAContext.delay = 0.1
 
-        _ = authenticationService.authenticate()
+        _ = authenticationService.authenticate(reason: "Test")
         authenticationService.invalidate()
 
         XCTAssertTrue(MockLAContext.didCallInvalidate)

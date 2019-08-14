@@ -5,8 +5,8 @@ class DefaultConfigServiceTests: XCTestCase {
     func testInit() {
         let configService = DefaultConfigService()
 
-        XCTAssertEqual(configService.urlScheme, "urlscheme://")
-        XCTAssertEqual(configService.productName, "com.zorkdev.FinanceMeKitTestsHost")
-        XCTAssertEqual(configService.accessGroup, "WX9VZ58J6W.com.zorkdev.FinanceMeKitTestsHost")
+        XCTAssertEqual(configService.urlScheme, "financeme://")
+        XCTAssertEqual(configService.productName, "com.zorkdev.FinanceMe")
+        XCTAssertEqual(configService.accessGroup, "WX9VZ58J6W.com.zorkdev.FinanceMe")
     }
 }

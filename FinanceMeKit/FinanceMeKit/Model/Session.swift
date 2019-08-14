@@ -1,4 +1,3 @@
-public struct Session: Storeable, Equatable {
-    let sToken: String
+struct Session: Storeable, Equatable {
     let token: String
 }

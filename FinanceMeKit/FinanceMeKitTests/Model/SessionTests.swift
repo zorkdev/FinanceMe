@@ -7,7 +7,6 @@ class SessionTests: XCTestCase {
         let jsonData =
             """
             {
-                "sToken": "sToken",
                 "token": "token"
             }
             """.data(using: .utf8)!
@@ -28,8 +27,7 @@ class SessionTests: XCTestCase {
         let expectedValue =
             """
             {
-              "token" : "token",
-              "sToken" : "sToken"
+              "token" : "token"
             }
             """
 

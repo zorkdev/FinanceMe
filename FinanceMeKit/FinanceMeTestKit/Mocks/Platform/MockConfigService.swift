@@ -1,4 +1,4 @@
-import FinanceMeKit
+@testable import FinanceMeKit
 
 public struct MockConfigService: ConfigService {
     public let urlScheme = "urlScheme"

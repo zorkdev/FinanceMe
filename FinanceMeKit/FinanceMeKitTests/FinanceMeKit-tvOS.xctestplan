@@ -1,6 +1,7 @@
 {
   "configurations" : [
     {
+      "id" : "09C9E304-411D-40CD-AB19-6F41AAB9472B",
       "name" : "Configuration 1",
       "options" : {
 
@@ -8,6 +9,15 @@
     }
   ],
   "defaultOptions" : {
+    "codeCoverage" : {
+      "targets" : [
+        {
+          "containerPath" : "container:FinanceMeKit\/FinanceMeKit.xcodeproj",
+          "identifier" : "9A35A91122EDDE620086BD2A",
+          "name" : "FinanceMeKit-tvOS"
+        }
+      ]
+    },
     "language" : "en-GB",
     "region" : "GB",
     "testExecutionOrdering" : "random"

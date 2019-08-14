@@ -1,12 +1,8 @@
-public protocol SessionServiceProvider {
-    var sessionService: SessionService { get }
-}
-
-public protocol SessionService {
+protocol SessionService {
     var hasSession: Bool { get }
     var session: Session? { get }
 
-    func save(session: Session)
+    func save(session: Session) -> Result<Void, Error>
     func logOut()
 }
 
@@ -20,7 +16,7 @@ class DefaultSessionService: SessionService {
         self.dataService = dataService
     }
 
-    func save(session: Session) {
+    func save(session: Session) -> Result<Void, Error> {
         session.save(dataService: dataService)
     }
 

@@ -1,5 +1,5 @@
 import Combine
-import FinanceMeKit
+@testable import FinanceMeKit
 
 public class MockNetworkService: NetworkService {
     public init() {}
