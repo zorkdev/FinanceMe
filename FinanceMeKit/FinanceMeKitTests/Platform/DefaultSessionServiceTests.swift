@@ -42,4 +42,10 @@ class DefaultSessionServiceTests: XCTestCase {
 
         XCTAssertTrue(dataService.didCallRemoveAll)
     }
+
+    func testStub() {
+        let stub = Stub.StubSessionService()
+        _ = stub.save(session: Session.stub)
+        stub.logOut()
+    }
 }

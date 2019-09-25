@@ -22,3 +22,13 @@ protocol DataService {
     func load<T: Decodable>(key: String) -> T?
     func removeAll()
 }
+
+#if DEBUG
+extension Stub {
+    class StubDataService: DataService {
+        func save(value: Encodable, key: String) -> Result<Void, Error> { .success(()) }
+        func load<T: Decodable>(key: String) -> T? { nil }
+        func removeAll() {}
+    }
+}
+#endif

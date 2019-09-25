@@ -21,4 +21,9 @@ class DefaultLoggingServiceTests: XCTestCase {
             """
         )
     }
+
+    func testStub() {
+        let stub = Stub.StubLoggingService()
+        stub.log(title: "", content: "", type: .info)
+    }
 }

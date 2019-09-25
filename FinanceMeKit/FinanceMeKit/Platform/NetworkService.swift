@@ -89,12 +89,6 @@ class DefaultNetworkService: NetworkService {
                     title: "API Response",
                     content: Self.createResponseString(response.data, response: urlResponse, time: endTime))
                 return response.data
-            }.mapError { error in
-                self.loggingService.log(
-                    title: "API Error",
-                    content: Self.createResponseString(error, data: nil, response: nil),
-                    type: .error)
-                return error
             }.eraseToAnyPublisher()
     }
 }
@@ -162,3 +156,9 @@ extension DefaultNetworkService {
         """
     }
 }
+
+#if DEBUG
+extension Stub {
+    class StubNetworkService: NetworkService {}
+}
+#endif

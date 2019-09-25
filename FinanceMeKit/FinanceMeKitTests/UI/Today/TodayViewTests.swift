@@ -3,6 +3,6 @@ import XCTest
 
 class TodayViewTests: XCTestCase {
     func testView() {
-        assert(view: TodayView(viewModel: TodayViewPreviews.Stub()), previews: TodayViewPreviews.self)
+        assert(view: TodayView(viewModel: Stub.StubTodayViewModel()), previews: TodayViewPreviews.self)
     }
 }

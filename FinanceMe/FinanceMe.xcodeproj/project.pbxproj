@@ -40,12 +40,8 @@
 		9AADAAEC22F632B500C6C290 /* FinanceMeTestKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AADAAEB22F632B500C6C290 /* FinanceMeTestKit.framework */; };
 		9AADAAEE22F632D600C6C290 /* FinanceMeTestKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AADAAED22F632D600C6C290 /* FinanceMeTestKit.framework */; };
 		9AADAAF522F6360900C6C290 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AADAAF422F6360900C6C290 /* main.swift */; };
-		9AADAAFA22F638CC00C6C290 /* TodayViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AADAAF922F638CC00C6C290 /* TodayViewControllerTests.swift */; };
-		9AADAAFB22F638E900C6C290 /* TodayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A12DBE622EF675A000226A9 /* TodayViewController.swift */; };
 		9AE4E4C622F4CC0600B34E81 /* ContentViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AE4E4C522F4CC0600B34E81 /* ContentViewTests.swift */; };
 		9AE4E4C822F4CD2500B34E81 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AE4E4C722F4CD2500B34E81 /* main.swift */; };
-		9AE4E4CD22F4D08800B34E81 /* TodayViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AE4E4CC22F4D08800B34E81 /* TodayViewControllerTests.swift */; };
-		9AE4E4CE22F4D36300B34E81 /* TodayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A12DB9F22EF10E7000226A9 /* TodayViewController.swift */; };
 		9AF87E9F22EF91FD009E786C /* FinanceMeApp.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 9AF87E9E22EF91FD009E786C /* FinanceMeApp.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		9AF87EA522EF91FD009E786C /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9AF87EA322EF91FD009E786C /* Interface.storyboard */; };
 		9AF87EA722EF91FF009E786C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9AF87EA622EF91FF009E786C /* Assets.xcassets */; };
@@ -335,10 +331,8 @@
 		9AADAAEB22F632B500C6C290 /* FinanceMeTestKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = FinanceMeTestKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9AADAAED22F632D600C6C290 /* FinanceMeTestKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = FinanceMeTestKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9AADAAF422F6360900C6C290 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
-		9AADAAF922F638CC00C6C290 /* TodayViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayViewControllerTests.swift; sourceTree = "<group>"; };
 		9AE4E4C522F4CC0600B34E81 /* ContentViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewTests.swift; sourceTree = "<group>"; };
 		9AE4E4C722F4CD2500B34E81 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
-		9AE4E4CC22F4D08800B34E81 /* TodayViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayViewControllerTests.swift; sourceTree = "<group>"; };
 		9AF87E9B22EF91FD009E786C /* FinanceMe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FinanceMe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9AF87E9E22EF91FD009E786C /* FinanceMeApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FinanceMeApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9AF87EA422EF91FD009E786C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
@@ -506,7 +500,6 @@
 				9A12DBD922EF66A9000226A9 /* Info.plist */,
 				9A12DC2522EF6C47000226A9 /* FinanceMe-macOS.xctestplan */,
 				9A12DBD722EF66A9000226A9 /* ContentViewTests.swift */,
-				9AADAAF922F638CC00C6C290 /* TodayViewControllerTests.swift */,
 			);
 			path = "FinanceMeTests-macOS";
 			sourceTree = "<group>";
@@ -644,7 +637,6 @@
 			children = (
 				9AE4E4C122F4C82C00B34E81 /* Application */,
 				9AE4E4C422F4CBC800B34E81 /* UI */,
-				9AE4E4CB22F4D05E00B34E81 /* Extension */,
 				9A35A93322EDE1A10086BD2A /* FinanceMe-iOS.xctestplan */,
 				9A35A92D22EDE1140086BD2A /* Info.plist */,
 			);
@@ -710,14 +702,6 @@
 				9AE4E4C522F4CC0600B34E81 /* ContentViewTests.swift */,
 			);
 			path = UI;
-			sourceTree = "<group>";
-		};
-		9AE4E4CB22F4D05E00B34E81 /* Extension */ = {
-			isa = PBXGroup;
-			children = (
-				9AE4E4CC22F4D08800B34E81 /* TodayViewControllerTests.swift */,
-			);
-			path = Extension;
 			sourceTree = "<group>";
 		};
 		9AF87EA222EF91FD009E786C /* FinanceMe-watchOS */ = {
@@ -1233,9 +1217,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9AADAAFA22F638CC00C6C290 /* TodayViewControllerTests.swift in Sources */,
 				9A12DBD822EF66A9000226A9 /* ContentViewTests.swift in Sources */,
-				9AADAAFB22F638E900C6C290 /* TodayViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1296,9 +1278,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9AE4E4CD22F4D08800B34E81 /* TodayViewControllerTests.swift in Sources */,
 				9AE4E4C622F4CC0600B34E81 /* ContentViewTests.swift in Sources */,
-				9AE4E4CE22F4D36300B34E81 /* TodayViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

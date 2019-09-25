@@ -43,3 +43,13 @@ public class TodayViewModel: TodayViewModelType {
             .store(in: &cancellables)
     }
 }
+
+#if DEBUG
+extension Stub {
+    class StubTodayViewModel: TodayViewModelType {
+        var allowance = AmountViewModel(value: 10)
+        var balance = AmountViewModel(value: 200)
+        func onAppear() {}
+    }
+}
+#endif

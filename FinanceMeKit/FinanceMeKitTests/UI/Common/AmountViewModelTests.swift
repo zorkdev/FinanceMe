@@ -11,6 +11,7 @@ class AmountViewModelTests: XCTestCase {
         XCTAssertEqual(viewModel1.decimalSeparator, ".")
         XCTAssertEqual(viewModel1.fraction, "34")
         XCTAssertEqual(viewModel1.string, "£1,200.34")
+        XCTAssertFalse(viewModel1.isNegative)
 
         let viewModel2 = AmountViewModel(value: Decimal(string: "-1200.34")!)
 
@@ -20,6 +21,7 @@ class AmountViewModelTests: XCTestCase {
         XCTAssertEqual(viewModel2.decimalSeparator, ".")
         XCTAssertEqual(viewModel2.fraction, "34")
         XCTAssertEqual(viewModel2.string, "-£1,200.34")
+        XCTAssertTrue(viewModel2.isNegative)
     }
 
     func testWithPlusMinusSign() {
@@ -31,6 +33,7 @@ class AmountViewModelTests: XCTestCase {
         XCTAssertEqual(viewModel1.decimalSeparator, ".")
         XCTAssertEqual(viewModel1.fraction, "34")
         XCTAssertEqual(viewModel1.string, "+£12.34")
+        XCTAssertFalse(viewModel1.isNegative)
 
         let viewModel2 = AmountViewModel(value: Decimal(string: "-12.34")!, signs: [.plus, .minus])
 
@@ -40,6 +43,7 @@ class AmountViewModelTests: XCTestCase {
         XCTAssertEqual(viewModel2.decimalSeparator, ".")
         XCTAssertEqual(viewModel2.fraction, "34")
         XCTAssertEqual(viewModel2.string, "-£12.34")
+        XCTAssertTrue(viewModel2.isNegative)
     }
 
     func testWithNoSign() {
@@ -51,6 +55,7 @@ class AmountViewModelTests: XCTestCase {
         XCTAssertEqual(viewModel1.decimalSeparator, ".")
         XCTAssertEqual(viewModel1.fraction, "34")
         XCTAssertEqual(viewModel1.string, "£12.34")
+        XCTAssertFalse(viewModel1.isNegative)
 
         let viewModel2 = AmountViewModel(value: Decimal(string: "-12.34")!, signs: [])
 
@@ -60,5 +65,6 @@ class AmountViewModelTests: XCTestCase {
         XCTAssertEqual(viewModel2.decimalSeparator, ".")
         XCTAssertEqual(viewModel2.fraction, "34")
         XCTAssertEqual(viewModel2.string, "£12.34")
+        XCTAssertTrue(viewModel2.isNegative)
     }
 }

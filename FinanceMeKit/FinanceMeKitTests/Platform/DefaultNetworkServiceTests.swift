@@ -275,4 +275,31 @@ class DefaultNetworkServiceTests: XCTestCase {
 
         XCTAssertEqual(DefaultNetworkService.createResponseString(error, data: data, response: response), expectedValue)
     }
+
+    func testPrintErrorResponseWithoutBody() {
+        let error = URLError(.notConnectedToInternet)
+
+        let response = HTTPURLResponse(url: URL(string: "https://ww.apple.com")!,
+                                       statusCode: 500,
+                                       httpVersion: nil,
+                                       headerFields: ["Header": "Value"])!
+
+        let expectedValue =
+            """
+            ----- URL -----
+            https://ww.apple.com
+            --- Status ----
+            500
+            --- Headers ---
+            {
+              "Header" : "Value"
+            }
+            ---- Error ----
+            Error Domain=NSURLErrorDomain Code=-1009 "(null)"
+            ---- Body -----
+            nil
+            """
+
+        XCTAssertEqual(DefaultNetworkService.createResponseString(error, data: nil, response: response), expectedValue)
+    }
 }

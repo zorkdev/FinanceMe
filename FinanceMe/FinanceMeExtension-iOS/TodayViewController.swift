@@ -3,11 +3,11 @@ import SwiftUI
 import NotificationCenter
 import FinanceMeKit
 
-class TodayViewController: UIHostingController<TodayContentView<TodayViewModel>>, NCWidgetProviding {
+class TodayViewController: UIHostingController<AnyView>, NCWidgetProviding {
     private let appState = AppState()
 
     override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
-        super.init(rootView: TodayContentView(viewModel: TodayViewModel(businessLogic: appState.userBusinessLogic)))
+        super.init(rootView: AnyView(TodayContentView().environmentObject(appState)))
         view.backgroundColor = .clear
     }
 
@@ -19,24 +19,18 @@ class TodayViewController: UIHostingController<TodayContentView<TodayViewModel>>
     }
 }
 
-struct TodayContentView<ViewModel: TodayViewModelType>: View {
-    let viewModel: ViewModel
+struct TodayContentView: View {
+    @EnvironmentObject private var appState: AppState
 
     var body: some View {
-        TodayView(viewModel: viewModel)
+        TodayView(viewModel: TodayViewModel(businessLogic: appState.userBusinessLogic))
     }
 }
 
 #if DEBUG
 struct TodayContentViewPreviews: PreviewProvider {
-    class Stub: TodayViewModelType {
-        var allowance = AmountViewModel(value: 10)
-        var balance = AmountViewModel(value: 200)
-        func onAppear() {}
-    }
-
     static var previews: some View {
-        TodayContentView(viewModel: Stub())
+        TodayContentView().environmentObject(AppState.stub)
     }
 }
 #endif

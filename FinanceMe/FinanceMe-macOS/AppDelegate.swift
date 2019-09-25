@@ -4,6 +4,7 @@ import FinanceMeKit
 
 @NSApplicationMain
 class AppDelegate: NSObject, NSApplicationDelegate {
+    private let appState = AppState()
     var window: NSWindow!
 
     func applicationDidFinishLaunching(_ aNotification: Notification) {
@@ -21,7 +22,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
                           defer: false)
         window.center()
         window.setFrameAutosaveName("Main Window")
-        window.contentView = NSHostingView(rootView: ContentView())
+        window.contentView = NSHostingView(rootView: ContentView().environmentObject(appState))
         window.makeKeyAndOrderFront(nil)
     }
 }

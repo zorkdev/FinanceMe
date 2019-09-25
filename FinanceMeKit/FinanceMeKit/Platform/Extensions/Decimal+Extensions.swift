@@ -1,4 +1,4 @@
-public extension Decimal {
+extension Decimal {
     var integer: Decimal { abs(floored) }
     var fraction: Decimal { (abs(self) - integer) * 100 }
 

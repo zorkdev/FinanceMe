@@ -2,16 +2,17 @@ import SwiftUI
 import FinanceMeKit
 
 struct ContentView: View {
+    @EnvironmentObject private var appState: AppState
+
     var body: some View {
-        Text(AmountViewModel(value: Decimal(string: "10")!).string)
-            .frame(maxWidth: .infinity, maxHeight: .infinity)
+        TodayView(viewModel: TodayViewModel(businessLogic: appState.userBusinessLogic))
     }
 }
 
 #if DEBUG
 struct ContentViewPreviews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        ContentView().environmentObject(AppState.stub)
     }
 }
 #endif

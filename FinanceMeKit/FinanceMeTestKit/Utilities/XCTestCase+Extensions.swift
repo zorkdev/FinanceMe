@@ -1,5 +1,6 @@
 import XCTest
 import SwiftUI
+import FinanceMeKit
 
 public extension XCTestCase {
     func waitUntil(action: @escaping (@escaping () -> Void) -> Void) {
@@ -10,7 +11,7 @@ public extension XCTestCase {
 
     func waitForEvent(action: @escaping () -> Void) {
         waitUntil { done in
-            DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
                 action()
                 done()
             }
@@ -20,14 +21,16 @@ public extension XCTestCase {
     func assert<T: View, U: PreviewProvider>(view: T, previews: U.Type) {
         XCTAssertNotNil(previews.previews)
 
+        let injectedView = view.environmentObject(MockAppState() as AppState)
+
         #if canImport(UIKit)
         let window = UIWindow()
-        window.rootViewController = UIHostingController(rootView: view)
+        window.rootViewController = UIHostingController(rootView: injectedView)
         window.makeKeyAndVisible()
 
         #elseif canImport(AppKit)
         let window = NSWindow()
-        window.contentView = NSHostingView(rootView: view)
+        window.contentView = NSHostingView(rootView: injectedView)
         window.makeKeyAndOrderFront(nil)
         #endif
     }

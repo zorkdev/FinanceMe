@@ -20,11 +20,6 @@
           "containerPath" : "container:FinanceMeKit\/FinanceMeKit.xcodeproj",
           "identifier" : "9A35A95522EDEC680086BD2A",
           "name" : "FinanceMeKit-macOS"
-        },
-        {
-          "containerPath" : "container:FinanceMe\/FinanceMe.xcodeproj",
-          "identifier" : "9A12DBE222EF675A000226A9",
-          "name" : "FinanceMeExtension-macOS"
         }
       ]
     },

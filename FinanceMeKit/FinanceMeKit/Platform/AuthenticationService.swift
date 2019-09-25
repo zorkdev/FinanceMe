@@ -56,3 +56,12 @@ class LAContextAuthenticationService: AuthenticationService {
         context?.invalidate()
     }
 }
+
+#if DEBUG
+extension Stub {
+    class StubAuthenticationService: AuthenticationService {
+        func authenticate(reason: String) -> AnyPublisher<Void, Error> { Empty().eraseToAnyPublisher() }
+        func invalidate() {}
+    }
+}
+#endif

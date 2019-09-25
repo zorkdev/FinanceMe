@@ -63,4 +63,10 @@ class UserBusinessLogicTests: XCTestCase {
 
         businessLogic.user.assertSuccess(self) { XCTAssertNil($0) }
     }
+
+    func testStub() {
+        let stub = Stub.StubUserBusinessLogic()
+        _ = stub.getUser()
+        _ = stub.update(user: User.stub)
+    }
 }

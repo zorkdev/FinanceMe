@@ -37,3 +37,11 @@ class DefaultLoggingService: LoggingService {
         """
     }
 }
+
+#if DEBUG
+extension Stub {
+    class StubLoggingService: LoggingService {
+        func log(title: String, content: String, type: LogType) {}
+    }
+}
+#endif

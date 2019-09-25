@@ -36,3 +36,13 @@ class SessionBusinessLogic: SessionBusinessLogicType {
         internalIsLoggedIn = sessionService.hasSession
     }
 }
+
+#if DEBUG
+extension Stub {
+    class StubSessionBusinessLogic: SessionBusinessLogicType {
+        let isLoggedIn: AnyPublisher<Bool, Never> = Just(true).eraseToAnyPublisher()
+        func login(credentials: Credentials) -> AnyPublisher<Void, Error> { Empty().eraseToAnyPublisher() }
+        func logOut() {}
+    }
+}
+#endif

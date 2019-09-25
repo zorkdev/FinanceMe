@@ -4,11 +4,12 @@ public struct AmountView: View {
     private let viewModel: AmountViewModel
 
     public var body: some View {
-        Text(viewModel.sign).font(.system(.callout, design: .rounded))
+        (Text(viewModel.sign).font(.system(.callout, design: .rounded))
             + Text(viewModel.currencySymbol).font(.system(.callout, design: .rounded))
-            + Text(viewModel.integer).font(.system(.largeTitle, design: .rounded)).bold()
+            + Text(viewModel.integer).font(.system(.largeTitle, design: .rounded))
             + Text(viewModel.decimalSeparator).font(.system(.callout, design: .rounded))
-            + Text(viewModel.fraction).font(.system(.callout, design: .rounded))
+            + Text(viewModel.fraction).font(.system(.callout, design: .rounded)))
+            .foregroundColor(viewModel.isNegative ? Color.red : Color.primary)
     }
 
     public init(viewModel: AmountViewModel) {

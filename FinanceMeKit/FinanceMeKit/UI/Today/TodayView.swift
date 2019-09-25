@@ -8,13 +8,13 @@ public struct TodayView<ViewModel: TodayViewModelType>: View {
             VStack(alignment: .leading) {
                 AmountView(viewModel: viewModel.balance)
                     .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
-                Text("BALANCE").font(.caption)
+                Text("BALANCE").font(.caption).foregroundColor(Color.secondary)
             }
             Text("😨").font(.largeTitle)
             VStack(alignment: .trailing) {
                 AmountView(viewModel: viewModel.allowance)
                     .frame(minWidth: 0, maxWidth: .infinity, alignment: .trailing)
-                Text("ALLOWANCE").font(.caption)
+                Text("ALLOWANCE").font(.caption).foregroundColor(Color.secondary)
             }
         }
         .padding()
@@ -28,14 +28,8 @@ public struct TodayView<ViewModel: TodayViewModelType>: View {
 
 #if DEBUG
 struct TodayViewPreviews: PreviewProvider {
-    class Stub: TodayViewModelType {
-        var allowance = AmountViewModel(value: 10)
-        var balance = AmountViewModel(value: 200)
-        func onAppear() {}
-    }
-
     static var previews: some View {
-        TodayView(viewModel: Stub())
+        TodayView(viewModel: Stub.StubTodayViewModel())
             .previewLayout(.sizeThatFits)
     }
 }

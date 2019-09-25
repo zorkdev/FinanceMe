@@ -58,4 +58,10 @@ class LAContextAuthenticationServiceTests: XCTestCase {
 
         XCTAssertTrue(MockLAContext.didCallInvalidate)
     }
+
+    func testStub() {
+        let stub = Stub.StubAuthenticationService()
+        _ = stub.authenticate(reason: "")
+        stub.invalidate()
+    }
 }

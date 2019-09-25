@@ -1,7 +1,10 @@
 import SwiftUI
+import FinanceMeKit
 
-class HostingController: WKHostingController<ContentView> {
-    override var body: ContentView {
-        ContentView()
+class HostingController: WKHostingController<AnyView> {
+    private let appState = AppState()
+
+    override var body: AnyView {
+        AnyView(ContentView().environmentObject(appState))
     }
 }

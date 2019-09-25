@@ -46,4 +46,10 @@ class SessionBusinessLogicTests: XCTestCase {
 
         businessLogic.isLoggedIn.assertSuccess(self) { XCTAssertFalse($0) }
     }
+
+    func testStub() {
+        let stub = Stub.StubSessionBusinessLogic()
+        _ = stub.login(credentials: Credentials.stub)
+        stub.logOut()
+    }
 }

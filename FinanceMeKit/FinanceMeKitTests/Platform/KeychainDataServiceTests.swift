@@ -102,4 +102,11 @@ class KeychainDataServiceTests: XCTestCase {
 
         XCTAssertNil(retrievedAgainValue)
     }
+
+    func testStub() {
+        let stub = Stub.StubDataService()
+        let _: Int? = stub.load(key: "")
+        _ = stub.save(value: 1, key: "")
+        stub.removeAll()
+    }
 }

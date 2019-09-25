@@ -18,3 +18,13 @@ class DefaultConfigService: ConfigService {
 
     init() {}
 }
+
+#if DEBUG
+extension Stub {
+    class StubConfigService: ConfigService {
+        let urlScheme = ""
+        let productName = ""
+        let accessGroup = ""
+    }
+}
+#endif

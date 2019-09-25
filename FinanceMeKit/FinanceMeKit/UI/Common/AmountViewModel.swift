@@ -31,6 +31,8 @@ public struct AmountViewModel {
     public let fraction: String
     public let string: String
 
+    public var isNegative: Bool { value < 0 }
+
     public init(value: Decimal, signs: [Sign] = [.minus]) {
         self.value = value
 

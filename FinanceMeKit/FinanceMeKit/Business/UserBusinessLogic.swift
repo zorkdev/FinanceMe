@@ -42,3 +42,19 @@ class UserBusinessLogic: UserBusinessLogicType {
             }.eraseToAnyPublisher()
     }
 }
+
+#if DEBUG
+extension Stub {
+    class StubUserBusinessLogic: UserBusinessLogicType {
+        let user: AnyPublisher<User?, Never> = Just(User(
+            name: "Name",
+            payday: 10,
+            startDate: ISO8601DateFormatter().date(from: "2019-01-01T00:00:00Z")!,
+            largeTransaction: 10,
+            allowance: 100.22,
+            balance: 211.20)).eraseToAnyPublisher()
+        func getUser() -> AnyPublisher<Void, Error> { Empty().eraseToAnyPublisher() }
+        func update(user: User) -> AnyPublisher<Void, Error> { Empty().eraseToAnyPublisher() }
+    }
+}
+#endif
