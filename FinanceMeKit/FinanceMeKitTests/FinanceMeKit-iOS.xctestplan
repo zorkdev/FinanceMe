@@ -29,6 +29,13 @@
         "identifier" : "9A35A96222EDEDAF0086BD2A",
         "name" : "FinanceMeKitTests-iOS"
       }
+    },
+    {
+      "target" : {
+        "containerPath" : "container:FinanceMeKit\/FinanceMeKit.xcodeproj",
+        "identifier" : "9A1F4169233FF0A400343AD9",
+        "name" : "FinanceMeKitIntegrationTests"
+      }
     }
   ],
   "version" : 1
