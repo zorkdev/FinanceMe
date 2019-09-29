@@ -1,7 +1,7 @@
 import SwiftUI
 
-public struct TodayView<ViewModel: TodayViewModelType>: View {
-    @ObservedObject private var viewModel: ViewModel
+public struct TodayView: View {
+    @ObservedObject private var viewModel: TodayViewModel
 
     public var body: some View {
         HStack {
@@ -18,19 +18,17 @@ public struct TodayView<ViewModel: TodayViewModelType>: View {
             }
         }
         .padding()
-        .onAppear { self.viewModel.onAppear() }
+        .onAppear(perform: viewModel.onAppear)
     }
 
-    public init(viewModel: ViewModel) {
-        self.viewModel = viewModel
+    public init(appState: AppState) {
+        self.viewModel = TodayViewModel(businessLogic: appState.userBusinessLogic)
     }
 }
 
-#if DEBUG
 struct TodayViewPreviews: PreviewProvider {
     static var previews: some View {
-        TodayView(viewModel: Stub.StubTodayViewModel())
+        TodayView(appState: AppState.stub)
             .previewLayout(.sizeThatFits)
     }
 }
-#endif

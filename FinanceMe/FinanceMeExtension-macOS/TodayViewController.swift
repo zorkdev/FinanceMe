@@ -9,7 +9,7 @@ class TodayViewController: NSViewController, NCWidgetProviding {
     override init(nibName nibNameOrNil: NSNib.Name?, bundle nibBundleOrNil: Bundle?) {
         super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
 
-        let todayView = NSHostingView(rootView: TodayContentView().environmentObject(appState))
+        let todayView = NSHostingView(rootView: TodayView(appState: appState))
         todayView.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(todayView)
 
@@ -28,19 +28,3 @@ class TodayViewController: NSViewController, NCWidgetProviding {
         completionHandler(.newData)
     }
 }
-
-struct TodayContentView: View {
-    @EnvironmentObject private var appState: AppState
-
-    var body: some View {
-        TodayView(viewModel: TodayViewModel(businessLogic: appState.userBusinessLogic))
-    }
-}
-
-#if DEBUG
-struct TodayContentViewPreviews: PreviewProvider {
-    static var previews: some View {
-        TodayContentView().environmentObject(AppState.stub)
-    }
-}
-#endif

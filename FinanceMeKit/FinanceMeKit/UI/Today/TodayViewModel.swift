@@ -1,12 +1,6 @@
 import Combine
 
-public protocol TodayViewModelType: ObservableObject {
-    var balance: AmountViewModel { get }
-    var allowance: AmountViewModel { get }
-    func onAppear()
-}
-
-public class TodayViewModel: TodayViewModelType {
+public class TodayViewModel: ObservableObject {
     private let businessLogic: UserBusinessLogicType
     private var cancellables: Set<AnyCancellable> = []
 
@@ -43,13 +37,3 @@ public class TodayViewModel: TodayViewModelType {
             .store(in: &cancellables)
     }
 }
-
-#if DEBUG
-extension Stub {
-    class StubTodayViewModel: TodayViewModelType {
-        var allowance = AmountViewModel(value: 10)
-        var balance = AmountViewModel(value: 200)
-        func onAppear() {}
-    }
-}
-#endif

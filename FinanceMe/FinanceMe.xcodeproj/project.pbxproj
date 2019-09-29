@@ -11,7 +11,6 @@
 		9A12DBA022EF10E7000226A9 /* TodayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A12DB9F22EF10E7000226A9 /* TodayViewController.swift */; };
 		9A12DBA722EF10E7000226A9 /* FinanceMeExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 9A12DB9B22EF10E7000226A9 /* FinanceMeExtension.appex */; platformFilter = ios; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		9A12DBB322EF1233000226A9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A12DBB222EF1233000226A9 /* AppDelegate.swift */; };
-		9A12DBB522EF1233000226A9 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A12DBB422EF1233000226A9 /* ContentView.swift */; };
 		9A12DBB722EF1234000226A9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9A12DBB622EF1234000226A9 /* Assets.xcassets */; };
 		9A12DBBD22EF1234000226A9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9A12DBBB22EF1234000226A9 /* Main.storyboard */; };
 		9A12DBCA22EF668B000226A9 /* ContentViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A12DBC922EF668B000226A9 /* ContentViewTests.swift */; };
@@ -26,13 +25,11 @@
 		9A12DC1A22EF6A65000226A9 /* FinanceMeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A12DC1922EF6A65000226A9 /* FinanceMeUITests.swift */; };
 		9A35A89322EDD55B0086BD2A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A35A89222EDD55B0086BD2A /* AppDelegate.swift */; };
 		9A35A89522EDD55B0086BD2A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A35A89422EDD55B0086BD2A /* SceneDelegate.swift */; };
-		9A35A89722EDD55B0086BD2A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A35A89622EDD55B0086BD2A /* ContentView.swift */; };
 		9A35A89922EDD55C0086BD2A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9A35A89822EDD55C0086BD2A /* Assets.xcassets */; };
 		9A35A89F22EDD55C0086BD2A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9A35A89D22EDD55C0086BD2A /* LaunchScreen.storyboard */; };
 		9A35A8D722EDD9B90086BD2A /* FinanceMeKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A35A8D622EDD9B90086BD2A /* FinanceMeKit.framework */; };
 		9A35A8D822EDD9B90086BD2A /* FinanceMeKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9A35A8D622EDD9B90086BD2A /* FinanceMeKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		9A35A90122EDDD580086BD2A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A35A90022EDDD580086BD2A /* AppDelegate.swift */; };
-		9A35A90322EDDD580086BD2A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A35A90222EDDD580086BD2A /* ContentView.swift */; };
 		9A35A90522EDDD5A0086BD2A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9A35A90422EDDD5A0086BD2A /* Assets.xcassets */; };
 		9A35A91F22EDDFB90086BD2A /* FinanceMeKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A35A91E22EDDFB90086BD2A /* FinanceMeKit.framework */; };
 		9A35A92022EDDFB90086BD2A /* FinanceMeKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9A35A91E22EDDFB90086BD2A /* FinanceMeKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -46,7 +43,6 @@
 		9AF87EA522EF91FD009E786C /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9AF87EA322EF91FD009E786C /* Interface.storyboard */; };
 		9AF87EA722EF91FF009E786C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9AF87EA622EF91FF009E786C /* Assets.xcassets */; };
 		9AF87EAE22EF91FF009E786C /* FinanceMeExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 9AF87EAD22EF91FF009E786C /* FinanceMeExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		9AF87EB322EF91FF009E786C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AF87EB222EF91FF009E786C /* ContentView.swift */; };
 		9AF87EB522EF91FF009E786C /* HostingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AF87EB422EF91FF009E786C /* HostingController.swift */; };
 		9AF87EB722EF91FF009E786C /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AF87EB622EF91FF009E786C /* ExtensionDelegate.swift */; };
 		9AF87EB922EF91FF009E786C /* ComplicationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AF87EB822EF91FF009E786C /* ComplicationController.swift */; };
@@ -268,7 +264,6 @@
 		9A12DBA422EF10E7000226A9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9A12DBB022EF1233000226A9 /* FinanceMe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FinanceMe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9A12DBB222EF1233000226A9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		9A12DBB422EF1233000226A9 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		9A12DBB622EF1234000226A9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9A12DBBC22EF1234000226A9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		9A12DBBE22EF1234000226A9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -299,14 +294,12 @@
 		9A35A88F22EDD55B0086BD2A /* FinanceMe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FinanceMe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9A35A89222EDD55B0086BD2A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9A35A89422EDD55B0086BD2A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		9A35A89622EDD55B0086BD2A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		9A35A89822EDD55C0086BD2A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9A35A89E22EDD55C0086BD2A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9A35A8A022EDD55C0086BD2A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9A35A8D622EDD9B90086BD2A /* FinanceMeKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = FinanceMeKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9A35A8FE22EDDD580086BD2A /* FinanceMe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FinanceMe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9A35A90022EDDD580086BD2A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		9A35A90222EDDD580086BD2A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		9A35A90422EDDD5A0086BD2A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9A35A90922EDDD5A0086BD2A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9A35A91A22EDDEF60086BD2A /* FinanceMeKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = FinanceMeKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -340,7 +333,6 @@
 		9AF87EA622EF91FF009E786C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9AF87EA822EF91FF009E786C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9AF87EAD22EF91FF009E786C /* FinanceMeExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = FinanceMeExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
-		9AF87EB222EF91FF009E786C /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		9AF87EB422EF91FF009E786C /* HostingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HostingController.swift; sourceTree = "<group>"; };
 		9AF87EB622EF91FF009E786C /* ExtensionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionDelegate.swift; sourceTree = "<group>"; };
 		9AF87EB822EF91FF009E786C /* ComplicationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComplicationController.swift; sourceTree = "<group>"; };
@@ -479,7 +471,6 @@
 				9A12DBBF22EF1234000226A9 /* FinanceMe.entitlements */,
 				9A12DBBB22EF1234000226A9 /* Main.storyboard */,
 				9A12DBB222EF1233000226A9 /* AppDelegate.swift */,
-				9A12DBB422EF1233000226A9 /* ContentView.swift */,
 				9A12DBB622EF1234000226A9 /* Assets.xcassets */,
 			);
 			path = "FinanceMe-macOS";
@@ -627,7 +618,6 @@
 				9AA805AD22F8DC4000B40516 /* FinanceMe.entitlements */,
 				9AADAAF422F6360900C6C290 /* main.swift */,
 				9A35A90022EDDD580086BD2A /* AppDelegate.swift */,
-				9A35A90222EDDD580086BD2A /* ContentView.swift */,
 				9A35A90422EDDD5A0086BD2A /* Assets.xcassets */,
 			);
 			path = "FinanceMe-tvOS";
@@ -636,7 +626,6 @@
 		9A35A92A22EDE1140086BD2A /* FinanceMeTests-iOS */ = {
 			isa = PBXGroup;
 			children = (
-				9AE4E4C122F4C82C00B34E81 /* Application */,
 				9AE4E4C422F4CBC800B34E81 /* UI */,
 				9A35A93322EDE1A10086BD2A /* FinanceMe-iOS.xctestplan */,
 				9A35A92D22EDE1140086BD2A /* Info.plist */,
@@ -678,7 +667,6 @@
 			isa = PBXGroup;
 			children = (
 				9A35A89D22EDD55C0086BD2A /* LaunchScreen.storyboard */,
-				9A35A89622EDD55B0086BD2A /* ContentView.swift */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -689,13 +677,6 @@
 				9A35A89822EDD55C0086BD2A /* Assets.xcassets */,
 			);
 			path = Resources;
-			sourceTree = "<group>";
-		};
-		9AE4E4C122F4C82C00B34E81 /* Application */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Application;
 			sourceTree = "<group>";
 		};
 		9AE4E4C422F4CBC800B34E81 /* UI */ = {
@@ -724,7 +705,6 @@
 				9AF87EB622EF91FF009E786C /* ExtensionDelegate.swift */,
 				9AF87EB422EF91FF009E786C /* HostingController.swift */,
 				9AF87EB822EF91FF009E786C /* ComplicationController.swift */,
-				9AF87EB222EF91FF009E786C /* ContentView.swift */,
 			);
 			path = "FinanceMeExtension-watchOS";
 			sourceTree = "<group>";
@@ -1202,7 +1182,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9A12DBB522EF1233000226A9 /* ContentView.swift in Sources */,
 				9A12DBB322EF1233000226A9 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1262,7 +1241,6 @@
 				9A35A89322EDD55B0086BD2A /* AppDelegate.swift in Sources */,
 				9A35A89522EDD55B0086BD2A /* SceneDelegate.swift in Sources */,
 				9AE4E4C822F4CD2500B34E81 /* main.swift in Sources */,
-				9A35A89722EDD55B0086BD2A /* ContentView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1270,7 +1248,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9A35A90322EDDD580086BD2A /* ContentView.swift in Sources */,
 				9A35A90122EDDD580086BD2A /* AppDelegate.swift in Sources */,
 				9AADAAF522F6360900C6C290 /* main.swift in Sources */,
 			);
@@ -1290,7 +1267,6 @@
 			files = (
 				9AF87EB522EF91FF009E786C /* HostingController.swift in Sources */,
 				9AF87EB922EF91FF009E786C /* ComplicationController.swift in Sources */,
-				9AF87EB322EF91FF009E786C /* ContentView.swift in Sources */,
 				9AF87EB722EF91FF009E786C /* ExtensionDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

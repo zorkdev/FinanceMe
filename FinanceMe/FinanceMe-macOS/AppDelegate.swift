@@ -22,7 +22,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
                           defer: false)
         window.center()
         window.setFrameAutosaveName("Main Window")
-        window.contentView = NSHostingView(rootView: ContentView().environmentObject(appState))
+        window.contentView = NSHostingView(rootView: RootView(appState: appState))
         window.makeKeyAndOrderFront(nil)
     }
 }

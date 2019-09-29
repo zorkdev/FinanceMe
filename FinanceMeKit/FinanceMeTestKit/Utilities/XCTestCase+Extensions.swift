@@ -21,18 +21,18 @@ public extension XCTestCase {
     func assert<T: View, U: PreviewProvider>(view: T, previews: U.Type) {
         XCTAssertNotNil(previews.previews)
 
-        let injectedView = view.environmentObject(MockAppState() as AppState)
-
         #if canImport(UIKit)
         let window = UIWindow()
-        window.rootViewController = UIHostingController(rootView: injectedView)
+        window.rootViewController = UIHostingController(rootView: view)
         window.makeKeyAndVisible()
 
         #elseif canImport(AppKit)
         let window = NSWindow()
-        window.contentView = NSHostingView(rootView: injectedView)
+        window.contentView = NSHostingView(rootView: view)
         window.makeKeyAndOrderFront(nil)
         #endif
+
+        waitForEvent {}
     }
 }
 

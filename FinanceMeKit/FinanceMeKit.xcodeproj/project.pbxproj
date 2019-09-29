@@ -12,6 +12,20 @@
 		9A1F4176233FF16D00343AD9 /* IntegrationTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A1F4175233FF16D00343AD9 /* IntegrationTestCase.swift */; };
 		9A1F4177233FF3AC00343AD9 /* FinanceMeTestKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AADAABF22F62CDF00C6C290 /* FinanceMeTestKit.framework */; };
 		9A1F417B233FFA1C00343AD9 /* SessionBusinessLogicTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A1F417A233FFA1C00343AD9 /* SessionBusinessLogicTests.swift */; };
+		9A1F417E233FFC4900343AD9 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A1F417D233FFC4900343AD9 /* LoginView.swift */; };
+		9A1F4180233FFC4900343AD9 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A1F417D233FFC4900343AD9 /* LoginView.swift */; };
+		9A1F4183233FFC8600343AD9 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A1F4182233FFC8600343AD9 /* LoginViewModel.swift */; };
+		9A1F4184233FFC8600343AD9 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A1F4182233FFC8600343AD9 /* LoginViewModel.swift */; };
+		9A1F4185233FFC8600343AD9 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A1F4182233FFC8600343AD9 /* LoginViewModel.swift */; };
+		9A1F4186233FFC8600343AD9 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A1F4182233FFC8600343AD9 /* LoginViewModel.swift */; };
+		9A1F418923400C4F00343AD9 /* RootViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A1F418823400C4F00343AD9 /* RootViewModel.swift */; };
+		9A1F418A23400C4F00343AD9 /* RootViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A1F418823400C4F00343AD9 /* RootViewModel.swift */; };
+		9A1F418B23400C4F00343AD9 /* RootViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A1F418823400C4F00343AD9 /* RootViewModel.swift */; };
+		9A1F418C23400C4F00343AD9 /* RootViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A1F418823400C4F00343AD9 /* RootViewModel.swift */; };
+		9A1F418E23400CAB00343AD9 /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A1F418D23400CAB00343AD9 /* RootView.swift */; };
+		9A1F418F23400CAB00343AD9 /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A1F418D23400CAB00343AD9 /* RootView.swift */; };
+		9A1F419023400CAB00343AD9 /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A1F418D23400CAB00343AD9 /* RootView.swift */; };
+		9A1F419123400CAB00343AD9 /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A1F418D23400CAB00343AD9 /* RootView.swift */; };
 		9A35A8D022EDD9020086BD2A /* FinanceMeKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 9A35A8CE22EDD9020086BD2A /* FinanceMeKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		9A35A96822EDEDAF0086BD2A /* FinanceMeKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A35A8CB22EDD9020086BD2A /* FinanceMeKit.framework */; };
 		9A35A97722EDF0400086BD2A /* FinanceMeKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A35A91222EDDE620086BD2A /* FinanceMeKit.framework */; };
@@ -43,7 +57,6 @@
 		9A5BDDA6230042A400F376C6 /* TodayViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A5BDDA3230042A400F376C6 /* TodayViewModel.swift */; };
 		9A5BDDA7230042A400F376C6 /* TodayViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A5BDDA3230042A400F376C6 /* TodayViewModel.swift */; };
 		9A5BDDAB230044D500F376C6 /* TodayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A5BDDAA230044D500F376C6 /* TodayView.swift */; };
-		9A5BDDAC230044D500F376C6 /* TodayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A5BDDAA230044D500F376C6 /* TodayView.swift */; };
 		9A5BDDAD230044D500F376C6 /* TodayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A5BDDAA230044D500F376C6 /* TodayView.swift */; };
 		9A5BDDAE230044D500F376C6 /* TodayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A5BDDAA230044D500F376C6 /* TodayView.swift */; };
 		9A6183C82304A943001825A6 /* Decimal+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A6183C72304A943001825A6 /* Decimal+Extensions.swift */; };
@@ -79,13 +92,7 @@
 		9A956DC7230039FD00CC848D /* MockAppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A956DC6230039FD00CC848D /* MockAppState.swift */; };
 		9A956DC8230039FD00CC848D /* MockAppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A956DC6230039FD00CC848D /* MockAppState.swift */; };
 		9A956DCA23003B0700CC848D /* MockAppState-iOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A956DC923003B0700CC848D /* MockAppState-iOS.swift */; };
-		9A98B746233E85DE002DE7FA /* VerticalTodayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A98B745233E85DE002DE7FA /* VerticalTodayView.swift */; };
-		9A98B747233E85DE002DE7FA /* VerticalTodayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A98B745233E85DE002DE7FA /* VerticalTodayView.swift */; };
-		9A98B748233E85DE002DE7FA /* VerticalTodayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A98B745233E85DE002DE7FA /* VerticalTodayView.swift */; };
-		9A98B749233E85DE002DE7FA /* VerticalTodayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A98B745233E85DE002DE7FA /* VerticalTodayView.swift */; };
-		9A98B74F233EA433002DE7FA /* VerticalTodayViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A98B74A233EA429002DE7FA /* VerticalTodayViewTests.swift */; };
-		9A98B750233EA433002DE7FA /* VerticalTodayViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A98B74A233EA429002DE7FA /* VerticalTodayViewTests.swift */; };
-		9A98B751233EA434002DE7FA /* VerticalTodayViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A98B74A233EA429002DE7FA /* VerticalTodayViewTests.swift */; };
+		9A98B747233E85DE002DE7FA /* TodayView-watchOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A98B745233E85DE002DE7FA /* TodayView-watchOS.swift */; };
 		9A99D0D423020D5D00D735A2 /* TestConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AFA47C022F85FD3003B2992 /* TestConfig.swift */; };
 		9A99D0D523020D5D00D735A2 /* TestConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AFA47C022F85FD3003B2992 /* TestConfig.swift */; };
 		9A99D0D623020D5E00D735A2 /* TestConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AFA47C022F85FD3003B2992 /* TestConfig.swift */; };
@@ -236,6 +243,20 @@
 		9AE4E4BB22F4C48200B34E81 /* AmountViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AE4E4BA22F4C48200B34E81 /* AmountViewModelTests.swift */; };
 		9AE4E4BC22F4C48200B34E81 /* AmountViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AE4E4BA22F4C48200B34E81 /* AmountViewModelTests.swift */; };
 		9AE4E4BD22F4C48200B34E81 /* AmountViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AE4E4BA22F4C48200B34E81 /* AmountViewModelTests.swift */; };
+		9AE822D92340BA85002FF0F5 /* LoginView-watchOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AE822D82340BA85002FF0F5 /* LoginView-watchOS.swift */; };
+		9AE822DB2340C557002FF0F5 /* LoginView-macOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AE822DA2340C557002FF0F5 /* LoginView-macOS.swift */; };
+		9AE822DE2340C873002FF0F5 /* RootViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AE822DD2340C873002FF0F5 /* RootViewModelTests.swift */; };
+		9AE822DF2340C873002FF0F5 /* RootViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AE822DD2340C873002FF0F5 /* RootViewModelTests.swift */; };
+		9AE822E02340C873002FF0F5 /* RootViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AE822DD2340C873002FF0F5 /* RootViewModelTests.swift */; };
+		9AE822E22340C90E002FF0F5 /* RootViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AE822E12340C90E002FF0F5 /* RootViewTests.swift */; };
+		9AE822E32340C90E002FF0F5 /* RootViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AE822E12340C90E002FF0F5 /* RootViewTests.swift */; };
+		9AE822E42340C90E002FF0F5 /* RootViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AE822E12340C90E002FF0F5 /* RootViewTests.swift */; };
+		9AE822E72340C943002FF0F5 /* LoginViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AE822E62340C943002FF0F5 /* LoginViewModelTests.swift */; };
+		9AE822E82340C943002FF0F5 /* LoginViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AE822E62340C943002FF0F5 /* LoginViewModelTests.swift */; };
+		9AE822E92340C943002FF0F5 /* LoginViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AE822E62340C943002FF0F5 /* LoginViewModelTests.swift */; };
+		9AE822EB2340CA83002FF0F5 /* LoginViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AE822EA2340CA83002FF0F5 /* LoginViewTests.swift */; };
+		9AE822EC2340CA83002FF0F5 /* LoginViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AE822EA2340CA83002FF0F5 /* LoginViewTests.swift */; };
+		9AE822ED2340CA83002FF0F5 /* LoginViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AE822EA2340CA83002FF0F5 /* LoginViewTests.swift */; };
 		9AFA47B922F84AEF003B2992 /* Publisher+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AFA47B822F84AEF003B2992 /* Publisher+Extensions.swift */; };
 		9AFA47BA22F84AEF003B2992 /* Publisher+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AFA47B822F84AEF003B2992 /* Publisher+Extensions.swift */; };
 		9AFA47BB22F84AEF003B2992 /* Publisher+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AFA47B822F84AEF003B2992 /* Publisher+Extensions.swift */; };
@@ -330,6 +351,10 @@
 		9A1F416E233FF0A400343AD9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9A1F4175233FF16D00343AD9 /* IntegrationTestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntegrationTestCase.swift; sourceTree = "<group>"; };
 		9A1F417A233FFA1C00343AD9 /* SessionBusinessLogicTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionBusinessLogicTests.swift; sourceTree = "<group>"; };
+		9A1F417D233FFC4900343AD9 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		9A1F4182233FFC8600343AD9 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		9A1F418823400C4F00343AD9 /* RootViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewModel.swift; sourceTree = "<group>"; };
+		9A1F418D23400CAB00343AD9 /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
 		9A35A8CB22EDD9020086BD2A /* FinanceMeKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = FinanceMeKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9A35A8CE22EDD9020086BD2A /* FinanceMeKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FinanceMeKit.h; sourceTree = "<group>"; };
 		9A35A8CF22EDD9020086BD2A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -360,8 +385,7 @@
 		9A956DBE2300381400CC848D /* UserTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserTests.swift; sourceTree = "<group>"; };
 		9A956DC6230039FD00CC848D /* MockAppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockAppState.swift; sourceTree = "<group>"; };
 		9A956DC923003B0700CC848D /* MockAppState-iOS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MockAppState-iOS.swift"; sourceTree = "<group>"; };
-		9A98B745233E85DE002DE7FA /* VerticalTodayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerticalTodayView.swift; sourceTree = "<group>"; };
-		9A98B74A233EA429002DE7FA /* VerticalTodayViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerticalTodayViewTests.swift; sourceTree = "<group>"; };
+		9A98B745233E85DE002DE7FA /* TodayView-watchOS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TodayView-watchOS.swift"; sourceTree = "<group>"; };
 		9AA8059622F8BD7C00B40516 /* AppState-iOS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AppState-iOS.swift"; sourceTree = "<group>"; };
 		9AA8059D22F8C15F00B40516 /* AppStateTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStateTests.swift; sourceTree = "<group>"; };
 		9AA805A122F8C17400B40516 /* AppStateTests-iOS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AppStateTests-iOS.swift"; sourceTree = "<group>"; };
@@ -417,6 +441,12 @@
 		9AE4E25422F4BC3200B34E81 /* CodableExtensionsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodableExtensionsTests.swift; sourceTree = "<group>"; };
 		9AE4E4B322F4C36B00B34E81 /* FormattersTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormattersTests.swift; sourceTree = "<group>"; };
 		9AE4E4BA22F4C48200B34E81 /* AmountViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AmountViewModelTests.swift; sourceTree = "<group>"; };
+		9AE822D82340BA85002FF0F5 /* LoginView-watchOS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LoginView-watchOS.swift"; sourceTree = "<group>"; };
+		9AE822DA2340C557002FF0F5 /* LoginView-macOS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LoginView-macOS.swift"; sourceTree = "<group>"; };
+		9AE822DD2340C873002FF0F5 /* RootViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewModelTests.swift; sourceTree = "<group>"; };
+		9AE822E12340C90E002FF0F5 /* RootViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewTests.swift; sourceTree = "<group>"; };
+		9AE822E62340C943002FF0F5 /* LoginViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModelTests.swift; sourceTree = "<group>"; };
+		9AE822EA2340CA83002FF0F5 /* LoginViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewTests.swift; sourceTree = "<group>"; };
 		9AFA47B822F84AEF003B2992 /* Publisher+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Publisher+Extensions.swift"; sourceTree = "<group>"; };
 		9AFA47BC22F84B43003B2992 /* Result+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Result+Extensions.swift"; sourceTree = "<group>"; };
 		9AFA47C022F85FD3003B2992 /* TestConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestConfig.swift; sourceTree = "<group>"; };
@@ -554,6 +584,26 @@
 			path = FinanceMeKitIntegrationTests;
 			sourceTree = "<group>";
 		};
+		9A1F417C233FFC3100343AD9 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				9A1F417D233FFC4900343AD9 /* LoginView.swift */,
+				9AE822D82340BA85002FF0F5 /* LoginView-watchOS.swift */,
+				9AE822DA2340C557002FF0F5 /* LoginView-macOS.swift */,
+				9A1F4182233FFC8600343AD9 /* LoginViewModel.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		9A1F418723400C3B00343AD9 /* Root */ = {
+			isa = PBXGroup;
+			children = (
+				9A1F418D23400CAB00343AD9 /* RootView.swift */,
+				9A1F418823400C4F00343AD9 /* RootViewModel.swift */,
+			);
+			path = Root;
+			sourceTree = "<group>";
+		};
 		9A35A8C122EDD9020086BD2A = {
 			isa = PBXGroup;
 			children = (
@@ -627,8 +677,8 @@
 		9A5BDDA9230044C000F376C6 /* Today */ = {
 			isa = PBXGroup;
 			children = (
-				9A98B745233E85DE002DE7FA /* VerticalTodayView.swift */,
 				9A5BDDAA230044D500F376C6 /* TodayView.swift */,
+				9A98B745233E85DE002DE7FA /* TodayView-watchOS.swift */,
 				9A5BDDA3230042A400F376C6 /* TodayViewModel.swift */,
 			);
 			path = Today;
@@ -646,7 +696,6 @@
 		9A78CEB72339031F009B5994 /* Today */ = {
 			isa = PBXGroup;
 			children = (
-				9A98B74A233EA429002DE7FA /* VerticalTodayViewTests.swift */,
 				9A78CEBC233903FA009B5994 /* TodayViewTests.swift */,
 				9A78CEC02339081B009B5994 /* TodayViewModelTests.swift */,
 			);
@@ -744,6 +793,8 @@
 			isa = PBXGroup;
 			children = (
 				9A5BDDA8230044B800F376C6 /* Common */,
+				9A1F418723400C3B00343AD9 /* Root */,
+				9A1F417C233FFC3100343AD9 /* Login */,
 				9A5BDDA9230044C000F376C6 /* Today */,
 			);
 			path = UI;
@@ -866,9 +917,29 @@
 			isa = PBXGroup;
 			children = (
 				9A78CEB623390308009B5994 /* Common */,
+				9AE822DC2340C85B002FF0F5 /* Root */,
+				9AE822E52340C930002FF0F5 /* Login */,
 				9A78CEB72339031F009B5994 /* Today */,
 			);
 			path = UI;
+			sourceTree = "<group>";
+		};
+		9AE822DC2340C85B002FF0F5 /* Root */ = {
+			isa = PBXGroup;
+			children = (
+				9AE822E12340C90E002FF0F5 /* RootViewTests.swift */,
+				9AE822DD2340C873002FF0F5 /* RootViewModelTests.swift */,
+			);
+			path = Root;
+			sourceTree = "<group>";
+		};
+		9AE822E52340C930002FF0F5 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				9AE822EA2340CA83002FF0F5 /* LoginViewTests.swift */,
+				9AE822E62340C943002FF0F5 /* LoginViewModelTests.swift */,
+			);
+			path = Login;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -1475,14 +1546,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				9AADAC0922F7037E00C6C290 /* DataService.swift in Sources */,
+				9A1F417E233FFC4900343AD9 /* LoginView.swift in Sources */,
 				9AA8059722F8BD7C00B40516 /* AppState-iOS.swift in Sources */,
 				9A6183CD2304A9F1001825A6 /* AmountView.swift in Sources */,
 				9AADABF522F7008300C6C290 /* LoggingService.swift in Sources */,
 				9AD73D28230029C0003B16C3 /* User.swift in Sources */,
 				9A5BDDAB230044D500F376C6 /* TodayView.swift in Sources */,
 				9ABFBCA322EFD3D100E01785 /* AmountViewModel.swift in Sources */,
+				9A1F418E23400CAB00343AD9 /* RootView.swift in Sources */,
+				9A1F4183233FFC8600343AD9 /* LoginViewModel.swift in Sources */,
 				9A90A9A52301DD4500AE4E25 /* SessionBusinessLogic.swift in Sources */,
 				9ABFBCB422EFDE4C00E01785 /* NumberFormatter+Extensions.swift in Sources */,
+				9A1F418923400C4F00343AD9 /* RootViewModel.swift in Sources */,
 				9ABFBCA822EFD60200E01785 /* Formatters.swift in Sources */,
 				9AADAC1322F7052700C6C290 /* KeychainDataService.swift in Sources */,
 				9ADD21E822F7248B006F98CA /* NetworkService.swift in Sources */,
@@ -1490,7 +1565,6 @@
 				9A99D0D723020D5F00D735A2 /* TestConfig.swift in Sources */,
 				9A6183C82304A943001825A6 /* Decimal+Extensions.swift in Sources */,
 				9ADD21F222F735C8006F98CA /* URLSession+Extensions.swift in Sources */,
-				9A98B746233E85DE002DE7FA /* VerticalTodayView.swift in Sources */,
 				9ADD21D722F71D3F006F98CA /* SessionService.swift in Sources */,
 				9ABFBCAF22EFD73900E01785 /* Codable+Extensions.swift in Sources */,
 				9A5BDDA4230042A400F376C6 /* TodayViewModel.swift in Sources */,
@@ -1519,18 +1593,21 @@
 				9ABFBCAA22EFD60200E01785 /* Formatters.swift in Sources */,
 				9AADAC1522F7052700C6C290 /* KeychainDataService.swift in Sources */,
 				9ADD21EA22F7248B006F98CA /* NetworkService.swift in Sources */,
+				9A1F418B23400C4F00343AD9 /* RootViewModel.swift in Sources */,
 				9AADAAFF22F63A1800C6C290 /* ConfigService.swift in Sources */,
 				9A5BDDA6230042A400F376C6 /* TodayViewModel.swift in Sources */,
 				9ADD21F422F735C8006F98CA /* URLSession+Extensions.swift in Sources */,
 				9ADD21D922F71D3F006F98CA /* SessionService.swift in Sources */,
-				9A98B748233E85DE002DE7FA /* VerticalTodayView.swift in Sources */,
 				9AD73D25230029AB003B16C3 /* Credentials.swift in Sources */,
 				9ABFBCB122EFD73900E01785 /* Codable+Extensions.swift in Sources */,
 				9ADD21D422F71D12006F98CA /* Session.swift in Sources */,
 				9A99D0D523020D5D00D735A2 /* TestConfig.swift in Sources */,
 				9A6183CF2304A9F1001825A6 /* AmountView.swift in Sources */,
 				9A375B1C22F7AEF600E598AB /* Data+Extensions.swift in Sources */,
+				9A1F4185233FFC8600343AD9 /* LoginViewModel.swift in Sources */,
 				9A6183CA2304A943001825A6 /* Decimal+Extensions.swift in Sources */,
+				9A1F419023400CAB00343AD9 /* RootView.swift in Sources */,
+				9A1F4180233FFC4900343AD9 /* LoginView.swift in Sources */,
 				9AD73D2A230029C0003B16C3 /* User.swift in Sources */,
 				9AADAC1022F7046C00C6C290 /* Error.swift in Sources */,
 				9ADD21EF22F7288B006F98CA /* API.swift in Sources */,
@@ -1549,27 +1626,30 @@
 				9ABFBCA422EFD3D100E01785 /* AmountViewModel.swift in Sources */,
 				9ABFBCB522EFDE4C00E01785 /* NumberFormatter+Extensions.swift in Sources */,
 				9ABFBCA922EFD60200E01785 /* Formatters.swift in Sources */,
-				9A5BDDAC230044D500F376C6 /* TodayView.swift in Sources */,
 				9AD73D1F230028D4003B16C3 /* UserBusinessLogic.swift in Sources */,
 				9AADAC1422F7052700C6C290 /* KeychainDataService.swift in Sources */,
 				9ADD21E922F7248B006F98CA /* NetworkService.swift in Sources */,
+				9A1F418A23400C4F00343AD9 /* RootViewModel.swift in Sources */,
 				9AADAAFE22F63A1800C6C290 /* ConfigService.swift in Sources */,
 				9ADD21F322F735C8006F98CA /* URLSession+Extensions.swift in Sources */,
 				9A5BDDA5230042A400F376C6 /* TodayViewModel.swift in Sources */,
 				9ADD21D822F71D3F006F98CA /* SessionService.swift in Sources */,
-				9A98B747233E85DE002DE7FA /* VerticalTodayView.swift in Sources */,
+				9A98B747233E85DE002DE7FA /* TodayView-watchOS.swift in Sources */,
 				9ABFBCB022EFD73900E01785 /* Codable+Extensions.swift in Sources */,
 				9AD73D24230029AB003B16C3 /* Credentials.swift in Sources */,
 				9ADD21D322F71D11006F98CA /* Session.swift in Sources */,
 				9A99D0D623020D5E00D735A2 /* TestConfig.swift in Sources */,
 				9A6183CE2304A9F1001825A6 /* AmountView.swift in Sources */,
 				9A375B1B22F7AEF600E598AB /* Data+Extensions.swift in Sources */,
+				9A1F4184233FFC8600343AD9 /* LoginViewModel.swift in Sources */,
 				9A6183C92304A943001825A6 /* Decimal+Extensions.swift in Sources */,
+				9A1F418F23400CAB00343AD9 /* RootView.swift in Sources */,
 				9AD73D29230029C0003B16C3 /* User.swift in Sources */,
 				9AADAC0F22F7046C00C6C290 /* Error.swift in Sources */,
 				9ADD21EE22F7288B006F98CA /* API.swift in Sources */,
 				9AADAC0522F7033B00C6C290 /* StringRepresentable.swift in Sources */,
 				9A90A9A62301DD4500AE4E25 /* SessionBusinessLogic.swift in Sources */,
+				9AE822D92340BA85002FF0F5 /* LoginView-watchOS.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1587,18 +1667,21 @@
 				9ABFBCAB22EFD60200E01785 /* Formatters.swift in Sources */,
 				9AADAC1622F7052700C6C290 /* KeychainDataService.swift in Sources */,
 				9ADD21EB22F7248B006F98CA /* NetworkService.swift in Sources */,
+				9A1F418C23400C4F00343AD9 /* RootViewModel.swift in Sources */,
 				9AADAB0022F63A1800C6C290 /* ConfigService.swift in Sources */,
 				9A5BDDA7230042A400F376C6 /* TodayViewModel.swift in Sources */,
 				9ADD21F522F735C8006F98CA /* URLSession+Extensions.swift in Sources */,
 				9ADD21DA22F71D3F006F98CA /* SessionService.swift in Sources */,
-				9A98B749233E85DE002DE7FA /* VerticalTodayView.swift in Sources */,
+				9AE822DB2340C557002FF0F5 /* LoginView-macOS.swift in Sources */,
 				9AD73D26230029AB003B16C3 /* Credentials.swift in Sources */,
 				9ABFBCB222EFD73900E01785 /* Codable+Extensions.swift in Sources */,
 				9ADD21D522F71D12006F98CA /* Session.swift in Sources */,
 				9A99D0D423020D5D00D735A2 /* TestConfig.swift in Sources */,
 				9A6183D02304A9F1001825A6 /* AmountView.swift in Sources */,
 				9A375B1D22F7AEF600E598AB /* Data+Extensions.swift in Sources */,
+				9A1F4186233FFC8600343AD9 /* LoginViewModel.swift in Sources */,
 				9A6183CB2304A943001825A6 /* Decimal+Extensions.swift in Sources */,
+				9A1F419123400CAB00343AD9 /* RootView.swift in Sources */,
 				9AD73D2B230029C0003B16C3 /* User.swift in Sources */,
 				9AADAC1122F7046C00C6C290 /* Error.swift in Sources */,
 				9ADD21F022F7288B006F98CA /* API.swift in Sources */,
@@ -1615,21 +1698,24 @@
 				9AA805A222F8C17400B40516 /* AppStateTests-iOS.swift in Sources */,
 				9ADD21E422F722E9006F98CA /* SessionTests.swift in Sources */,
 				9A956DBF2300381400CC848D /* UserTests.swift in Sources */,
-				9A98B74F233EA433002DE7FA /* VerticalTodayViewTests.swift in Sources */,
 				9AFA47D722F87712003B2992 /* APITests.swift in Sources */,
 				9AE4E25522F4BC3200B34E81 /* CodableExtensionsTests.swift in Sources */,
+				9AE822DE2340C873002FF0F5 /* RootViewModelTests.swift in Sources */,
 				9A78CEBD233903FA009B5994 /* TodayViewTests.swift in Sources */,
 				9AFA47DD22F8A660003B2992 /* LAContextAuthenticationServiceTests.swift in Sources */,
 				9A78CEB32338F9B2009B5994 /* SessionBusinessLogicTests.swift in Sources */,
 				9A78CEB92339033D009B5994 /* AmountViewTests.swift in Sources */,
 				9ADD21DC22F720E6006F98CA /* DefaultSessionServiceTests.swift in Sources */,
+				9AE822E72340C943002FF0F5 /* LoginViewModelTests.swift in Sources */,
 				9AE4E4B422F4C36B00B34E81 /* FormattersTests.swift in Sources */,
 				9AE4E24E22F4BAD300B34E81 /* NumberFormatterExtensionsTests.swift in Sources */,
 				9AFA47CF22F87587003B2992 /* URLSessionExtensionsTests.swift in Sources */,
 				9A956DBB2300373600CC848D /* CredentialsTests.swift in Sources */,
 				9AADAB3C22F643DC00C6C290 /* DefaultConfigServiceTests.swift in Sources */,
 				9AFA47D322F87663003B2992 /* ErrorTests.swift in Sources */,
+				9AE822EB2340CA83002FF0F5 /* LoginViewTests.swift in Sources */,
 				9AADABFA22F7018D00C6C290 /* DefaultLoggingServiceTests.swift in Sources */,
+				9AE822E22340C90E002FF0F5 /* RootViewTests.swift in Sources */,
 				9AFA47CB22F87440003B2992 /* DataExtensionsTests.swift in Sources */,
 				9A78CEC12339081B009B5994 /* TodayViewModelTests.swift in Sources */,
 				9AE4E4BB22F4C48200B34E81 /* AmountViewModelTests.swift in Sources */,
@@ -1646,10 +1732,12 @@
 			files = (
 				9A375B0722F7A44F00E598AB /* DefaultNetworkServiceTests.swift in Sources */,
 				9ADD21E522F722E9006F98CA /* SessionTests.swift in Sources */,
+				9AE822EC2340CA83002FF0F5 /* LoginViewTests.swift in Sources */,
+				9AE822E32340C90E002FF0F5 /* RootViewTests.swift in Sources */,
 				9AFA47D822F87712003B2992 /* APITests.swift in Sources */,
 				9A5BDDA12300405600F376C6 /* UserBusinessLogicTests.swift in Sources */,
-				9A98B750233EA433002DE7FA /* VerticalTodayViewTests.swift in Sources */,
 				9A78CEB42338F9B2009B5994 /* SessionBusinessLogicTests.swift in Sources */,
+				9AE822DF2340C873002FF0F5 /* RootViewModelTests.swift in Sources */,
 				9AE4E25622F4BC3200B34E81 /* CodableExtensionsTests.swift in Sources */,
 				9ADD21DD22F720E6006F98CA /* DefaultSessionServiceTests.swift in Sources */,
 				9AE4E4B522F4C36B00B34E81 /* FormattersTests.swift in Sources */,
@@ -1664,6 +1752,7 @@
 				9AADABFB22F7018D00C6C290 /* DefaultLoggingServiceTests.swift in Sources */,
 				9AA805A322F8C17A00B40516 /* AppStateTests.swift in Sources */,
 				9AFA47CC22F87440003B2992 /* DataExtensionsTests.swift in Sources */,
+				9AE822E82340C943002FF0F5 /* LoginViewModelTests.swift in Sources */,
 				9AE4E4BC22F4C48200B34E81 /* AmountViewModelTests.swift in Sources */,
 				9A78CEC22339081B009B5994 /* TodayViewModelTests.swift in Sources */,
 				9ADD21C422F717A6006F98CA /* KeychainDataServiceTests.swift in Sources */,
@@ -1678,10 +1767,12 @@
 			files = (
 				9A375B0822F7A44F00E598AB /* DefaultNetworkServiceTests.swift in Sources */,
 				9ADD21E622F722E9006F98CA /* SessionTests.swift in Sources */,
+				9AE822ED2340CA83002FF0F5 /* LoginViewTests.swift in Sources */,
+				9AE822E42340C90E002FF0F5 /* RootViewTests.swift in Sources */,
 				9AFA47D922F87712003B2992 /* APITests.swift in Sources */,
 				9A5BDDA22300405600F376C6 /* UserBusinessLogicTests.swift in Sources */,
-				9A98B751233EA434002DE7FA /* VerticalTodayViewTests.swift in Sources */,
 				9A78CEB52338F9B2009B5994 /* SessionBusinessLogicTests.swift in Sources */,
+				9AE822E02340C873002FF0F5 /* RootViewModelTests.swift in Sources */,
 				9AE4E25722F4BC3200B34E81 /* CodableExtensionsTests.swift in Sources */,
 				9ADD21DE22F720E6006F98CA /* DefaultSessionServiceTests.swift in Sources */,
 				9AE4E4B622F4C36B00B34E81 /* FormattersTests.swift in Sources */,
@@ -1696,6 +1787,7 @@
 				9AADABFC22F7018D00C6C290 /* DefaultLoggingServiceTests.swift in Sources */,
 				9AA805A422F8C17B00B40516 /* AppStateTests.swift in Sources */,
 				9AFA47CD22F87440003B2992 /* DataExtensionsTests.swift in Sources */,
+				9AE822E92340C943002FF0F5 /* LoginViewModelTests.swift in Sources */,
 				9AE4E4BD22F4C48200B34E81 /* AmountViewModelTests.swift in Sources */,
 				9A78CEC32339081B009B5994 /* TodayViewModelTests.swift in Sources */,
 				9ADD21C522F717A6006F98CA /* KeychainDataServiceTests.swift in Sources */,
