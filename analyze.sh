@@ -8,10 +8,10 @@ xcodebuild build \
     -workspace FinanceMe.xcworkspace \
     -scheme FinanceMe-iOS \
     -UseModernBuildSystem=NO \
-    -destination 'platform=iOS Simulator,name=iPhone Xs' \
+    -destination 'platform=iOS Simulator,name=iPhone 11 Pro' \
     > build.log
 
-swiftlint analyze \
+mint run swiftlint swiftlint analyze \
     --config .swiftlint_analyze.yml \
     --compiler-log-path build.log \
     --reporter html > report.html

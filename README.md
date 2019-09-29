@@ -19,3 +19,9 @@ $ brew bundle
 $ mint bootstrap
 $ open FinanceMe.xcworkspace
 ```
+
+To run static analysis on the project, use the analyze script:
+
+``` bash
+$ sh analyze.sh
+```

@@ -257,6 +257,7 @@
 		9AE822EB2340CA83002FF0F5 /* LoginViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AE822EA2340CA83002FF0F5 /* LoginViewTests.swift */; };
 		9AE822EC2340CA83002FF0F5 /* LoginViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AE822EA2340CA83002FF0F5 /* LoginViewTests.swift */; };
 		9AE822ED2340CA83002FF0F5 /* LoginViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AE822EA2340CA83002FF0F5 /* LoginViewTests.swift */; };
+		9AE822EF2340D6FE002FF0F5 /* config.json in Resources */ = {isa = PBXBuildFile; fileRef = 9AE822EE2340D6FE002FF0F5 /* config.json */; };
 		9AFA47B922F84AEF003B2992 /* Publisher+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AFA47B822F84AEF003B2992 /* Publisher+Extensions.swift */; };
 		9AFA47BA22F84AEF003B2992 /* Publisher+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AFA47B822F84AEF003B2992 /* Publisher+Extensions.swift */; };
 		9AFA47BB22F84AEF003B2992 /* Publisher+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AFA47B822F84AEF003B2992 /* Publisher+Extensions.swift */; };
@@ -447,6 +448,7 @@
 		9AE822E12340C90E002FF0F5 /* RootViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewTests.swift; sourceTree = "<group>"; };
 		9AE822E62340C943002FF0F5 /* LoginViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModelTests.swift; sourceTree = "<group>"; };
 		9AE822EA2340CA83002FF0F5 /* LoginViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewTests.swift; sourceTree = "<group>"; };
+		9AE822EE2340D6FE002FF0F5 /* config.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = config.json; path = ../../config.json; sourceTree = "<group>"; };
 		9AFA47B822F84AEF003B2992 /* Publisher+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Publisher+Extensions.swift"; sourceTree = "<group>"; };
 		9AFA47BC22F84B43003B2992 /* Result+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Result+Extensions.swift"; sourceTree = "<group>"; };
 		9AFA47C022F85FD3003B2992 /* TestConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestConfig.swift; sourceTree = "<group>"; };
@@ -579,6 +581,7 @@
 				9A1F4175233FF16D00343AD9 /* IntegrationTestCase.swift */,
 				9A1F417A233FFA1C00343AD9 /* SessionBusinessLogicTests.swift */,
 				9A1F416C233FF0A400343AD9 /* UserBusinessLogicTests.swift */,
+				9AE822EE2340D6FE002FF0F5 /* config.json */,
 				9A1F416E233FF0A400343AD9 /* Info.plist */,
 			);
 			path = FinanceMeKitIntegrationTests;
@@ -1357,6 +1360,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9AE822EF2340D6FE002FF0F5 /* config.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

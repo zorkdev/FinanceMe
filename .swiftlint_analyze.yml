@@ -6,6 +6,7 @@ excluded:
   - FinanceMe/FinanceMeUITests-tvOS
   - FinanceMe/FinanceMeUITests-macOS
   - FinanceMeKit/FinanceMeKitTests
+  - FinanceMeKit/FinanceMeKitIntegrationTests
 
 unused_declaration:
   include_public_and_open: true

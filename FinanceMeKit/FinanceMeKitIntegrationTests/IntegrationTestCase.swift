@@ -5,7 +5,13 @@ import FinanceMeTestKit
 class IntegrationTestCase: XCTestCase {
     var appState: AppState!
 
-    let credentials = Credentials(email: "test@test.com", password: "test")
+    let credentials: Credentials = {
+        let bundle = Bundle(for: IntegrationTestCase.self)
+        guard let configURL = bundle.url(forResource: "config", withExtension: "json"),
+            let data = try? Data(contentsOf: configURL),
+            let credentials = try? Credentials(from: data) else { preconditionFailure() }
+        return credentials
+    }()
 
     override func setUp() {
         super.setUp()
