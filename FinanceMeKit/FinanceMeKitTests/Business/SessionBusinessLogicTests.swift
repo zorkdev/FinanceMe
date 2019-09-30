@@ -40,10 +40,7 @@ class SessionBusinessLogicTests: XCTestCase {
     func testLogin_Failure() {
         networkService.performReturnValues = [.failure(TestError())]
 
-        businessLogic.login(credentials: Credentials.stub).assertFailure(self) { error in
-            XCTAssertTrue(error is TestError)
-        }
-
+        businessLogic.login(credentials: Credentials.stub).assertFailure(self) { XCTAssertTrue($0 is TestError) }
         businessLogic.isLoggedIn.assertSuccess(self) { XCTAssertFalse($0) }
     }
 

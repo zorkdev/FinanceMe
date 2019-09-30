@@ -32,10 +32,7 @@ class UserBusinessLogicTests: XCTestCase {
     func testGetUser_Failure() {
         networkService.performReturnValues = [.failure(TestError())]
 
-        businessLogic.getUser().assertFailure(self) { error in
-            XCTAssertTrue(error is TestError)
-        }
-
+        businessLogic.getUser().assertFailure(self) { XCTAssertTrue($0 is TestError) }
         businessLogic.user.assertSuccess(self) { XCTAssertNil($0) }
     }
 
@@ -57,10 +54,7 @@ class UserBusinessLogicTests: XCTestCase {
     func testUpdate_Failure() {
         networkService.performReturnValues = [.failure(TestError())]
 
-        businessLogic.update(user: User.stub).assertFailure(self) { error in
-            XCTAssertTrue(error is TestError)
-        }
-
+        businessLogic.update(user: User.stub).assertFailure(self) { XCTAssertTrue($0 is TestError) }
         businessLogic.user.assertSuccess(self) { XCTAssertNil($0) }
     }
 

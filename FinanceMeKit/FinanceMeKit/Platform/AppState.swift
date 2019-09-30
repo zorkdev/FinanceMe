@@ -8,6 +8,7 @@ public class AppState: ObservableObject {
     public let sessionBusinessLogic: SessionBusinessLogicType
     public let userBusinessLogic: UserBusinessLogicType
     public let transactionBusinessLogic: TransactionBusinessLogicType
+    public let summaryBusinessLogic: SummaryBusinessLogicType
 
     public init() {
         configService = DefaultConfigService()
@@ -21,6 +22,7 @@ public class AppState: ObservableObject {
         sessionBusinessLogic = SessionBusinessLogic(networkService: networkService, sessionService: sessionService)
         userBusinessLogic = UserBusinessLogic(networkService: networkService, dataService: dataService)
         transactionBusinessLogic = TransactionBusinessLogic(networkService: networkService, dataService: dataService)
+        summaryBusinessLogic = SummaryBusinessLogic(networkService: networkService, dataService: dataService)
     }
 
     init(networkService: NetworkService,
@@ -30,7 +32,8 @@ public class AppState: ObservableObject {
          configService: ConfigService,
          sessionBusinessLogic: SessionBusinessLogicType,
          userBusinessLogic: UserBusinessLogicType,
-         transactionBusinessLogic: TransactionBusinessLogicType) {
+         transactionBusinessLogic: TransactionBusinessLogicType,
+         summaryBusinessLogic: SummaryBusinessLogicType) {
         self.networkService = networkService
         self.sessionService = sessionService
         self.dataService = dataService
@@ -39,6 +42,7 @@ public class AppState: ObservableObject {
         self.sessionBusinessLogic = sessionBusinessLogic
         self.userBusinessLogic = userBusinessLogic
         self.transactionBusinessLogic = transactionBusinessLogic
+        self.summaryBusinessLogic = summaryBusinessLogic
     }
 }
 
@@ -52,7 +56,8 @@ public extension AppState {
                         configService: Stub.StubConfigService(),
                         sessionBusinessLogic: Stub.StubSessionBusinessLogic(),
                         userBusinessLogic: Stub.StubUserBusinessLogic(),
-                        transactionBusinessLogic: Stub.StubTransactionBusinessLogic())
+                        transactionBusinessLogic: Stub.StubTransactionBusinessLogic(),
+                        summaryBusinessLogic: Stub.StubSummaryBusinessLogic())
     }
 }
 #endif

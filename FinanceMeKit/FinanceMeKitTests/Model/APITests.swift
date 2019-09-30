@@ -10,7 +10,7 @@ class APITests: XCTestCase {
                        "https://zorkdev-staging.herokuapp.com/api/users/me")
         XCTAssertEqual(API.transactions.url.absoluteString,
                        "https://zorkdev-staging.herokuapp.com/api/transactions")
-        XCTAssertEqual(API.endOfMonthSummaries.url.absoluteString,
+        XCTAssertEqual(API.summary.url.absoluteString,
                        "https://zorkdev-staging.herokuapp.com/api/endOfMonthSummaries")
         XCTAssertEqual(API.reconcile.url.absoluteString,
                        "https://zorkdev-staging.herokuapp.com/api/reconcile")

@@ -3,7 +3,7 @@ enum API: APIType, Equatable {
     case user
     case transactions
     case transaction(UUID)
-    case endOfMonthSummaries
+    case summary
     case reconcile
     case deviceToken
 
@@ -15,7 +15,7 @@ enum API: APIType, Equatable {
         case .user: return "users/me"
         case .transactions: return "transactions"
         case .transaction(let id): return "transactions/\(id.uuidString)"
-        case .endOfMonthSummaries: return "endOfMonthSummaries"
+        case .summary: return "endOfMonthSummaries"
         case .reconcile: return "reconcile"
         case .deviceToken: return "deviceToken"
         }

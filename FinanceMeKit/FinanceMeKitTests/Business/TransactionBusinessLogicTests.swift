@@ -29,13 +29,10 @@ class TransactionBusinessLogicTests: XCTestCase {
         businessLogic.transactions.assertSuccess(self) { XCTAssertEqual($0, expectedValue) }
     }
 
-    func testGetUser_Failure() {
+    func testGetTransactions_Failure() {
         networkService.performReturnValues = [.failure(TestError())]
 
-        businessLogic.getTransactions().assertFailure(self) { error in
-            XCTAssertTrue(error is TestError)
-        }
-
+        businessLogic.getTransactions().assertFailure(self) { XCTAssertTrue($0 is TestError) }
         businessLogic.transactions.assertSuccess(self) { XCTAssertEqual($0, []) }
     }
 

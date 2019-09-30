@@ -85,6 +85,24 @@
 		9A6F3195234207A9005F405D /* TransactionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A6F3194234207A9005F405D /* TransactionTests.swift */; };
 		9A6F3196234207A9005F405D /* TransactionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A6F3194234207A9005F405D /* TransactionTests.swift */; };
 		9A6F3197234207A9005F405D /* TransactionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A6F3194234207A9005F405D /* TransactionTests.swift */; };
+		9A6F319923421711005F405D /* Summary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A6F319823421711005F405D /* Summary.swift */; };
+		9A6F319A23421711005F405D /* Summary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A6F319823421711005F405D /* Summary.swift */; };
+		9A6F319B23421711005F405D /* Summary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A6F319823421711005F405D /* Summary.swift */; };
+		9A6F319C23421711005F405D /* Summary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A6F319823421711005F405D /* Summary.swift */; };
+		9A6F319E234217B0005F405D /* SummaryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A6F319D234217B0005F405D /* SummaryTests.swift */; };
+		9A6F319F234217B0005F405D /* SummaryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A6F319D234217B0005F405D /* SummaryTests.swift */; };
+		9A6F31A0234217B0005F405D /* SummaryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A6F319D234217B0005F405D /* SummaryTests.swift */; };
+		9A6F31A223422197005F405D /* SummaryBusinessLogic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A6F31A123422197005F405D /* SummaryBusinessLogic.swift */; };
+		9A6F31A323422197005F405D /* SummaryBusinessLogic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A6F31A123422197005F405D /* SummaryBusinessLogic.swift */; };
+		9A6F31A423422197005F405D /* SummaryBusinessLogic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A6F31A123422197005F405D /* SummaryBusinessLogic.swift */; };
+		9A6F31A523422197005F405D /* SummaryBusinessLogic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A6F31A123422197005F405D /* SummaryBusinessLogic.swift */; };
+		9A6F31A723422420005F405D /* SummaryBusinessLogicTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A6F31A623422420005F405D /* SummaryBusinessLogicTests.swift */; };
+		9A6F31A823422420005F405D /* SummaryBusinessLogicTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A6F31A623422420005F405D /* SummaryBusinessLogicTests.swift */; };
+		9A6F31A923422420005F405D /* SummaryBusinessLogicTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A6F31A623422420005F405D /* SummaryBusinessLogicTests.swift */; };
+		9A6F31AB23422586005F405D /* MockSummaryBusinessLogic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A6F31AA23422586005F405D /* MockSummaryBusinessLogic.swift */; };
+		9A6F31AC23422586005F405D /* MockSummaryBusinessLogic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A6F31AA23422586005F405D /* MockSummaryBusinessLogic.swift */; };
+		9A6F31AD23422586005F405D /* MockSummaryBusinessLogic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A6F31AA23422586005F405D /* MockSummaryBusinessLogic.swift */; };
+		9A6F31AF2342275C005F405D /* SummaryBusinessLogicTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A6F31AE2342275C005F405D /* SummaryBusinessLogicTests.swift */; };
 		9A78CEB32338F9B2009B5994 /* SessionBusinessLogicTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A78CEB22338F9B2009B5994 /* SessionBusinessLogicTests.swift */; };
 		9A78CEB42338F9B2009B5994 /* SessionBusinessLogicTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A78CEB22338F9B2009B5994 /* SessionBusinessLogicTests.swift */; };
 		9A78CEB52338F9B2009B5994 /* SessionBusinessLogicTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A78CEB22338F9B2009B5994 /* SessionBusinessLogicTests.swift */; };
@@ -398,6 +416,12 @@
 		9A6183CC2304A9F1001825A6 /* AmountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AmountView.swift; sourceTree = "<group>"; };
 		9A6F3190234204CB005F405D /* TransactionBusinessLogicTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionBusinessLogicTests.swift; sourceTree = "<group>"; };
 		9A6F3194234207A9005F405D /* TransactionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionTests.swift; sourceTree = "<group>"; };
+		9A6F319823421711005F405D /* Summary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Summary.swift; sourceTree = "<group>"; };
+		9A6F319D234217B0005F405D /* SummaryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SummaryTests.swift; sourceTree = "<group>"; };
+		9A6F31A123422197005F405D /* SummaryBusinessLogic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SummaryBusinessLogic.swift; sourceTree = "<group>"; };
+		9A6F31A623422420005F405D /* SummaryBusinessLogicTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SummaryBusinessLogicTests.swift; sourceTree = "<group>"; };
+		9A6F31AA23422586005F405D /* MockSummaryBusinessLogic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockSummaryBusinessLogic.swift; sourceTree = "<group>"; };
+		9A6F31AE2342275C005F405D /* SummaryBusinessLogicTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SummaryBusinessLogicTests.swift; sourceTree = "<group>"; };
 		9A78CEB22338F9B2009B5994 /* SessionBusinessLogicTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionBusinessLogicTests.swift; sourceTree = "<group>"; };
 		9A78CEB82339033D009B5994 /* AmountViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AmountViewTests.swift; sourceTree = "<group>"; };
 		9A78CEBC233903FA009B5994 /* TodayViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayViewTests.swift; sourceTree = "<group>"; };
@@ -602,6 +626,7 @@
 				9A1F417A233FFA1C00343AD9 /* SessionBusinessLogicTests.swift */,
 				9A1F416C233FF0A400343AD9 /* UserBusinessLogicTests.swift */,
 				9A3B18382340F9FF00FF27D8 /* TransactionBusinessLogicTests.swift */,
+				9A6F31AE2342275C005F405D /* SummaryBusinessLogicTests.swift */,
 				9AE822EE2340D6FE002FF0F5 /* config.json */,
 				9A1F416E233FF0A400343AD9 /* Info.plist */,
 			);
@@ -832,6 +857,7 @@
 				9ADD21CE22F71CE8006F98CA /* Session.swift */,
 				9AD73D27230029C0003B16C3 /* User.swift */,
 				9A3B18332340F80F00FF27D8 /* Transaction.swift */,
+				9A6F319823421711005F405D /* Summary.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -842,6 +868,7 @@
 				9A90A9A42301DD4500AE4E25 /* SessionBusinessLogic.swift */,
 				9AD73D1D230028D4003B16C3 /* UserBusinessLogic.swift */,
 				9A3B182E2340F7E900FF27D8 /* TransactionBusinessLogic.swift */,
+				9A6F31A123422197005F405D /* SummaryBusinessLogic.swift */,
 			);
 			path = Business;
 			sourceTree = "<group>";
@@ -877,6 +904,7 @@
 				9AE33E6523048C1500E82ABF /* MockSessionBusinessLogic.swift */,
 				9AD73D32230032DF003B16C3 /* MockUserBusinessLogic.swift */,
 				9A3B183A2340FD5C00FF27D8 /* MockTransactionBusinessLogic.swift */,
+				9A6F31AA23422586005F405D /* MockSummaryBusinessLogic.swift */,
 			);
 			path = Business;
 			sourceTree = "<group>";
@@ -927,6 +955,7 @@
 				9ADD21E322F722E8006F98CA /* SessionTests.swift */,
 				9A956DBE2300381400CC848D /* UserTests.swift */,
 				9A6F3194234207A9005F405D /* TransactionTests.swift */,
+				9A6F319D234217B0005F405D /* SummaryTests.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -937,6 +966,7 @@
 				9A78CEB22338F9B2009B5994 /* SessionBusinessLogicTests.swift */,
 				9A5BDD9F2300405600F376C6 /* UserBusinessLogicTests.swift */,
 				9A6F3190234204CB005F405D /* TransactionBusinessLogicTests.swift */,
+				9A6F31A623422420005F405D /* SummaryBusinessLogicTests.swift */,
 			);
 			path = Business;
 			sourceTree = "<group>";
@@ -1568,6 +1598,7 @@
 				9A3B18392340F9FF00FF27D8 /* TransactionBusinessLogicTests.swift in Sources */,
 				9A1F417B233FFA1C00343AD9 /* SessionBusinessLogicTests.swift in Sources */,
 				9A1F416D233FF0A400343AD9 /* UserBusinessLogicTests.swift in Sources */,
+				9A6F31AF2342275C005F405D /* SummaryBusinessLogicTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1600,9 +1631,11 @@
 				9ADD21D722F71D3F006F98CA /* SessionService.swift in Sources */,
 				9ABFBCAF22EFD73900E01785 /* Codable+Extensions.swift in Sources */,
 				9A5BDDA4230042A400F376C6 /* TodayViewModel.swift in Sources */,
+				9A6F31A223422197005F405D /* SummaryBusinessLogic.swift in Sources */,
 				9ADD21D222F71D11006F98CA /* Session.swift in Sources */,
 				9A375B1A22F7AEF600E598AB /* Data+Extensions.swift in Sources */,
 				9AFA47DB22F8A17A003B2992 /* AuthenticationService.swift in Sources */,
+				9A6F319923421711005F405D /* Summary.swift in Sources */,
 				9AD73D23230029AB003B16C3 /* Credentials.swift in Sources */,
 				9AADAC0E22F7046C00C6C290 /* Error.swift in Sources */,
 				9ADD21ED22F7288B006F98CA /* API.swift in Sources */,
@@ -1634,12 +1667,14 @@
 				9ABFBCB122EFD73900E01785 /* Codable+Extensions.swift in Sources */,
 				9ADD21D422F71D12006F98CA /* Session.swift in Sources */,
 				9A3B18362340F80F00FF27D8 /* Transaction.swift in Sources */,
+				9A6F31A423422197005F405D /* SummaryBusinessLogic.swift in Sources */,
 				9A99D0D523020D5D00D735A2 /* TestConfig.swift in Sources */,
 				9A6183CF2304A9F1001825A6 /* AmountView.swift in Sources */,
 				9A3B18312340F7E900FF27D8 /* TransactionBusinessLogic.swift in Sources */,
 				9A375B1C22F7AEF600E598AB /* Data+Extensions.swift in Sources */,
 				9A1F4185233FFC8600343AD9 /* LoginViewModel.swift in Sources */,
 				9A6183CA2304A943001825A6 /* Decimal+Extensions.swift in Sources */,
+				9A6F319B23421711005F405D /* Summary.swift in Sources */,
 				9A1F419023400CAB00343AD9 /* RootView.swift in Sources */,
 				9A1F4180233FFC4900343AD9 /* LoginView.swift in Sources */,
 				9AD73D2A230029C0003B16C3 /* User.swift in Sources */,
@@ -1673,12 +1708,14 @@
 				9AD73D24230029AB003B16C3 /* Credentials.swift in Sources */,
 				9ADD21D322F71D11006F98CA /* Session.swift in Sources */,
 				9A3B18352340F80F00FF27D8 /* Transaction.swift in Sources */,
+				9A6F31A323422197005F405D /* SummaryBusinessLogic.swift in Sources */,
 				9A99D0D623020D5E00D735A2 /* TestConfig.swift in Sources */,
 				9A6183CE2304A9F1001825A6 /* AmountView.swift in Sources */,
 				9A3B18302340F7E900FF27D8 /* TransactionBusinessLogic.swift in Sources */,
 				9A375B1B22F7AEF600E598AB /* Data+Extensions.swift in Sources */,
 				9A1F4184233FFC8600343AD9 /* LoginViewModel.swift in Sources */,
 				9A6183C92304A943001825A6 /* Decimal+Extensions.swift in Sources */,
+				9A6F319A23421711005F405D /* Summary.swift in Sources */,
 				9A1F418F23400CAB00343AD9 /* RootView.swift in Sources */,
 				9AD73D29230029C0003B16C3 /* User.swift in Sources */,
 				9AADAC0F22F7046C00C6C290 /* Error.swift in Sources */,
@@ -1712,12 +1749,14 @@
 				9AD73D26230029AB003B16C3 /* Credentials.swift in Sources */,
 				9ABFBCB222EFD73900E01785 /* Codable+Extensions.swift in Sources */,
 				9A3B18372340F80F00FF27D8 /* Transaction.swift in Sources */,
+				9A6F31A523422197005F405D /* SummaryBusinessLogic.swift in Sources */,
 				9ADD21D522F71D12006F98CA /* Session.swift in Sources */,
 				9A99D0D423020D5D00D735A2 /* TestConfig.swift in Sources */,
 				9A3B18322340F7E900FF27D8 /* TransactionBusinessLogic.swift in Sources */,
 				9A6183D02304A9F1001825A6 /* AmountView.swift in Sources */,
 				9A375B1D22F7AEF600E598AB /* Data+Extensions.swift in Sources */,
 				9A1F4186233FFC8600343AD9 /* LoginViewModel.swift in Sources */,
+				9A6F319C23421711005F405D /* Summary.swift in Sources */,
 				9A6183CB2304A943001825A6 /* Decimal+Extensions.swift in Sources */,
 				9A1F419123400CAB00343AD9 /* RootView.swift in Sources */,
 				9AD73D2B230029C0003B16C3 /* User.swift in Sources */,
@@ -1737,6 +1776,7 @@
 				9ADD21E422F722E9006F98CA /* SessionTests.swift in Sources */,
 				9A956DBF2300381400CC848D /* UserTests.swift in Sources */,
 				9AFA47D722F87712003B2992 /* APITests.swift in Sources */,
+				9A6F31A723422420005F405D /* SummaryBusinessLogicTests.swift in Sources */,
 				9AE4E25522F4BC3200B34E81 /* CodableExtensionsTests.swift in Sources */,
 				9A6F3195234207A9005F405D /* TransactionTests.swift in Sources */,
 				9AE822DE2340C873002FF0F5 /* RootViewModelTests.swift in Sources */,
@@ -1746,6 +1786,7 @@
 				9A78CEB92339033D009B5994 /* AmountViewTests.swift in Sources */,
 				9ADD21DC22F720E6006F98CA /* DefaultSessionServiceTests.swift in Sources */,
 				9AE822E72340C943002FF0F5 /* LoginViewModelTests.swift in Sources */,
+				9A6F319E234217B0005F405D /* SummaryTests.swift in Sources */,
 				9A6F3191234204CB005F405D /* TransactionBusinessLogicTests.swift in Sources */,
 				9AE4E4B422F4C36B00B34E81 /* FormattersTests.swift in Sources */,
 				9AE4E24E22F4BAD300B34E81 /* NumberFormatterExtensionsTests.swift in Sources */,
@@ -1781,6 +1822,7 @@
 				9AE822DF2340C873002FF0F5 /* RootViewModelTests.swift in Sources */,
 				9AE4E25622F4BC3200B34E81 /* CodableExtensionsTests.swift in Sources */,
 				9ADD21DD22F720E6006F98CA /* DefaultSessionServiceTests.swift in Sources */,
+				9A6F319F234217B0005F405D /* SummaryTests.swift in Sources */,
 				9AE4E4B522F4C36B00B34E81 /* FormattersTests.swift in Sources */,
 				9AE4E24F22F4BAD300B34E81 /* NumberFormatterExtensionsTests.swift in Sources */,
 				9AFA47D022F87587003B2992 /* URLSessionExtensionsTests.swift in Sources */,
@@ -1790,6 +1832,7 @@
 				9AFA47D422F87663003B2992 /* ErrorTests.swift in Sources */,
 				9A956DBC2300373600CC848D /* CredentialsTests.swift in Sources */,
 				9A956DC02300381400CC848D /* UserTests.swift in Sources */,
+				9A6F31A823422420005F405D /* SummaryBusinessLogicTests.swift in Sources */,
 				9AADABFB22F7018D00C6C290 /* DefaultLoggingServiceTests.swift in Sources */,
 				9AA805A322F8C17A00B40516 /* AppStateTests.swift in Sources */,
 				9AFA47CC22F87440003B2992 /* DataExtensionsTests.swift in Sources */,
@@ -1818,6 +1861,7 @@
 				9AE822E02340C873002FF0F5 /* RootViewModelTests.swift in Sources */,
 				9AE4E25722F4BC3200B34E81 /* CodableExtensionsTests.swift in Sources */,
 				9ADD21DE22F720E6006F98CA /* DefaultSessionServiceTests.swift in Sources */,
+				9A6F31A0234217B0005F405D /* SummaryTests.swift in Sources */,
 				9AE4E4B622F4C36B00B34E81 /* FormattersTests.swift in Sources */,
 				9AE4E25022F4BAD300B34E81 /* NumberFormatterExtensionsTests.swift in Sources */,
 				9AFA47D122F87587003B2992 /* URLSessionExtensionsTests.swift in Sources */,
@@ -1827,6 +1871,7 @@
 				9AFA47D522F87663003B2992 /* ErrorTests.swift in Sources */,
 				9A956DBD2300373600CC848D /* CredentialsTests.swift in Sources */,
 				9A956DC12300381400CC848D /* UserTests.swift in Sources */,
+				9A6F31A923422420005F405D /* SummaryBusinessLogicTests.swift in Sources */,
 				9AADABFC22F7018D00C6C290 /* DefaultLoggingServiceTests.swift in Sources */,
 				9AA805A422F8C17B00B40516 /* AppStateTests.swift in Sources */,
 				9AFA47CD22F87440003B2992 /* DataExtensionsTests.swift in Sources */,
@@ -1846,6 +1891,7 @@
 			files = (
 				9AA805A622F8D01C00B40516 /* MockNetworkService.swift in Sources */,
 				9A375B1622F7A92D00E598AB /* Error.swift in Sources */,
+				9A6F31AB23422586005F405D /* MockSummaryBusinessLogic.swift in Sources */,
 				9A375B0A22F7A4B800E598AB /* MockLoggingService.swift in Sources */,
 				9ADD21E022F721C8006F98CA /* Stubable.swift in Sources */,
 				9A375B0E22F7A4EF00E598AB /* MockSessionService.swift in Sources */,
@@ -1867,6 +1913,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9A6F31AC23422586005F405D /* MockSummaryBusinessLogic.swift in Sources */,
 				9A375B1722F7A92D00E598AB /* Error.swift in Sources */,
 				9A956DC7230039FD00CC848D /* MockAppState.swift in Sources */,
 				9A375B0B22F7A4B800E598AB /* MockLoggingService.swift in Sources */,
@@ -1888,6 +1935,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9A6F31AD23422586005F405D /* MockSummaryBusinessLogic.swift in Sources */,
 				9A375B1822F7A92D00E598AB /* Error.swift in Sources */,
 				9A956DC8230039FD00CC848D /* MockAppState.swift in Sources */,
 				9A375B0C22F7A4B800E598AB /* MockLoggingService.swift in Sources */,
