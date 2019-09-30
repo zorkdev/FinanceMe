@@ -10,7 +10,7 @@ public struct TodayView: View {
                     .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
                 Text("BALANCE").font(.caption).foregroundColor(Color.secondary)
             }
-            Text("😨").font(.largeTitle)
+            Text(viewModel.icon).font(.largeTitle)
             VStack(alignment: .trailing) {
                 AmountView(viewModel: viewModel.allowance)
                     .frame(minWidth: 0, maxWidth: .infinity, alignment: .trailing)

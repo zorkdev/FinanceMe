@@ -2,10 +2,12 @@ import Combine
 
 public class TodayViewModel: ObservableObject {
     private let businessLogic: UserBusinessLogicType
+    private let spendingBusinessLogic = SpendingBusinessLogic()
     private var cancellables: Set<AnyCancellable> = []
 
     @Published public private(set) var balance = AmountViewModel(value: 0)
     @Published public private(set) var allowance = AmountViewModel(value: 0)
+    @Published public private(set) var icon = ""
 
     public init(businessLogic: UserBusinessLogicType) {
         self.businessLogic = businessLogic
@@ -27,6 +29,12 @@ public class TodayViewModel: ObservableObject {
             .map { AmountViewModel(value: $0?.allowance ?? 0) }
             .receive(on: DispatchQueue.main)
             .assign(to: \.allowance, on: self)
+            .store(in: &cancellables)
+
+        businessLogic.user
+            .map { $0.flatMap { self.spendingBusinessLogic.icon(for: $0.allowance) } ?? "" }
+            .receive(on: DispatchQueue.main)
+            .assign(to: \.icon, on: self)
             .store(in: &cancellables)
     }
 

@@ -23,12 +23,14 @@ class TodayViewModelTests: XCTestCase {
     func testBindings() {
         XCTAssertEqual(viewModel.allowance.value, 0)
         XCTAssertEqual(viewModel.balance.value, 0)
+        XCTAssertEqual(viewModel.icon, "")
 
         businessLogic.userReturnValue = User.stub
 
         waitForEvent {
             XCTAssertEqual(self.viewModel.allowance.value, User.stub.allowance)
             XCTAssertEqual(self.viewModel.balance.value, User.stub.balance)
+            XCTAssertEqual(self.viewModel.icon, "😇")
         }
 
         businessLogic.userReturnValue = nil
@@ -36,6 +38,7 @@ class TodayViewModelTests: XCTestCase {
         waitForEvent {
             XCTAssertEqual(self.viewModel.allowance.value, 0)
             XCTAssertEqual(self.viewModel.balance.value, 0)
+            XCTAssertEqual(self.viewModel.icon, "")
         }
     }
 }
