@@ -110,6 +110,9 @@
 		9A6F31B7234230E1005F405D /* SpendingBusinessLogicTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A6F31B6234230E1005F405D /* SpendingBusinessLogicTests.swift */; };
 		9A6F31B8234230E1005F405D /* SpendingBusinessLogicTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A6F31B6234230E1005F405D /* SpendingBusinessLogicTests.swift */; };
 		9A6F31B9234230E1005F405D /* SpendingBusinessLogicTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A6F31B6234230E1005F405D /* SpendingBusinessLogicTests.swift */; };
+		9A6F31BB23423743005F405D /* AuthenticationBusinessLogic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A6F31BA23423743005F405D /* AuthenticationBusinessLogic.swift */; };
+		9A6F31C523424A38005F405D /* MockAuthenticationBusinessLogic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A6F31C423424A38005F405D /* MockAuthenticationBusinessLogic.swift */; };
+		9A6F31C823424B29005F405D /* AuthenticationBusinessLogicTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A6F31C623424AF8005F405D /* AuthenticationBusinessLogicTests.swift */; };
 		9A78CEB32338F9B2009B5994 /* SessionBusinessLogicTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A78CEB22338F9B2009B5994 /* SessionBusinessLogicTests.swift */; };
 		9A78CEB42338F9B2009B5994 /* SessionBusinessLogicTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A78CEB22338F9B2009B5994 /* SessionBusinessLogicTests.swift */; };
 		9A78CEB52338F9B2009B5994 /* SessionBusinessLogicTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A78CEB22338F9B2009B5994 /* SessionBusinessLogicTests.swift */; };
@@ -431,6 +434,9 @@
 		9A6F31AE2342275C005F405D /* SummaryBusinessLogicTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SummaryBusinessLogicTests.swift; sourceTree = "<group>"; };
 		9A6F31B023422E95005F405D /* SpendingBusinessLogic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpendingBusinessLogic.swift; sourceTree = "<group>"; };
 		9A6F31B6234230E1005F405D /* SpendingBusinessLogicTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpendingBusinessLogicTests.swift; sourceTree = "<group>"; };
+		9A6F31BA23423743005F405D /* AuthenticationBusinessLogic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationBusinessLogic.swift; sourceTree = "<group>"; };
+		9A6F31C423424A38005F405D /* MockAuthenticationBusinessLogic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockAuthenticationBusinessLogic.swift; sourceTree = "<group>"; };
+		9A6F31C623424AF8005F405D /* AuthenticationBusinessLogicTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationBusinessLogicTests.swift; sourceTree = "<group>"; };
 		9A78CEB22338F9B2009B5994 /* SessionBusinessLogicTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionBusinessLogicTests.swift; sourceTree = "<group>"; };
 		9A78CEB82339033D009B5994 /* AmountViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AmountViewTests.swift; sourceTree = "<group>"; };
 		9A78CEBC233903FA009B5994 /* TodayViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayViewTests.swift; sourceTree = "<group>"; };
@@ -878,6 +884,7 @@
 				9AD73D1D230028D4003B16C3 /* UserBusinessLogic.swift */,
 				9A3B182E2340F7E900FF27D8 /* TransactionBusinessLogic.swift */,
 				9A6F31A123422197005F405D /* SummaryBusinessLogic.swift */,
+				9A6F31BA23423743005F405D /* AuthenticationBusinessLogic.swift */,
 				9A6F31B023422E95005F405D /* SpendingBusinessLogic.swift */,
 			);
 			path = Business;
@@ -915,6 +922,7 @@
 				9AD73D32230032DF003B16C3 /* MockUserBusinessLogic.swift */,
 				9A3B183A2340FD5C00FF27D8 /* MockTransactionBusinessLogic.swift */,
 				9A6F31AA23422586005F405D /* MockSummaryBusinessLogic.swift */,
+				9A6F31C423424A38005F405D /* MockAuthenticationBusinessLogic.swift */,
 			);
 			path = Business;
 			sourceTree = "<group>";
@@ -977,6 +985,7 @@
 				9A5BDD9F2300405600F376C6 /* UserBusinessLogicTests.swift */,
 				9A6F3190234204CB005F405D /* TransactionBusinessLogicTests.swift */,
 				9A6F31A623422420005F405D /* SummaryBusinessLogicTests.swift */,
+				9A6F31C623424AF8005F405D /* AuthenticationBusinessLogicTests.swift */,
 				9A6F31B6234230E1005F405D /* SpendingBusinessLogicTests.swift */,
 			);
 			path = Business;
@@ -1635,6 +1644,7 @@
 				9A3B182F2340F7E900FF27D8 /* TransactionBusinessLogic.swift in Sources */,
 				9ABFBCA822EFD60200E01785 /* Formatters.swift in Sources */,
 				9AADAC1322F7052700C6C290 /* KeychainDataService.swift in Sources */,
+				9A6F31BB23423743005F405D /* AuthenticationBusinessLogic.swift in Sources */,
 				9ADD21E822F7248B006F98CA /* NetworkService.swift in Sources */,
 				9AADAAFD22F63A1800C6C290 /* ConfigService.swift in Sources */,
 				9A99D0D723020D5F00D735A2 /* TestConfig.swift in Sources */,
@@ -1790,6 +1800,7 @@
 				9AA805A222F8C17400B40516 /* AppStateTests-iOS.swift in Sources */,
 				9ADD21E422F722E9006F98CA /* SessionTests.swift in Sources */,
 				9A956DBF2300381400CC848D /* UserTests.swift in Sources */,
+				9A6F31C823424B29005F405D /* AuthenticationBusinessLogicTests.swift in Sources */,
 				9AFA47D722F87712003B2992 /* APITests.swift in Sources */,
 				9A6F31A723422420005F405D /* SummaryBusinessLogicTests.swift in Sources */,
 				9AE4E25522F4BC3200B34E81 /* CodableExtensionsTests.swift in Sources */,
@@ -1921,6 +1932,7 @@
 				9ADD21CB22F71A94006F98CA /* MockDataService.swift in Sources */,
 				9AFA47B922F84AEF003B2992 /* Publisher+Extensions.swift in Sources */,
 				9AD73D33230032DF003B16C3 /* MockUserBusinessLogic.swift in Sources */,
+				9A6F31C523424A38005F405D /* MockAuthenticationBusinessLogic.swift in Sources */,
 				9A375B1222F7A55D00E598AB /* MockNetworkRequestable.swift in Sources */,
 				9AA805AA22F8D23D00B40516 /* MockAuthenticationService.swift in Sources */,
 				9AE33E6623048C1500E82ABF /* MockSessionBusinessLogic.swift in Sources */,

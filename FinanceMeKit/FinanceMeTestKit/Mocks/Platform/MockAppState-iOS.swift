@@ -14,6 +14,9 @@ public class MockAppState: AppState {
         transactionBusinessLogic as! MockTransactionBusinessLogic
     }
     public var mockSummaryBusinessLogic: MockSummaryBusinessLogic { summaryBusinessLogic as! MockSummaryBusinessLogic }
+    public var mockAuthenticationBusinessLogic: MockAuthenticationBusinessLogic {
+        authenticationBusinessLogic as! MockAuthenticationBusinessLogic
+    }
 
     override public init() {
         super.init(networkService: MockNetworkService(),
@@ -25,6 +28,7 @@ public class MockAppState: AppState {
                    sessionBusinessLogic: MockSessionBusinessLogic(),
                    userBusinessLogic: MockUserBusinessLogic(),
                    transactionBusinessLogic: MockTransactionBusinessLogic(),
-                   summaryBusinessLogic: MockSummaryBusinessLogic())
+                   summaryBusinessLogic: MockSummaryBusinessLogic(),
+                   authenticationBusinessLogic: MockAuthenticationBusinessLogic())
     }
 }

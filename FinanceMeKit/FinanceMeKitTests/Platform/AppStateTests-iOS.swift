@@ -16,6 +16,7 @@ class AppStateTests: XCTestCase {
         XCTAssertTrue(appState.userBusinessLogic is UserBusinessLogic)
         XCTAssertTrue(appState.transactionBusinessLogic is TransactionBusinessLogic)
         XCTAssertTrue(appState.summaryBusinessLogic is SummaryBusinessLogic)
+        XCTAssertTrue(appState.authenticationBusinessLogic is AuthenticationBusinessLogic)
 
         _ = AppState.stub
     }
