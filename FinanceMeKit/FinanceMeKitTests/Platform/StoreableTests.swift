@@ -14,14 +14,11 @@ class StoreableTests: XCTestCase {
         dataService = MockDataService()
     }
 
-    func testSave_Success() {
+    func testSave_Success() throws {
         let model = Model(variable: "value")
         dataService.saveReturnValue = .success(())
 
-        guard case .success = model.save(dataService: dataService) else {
-            XCTFail("Should not have thrown error.")
-            return
-        }
+        try model.save(dataService: dataService).get()
 
         XCTAssertFalse(dataService.savedValues.isEmpty)
         XCTAssertTrue(dataService.savedValues.contains { ($0 as? Model) == model })

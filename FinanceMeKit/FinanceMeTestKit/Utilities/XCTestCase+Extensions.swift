@@ -1,6 +1,6 @@
 import XCTest
 import SwiftUI
-import FinanceMeKit
+@testable import FinanceMeKit
 
 public extension XCTestCase {
     func waitUntil(action: @escaping (@escaping () -> Void) -> Void) {
@@ -34,13 +34,13 @@ public extension XCTestCase {
 
         waitForEvent {}
     }
-}
 
-open class ServiceClientTestCase: XCTestCase {
-    public var appState: MockAppState!
+    func assert<T: Codable & Equatable & Stubable>(model: T.Type, json: String) throws {
+        let value = try T(from: json.data(using: .utf8)!)
+        XCTAssertEqual(value, T.stub)
 
-    override open func setUp() {
-        super.setUp()
-        appState = MockAppState()
+        let data = try T.stub.jsonEncoded(prettyPrinted: true).get()
+        let string = String(data: data, encoding: .utf8)!
+        XCTAssertEqual(string, json)
     }
 }

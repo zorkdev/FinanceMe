@@ -13,6 +13,7 @@ class AppStateTests: XCTestCase {
         XCTAssertTrue(appState.configService is DefaultConfigService)
         XCTAssertTrue(appState.sessionBusinessLogic is SessionBusinessLogic)
         XCTAssertTrue(appState.userBusinessLogic is UserBusinessLogic)
+        XCTAssertTrue(appState.transactionBusinessLogic is TransactionBusinessLogic)
 
         _ = AppState.stub
     }

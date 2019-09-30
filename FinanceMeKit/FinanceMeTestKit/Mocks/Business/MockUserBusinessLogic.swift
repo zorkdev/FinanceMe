@@ -7,14 +7,6 @@ public class MockUserBusinessLogic: UserBusinessLogicType {
 
     public init() {}
 
-    public var lastLoginParam: Credentials?
-    public var loginReturnValue: Result<Void, Error>?
-    public func login(credentials: Credentials) -> AnyPublisher<Void, Error> {
-        lastLoginParam = credentials
-        let returnValue = loginReturnValue ?? .failure(NoReturnValueProviderError(function: #function))
-        return returnValue.publisher.eraseToAnyPublisher()
-    }
-
     public var didCallGetUser = false
     public var getUserReturnValue: Result<Void, Error>?
     public func getUser() -> AnyPublisher<Void, Error> {

@@ -13,10 +13,23 @@ extension Session: Stubable {
 }
 
 extension User: Stubable {
-    public static var stub: User { User(name: "Name",
-                                        payday: 10,
-                                        startDate: ISO8601DateFormatter().date(from: "2019-01-01T00:00:00Z")!,
-                                        largeTransaction: Decimal(string: "10")!,
-                                        allowance: Decimal(string: "100.22")!,
-                                        balance: Decimal(string: "211.20")!) }
+    public static var stub: User {
+        User(name: "Name",
+             payday: 10,
+             startDate: ISO8601DateFormatter().date(from: "2019-01-01T00:00:00Z")!,
+             largeTransaction: 10,
+             allowance: 100.22,
+             balance: 211.20)
+    }
+}
+
+extension Transaction: Stubable {
+    public static var stub: Transaction {
+        Transaction(id: UUID(uuidString: "d7438025-a56b-47b8-bf62-0e4d38cd5a46")!,
+                    amount: 110.42,
+                    direction: .outbound,
+                    created: ISO8601DateFormatter().date(from: "2019-01-01T00:00:00Z")!,
+                    narrative: "Transaction",
+                    source: .externalOutbound)
+    }
 }

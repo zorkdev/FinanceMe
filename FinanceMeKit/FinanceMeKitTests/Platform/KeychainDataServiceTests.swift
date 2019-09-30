@@ -18,46 +18,31 @@ class KeychainDataServiceTests: XCTestCase {
         dataService.removeAll()
     }
 
-    func testSaveAndLoad_Success() {
+    func testSaveAndLoad_Success() throws {
         let key = "key"
         let model = Model(variable: "value")
 
-        let saveResult = dataService.save(value: model, key: key)
+        try dataService.save(value: model, key: key).get()
         let retrievedValue: Model? = dataService.load(key: key)
-
-        guard case .success(()) = saveResult else {
-            XCTFail("Save should not have failed.")
-            return
-        }
 
         XCTAssertNotNil(retrievedValue)
         XCTAssertEqual(retrievedValue!, model)
     }
 
-    func testUpdate() {
+    func testUpdate() throws {
         let key = "key"
         let model1 = Model(variable: "value")
 
-        let saveResult = dataService.save(value: model1, key: key)
+        try dataService.save(value: model1, key: key).get()
         let retrievedValue: Model? = dataService.load(key: key)
-
-        guard case .success(()) = saveResult else {
-            XCTFail("Save should not have failed.")
-            return
-        }
 
         XCTAssertNotNil(retrievedValue)
         XCTAssertEqual(retrievedValue!, model1)
 
         let model2 = Model(variable: "anotherValue")
 
-        let saveAgainResult = dataService.save(value: model2, key: key)
+        try dataService.save(value: model2, key: key).get()
         let retrievedAgainValue: Model? = dataService.load(key: key)
-
-        guard case .success(()) = saveAgainResult else {
-            XCTFail("Save should not have failed.")
-            return
-        }
 
         XCTAssertNotNil(retrievedAgainValue)
         XCTAssertEqual(retrievedAgainValue!, model2)
@@ -67,12 +52,7 @@ class KeychainDataServiceTests: XCTestCase {
         let key = "key"
         let nan = Double.nan
 
-        let saveResult = dataService.save(value: nan, key: key)
-
-        guard case .failure = saveResult else {
-            XCTFail("Save should not have succeeded.")
-            return
-        }
+        XCTAssertThrowsError(try dataService.save(value: nan, key: key).get())
     }
 
     func testLoad_Failure() {
@@ -83,17 +63,12 @@ class KeychainDataServiceTests: XCTestCase {
         XCTAssertNil(loadedItem)
     }
 
-    func testRemoveAll() {
+    func testRemoveAll() throws {
         let key = "key"
         let model = Model(variable: "value")
 
-        let saveResult = dataService.save(value: model, key: key)
+        try dataService.save(value: model, key: key).get()
         let retrievedValue: Model? = dataService.load(key: key)
-
-        guard case .success(()) = saveResult else {
-            XCTFail("Save should not have failed.")
-            return
-        }
 
         XCTAssertNotNil(retrievedValue)
 

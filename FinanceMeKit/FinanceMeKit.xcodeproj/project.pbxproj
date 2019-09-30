@@ -49,6 +49,18 @@
 		9A375B1B22F7AEF600E598AB /* Data+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A375B1922F7AEF600E598AB /* Data+Extensions.swift */; };
 		9A375B1C22F7AEF600E598AB /* Data+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A375B1922F7AEF600E598AB /* Data+Extensions.swift */; };
 		9A375B1D22F7AEF600E598AB /* Data+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A375B1922F7AEF600E598AB /* Data+Extensions.swift */; };
+		9A3B182F2340F7E900FF27D8 /* TransactionBusinessLogic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A3B182E2340F7E900FF27D8 /* TransactionBusinessLogic.swift */; };
+		9A3B18302340F7E900FF27D8 /* TransactionBusinessLogic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A3B182E2340F7E900FF27D8 /* TransactionBusinessLogic.swift */; };
+		9A3B18312340F7E900FF27D8 /* TransactionBusinessLogic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A3B182E2340F7E900FF27D8 /* TransactionBusinessLogic.swift */; };
+		9A3B18322340F7E900FF27D8 /* TransactionBusinessLogic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A3B182E2340F7E900FF27D8 /* TransactionBusinessLogic.swift */; };
+		9A3B18342340F80F00FF27D8 /* Transaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A3B18332340F80F00FF27D8 /* Transaction.swift */; };
+		9A3B18352340F80F00FF27D8 /* Transaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A3B18332340F80F00FF27D8 /* Transaction.swift */; };
+		9A3B18362340F80F00FF27D8 /* Transaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A3B18332340F80F00FF27D8 /* Transaction.swift */; };
+		9A3B18372340F80F00FF27D8 /* Transaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A3B18332340F80F00FF27D8 /* Transaction.swift */; };
+		9A3B18392340F9FF00FF27D8 /* TransactionBusinessLogicTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A3B18382340F9FF00FF27D8 /* TransactionBusinessLogicTests.swift */; };
+		9A3B183B2340FD5C00FF27D8 /* MockTransactionBusinessLogic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A3B183A2340FD5C00FF27D8 /* MockTransactionBusinessLogic.swift */; };
+		9A3B183C2340FD5C00FF27D8 /* MockTransactionBusinessLogic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A3B183A2340FD5C00FF27D8 /* MockTransactionBusinessLogic.swift */; };
+		9A3B183D2340FD5C00FF27D8 /* MockTransactionBusinessLogic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A3B183A2340FD5C00FF27D8 /* MockTransactionBusinessLogic.swift */; };
 		9A5BDDA02300405600F376C6 /* UserBusinessLogicTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A5BDD9F2300405600F376C6 /* UserBusinessLogicTests.swift */; };
 		9A5BDDA12300405600F376C6 /* UserBusinessLogicTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A5BDD9F2300405600F376C6 /* UserBusinessLogicTests.swift */; };
 		9A5BDDA22300405600F376C6 /* UserBusinessLogicTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A5BDD9F2300405600F376C6 /* UserBusinessLogicTests.swift */; };
@@ -67,6 +79,12 @@
 		9A6183CE2304A9F1001825A6 /* AmountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A6183CC2304A9F1001825A6 /* AmountView.swift */; };
 		9A6183CF2304A9F1001825A6 /* AmountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A6183CC2304A9F1001825A6 /* AmountView.swift */; };
 		9A6183D02304A9F1001825A6 /* AmountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A6183CC2304A9F1001825A6 /* AmountView.swift */; };
+		9A6F3191234204CB005F405D /* TransactionBusinessLogicTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A6F3190234204CB005F405D /* TransactionBusinessLogicTests.swift */; };
+		9A6F3192234204CB005F405D /* TransactionBusinessLogicTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A6F3190234204CB005F405D /* TransactionBusinessLogicTests.swift */; };
+		9A6F3193234204CB005F405D /* TransactionBusinessLogicTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A6F3190234204CB005F405D /* TransactionBusinessLogicTests.swift */; };
+		9A6F3195234207A9005F405D /* TransactionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A6F3194234207A9005F405D /* TransactionTests.swift */; };
+		9A6F3196234207A9005F405D /* TransactionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A6F3194234207A9005F405D /* TransactionTests.swift */; };
+		9A6F3197234207A9005F405D /* TransactionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A6F3194234207A9005F405D /* TransactionTests.swift */; };
 		9A78CEB32338F9B2009B5994 /* SessionBusinessLogicTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A78CEB22338F9B2009B5994 /* SessionBusinessLogicTests.swift */; };
 		9A78CEB42338F9B2009B5994 /* SessionBusinessLogicTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A78CEB22338F9B2009B5994 /* SessionBusinessLogicTests.swift */; };
 		9A78CEB52338F9B2009B5994 /* SessionBusinessLogicTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A78CEB22338F9B2009B5994 /* SessionBusinessLogicTests.swift */; };
@@ -261,9 +279,6 @@
 		9AFA47B922F84AEF003B2992 /* Publisher+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AFA47B822F84AEF003B2992 /* Publisher+Extensions.swift */; };
 		9AFA47BA22F84AEF003B2992 /* Publisher+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AFA47B822F84AEF003B2992 /* Publisher+Extensions.swift */; };
 		9AFA47BB22F84AEF003B2992 /* Publisher+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AFA47B822F84AEF003B2992 /* Publisher+Extensions.swift */; };
-		9AFA47BD22F84B43003B2992 /* Result+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AFA47BC22F84B43003B2992 /* Result+Extensions.swift */; };
-		9AFA47BE22F84B43003B2992 /* Result+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AFA47BC22F84B43003B2992 /* Result+Extensions.swift */; };
-		9AFA47BF22F84B43003B2992 /* Result+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AFA47BC22F84B43003B2992 /* Result+Extensions.swift */; };
 		9AFA47CB22F87440003B2992 /* DataExtensionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AFA47CA22F87440003B2992 /* DataExtensionsTests.swift */; };
 		9AFA47CC22F87440003B2992 /* DataExtensionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AFA47CA22F87440003B2992 /* DataExtensionsTests.swift */; };
 		9AFA47CD22F87440003B2992 /* DataExtensionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AFA47CA22F87440003B2992 /* DataExtensionsTests.swift */; };
@@ -372,11 +387,17 @@
 		9A375B1122F7A55D00E598AB /* MockNetworkRequestable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockNetworkRequestable.swift; sourceTree = "<group>"; };
 		9A375B1522F7A92D00E598AB /* Error.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Error.swift; sourceTree = "<group>"; };
 		9A375B1922F7AEF600E598AB /* Data+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Data+Extensions.swift"; sourceTree = "<group>"; };
+		9A3B182E2340F7E900FF27D8 /* TransactionBusinessLogic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionBusinessLogic.swift; sourceTree = "<group>"; };
+		9A3B18332340F80F00FF27D8 /* Transaction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Transaction.swift; sourceTree = "<group>"; };
+		9A3B18382340F9FF00FF27D8 /* TransactionBusinessLogicTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionBusinessLogicTests.swift; sourceTree = "<group>"; };
+		9A3B183A2340FD5C00FF27D8 /* MockTransactionBusinessLogic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockTransactionBusinessLogic.swift; sourceTree = "<group>"; };
 		9A5BDD9F2300405600F376C6 /* UserBusinessLogicTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserBusinessLogicTests.swift; sourceTree = "<group>"; };
 		9A5BDDA3230042A400F376C6 /* TodayViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayViewModel.swift; sourceTree = "<group>"; };
 		9A5BDDAA230044D500F376C6 /* TodayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayView.swift; sourceTree = "<group>"; };
 		9A6183C72304A943001825A6 /* Decimal+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Decimal+Extensions.swift"; sourceTree = "<group>"; };
 		9A6183CC2304A9F1001825A6 /* AmountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AmountView.swift; sourceTree = "<group>"; };
+		9A6F3190234204CB005F405D /* TransactionBusinessLogicTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionBusinessLogicTests.swift; sourceTree = "<group>"; };
+		9A6F3194234207A9005F405D /* TransactionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionTests.swift; sourceTree = "<group>"; };
 		9A78CEB22338F9B2009B5994 /* SessionBusinessLogicTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionBusinessLogicTests.swift; sourceTree = "<group>"; };
 		9A78CEB82339033D009B5994 /* AmountViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AmountViewTests.swift; sourceTree = "<group>"; };
 		9A78CEBC233903FA009B5994 /* TodayViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayViewTests.swift; sourceTree = "<group>"; };
@@ -450,7 +471,6 @@
 		9AE822EA2340CA83002FF0F5 /* LoginViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewTests.swift; sourceTree = "<group>"; };
 		9AE822EE2340D6FE002FF0F5 /* config.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = config.json; path = ../../config.json; sourceTree = "<group>"; };
 		9AFA47B822F84AEF003B2992 /* Publisher+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Publisher+Extensions.swift"; sourceTree = "<group>"; };
-		9AFA47BC22F84B43003B2992 /* Result+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Result+Extensions.swift"; sourceTree = "<group>"; };
 		9AFA47C022F85FD3003B2992 /* TestConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestConfig.swift; sourceTree = "<group>"; };
 		9AFA47CA22F87440003B2992 /* DataExtensionsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataExtensionsTests.swift; sourceTree = "<group>"; };
 		9AFA47CE22F87587003B2992 /* URLSessionExtensionsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionExtensionsTests.swift; sourceTree = "<group>"; };
@@ -581,6 +601,7 @@
 				9A1F4175233FF16D00343AD9 /* IntegrationTestCase.swift */,
 				9A1F417A233FFA1C00343AD9 /* SessionBusinessLogicTests.swift */,
 				9A1F416C233FF0A400343AD9 /* UserBusinessLogicTests.swift */,
+				9A3B18382340F9FF00FF27D8 /* TransactionBusinessLogicTests.swift */,
 				9AE822EE2340D6FE002FF0F5 /* config.json */,
 				9A1F416E233FF0A400343AD9 /* Info.plist */,
 			);
@@ -745,7 +766,6 @@
 			children = (
 				9AADAAC722F62D5C00C6C290 /* XCTestCase+Extensions.swift */,
 				9AFA47B822F84AEF003B2992 /* Publisher+Extensions.swift */,
-				9AFA47BC22F84B43003B2992 /* Result+Extensions.swift */,
 				9A375B1522F7A92D00E598AB /* Error.swift */,
 			);
 			path = Utilities;
@@ -811,6 +831,7 @@
 				9AD73D22230029AB003B16C3 /* Credentials.swift */,
 				9ADD21CE22F71CE8006F98CA /* Session.swift */,
 				9AD73D27230029C0003B16C3 /* User.swift */,
+				9A3B18332340F80F00FF27D8 /* Transaction.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -820,6 +841,7 @@
 			children = (
 				9A90A9A42301DD4500AE4E25 /* SessionBusinessLogic.swift */,
 				9AD73D1D230028D4003B16C3 /* UserBusinessLogic.swift */,
+				9A3B182E2340F7E900FF27D8 /* TransactionBusinessLogic.swift */,
 			);
 			path = Business;
 			sourceTree = "<group>";
@@ -852,8 +874,9 @@
 		9AD73D2D2300326C003B16C3 /* Business */ = {
 			isa = PBXGroup;
 			children = (
-				9AD73D32230032DF003B16C3 /* MockUserBusinessLogic.swift */,
 				9AE33E6523048C1500E82ABF /* MockSessionBusinessLogic.swift */,
+				9AD73D32230032DF003B16C3 /* MockUserBusinessLogic.swift */,
+				9A3B183A2340FD5C00FF27D8 /* MockTransactionBusinessLogic.swift */,
 			);
 			path = Business;
 			sourceTree = "<group>";
@@ -903,6 +926,7 @@
 				9A956DBA2300373600CC848D /* CredentialsTests.swift */,
 				9ADD21E322F722E8006F98CA /* SessionTests.swift */,
 				9A956DBE2300381400CC848D /* UserTests.swift */,
+				9A6F3194234207A9005F405D /* TransactionTests.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -912,6 +936,7 @@
 			children = (
 				9A78CEB22338F9B2009B5994 /* SessionBusinessLogicTests.swift */,
 				9A5BDD9F2300405600F376C6 /* UserBusinessLogicTests.swift */,
+				9A6F3190234204CB005F405D /* TransactionBusinessLogicTests.swift */,
 			);
 			path = Business;
 			sourceTree = "<group>";
@@ -1540,6 +1565,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9A1F4176233FF16D00343AD9 /* IntegrationTestCase.swift in Sources */,
+				9A3B18392340F9FF00FF27D8 /* TransactionBusinessLogicTests.swift in Sources */,
 				9A1F417B233FFA1C00343AD9 /* SessionBusinessLogicTests.swift in Sources */,
 				9A1F416D233FF0A400343AD9 /* UserBusinessLogicTests.swift in Sources */,
 			);
@@ -1560,8 +1586,10 @@
 				9A1F418E23400CAB00343AD9 /* RootView.swift in Sources */,
 				9A1F4183233FFC8600343AD9 /* LoginViewModel.swift in Sources */,
 				9A90A9A52301DD4500AE4E25 /* SessionBusinessLogic.swift in Sources */,
+				9A3B18342340F80F00FF27D8 /* Transaction.swift in Sources */,
 				9ABFBCB422EFDE4C00E01785 /* NumberFormatter+Extensions.swift in Sources */,
 				9A1F418923400C4F00343AD9 /* RootViewModel.swift in Sources */,
+				9A3B182F2340F7E900FF27D8 /* TransactionBusinessLogic.swift in Sources */,
 				9ABFBCA822EFD60200E01785 /* Formatters.swift in Sources */,
 				9AADAC1322F7052700C6C290 /* KeychainDataService.swift in Sources */,
 				9ADD21E822F7248B006F98CA /* NetworkService.swift in Sources */,
@@ -1605,8 +1633,10 @@
 				9AD73D25230029AB003B16C3 /* Credentials.swift in Sources */,
 				9ABFBCB122EFD73900E01785 /* Codable+Extensions.swift in Sources */,
 				9ADD21D422F71D12006F98CA /* Session.swift in Sources */,
+				9A3B18362340F80F00FF27D8 /* Transaction.swift in Sources */,
 				9A99D0D523020D5D00D735A2 /* TestConfig.swift in Sources */,
 				9A6183CF2304A9F1001825A6 /* AmountView.swift in Sources */,
+				9A3B18312340F7E900FF27D8 /* TransactionBusinessLogic.swift in Sources */,
 				9A375B1C22F7AEF600E598AB /* Data+Extensions.swift in Sources */,
 				9A1F4185233FFC8600343AD9 /* LoginViewModel.swift in Sources */,
 				9A6183CA2304A943001825A6 /* Decimal+Extensions.swift in Sources */,
@@ -1642,8 +1672,10 @@
 				9ABFBCB022EFD73900E01785 /* Codable+Extensions.swift in Sources */,
 				9AD73D24230029AB003B16C3 /* Credentials.swift in Sources */,
 				9ADD21D322F71D11006F98CA /* Session.swift in Sources */,
+				9A3B18352340F80F00FF27D8 /* Transaction.swift in Sources */,
 				9A99D0D623020D5E00D735A2 /* TestConfig.swift in Sources */,
 				9A6183CE2304A9F1001825A6 /* AmountView.swift in Sources */,
+				9A3B18302340F7E900FF27D8 /* TransactionBusinessLogic.swift in Sources */,
 				9A375B1B22F7AEF600E598AB /* Data+Extensions.swift in Sources */,
 				9A1F4184233FFC8600343AD9 /* LoginViewModel.swift in Sources */,
 				9A6183C92304A943001825A6 /* Decimal+Extensions.swift in Sources */,
@@ -1679,8 +1711,10 @@
 				9AE822DB2340C557002FF0F5 /* LoginView-macOS.swift in Sources */,
 				9AD73D26230029AB003B16C3 /* Credentials.swift in Sources */,
 				9ABFBCB222EFD73900E01785 /* Codable+Extensions.swift in Sources */,
+				9A3B18372340F80F00FF27D8 /* Transaction.swift in Sources */,
 				9ADD21D522F71D12006F98CA /* Session.swift in Sources */,
 				9A99D0D423020D5D00D735A2 /* TestConfig.swift in Sources */,
+				9A3B18322340F7E900FF27D8 /* TransactionBusinessLogic.swift in Sources */,
 				9A6183D02304A9F1001825A6 /* AmountView.swift in Sources */,
 				9A375B1D22F7AEF600E598AB /* Data+Extensions.swift in Sources */,
 				9A1F4186233FFC8600343AD9 /* LoginViewModel.swift in Sources */,
@@ -1704,6 +1738,7 @@
 				9A956DBF2300381400CC848D /* UserTests.swift in Sources */,
 				9AFA47D722F87712003B2992 /* APITests.swift in Sources */,
 				9AE4E25522F4BC3200B34E81 /* CodableExtensionsTests.swift in Sources */,
+				9A6F3195234207A9005F405D /* TransactionTests.swift in Sources */,
 				9AE822DE2340C873002FF0F5 /* RootViewModelTests.swift in Sources */,
 				9A78CEBD233903FA009B5994 /* TodayViewTests.swift in Sources */,
 				9AFA47DD22F8A660003B2992 /* LAContextAuthenticationServiceTests.swift in Sources */,
@@ -1711,6 +1746,7 @@
 				9A78CEB92339033D009B5994 /* AmountViewTests.swift in Sources */,
 				9ADD21DC22F720E6006F98CA /* DefaultSessionServiceTests.swift in Sources */,
 				9AE822E72340C943002FF0F5 /* LoginViewModelTests.swift in Sources */,
+				9A6F3191234204CB005F405D /* TransactionBusinessLogicTests.swift in Sources */,
 				9AE4E4B422F4C36B00B34E81 /* FormattersTests.swift in Sources */,
 				9AE4E24E22F4BAD300B34E81 /* NumberFormatterExtensionsTests.swift in Sources */,
 				9AFA47CF22F87587003B2992 /* URLSessionExtensionsTests.swift in Sources */,
@@ -1738,6 +1774,7 @@
 				9ADD21E522F722E9006F98CA /* SessionTests.swift in Sources */,
 				9AE822EC2340CA83002FF0F5 /* LoginViewTests.swift in Sources */,
 				9AE822E32340C90E002FF0F5 /* RootViewTests.swift in Sources */,
+				9A6F3196234207A9005F405D /* TransactionTests.swift in Sources */,
 				9AFA47D822F87712003B2992 /* APITests.swift in Sources */,
 				9A5BDDA12300405600F376C6 /* UserBusinessLogicTests.swift in Sources */,
 				9A78CEB42338F9B2009B5994 /* SessionBusinessLogicTests.swift in Sources */,
@@ -1760,6 +1797,7 @@
 				9AE4E4BC22F4C48200B34E81 /* AmountViewModelTests.swift in Sources */,
 				9A78CEC22339081B009B5994 /* TodayViewModelTests.swift in Sources */,
 				9ADD21C422F717A6006F98CA /* KeychainDataServiceTests.swift in Sources */,
+				9A6F3192234204CB005F405D /* TransactionBusinessLogicTests.swift in Sources */,
 				9ADD21C022F7165F006F98CA /* StringRepresentableTests.swift in Sources */,
 				9ADD21C822F71A10006F98CA /* StoreableTests.swift in Sources */,
 			);
@@ -1773,6 +1811,7 @@
 				9ADD21E622F722E9006F98CA /* SessionTests.swift in Sources */,
 				9AE822ED2340CA83002FF0F5 /* LoginViewTests.swift in Sources */,
 				9AE822E42340C90E002FF0F5 /* RootViewTests.swift in Sources */,
+				9A6F3197234207A9005F405D /* TransactionTests.swift in Sources */,
 				9AFA47D922F87712003B2992 /* APITests.swift in Sources */,
 				9A5BDDA22300405600F376C6 /* UserBusinessLogicTests.swift in Sources */,
 				9A78CEB52338F9B2009B5994 /* SessionBusinessLogicTests.swift in Sources */,
@@ -1795,6 +1834,7 @@
 				9AE4E4BD22F4C48200B34E81 /* AmountViewModelTests.swift in Sources */,
 				9A78CEC32339081B009B5994 /* TodayViewModelTests.swift in Sources */,
 				9ADD21C522F717A6006F98CA /* KeychainDataServiceTests.swift in Sources */,
+				9A6F3193234204CB005F405D /* TransactionBusinessLogicTests.swift in Sources */,
 				9ADD21C122F7165F006F98CA /* StringRepresentableTests.swift in Sources */,
 				9ADD21C922F71A10006F98CA /* StoreableTests.swift in Sources */,
 			);
@@ -1811,8 +1851,8 @@
 				9A375B0E22F7A4EF00E598AB /* MockSessionService.swift in Sources */,
 				9A956DCA23003B0700CC848D /* MockAppState-iOS.swift in Sources */,
 				9AFA47DF22F8A6A9003B2992 /* MockLAContext.swift in Sources */,
-				9AFA47BD22F84B43003B2992 /* Result+Extensions.swift in Sources */,
 				9AADAAC822F62D5C00C6C290 /* XCTestCase+Extensions.swift in Sources */,
+				9A3B183B2340FD5C00FF27D8 /* MockTransactionBusinessLogic.swift in Sources */,
 				9AADAC0022F7020700C6C290 /* MockConfigService.swift in Sources */,
 				9ADD21CB22F71A94006F98CA /* MockDataService.swift in Sources */,
 				9AFA47B922F84AEF003B2992 /* Publisher+Extensions.swift in Sources */,
@@ -1832,8 +1872,8 @@
 				9A375B0B22F7A4B800E598AB /* MockLoggingService.swift in Sources */,
 				9ADD21E122F721C8006F98CA /* Stubable.swift in Sources */,
 				9A375B0F22F7A4EF00E598AB /* MockSessionService.swift in Sources */,
+				9A3B183C2340FD5C00FF27D8 /* MockTransactionBusinessLogic.swift in Sources */,
 				9AA805A722F8D01C00B40516 /* MockNetworkService.swift in Sources */,
-				9AFA47BE22F84B43003B2992 /* Result+Extensions.swift in Sources */,
 				9AADAAE922F6329C00C6C290 /* XCTestCase+Extensions.swift in Sources */,
 				9AD73D34230032DF003B16C3 /* MockUserBusinessLogic.swift in Sources */,
 				9AADAC0122F7020700C6C290 /* MockConfigService.swift in Sources */,
@@ -1853,8 +1893,8 @@
 				9A375B0C22F7A4B800E598AB /* MockLoggingService.swift in Sources */,
 				9ADD21E222F721C8006F98CA /* Stubable.swift in Sources */,
 				9A375B1022F7A4EF00E598AB /* MockSessionService.swift in Sources */,
+				9A3B183D2340FD5C00FF27D8 /* MockTransactionBusinessLogic.swift in Sources */,
 				9AA805A822F8D01C00B40516 /* MockNetworkService.swift in Sources */,
-				9AFA47BF22F84B43003B2992 /* Result+Extensions.swift in Sources */,
 				9AADAAEA22F6329D00C6C290 /* XCTestCase+Extensions.swift in Sources */,
 				9AD73D35230032DF003B16C3 /* MockUserBusinessLogic.swift in Sources */,
 				9AADAC0222F7020700C6C290 /* MockConfigService.swift in Sources */,

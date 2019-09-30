@@ -87,11 +87,11 @@ class DefaultNetworkServiceTests: XCTestCase {
         }
     }
 
-    func testPerformDecodable_Success() {
+    func testPerformDecodable_Success() throws {
         let session = Session.stub
         sessionService.session = session
         let body = Body()
-        networkRequestable.performReturnValue = .success((data: body.jsonEncoded().forceGet(), response: urlResponse))
+        networkRequestable.performReturnValue = .success((data: try body.jsonEncoded().get(), response: urlResponse))
 
         networkService.perform(api: api, method: .get, body: nil).assertSuccess(self) { (response: Body) in
             let request = self.networkRequestable.lastPerformParam!

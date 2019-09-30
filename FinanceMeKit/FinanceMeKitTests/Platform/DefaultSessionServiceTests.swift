@@ -25,14 +25,11 @@ class DefaultSessionServiceTests: XCTestCase {
         XCTAssertFalse(sessionService.hasSession)
     }
 
-    func testSaveSession() {
+    func testSaveSession() throws {
         let expectedSession = Session.stub
         dataService.saveReturnValue = .success(())
 
-        guard case .success = sessionService.save(session: expectedSession) else {
-            XCTFail("Should not have thrown error.")
-            return
-        }
+        try sessionService.save(session: expectedSession).get()
 
         XCTAssertEqual(dataService.savedValues.first as? Session, expectedSession)
     }

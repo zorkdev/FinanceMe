@@ -16,7 +16,7 @@ class CodableExtensionsTests: XCTestCase {
         }
     }
 
-    func testDecode_Success() {
+    func testDecode_Success() throws {
         let dateString = "2019-01-01T00:00:00Z"
         let date = ISO8601DateFormatter().date(from: dateString)!
         let jsonData =
@@ -27,13 +27,9 @@ class CodableExtensionsTests: XCTestCase {
             }
             """.data(using: .utf8)!
 
-        do {
-            let model = try Model(from: jsonData)
-            XCTAssertEqual(model.string, "value")
-            XCTAssertEqual(model.date, date)
-        } catch {
-            XCTFail(error.localizedDescription)
-        }
+        let model = try Model(from: jsonData)
+        XCTAssertEqual(model.string, "value")
+        XCTAssertEqual(model.date, date)
     }
 
     func testDecode_Failure() {
@@ -48,7 +44,7 @@ class CodableExtensionsTests: XCTestCase {
         XCTAssertThrowsError(try Model(from: jsonData))
     }
 
-    func testEncode_Success() {
+    func testEncode_Success() throws {
         let dateString = "2019-01-01T00:00:00Z"
         let date = ISO8601DateFormatter().date(from: dateString)!
         let expectedValue =
@@ -59,20 +55,16 @@ class CodableExtensionsTests: XCTestCase {
         let model = Model(string: "value",
                           date: date)
 
-        switch model.jsonEncoded() {
-        case .success(let data):
-            let string = String(data: data, encoding: .utf8)!
-            XCTAssertEqual(string, expectedValue)
-        case .failure(let error):
-            XCTFail(error.localizedDescription)
-        }
+        let data = try model.jsonEncoded().get()
+        let string = String(data: data, encoding: .utf8)!
+        XCTAssertEqual(string, expectedValue)
     }
 
     func testEncode_Failure() {
         XCTAssertThrowsError(try Double.nan.jsonEncoded().get())
     }
 
-    func testEncodePrettyPrinted() {
+    func testEncodePrettyPrinted() throws {
         let dict = ["key": "value"]
         let expectedValue =
             """
@@ -81,13 +73,9 @@ class CodableExtensionsTests: XCTestCase {
             }
             """
 
-        switch dict.jsonEncoded(prettyPrinted: true) {
-        case .success(let data):
-            let string = String(data: data, encoding: .utf8)!
-            XCTAssertEqual(string, expectedValue)
-        case .failure(let error):
-            XCTFail(error.localizedDescription)
-        }
+        let data = try dict.jsonEncoded(prettyPrinted: true).get()
+        let string = String(data: data, encoding: .utf8)!
+        XCTAssertEqual(string, expectedValue)
     }
 
     func testPrettyPrinted_Success() {

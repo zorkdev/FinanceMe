@@ -7,6 +7,7 @@ public class AppState: ObservableObject {
 
     public let sessionBusinessLogic: SessionBusinessLogicType
     public let userBusinessLogic: UserBusinessLogicType
+    public let transactionBusinessLogic: TransactionBusinessLogicType
 
     public init() {
         configService = DefaultConfigService()
@@ -17,10 +18,9 @@ public class AppState: ObservableObject {
                                                loggingService: loggingService,
                                                sessionService: sessionService)
 
-        sessionBusinessLogic = SessionBusinessLogic(networkService: networkService,
-                                                    sessionService: sessionService)
-        userBusinessLogic = UserBusinessLogic(networkService: networkService,
-                                              dataService: dataService)
+        sessionBusinessLogic = SessionBusinessLogic(networkService: networkService, sessionService: sessionService)
+        userBusinessLogic = UserBusinessLogic(networkService: networkService, dataService: dataService)
+        transactionBusinessLogic = TransactionBusinessLogic(networkService: networkService, dataService: dataService)
     }
 
     init(networkService: NetworkService,
@@ -29,7 +29,8 @@ public class AppState: ObservableObject {
          loggingService: LoggingService,
          configService: ConfigService,
          sessionBusinessLogic: SessionBusinessLogicType,
-         userBusinessLogic: UserBusinessLogicType) {
+         userBusinessLogic: UserBusinessLogicType,
+         transactionBusinessLogic: TransactionBusinessLogicType) {
         self.networkService = networkService
         self.sessionService = sessionService
         self.dataService = dataService
@@ -37,6 +38,7 @@ public class AppState: ObservableObject {
         self.configService = configService
         self.sessionBusinessLogic = sessionBusinessLogic
         self.userBusinessLogic = userBusinessLogic
+        self.transactionBusinessLogic = transactionBusinessLogic
     }
 }
 
@@ -49,7 +51,8 @@ public extension AppState {
                         loggingService: Stub.StubLoggingService(),
                         configService: Stub.StubConfigService(),
                         sessionBusinessLogic: Stub.StubSessionBusinessLogic(),
-                        userBusinessLogic: Stub.StubUserBusinessLogic())
+                        userBusinessLogic: Stub.StubUserBusinessLogic(),
+                        transactionBusinessLogic: Stub.StubTransactionBusinessLogic())
     }
 }
 #endif

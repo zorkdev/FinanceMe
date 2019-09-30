@@ -3,7 +3,7 @@ import XCTest
 
 class AmountViewModelTests: XCTestCase {
     func testDefault() {
-        let viewModel1 = AmountViewModel(value: Decimal(string: "1200.34")!)
+        let viewModel1 = AmountViewModel(value: 1200.34)
 
         XCTAssertEqual(viewModel1.sign, "")
         XCTAssertEqual(viewModel1.currencySymbol, "£")
@@ -13,7 +13,7 @@ class AmountViewModelTests: XCTestCase {
         XCTAssertEqual(viewModel1.string, "£1,200.34")
         XCTAssertFalse(viewModel1.isNegative)
 
-        let viewModel2 = AmountViewModel(value: Decimal(string: "-1200.34")!)
+        let viewModel2 = AmountViewModel(value: -1200.34)
 
         XCTAssertEqual(viewModel2.sign, "-")
         XCTAssertEqual(viewModel2.currencySymbol, "£")
@@ -25,7 +25,7 @@ class AmountViewModelTests: XCTestCase {
     }
 
     func testWithPlusMinusSign() {
-        let viewModel1 = AmountViewModel(value: Decimal(string: "12.34")!, signs: [.plus, .minus])
+        let viewModel1 = AmountViewModel(value: 12.34, signs: [.plus, .minus])
 
         XCTAssertEqual(viewModel1.sign, "+")
         XCTAssertEqual(viewModel1.currencySymbol, "£")
@@ -35,7 +35,7 @@ class AmountViewModelTests: XCTestCase {
         XCTAssertEqual(viewModel1.string, "+£12.34")
         XCTAssertFalse(viewModel1.isNegative)
 
-        let viewModel2 = AmountViewModel(value: Decimal(string: "-12.34")!, signs: [.plus, .minus])
+        let viewModel2 = AmountViewModel(value: -12.34, signs: [.plus, .minus])
 
         XCTAssertEqual(viewModel2.sign, "-")
         XCTAssertEqual(viewModel2.currencySymbol, "£")
@@ -47,7 +47,7 @@ class AmountViewModelTests: XCTestCase {
     }
 
     func testWithNoSign() {
-        let viewModel1 = AmountViewModel(value: Decimal(string: "12.34")!, signs: [])
+        let viewModel1 = AmountViewModel(value: 12.34, signs: [])
 
         XCTAssertEqual(viewModel1.sign, "")
         XCTAssertEqual(viewModel1.currencySymbol, "£")
@@ -57,7 +57,7 @@ class AmountViewModelTests: XCTestCase {
         XCTAssertEqual(viewModel1.string, "£12.34")
         XCTAssertFalse(viewModel1.isNegative)
 
-        let viewModel2 = AmountViewModel(value: Decimal(string: "-12.34")!, signs: [])
+        let viewModel2 = AmountViewModel(value: -12.34, signs: [])
 
         XCTAssertEqual(viewModel2.sign, "")
         XCTAssertEqual(viewModel2.currencySymbol, "£")
