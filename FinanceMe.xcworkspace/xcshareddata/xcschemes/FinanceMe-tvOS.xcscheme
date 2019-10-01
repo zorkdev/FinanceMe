@@ -30,7 +30,7 @@
       codeCoverageEnabled = "YES">
       <TestPlans>
          <TestPlanReference
-            reference = "container:../../../../System/Volumes/Data/Users/Attila/Dev/FinanceMe/FinanceMe/FinanceMeTests-tvOS/FinanceMe-tvOS.xctestplan"
+            reference = "container:FinanceMe/FinanceMeTests-tvOS/FinanceMe-tvOS.xctestplan"
             default = "YES">
          </TestPlanReference>
       </TestPlans>

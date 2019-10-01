@@ -30,7 +30,7 @@
       codeCoverageEnabled = "YES">
       <TestPlans>
          <TestPlanReference
-            reference = "container:../../../../System/Volumes/Data/Users/Attila/Dev/FinanceMe/FinanceMeKit/FinanceMeKitTests/FinanceMeKit-iOS.xctestplan"
+            reference = "container:FinanceMeKit/FinanceMeKitTests/FinanceMeKit-iOS.xctestplan"
             default = "YES">
          </TestPlanReference>
       </TestPlans>
