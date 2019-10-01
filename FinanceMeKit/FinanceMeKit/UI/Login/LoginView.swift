@@ -30,9 +30,11 @@ public struct LoginView: View {
     }
 }
 
+#if DEBUG
 struct LoginViewPreviews: PreviewProvider {
     static var previews: some View {
         LoginView(appState: AppState.stub)
             .previewLayout(.sizeThatFits)
     }
 }
+#endif

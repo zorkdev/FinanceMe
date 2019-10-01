@@ -17,9 +17,11 @@ public struct AmountView: View {
     }
 }
 
+#if DEBUG
 struct AmountViewPreviews: PreviewProvider {
     static var previews: some View {
         AmountView(viewModel: AmountViewModel(value: 12.34))
             .previewLayout(.sizeThatFits)
     }
 }
+#endif

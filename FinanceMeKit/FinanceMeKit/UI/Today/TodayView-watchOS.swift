@@ -19,9 +19,11 @@ public struct TodayView: View {
     }
 }
 
+#if DEBUG
 struct TodayViewPreviews: PreviewProvider {
     static var previews: some View {
         TodayView(appState: AppState.stub)
             .previewLayout(.sizeThatFits)
     }
 }
+#endif

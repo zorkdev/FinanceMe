@@ -20,9 +20,11 @@ public struct RootView: View {
     }
 }
 
+#if DEBUG
 struct RootViewPreviews: PreviewProvider {
     static var previews: some View {
         RootView(appState: AppState.stub)
             .previewLayout(.sizeThatFits)
     }
 }
+#endif
