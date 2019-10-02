@@ -317,7 +317,6 @@
 		9A35A93E22EDE70C0086BD2A /* Mintfile */ = {isa = PBXFileReference; lastKnownFileType = text; name = Mintfile; path = ../Mintfile; sourceTree = "<group>"; };
 		9A35A93F22EDE7B90086BD2A /* .swiftlint_analyze.yml */ = {isa = PBXFileReference; lastKnownFileType = text; name = .swiftlint_analyze.yml; path = ../.swiftlint_analyze.yml; sourceTree = "<group>"; };
 		9A35A94022EDE8320086BD2A /* analyze.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; name = analyze.sh; path = ../analyze.sh; sourceTree = "<group>"; };
-		9A98B752233EAFDC002DE7FA /* Brewfile */ = {isa = PBXFileReference; lastKnownFileType = text; name = Brewfile; path = ../Brewfile; sourceTree = "<group>"; };
 		9AA805AC22F8DC2200B40516 /* FinanceMeExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = FinanceMeExtension.entitlements; sourceTree = "<group>"; };
 		9AA805AD22F8DC4000B40516 /* FinanceMe.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = FinanceMe.entitlements; sourceTree = "<group>"; };
 		9AA805AE22F8DCFF00B40516 /* FinanceMeExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = FinanceMeExtension.entitlements; sourceTree = "<group>"; };
@@ -639,7 +638,6 @@
 				9A35A93A22EDE5FC0086BD2A /* README.md */,
 				9A35A93C22EDE5FC0086BD2A /* CODE_OF_CONDUCT.md */,
 				9A35A93D22EDE5FC0086BD2A /* LICENSE */,
-				9A98B752233EAFDC002DE7FA /* Brewfile */,
 				9A35A93E22EDE70C0086BD2A /* Mintfile */,
 				9A35A93722EDE54C0086BD2A /* .gitignore */,
 				9A35A93822EDE5FC0086BD2A /* .swiftlint.yml */,

@@ -9,13 +9,14 @@ Use `develop` branch for development and `master` for release.
 
 ## 🚀 Build Instructions
 
-This project uses [Homebrew](https://brew.sh) and [Mint](https://github.com/yonaskolb/Mint). Build instructions:
+This project uses [Mint](https://github.com/yonaskolb/Mint). Build instructions:
 
 ``` bash
-$ /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+$ git clone https://github.com/yonaskolb/Mint.git
+$ cd Mint
+$ swift run mint install yonaskolb/mint
 $ git clone https://github.com/zorkdev/FinanceMe.git
 $ cd FinanceMe
-$ brew bundle
 $ mint bootstrap
 $ open FinanceMe.xcworkspace
 ```
