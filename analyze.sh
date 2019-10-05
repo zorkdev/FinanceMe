@@ -9,9 +9,9 @@ xcodebuild build \
     -scheme FinanceMe-iOS \
     -UseModernBuildSystem=NO \
     -destination 'platform=iOS Simulator,name=iPhone 11 Pro' \
-    > build.log
+    > build.log || true
 
-mint run swiftlint swiftlint analyze \
+/usr/local/bin/mint run swiftlint swiftlint analyze \
     --config .swiftlint_analyze.yml \
     --compiler-log-path build.log \
-    --reporter html > report.html
+    --reporter emoji || true
