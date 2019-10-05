@@ -317,6 +317,7 @@
 		9A35A93E22EDE70C0086BD2A /* Mintfile */ = {isa = PBXFileReference; lastKnownFileType = text; name = Mintfile; path = ../Mintfile; sourceTree = "<group>"; };
 		9A35A93F22EDE7B90086BD2A /* .swiftlint_analyze.yml */ = {isa = PBXFileReference; lastKnownFileType = text; name = .swiftlint_analyze.yml; path = ../.swiftlint_analyze.yml; sourceTree = "<group>"; };
 		9A35A94022EDE8320086BD2A /* analyze.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; name = analyze.sh; path = ../analyze.sh; sourceTree = "<group>"; };
+		9A48AAAA23491B2B000C7AA2 /* ExportOptions-macOS.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "ExportOptions-macOS.plist"; path = "../ExportOptions-macOS.plist"; sourceTree = "<group>"; };
 		9AA805AC22F8DC2200B40516 /* FinanceMeExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = FinanceMeExtension.entitlements; sourceTree = "<group>"; };
 		9AA805AD22F8DC4000B40516 /* FinanceMe.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = FinanceMe.entitlements; sourceTree = "<group>"; };
 		9AA805AE22F8DCFF00B40516 /* FinanceMeExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = FinanceMeExtension.entitlements; sourceTree = "<group>"; };
@@ -645,6 +646,7 @@
 				9A35A94022EDE8320086BD2A /* analyze.sh */,
 				9A35A93B22EDE5FC0086BD2A /* config.json */,
 				9A35A93922EDE5FC0086BD2A /* ExportOptions.plist */,
+				9A48AAAA23491B2B000C7AA2 /* ExportOptions-macOS.plist */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
