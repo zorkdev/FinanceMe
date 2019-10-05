@@ -35,22 +35,22 @@
 		9A35A92022EDDFB90086BD2A /* FinanceMeKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9A35A91E22EDDFB90086BD2A /* FinanceMeKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		9A48AADD23491C5C000C7AA2 /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9A48AADB23491C5C000C7AA2 /* Interface.storyboard */; };
 		9A48AADF23491C5D000C7AA2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9A48AADE23491C5D000C7AA2 /* Assets.xcassets */; };
-		9A48AAE623491C5E000C7AA2 /* FinanceMe.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 9A48AAE523491C5E000C7AA2 /* FinanceMe.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		9A48AAE623491C5E000C7AA2 /* FinanceMeExtension_watchOS.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 9A48AAE523491C5E000C7AA2 /* FinanceMeExtension_watchOS.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		9A48AAED23491C5E000C7AA2 /* HostingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A48AAEC23491C5E000C7AA2 /* HostingController.swift */; };
 		9A48AAEF23491C5E000C7AA2 /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A48AAEE23491C5E000C7AA2 /* ExtensionDelegate.swift */; };
 		9A48AAF123491C5E000C7AA2 /* ComplicationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A48AAF023491C5E000C7AA2 /* ComplicationController.swift */; };
 		9A48AAF323491C5F000C7AA2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9A48AAF223491C5F000C7AA2 /* Assets.xcassets */; };
-		9A48AAFA23491C5F000C7AA2 /* FinanceMe.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 9A48AAD923491C5C000C7AA2 /* FinanceMe.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		9A48AB082349253C000C7AA2 /* FinanceMeKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A48AB072349253C000C7AA2 /* FinanceMeKit.framework */; };
-		9A48AB092349253C000C7AA2 /* FinanceMeKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9A48AB072349253C000C7AA2 /* FinanceMeKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		9A48AAFA23491C5F000C7AA2 /* FinanceMe_watchOS.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 9A48AAD923491C5C000C7AA2 /* FinanceMe_watchOS.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		9A48AB0C234926FD000C7AA2 /* FinanceMeKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A48AB0B234926FD000C7AA2 /* FinanceMeKit.framework */; };
+		9A48AB0D234926FD000C7AA2 /* FinanceMeKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9A48AB0B234926FD000C7AA2 /* FinanceMeKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		9A48AB1023492706000C7AA2 /* FinanceMeKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A48AB0F23492706000C7AA2 /* FinanceMeKit.framework */; };
+		9A48AB1123492706000C7AA2 /* FinanceMeKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9A48AB0F23492706000C7AA2 /* FinanceMeKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		9AADAACE22F62F7800C6C290 /* FinanceMeTestKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AADAACD22F62F7800C6C290 /* FinanceMeTestKit.framework */; };
 		9AADAAEC22F632B500C6C290 /* FinanceMeTestKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AADAAEB22F632B500C6C290 /* FinanceMeTestKit.framework */; };
 		9AADAAEE22F632D600C6C290 /* FinanceMeTestKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AADAAED22F632D600C6C290 /* FinanceMeTestKit.framework */; };
 		9AADAAF522F6360900C6C290 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AADAAF422F6360900C6C290 /* main.swift */; };
 		9AE4E4C622F4CC0600B34E81 /* ContentViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AE4E4C522F4CC0600B34E81 /* ContentViewTests.swift */; };
 		9AE4E4C822F4CD2500B34E81 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AE4E4C722F4CD2500B34E81 /* main.swift */; };
-		9AF87ED922EF9A5D009E786C /* FinanceMeKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AF87ED822EF9A5D009E786C /* FinanceMeKit.framework */; };
-		9AF87EDA22EF9A5D009E786C /* FinanceMeKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9AF87ED822EF9A5D009E786C /* FinanceMeKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		9AF87EDD22EF9B30009E786C /* FinanceMeKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AF87EDC22EF9B30009E786C /* FinanceMeKit.framework */; };
 		9AF87EDE22EF9B30009E786C /* FinanceMeKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9AF87EDC22EF9B30009E786C /* FinanceMeKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		9AF87EE122EF9B7D009E786C /* FinanceMeKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AF87EE022EF9B7D009E786C /* FinanceMeKit.framework */; };
@@ -181,7 +181,7 @@
 			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
 			dstSubfolderSpec = 16;
 			files = (
-				9A48AAFA23491C5F000C7AA2 /* FinanceMe.app in Embed Watch Content */,
+				9A48AAFA23491C5F000C7AA2 /* FinanceMe_watchOS.app in Embed Watch Content */,
 			);
 			name = "Embed Watch Content";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -192,29 +192,29 @@
 			dstPath = "";
 			dstSubfolderSpec = 13;
 			files = (
-				9A48AAE623491C5E000C7AA2 /* FinanceMe.appex in Embed App Extensions */,
+				9A48AAE623491C5E000C7AA2 /* FinanceMeExtension_watchOS.appex in Embed App Extensions */,
 			);
 			name = "Embed App Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		9A48AB0A2349253C000C7AA2 /* Embed Frameworks */ = {
+		9A48AB0E234926FD000C7AA2 /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				9A48AB092349253C000C7AA2 /* FinanceMeKit.framework in Embed Frameworks */,
+				9A48AB0D234926FD000C7AA2 /* FinanceMeKit.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		9AF87EDB22EF9A5D009E786C /* Embed Frameworks */ = {
+		9A48AB1223492706000C7AA2 /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				9AF87EDA22EF9A5D009E786C /* FinanceMeKit.framework in Embed Frameworks */,
+				9A48AB1123492706000C7AA2 /* FinanceMeKit.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -306,11 +306,11 @@
 		9A35A93F22EDE7B90086BD2A /* .swiftlint_analyze.yml */ = {isa = PBXFileReference; lastKnownFileType = text; name = .swiftlint_analyze.yml; path = ../.swiftlint_analyze.yml; sourceTree = "<group>"; };
 		9A35A94022EDE8320086BD2A /* analyze.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; name = analyze.sh; path = ../analyze.sh; sourceTree = "<group>"; };
 		9A48AAAA23491B2B000C7AA2 /* ExportOptions-macOS.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "ExportOptions-macOS.plist"; path = "../ExportOptions-macOS.plist"; sourceTree = "<group>"; };
-		9A48AAD923491C5C000C7AA2 /* FinanceMe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FinanceMe.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		9A48AAD923491C5C000C7AA2 /* FinanceMe_watchOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FinanceMe_watchOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9A48AADC23491C5C000C7AA2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
 		9A48AADE23491C5D000C7AA2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9A48AAE023491C5D000C7AA2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		9A48AAE523491C5E000C7AA2 /* FinanceMe.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = FinanceMe.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		9A48AAE523491C5E000C7AA2 /* FinanceMeExtension_watchOS.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = FinanceMeExtension_watchOS.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		9A48AAEC23491C5E000C7AA2 /* HostingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HostingController.swift; sourceTree = "<group>"; };
 		9A48AAEE23491C5E000C7AA2 /* ExtensionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionDelegate.swift; sourceTree = "<group>"; };
 		9A48AAF023491C5E000C7AA2 /* ComplicationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComplicationController.swift; sourceTree = "<group>"; };
@@ -319,6 +319,8 @@
 		9A48AB0223491E79000C7AA2 /* FinanceMeExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = FinanceMeExtension.entitlements; sourceTree = "<group>"; };
 		9A48AB0323491FA6000C7AA2 /* FinanceMeKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = FinanceMeKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9A48AB072349253C000C7AA2 /* FinanceMeKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = FinanceMeKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9A48AB0B234926FD000C7AA2 /* FinanceMeKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = FinanceMeKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9A48AB0F23492706000C7AA2 /* FinanceMeKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = FinanceMeKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9AA805AC22F8DC2200B40516 /* FinanceMeExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = FinanceMeExtension.entitlements; sourceTree = "<group>"; };
 		9AA805AD22F8DC4000B40516 /* FinanceMe.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = FinanceMe.entitlements; sourceTree = "<group>"; };
 		9AADAACD22F62F7800C6C290 /* FinanceMeTestKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = FinanceMeTestKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -342,7 +344,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9AF87ED922EF9A5D009E786C /* FinanceMeKit.framework in Frameworks */,
+				9A48AB1023492706000C7AA2 /* FinanceMeKit.framework in Frameworks */,
 				9A12DB9D22EF10E7000226A9 /* NotificationCenter.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -429,7 +431,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9A48AB082349253C000C7AA2 /* FinanceMeKit.framework in Frameworks */,
+				9A48AB0C234926FD000C7AA2 /* FinanceMeKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -544,8 +546,8 @@
 			children = (
 				9A35A88F22EDD55B0086BD2A /* FinanceMe.app */,
 				9A12DB9B22EF10E7000226A9 /* FinanceMeExtension.appex */,
-				9A48AAD923491C5C000C7AA2 /* FinanceMe.app */,
-				9A48AAE523491C5E000C7AA2 /* FinanceMe.appex */,
+				9A48AAD923491C5C000C7AA2 /* FinanceMe_watchOS.app */,
+				9A48AAE523491C5E000C7AA2 /* FinanceMeExtension_watchOS.appex */,
 				9A35A8FE22EDDD580086BD2A /* FinanceMe.app */,
 				9A12DBB022EF1233000226A9 /* FinanceMe.app */,
 				9A12DBE322EF675A000226A9 /* FinanceMeExtension.appex */,
@@ -572,6 +574,8 @@
 		9A35A8BC22EDD8720086BD2A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				9A48AB0F23492706000C7AA2 /* FinanceMeKit.framework */,
+				9A48AB0B234926FD000C7AA2 /* FinanceMeKit.framework */,
 				9A48AB072349253C000C7AA2 /* FinanceMeKit.framework */,
 				9A48AB0323491FA6000C7AA2 /* FinanceMeKit.framework */,
 				9AADAAED22F632D600C6C290 /* FinanceMeTestKit.framework */,
@@ -703,7 +707,7 @@
 				9A12DB9722EF10E7000226A9 /* Sources */,
 				9A12DB9822EF10E7000226A9 /* Frameworks */,
 				9A12DB9922EF10E7000226A9 /* Resources */,
-				9AF87EDB22EF9A5D009E786C /* Embed Frameworks */,
+				9A48AB1223492706000C7AA2 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -914,7 +918,7 @@
 			);
 			name = "FinanceMe-watchOS";
 			productName = "FinanceMe-watchOS";
-			productReference = 9A48AAD923491C5C000C7AA2 /* FinanceMe.app */;
+			productReference = 9A48AAD923491C5C000C7AA2 /* FinanceMe_watchOS.app */;
 			productType = "com.apple.product-type.application.watchapp2";
 		};
 		9A48AAE423491C5E000C7AA2 /* FinanceMeExtension-watchOS */ = {
@@ -924,7 +928,7 @@
 				9A48AAE123491C5E000C7AA2 /* Sources */,
 				9A48AAE223491C5E000C7AA2 /* Frameworks */,
 				9A48AAE323491C5E000C7AA2 /* Resources */,
-				9A48AB0A2349253C000C7AA2 /* Embed Frameworks */,
+				9A48AB0E234926FD000C7AA2 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -932,7 +936,7 @@
 			);
 			name = "FinanceMeExtension-watchOS";
 			productName = "FinanceMe-watchOS Extension";
-			productReference = 9A48AAE523491C5E000C7AA2 /* FinanceMe.appex */;
+			productReference = 9A48AAE523491C5E000C7AA2 /* FinanceMeExtension_watchOS.appex */;
 			productType = "com.apple.product-type.watchkit2-extension";
 		};
 /* End PBXNativeTarget section */
@@ -1956,7 +1960,7 @@
 					"@executable_path/../../Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.zorkdev.FinanceMe.watchkitapp.watchkitextension;
-				PRODUCT_NAME = FinanceMe;
+				PRODUCT_NAME = FinanceMeExtension_watchOS;
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
@@ -1981,7 +1985,7 @@
 					"@executable_path/../../Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.zorkdev.FinanceMe.watchkitapp.watchkitextension;
-				PRODUCT_NAME = FinanceMe;
+				PRODUCT_NAME = FinanceMeExtension_watchOS;
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
@@ -1999,11 +2003,11 @@
 				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = WX9VZ58J6W;
-				IBSC_MODULE = FinanceMeExtension;
+				IBSC_MODULE = FinanceMeExtension_watchOS;
 				INFOPLIST_FILE = "FinanceMe-watchOS/Info.plist";
 				PRODUCT_BUNDLE_IDENTIFIER = com.zorkdev.FinanceMe.watchkitapp;
 				PRODUCT_MODULE_NAME = "$(PRODUCT_NAME:c99extidentifier)";
-				PRODUCT_NAME = FinanceMe;
+				PRODUCT_NAME = FinanceMe_watchOS;
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
@@ -2021,11 +2025,11 @@
 				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = WX9VZ58J6W;
-				IBSC_MODULE = FinanceMeExtension;
+				IBSC_MODULE = FinanceMeExtension_watchOS;
 				INFOPLIST_FILE = "FinanceMe-watchOS/Info.plist";
 				PRODUCT_BUNDLE_IDENTIFIER = com.zorkdev.FinanceMe.watchkitapp;
 				PRODUCT_MODULE_NAME = "$(PRODUCT_NAME:c99extidentifier)";
-				PRODUCT_NAME = FinanceMe;
+				PRODUCT_NAME = FinanceMe_watchOS;
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
