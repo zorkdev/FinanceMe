@@ -44,7 +44,6 @@
 		9A48AB0C234926FD000C7AA2 /* FinanceMeKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A48AB0B234926FD000C7AA2 /* FinanceMeKit.framework */; };
 		9A48AB0D234926FD000C7AA2 /* FinanceMeKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9A48AB0B234926FD000C7AA2 /* FinanceMeKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		9A48AB1023492706000C7AA2 /* FinanceMeKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A48AB0F23492706000C7AA2 /* FinanceMeKit.framework */; };
-		9A48AB1123492706000C7AA2 /* FinanceMeKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9A48AB0F23492706000C7AA2 /* FinanceMeKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		9AADAACE22F62F7800C6C290 /* FinanceMeTestKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AADAACD22F62F7800C6C290 /* FinanceMeTestKit.framework */; };
 		9AADAAEC22F632B500C6C290 /* FinanceMeTestKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AADAAEB22F632B500C6C290 /* FinanceMeTestKit.framework */; };
 		9AADAAEE22F632D600C6C290 /* FinanceMeTestKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AADAAED22F632D600C6C290 /* FinanceMeTestKit.framework */; };
@@ -204,17 +203,6 @@
 			dstSubfolderSpec = 10;
 			files = (
 				9A48AB0D234926FD000C7AA2 /* FinanceMeKit.framework in Embed Frameworks */,
-			);
-			name = "Embed Frameworks";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		9A48AB1223492706000C7AA2 /* Embed Frameworks */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 10;
-			files = (
-				9A48AB1123492706000C7AA2 /* FinanceMeKit.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -707,7 +695,6 @@
 				9A12DB9722EF10E7000226A9 /* Sources */,
 				9A12DB9822EF10E7000226A9 /* Frameworks */,
 				9A12DB9922EF10E7000226A9 /* Resources */,
-				9A48AB1223492706000C7AA2 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
