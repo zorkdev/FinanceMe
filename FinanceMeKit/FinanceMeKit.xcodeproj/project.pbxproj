@@ -2357,7 +2357,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.zorkdev.FinanceMeKit;
+				PRODUCT_BUNDLE_IDENTIFIER = com.zorkdev.FinanceMeKit.watchOS;
 				PRODUCT_NAME = FinanceMeKit;
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
@@ -2384,7 +2384,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.zorkdev.FinanceMeKit;
+				PRODUCT_BUNDLE_IDENTIFIER = com.zorkdev.FinanceMeKit.watchOS;
 				PRODUCT_NAME = FinanceMeKit;
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
