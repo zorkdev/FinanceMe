@@ -24,8 +24,17 @@
 	<string>$(PRODUCT_MODULE_NAME).ComplicationController</string>
 	<key>CLKComplicationSupportedFamilies</key>
 	<array>
-		<string>CLKComplicationFamilyUtilitarianLarge</string>
+		<string>CLKComplicationFamilyModularSmall</string>
+		<string>CLKComplicationFamilyModularLarge</string>
+		<string>CLKComplicationFamilyUtilitarianSmall</string>
 		<string>CLKComplicationFamilyUtilitarianSmallFlat</string>
+		<string>CLKComplicationFamilyUtilitarianLarge</string>
+		<string>CLKComplicationFamilyCircularSmall</string>
+		<string>CLKComplicationFamilyExtraLarge</string>
+		<string>CLKComplicationFamilyGraphicCorner</string>
+		<string>CLKComplicationFamilyGraphicBezel</string>
+		<string>CLKComplicationFamilyGraphicCircular</string>
+		<string>CLKComplicationFamilyGraphicRectangular</string>
 	</array>
 	<key>NSExtension</key>
 	<dict>
@@ -41,7 +50,5 @@
 	<string>$(AppIdentifierPrefix)</string>
 	<key>WKExtensionDelegateClassName</key>
 	<string>$(PRODUCT_MODULE_NAME).ExtensionDelegate</string>
-	<key>WKWatchOnly</key>
-	<true/>
 </dict>
 </plist>

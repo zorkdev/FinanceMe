@@ -14,9 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "9AF87E9D22EF91FD009E786C"
-               BuildableName = "FinanceMeApp.app"
-               BlueprintName = "FinanceMeApp-watchOS"
+               BlueprintIdentifier = "9A48AAD823491C5C000C7AA2"
+               BuildableName = "FinanceMe.app"
+               BlueprintName = "FinanceMe-watchOS"
                ReferencedContainer = "container:FinanceMe/FinanceMe.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -28,9 +28,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "9AF87E9A22EF91FD009E786C"
+               BlueprintIdentifier = "9A35A88E22EDD55B0086BD2A"
                BuildableName = "FinanceMe.app"
-               BlueprintName = "FinanceMe-watchOS"
+               BlueprintName = "FinanceMe-iOS"
                ReferencedContainer = "container:FinanceMe/FinanceMe.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -57,12 +57,12 @@
       <RemoteRunnable
          runnableDebuggingMode = "2"
          BundleIdentifier = "com.apple.Carousel"
-         RemotePath = "/FinanceMe-watchOS WatchKit App">
+         RemotePath = "/FinanceMe">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "9AF87E9D22EF91FD009E786C"
-            BuildableName = "FinanceMeApp.app"
-            BlueprintName = "FinanceMeApp-watchOS"
+            BlueprintIdentifier = "9A48AAD823491C5C000C7AA2"
+            BuildableName = "FinanceMe.app"
+            BlueprintName = "FinanceMe-watchOS"
             ReferencedContainer = "container:FinanceMe/FinanceMe.xcodeproj">
          </BuildableReference>
       </RemoteRunnable>
@@ -76,21 +76,21 @@
       <RemoteRunnable
          runnableDebuggingMode = "2"
          BundleIdentifier = "com.apple.Carousel"
-         RemotePath = "/FinanceMe-watchOS WatchKit App">
+         RemotePath = "/FinanceMe">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "9AF87E9D22EF91FD009E786C"
-            BuildableName = "FinanceMeApp.app"
-            BlueprintName = "FinanceMeApp-watchOS"
+            BlueprintIdentifier = "9A48AAD823491C5C000C7AA2"
+            BuildableName = "FinanceMe.app"
+            BlueprintName = "FinanceMe-watchOS"
             ReferencedContainer = "container:FinanceMe/FinanceMe.xcodeproj">
          </BuildableReference>
       </RemoteRunnable>
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "9AF87E9D22EF91FD009E786C"
-            BuildableName = "FinanceMeApp.app"
-            BlueprintName = "FinanceMeApp-watchOS"
+            BlueprintIdentifier = "9A48AAD823491C5C000C7AA2"
+            BuildableName = "FinanceMe.app"
+            BlueprintName = "FinanceMe-watchOS"
             ReferencedContainer = "container:FinanceMe/FinanceMe.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
