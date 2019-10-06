@@ -14,7 +14,7 @@ class PushNotificationBusinessLogic: NSObject, PushNotificationBusinessLogicType
          businessLogic: UserBusinessLogicType) {
         self.networkService = networkService
         self.businessLogic = businessLogic
-        self.pushRegistry = PKPushRegistry(queue: nil)
+        self.pushRegistry = PKPushRegistry(queue: DispatchQueue.main)
         super.init()
         pushRegistry.delegate = self
 
