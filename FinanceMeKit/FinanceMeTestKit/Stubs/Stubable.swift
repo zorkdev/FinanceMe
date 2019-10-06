@@ -43,3 +43,9 @@ extension Summary: Stubable {
                 ])
     }
 }
+
+extension DeviceToken: Stubable {
+    public static var stub: DeviceToken {
+        DeviceToken(deviceToken: "740F4707BEBCF74F")
+    }
+}

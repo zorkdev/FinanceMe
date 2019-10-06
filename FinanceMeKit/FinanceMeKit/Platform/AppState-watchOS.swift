@@ -6,6 +6,7 @@ public class AppState: ObservableObject {
     let configService: ConfigService
 
     let complicationBusinessLogic: ComplicationBusinessLogicType
+    let pushNotificationBusinessLogic: PushNotificationBusinessLogicType
 
     public let sessionBusinessLogic: SessionBusinessLogicType
     public let userBusinessLogic: UserBusinessLogicType
@@ -26,6 +27,9 @@ public class AppState: ObservableObject {
         transactionBusinessLogic = TransactionBusinessLogic(networkService: networkService, dataService: dataService)
         summaryBusinessLogic = SummaryBusinessLogic(networkService: networkService, dataService: dataService)
         complicationBusinessLogic = ComplicationBusinessLogic(businessLogic: userBusinessLogic)
+        pushNotificationBusinessLogic = PushNotificationBusinessLogic(networkService: networkService,
+                                                                      sessionService: sessionService,
+                                                                      businessLogic: userBusinessLogic)
     }
 
     init(networkService: NetworkService,
@@ -37,7 +41,8 @@ public class AppState: ObservableObject {
          userBusinessLogic: UserBusinessLogicType,
          transactionBusinessLogic: TransactionBusinessLogicType,
          summaryBusinessLogic: SummaryBusinessLogicType,
-         complicationBusinessLogic: ComplicationBusinessLogicType) {
+         complicationBusinessLogic: ComplicationBusinessLogicType,
+         pushNotificationBusinessLogic: PushNotificationBusinessLogicType) {
         self.networkService = networkService
         self.sessionService = sessionService
         self.dataService = dataService
@@ -48,6 +53,7 @@ public class AppState: ObservableObject {
         self.transactionBusinessLogic = transactionBusinessLogic
         self.summaryBusinessLogic = summaryBusinessLogic
         self.complicationBusinessLogic = complicationBusinessLogic
+        self.pushNotificationBusinessLogic = pushNotificationBusinessLogic
     }
 }
 
@@ -63,7 +69,8 @@ public extension AppState {
                         userBusinessLogic: Stub.StubUserBusinessLogic(),
                         transactionBusinessLogic: Stub.StubTransactionBusinessLogic(),
                         summaryBusinessLogic: Stub.StubSummaryBusinessLogic(),
-                        complicationBusinessLogic: Stub.StubComplicationBusinessLogic())
+                        complicationBusinessLogic: Stub.StubComplicationBusinessLogic(),
+                        pushNotificationBusinessLogic: Stub.StubPushNotificationBusinessLogic())
     }
 }
 #endif
