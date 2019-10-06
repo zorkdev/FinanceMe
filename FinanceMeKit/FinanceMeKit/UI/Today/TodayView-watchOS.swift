@@ -12,6 +12,7 @@ public struct TodayView: View {
             Text("ALLOWANCE").font(.caption)
         }
         .onAppear(perform: viewModel.onAppear)
+        .onTapGesture(perform: viewModel.onAppear)
     }
 
     public init(appState: AppState) {

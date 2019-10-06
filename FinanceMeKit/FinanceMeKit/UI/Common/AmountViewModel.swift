@@ -30,6 +30,7 @@ public struct AmountViewModel {
     public let decimalSeparator: String
     public let fraction: String
     public let string: String
+    public let integerString: String
 
     public var isNegative: Bool { value < 0 }
 
@@ -49,5 +50,6 @@ public struct AmountViewModel {
         decimalSeparator = Formatters.locale.decimalSeparator!
         fraction = Self.fractionFormatter.string(for: value.fraction)!
         string = sign + currencySymbol + integer + decimalSeparator + fraction
+        integerString = sign + integer
     }
 }

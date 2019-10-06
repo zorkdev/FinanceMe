@@ -1,4 +1,4 @@
-public enum Formatters {
+enum Formatters {
     static let locale = Locale(identifier: "en_GB")
 
     static let currency: NumberFormatter = {

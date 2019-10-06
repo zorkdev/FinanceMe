@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9A00349A234A2A7A0082DC88 /* ComplicationBusinessLogic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A003499234A2A7A0082DC88 /* ComplicationBusinessLogic.swift */; };
+		9A00349C234A2E9F0082DC88 /* AppState-watchOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A00349B234A2E9F0082DC88 /* AppState-watchOS.swift */; };
 		9A1F416D233FF0A400343AD9 /* UserBusinessLogicTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A1F416C233FF0A400343AD9 /* UserBusinessLogicTests.swift */; };
 		9A1F416F233FF0A400343AD9 /* FinanceMeKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A35A8CB22EDD9020086BD2A /* FinanceMeKit.framework */; };
 		9A1F4176233FF16D00343AD9 /* IntegrationTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A1F4175233FF16D00343AD9 /* IntegrationTestCase.swift */; };
@@ -322,7 +324,6 @@
 		9AFA47DB22F8A17A003B2992 /* AuthenticationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AFA47DA22F8A17A003B2992 /* AuthenticationService.swift */; };
 		9AFA47DD22F8A660003B2992 /* LAContextAuthenticationServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AFA47DC22F8A660003B2992 /* LAContextAuthenticationServiceTests.swift */; };
 		9AFA47DF22F8A6A9003B2992 /* MockLAContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AFA47DE22F8A6A9003B2992 /* MockLAContext.swift */; };
-		9AFA47E222F8B223003B2992 /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AFA47E022F8B223003B2992 /* AppState.swift */; };
 		9AFA47E322F8B223003B2992 /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AFA47E022F8B223003B2992 /* AppState.swift */; };
 		9AFA47E422F8B223003B2992 /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AFA47E022F8B223003B2992 /* AppState.swift */; };
 /* End PBXBuildFile section */
@@ -387,6 +388,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		9A003499234A2A7A0082DC88 /* ComplicationBusinessLogic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComplicationBusinessLogic.swift; sourceTree = "<group>"; };
+		9A00349B234A2E9F0082DC88 /* AppState-watchOS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AppState-watchOS.swift"; sourceTree = "<group>"; };
 		9A12DC2122EF6AF3000226A9 /* FinanceMeKit-iOS.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = "FinanceMeKit-iOS.xctestplan"; sourceTree = "<group>"; };
 		9A12DC2222EF6B37000226A9 /* FinanceMeKit-tvOS.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = "FinanceMeKit-tvOS.xctestplan"; sourceTree = "<group>"; };
 		9A12DC2322EF6B59000226A9 /* FinanceMeKit-macOS.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = "FinanceMeKit-macOS.xctestplan"; sourceTree = "<group>"; };
@@ -826,6 +829,7 @@
 				9ABFBC9B22EFD30100E01785 /* Extensions */,
 				9AFA47E022F8B223003B2992 /* AppState.swift */,
 				9AA8059622F8BD7C00B40516 /* AppState-iOS.swift */,
+				9A00349B234A2E9F0082DC88 /* AppState-watchOS.swift */,
 				9AFA47DA22F8A17A003B2992 /* AuthenticationService.swift */,
 				9ADD21E722F7248B006F98CA /* NetworkService.swift */,
 				9ADD21D622F71D3F006F98CA /* SessionService.swift */,
@@ -886,6 +890,7 @@
 				9A6F31A123422197005F405D /* SummaryBusinessLogic.swift */,
 				9A6F31BA23423743005F405D /* AuthenticationBusinessLogic.swift */,
 				9A6F31B023422E95005F405D /* SpendingBusinessLogic.swift */,
+				9A003499234A2A7A0082DC88 /* ComplicationBusinessLogic.swift */,
 			);
 			path = Business;
 			sourceTree = "<group>";
@@ -1715,7 +1720,6 @@
 				9A6F31B223422E95005F405D /* SpendingBusinessLogic.swift in Sources */,
 				9AADAC0A22F7037E00C6C290 /* DataService.swift in Sources */,
 				9AADABF622F7008300C6C290 /* LoggingService.swift in Sources */,
-				9AFA47E222F8B223003B2992 /* AppState.swift in Sources */,
 				9ABFBCA422EFD3D100E01785 /* AmountViewModel.swift in Sources */,
 				9ABFBCB522EFDE4C00E01785 /* NumberFormatter+Extensions.swift in Sources */,
 				9ABFBCA922EFD60200E01785 /* Formatters.swift in Sources */,
@@ -1737,8 +1741,10 @@
 				9A6183CE2304A9F1001825A6 /* AmountView.swift in Sources */,
 				9A3B18302340F7E900FF27D8 /* TransactionBusinessLogic.swift in Sources */,
 				9A375B1B22F7AEF600E598AB /* Data+Extensions.swift in Sources */,
+				9A00349C234A2E9F0082DC88 /* AppState-watchOS.swift in Sources */,
 				9A1F4184233FFC8600343AD9 /* LoginViewModel.swift in Sources */,
 				9A6183C92304A943001825A6 /* Decimal+Extensions.swift in Sources */,
+				9A00349A234A2A7A0082DC88 /* ComplicationBusinessLogic.swift in Sources */,
 				9A6F319A23421711005F405D /* Summary.swift in Sources */,
 				9A1F418F23400CAB00343AD9 /* RootView.swift in Sources */,
 				9AD73D29230029C0003B16C3 /* User.swift in Sources */,
