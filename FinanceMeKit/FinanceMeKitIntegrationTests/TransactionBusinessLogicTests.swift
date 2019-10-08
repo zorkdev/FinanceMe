@@ -14,4 +14,8 @@ class TransactionBusinessLogicTests: IntegrationTestCase {
         appState.transactionBusinessLogic.update(transaction: transaction!).assertSuccess(self) {}
         appState.transactionBusinessLogic.delete(transaction: transaction!).assertSuccess(self) {}
     }
+
+    func testReconcile() {
+        appState.transactionBusinessLogic.reconcile().assertSuccess(self) {}
+    }
 }
