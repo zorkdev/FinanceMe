@@ -48,7 +48,6 @@
 		9A2FB3B5235E1F4100CF3525 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A2FB3B2235E1F4100CF3525 /* HomeViewModel.swift */; };
 		9A2FB3B6235E1F4100CF3525 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A2FB3B2235E1F4100CF3525 /* HomeViewModel.swift */; };
 		9A2FB3B8235E208900CF3525 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A2FB3B7235E208900CF3525 /* HomeView.swift */; };
-		9A2FB3B9235E208900CF3525 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A2FB3B7235E208900CF3525 /* HomeView.swift */; };
 		9A2FB3BA235E208900CF3525 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A2FB3B7235E208900CF3525 /* HomeView.swift */; };
 		9A2FB3BC235E209800CF3525 /* HomeView-watchOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A2FB3BB235E209800CF3525 /* HomeView-watchOS.swift */; };
 		9A2FB3BD235E218400CF3525 /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A1F418D23400CAB00343AD9 /* RootView.swift */; };
@@ -120,6 +119,7 @@
 		9A4A3DA7235F9FCC006BD7FF /* RegularsViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A4A3DA6235F9FCC006BD7FF /* RegularsViewModelTests.swift */; };
 		9A4A3DA8235F9FCC006BD7FF /* RegularsViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A4A3DA6235F9FCC006BD7FF /* RegularsViewModelTests.swift */; };
 		9A4A3DA9235F9FCC006BD7FF /* RegularsViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A4A3DA6235F9FCC006BD7FF /* RegularsViewModelTests.swift */; };
+		9A4A3DAD235FAB4E006BD7FF /* HomeView-tvOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A4A3DAA235FAB4E006BD7FF /* HomeView-tvOS.swift */; };
 		9A5BDDA02300405600F376C6 /* UserBusinessLogicTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A5BDD9F2300405600F376C6 /* UserBusinessLogicTests.swift */; };
 		9A5BDDA12300405600F376C6 /* UserBusinessLogicTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A5BDD9F2300405600F376C6 /* UserBusinessLogicTests.swift */; };
 		9A5BDDA22300405600F376C6 /* UserBusinessLogicTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A5BDD9F2300405600F376C6 /* UserBusinessLogicTests.swift */; };
@@ -501,6 +501,7 @@
 		9A4A3D9D235F9EFA006BD7FF /* TransactionViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionViewTests.swift; sourceTree = "<group>"; };
 		9A4A3DA2235F9FA8006BD7FF /* RegularsViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegularsViewTests.swift; sourceTree = "<group>"; };
 		9A4A3DA6235F9FCC006BD7FF /* RegularsViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegularsViewModelTests.swift; sourceTree = "<group>"; };
+		9A4A3DAA235FAB4E006BD7FF /* HomeView-tvOS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HomeView-tvOS.swift"; sourceTree = "<group>"; };
 		9A5BDD9F2300405600F376C6 /* UserBusinessLogicTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserBusinessLogicTests.swift; sourceTree = "<group>"; };
 		9A5BDDA3230042A400F376C6 /* TodayViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayViewModel.swift; sourceTree = "<group>"; };
 		9A5BDDAA230044D500F376C6 /* TodayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayView.swift; sourceTree = "<group>"; };
@@ -765,6 +766,7 @@
 			children = (
 				9A2FB3B7235E208900CF3525 /* HomeView.swift */,
 				9A2FB3BB235E209800CF3525 /* HomeView-watchOS.swift */,
+				9A4A3DAA235FAB4E006BD7FF /* HomeView-tvOS.swift */,
 				9A2FB3B2235E1F4100CF3525 /* HomeViewModel.swift */,
 			);
 			path = Home;
@@ -1838,6 +1840,7 @@
 				9AADABF722F7008300C6C290 /* LoggingService.swift in Sources */,
 				9AFA47E322F8B223003B2992 /* AppState.swift in Sources */,
 				9ABFBCA522EFD3D100E01785 /* AmountViewModel.swift in Sources */,
+				9A4A3DAD235FAB4E006BD7FF /* HomeView-tvOS.swift in Sources */,
 				9ABFBCB622EFDE4C00E01785 /* NumberFormatter+Extensions.swift in Sources */,
 				9A5BDDAD230044D500F376C6 /* TodayView.swift in Sources */,
 				9AD73D20230028D4003B16C3 /* UserBusinessLogic.swift in Sources */,
@@ -1845,7 +1848,6 @@
 				9ABFBCAA22EFD60200E01785 /* Formatters.swift in Sources */,
 				9A4A3D91235F8807006BD7FF /* RegularsViewModel.swift in Sources */,
 				9AADAC1522F7052700C6C290 /* KeychainDataService.swift in Sources */,
-				9A2FB3B9235E208900CF3525 /* HomeView.swift in Sources */,
 				9ADD21EA22F7248B006F98CA /* NetworkService.swift in Sources */,
 				9A1F418B23400C4F00343AD9 /* RootViewModel.swift in Sources */,
 				9AADAAFF22F63A1800C6C290 /* ConfigService.swift in Sources */,
