@@ -14,6 +14,18 @@ class SummaryBusinessLogicTests: XCTestCase {
         businessLogic = SummaryBusinessLogic(networkService: networkService, dataService: dataService)
     }
 
+    func testFetchSummary() {
+        let expectedValue = Summary.stub
+        networkService.performReturnValues = [expectedValue.jsonEncoded()]
+        dataService.saveReturnValue = .success(())
+
+        businessLogic.fetchSummary()
+
+        waitForEvent {}
+
+        businessLogic.summary.assertSuccess(self) { XCTAssertEqual($0, expectedValue) }
+    }
+
     func testGetSummary_Success() {
         let expectedValue = Summary.stub
         networkService.performReturnValues = [expectedValue.jsonEncoded()]
@@ -38,6 +50,7 @@ class SummaryBusinessLogicTests: XCTestCase {
 
     func testStub() {
         let stub = Stub.StubSummaryBusinessLogic()
+        stub.fetchSummary()
         _ = stub.getSummary()
     }
 }

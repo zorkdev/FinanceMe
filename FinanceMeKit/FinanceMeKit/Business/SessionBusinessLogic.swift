@@ -10,7 +10,7 @@ class SessionBusinessLogic: SessionBusinessLogicType {
     private let networkService: NetworkService
     private let sessionService: SessionService
 
-    @Published private var internalIsLoggedIn: Bool = false
+    @Published private var internalIsLoggedIn: Bool
 
     var isLoggedIn: AnyPublisher<Bool, Never> { $internalIsLoggedIn.eraseToAnyPublisher() }
 

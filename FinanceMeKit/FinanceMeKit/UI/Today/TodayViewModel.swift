@@ -15,7 +15,7 @@ public class TodayViewModel: ObservableObject {
     }
 
     public func onAppear() {
-        updateUser()
+        businessLogic.fetchUser()
     }
 
     private func setupBindings() {
@@ -35,13 +35,6 @@ public class TodayViewModel: ObservableObject {
             .map { $0.flatMap { self.spendingBusinessLogic.icon(for: $0.allowance) } ?? "" }
             .receive(on: DispatchQueue.main)
             .assign(to: \.icon, on: self)
-            .store(in: &cancellables)
-    }
-
-    private func updateUser() {
-        businessLogic.getUser()
-            .receive(on: DispatchQueue.main)
-            .sink(receiveCompletion: { _ in }, receiveValue: {})
             .store(in: &cancellables)
     }
 }

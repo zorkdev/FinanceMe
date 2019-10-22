@@ -2,6 +2,7 @@ import Combine
 
 public protocol TransactionBusinessLogicType {
     var transactions: AnyPublisher<[Transaction], Never> { get }
+    func fetchTransactions()
     func getTransactions() -> AnyPublisher<Void, Error>
     func create(transaction: Transaction) -> AnyPublisher<Void, Error>
     func update(transaction: Transaction) -> AnyPublisher<Void, Error>
@@ -12,6 +13,7 @@ public protocol TransactionBusinessLogicType {
 class TransactionBusinessLogic: TransactionBusinessLogicType {
     private let networkService: NetworkService
     private let dataService: DataService
+    private var cancellables: Set<AnyCancellable> = []
 
     @Published private var internalTransactions: [Transaction]
 
@@ -21,6 +23,13 @@ class TransactionBusinessLogic: TransactionBusinessLogicType {
         self.networkService = networkService
         self.dataService = dataService
         self.internalTransactions = Self.loadTransactions(dataService: dataService)
+    }
+
+    func fetchTransactions() {
+        getTransactions()
+            .receive(on: DispatchQueue.main)
+            .sink(receiveCompletion: { _ in }, receiveValue: {})
+            .store(in: &cancellables)
     }
 
     func getTransactions() -> AnyPublisher<Void, Error> {
@@ -92,6 +101,7 @@ class TransactionBusinessLogic: TransactionBusinessLogicType {
 extension Stub {
     class StubTransactionBusinessLogic: TransactionBusinessLogicType {
         let transactions: AnyPublisher<[Transaction], Never> = Just([]).eraseToAnyPublisher()
+        func fetchTransactions() {}
         func getTransactions() -> AnyPublisher<Void, Error> { Empty().eraseToAnyPublisher() }
         func create(transaction: Transaction) -> AnyPublisher<Void, Error> { Empty().eraseToAnyPublisher() }
         func update(transaction: Transaction) -> AnyPublisher<Void, Error> { Empty().eraseToAnyPublisher() }

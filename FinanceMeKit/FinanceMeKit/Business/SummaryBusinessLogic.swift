@@ -2,12 +2,14 @@ import Combine
 
 public protocol SummaryBusinessLogicType {
     var summary: AnyPublisher<Summary?, Never> { get }
+    func fetchSummary()
     func getSummary() -> AnyPublisher<Void, Error>
 }
 
 class SummaryBusinessLogic: SummaryBusinessLogicType {
     private let networkService: NetworkService
     private let dataService: DataService
+    private var cancellables: Set<AnyCancellable> = []
 
     @Published private var internalSummary: Summary?
 
@@ -17,6 +19,13 @@ class SummaryBusinessLogic: SummaryBusinessLogicType {
         self.networkService = networkService
         self.dataService = dataService
         self.internalSummary = Summary.load(dataService: dataService)
+    }
+
+    func fetchSummary() {
+        getSummary()
+            .receive(on: DispatchQueue.main)
+            .sink(receiveCompletion: { _ in }, receiveValue: {})
+            .store(in: &cancellables)
     }
 
     func getSummary() -> AnyPublisher<Void, Error> {
@@ -40,6 +49,7 @@ extension Stub {
                 EndOfMonthSummary(balance: 41.90,
                                   created: ISO8601DateFormatter().date(from: "2019-01-01T00:00:00Z")!)
             ])).eraseToAnyPublisher()
+        func fetchSummary() {}
         func getSummary() -> AnyPublisher<Void, Error> { Empty().eraseToAnyPublisher() }
     }
 }

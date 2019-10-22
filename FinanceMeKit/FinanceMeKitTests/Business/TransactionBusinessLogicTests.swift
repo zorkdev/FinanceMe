@@ -14,6 +14,18 @@ class TransactionBusinessLogicTests: XCTestCase {
         businessLogic = TransactionBusinessLogic(networkService: networkService, dataService: dataService)
     }
 
+    func testFetchTransactions() {
+        let expectedValue = [Transaction.stub]
+        networkService.performReturnValues = [expectedValue.jsonEncoded()]
+        dataService.saveReturnValue = .success(())
+
+        businessLogic.fetchTransactions()
+
+        waitForEvent {}
+
+        businessLogic.transactions.assertSuccess(self) { XCTAssertEqual($0, expectedValue) }
+    }
+
     func testGetTransactions_Success() {
         let expectedValue = [Transaction.stub]
         networkService.performReturnValues = [expectedValue.jsonEncoded()]
@@ -123,6 +135,7 @@ class TransactionBusinessLogicTests: XCTestCase {
 
     func testStub() {
         let stub = Stub.StubTransactionBusinessLogic()
+        stub.fetchTransactions()
         _ = stub.getTransactions()
         _ = stub.create(transaction: Transaction.stub)
         _ = stub.update(transaction: Transaction.stub)

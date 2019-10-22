@@ -7,7 +7,7 @@ public struct RootView: View {
     public var body: some View {
         Group {
             if viewModel.isLoggedIn {
-                TodayView(appState: appState)
+                HomeView(appState: appState)
             } else {
                 LoginView(appState: appState)
             }
@@ -24,7 +24,6 @@ public struct RootView: View {
 struct RootViewPreviews: PreviewProvider {
     static var previews: some View {
         RootView(appState: AppState.stub)
-            .previewLayout(.sizeThatFits)
     }
 }
 #endif

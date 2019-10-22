@@ -7,6 +7,11 @@ public class MockSummaryBusinessLogic: SummaryBusinessLogicType {
 
     public init() {}
 
+    public var didCallFetchSummary = false
+    public func fetchSummary() {
+        didCallFetchSummary = true
+    }
+
     public var didCallGetSummary = false
     public var getSummaryReturnValue: Result<Void, Error>?
     public func getSummary() -> AnyPublisher<Void, Error> {

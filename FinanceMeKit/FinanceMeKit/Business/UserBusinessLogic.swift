@@ -2,6 +2,7 @@ import Combine
 
 public protocol UserBusinessLogicType {
     var user: AnyPublisher<User?, Never> { get }
+    func fetchUser()
     func getUser() -> AnyPublisher<Void, Error>
     func update(user: User) -> AnyPublisher<Void, Error>
 }
@@ -9,6 +10,7 @@ public protocol UserBusinessLogicType {
 class UserBusinessLogic: UserBusinessLogicType {
     private let networkService: NetworkService
     private let dataService: DataService
+    private var cancellables: Set<AnyCancellable> = []
 
     @Published private var internalUser: User?
 
@@ -18,6 +20,13 @@ class UserBusinessLogic: UserBusinessLogicType {
         self.networkService = networkService
         self.dataService = dataService
         self.internalUser = User.load(dataService: dataService)
+    }
+
+    func fetchUser() {
+        getUser()
+            .receive(on: DispatchQueue.main)
+            .sink(receiveCompletion: { _ in }, receiveValue: {})
+            .store(in: &cancellables)
     }
 
     func getUser() -> AnyPublisher<Void, Error> {
@@ -53,6 +62,7 @@ extension Stub {
             largeTransaction: 10,
             allowance: 100.22,
             balance: 211.20)).eraseToAnyPublisher()
+        func fetchUser() {}
         func getUser() -> AnyPublisher<Void, Error> { Empty().eraseToAnyPublisher() }
         func update(user: User) -> AnyPublisher<Void, Error> { Empty().eraseToAnyPublisher() }
     }

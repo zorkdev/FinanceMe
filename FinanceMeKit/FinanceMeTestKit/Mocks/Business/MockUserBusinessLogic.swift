@@ -7,6 +7,11 @@ public class MockUserBusinessLogic: UserBusinessLogicType {
 
     public init() {}
 
+    public var didCallFetchUser = false
+    public func fetchUser() {
+        didCallFetchUser = true
+    }
+
     public var didCallGetUser = false
     public var getUserReturnValue: Result<Void, Error>?
     public func getUser() -> AnyPublisher<Void, Error> {

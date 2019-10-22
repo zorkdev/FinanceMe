@@ -17,7 +17,7 @@ public struct TodayView: View {
                 Text("ALLOWANCE").font(.caption).foregroundColor(Color.secondary)
             }
         }
-        .padding()
+        .padding([.leading, .trailing])
         .onAppear(perform: viewModel.onAppear)
     }
 

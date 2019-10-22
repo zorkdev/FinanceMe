@@ -13,11 +13,9 @@ class TodayViewModelTests: XCTestCase {
     }
 
     func testOnAppear() {
-        businessLogic.getUserReturnValue = .success(())
-
         viewModel.onAppear()
 
-        XCTAssertTrue(businessLogic.didCallGetUser)
+        XCTAssertTrue(businessLogic.didCallFetchUser)
     }
 
     func testBindings() {

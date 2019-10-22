@@ -16,7 +16,7 @@ class TodayViewController: NSViewController, NCWidgetProviding {
         NSLayoutConstraint.activate([
             todayView.topAnchor.constraint(equalTo: view.topAnchor),
             todayView.bottomAnchor.constraint(equalTo: view.bottomAnchor),
-            todayView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+            todayView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: -8),
             todayView.trailingAnchor.constraint(equalTo: view.trailingAnchor)
         ])
     }

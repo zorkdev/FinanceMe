@@ -2,10 +2,15 @@ import Combine
 import FinanceMeKit
 
 public class MockTransactionBusinessLogic: TransactionBusinessLogicType {
-    @Published public var transactionsReturnValue = [Transaction]()
+    @Published public var transactionsReturnValue: [Transaction] = [Transaction.stub]
     public var transactions: AnyPublisher<[Transaction], Never> { $transactionsReturnValue.eraseToAnyPublisher() }
 
     public init() {}
+
+    public var didCallFetchTransactions = false
+    public func fetchTransactions() {
+        didCallFetchTransactions = true
+    }
 
     public var didCallGetTransactions = false
     public var getTransactionsReturnValue: Result<Void, Error>?

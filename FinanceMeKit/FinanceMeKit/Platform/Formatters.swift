@@ -8,4 +8,14 @@ enum Formatters {
         formatter.numberStyle = .currency
         return formatter
     }()
+
+    static let relativeDateFormatter: DateFormatter = {
+        let formatter = DateFormatter()
+        formatter.locale = locale
+        formatter.calendar = locale.calendar
+        formatter.timeZone = locale.calendar.timeZone
+        formatter.doesRelativeDateFormatting = true
+        formatter.dateStyle = .full
+        return formatter
+    }()
 }
