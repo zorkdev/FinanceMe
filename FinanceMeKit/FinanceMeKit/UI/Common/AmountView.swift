@@ -9,7 +9,7 @@ public struct AmountView: View {
             + Text(viewModel.integer).font(.system(.largeTitle, design: .rounded))
             + Text(viewModel.decimalSeparator).font(.system(.callout, design: .rounded))
             + Text(viewModel.fraction).font(.system(.callout, design: .rounded)))
-            .foregroundColor(viewModel.isNegative ? Color.red : Color.primary)
+            .foregroundColor(viewModel.color)
     }
 
     public init(viewModel: AmountViewModel) {

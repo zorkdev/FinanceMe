@@ -1,42 +1,26 @@
 import SwiftUI
 
 public struct TransactionView: View {
-    private let narrative: String
-    private let amount: Decimal
-    private let signs: [AmountViewModel.Sign]
+    private let viewModel: TransactionViewModel
 
     public var body: some View {
         HStack {
-            Text(narrative)
+            Text(viewModel.narrative)
             Spacer()
-            Text(AmountViewModel(value: amount, signs: signs).string)
-                .foregroundColor(amountColor)
+            Text(viewModel.amountViewModel.string)
+                .foregroundColor(viewModel.amountViewModel.color)
         }
     }
 
-    private var amountColor: Color? {
-        let isNegative = AmountViewModel(value: amount).isNegative
-
-        if isNegative, signs.contains(.minus) {
-            return .red
-        } else if isNegative == false, signs.contains(.plus) {
-            return .green
-        }
-
-        return nil
-    }
-
-    public init(narrative: String, amount: Decimal, signs: [AmountViewModel.Sign] = [.plus]) {
-        self.narrative = narrative
-        self.amount = amount
-        self.signs = signs
+    public init(viewModel: TransactionViewModel) {
+        self.viewModel = viewModel
     }
 }
 
 #if DEBUG
 struct TransactionViewPreviews: PreviewProvider {
     static var previews: some View {
-        TransactionView(narrative: "Transaction", amount: -110.42)
+        TransactionView(viewModel: TransactionViewModel(narrative: "Transaction", amount: -110.42))
             .previewLayout(.sizeThatFits)
     }
 }

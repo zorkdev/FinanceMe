@@ -25,6 +25,14 @@ public struct HomeView: View {
                         Text("Regulars")
                     }
                     .tag(1)
+                BalancesView(appState: appState)
+                    .tabItem {
+                        #if os(iOS)
+                        Image(systemName: "doc.text.fill")
+                        #endif
+                        Text("Balances")
+                    }
+                    .tag(2)
             }
         }
         .onAppear(perform: viewModel.onAppear)

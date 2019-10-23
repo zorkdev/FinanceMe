@@ -1,3 +1,5 @@
+import SwiftUI
+
 public struct AmountViewModel {
     public enum Sign {
         case plus
@@ -31,18 +33,21 @@ public struct AmountViewModel {
     public let fraction: String
     public let string: String
     public let integerString: String
-
-    public var isNegative: Bool { value < 0 }
+    public let isNegative: Bool
+    public let color: Color?
 
     public init(value: Decimal, signs: [Sign] = [.minus]) {
         self.value = value
 
         if value.isSignMinus, signs.contains(.minus) {
             sign = Self.integerFormatter.minusSign
+            color = .red
         } else if value.isSignMinus == false, signs.contains(.plus) {
             sign = Self.integerFormatter.plusSign
+            color = .green
         } else {
             sign = ""
+            color = nil
         }
 
         currencySymbol = Formatters.locale.currencySymbol!
@@ -51,5 +56,6 @@ public struct AmountViewModel {
         fraction = Self.fractionFormatter.string(for: value.fraction)!
         string = sign + currencySymbol + integer + decimalSeparator + fraction
         integerString = sign + integer
+        isNegative = value < 0
     }
 }

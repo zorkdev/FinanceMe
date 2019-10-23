@@ -20,19 +20,22 @@ public class TodayViewModel: ObservableObject {
 
     private func setupBindings() {
         businessLogic.user
-            .map { AmountViewModel(value: $0?.balance ?? 0) }
+            .compactMap { $0?.balance }
+            .map { AmountViewModel(value: $0) }
             .receive(on: DispatchQueue.main)
             .assign(to: \.balance, on: self)
             .store(in: &cancellables)
 
         businessLogic.user
-            .map { AmountViewModel(value: $0?.allowance ?? 0) }
+            .compactMap { $0?.allowance }
+            .map { AmountViewModel(value: $0) }
             .receive(on: DispatchQueue.main)
             .assign(to: \.allowance, on: self)
             .store(in: &cancellables)
 
         businessLogic.user
-            .map { $0.flatMap { self.spendingBusinessLogic.icon(for: $0.allowance) } ?? "" }
+            .compactMap { $0 }
+            .map { self.spendingBusinessLogic.icon(for: $0.allowance) }
             .receive(on: DispatchQueue.main)
             .assign(to: \.icon, on: self)
             .store(in: &cancellables)

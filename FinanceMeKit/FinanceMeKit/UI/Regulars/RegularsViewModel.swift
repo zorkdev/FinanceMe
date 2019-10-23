@@ -1,15 +1,15 @@
 import Combine
 
 public class RegularsViewModel: ObservableObject {
-    public struct MonthlyAllowance {
-        public let title = "Monthly Allowance"
-        public let amount: Decimal
+    public struct MonthlyBalance {
+        public let allowance: Decimal
+        public let outgoings: Decimal
     }
 
     private let businessLogic: TransactionBusinessLogicType
     private var cancellables: Set<AnyCancellable> = []
 
-    @Published public var monthlyAllowance = MonthlyAllowance(amount: 0)
+    @Published public var monthlyBalance = MonthlyBalance(allowance: 0, outgoings: 0)
     @Published public var incomingSection = ListSection<Transaction>(title: "", rows: [])
     @Published public var outgoingSection = ListSection<Transaction>(title: "", rows: [])
 
@@ -19,19 +19,25 @@ public class RegularsViewModel: ObservableObject {
     }
 
     private func setupBindings() {
-        setupMonthlyAllowance()
+        setupMonthlyBalance()
         setupIncomingSection()
         setupOutgoingSection()
     }
 
-    private func setupMonthlyAllowance() {
+    private func setupMonthlyBalance() {
         businessLogic.transactions
             .map { $0.filter { $0.source == .externalRegularInbound || $0.source == .externalRegularOutbound } }
             .map {
-                let amount = $0.map { $0.amount }.reduce(0, +)
-                return MonthlyAllowance(amount: amount)
+                let allowance = $0
+                    .map { $0.amount }
+                    .reduce(0, +)
+                let outgoings = $0
+                    .filter { $0.source == .externalRegularOutbound }
+                    .map { $0.amount }
+                    .reduce(0, +)
+                return MonthlyBalance(allowance: allowance, outgoings: outgoings)
             }.receive(on: DispatchQueue.main)
-            .assign(to: \.monthlyAllowance, on: self)
+            .assign(to: \.monthlyBalance, on: self)
             .store(in: &cancellables)
     }
 

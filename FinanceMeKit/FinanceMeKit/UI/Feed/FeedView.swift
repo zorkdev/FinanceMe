@@ -7,8 +7,9 @@ public struct FeedView: View {
         List {
             ForEach(viewModel.sections) { section in
                 Section(header: Text(section.title.uppercased())) {
-                    ForEach(section.rows) { transaction in
-                        TransactionView(narrative: transaction.narrative, amount: transaction.amount)
+                    ForEach(section.rows) {
+                        TransactionView(viewModel: TransactionViewModel(narrative: $0.narrative,
+                                                                        amount: $0.amount))
                     }
                 }
             }
