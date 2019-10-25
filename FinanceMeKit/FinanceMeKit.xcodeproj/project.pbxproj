@@ -214,6 +214,12 @@
 		9A9A86A52360DE0E00E135DF /* TransactionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A9A86A32360DE0E00E135DF /* TransactionViewModel.swift */; };
 		9A9A86A62360DE0E00E135DF /* TransactionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A9A86A32360DE0E00E135DF /* TransactionViewModel.swift */; };
 		9A9A86A72360DE0E00E135DF /* TransactionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A9A86A32360DE0E00E135DF /* TransactionViewModel.swift */; };
+		9AA5837E2363A4C700DD9B72 /* BalancesViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AA5837D2363A4C700DD9B72 /* BalancesViewTests.swift */; };
+		9AA5837F2363A4C700DD9B72 /* BalancesViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AA5837D2363A4C700DD9B72 /* BalancesViewTests.swift */; };
+		9AA583802363A4C700DD9B72 /* BalancesViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AA5837D2363A4C700DD9B72 /* BalancesViewTests.swift */; };
+		9AA583822363A67900DD9B72 /* BalancesViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AA583812363A67900DD9B72 /* BalancesViewModelTests.swift */; };
+		9AA583832363A67900DD9B72 /* BalancesViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AA583812363A67900DD9B72 /* BalancesViewModelTests.swift */; };
+		9AA583842363A67900DD9B72 /* BalancesViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AA583812363A67900DD9B72 /* BalancesViewModelTests.swift */; };
 		9AA8059722F8BD7C00B40516 /* AppState-iOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AA8059622F8BD7C00B40516 /* AppState-iOS.swift */; };
 		9AA805A222F8C17400B40516 /* AppStateTests-iOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AA805A122F8C17400B40516 /* AppStateTests-iOS.swift */; };
 		9AA805A322F8C17A00B40516 /* AppStateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AA8059D22F8C15F00B40516 /* AppStateTests.swift */; };
@@ -545,6 +551,8 @@
 		9A98B745233E85DE002DE7FA /* TodayView-watchOS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TodayView-watchOS.swift"; sourceTree = "<group>"; };
 		9A9A869E2360D2C100E135DF /* BalancesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BalancesView.swift; sourceTree = "<group>"; };
 		9A9A86A32360DE0E00E135DF /* TransactionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionViewModel.swift; sourceTree = "<group>"; };
+		9AA5837D2363A4C700DD9B72 /* BalancesViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BalancesViewTests.swift; sourceTree = "<group>"; };
+		9AA583812363A67900DD9B72 /* BalancesViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BalancesViewModelTests.swift; sourceTree = "<group>"; };
 		9AA8059622F8BD7C00B40516 /* AppState-iOS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AppState-iOS.swift"; sourceTree = "<group>"; };
 		9AA8059D22F8C15F00B40516 /* AppStateTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStateTests.swift; sourceTree = "<group>"; };
 		9AA805A122F8C17400B40516 /* AppStateTests-iOS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AppStateTests-iOS.swift"; sourceTree = "<group>"; };
@@ -934,6 +942,15 @@
 			path = Today;
 			sourceTree = "<group>";
 		};
+		9AA5837C2363A4AA00DD9B72 /* Balances */ = {
+			isa = PBXGroup;
+			children = (
+				9AA5837D2363A4C700DD9B72 /* BalancesViewTests.swift */,
+				9AA583812363A67900DD9B72 /* BalancesViewModelTests.swift */,
+			);
+			path = Balances;
+			sourceTree = "<group>";
+		};
 		9AADAAC022F62CDF00C6C290 /* FinanceMeTestKit */ = {
 			isa = PBXGroup;
 			children = (
@@ -1178,6 +1195,7 @@
 				9A78CEB72339031F009B5994 /* Today */,
 				9A4A3D84235F849D006BD7FF /* Feed */,
 				9A4A3DA1235F9F79006BD7FF /* Regulars */,
+				9AA5837C2363A4AA00DD9B72 /* Balances */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -1731,7 +1749,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "/usr/local/bin/mint run swiftlint swiftlint lint --path \"$SRCROOT\"/..\n";
+			shellScript = "cd $SRCROOT/..\n/usr/local/bin/mint run swiftlint\n";
 		};
 		9AF87EF122EF9DAE009E786C /* SwiftLint */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -1749,7 +1767,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "/usr/local/bin/mint run swiftlint swiftlint lint --path \"$SRCROOT\"/..\n";
+			shellScript = "cd $SRCROOT/..\n/usr/local/bin/mint run swiftlint\n";
 		};
 		9AF87EF222EF9E31009E786C /* SwiftLint */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -1767,7 +1785,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "/usr/local/bin/mint run swiftlint swiftlint lint --path \"$SRCROOT\"/..\n";
+			shellScript = "cd $SRCROOT/..\n/usr/local/bin/mint run swiftlint\n";
 		};
 		9AF87EF322EF9E46009E786C /* SwiftLint */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -1785,7 +1803,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "/usr/local/bin/mint run swiftlint swiftlint lint --path \"$SRCROOT\"/..\n";
+			shellScript = "cd $SRCROOT/..\n/usr/local/bin/mint run swiftlint\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -2036,6 +2054,7 @@
 				9A6F31A723422420005F405D /* SummaryBusinessLogicTests.swift in Sources */,
 				9AE4E25522F4BC3200B34E81 /* CodableExtensionsTests.swift in Sources */,
 				9A6F3195234207A9005F405D /* TransactionTests.swift in Sources */,
+				9AA583822363A67900DD9B72 /* BalancesViewModelTests.swift in Sources */,
 				9AE822DE2340C873002FF0F5 /* RootViewModelTests.swift in Sources */,
 				9A78CEBD233903FA009B5994 /* TodayViewTests.swift in Sources */,
 				9AFA47DD22F8A660003B2992 /* LAContextAuthenticationServiceTests.swift in Sources */,
@@ -2047,6 +2066,7 @@
 				9A6F319E234217B0005F405D /* SummaryTests.swift in Sources */,
 				9A6F3191234204CB005F405D /* TransactionBusinessLogicTests.swift in Sources */,
 				9AE4E4B422F4C36B00B34E81 /* FormattersTests.swift in Sources */,
+				9AA5837E2363A4C700DD9B72 /* BalancesViewTests.swift in Sources */,
 				9AE4E24E22F4BAD300B34E81 /* NumberFormatterExtensionsTests.swift in Sources */,
 				9A4A3D81235F8452006BD7FF /* HomeViewTests.swift in Sources */,
 				9A4A3D8A235F856A006BD7FF /* FeedViewModelTests.swift in Sources */,
@@ -2087,6 +2107,7 @@
 				9AE822DF2340C873002FF0F5 /* RootViewModelTests.swift in Sources */,
 				9AE4E25622F4BC3200B34E81 /* CodableExtensionsTests.swift in Sources */,
 				9ADD21DD22F720E6006F98CA /* DefaultSessionServiceTests.swift in Sources */,
+				9AA583832363A67900DD9B72 /* BalancesViewModelTests.swift in Sources */,
 				9A4A3D87235F84B9006BD7FF /* FeedViewTests.swift in Sources */,
 				9A4A3DA8235F9FCC006BD7FF /* RegularsViewModelTests.swift in Sources */,
 				9A4A3D9F235F9EFA006BD7FF /* TransactionViewTests.swift in Sources */,
@@ -2107,6 +2128,7 @@
 				9A6F31A823422420005F405D /* SummaryBusinessLogicTests.swift in Sources */,
 				9AADABFB22F7018D00C6C290 /* DefaultLoggingServiceTests.swift in Sources */,
 				9AA805A322F8C17A00B40516 /* AppStateTests.swift in Sources */,
+				9AA5837F2363A4C700DD9B72 /* BalancesViewTests.swift in Sources */,
 				9AFA47CC22F87440003B2992 /* DataExtensionsTests.swift in Sources */,
 				9AE822E82340C943002FF0F5 /* LoginViewModelTests.swift in Sources */,
 				9AE4E4BC22F4C48200B34E81 /* AmountViewModelTests.swift in Sources */,
@@ -2135,6 +2157,7 @@
 				9AE822E02340C873002FF0F5 /* RootViewModelTests.swift in Sources */,
 				9AE4E25722F4BC3200B34E81 /* CodableExtensionsTests.swift in Sources */,
 				9ADD21DE22F720E6006F98CA /* DefaultSessionServiceTests.swift in Sources */,
+				9AA583842363A67900DD9B72 /* BalancesViewModelTests.swift in Sources */,
 				9A4A3D88235F84B9006BD7FF /* FeedViewTests.swift in Sources */,
 				9A4A3DA9235F9FCC006BD7FF /* RegularsViewModelTests.swift in Sources */,
 				9A4A3DA0235F9EFA006BD7FF /* TransactionViewTests.swift in Sources */,
@@ -2155,6 +2178,7 @@
 				9A6F31A923422420005F405D /* SummaryBusinessLogicTests.swift in Sources */,
 				9AADABFC22F7018D00C6C290 /* DefaultLoggingServiceTests.swift in Sources */,
 				9AA805A422F8C17B00B40516 /* AppStateTests.swift in Sources */,
+				9AA583802363A4C700DD9B72 /* BalancesViewTests.swift in Sources */,
 				9AFA47CD22F87440003B2992 /* DataExtensionsTests.swift in Sources */,
 				9AE822E92340C943002FF0F5 /* LoginViewModelTests.swift in Sources */,
 				9AE4E4BD22F4C48200B34E81 /* AmountViewModelTests.swift in Sources */,

@@ -15,6 +15,7 @@ opt_in_rules:
   - contains_over_filter_count
   - contains_over_filter_is_empty
   - contains_over_first_not_nil
+  - contains_over_range_nil_comparison
   - convenience_type
   - discouraged_object_literal
   - discouraged_optional_boolean
@@ -28,6 +29,7 @@ opt_in_rules:
   - fatal_error_message
   - file_header
   - first_where
+  - flatmap_over_map_reduce
   - identical_operands
   - implicit_return
   - joined_default_parameter
@@ -44,6 +46,7 @@ opt_in_rules:
   - overridden_super_call
   - pattern_matching_keywords
   - prohibited_super_call
+  - raw_value_for_camel_cased_codable_enum
   - reduce_into
   - redundant_nil_coalescing
   - redundant_type_annotation

@@ -1,7 +1,7 @@
 import Combine
 
 public class BalancesViewModel: ObservableObject {
-    public struct Summary: Identifiable {
+    public struct Summary: Identifiable, Equatable {
         public let summary: EndOfMonthSummary
         public var narrative: String { Formatters.month.string(from: summary.created) }
         public var amount: Decimal { summary.balance }

@@ -4,16 +4,24 @@ public struct AmountView: View {
     private let viewModel: AmountViewModel
 
     public var body: some View {
-        (Text(viewModel.sign).font(.system(.callout, design: .rounded))
-            + Text(viewModel.currencySymbol).font(.system(.callout, design: .rounded))
-            + Text(viewModel.integer).font(.system(.largeTitle, design: .rounded))
-            + Text(viewModel.decimalSeparator).font(.system(.callout, design: .rounded))
-            + Text(viewModel.fraction).font(.system(.callout, design: .rounded)))
+        (smallText(viewModel.sign)
+            + smallText(viewModel.currencySymbol)
+            + largeText(viewModel.integer)
+            + smallText(viewModel.decimalSeparator)
+            + smallText(viewModel.fraction))
             .foregroundColor(viewModel.color)
     }
 
     public init(viewModel: AmountViewModel) {
         self.viewModel = viewModel
+    }
+
+    private func smallText(_ content: String) -> Text {
+        Text(content).font(.system(.callout, design: .rounded))
+    }
+
+    private func largeText(_ content: String) -> Text {
+        Text(content).font(.system(.largeTitle, design: .rounded))
     }
 }
 

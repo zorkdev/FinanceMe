@@ -3,11 +3,16 @@ import XCTest
 
 class TransactionViewTests: XCTestCase {
     func testView() {
-        assert(view: TransactionView(narrative: "Test", amount: 10),
+        assert(view: TransactionView(viewModel: TransactionViewModel(narrative: "Test",
+                                                                     amount: 10)),
                previews: TransactionViewPreviews.self)
-        assert(view: TransactionView(narrative: "Test", amount: 10, signs: []),
+        assert(view: TransactionView(viewModel: TransactionViewModel(narrative: "Test",
+                                                                     amount: 10,
+                                                                     signs: [])),
                previews: TransactionViewPreviews.self)
-        assert(view: TransactionView(narrative: "Test", amount: -10, signs: [.minus]),
+        assert(view: TransactionView(viewModel: TransactionViewModel(narrative: "Test",
+                                                                     amount: -10,
+                                                                     signs: [.minus])),
                previews: TransactionViewPreviews.self)
     }
 }

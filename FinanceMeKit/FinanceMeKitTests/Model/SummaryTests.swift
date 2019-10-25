@@ -15,7 +15,11 @@ class SummaryTests: XCTestCase {
               "endOfMonthSummaries" : [
                 {
                   "balance" : 41.9,
-                  "created" : "2019-01-01T00:00:00Z"
+                  "created" : "2018-01-01T00:00:00Z"
+                },
+                {
+                  "balance" : 66.9,
+                  "created" : "2019-02-01T00:00:00Z"
                 }
               ]
             }

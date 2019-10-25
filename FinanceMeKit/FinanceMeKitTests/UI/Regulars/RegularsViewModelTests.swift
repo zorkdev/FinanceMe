@@ -43,7 +43,8 @@ class RegularsViewModelTests: XCTestCase {
         businessLogic.transactionsReturnValue = transactions
 
         waitForEvent {
-            XCTAssertEqual(self.viewModel.monthlyAllowance.amount.rounded(scale: 2, mode: .plain), 180.6)
+            XCTAssertEqual(self.viewModel.monthlyBalance.allowance.rounded(scale: 2, mode: .plain), 180.60)
+            XCTAssertEqual(self.viewModel.monthlyBalance.outgoings.rounded(scale: 2, mode: .plain), -340.24)
             XCTAssertEqual(self.viewModel.incomingSection.rows, [transactions[1], transactions[0]])
             XCTAssertEqual(self.viewModel.outgoingSection.rows, [transactions[3], transactions[2]])
         }

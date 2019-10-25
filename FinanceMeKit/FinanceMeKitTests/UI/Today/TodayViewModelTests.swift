@@ -30,13 +30,5 @@ class TodayViewModelTests: XCTestCase {
             XCTAssertEqual(self.viewModel.balance.value, User.stub.balance)
             XCTAssertEqual(self.viewModel.icon, "😇")
         }
-
-        businessLogic.userReturnValue = nil
-
-        waitForEvent {
-            XCTAssertEqual(self.viewModel.allowance.value, 0)
-            XCTAssertEqual(self.viewModel.balance.value, 0)
-            XCTAssertEqual(self.viewModel.icon, "")
-        }
     }
 }

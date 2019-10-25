@@ -7,7 +7,6 @@ xcodebuild clean \
 xcodebuild build \
     -workspace FinanceMe.xcworkspace \
     -scheme FinanceMe-iOS \
-    -UseModernBuildSystem=NO \
     -destination 'platform=iOS Simulator,name=iPhone 11 Pro' \
     > build.log || true
 

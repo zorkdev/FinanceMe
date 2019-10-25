@@ -21,4 +21,14 @@ class FormattersTests: XCTestCase {
         let date = ISO8601DateFormatter().date(from: "2019-01-01T00:00:00Z")!
         XCTAssertEqual(Formatters.relativeDateFormatter.string(from: date), "Tuesday, 1 January 2019")
     }
+
+    func testYear() {
+        let date = ISO8601DateFormatter().date(from: "2019-01-01T00:00:00Z")!
+        XCTAssertEqual(Formatters.year.string(from: date), "2019")
+    }
+
+    func testMonth() {
+        let date = ISO8601DateFormatter().date(from: "2019-01-01T00:00:00Z")!
+        XCTAssertEqual(Formatters.month.string(from: date), "January")
+    }
 }
