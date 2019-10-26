@@ -35,8 +35,10 @@ public class BalancesViewModel: ObservableObject {
     private func setupSummarySections() {
         businessLogic.summary
             .compactMap { $0?.endOfMonthSummaries }
-            .map { $0.map { Summary(summary: $0) } }
             .map {
+                $0.sorted { $0.created > $1.created }
+                    .map { Summary(summary: $0) }
+            }.map {
                 Dictionary(grouping: $0) { Formatters.year.string(from: $0.summary.created) }
                     .sorted { $0.value[0].summary.created > $1.value[0].summary.created }
                 .map { ListSection(title: $0.key, rows: $0.value) }
