@@ -5,20 +5,20 @@ import FinanceMeTestKit
 class APITests: XCTestCase {
     func testAPI() {
         XCTAssertEqual(API.login.url.absoluteString,
-                       "https://zorkdev-staging.herokuapp.com/api/login")
+                       "https://zorkdev.herokuapp.com/api/login")
         XCTAssertEqual(API.user.url.absoluteString,
-                       "https://zorkdev-staging.herokuapp.com/api/users/me")
+                       "https://zorkdev.herokuapp.com/api/users/me")
         XCTAssertEqual(API.transactions.url.absoluteString,
-                       "https://zorkdev-staging.herokuapp.com/api/transactions")
+                       "https://zorkdev.herokuapp.com/api/transactions")
         XCTAssertEqual(API.summary.url.absoluteString,
-                       "https://zorkdev-staging.herokuapp.com/api/endOfMonthSummaries")
+                       "https://zorkdev.herokuapp.com/api/endOfMonthSummaries")
         XCTAssertEqual(API.reconcile.url.absoluteString,
-                       "https://zorkdev-staging.herokuapp.com/api/reconcile")
+                       "https://zorkdev.herokuapp.com/api/reconcile")
         XCTAssertEqual(API.deviceToken.url.absoluteString,
-                       "https://zorkdev-staging.herokuapp.com/api/deviceToken")
+                       "https://zorkdev.herokuapp.com/api/deviceToken")
 
         let uuid = UUID()
         XCTAssertEqual(API.transaction(uuid).url.absoluteString,
-                       "https://zorkdev-staging.herokuapp.com/api/transactions/\(uuid.uuidString)")
+                       "https://zorkdev.herokuapp.com/api/transactions/\(uuid.uuidString)")
     }
 }

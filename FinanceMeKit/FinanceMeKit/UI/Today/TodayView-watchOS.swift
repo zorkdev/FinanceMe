@@ -5,10 +5,10 @@ public struct TodayView: View {
 
     public var body: some View {
         VStack {
-            AmountView(viewModel: viewModel.balance)
+            AmountView(viewModel: viewModel.balance, isLargeDisplay: true)
             Text("BALANCE").font(.caption)
             Text("😨").font(.largeTitle)
-            AmountView(viewModel: viewModel.allowance)
+            AmountView(viewModel: viewModel.allowance, isLargeDisplay: true)
             Text("ALLOWANCE").font(.caption)
         }
         .onAppear(perform: viewModel.onAppear)
