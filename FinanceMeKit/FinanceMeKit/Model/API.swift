@@ -7,7 +7,7 @@ enum API: APIType, Equatable {
     case reconcile
     case deviceToken
 
-    private static let baseURL = "https://zorkdev-staging.herokuapp.com/api/"
+    private static let baseURL = "https://zorkdev.herokuapp.com/api/"
 
     private var path: String {
         switch self {
