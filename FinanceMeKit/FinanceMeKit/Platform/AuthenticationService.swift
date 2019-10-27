@@ -5,14 +5,12 @@ protocol LAContextType {
     init()
     func canEvaluatePolicy(_ policy: LAPolicy, error: NSErrorPointer) -> Bool
     func evaluatePolicy(_ policy: LAPolicy, localizedReason: String, reply: @escaping (Bool, Error?) -> Void)
-    func invalidate()
 }
 
 extension LAContext: LAContextType {}
 
 protocol AuthenticationService {
     func authenticate(reason: String) -> AnyPublisher<Void, Error>
-    func invalidate()
 }
 
 class LAContextAuthenticationService: AuthenticationService {
@@ -51,17 +49,12 @@ class LAContextAuthenticationService: AuthenticationService {
             }
         }.eraseToAnyPublisher()
     }
-
-    func invalidate() {
-        context?.invalidate()
-    }
 }
 
 #if DEBUG
 extension Stub {
     class StubAuthenticationService: AuthenticationService {
         func authenticate(reason: String) -> AnyPublisher<Void, Error> { Empty().eraseToAnyPublisher() }
-        func invalidate() {}
     }
 }
 #endif

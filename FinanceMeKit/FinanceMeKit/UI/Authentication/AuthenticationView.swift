@@ -1,0 +1,30 @@
+import SwiftUI
+
+public struct AuthenticationView: View {
+    @ObservedObject private var viewModel: AuthenticationViewModel
+
+    public var body: some View {
+        VStack(spacing: 32) {
+            Button(action: viewModel.onAppear) {
+                Image(systemName: "faceid").font(.system(size: 60))
+            }
+            Text("Please authenticate").font(.title).bold()
+        }
+        .frame(maxWidth: .greatestFiniteMagnitude, maxHeight: .greatestFiniteMagnitude)
+        .background(Color(.systemBackground))
+        .edgesIgnoringSafeArea(.all)
+        .onAppear(perform: viewModel.onAppear)
+    }
+
+    public init(appState: AppState) {
+        self.viewModel = AuthenticationViewModel(businessLogic: appState.authenticationBusinessLogic)
+    }
+}
+
+#if DEBUG
+struct AuthenticationViewPreviews: PreviewProvider {
+    static var previews: some View {
+        AuthenticationView(appState: AppState.stub)
+    }
+}
+#endif

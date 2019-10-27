@@ -3,8 +3,6 @@ import Combine
 public protocol AuthenticationBusinessLogicType {
     var isAuthenticated: AnyPublisher<Bool, Never> { get }
     func authenticate()
-    func willEnterForeground()
-    func didEnterBackground()
 }
 
 class AuthenticationBusinessLogic: AuthenticationBusinessLogicType {
@@ -31,14 +29,6 @@ class AuthenticationBusinessLogic: AuthenticationBusinessLogicType {
             })
             .store(in: &cancellables)
     }
-
-    func willEnterForeground() {
-        authenticate()
-    }
-
-    func didEnterBackground() {
-        internalIsAuthenticated = false
-    }
 }
 
 #if DEBUG
@@ -46,8 +36,6 @@ extension Stub {
     class StubAuthenticationBusinessLogic: AuthenticationBusinessLogicType {
         let isAuthenticated: AnyPublisher<Bool, Never> = Just(true).eraseToAnyPublisher()
         func authenticate() {}
-        func willEnterForeground() {}
-        func didEnterBackground() {}
     }
 }
 #endif

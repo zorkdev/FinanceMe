@@ -47,21 +47,8 @@ class LAContextAuthenticationServiceTests: XCTestCase {
         authenticationService.authenticate(reason: "Test").assertFailure(self) { _ in }
     }
 
-    func testInvalidate() {
-        sessionService.hasSession = true
-        MockLAContext.canEvaluatePolicyReturnValue = true
-        MockLAContext.evaluatePolicyReturnValue = true
-        MockLAContext.delay = 0.1
-
-        _ = authenticationService.authenticate(reason: "Test")
-        authenticationService.invalidate()
-
-        XCTAssertTrue(MockLAContext.didCallInvalidate)
-    }
-
     func testStub() {
         let stub = Stub.StubAuthenticationService()
         _ = stub.authenticate(reason: "")
-        stub.invalidate()
     }
 }

@@ -17,17 +17,13 @@ class AuthenticationBusinessLogicTests: XCTestCase {
 
         authenticationService.authenticateReturnValue = .success(())
 
-        businessLogic.willEnterForeground()
+        businessLogic.authenticate()
 
         waitForEvent {
             XCTAssertTrue(self.authenticationService.lastAuthenticateParam?.isEmpty == false)
         }
 
         businessLogic.isAuthenticated.assertSuccess(self) { XCTAssertTrue($0) }
-
-        businessLogic.didEnterBackground()
-
-        businessLogic.isAuthenticated.assertSuccess(self) { XCTAssertFalse($0) }
     }
 
     func testAuthentication_Failure() {
@@ -45,7 +41,5 @@ class AuthenticationBusinessLogicTests: XCTestCase {
     func testStub() {
         let stub = Stub.StubAuthenticationBusinessLogic()
         stub.authenticate()
-        stub.willEnterForeground()
-        stub.didEnterBackground()
     }
 }

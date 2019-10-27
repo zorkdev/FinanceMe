@@ -11,25 +11,16 @@ public struct HomeView: View {
             TabView {
                 FeedView(appState: appState)
                     .tabItem {
-                        #if os(iOS)
-                        Image(systemName: "tray.full.fill")
-                        #endif
                         Text("Feed")
                     }
                     .tag(0)
                 RegularsView(appState: appState)
                     .tabItem {
-                        #if os(iOS)
-                        Image(systemName: "arrow.2.circlepath.circle.fill")
-                        #endif
                         Text("Regulars")
                     }
                     .tag(1)
                 BalancesView(appState: appState)
                     .tabItem {
-                        #if os(iOS)
-                        Image(systemName: "doc.text.fill")
-                        #endif
                         Text("Balances")
                     }
                     .tag(2)

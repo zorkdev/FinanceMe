@@ -11,9 +11,4 @@ public class MockAuthenticationService: AuthenticationService {
         let returnValue = authenticateReturnValue ?? .failure(NoReturnValueProviderError(function: #function))
         return returnValue.publisher.eraseToAnyPublisher()
     }
-
-    public var didCallInvalidate = false
-    public func invalidate() {
-        didCallInvalidate = true
-    }
 }

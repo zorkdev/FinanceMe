@@ -11,14 +11,4 @@ public class MockAuthenticationBusinessLogic: AuthenticationBusinessLogicType {
     public func authenticate() {
         didCallAuthenticate = true
     }
-
-    public var didCallWillEnterForeground = false
-    public func willEnterForeground() {
-        didCallWillEnterForeground = true
-    }
-
-    public var didCallDidEnterBackground = false
-    public func didEnterBackground() {
-        didCallDidEnterBackground = true
-    }
 }
