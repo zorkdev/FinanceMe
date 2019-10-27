@@ -6,6 +6,7 @@ enum API: APIType, Equatable {
     case summary
     case reconcile
     case deviceToken
+    case metrics
 
     private static let baseURL = "https://zorkdev.herokuapp.com/api/"
 
@@ -18,6 +19,7 @@ enum API: APIType, Equatable {
         case .summary: return "endOfMonthSummaries"
         case .reconcile: return "reconcile"
         case .deviceToken: return "deviceToken"
+        case .metrics: return "metrics"
         }
     }
 

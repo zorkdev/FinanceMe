@@ -1,4 +1,5 @@
 import LocalAuthentication
+import MetricKit
 
 public class AppState: ObservableObject {
     let networkService: NetworkService
@@ -6,6 +7,7 @@ public class AppState: ObservableObject {
     let dataService: DataService
     let loggingService: LoggingService
     let configService: ConfigService
+    let metricService: MetricService
     let authenticationService: AuthenticationService
 
     public let sessionBusinessLogic: SessionBusinessLogicType
@@ -22,6 +24,7 @@ public class AppState: ObservableObject {
         networkService = DefaultNetworkService(networkRequestable: URLSession.shared,
                                                loggingService: loggingService,
                                                sessionService: sessionService)
+        metricService = DefaultMetricService(networkService: networkService, metricManager: MXMetricManager.shared)
         authenticationService = LAContextAuthenticationService(sessionService: sessionService,
                                                                laContextType: LAContext.self)
 
@@ -37,6 +40,7 @@ public class AppState: ObservableObject {
          dataService: DataService,
          loggingService: LoggingService,
          configService: ConfigService,
+         metricService: MetricService,
          authenticationService: AuthenticationService,
          sessionBusinessLogic: SessionBusinessLogicType,
          userBusinessLogic: UserBusinessLogicType,
@@ -48,6 +52,7 @@ public class AppState: ObservableObject {
         self.dataService = dataService
         self.loggingService = loggingService
         self.configService = configService
+        self.metricService = metricService
         self.authenticationService = authenticationService
         self.sessionBusinessLogic = sessionBusinessLogic
         self.userBusinessLogic = userBusinessLogic
@@ -65,6 +70,7 @@ public extension AppState {
                         dataService: Stub.StubDataService(),
                         loggingService: Stub.StubLoggingService(),
                         configService: Stub.StubConfigService(),
+                        metricService: Stub.StubMetricService(),
                         authenticationService: Stub.StubAuthenticationService(),
                         sessionBusinessLogic: Stub.StubSessionBusinessLogic(),
                         userBusinessLogic: Stub.StubUserBusinessLogic(),

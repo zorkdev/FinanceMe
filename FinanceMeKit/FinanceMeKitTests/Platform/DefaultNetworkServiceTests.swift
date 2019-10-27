@@ -39,7 +39,7 @@ class DefaultNetworkServiceTests: XCTestCase {
     func testPerform_Success() {
         let session = Session.stub
         sessionService.session = session
-        let data = Data()
+        let data = Data([1])
         networkRequestable.performReturnValue = .success((data: data, response: urlResponse))
 
         networkService.perform(api: api, method: .get, body: nil).assertSuccess(self) { response in
@@ -62,7 +62,7 @@ class DefaultNetworkServiceTests: XCTestCase {
     func testPerformWithBody_Success() {
         let session = Session.stub
         sessionService.session = session
-        let data = Data()
+        let data = Data([1])
         networkRequestable.performReturnValue = .success((data: data, response: urlResponse))
         let body = Body()
         let expectedBody =
@@ -80,6 +80,27 @@ class DefaultNetworkServiceTests: XCTestCase {
             XCTAssertEqual(headers, ["Accept": "application/json",
                                      "Content-Type": "application/json",
                                      "Authorization": "Bearer \(session.token)"])
+
+            XCTAssertEqual(response, data)
+
+            XCTAssertNotNil(self.loggingService.lastLogParams)
+        }
+    }
+
+    func testPerformWithDataBody_Success() {
+        let data = Data([1])
+        networkRequestable.performReturnValue = .success((data: data, response: urlResponse))
+        let body = Data([2])
+
+        networkService.perform(api: api, method: .post, body: body).assertSuccess(self) { response in
+            let request = self.networkRequestable.lastPerformParam!
+            let headers = request.allHTTPHeaderFields!
+
+            XCTAssertEqual(request.url, self.api.url)
+            XCTAssertEqual(request.httpMethod, "POST")
+            XCTAssertEqual(request.httpBody, body)
+            XCTAssertEqual(headers, ["Accept": "application/json",
+                                     "Content-Type": "application/json"])
 
             XCTAssertEqual(response, data)
 

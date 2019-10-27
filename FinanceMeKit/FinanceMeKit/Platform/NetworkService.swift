@@ -100,10 +100,14 @@ private extension DefaultNetworkService {
         request.setValue(Constants.contentValue, forHTTPHeaderField: Constants.contentKey)
         request.setValue(Constants.contentValue, forHTTPHeaderField: Constants.contentTypeKey)
 
-        switch body?.jsonEncoded() {
-        case .success(let data): request.httpBody = data
-        case .failure(let error): return .failure(error)
-        case nil: break
+        if let data = body as? Data {
+            request.httpBody = data
+        } else {
+            switch body?.jsonEncoded() {
+            case .success(let data): request.httpBody = data
+            case .failure(let error): return .failure(error)
+            case nil: break
+            }
         }
 
         if let session = sessionService.session {

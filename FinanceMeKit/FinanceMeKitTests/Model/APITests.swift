@@ -16,6 +16,8 @@ class APITests: XCTestCase {
                        "https://zorkdev.herokuapp.com/api/reconcile")
         XCTAssertEqual(API.deviceToken.url.absoluteString,
                        "https://zorkdev.herokuapp.com/api/deviceToken")
+        XCTAssertEqual(API.metrics.url.absoluteString,
+                       "https://zorkdev.herokuapp.com/api/metrics")
 
         let uuid = UUID()
         XCTAssertEqual(API.transaction(uuid).url.absoluteString,

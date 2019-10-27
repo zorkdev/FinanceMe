@@ -7,6 +7,7 @@ public class MockAppState: AppState {
     public var mockDataService: MockDataService { dataService as! MockDataService }
     public var mockLoggingService: MockLoggingService { loggingService as! MockLoggingService }
     public var mockConfigService: MockConfigService { configService as! MockConfigService }
+    public var mockMetricService: MockMetricService { metricService as! MockMetricService }
     public var mockAuthenticationService: MockAuthenticationService { authenticationService as! MockAuthenticationService }
     public var mockSessionBusinessLogic: MockSessionBusinessLogic { sessionBusinessLogic as! MockSessionBusinessLogic }
     public var mockUserBusinessLogic: MockUserBusinessLogic { userBusinessLogic as! MockUserBusinessLogic }
@@ -24,6 +25,7 @@ public class MockAppState: AppState {
                    dataService: MockDataService(),
                    loggingService: MockLoggingService(),
                    configService: MockConfigService(),
+                   metricService: MockMetricService(),
                    authenticationService: MockAuthenticationService(),
                    sessionBusinessLogic: MockSessionBusinessLogic(),
                    userBusinessLogic: MockUserBusinessLogic(),

@@ -120,6 +120,10 @@
 		9A4A3DA8235F9FCC006BD7FF /* RegularsViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A4A3DA6235F9FCC006BD7FF /* RegularsViewModelTests.swift */; };
 		9A4A3DA9235F9FCC006BD7FF /* RegularsViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A4A3DA6235F9FCC006BD7FF /* RegularsViewModelTests.swift */; };
 		9A4A3DAD235FAB4E006BD7FF /* HomeView-tvOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A4A3DAA235FAB4E006BD7FF /* HomeView-tvOS.swift */; };
+		9A5AB5DC2365D84C00B691FF /* MetricService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A5AB5DB2365D84C00B691FF /* MetricService.swift */; };
+		9A5AB5E12365DD7900B691FF /* DefaultMetricServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A5AB5E02365DD7900B691FF /* DefaultMetricServiceTests.swift */; };
+		9A5AB5E32365DDD900B691FF /* MockMetricService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A5AB5E22365DDD900B691FF /* MockMetricService.swift */; };
+		9A5AB5E52365DE0E00B691FF /* MockMetricManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A5AB5E42365DE0E00B691FF /* MockMetricManager.swift */; };
 		9A5BDDA02300405600F376C6 /* UserBusinessLogicTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A5BDD9F2300405600F376C6 /* UserBusinessLogicTests.swift */; };
 		9A5BDDA12300405600F376C6 /* UserBusinessLogicTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A5BDD9F2300405600F376C6 /* UserBusinessLogicTests.swift */; };
 		9A5BDDA22300405600F376C6 /* UserBusinessLogicTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A5BDD9F2300405600F376C6 /* UserBusinessLogicTests.swift */; };
@@ -520,6 +524,10 @@
 		9A4A3DA2235F9FA8006BD7FF /* RegularsViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegularsViewTests.swift; sourceTree = "<group>"; };
 		9A4A3DA6235F9FCC006BD7FF /* RegularsViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegularsViewModelTests.swift; sourceTree = "<group>"; };
 		9A4A3DAA235FAB4E006BD7FF /* HomeView-tvOS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HomeView-tvOS.swift"; sourceTree = "<group>"; };
+		9A5AB5DB2365D84C00B691FF /* MetricService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetricService.swift; sourceTree = "<group>"; };
+		9A5AB5E02365DD7900B691FF /* DefaultMetricServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultMetricServiceTests.swift; sourceTree = "<group>"; };
+		9A5AB5E22365DDD900B691FF /* MockMetricService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockMetricService.swift; sourceTree = "<group>"; };
+		9A5AB5E42365DE0E00B691FF /* MockMetricManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockMetricManager.swift; sourceTree = "<group>"; };
 		9A5BDD9F2300405600F376C6 /* UserBusinessLogicTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserBusinessLogicTests.swift; sourceTree = "<group>"; };
 		9A5BDDA3230042A400F376C6 /* TodayViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayViewModel.swift; sourceTree = "<group>"; };
 		9A5BDDAA230044D500F376C6 /* TodayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayView.swift; sourceTree = "<group>"; };
@@ -1013,6 +1021,7 @@
 				9AA8059622F8BD7C00B40516 /* AppState-iOS.swift */,
 				9A00349B234A2E9F0082DC88 /* AppState-watchOS.swift */,
 				9AFA47DA22F8A17A003B2992 /* AuthenticationService.swift */,
+				9A5AB5DB2365D84C00B691FF /* MetricService.swift */,
 				9ADD21E722F7248B006F98CA /* NetworkService.swift */,
 				9ADD21D622F71D3F006F98CA /* SessionService.swift */,
 				9AADAC0822F7037E00C6C290 /* DataService.swift */,
@@ -1102,7 +1111,9 @@
 				9ADD21CA22F71A94006F98CA /* MockDataService.swift */,
 				9A375B0922F7A4B800E598AB /* MockLoggingService.swift */,
 				9AADABFF22F7020700C6C290 /* MockConfigService.swift */,
+				9A5AB5E22365DDD900B691FF /* MockMetricService.swift */,
 				9AA805A922F8D23D00B40516 /* MockAuthenticationService.swift */,
+				9A5AB5E42365DE0E00B691FF /* MockMetricManager.swift */,
 				9AFA47DE22F8A6A9003B2992 /* MockLAContext.swift */,
 			);
 			path = Platform;
@@ -1134,6 +1145,7 @@
 				9AA8059D22F8C15F00B40516 /* AppStateTests.swift */,
 				9AA805A122F8C17400B40516 /* AppStateTests-iOS.swift */,
 				9AFA47DC22F8A660003B2992 /* LAContextAuthenticationServiceTests.swift */,
+				9A5AB5E02365DD7900B691FF /* DefaultMetricServiceTests.swift */,
 				9A375B0522F7A44F00E598AB /* DefaultNetworkServiceTests.swift */,
 				9ADD21DB22F720E6006F98CA /* DefaultSessionServiceTests.swift */,
 				9ADD21C622F71A10006F98CA /* StoreableTests.swift */,
@@ -1845,6 +1857,7 @@
 				9A1DAAC6234FBD720037E581 /* FeedView.swift in Sources */,
 				9A1F418923400C4F00343AD9 /* RootViewModel.swift in Sources */,
 				9A9A86A42360DE0E00E135DF /* TransactionViewModel.swift in Sources */,
+				9A5AB5DC2365D84C00B691FF /* MetricService.swift in Sources */,
 				9A3B182F2340F7E900FF27D8 /* TransactionBusinessLogic.swift in Sources */,
 				9ABFBCA822EFD60200E01785 /* Formatters.swift in Sources */,
 				9AADAC1322F7052700C6C290 /* KeychainDataService.swift in Sources */,
@@ -2059,6 +2072,7 @@
 				9A78CEBD233903FA009B5994 /* TodayViewTests.swift in Sources */,
 				9AFA47DD22F8A660003B2992 /* LAContextAuthenticationServiceTests.swift in Sources */,
 				9A78CEB32338F9B2009B5994 /* SessionBusinessLogicTests.swift in Sources */,
+				9A5AB5E12365DD7900B691FF /* DefaultMetricServiceTests.swift in Sources */,
 				9A78CEB92339033D009B5994 /* AmountViewTests.swift in Sources */,
 				9ADD21DC22F720E6006F98CA /* DefaultSessionServiceTests.swift in Sources */,
 				9AE822E72340C943002FF0F5 /* LoginViewModelTests.swift in Sources */,
@@ -2203,7 +2217,9 @@
 				9ADD21E022F721C8006F98CA /* Stubable.swift in Sources */,
 				9A375B0E22F7A4EF00E598AB /* MockSessionService.swift in Sources */,
 				9A956DCA23003B0700CC848D /* MockAppState-iOS.swift in Sources */,
+				9A5AB5E52365DE0E00B691FF /* MockMetricManager.swift in Sources */,
 				9AFA47DF22F8A6A9003B2992 /* MockLAContext.swift in Sources */,
+				9A5AB5E32365DDD900B691FF /* MockMetricService.swift in Sources */,
 				9AADAAC822F62D5C00C6C290 /* XCTestCase+Extensions.swift in Sources */,
 				9A3B183B2340FD5C00FF27D8 /* MockTransactionBusinessLogic.swift in Sources */,
 				9AADAC0022F7020700C6C290 /* MockConfigService.swift in Sources */,
