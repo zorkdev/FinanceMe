@@ -79,5 +79,7 @@
 	</array>
 	<key>ITSAppUsesNonExemptEncryption</key>
 	<false/>
+	<key>NSFaceIDUsageDescription</key>
+	<string>We use Face ID to secure your financial information.</string>
 </dict>
 </plist>

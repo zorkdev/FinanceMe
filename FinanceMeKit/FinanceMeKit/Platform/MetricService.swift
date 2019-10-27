@@ -27,7 +27,7 @@ class DefaultMetricService: NSObject, MetricService {
                     .perform(api: API.metrics,
                              method: .post,
                              body: data)
-                    .receive(on: DispatchQueue.global(qos: .utility))
+                    .receive(on: DispatchQueue.global(qos: .background))
                     .sink(receiveCompletion: { _ in }, receiveValue: { _ in })
                     .store(in: &cancellables)
             }

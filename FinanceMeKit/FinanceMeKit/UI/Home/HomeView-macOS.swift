@@ -5,9 +5,9 @@ public struct HomeView: View {
     @ObservedObject private var viewModel: HomeViewModel
 
     public var body: some View {
-        VStack {
+        VStack(spacing: .zero) {
             TodayView(appState: appState)
-                .padding([.top])
+                .padding([.top, .bottom])
             TabView {
                 FeedView(appState: appState)
                     .tabItem {

@@ -6,9 +6,10 @@ public struct HomeView: View {
 
     public var body: some View {
         ZStack {
-            VStack {
+            VStack(spacing: .zero) {
                 TodayView(appState: appState)
-                    .padding([.top])
+                    .padding([.top, .bottom])
+                Divider()
                 TabView {
                     FeedView(appState: appState)
                         .tabItem {
