@@ -292,7 +292,6 @@
 		9A35A93D22EDE5FC0086BD2A /* LICENSE */ = {isa = PBXFileReference; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		9A35A93E22EDE70C0086BD2A /* Mintfile */ = {isa = PBXFileReference; lastKnownFileType = text; name = Mintfile; path = ../Mintfile; sourceTree = "<group>"; };
 		9A35A93F22EDE7B90086BD2A /* .swiftlint_analyze.yml */ = {isa = PBXFileReference; lastKnownFileType = text; name = .swiftlint_analyze.yml; path = ../.swiftlint_analyze.yml; sourceTree = "<group>"; };
-		9A35A94022EDE8320086BD2A /* analyze.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; name = analyze.sh; path = ../analyze.sh; sourceTree = "<group>"; };
 		9A48AAAA23491B2B000C7AA2 /* ExportOptions-macOS.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "ExportOptions-macOS.plist"; path = "../ExportOptions-macOS.plist"; sourceTree = "<group>"; };
 		9A48AAD923491C5C000C7AA2 /* FinanceMe_watchOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FinanceMe_watchOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9A48AADC23491C5C000C7AA2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
@@ -309,6 +308,14 @@
 		9A48AB072349253C000C7AA2 /* FinanceMeKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = FinanceMeKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9A48AB0B234926FD000C7AA2 /* FinanceMeKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = FinanceMeKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9A48AB0F23492706000C7AA2 /* FinanceMeKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = FinanceMeKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9A5AB5CC2365AF9900B691FF /* analyze.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = analyze.sh; sourceTree = "<group>"; };
+		9A5AB5CD2365B33300B691FF /* upload.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = upload.sh; sourceTree = "<group>"; };
+		9A5AB5CE2365B33300B691FF /* build_number.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = build_number.sh; sourceTree = "<group>"; };
+		9A5AB5CF2365B33300B691FF /* config.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = config.sh; sourceTree = "<group>"; };
+		9A5AB5D02365B33300B691FF /* swiftlint.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = swiftlint.sh; sourceTree = "<group>"; };
+		9A5AB5D12365B33300B691FF /* dependencies.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = dependencies.sh; sourceTree = "<group>"; };
+		9A5AB5D22365B33300B691FF /* notarization.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = notarization.sh; sourceTree = "<group>"; };
+		9A5AB5D32365B33300B691FF /* keychain.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = keychain.sh; sourceTree = "<group>"; };
 		9AA805AC22F8DC2200B40516 /* FinanceMeExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = FinanceMeExtension.entitlements; sourceTree = "<group>"; };
 		9AA805AD22F8DC4000B40516 /* FinanceMe.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = FinanceMe.entitlements; sourceTree = "<group>"; };
 		9AADAACD22F62F7800C6C290 /* FinanceMeTestKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = FinanceMeTestKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -611,6 +618,7 @@
 		9A35A93522EDE4DC0086BD2A /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				9A5AB5CB2365AF9900B691FF /* Scripts */,
 				9A35A93A22EDE5FC0086BD2A /* README.md */,
 				9A35A93C22EDE5FC0086BD2A /* CODE_OF_CONDUCT.md */,
 				9A35A93D22EDE5FC0086BD2A /* LICENSE */,
@@ -618,7 +626,6 @@
 				9A35A93722EDE54C0086BD2A /* .gitignore */,
 				9A35A93822EDE5FC0086BD2A /* .swiftlint.yml */,
 				9A35A93F22EDE7B90086BD2A /* .swiftlint_analyze.yml */,
-				9A35A94022EDE8320086BD2A /* analyze.sh */,
 				9A35A93B22EDE5FC0086BD2A /* config.json */,
 				9A35A93922EDE5FC0086BD2A /* ExportOptions.plist */,
 				9A48AAAA23491B2B000C7AA2 /* ExportOptions-macOS.plist */,
@@ -647,6 +654,22 @@
 				9A48AAF223491C5F000C7AA2 /* Assets.xcassets */,
 			);
 			path = "FinanceMeExtension-watchOS";
+			sourceTree = "<group>";
+		};
+		9A5AB5CB2365AF9900B691FF /* Scripts */ = {
+			isa = PBXGroup;
+			children = (
+				9A5AB5CC2365AF9900B691FF /* analyze.sh */,
+				9A5AB5D32365B33300B691FF /* keychain.sh */,
+				9A5AB5D12365B33300B691FF /* dependencies.sh */,
+				9A5AB5CF2365B33300B691FF /* config.sh */,
+				9A5AB5CE2365B33300B691FF /* build_number.sh */,
+				9A5AB5D02365B33300B691FF /* swiftlint.sh */,
+				9A5AB5D22365B33300B691FF /* notarization.sh */,
+				9A5AB5CD2365B33300B691FF /* upload.sh */,
+			);
+			name = Scripts;
+			path = ../Scripts;
 			sourceTree = "<group>";
 		};
 		9AE4E4BE22F4C6FD00B34E81 /* Application */ = {

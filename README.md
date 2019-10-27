@@ -24,5 +24,13 @@ $ open FinanceMe.xcworkspace
 To run static analysis on the project, use the analyze script:
 
 ``` bash
-$ sh analyze.sh
+$ sh Scripts/analyze.sh
 ```
+
+Environment variables required for build scripts:
+
+`APPLE_ID`: Developer Apple ID  
+`APPLE_ID_PW`: Developer Apple ID app-specific password  
+`LOCAL_PW`: Local macOS user password  
+`TEST_USER_EMAIL`: Email for the test user to run integration tests against  
+`TEST_USER_PW`: Password for the test user to run integration tests against
