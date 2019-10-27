@@ -1,8 +1,8 @@
-import Cocoa
 import SwiftUI
 import NotificationCenter
 import FinanceMeKit
 
+// swiftlint:disable unused_declaration
 class TodayViewController: NSViewController, NCWidgetProviding {
     private let appState = AppState()
 

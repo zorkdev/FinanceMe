@@ -3,6 +3,7 @@ import SwiftUI
 import NotificationCenter
 import FinanceMeKit
 
+// swiftlint:disable unused_declaration
 class TodayViewController: UIHostingController<AnyView>, NCWidgetProviding {
     private let appState = AppState()
 

@@ -41,6 +41,7 @@ public struct RegularsView: View {
 }
 
 #if DEBUG
+// swiftlint:disable unused_declaration
 struct RegularsViewPreviews: PreviewProvider {
     static var previews: some View {
         RegularsView(appState: AppState.stub)

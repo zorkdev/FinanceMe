@@ -21,6 +21,7 @@ public struct TodayView: View {
 }
 
 #if DEBUG
+// swiftlint:disable unused_declaration
 struct TodayViewPreviews: PreviewProvider {
     static var previews: some View {
         TodayView(appState: AppState.stub)

@@ -18,6 +18,7 @@ public struct TransactionView: View {
 }
 
 #if DEBUG
+// swiftlint:disable unused_declaration
 struct TransactionViewPreviews: PreviewProvider {
     static var previews: some View {
         TransactionView(viewModel: TransactionViewModel(narrative: "Transaction", amount: -110.42))

@@ -17,6 +17,7 @@ public struct HomeView: View {
 }
 
 #if DEBUG
+// swiftlint:disable unused_declaration
 struct HomeViewPreviews: PreviewProvider {
     static var previews: some View {
         HomeView(appState: AppState.stub)

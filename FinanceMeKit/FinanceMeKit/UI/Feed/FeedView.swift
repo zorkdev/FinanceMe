@@ -22,6 +22,7 @@ public struct FeedView: View {
 }
 
 #if DEBUG
+// swiftlint:disable unused_declaration
 struct FeedViewPreviews: PreviewProvider {
     static var previews: some View {
         FeedView(appState: AppState.stub)

@@ -27,6 +27,7 @@ public struct LoginView: View {
 }
 
 #if DEBUG
+// swiftlint:disable unused_declaration
 struct LoginViewPreviews: PreviewProvider {
     static var previews: some View {
         LoginView(appState: AppState.stub)

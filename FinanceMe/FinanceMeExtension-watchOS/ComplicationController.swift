@@ -3,6 +3,7 @@ import WatchKit
 import Combine
 import FinanceMeKit
 
+// swiftlint:disable unused_declaration
 class ComplicationController: NSObject, CLKComplicationDataSource {
     private var cancellables: Set<AnyCancellable> = []
 

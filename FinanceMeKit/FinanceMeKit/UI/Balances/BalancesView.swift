@@ -45,6 +45,7 @@ public struct BalancesView: View {
 }
 
 #if DEBUG
+// swiftlint:disable unused_declaration
 struct BalancesViewPreviews: PreviewProvider {
     static var previews: some View {
         BalancesView(appState: AppState.stub)

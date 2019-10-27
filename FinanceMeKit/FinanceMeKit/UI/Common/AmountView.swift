@@ -28,6 +28,7 @@ public struct AmountView: View {
 }
 
 #if DEBUG
+// swiftlint:disable unused_declaration
 struct AmountViewPreviews: PreviewProvider {
     static var previews: some View {
         AmountView(viewModel: AmountViewModel(value: 12.34))

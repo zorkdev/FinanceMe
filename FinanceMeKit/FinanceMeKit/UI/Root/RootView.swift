@@ -21,6 +21,7 @@ public struct RootView: View {
 }
 
 #if DEBUG
+// swiftlint:disable unused_declaration
 struct RootViewPreviews: PreviewProvider {
     static var previews: some View {
         RootView(appState: AppState.stub)
