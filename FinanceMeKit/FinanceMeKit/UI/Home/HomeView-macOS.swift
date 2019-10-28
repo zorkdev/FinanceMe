@@ -6,8 +6,9 @@ public struct HomeView: View {
 
     public var body: some View {
         VStack(spacing: .zero) {
+            HomeNavigationBarView(appState: appState)
             TodayView(appState: appState)
-                .padding([.top, .bottom])
+                .padding([.bottom])
             TabView {
                 FeedView(appState: appState)
                     .tabItem {

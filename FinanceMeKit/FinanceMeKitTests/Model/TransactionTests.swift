@@ -16,4 +16,10 @@ class TransactionTests: XCTestCase {
             }
             """)
     }
+
+    func testDisplayString() {
+        Transaction.Source.allCases.forEach {
+            XCTAssertFalse($0.displayString.isEmpty)
+        }
+    }
 }

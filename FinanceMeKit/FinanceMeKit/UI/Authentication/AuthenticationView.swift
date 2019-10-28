@@ -4,16 +4,20 @@ public struct AuthenticationView: View {
     @ObservedObject private var viewModel: AuthenticationViewModel
 
     public var body: some View {
-        VStack(spacing: 32) {
-            Button(action: viewModel.onAppear) {
-                Image(systemName: "faceid").font(.system(size: 60))
+        Group {
+            if viewModel.isAuthenticated == false {
+                VStack(spacing: 32) {
+                    Button(action: viewModel.onAppear) {
+                        Image(systemName: "faceid").font(.system(size: 60))
+                    }
+                    Text("Please authenticate").font(.title).bold()
+                }
+                .frame(maxWidth: .greatestFiniteMagnitude, maxHeight: .greatestFiniteMagnitude)
+                .background(Color(.systemBackground))
+                .edgesIgnoringSafeArea(.all)
+                .onAppear(perform: viewModel.onAppear)
             }
-            Text("Please authenticate").font(.title).bold()
         }
-        .frame(maxWidth: .greatestFiniteMagnitude, maxHeight: .greatestFiniteMagnitude)
-        .background(Color(.systemBackground))
-        .edgesIgnoringSafeArea(.all)
-        .onAppear(perform: viewModel.onAppear)
     }
 
     public init(appState: AppState) {

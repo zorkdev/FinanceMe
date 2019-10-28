@@ -3,17 +3,13 @@ import SwiftUI
 public struct FeedView: View {
     private let appState: AppState
     @ObservedObject private var viewModel: FeedViewModel
-    @State private var isDetailPresented = false
 
     public var body: some View {
         List {
             ForEach(viewModel.sections) { section in
                 Section(header: Text(section.title.uppercased())) {
                     ForEach(section.rows) {
-                        TransactionView(viewModel: TransactionViewModel(narrative: $0.narrative,
-                                                                        amount: $0.amount))
-                            .onTapGesture { self.isDetailPresented = true }
-                            .sheet(isPresented: self.$isDetailPresented) { Text("Transaction details") }
+                        TransactionNavigationView(transaction: $0, appState: self.appState)
                     }
                     .onDelete { self.viewModel.onDelete(section: section, row: $0) }
                 }
@@ -22,6 +18,7 @@ public struct FeedView: View {
     }
 
     public init(appState: AppState) {
+        self.appState = appState
         self.viewModel = FeedViewModel(userBusinessLogic: appState.userBusinessLogic,
                                        transactionBusinessLogic: appState.transactionBusinessLogic,
                                        summaryBusinessLogic: appState.summaryBusinessLogic)

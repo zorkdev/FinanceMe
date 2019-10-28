@@ -12,7 +12,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         guard isUnitTesting == false else { return }
         #endif
 
-        window = NSWindow(contentRect: NSRect(x: 0, y: 0, width: 480, height: 300),
+        window = NSWindow(contentRect: NSRect(x: 0, y: 0, width: 700, height: 500),
                           styleMask: [.titled,
                                       .closable,
                                       .miniaturizable,

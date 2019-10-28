@@ -7,6 +7,7 @@ public struct HomeView: View {
     public var body: some View {
         ZStack {
             VStack(spacing: .zero) {
+                HomeNavigationBarView(appState: appState)
                 TodayView(appState: appState)
                     .padding([.top, .bottom])
                 Divider()
@@ -33,17 +34,14 @@ public struct HomeView: View {
             }
             .onAppear(perform: viewModel.onAppear)
 
-            if viewModel.isAuthenticated == false {
-                AuthenticationView(appState: appState)
-            }
+            AuthenticationView(appState: appState)
         }
     }
 
     public init(appState: AppState) {
         self.appState = appState
         self.viewModel = HomeViewModel(transactionBusinessLogic: appState.transactionBusinessLogic,
-                                       summaryBusinessLogic: appState.summaryBusinessLogic,
-                                       authenticationBusinessLogic: appState.authenticationBusinessLogic)
+                                       summaryBusinessLogic: appState.summaryBusinessLogic)
     }
 }
 

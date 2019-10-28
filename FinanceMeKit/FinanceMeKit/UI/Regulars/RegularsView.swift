@@ -1,8 +1,8 @@
 import SwiftUI
 
 public struct RegularsView: View {
+    private let appState: AppState
     @ObservedObject private var viewModel: RegularsViewModel
-    @State private var isDetailPresented = false
 
     public var body: some View {
         List {
@@ -11,17 +11,13 @@ public struct RegularsView: View {
             }
             Section(header: Text(viewModel.incomingSection.title.uppercased())) {
                 ForEach(viewModel.incomingSection.rows) {
-                    TransactionView(viewModel: TransactionViewModel(narrative: $0.narrative, amount: $0.amount))
-                        .onTapGesture { self.isDetailPresented = true }
-                        .sheet(isPresented: self.$isDetailPresented) { Text("Transaction details") }
+                    TransactionNavigationView(transaction: $0, appState: self.appState)
                 }
                 .onDelete { self.viewModel.onDelete(section: self.viewModel.incomingSection, row: $0) }
             }
             Section(header: Text(viewModel.outgoingSection.title.uppercased())) {
                 ForEach(viewModel.outgoingSection.rows) {
-                    TransactionView(viewModel: TransactionViewModel(narrative: $0.narrative, amount: $0.amount))
-                        .onTapGesture { self.isDetailPresented = true }
-                        .sheet(isPresented: self.$isDetailPresented) { Text("Transaction details") }
+                    TransactionNavigationView(transaction: $0, appState: self.appState)
                 }
                 .onDelete { self.viewModel.onDelete(section: self.viewModel.outgoingSection, row: $0) }
             }
@@ -29,6 +25,7 @@ public struct RegularsView: View {
     }
 
     public init(appState: AppState) {
+        self.appState = appState
         self.viewModel = RegularsViewModel(userBusinessLogic: appState.userBusinessLogic,
                                            transactionBusinessLogic: appState.transactionBusinessLogic,
                                            summaryBusinessLogic: appState.summaryBusinessLogic)

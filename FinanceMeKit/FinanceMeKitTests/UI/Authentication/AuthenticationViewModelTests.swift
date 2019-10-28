@@ -17,4 +17,14 @@ class AuthenticationViewModelTests: XCTestCase {
 
         XCTAssertTrue(businessLogic.didCallAuthenticate)
     }
+
+    func testBindings() {
+        XCTAssertFalse(viewModel.isAuthenticated)
+
+        businessLogic.isAuthenticatedReturnValue = true
+
+        waitForEvent {
+            XCTAssertTrue(self.viewModel.isAuthenticated)
+        }
+    }
 }

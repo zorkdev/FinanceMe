@@ -11,7 +11,7 @@ public extension XCTestCase {
 
     func waitForEvent(action: @escaping () -> Void) {
         waitUntil { done in
-            DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
                 action()
                 done()
             }

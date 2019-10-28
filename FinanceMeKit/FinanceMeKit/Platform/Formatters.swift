@@ -4,6 +4,7 @@ enum Formatters {
     static let currency: NumberFormatter = {
         let formatter = NumberFormatter()
         formatter.locale = locale
+        formatter.isLenient = true
         formatter.generatesDecimalNumbers = true
         formatter.numberStyle = .currency
         return formatter

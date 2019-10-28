@@ -4,11 +4,20 @@ public struct Transaction: Storeable, Identifiable, Equatable {
         case inbound = "INBOUND"
     }
 
-    public enum Source: String, Codable {
-        case externalRegularInbound = "EXTERNAL_REGULAR_INBOUND"
-        case externalRegularOutbound = "EXTERNAL_REGULAR_OUTBOUND"
-        case externalInbound = "EXTERNAL_INBOUND"
+    public enum Source: String, Codable, CaseIterable {
         case externalOutbound = "EXTERNAL_OUTBOUND"
+        case externalInbound = "EXTERNAL_INBOUND"
+        case externalRegularOutbound = "EXTERNAL_REGULAR_OUTBOUND"
+        case externalRegularInbound = "EXTERNAL_REGULAR_INBOUND"
+
+        public var displayString: String {
+            switch self {
+            case .externalOutbound: return "Outgoing"
+            case .externalInbound: return "Incoming"
+            case .externalRegularOutbound: return "Regular Outgoing"
+            case .externalRegularInbound: return "Regular Incoming"
+            }
+        }
     }
 
     public let id: UUID
