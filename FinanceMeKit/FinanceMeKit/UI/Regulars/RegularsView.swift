@@ -7,21 +7,7 @@ public struct RegularsView: View {
     public var body: some View {
         List {
             Section(header: Text("MONTHLY BALANCE")) {
-                HStack {
-                    VStack(alignment: .leading) {
-                        AmountView(viewModel: AmountViewModel(value: viewModel.monthlyBalance.allowance,
-                                                              signs: [.plus, .minus]))
-                            .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
-                        Text("ALLOWANCE").font(.caption).foregroundColor(Color.secondary)
-                    }
-                    VStack(alignment: .trailing) {
-                        AmountView(viewModel: AmountViewModel(value: viewModel.monthlyBalance.outgoings,
-                                                              signs: [.plus, .minus]))
-                            .frame(minWidth: 0, maxWidth: .infinity, alignment: .trailing)
-                        Text("OUTGOINGS").font(.caption).foregroundColor(Color.secondary)
-                    }
-                }
-                .padding([.top, .bottom])
+                MonthlyBalanceView(monthlyBalance: viewModel.monthlyBalance)
             }
             Section(header: Text(viewModel.incomingSection.title.uppercased())) {
                 ForEach(viewModel.incomingSection.rows) {

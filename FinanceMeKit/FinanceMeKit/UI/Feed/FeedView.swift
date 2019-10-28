@@ -1,6 +1,7 @@
 import SwiftUI
 
 public struct FeedView: View {
+    private let appState: AppState
     @ObservedObject private var viewModel: FeedViewModel
     @State private var isDetailPresented = false
 

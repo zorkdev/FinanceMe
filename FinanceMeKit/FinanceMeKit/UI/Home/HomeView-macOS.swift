@@ -1,7 +1,7 @@
 import SwiftUI
 
 public struct HomeView: View {
-    @ObservedObject private var appState: AppState
+    private let appState: AppState
     @ObservedObject private var viewModel: HomeViewModel
 
     public var body: some View {

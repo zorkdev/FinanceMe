@@ -19,8 +19,21 @@
 		9A0034A7234A3D9D0082DC88 /* DeviceTokenTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A0034A4234A3D9D0082DC88 /* DeviceTokenTests.swift */; };
 		9A010CDF234FC2FF00AF9613 /* FeedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A1DAAC5234FBD720037E581 /* FeedView.swift */; };
 		9A010CE0234FC2FF00AF9613 /* FeedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A1DAAC5234FBD720037E581 /* FeedView.swift */; };
+		9A0DF5F023671D1300884090 /* CurrentMonthView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A0DF5EF23671D1300884090 /* CurrentMonthView.swift */; };
+		9A0DF5F123671D1300884090 /* CurrentMonthView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A0DF5EF23671D1300884090 /* CurrentMonthView.swift */; };
+		9A0DF5F223671D1300884090 /* CurrentMonthView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A0DF5EF23671D1300884090 /* CurrentMonthView.swift */; };
+		9A0DF5F323671D1300884090 /* CurrentMonthView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A0DF5EF23671D1300884090 /* CurrentMonthView.swift */; };
+		9A0DF5F523671E0300884090 /* MonthlyBalanceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A0DF5F423671E0300884090 /* MonthlyBalanceView.swift */; };
+		9A0DF5F623671E0300884090 /* MonthlyBalanceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A0DF5F423671E0300884090 /* MonthlyBalanceView.swift */; };
+		9A0DF5F723671E0300884090 /* MonthlyBalanceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A0DF5F423671E0300884090 /* MonthlyBalanceView.swift */; };
+		9A0DF5F823671E0300884090 /* MonthlyBalanceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A0DF5F423671E0300884090 /* MonthlyBalanceView.swift */; };
+		9A0DF5FE23671ECB00884090 /* MonthlyBalanceViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A0DF5F923671EC400884090 /* MonthlyBalanceViewTests.swift */; };
+		9A0DF5FF23671ECC00884090 /* MonthlyBalanceViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A0DF5F923671EC400884090 /* MonthlyBalanceViewTests.swift */; };
+		9A0DF60023671ECC00884090 /* MonthlyBalanceViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A0DF5F923671EC400884090 /* MonthlyBalanceViewTests.swift */; };
+		9A0DF60223671F2200884090 /* CurrentMonthViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A0DF60123671F2200884090 /* CurrentMonthViewTests.swift */; };
+		9A0DF60323671F2200884090 /* CurrentMonthViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A0DF60123671F2200884090 /* CurrentMonthViewTests.swift */; };
+		9A0DF60423671F2200884090 /* CurrentMonthViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A0DF60123671F2200884090 /* CurrentMonthViewTests.swift */; };
 		9A1DAAC6234FBD720037E581 /* FeedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A1DAAC5234FBD720037E581 /* FeedView.swift */; };
-		9A1DAAC8234FBD720037E581 /* FeedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A1DAAC5234FBD720037E581 /* FeedView.swift */; };
 		9A1DAACB234FBE3E0037E581 /* FeedViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A1DAACA234FBE3E0037E581 /* FeedViewModel.swift */; };
 		9A1DAACC234FBE3E0037E581 /* FeedViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A1DAACA234FBE3E0037E581 /* FeedViewModel.swift */; };
 		9A1DAACD234FBE3E0037E581 /* FeedViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A1DAACA234FBE3E0037E581 /* FeedViewModel.swift */; };
@@ -90,7 +103,6 @@
 		9A4A3D82235F8452006BD7FF /* HomeViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A4A3D80235F8452006BD7FF /* HomeViewTests.swift */; };
 		9A4A3D83235F8452006BD7FF /* HomeViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A4A3D80235F8452006BD7FF /* HomeViewTests.swift */; };
 		9A4A3D86235F84B9006BD7FF /* FeedViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A4A3D85235F84B9006BD7FF /* FeedViewTests.swift */; };
-		9A4A3D87235F84B9006BD7FF /* FeedViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A4A3D85235F84B9006BD7FF /* FeedViewTests.swift */; };
 		9A4A3D88235F84B9006BD7FF /* FeedViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A4A3D85235F84B9006BD7FF /* FeedViewTests.swift */; };
 		9A4A3D8A235F856A006BD7FF /* FeedViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A4A3D89235F856A006BD7FF /* FeedViewModelTests.swift */; };
 		9A4A3D8B235F856A006BD7FF /* FeedViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A4A3D89235F856A006BD7FF /* FeedViewModelTests.swift */; };
@@ -101,7 +113,6 @@
 		9A4A3D92235F8807006BD7FF /* RegularsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A4A3D8E235F8807006BD7FF /* RegularsViewModel.swift */; };
 		9A4A3D94235F8FC8006BD7FF /* RegularsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A4A3D93235F8FC8006BD7FF /* RegularsView.swift */; };
 		9A4A3D95235F8FC8006BD7FF /* RegularsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A4A3D93235F8FC8006BD7FF /* RegularsView.swift */; };
-		9A4A3D96235F8FC8006BD7FF /* RegularsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A4A3D93235F8FC8006BD7FF /* RegularsView.swift */; };
 		9A4A3D97235F8FC8006BD7FF /* RegularsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A4A3D93235F8FC8006BD7FF /* RegularsView.swift */; };
 		9A4A3D99235F98F0006BD7FF /* TransactionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A4A3D98235F98F0006BD7FF /* TransactionView.swift */; };
 		9A4A3D9A235F98F0006BD7FF /* TransactionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A4A3D98235F98F0006BD7FF /* TransactionView.swift */; };
@@ -111,7 +122,6 @@
 		9A4A3D9F235F9EFA006BD7FF /* TransactionViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A4A3D9D235F9EFA006BD7FF /* TransactionViewTests.swift */; };
 		9A4A3DA0235F9EFA006BD7FF /* TransactionViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A4A3D9D235F9EFA006BD7FF /* TransactionViewTests.swift */; };
 		9A4A3DA3235F9FA8006BD7FF /* RegularsViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A4A3DA2235F9FA8006BD7FF /* RegularsViewTests.swift */; };
-		9A4A3DA4235F9FA8006BD7FF /* RegularsViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A4A3DA2235F9FA8006BD7FF /* RegularsViewTests.swift */; };
 		9A4A3DA5235F9FA8006BD7FF /* RegularsViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A4A3DA2235F9FA8006BD7FF /* RegularsViewTests.swift */; };
 		9A4A3DA7235F9FCC006BD7FF /* RegularsViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A4A3DA6235F9FCC006BD7FF /* RegularsViewModelTests.swift */; };
 		9A4A3DA8235F9FCC006BD7FF /* RegularsViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A4A3DA6235F9FCC006BD7FF /* RegularsViewModelTests.swift */; };
@@ -480,6 +490,10 @@
 		9A00349D234A35B40082DC88 /* PushNotificationBusinessLogic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PushNotificationBusinessLogic.swift; sourceTree = "<group>"; };
 		9A00349F234A383A0082DC88 /* DeviceToken.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceToken.swift; sourceTree = "<group>"; };
 		9A0034A4234A3D9D0082DC88 /* DeviceTokenTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceTokenTests.swift; sourceTree = "<group>"; };
+		9A0DF5EF23671D1300884090 /* CurrentMonthView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentMonthView.swift; sourceTree = "<group>"; };
+		9A0DF5F423671E0300884090 /* MonthlyBalanceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonthlyBalanceView.swift; sourceTree = "<group>"; };
+		9A0DF5F923671EC400884090 /* MonthlyBalanceViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonthlyBalanceViewTests.swift; sourceTree = "<group>"; };
+		9A0DF60123671F2200884090 /* CurrentMonthViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentMonthViewTests.swift; sourceTree = "<group>"; };
 		9A12DC2122EF6AF3000226A9 /* FinanceMeKit-iOS.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = "FinanceMeKit-iOS.xctestplan"; sourceTree = "<group>"; };
 		9A12DC2222EF6B37000226A9 /* FinanceMeKit-tvOS.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = "FinanceMeKit-tvOS.xctestplan"; sourceTree = "<group>"; };
 		9A12DC2322EF6B59000226A9 /* FinanceMeKit-macOS.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = "FinanceMeKit-macOS.xctestplan"; sourceTree = "<group>"; };
@@ -899,6 +913,7 @@
 		9A4A3D8D235F87E3006BD7FF /* Regulars */ = {
 			isa = PBXGroup;
 			children = (
+				9A0DF5F423671E0300884090 /* MonthlyBalanceView.swift */,
 				9A4A3D93235F8FC8006BD7FF /* RegularsView.swift */,
 				9A4A3D8E235F8807006BD7FF /* RegularsViewModel.swift */,
 			);
@@ -908,6 +923,7 @@
 		9A4A3DA1235F9F79006BD7FF /* Regulars */ = {
 			isa = PBXGroup;
 			children = (
+				9A0DF5F923671EC400884090 /* MonthlyBalanceViewTests.swift */,
 				9A4A3DA2235F9FA8006BD7FF /* RegularsViewTests.swift */,
 				9A4A3DA6235F9FCC006BD7FF /* RegularsViewModelTests.swift */,
 			);
@@ -957,6 +973,7 @@
 		9A75CF702360CC9000991320 /* Balances */ = {
 			isa = PBXGroup;
 			children = (
+				9A0DF5EF23671D1300884090 /* CurrentMonthView.swift */,
 				9A9A869E2360D2C100E135DF /* BalancesView.swift */,
 				9A75CF712360CCAD00991320 /* BalancesViewModel.swift */,
 			);
@@ -985,6 +1002,7 @@
 		9AA5837C2363A4AA00DD9B72 /* Balances */ = {
 			isa = PBXGroup;
 			children = (
+				9A0DF60123671F2200884090 /* CurrentMonthViewTests.swift */,
 				9AA5837D2363A4C700DD9B72 /* BalancesViewTests.swift */,
 				9AA583812363A67900DD9B72 /* BalancesViewModelTests.swift */,
 			);
@@ -1873,6 +1891,7 @@
 				9AADAC0922F7037E00C6C290 /* DataService.swift in Sources */,
 				9A1F417E233FFC4900343AD9 /* LoginView.swift in Sources */,
 				9AA8059722F8BD7C00B40516 /* AppState-iOS.swift in Sources */,
+				9A0DF5F523671E0300884090 /* MonthlyBalanceView.swift in Sources */,
 				9AE9984F234FD3E3005C17CC /* ListSection.swift in Sources */,
 				9A6183CD2304A9F1001825A6 /* AmountView.swift in Sources */,
 				9A6F31B123422E95005F405D /* SpendingBusinessLogic.swift in Sources */,
@@ -1912,6 +1931,7 @@
 				9A75CF722360CCAD00991320 /* BalancesViewModel.swift in Sources */,
 				9A5BDDA4230042A400F376C6 /* TodayViewModel.swift in Sources */,
 				9A6F31A223422197005F405D /* SummaryBusinessLogic.swift in Sources */,
+				9A0DF5F023671D1300884090 /* CurrentMonthView.swift in Sources */,
 				9A1DAACB234FBE3E0037E581 /* FeedViewModel.swift in Sources */,
 				9ADD21D222F71D11006F98CA /* Session.swift in Sources */,
 				9A375B1A22F7AEF600E598AB /* Data+Extensions.swift in Sources */,
@@ -1933,6 +1953,7 @@
 				9A6F31B323422E95005F405D /* SpendingBusinessLogic.swift in Sources */,
 				9AADAC0B22F7037E00C6C290 /* DataService.swift in Sources */,
 				9A2FB3B5235E1F4100CF3525 /* HomeViewModel.swift in Sources */,
+				9A0DF5F723671E0300884090 /* MonthlyBalanceView.swift in Sources */,
 				9AADABF722F7008300C6C290 /* LoggingService.swift in Sources */,
 				9AFA47E322F8B223003B2992 /* AppState.swift in Sources */,
 				9ABFBCA522EFD3D100E01785 /* AmountViewModel.swift in Sources */,
@@ -1955,17 +1976,16 @@
 				9AD73D25230029AB003B16C3 /* Credentials.swift in Sources */,
 				9A75CF742360CCAD00991320 /* BalancesViewModel.swift in Sources */,
 				9A0034A2234A383F0082DC88 /* DeviceToken.swift in Sources */,
-				9A4A3D96235F8FC8006BD7FF /* RegularsView.swift in Sources */,
 				9ABFBCB122EFD73900E01785 /* Codable+Extensions.swift in Sources */,
 				9AE99851234FD3E3005C17CC /* ListSection.swift in Sources */,
 				9ADD21D422F71D12006F98CA /* Session.swift in Sources */,
 				9A3B18362340F80F00FF27D8 /* Transaction.swift in Sources */,
 				9A6F31A423422197005F405D /* SummaryBusinessLogic.swift in Sources */,
 				9A99D0D523020D5D00D735A2 /* TestConfig.swift in Sources */,
-				9A1DAAC8234FBD720037E581 /* FeedView.swift in Sources */,
 				9A6183CF2304A9F1001825A6 /* AmountView.swift in Sources */,
 				9A3B18312340F7E900FF27D8 /* TransactionBusinessLogic.swift in Sources */,
 				9A375B1C22F7AEF600E598AB /* Data+Extensions.swift in Sources */,
+				9A0DF5F223671D1300884090 /* CurrentMonthView.swift in Sources */,
 				9A1F4185233FFC8600343AD9 /* LoginViewModel.swift in Sources */,
 				9A6183CA2304A943001825A6 /* Decimal+Extensions.swift in Sources */,
 				9A6F319B23421711005F405D /* Summary.swift in Sources */,
@@ -1986,6 +2006,7 @@
 				9A010CDF234FC2FF00AF9613 /* FeedView.swift in Sources */,
 				9A6F31B223422E95005F405D /* SpendingBusinessLogic.swift in Sources */,
 				9AADAC0A22F7037E00C6C290 /* DataService.swift in Sources */,
+				9A0DF5F123671D1300884090 /* CurrentMonthView.swift in Sources */,
 				9AE99850234FD3E3005C17CC /* ListSection.swift in Sources */,
 				9AADABF622F7008300C6C290 /* LoggingService.swift in Sources */,
 				9A2FB3BC235E209800CF3525 /* HomeView-watchOS.swift in Sources */,
@@ -1994,6 +2015,7 @@
 				9ABFBCA922EFD60200E01785 /* Formatters.swift in Sources */,
 				9AD73D1F230028D4003B16C3 /* UserBusinessLogic.swift in Sources */,
 				9A0034A0234A383A0082DC88 /* DeviceToken.swift in Sources */,
+				9A0DF5F623671E0300884090 /* MonthlyBalanceView.swift in Sources */,
 				9AADAC1422F7052700C6C290 /* KeychainDataService.swift in Sources */,
 				9ADD21E922F7248B006F98CA /* NetworkService.swift in Sources */,
 				9A1F418A23400C4F00343AD9 /* RootViewModel.swift in Sources */,
@@ -2043,6 +2065,7 @@
 				9A6F31B423422E95005F405D /* SpendingBusinessLogic.swift in Sources */,
 				9AADAC0C22F7037E00C6C290 /* DataService.swift in Sources */,
 				9A2FB3B6235E1F4100CF3525 /* HomeViewModel.swift in Sources */,
+				9A0DF5F823671E0300884090 /* MonthlyBalanceView.swift in Sources */,
 				9AADABF822F7008300C6C290 /* LoggingService.swift in Sources */,
 				9AFA47E422F8B223003B2992 /* AppState.swift in Sources */,
 				9ABFBCA622EFD3D100E01785 /* AmountViewModel.swift in Sources */,
@@ -2076,6 +2099,7 @@
 				9A99D0D423020D5D00D735A2 /* TestConfig.swift in Sources */,
 				9A3B18322340F7E900FF27D8 /* TransactionBusinessLogic.swift in Sources */,
 				9A6183D02304A9F1001825A6 /* AmountView.swift in Sources */,
+				9A0DF5F323671D1300884090 /* CurrentMonthView.swift in Sources */,
 				9A375B1D22F7AEF600E598AB /* Data+Extensions.swift in Sources */,
 				9A1F4186233FFC8600343AD9 /* LoginViewModel.swift in Sources */,
 				9A6F319C23421711005F405D /* Summary.swift in Sources */,
@@ -2116,6 +2140,7 @@
 				9A4A3DA3235F9FA8006BD7FF /* RegularsViewTests.swift in Sources */,
 				9A6F319E234217B0005F405D /* SummaryTests.swift in Sources */,
 				9A5AB5F5236604DD00B691FF /* AuthenticationViewTests.swift in Sources */,
+				9A0DF60223671F2200884090 /* CurrentMonthViewTests.swift in Sources */,
 				9A6F3191234204CB005F405D /* TransactionBusinessLogicTests.swift in Sources */,
 				9AE4E4B422F4C36B00B34E81 /* FormattersTests.swift in Sources */,
 				9AA5837E2363A4C700DD9B72 /* BalancesViewTests.swift in Sources */,
@@ -2125,6 +2150,7 @@
 				9AFA47CF22F87587003B2992 /* URLSessionExtensionsTests.swift in Sources */,
 				9A956DBB2300373600CC848D /* CredentialsTests.swift in Sources */,
 				9AADAB3C22F643DC00C6C290 /* DefaultConfigServiceTests.swift in Sources */,
+				9A0DF5FE23671ECB00884090 /* MonthlyBalanceViewTests.swift in Sources */,
 				9AFA47D322F87663003B2992 /* ErrorTests.swift in Sources */,
 				9A4A3DA7235F9FCC006BD7FF /* RegularsViewModelTests.swift in Sources */,
 				9AE822EB2340CA83002FF0F5 /* LoginViewTests.swift in Sources */,
@@ -2160,7 +2186,6 @@
 				9AE4E25622F4BC3200B34E81 /* CodableExtensionsTests.swift in Sources */,
 				9ADD21DD22F720E6006F98CA /* DefaultSessionServiceTests.swift in Sources */,
 				9AA583832363A67900DD9B72 /* BalancesViewModelTests.swift in Sources */,
-				9A4A3D87235F84B9006BD7FF /* FeedViewTests.swift in Sources */,
 				9A4A3DA8235F9FCC006BD7FF /* RegularsViewModelTests.swift in Sources */,
 				9A4A3D9F235F9EFA006BD7FF /* TransactionViewTests.swift in Sources */,
 				9A6F319F234217B0005F405D /* SummaryTests.swift in Sources */,
@@ -2176,9 +2201,11 @@
 				9AADAB3D22F643DC00C6C290 /* DefaultConfigServiceTests.swift in Sources */,
 				9AFA47D422F87663003B2992 /* ErrorTests.swift in Sources */,
 				9A956DBC2300373600CC848D /* CredentialsTests.swift in Sources */,
+				9A0DF60323671F2200884090 /* CurrentMonthViewTests.swift in Sources */,
 				9A956DC02300381400CC848D /* UserTests.swift in Sources */,
 				9A6F31A823422420005F405D /* SummaryBusinessLogicTests.swift in Sources */,
 				9AADABFB22F7018D00C6C290 /* DefaultLoggingServiceTests.swift in Sources */,
+				9A0DF5FF23671ECC00884090 /* MonthlyBalanceViewTests.swift in Sources */,
 				9AA805A322F8C17A00B40516 /* AppStateTests.swift in Sources */,
 				9AA5837F2363A4C700DD9B72 /* BalancesViewTests.swift in Sources */,
 				9AFA47CC22F87440003B2992 /* DataExtensionsTests.swift in Sources */,
@@ -2188,7 +2215,6 @@
 				9ADD21C422F717A6006F98CA /* KeychainDataServiceTests.swift in Sources */,
 				9A6F3192234204CB005F405D /* TransactionBusinessLogicTests.swift in Sources */,
 				9A4A3D82235F8452006BD7FF /* HomeViewTests.swift in Sources */,
-				9A4A3DA4235F9FA8006BD7FF /* RegularsViewTests.swift in Sources */,
 				9ADD21C022F7165F006F98CA /* StringRepresentableTests.swift in Sources */,
 				9ADD21C822F71A10006F98CA /* StoreableTests.swift in Sources */,
 			);
@@ -2226,9 +2252,11 @@
 				9AADAB3E22F643DC00C6C290 /* DefaultConfigServiceTests.swift in Sources */,
 				9AFA47D522F87663003B2992 /* ErrorTests.swift in Sources */,
 				9A956DBD2300373600CC848D /* CredentialsTests.swift in Sources */,
+				9A0DF60423671F2200884090 /* CurrentMonthViewTests.swift in Sources */,
 				9A956DC12300381400CC848D /* UserTests.swift in Sources */,
 				9A6F31A923422420005F405D /* SummaryBusinessLogicTests.swift in Sources */,
 				9AADABFC22F7018D00C6C290 /* DefaultLoggingServiceTests.swift in Sources */,
+				9A0DF60023671ECC00884090 /* MonthlyBalanceViewTests.swift in Sources */,
 				9AA805A422F8C17B00B40516 /* AppStateTests.swift in Sources */,
 				9AA583802363A4C700DD9B72 /* BalancesViewTests.swift in Sources */,
 				9AFA47CD22F87440003B2992 /* DataExtensionsTests.swift in Sources */,

@@ -1,7 +1,7 @@
 import SwiftUI
 
 public struct HomeView: View {
-    @ObservedObject private var appState: AppState
+    private let appState: AppState
 
     public var body: some View {
         TodayView(appState: appState)

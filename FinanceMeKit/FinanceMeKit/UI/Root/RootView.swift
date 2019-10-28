@@ -1,7 +1,7 @@
 import SwiftUI
 
 public struct RootView: View {
-    @ObservedObject private var appState: AppState
+    private let appState: AppState
     @ObservedObject private var viewModel: RootViewModel
 
     public var body: some View {
