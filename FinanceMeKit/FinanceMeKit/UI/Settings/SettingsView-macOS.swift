@@ -10,7 +10,8 @@ public struct SettingsView: View {
     }
 
     public init(appState: AppState) {
-        self.viewModel = SettingsViewModel(userBusinessLogic: appState.userBusinessLogic,
+        self.viewModel = SettingsViewModel(sessionBusinessLogic: appState.sessionBusinessLogic,
+                                           userBusinessLogic: appState.userBusinessLogic,
                                            transactionBusinessLogic: appState.transactionBusinessLogic,
                                            summaryBusinessLogic: appState.summaryBusinessLogic)
     }
