@@ -12,10 +12,8 @@ public struct LoginView: View {
                     .textContentType(.password)
             }
             Section {
-                Button(action: viewModel.onTap) {
-                    Text("Login")
-                }
-                .disabled(viewModel.isDisabled)
+                Button("Log In", action: viewModel.onTap)
+                    .disabled(viewModel.isDisabled)
             }
         }
     }

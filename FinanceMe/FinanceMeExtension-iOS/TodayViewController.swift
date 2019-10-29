@@ -10,11 +10,17 @@ class TodayViewController: UIHostingController<AnyView>, NCWidgetProviding {
     override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
         super.init(rootView: AnyView(TodayView(appState: appState)))
         view.backgroundColor = .clear
+        view.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(onTap)))
     }
 
     required init?(coder aDecoder: NSCoder) { return nil }
 
     func widgetPerformUpdate(completionHandler: (@escaping (NCUpdateResult) -> Void)) {
         completionHandler(.newData)
+    }
+
+    @objc
+    private func onTap() {
+        extensionContext?.open(appState.configService.urlScheme, completionHandler: nil)
     }
 }

@@ -24,6 +24,7 @@ public struct TransactionDetailView: View {
                         ForEach(Transaction.Source.allCases, id: \.self) { Text($0.displayString) }
                     }
                     DatePicker("Date", selection: $viewModel.date)
+                    Dismiss($viewModel.shouldDismiss, presentationMode: presentationMode)
                 }
             }
             .navigationBarTitle("Transaction Details")

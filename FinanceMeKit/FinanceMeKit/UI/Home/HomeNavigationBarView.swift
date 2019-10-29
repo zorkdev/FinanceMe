@@ -2,14 +2,28 @@ import SwiftUI
 
 public struct HomeNavigationBarView: View {
     private let appState: AppState
-    @State private var isDetailPresented = false
+    @State private var isSettingsPresented = false
+    @State private var isTransactionDetailPresented = false
 
     public var body: some View {
         HStack {
             Text("FinanceMe").font(.largeTitle).bold()
             Spacer()
             Button(action: {
-                self.isDetailPresented = true
+                self.isSettingsPresented = true
+            }, label: {
+                #if os(macOS)
+                Text("Settings")
+                #else
+                Image(systemName: "ellipsis.circle.fill").font(.title)
+                #endif
+            })
+            .padding([.trailing], 4)
+            .sheet(isPresented: self.$isSettingsPresented) {
+                SettingsView(appState: self.appState)
+            }
+            Button(action: {
+                self.isTransactionDetailPresented = true
             }, label: {
                 #if os(macOS)
                 Text("＋")
@@ -17,12 +31,12 @@ public struct HomeNavigationBarView: View {
                 Image(systemName: "plus.circle.fill").font(.title)
                 #endif
             })
+            .sheet(isPresented: self.$isTransactionDetailPresented) {
+                TransactionDetailView(transaction: nil, appState: self.appState)
+            }
         }
         .padding([.top, .leading, .trailing])
         .padding(.bottom, 8)
-        .sheet(isPresented: self.$isDetailPresented) {
-            TransactionDetailView(transaction: nil, appState: self.appState)
-        }
     }
 
     public init(appState: AppState) {

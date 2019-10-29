@@ -6,10 +6,10 @@ public class AppState: ObservableObject {
     let sessionService: SessionService
     let dataService: DataService
     let loggingService: LoggingService
-    let configService: ConfigService
     let metricService: MetricService
     let authenticationService: AuthenticationService
 
+    public let configService: ConfigService
     public let sessionBusinessLogic: SessionBusinessLogicType
     public let userBusinessLogic: UserBusinessLogicType
     public let transactionBusinessLogic: TransactionBusinessLogicType

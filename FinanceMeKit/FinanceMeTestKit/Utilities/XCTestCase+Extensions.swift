@@ -18,9 +18,7 @@ public extension XCTestCase {
         }
     }
 
-    func assert<T: View, U: PreviewProvider>(view: T, previews: U.Type) {
-        XCTAssertNotNil(previews.previews)
-
+    func assert<T: View>(view: T) {
         #if canImport(UIKit)
         let window = UIWindow()
         window.rootViewController = UIHostingController(rootView: view)
@@ -33,6 +31,11 @@ public extension XCTestCase {
         #endif
 
         waitForEvent {}
+    }
+
+    func assert<T: View, U: PreviewProvider>(view: T, previews: U.Type) {
+        XCTAssertNotNil(previews.previews)
+        assert(view: view)
     }
 
     func assert<T: Codable & Equatable & Stubable>(model: T.Type, json: String) throws {

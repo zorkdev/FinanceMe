@@ -15,6 +15,7 @@ public class TransactionDetailViewModel: ObservableObject {
     @Published public var category: Transaction.Source
     @Published public var date: Date
     @Published public var isDisabled = true
+    @Published public var shouldDismiss = false
 
     private var amountValue: Decimal? { Self.formatter.decimal(from: amount) }
 
@@ -78,7 +79,9 @@ public class TransactionDetailViewModel: ObservableObject {
             .flatMap { self.userBusinessLogic.getUser() }
             .flatMap { self.summaryBusinessLogic.getSummary() }
             .receive(on: DispatchQueue.main)
-            .sink(receiveCompletion: { _ in }, receiveValue: {})
+            .sink(receiveCompletion: { _ in }, receiveValue: {
+                self.shouldDismiss = true
+            })
             .store(in: &cancellables)
     }
 

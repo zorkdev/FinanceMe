@@ -60,6 +60,7 @@ class TransactionDetailViewModelTests: XCTestCase {
 
         XCTAssertTrue(userBusinessLogic.didCallGetUser)
         XCTAssertTrue(summaryBusinessLogic.didCallGetSummary)
+        XCTAssertTrue(viewModel.shouldDismiss)
     }
 
     func testWithoutTransaction() {
