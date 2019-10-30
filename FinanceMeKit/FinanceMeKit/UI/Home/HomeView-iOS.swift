@@ -40,7 +40,8 @@ public struct HomeView: View {
 
     public init(appState: AppState) {
         self.appState = appState
-        self.viewModel = HomeViewModel(transactionBusinessLogic: appState.transactionBusinessLogic,
+        self.viewModel = HomeViewModel(userBusinessLogic: appState.userBusinessLogic,
+                                       transactionBusinessLogic: appState.transactionBusinessLogic,
                                        summaryBusinessLogic: appState.summaryBusinessLogic)
     }
 }

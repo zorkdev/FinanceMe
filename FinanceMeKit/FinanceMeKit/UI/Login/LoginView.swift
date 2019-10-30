@@ -33,7 +33,6 @@ public struct LoginView: View {
 struct LoginViewPreviews: PreviewProvider {
     static var previews: some View {
         LoginView(appState: AppState.stub)
-            .previewLayout(.sizeThatFits)
     }
 }
 #endif

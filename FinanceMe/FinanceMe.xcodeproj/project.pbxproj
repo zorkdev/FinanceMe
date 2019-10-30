@@ -964,7 +964,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1100;
-				LastUpgradeCheck = 1110;
+				LastUpgradeCheck = 1120;
 				ORGANIZATIONNAME = Zorkdev;
 				TargetAttributes = {
 					9A12DB9A22EF10E7000226A9 = {
@@ -1564,6 +1564,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = "FinanceMeExtension-macOS/FinanceMeExtension.entitlements";
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = WX9VZ58J6W;

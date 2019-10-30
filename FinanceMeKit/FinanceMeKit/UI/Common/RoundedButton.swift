@@ -28,6 +28,7 @@ public struct RoundedButton: View {
 struct RoundedButtonPreviews: PreviewProvider {
     static var previews: some View {
         RoundedButton("Button", action: action)
+            .previewLayout(.sizeThatFits)
     }
     static func action() {}
 }

@@ -46,7 +46,6 @@ public struct TransactionDetailView: View {
 struct TransactionDetailViewPreviews: PreviewProvider {
     static var previews: some View {
         TransactionDetailView(transaction: nil, appState: AppState.stub)
-            .previewLayout(.sizeThatFits)
     }
 }
 #endif

@@ -3,15 +3,18 @@ import FinanceMeTestKit
 @testable import FinanceMeKit
 
 class HomeViewModelTests: XCTestCase {
+    var userBusinessLogic: MockUserBusinessLogic!
     var transactionBusinessLogic: MockTransactionBusinessLogic!
     var summaryBusinessLogic: MockSummaryBusinessLogic!
     var viewModel: HomeViewModel!
 
     override func setUp() {
         super.setUp()
+        userBusinessLogic = MockUserBusinessLogic()
         transactionBusinessLogic = MockTransactionBusinessLogic()
         summaryBusinessLogic = MockSummaryBusinessLogic()
-        viewModel = HomeViewModel(transactionBusinessLogic: transactionBusinessLogic,
+        viewModel = HomeViewModel(userBusinessLogic: userBusinessLogic,
+                                  transactionBusinessLogic: transactionBusinessLogic,
                                   summaryBusinessLogic: summaryBusinessLogic)
     }
 
@@ -20,5 +23,19 @@ class HomeViewModelTests: XCTestCase {
 
         XCTAssertTrue(transactionBusinessLogic.didCallFetchTransactions)
         XCTAssertTrue(summaryBusinessLogic.didCallFetchSummary)
+    }
+
+    func testOnRefresh() {
+        userBusinessLogic.getUserReturnValue = .success(())
+        transactionBusinessLogic.getTransactionsReturnValue = .success(())
+        summaryBusinessLogic.getSummaryReturnValue = .success(())
+
+        viewModel.onRefresh()
+
+        waitForEvent {}
+
+        XCTAssertTrue(userBusinessLogic.didCallGetUser)
+        XCTAssertTrue(transactionBusinessLogic.didCallGetTransactions)
+        XCTAssertTrue(summaryBusinessLogic.didCallGetSummary)
     }
 }

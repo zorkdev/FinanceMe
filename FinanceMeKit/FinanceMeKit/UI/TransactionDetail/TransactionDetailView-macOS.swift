@@ -6,16 +6,14 @@ public struct TransactionDetailView: View {
 
     public var body: some View {
         Form {
-            VStack(alignment: .leading) {
+            VStack {
                 HStack {
                     Text("Amount")
                     TextField("£0.00", text: $viewModel.amount, onEditingChanged: viewModel.onAmountEditingChanged)
-                        .multilineTextAlignment(.trailing)
                 }
                 HStack {
                     Text("Description")
                     TextField("Groceries", text: $viewModel.narrative)
-                        .multilineTextAlignment(.trailing)
                 }
                 Picker("Category", selection: $viewModel.category) {
                     ForEach(Transaction.Source.allCases, id: \.self) { Text($0.displayString) }
@@ -27,10 +25,11 @@ public struct TransactionDetailView: View {
                     Button("Save", action: self.viewModel.onSave)
                         .disabled(viewModel.isDisabled)
                 }
+                Dismiss($viewModel.shouldDismiss, presentationMode: presentationMode)
             }
         }
         .padding()
-        .frame(idealWidth: 300)
+        .frame(idealWidth: 350)
     }
 
     public init(transaction: Transaction?, appState: AppState) {
@@ -46,7 +45,6 @@ public struct TransactionDetailView: View {
 struct TransactionDetailViewPreviews: PreviewProvider {
     static var previews: some View {
         TransactionDetailView(transaction: nil, appState: AppState.stub)
-            .previewLayout(.sizeThatFits)
     }
 }
 #endif

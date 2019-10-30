@@ -4,11 +4,20 @@ public struct HomeNavigationBarView: View {
     private let appState: AppState
     @State private var isSettingsPresented = false
     @State private var isTransactionDetailPresented = false
+    @ObservedObject private var viewModel: HomeViewModel
 
     public var body: some View {
         HStack {
             Text("FinanceMe").font(.largeTitle).bold()
             Spacer()
+            Button(action: viewModel.onRefresh) {
+                #if os(macOS)
+                Text("Refresh")
+                #else
+                Image(systemName: "arrow.clockwise.circle.fill").font(.title)
+                #endif
+            }
+            .padding([.trailing], 4)
             Button(action: {
                 self.isSettingsPresented = true
             }, label: {
@@ -41,6 +50,9 @@ public struct HomeNavigationBarView: View {
 
     public init(appState: AppState) {
         self.appState = appState
+        self.viewModel = HomeViewModel(userBusinessLogic: appState.userBusinessLogic,
+                                       transactionBusinessLogic: appState.transactionBusinessLogic,
+                                       summaryBusinessLogic: appState.summaryBusinessLogic)
     }
 }
 
@@ -49,6 +61,7 @@ public struct HomeNavigationBarView: View {
 struct HomeNavigationBarViewPreviews: PreviewProvider {
     static var previews: some View {
         HomeNavigationBarView(appState: AppState.stub)
+            .previewLayout(.sizeThatFits)
     }
 }
 #endif

@@ -440,6 +440,8 @@
 		9AE99850234FD3E3005C17CC /* ListSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AE9984E234FD3E3005C17CC /* ListSection.swift */; };
 		9AE99851234FD3E3005C17CC /* ListSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AE9984E234FD3E3005C17CC /* ListSection.swift */; };
 		9AE99852234FD3E3005C17CC /* ListSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AE9984E234FD3E3005C17CC /* ListSection.swift */; };
+		9AED5C91236B665400112F61 /* ActivityIndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AED5C90236B665400112F61 /* ActivityIndicatorView.swift */; };
+		9AED5C93236B666500112F61 /* ActivityIndicatorView-macOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AED5C92236B666500112F61 /* ActivityIndicatorView-macOS.swift */; };
 		9AFA47B922F84AEF003B2992 /* Publisher+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AFA47B822F84AEF003B2992 /* Publisher+Extensions.swift */; };
 		9AFA47BA22F84AEF003B2992 /* Publisher+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AFA47B822F84AEF003B2992 /* Publisher+Extensions.swift */; };
 		9AFA47BB22F84AEF003B2992 /* Publisher+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AFA47B822F84AEF003B2992 /* Publisher+Extensions.swift */; };
@@ -460,6 +462,8 @@
 		9AFA47DF22F8A6A9003B2992 /* MockLAContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AFA47DE22F8A6A9003B2992 /* MockLAContext.swift */; };
 		9AFA47E322F8B223003B2992 /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AFA47E022F8B223003B2992 /* AppState.swift */; };
 		9AFA47E422F8B223003B2992 /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AFA47E022F8B223003B2992 /* AppState.swift */; };
+		9AFB07B0236A1E1B007E5EA1 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AFB07AF236A1E1B007E5EA1 /* LoadingView.swift */; };
+		9AFB07B3236A1E1B007E5EA1 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AFB07AF236A1E1B007E5EA1 /* LoadingView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -702,6 +706,8 @@
 		9AE822EA2340CA83002FF0F5 /* LoginViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewTests.swift; sourceTree = "<group>"; };
 		9AE822EE2340D6FE002FF0F5 /* config.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = config.json; path = ../../config.json; sourceTree = "<group>"; };
 		9AE9984E234FD3E3005C17CC /* ListSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListSection.swift; sourceTree = "<group>"; };
+		9AED5C90236B665400112F61 /* ActivityIndicatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityIndicatorView.swift; sourceTree = "<group>"; };
+		9AED5C92236B666500112F61 /* ActivityIndicatorView-macOS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ActivityIndicatorView-macOS.swift"; sourceTree = "<group>"; };
 		9AFA47B822F84AEF003B2992 /* Publisher+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Publisher+Extensions.swift"; sourceTree = "<group>"; };
 		9AFA47C022F85FD3003B2992 /* TestConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestConfig.swift; sourceTree = "<group>"; };
 		9AFA47CA22F87440003B2992 /* DataExtensionsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataExtensionsTests.swift; sourceTree = "<group>"; };
@@ -712,6 +718,7 @@
 		9AFA47DC22F8A660003B2992 /* LAContextAuthenticationServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LAContextAuthenticationServiceTests.swift; sourceTree = "<group>"; };
 		9AFA47DE22F8A6A9003B2992 /* MockLAContext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockLAContext.swift; sourceTree = "<group>"; };
 		9AFA47E022F8B223003B2992 /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
+		9AFB07AF236A1E1B007E5EA1 /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1015,6 +1022,9 @@
 			isa = PBXGroup;
 			children = (
 				9A9B12882368E5D0002A045B /* Dismiss.swift */,
+				9AED5C90236B665400112F61 /* ActivityIndicatorView.swift */,
+				9AED5C92236B666500112F61 /* ActivityIndicatorView-macOS.swift */,
+				9AFB07AF236A1E1B007E5EA1 /* LoadingView.swift */,
 				9A7054162367B67D0070803C /* RoundedButton.swift */,
 				9A6183CC2304A9F1001825A6 /* AmountView.swift */,
 				9ABFBCA222EFD3D100E01785 /* AmountViewModel.swift */,
@@ -1995,6 +2005,7 @@
 				9A7054092367A88F0070803C /* SettingsViewModel.swift in Sources */,
 				9A0DF5F523671E0300884090 /* MonthlyBalanceView.swift in Sources */,
 				9AE9984F234FD3E3005C17CC /* ListSection.swift in Sources */,
+				9AFB07B0236A1E1B007E5EA1 /* LoadingView.swift in Sources */,
 				9A6183CD2304A9F1001825A6 /* AmountView.swift in Sources */,
 				9A6F31B123422E95005F405D /* SpendingBusinessLogic.swift in Sources */,
 				9A0DF6072367202E00884090 /* TransactionDetailViewModel.swift in Sources */,
@@ -2047,6 +2058,7 @@
 				9A6F319923421711005F405D /* Summary.swift in Sources */,
 				9AD73D23230029AB003B16C3 /* Credentials.swift in Sources */,
 				9A7054172367B67D0070803C /* RoundedButton.swift in Sources */,
+				9AED5C91236B665400112F61 /* ActivityIndicatorView.swift in Sources */,
 				9AADAC0E22F7046C00C6C290 /* Error.swift in Sources */,
 				9ADD21ED22F7288B006F98CA /* API.swift in Sources */,
 				9AD73D1E230028D4003B16C3 /* UserBusinessLogic.swift in Sources */,
@@ -2186,6 +2198,7 @@
 				9A5BDDAE230044D500F376C6 /* TodayView.swift in Sources */,
 				9A010CE0234FC2FF00AF9613 /* FeedView.swift in Sources */,
 				9A4A3D9C235F98F0006BD7FF /* TransactionView.swift in Sources */,
+				9AFB07B3236A1E1B007E5EA1 /* LoadingView.swift in Sources */,
 				9A0DF60A2367202E00884090 /* TransactionDetailViewModel.swift in Sources */,
 				9AD73D21230028D4003B16C3 /* UserBusinessLogic.swift in Sources */,
 				9A7053F723678CB50070803C /* HomeNavigationBarView.swift in Sources */,
@@ -2216,6 +2229,7 @@
 				9ADD21D522F71D12006F98CA /* Session.swift in Sources */,
 				9A99D0D423020D5D00D735A2 /* TestConfig.swift in Sources */,
 				9A3B18322340F7E900FF27D8 /* TransactionBusinessLogic.swift in Sources */,
+				9AED5C93236B666500112F61 /* ActivityIndicatorView-macOS.swift in Sources */,
 				9A6183D02304A9F1001825A6 /* AmountView.swift in Sources */,
 				9A0DF5F323671D1300884090 /* CurrentMonthView.swift in Sources */,
 				9A375B1D22F7AEF600E598AB /* Data+Extensions.swift in Sources */,

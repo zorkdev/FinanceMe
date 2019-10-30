@@ -8,7 +8,6 @@ public struct HomeView: View {
         VStack(spacing: .zero) {
             HomeNavigationBarView(appState: appState)
             TodayView(appState: appState)
-                .padding([.bottom])
             TabView {
                 FeedView(appState: appState)
                     .tabItem {
@@ -26,13 +25,15 @@ public struct HomeView: View {
                     }
                     .tag(2)
             }
+            .padding()
         }
         .onAppear(perform: viewModel.onAppear)
     }
 
     public init(appState: AppState) {
         self.appState = appState
-        self.viewModel = HomeViewModel(transactionBusinessLogic: appState.transactionBusinessLogic,
+        self.viewModel = HomeViewModel(userBusinessLogic: appState.userBusinessLogic,
+                                       transactionBusinessLogic: appState.transactionBusinessLogic,
                                        summaryBusinessLogic: appState.summaryBusinessLogic)
     }
 }

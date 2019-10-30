@@ -17,9 +17,7 @@ public struct SettingsView: View {
                         }
                         HStack {
                             Text("Amount Limit")
-                            TextField("£0.00",
-                                      text: $viewModel.limit,
-                                      onEditingChanged: viewModel.onLimitEditingChanged)
+                            TextField("£0.00", text: $viewModel.limit, onEditingChanged: viewModel.onLimitEditingChanged)
                                 .keyboardType(.decimalPad)
                                 .multilineTextAlignment(.trailing)
                         }
@@ -43,6 +41,7 @@ public struct SettingsView: View {
                 }
                 Dismiss($viewModel.shouldDismiss, presentationMode: presentationMode)
             }
+            .background(Color(.systemGroupedBackground))
             .navigationBarTitle("Settings")
             .navigationBarItems(leading: Button(viewModel.isEditing ? "Cancel" : "Edit") {
                 self.viewModel.isEditing.toggle()
@@ -65,7 +64,6 @@ public struct SettingsView: View {
 struct SettingsViewPreviews: PreviewProvider {
     static var previews: some View {
         SettingsView(appState: AppState.stub)
-            .previewLayout(.sizeThatFits)
     }
 }
 #endif
