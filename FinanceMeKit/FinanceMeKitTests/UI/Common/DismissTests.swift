@@ -8,7 +8,7 @@ class DismissTests: XCTestCase {
         @Environment(\.presentationMode) private var presentationMode
 
         var body: some View {
-            Dismiss($shouldDismiss, presentationMode: presentationMode)
+            Spacer().dismiss(shouldDismiss: $shouldDismiss)
         }
     }
 
@@ -17,7 +17,7 @@ class DismissTests: XCTestCase {
         @Environment(\.presentationMode) private var presentationMode
 
         var body: some View {
-            Dismiss($shouldDismiss, presentationMode: presentationMode)
+            Spacer().dismiss(shouldDismiss: $shouldDismiss)
         }
     }
 

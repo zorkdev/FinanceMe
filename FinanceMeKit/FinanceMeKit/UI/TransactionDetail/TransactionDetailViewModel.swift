@@ -16,6 +16,7 @@ public class TransactionDetailViewModel: ObservableObject {
     @Published public var date: Date
     @Published public var isDisabled = true
     @Published public var shouldDismiss = false
+    @Published public var isLoading = false
 
     private var amountValue: Decimal? { Self.formatter.decimal(from: amount) }
 
@@ -68,6 +69,8 @@ public class TransactionDetailViewModel: ObservableObject {
     func onSave() {
         guard let newTransaction = newTransaction else { return }
 
+        isLoading = true
+
         let publisher: AnyPublisher<Void, Error>
         if transaction != nil {
             publisher = transactionBusinessLogic.update(transaction: newTransaction)
@@ -79,9 +82,8 @@ public class TransactionDetailViewModel: ObservableObject {
             .flatMap { self.userBusinessLogic.getUser() }
             .flatMap { self.summaryBusinessLogic.getSummary() }
             .receive(on: DispatchQueue.main)
-            .sink(receiveCompletion: { _ in }, receiveValue: {
-                self.shouldDismiss = true
-            })
+            .sink(receiveCompletion: { _ in self.isLoading = false },
+                  receiveValue: { self.shouldDismiss = true })
             .store(in: &cancellables)
     }
 

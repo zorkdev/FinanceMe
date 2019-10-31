@@ -25,11 +25,12 @@ public struct TransactionDetailView: View {
                     Button("Save", action: self.viewModel.onSave)
                         .disabled(viewModel.isDisabled)
                 }
-                Dismiss($viewModel.shouldDismiss, presentationMode: presentationMode)
             }
         }
         .padding()
         .frame(idealWidth: 350)
+        .loading(isLoading: $viewModel.isLoading)
+        .dismiss(shouldDismiss: $viewModel.shouldDismiss)
     }
 
     public init(transaction: Transaction?, appState: AppState) {

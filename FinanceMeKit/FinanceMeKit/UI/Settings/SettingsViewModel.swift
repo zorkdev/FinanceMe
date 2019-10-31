@@ -17,6 +17,7 @@ public class SettingsViewModel: ObservableObject {
     @Published public var isEditing = false
     @Published public var isDisabled = true
     @Published public var shouldDismiss = false
+    @Published public var isLoading = false
 
     public let paydays = Array(1...28)
 
@@ -88,19 +89,22 @@ public class SettingsViewModel: ObservableObject {
     func onSave() {
         guard let newUser = newUser else { return }
 
+        isLoading = true
+
         userBusinessLogic.update(user: newUser)
             .flatMap { self.summaryBusinessLogic.getSummary() }
             .receive(on: DispatchQueue.main)
-            .sink(receiveCompletion: { _ in }, receiveValue: {
-                self.shouldDismiss = true
-            })
+            .sink(receiveCompletion: { _ in self.isLoading = false },
+                  receiveValue: { self.shouldDismiss = true })
             .store(in: &cancellables)
     }
 
     func onReconcile() {
+        isLoading = true
+
         transactionBusinessLogic.reconcile()
             .receive(on: DispatchQueue.main)
-            .sink(receiveCompletion: { _ in }, receiveValue: {})
+            .sink(receiveCompletion: { _ in self.isLoading = false }, receiveValue: {})
             .store(in: &cancellables)
     }
 

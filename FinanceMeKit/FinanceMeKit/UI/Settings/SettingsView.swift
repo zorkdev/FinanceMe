@@ -39,7 +39,6 @@ public struct SettingsView: View {
                         .bold()
                         .padding()
                 }
-                Dismiss($viewModel.shouldDismiss, presentationMode: presentationMode)
             }
             .background(Color(.systemGroupedBackground))
             .navigationBarTitle("Settings")
@@ -49,6 +48,8 @@ public struct SettingsView: View {
                 self.viewModel.isEditing ? self.viewModel.onSave() : self.presentationMode.wrappedValue.dismiss()
             }.disabled(viewModel.isEditing ? viewModel.isDisabled : false))
         }
+        .loading(isLoading: $viewModel.isLoading)
+        .dismiss(shouldDismiss: $viewModel.shouldDismiss)
     }
 
     public init(appState: AppState) {

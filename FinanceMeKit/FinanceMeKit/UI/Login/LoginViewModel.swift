@@ -7,6 +7,7 @@ public class LoginViewModel: ObservableObject {
     @Published public var email: String = ""
     @Published public var password: String = ""
     @Published public var isDisabled = true
+    @Published public var isLoading = false
 
     public init(businessLogic: SessionBusinessLogicType) {
         self.businessLogic = businessLogic
@@ -14,9 +15,11 @@ public class LoginViewModel: ObservableObject {
     }
 
     func onTap() {
+        isLoading = true
+
         businessLogic.login(credentials: Credentials(email: email, password: password))
             .receive(on: DispatchQueue.main)
-            .sink(receiveCompletion: { _ in }, receiveValue: {})
+            .sink(receiveCompletion: { _ in self.isLoading = false }, receiveValue: {})
             .store(in: &cancellables)
     }
 

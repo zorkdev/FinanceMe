@@ -17,6 +17,7 @@ public struct LoginView: View {
             }
             .padding()
         }
+        .loading(isLoading: $viewModel.isLoading)
     }
 
     public init(appState: AppState) {

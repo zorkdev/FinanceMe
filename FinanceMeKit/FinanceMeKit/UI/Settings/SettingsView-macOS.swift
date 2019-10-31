@@ -30,11 +30,12 @@ public struct SettingsView: View {
                     Button("Save", action: self.viewModel.onSave)
                         .disabled(viewModel.isDisabled)
                 }
-                Dismiss($viewModel.shouldDismiss, presentationMode: presentationMode)
             }
         }
         .padding()
         .frame(idealWidth: 350)
+        .loading(isLoading: $viewModel.isLoading)
+        .dismiss(shouldDismiss: $viewModel.shouldDismiss)
     }
 
     public init(appState: AppState) {

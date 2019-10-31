@@ -24,13 +24,14 @@ public struct TransactionDetailView: View {
                         ForEach(Transaction.Source.allCases, id: \.self) { Text($0.displayString) }
                     }
                     DatePicker("Date", selection: $viewModel.date)
-                    Dismiss($viewModel.shouldDismiss, presentationMode: presentationMode)
                 }
             }
             .navigationBarTitle("Transaction Details")
             .navigationBarItems(leading: Button("Cancel") { self.presentationMode.wrappedValue.dismiss() },
                                 trailing: Button("Save", action: viewModel.onSave).disabled(viewModel.isDisabled))
         }
+        .loading(isLoading: $viewModel.isLoading)
+        .dismiss(shouldDismiss: $viewModel.shouldDismiss)
     }
 
     public init(transaction: Transaction?, appState: AppState) {

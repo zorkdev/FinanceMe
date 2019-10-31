@@ -21,6 +21,7 @@ public struct LoginView: View {
             }
             .navigationBarTitle("Login")
         }
+        .loading(isLoading: $viewModel.isLoading)
     }
 
     public init(appState: AppState) {

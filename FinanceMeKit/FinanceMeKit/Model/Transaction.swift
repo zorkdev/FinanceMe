@@ -20,6 +20,7 @@ public struct Transaction: Storeable, Identifiable, Equatable {
         }
     }
 
+    // swiftlint:disable unused_declaration
     public let id: UUID
     public let amount: Decimal
     public let direction: Direction
