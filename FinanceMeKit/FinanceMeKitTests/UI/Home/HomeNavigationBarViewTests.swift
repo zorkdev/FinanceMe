@@ -4,6 +4,10 @@ import FinanceMeTestKit
 
 class HomeNavigationBarViewTests: XCTestCase {
     func testView() {
-        assert(view: HomeNavigationBarView(appState: MockAppState()), previews: HomeNavigationBarViewPreviews.self)
+        let loadingState = LoadingState()
+        assert(view: HomeNavigationBarView(appState: MockAppState(), loadingState: loadingState),
+               previews: HomeNavigationBarViewPreviews.self)
+        loadingState.isLoading = true
+        assert(view: HomeNavigationBarView(appState: MockAppState(), loadingState: loadingState))
     }
 }

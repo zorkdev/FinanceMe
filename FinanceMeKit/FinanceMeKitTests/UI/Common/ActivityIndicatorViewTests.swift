@@ -4,6 +4,7 @@ import FinanceMeTestKit
 
 class ActivityIndicatorViewTests: XCTestCase {
     func testView() {
-        assert(view: ActivityIndicatorView())
+        assert(view: ActivityIndicatorView(style: .medium))
+        assert(view: ActivityIndicatorView(style: .large))
     }
 }

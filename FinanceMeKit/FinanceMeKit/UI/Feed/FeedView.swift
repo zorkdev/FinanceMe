@@ -17,9 +17,10 @@ public struct FeedView: View {
         }
     }
 
-    public init(appState: AppState) {
+    public init(appState: AppState, loadingState: LoadingState) {
         self.appState = appState
-        self.viewModel = FeedViewModel(userBusinessLogic: appState.userBusinessLogic,
+        self.viewModel = FeedViewModel(loadingState: loadingState,
+                                       userBusinessLogic: appState.userBusinessLogic,
                                        transactionBusinessLogic: appState.transactionBusinessLogic,
                                        summaryBusinessLogic: appState.summaryBusinessLogic)
     }
@@ -29,7 +30,7 @@ public struct FeedView: View {
 // swiftlint:disable unused_declaration
 struct FeedViewPreviews: PreviewProvider {
     static var previews: some View {
-        FeedView(appState: AppState.stub)
+        FeedView(appState: AppState.stub, loadingState: LoadingState())
             .previewLayout(.sizeThatFits)
     }
 }

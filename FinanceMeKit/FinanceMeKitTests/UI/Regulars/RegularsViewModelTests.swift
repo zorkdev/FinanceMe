@@ -13,7 +13,8 @@ class RegularsViewModelTests: XCTestCase {
         userBusinessLogic = MockUserBusinessLogic()
         transactionBusinessLogic = MockTransactionBusinessLogic()
         summaryBusinessLogic = MockSummaryBusinessLogic()
-        viewModel = RegularsViewModel(userBusinessLogic: userBusinessLogic,
+        viewModel = RegularsViewModel(loadingState: LoadingState(),
+                                      userBusinessLogic: userBusinessLogic,
                                       transactionBusinessLogic: transactionBusinessLogic,
                                       summaryBusinessLogic: summaryBusinessLogic)
     }

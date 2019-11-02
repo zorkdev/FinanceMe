@@ -12,7 +12,7 @@ public struct LoadingView<Presenting: View>: View {
 
             if isLoading {
                 VStack {
-                    ActivityIndicatorView()
+                    ActivityIndicatorView(style: .large)
                     Text("Doing some magic... 😬")
                 }
             }

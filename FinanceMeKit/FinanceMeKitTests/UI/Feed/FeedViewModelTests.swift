@@ -13,7 +13,8 @@ class FeedViewModelTests: XCTestCase {
         userBusinessLogic = MockUserBusinessLogic()
         transactionBusinessLogic = MockTransactionBusinessLogic()
         summaryBusinessLogic = MockSummaryBusinessLogic()
-        viewModel = FeedViewModel(userBusinessLogic: userBusinessLogic,
+        viewModel = FeedViewModel(loadingState: LoadingState(),
+                                  userBusinessLogic: userBusinessLogic,
                                   transactionBusinessLogic: transactionBusinessLogic,
                                   summaryBusinessLogic: summaryBusinessLogic)
     }

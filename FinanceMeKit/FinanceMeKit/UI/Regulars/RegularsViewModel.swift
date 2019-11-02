@@ -9,18 +9,21 @@ public class RegularsViewModel: ObservableObject {
     private let userBusinessLogic: UserBusinessLogicType
     private let transactionBusinessLogic: TransactionBusinessLogicType
     private let summaryBusinessLogic: SummaryBusinessLogicType
+    private let loadingState: LoadingState
     private var cancellables: Set<AnyCancellable> = []
 
     @Published public var monthlyBalance = MonthlyBalance(allowance: 0, outgoings: 0)
     @Published public var incomingSection = ListSection<Transaction>(title: "", rows: [])
     @Published public var outgoingSection = ListSection<Transaction>(title: "", rows: [])
 
-    public init(userBusinessLogic: UserBusinessLogicType,
+    public init(loadingState: LoadingState,
+                userBusinessLogic: UserBusinessLogicType,
                 transactionBusinessLogic: TransactionBusinessLogicType,
                 summaryBusinessLogic: SummaryBusinessLogicType) {
         self.userBusinessLogic = userBusinessLogic
         self.transactionBusinessLogic = transactionBusinessLogic
         self.summaryBusinessLogic = summaryBusinessLogic
+        self.loadingState = loadingState
         setupBindings()
     }
 
@@ -68,12 +71,14 @@ public class RegularsViewModel: ObservableObject {
     }
 
     func onDelete(section: ListSection<Transaction>, row: IndexSet) {
+        loadingState.isLoading = true
+
         row.first
             .flatMap { transactionBusinessLogic.delete(transaction: section.rows[$0]) }?
             .flatMap { self.userBusinessLogic.getUser() }
             .flatMap { self.summaryBusinessLogic.getSummary() }
             .receive(on: DispatchQueue.main)
-            .sink(receiveCompletion: { _ in }, receiveValue: {})
+            .sink(receiveCompletion: { _ in self.loadingState.isLoading = false }, receiveValue: {})
             .store(in: &cancellables)
     }
 }

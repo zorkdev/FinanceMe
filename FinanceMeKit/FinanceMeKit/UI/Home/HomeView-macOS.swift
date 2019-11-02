@@ -2,19 +2,20 @@ import SwiftUI
 
 public struct HomeView: View {
     private let appState: AppState
+    private let loadingState = LoadingState()
     @ObservedObject private var viewModel: HomeViewModel
 
     public var body: some View {
         VStack(spacing: .zero) {
-            HomeNavigationBarView(appState: appState)
+            HomeNavigationBarView(appState: appState, loadingState: loadingState)
             TodayView(appState: appState)
             TabView {
-                FeedView(appState: appState)
+                FeedView(appState: appState, loadingState: loadingState)
                     .tabItem {
                         Text("Feed")
                     }
                     .tag(0)
-                RegularsView(appState: appState)
+                RegularsView(appState: appState, loadingState: loadingState)
                     .tabItem {
                         Text("Regulars")
                     }
@@ -32,7 +33,8 @@ public struct HomeView: View {
 
     public init(appState: AppState) {
         self.appState = appState
-        self.viewModel = HomeViewModel(userBusinessLogic: appState.userBusinessLogic,
+        self.viewModel = HomeViewModel(loadingState: loadingState,
+                                       userBusinessLogic: appState.userBusinessLogic,
                                        transactionBusinessLogic: appState.transactionBusinessLogic,
                                        summaryBusinessLogic: appState.summaryBusinessLogic)
     }

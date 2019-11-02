@@ -4,14 +4,17 @@ public class HomeViewModel: ObservableObject {
     private let userBusinessLogic: UserBusinessLogicType
     private let transactionBusinessLogic: TransactionBusinessLogicType
     private let summaryBusinessLogic: SummaryBusinessLogicType
+    private let loadingState: LoadingState
     private var cancellables: Set<AnyCancellable> = []
 
-    public init(userBusinessLogic: UserBusinessLogicType,
+    public init(loadingState: LoadingState,
+                userBusinessLogic: UserBusinessLogicType,
                 transactionBusinessLogic: TransactionBusinessLogicType,
                 summaryBusinessLogic: SummaryBusinessLogicType) {
         self.userBusinessLogic = userBusinessLogic
         self.transactionBusinessLogic = transactionBusinessLogic
         self.summaryBusinessLogic = summaryBusinessLogic
+        self.loadingState = loadingState
     }
 
     func onAppear() {
@@ -20,11 +23,13 @@ public class HomeViewModel: ObservableObject {
     }
 
     func onRefresh() {
+        loadingState.isLoading = true
+
         userBusinessLogic.getUser()
             .flatMap { self.transactionBusinessLogic.getTransactions() }
             .flatMap { self.summaryBusinessLogic.getSummary() }
             .receive(on: DispatchQueue.main)
-            .sink(receiveCompletion: { _ in }, receiveValue: {})
+            .sink(receiveCompletion: { _ in self.loadingState.isLoading = false }, receiveValue: {})
             .store(in: &cancellables)
     }
 }

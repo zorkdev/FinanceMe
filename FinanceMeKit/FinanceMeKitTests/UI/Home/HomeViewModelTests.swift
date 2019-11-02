@@ -13,7 +13,8 @@ class HomeViewModelTests: XCTestCase {
         userBusinessLogic = MockUserBusinessLogic()
         transactionBusinessLogic = MockTransactionBusinessLogic()
         summaryBusinessLogic = MockSummaryBusinessLogic()
-        viewModel = HomeViewModel(userBusinessLogic: userBusinessLogic,
+        viewModel = HomeViewModel(loadingState: LoadingState(),
+                                  userBusinessLogic: userBusinessLogic,
                                   transactionBusinessLogic: transactionBusinessLogic,
                                   summaryBusinessLogic: summaryBusinessLogic)
     }

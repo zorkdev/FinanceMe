@@ -4,20 +4,30 @@ public struct HomeNavigationBarView: View {
     private let appState: AppState
     @State private var isSettingsPresented = false
     @State private var isTransactionDetailPresented = false
+    @ObservedObject private var loadingState: LoadingState
     @ObservedObject private var viewModel: HomeViewModel
 
     public var body: some View {
         HStack {
             Text("FinanceMe").font(.largeTitle).bold()
+
             Spacer()
-            Button(action: viewModel.onRefresh) {
-                #if os(macOS)
-                Text("Refresh")
-                #else
-                Image(systemName: "arrow.clockwise.circle.fill").font(.title)
-                #endif
+
+            Group {
+                if loadingState.isLoading {
+                    ActivityIndicatorView(style: .medium)
+                } else {
+                    Button(action: viewModel.onRefresh) {
+                        #if os(macOS)
+                        Text("Refresh")
+                        #else
+                        Image(systemName: "arrow.clockwise.circle.fill").font(.title)
+                        #endif
+                    }
+                }
             }
             .padding([.trailing], 4)
+
             Button(action: {
                 self.isSettingsPresented = true
             }, label: {
@@ -31,6 +41,7 @@ public struct HomeNavigationBarView: View {
             .sheet(isPresented: self.$isSettingsPresented) {
                 SettingsView(appState: self.appState)
             }
+
             Button(action: {
                 self.isTransactionDetailPresented = true
             }, label: {
@@ -48,9 +59,11 @@ public struct HomeNavigationBarView: View {
         .padding(.bottom, 8)
     }
 
-    public init(appState: AppState) {
+    public init(appState: AppState, loadingState: LoadingState) {
         self.appState = appState
-        self.viewModel = HomeViewModel(userBusinessLogic: appState.userBusinessLogic,
+        self.loadingState = loadingState
+        self.viewModel = HomeViewModel(loadingState: loadingState,
+                                       userBusinessLogic: appState.userBusinessLogic,
                                        transactionBusinessLogic: appState.transactionBusinessLogic,
                                        summaryBusinessLogic: appState.summaryBusinessLogic)
     }
@@ -60,7 +73,7 @@ public struct HomeNavigationBarView: View {
 // swiftlint:disable unused_declaration
 struct HomeNavigationBarViewPreviews: PreviewProvider {
     static var previews: some View {
-        HomeNavigationBarView(appState: AppState.stub)
+        HomeNavigationBarView(appState: AppState.stub, loadingState: LoadingState())
             .previewLayout(.sizeThatFits)
     }
 }

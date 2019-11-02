@@ -18,6 +18,13 @@
 		9A0034A6234A3D9D0082DC88 /* DeviceTokenTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A0034A4234A3D9D0082DC88 /* DeviceTokenTests.swift */; };
 		9A0034A7234A3D9D0082DC88 /* DeviceTokenTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A0034A4234A3D9D0082DC88 /* DeviceTokenTests.swift */; };
 		9A010CE0234FC2FF00AF9613 /* FeedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A1DAAC5234FBD720037E581 /* FeedView.swift */; };
+		9A071434236DAD3100D97DFF /* LoadingState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A071433236DAD3100D97DFF /* LoadingState.swift */; };
+		9A071435236DAD3100D97DFF /* LoadingState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A071433236DAD3100D97DFF /* LoadingState.swift */; };
+		9A071436236DAD3100D97DFF /* LoadingState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A071433236DAD3100D97DFF /* LoadingState.swift */; };
+		9A071437236DAD3100D97DFF /* LoadingState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A071433236DAD3100D97DFF /* LoadingState.swift */; };
+		9A071439236DAF8E00D97DFF /* ActivityIndicatorViewStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A071438236DAF8E00D97DFF /* ActivityIndicatorViewStyle.swift */; };
+		9A07143A236DAF8E00D97DFF /* ActivityIndicatorViewStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A071438236DAF8E00D97DFF /* ActivityIndicatorViewStyle.swift */; };
+		9A07143B236DB4C700D97DFF /* ActivityIndicatorViewStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A071438236DAF8E00D97DFF /* ActivityIndicatorViewStyle.swift */; };
 		9A0DF5F023671D1300884090 /* CurrentMonthView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A0DF5EF23671D1300884090 /* CurrentMonthView.swift */; };
 		9A0DF5F123671D1300884090 /* CurrentMonthView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A0DF5EF23671D1300884090 /* CurrentMonthView.swift */; };
 		9A0DF5F223671D1300884090 /* CurrentMonthView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A0DF5EF23671D1300884090 /* CurrentMonthView.swift */; };
@@ -539,6 +546,8 @@
 		9A00349D234A35B40082DC88 /* PushNotificationBusinessLogic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PushNotificationBusinessLogic.swift; sourceTree = "<group>"; };
 		9A00349F234A383A0082DC88 /* DeviceToken.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceToken.swift; sourceTree = "<group>"; };
 		9A0034A4234A3D9D0082DC88 /* DeviceTokenTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceTokenTests.swift; sourceTree = "<group>"; };
+		9A071433236DAD3100D97DFF /* LoadingState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingState.swift; sourceTree = "<group>"; };
+		9A071438236DAF8E00D97DFF /* ActivityIndicatorViewStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityIndicatorViewStyle.swift; sourceTree = "<group>"; };
 		9A0DF5EF23671D1300884090 /* CurrentMonthView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentMonthView.swift; sourceTree = "<group>"; };
 		9A0DF5F423671E0300884090 /* MonthlyBalanceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonthlyBalanceView.swift; sourceTree = "<group>"; };
 		9A0DF5F923671EC400884090 /* MonthlyBalanceViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonthlyBalanceViewTests.swift; sourceTree = "<group>"; };
@@ -1032,6 +1041,7 @@
 			isa = PBXGroup;
 			children = (
 				9A9B12882368E5D0002A045B /* Dismiss.swift */,
+				9A071438236DAF8E00D97DFF /* ActivityIndicatorViewStyle.swift */,
 				9AED5C90236B665400112F61 /* ActivityIndicatorView.swift */,
 				9AED5C92236B666500112F61 /* ActivityIndicatorView-macOS.swift */,
 				9AFB07AF236A1E1B007E5EA1 /* LoadingView.swift */,
@@ -1042,6 +1052,7 @@
 				9A9A86A32360DE0E00E135DF /* TransactionViewModel.swift */,
 				9A7053F4236783350070803C /* TransactionNavigationView.swift */,
 				9AE9984E234FD3E3005C17CC /* ListSection.swift */,
+				9A071433236DAD3100D97DFF /* LoadingState.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -2067,7 +2078,9 @@
 				9ADD21D222F71D11006F98CA /* Session.swift in Sources */,
 				9A375B1A22F7AEF600E598AB /* Data+Extensions.swift in Sources */,
 				9AFA47DB22F8A17A003B2992 /* AuthenticationService.swift in Sources */,
+				9A071439236DAF8E00D97DFF /* ActivityIndicatorViewStyle.swift in Sources */,
 				9A6F319923421711005F405D /* Summary.swift in Sources */,
+				9A071434236DAD3100D97DFF /* LoadingState.swift in Sources */,
 				9AD73D23230029AB003B16C3 /* Credentials.swift in Sources */,
 				9A7054172367B67D0070803C /* RoundedButton.swift in Sources */,
 				9AED5C91236B665400112F61 /* ActivityIndicatorView.swift in Sources */,
@@ -2098,6 +2111,7 @@
 				9A0DF6092367202E00884090 /* TransactionDetailViewModel.swift in Sources */,
 				9A4A3D9B235F98F0006BD7FF /* TransactionView.swift in Sources */,
 				9ABFBCAA22EFD60200E01785 /* Formatters.swift in Sources */,
+				9A071436236DAD3100D97DFF /* LoadingState.swift in Sources */,
 				9A4A3D91235F8807006BD7FF /* RegularsViewModel.swift in Sources */,
 				9AADAC1522F7052700C6C290 /* KeychainDataService.swift in Sources */,
 				9ADD21EA22F7248B006F98CA /* NetworkService.swift in Sources */,
@@ -2125,6 +2139,7 @@
 				9A9B128B2368E5D0002A045B /* Dismiss.swift in Sources */,
 				9A0DF5F223671D1300884090 /* CurrentMonthView.swift in Sources */,
 				9A1F4185233FFC8600343AD9 /* LoginViewModel.swift in Sources */,
+				9A07143B236DB4C700D97DFF /* ActivityIndicatorViewStyle.swift in Sources */,
 				9A6183CA2304A943001825A6 /* Decimal+Extensions.swift in Sources */,
 				9A6F319B23421711005F405D /* Summary.swift in Sources */,
 				9A1F419023400CAB00343AD9 /* RootView.swift in Sources */,
@@ -2159,6 +2174,7 @@
 				9ADD21E922F7248B006F98CA /* NetworkService.swift in Sources */,
 				9A1F418A23400C4F00343AD9 /* RootViewModel.swift in Sources */,
 				9AADAAFE22F63A1800C6C290 /* ConfigService.swift in Sources */,
+				9A071435236DAD3100D97DFF /* LoadingState.swift in Sources */,
 				9ADD21F322F735C8006F98CA /* URLSession+Extensions.swift in Sources */,
 				9A4A3D9A235F98F0006BD7FF /* TransactionView.swift in Sources */,
 				9A5BDDA5230042A400F376C6 /* TodayViewModel.swift in Sources */,
@@ -2202,6 +2218,7 @@
 			files = (
 				9A1DAACE234FBE3E0037E581 /* FeedViewModel.swift in Sources */,
 				9A6F31B423422E95005F405D /* SpendingBusinessLogic.swift in Sources */,
+				9A07143A236DAF8E00D97DFF /* ActivityIndicatorViewStyle.swift in Sources */,
 				9AADAC0C22F7037E00C6C290 /* DataService.swift in Sources */,
 				9A2FB3B6235E1F4100CF3525 /* HomeViewModel.swift in Sources */,
 				9A0DF5F823671E0300884090 /* MonthlyBalanceView.swift in Sources */,
@@ -2232,6 +2249,7 @@
 				9ADD21DA22F71D3F006F98CA /* SessionService.swift in Sources */,
 				9A75CF752360CCAD00991320 /* BalancesViewModel.swift in Sources */,
 				9AE822DB2340C557002FF0F5 /* LoginView-macOS.swift in Sources */,
+				9A071437236DAD3100D97DFF /* LoadingState.swift in Sources */,
 				9A4A3D97235F8FC8006BD7FF /* RegularsView.swift in Sources */,
 				9A0034A3234A38400082DC88 /* DeviceToken.swift in Sources */,
 				9AE99852234FD3E3005C17CC /* ListSection.swift in Sources */,
