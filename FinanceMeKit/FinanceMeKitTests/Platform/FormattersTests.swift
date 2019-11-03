@@ -6,6 +6,7 @@ class FormattersTests: XCTestCase {
         XCTAssertEqual(Formatters.locale.identifier, "en_GB")
     }
 
+    #if os(iOS) || os(macOS)
     func testCurrency() {
         XCTAssertEqual(Formatters.currency.string(from: Decimal(1000.10)), "£1,000.10")
         XCTAssertEqual(Formatters.currency.string(from: Decimal(-1000.10)), "-£1,000.10")
@@ -31,4 +32,5 @@ class FormattersTests: XCTestCase {
         let date = ISO8601DateFormatter().date(from: "2019-01-01T00:00:00Z")!
         XCTAssertEqual(Formatters.month.string(from: date), "January")
     }
+    #endif
 }

@@ -3,8 +3,10 @@ import Combine
 protocol UserBusinessLogicType {
     var user: AnyPublisher<User?, Never> { get }
     func fetchUser()
+    #if os(iOS) || os(macOS)
     func getUser() -> AnyPublisher<Void, Error>
     func update(user: User) -> AnyPublisher<Void, Error>
+    #endif
 }
 
 class UserBusinessLogic: UserBusinessLogicType {
@@ -40,6 +42,7 @@ class UserBusinessLogic: UserBusinessLogicType {
             }.eraseToAnyPublisher()
     }
 
+    #if os(iOS) || os(macOS)
     func update(user: User) -> AnyPublisher<Void, Error> {
         networkService
             .perform(api: API.user,
@@ -50,6 +53,7 @@ class UserBusinessLogic: UserBusinessLogicType {
                 self.internalUser = user
             }.eraseToAnyPublisher()
     }
+    #endif
 }
 
 #if DEBUG
@@ -63,8 +67,10 @@ extension Stub {
             allowance: 100.22,
             balance: 211.20)).eraseToAnyPublisher()
         func fetchUser() {}
+        #if os(iOS) || os(macOS)
         func getUser() -> AnyPublisher<Void, Error> { Empty().eraseToAnyPublisher() }
         func update(user: User) -> AnyPublisher<Void, Error> { Empty().eraseToAnyPublisher() }
+        #endif
     }
 }
 #endif

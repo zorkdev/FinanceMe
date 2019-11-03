@@ -43,6 +43,7 @@ class KeychainDataService: DataService {
         return value
     }
 
+    #if os(iOS) || os(macOS)
     func removeAll() {
         let secClasses = [kSecClassGenericPassword,
                           kSecClassGenericPassword,
@@ -56,6 +57,7 @@ class KeychainDataService: DataService {
             _ = SecItemDelete(query)
         }
     }
+    #endif
 }
 
 private extension KeychainDataService {

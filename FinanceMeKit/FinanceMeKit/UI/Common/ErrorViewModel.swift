@@ -1,3 +1,4 @@
+// swiftlint:disable unused_declaration
 class ErrorViewModel: ObservableObject {
     @Published var error: Error? {
         didSet {

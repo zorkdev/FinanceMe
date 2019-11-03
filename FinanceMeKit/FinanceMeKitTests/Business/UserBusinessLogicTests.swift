@@ -48,6 +48,7 @@ class UserBusinessLogicTests: XCTestCase {
         businessLogic.user.assertSuccess(self) { XCTAssertNil($0) }
     }
 
+    #if os(iOS) || os(macOS)
     func testUpdate_Success() {
         let expectedValue = User.stub
         networkService.performReturnValues = [expectedValue.jsonEncoded()]
@@ -69,11 +70,14 @@ class UserBusinessLogicTests: XCTestCase {
         businessLogic.update(user: User.stub).assertFailure(self) { XCTAssertTrue($0 is TestError) }
         businessLogic.user.assertSuccess(self) { XCTAssertNil($0) }
     }
+    #endif
 
     func testStub() {
         let stub = Stub.StubUserBusinessLogic()
         stub.fetchUser()
+        #if os(iOS) || os(macOS)
         _ = stub.getUser()
         _ = stub.update(user: User.stub)
+        #endif
     }
 }

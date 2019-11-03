@@ -20,7 +20,9 @@ protocol DataService {
     func save(value: Encodable, key: String) -> Result<Void, Error>
 
     func load<T: Decodable>(key: String) -> T?
+    #if os(iOS) || os(macOS)
     func removeAll()
+    #endif
 }
 
 #if DEBUG
@@ -28,7 +30,9 @@ extension Stub {
     class StubDataService: DataService {
         func save(value: Encodable, key: String) -> Result<Void, Error> { .success(()) }
         func load<T: Decodable>(key: String) -> T? { nil }
+        #if os(iOS) || os(macOS)
         func removeAll() {}
+        #endif
     }
 }
 #endif

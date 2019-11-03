@@ -34,15 +34,19 @@ class DefaultSessionServiceTests: XCTestCase {
         XCTAssertEqual(dataService.savedValues.first as? Session, expectedSession)
     }
 
+    #if os(iOS) || os(macOS)
     func testLogOut() {
         sessionService.logOut()
 
         XCTAssertTrue(dataService.didCallRemoveAll)
     }
+    #endif
 
     func testStub() {
         let stub = Stub.StubSessionService()
         _ = stub.save(session: Session.stub)
+        #if os(iOS) || os(macOS)
         stub.logOut()
+        #endif
     }
 }

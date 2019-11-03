@@ -1,6 +1,7 @@
 enum Formatters {
     static let locale = Locale(identifier: "en_GB")
 
+    #if os(iOS) || os(macOS)
     static let currency: NumberFormatter = {
         let formatter = NumberFormatter()
         formatter.locale = locale
@@ -36,4 +37,5 @@ enum Formatters {
         formatter.timeZone = locale.calendar.timeZone
         return formatter
     }
+    #endif
 }

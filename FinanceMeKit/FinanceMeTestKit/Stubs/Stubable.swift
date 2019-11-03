@@ -23,6 +23,7 @@ extension User: Stubable {
     }
 }
 
+#if os(iOS) || os(macOS)
 extension Transaction: Stubable {
     public static var stub: Transaction {
         Transaction(id: UUID(uuidString: "d7438025-a56b-47b8-bf62-0e4d38cd5a46")!,
@@ -45,3 +46,4 @@ extension Summary: Stubable {
                 ])
     }
 }
+#endif

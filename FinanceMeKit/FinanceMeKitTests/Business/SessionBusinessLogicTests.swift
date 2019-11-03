@@ -30,11 +30,13 @@ class SessionBusinessLogicTests: XCTestCase {
 
         businessLogic.isLoggedIn.assertSuccess(self) { XCTAssertTrue($0) }
 
+        #if os(iOS) || os(macOS)
         sessionService.hasSession = false
         businessLogic.logOut()
 
         businessLogic.isLoggedIn.assertSuccess(self) { XCTAssertFalse($0) }
         XCTAssertTrue(sessionService.didCallLogOut)
+        #endif
     }
 
     func testLogin_Failure() {
@@ -47,6 +49,8 @@ class SessionBusinessLogicTests: XCTestCase {
     func testStub() {
         let stub = Stub.StubSessionBusinessLogic()
         _ = stub.login(credentials: Credentials.stub)
+        #if os(iOS) || os(macOS)
         stub.logOut()
+        #endif
     }
 }

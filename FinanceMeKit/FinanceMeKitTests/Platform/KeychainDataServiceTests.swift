@@ -15,7 +15,9 @@ class KeychainDataServiceTests: XCTestCase {
 
     override func tearDown() {
         super.tearDown()
+        #if os(iOS) || os(macOS)
         dataService.removeAll()
+        #endif
     }
 
     func testSaveAndLoad_Success() throws {
@@ -63,6 +65,7 @@ class KeychainDataServiceTests: XCTestCase {
         XCTAssertNil(loadedItem)
     }
 
+    #if os(iOS) || os(macOS)
     func testRemoveAll() throws {
         let key = "key"
         let model = Model(variable: "value")
@@ -77,11 +80,14 @@ class KeychainDataServiceTests: XCTestCase {
 
         XCTAssertNil(retrievedAgainValue)
     }
+    #endif
 
     func testStub() {
         let stub = Stub.StubDataService()
         let _: Int? = stub.load(key: "")
         _ = stub.save(value: 1, key: "")
+        #if os(iOS) || os(macOS)
         stub.removeAll()
+        #endif
     }
 }

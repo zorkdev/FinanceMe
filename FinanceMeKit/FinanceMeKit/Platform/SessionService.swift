@@ -3,7 +3,9 @@ protocol SessionService {
     var session: Session? { get }
 
     func save(session: Session) -> Result<Void, Error>
+    #if os(iOS) || os(macOS)
     func logOut()
+    #endif
 }
 
 class DefaultSessionService: SessionService {
@@ -20,9 +22,11 @@ class DefaultSessionService: SessionService {
         session.save(dataService: dataService)
     }
 
+    #if os(iOS) || os(macOS)
     func logOut() {
         dataService.removeAll()
     }
+    #endif
 }
 
 #if DEBUG
@@ -31,7 +35,9 @@ extension Stub {
         let hasSession = true
         let session: Session? = nil
         func save(session: Session) -> Result<Void, Error> { .success(()) }
+        #if os(iOS) || os(macOS)
         func logOut() {}
+        #endif
     }
 }
 #endif
