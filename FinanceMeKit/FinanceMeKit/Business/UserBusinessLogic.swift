@@ -3,8 +3,10 @@ import Combine
 protocol UserBusinessLogicType {
     var user: AnyPublisher<User?, Never> { get }
     func fetchUser()
-    #if os(iOS) || os(macOS)
+    #if !os(tvOS)
     func getUser() -> AnyPublisher<Void, Error>
+    #endif
+    #if os(iOS) || os(macOS)
     func update(user: User) -> AnyPublisher<Void, Error>
     #endif
 }
@@ -67,8 +69,10 @@ extension Stub {
             allowance: 100.22,
             balance: 211.20)).eraseToAnyPublisher()
         func fetchUser() {}
-        #if os(iOS) || os(macOS)
+        #if !os(tvOS)
         func getUser() -> AnyPublisher<Void, Error> { Empty().eraseToAnyPublisher() }
+        #endif
+        #if os(iOS) || os(macOS)
         func update(user: User) -> AnyPublisher<Void, Error> { Empty().eraseToAnyPublisher() }
         #endif
     }
