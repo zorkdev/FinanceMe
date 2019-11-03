@@ -1,3 +1,5 @@
+import Foundation
+
 public struct NoReturnValueProviderError: Error {
     public let function: String
 
@@ -6,6 +8,8 @@ public struct NoReturnValueProviderError: Error {
     }
 }
 
-public struct TestError: Error {
+public struct TestError: Error, LocalizedError {
+    public let errorDescription: String? = "Test Error"
+
     public init() {}
 }

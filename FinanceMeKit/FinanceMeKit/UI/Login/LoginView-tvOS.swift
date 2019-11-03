@@ -10,17 +10,20 @@ public struct LoginView: View {
             Form {
                 Section {
                     TextField("Email", text: $viewModel.email)
+                        .textContentType(.emailAddress)
+                        .autocapitalization(.none)
+                        .keyboardType(.emailAddress)
                     SecureField("Password", text: $viewModel.password)
+                        .textContentType(.password)
                 }
                 Section {
                     Button("Log In", action: viewModel.onTap)
                         .disabled(viewModel.isDisabled)
                 }
             }
-            .padding()
-            .loading(loadingState)
-            .errorBanner(errorViewModel)
+            .navigationBarTitle("Login")
         }
+        .loading(loadingState)
     }
 
     public init(appState: AppState) {

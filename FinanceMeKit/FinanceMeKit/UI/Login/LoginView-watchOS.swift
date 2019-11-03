@@ -1,6 +1,8 @@
 import SwiftUI
 
 public struct LoginView: View {
+    private let loadingState = LoadingState()
+    private let errorViewModel = ErrorViewModel()
     @ObservedObject private var viewModel: LoginViewModel
 
     public var body: some View {
@@ -19,7 +21,9 @@ public struct LoginView: View {
     }
 
     public init(appState: AppState) {
-        self.viewModel = LoginViewModel(businessLogic: appState.sessionBusinessLogic)
+        self.viewModel = LoginViewModel(businessLogic: appState.sessionBusinessLogic,
+                                        loadingState: loadingState,
+                                        errorViewModel: errorViewModel)
     }
 }
 

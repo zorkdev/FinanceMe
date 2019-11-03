@@ -3,6 +3,7 @@ import SwiftUI
 public struct HomeView: View {
     private let appState: AppState
     private let loadingState = LoadingState()
+    private let errorViewModel = ErrorViewModel()
     @ObservedObject private var viewModel: HomeViewModel
 
     public var body: some View {
@@ -13,6 +14,7 @@ public struct HomeView: View {
     public init(appState: AppState) {
         self.appState = appState
         self.viewModel = HomeViewModel(loadingState: loadingState,
+                                       errorViewModel: errorViewModel,
                                        userBusinessLogic: appState.userBusinessLogic,
                                        transactionBusinessLogic: appState.transactionBusinessLogic,
                                        summaryBusinessLogic: appState.summaryBusinessLogic)

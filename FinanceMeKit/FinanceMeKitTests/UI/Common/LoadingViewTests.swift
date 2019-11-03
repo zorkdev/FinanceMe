@@ -4,14 +4,17 @@ import SwiftUI
 
 class LoadingViewTests: XCTestCase {
     struct TestView: View {
-        @State var isLoading = true
+        let loadingState: LoadingState
 
         var body: some View {
-            Spacer().loading(isLoading: $isLoading)
+            Spacer().loading(loadingState)
         }
     }
 
     func testView() {
-        assert(view: TestView())
+        let loadingState = LoadingState()
+        assert(view: TestView(loadingState: loadingState))
+        loadingState.isLoading = true
+        assert(view: TestView(loadingState: loadingState))
     }
 }

@@ -2,15 +2,15 @@ import SwiftUI
 
 public struct LoadingView<Presenting: View>: View {
     private let presenting: Presenting
-    @Binding private var isLoading: Bool
+    @ObservedObject private var loadingState: LoadingState
 
     public var body: some View {
         ZStack {
             presenting
-                .blur(radius: isLoading ? 4 : 0)
-                .disabled(isLoading)
+                .blur(radius: loadingState.isLoading ? 4 : 0)
+                .disabled(loadingState.isLoading)
 
-            if isLoading {
+            if loadingState.isLoading {
                 VStack {
                     ActivityIndicatorView(style: .large)
                     Text("Doing some magic... 😬")
@@ -20,14 +20,14 @@ public struct LoadingView<Presenting: View>: View {
         .animation(.easeInOut)
     }
 
-    public init(_ isLoading: Binding<Bool>, presenting: Presenting) {
-        self._isLoading = isLoading
+    public init(_ loadingState: LoadingState, presenting: Presenting) {
+        self.loadingState = loadingState
         self.presenting = presenting
     }
 }
 
 public extension View {
-    func loading(isLoading: Binding<Bool>) -> some View {
-        LoadingView(isLoading, presenting: self)
+    func loading(_ loadingState: LoadingState) -> some View {
+        LoadingView(loadingState, presenting: self)
     }
 }

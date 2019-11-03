@@ -1,6 +1,8 @@
 import SwiftUI
 
 public struct TransactionDetailView: View {
+    private let loadingState = LoadingState()
+    private let errorViewModel = ErrorViewModel()
     @Environment(\.presentationMode) private var presentationMode
     @ObservedObject private var viewModel: TransactionDetailViewModel
 
@@ -29,12 +31,15 @@ public struct TransactionDetailView: View {
         }
         .padding()
         .frame(idealWidth: 350)
-        .loading(isLoading: $viewModel.isLoading)
+        .loading(loadingState)
+        .errorBanner(errorViewModel)
         .dismiss(shouldDismiss: $viewModel.shouldDismiss)
     }
 
     public init(transaction: Transaction?, appState: AppState) {
         self.viewModel = TransactionDetailViewModel(transaction: transaction,
+                                                    loadingState: loadingState,
+                                                    errorViewModel: errorViewModel,
                                                     userBusinessLogic: appState.userBusinessLogic,
                                                     transactionBusinessLogic: appState.transactionBusinessLogic,
                                                     summaryBusinessLogic: appState.summaryBusinessLogic)

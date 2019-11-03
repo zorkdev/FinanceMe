@@ -21,6 +21,7 @@ class RegularsViewTests: XCTestCase {
                         source: .externalRegularOutbound)
         ]
 
-        assert(view: RegularsView(appState: appState, loadingState: LoadingState()), previews: RegularsViewPreviews.self)
+        assert(view: RegularsView(appState: appState, loadingState: LoadingState(), errorViewModel: ErrorViewModel()),
+               previews: RegularsViewPreviews.self)
     }
 }

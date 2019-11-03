@@ -4,12 +4,16 @@ import FinanceMeTestKit
 
 class LoginViewModelTests: XCTestCase {
     var businessLogic: MockSessionBusinessLogic!
+    var errorViewModel: ErrorViewModel!
     var viewModel: LoginViewModel!
 
     override func setUp() {
         super.setUp()
         businessLogic = MockSessionBusinessLogic()
-        viewModel = LoginViewModel(businessLogic: businessLogic)
+        errorViewModel = ErrorViewModel()
+        viewModel = LoginViewModel(businessLogic: businessLogic,
+                                   loadingState: LoadingState(),
+                                   errorViewModel: errorViewModel)
     }
 
     func testBindings() {
@@ -37,5 +41,19 @@ class LoginViewModelTests: XCTestCase {
         waitForEvent {
             XCTAssertEqual(self.businessLogic.lastLoginParam, credentials)
         }
+    }
+
+    func testOnTap_Failure() {
+        let credentials = Credentials(email: "test@test.com", password: "password")
+        viewModel.email = credentials.email
+        viewModel.password = credentials.password
+
+        businessLogic.loginReturnValue = .failure(TestError())
+
+        viewModel.onTap()
+
+        waitForEvent {}
+
+        XCTAssertTrue(errorViewModel.error is TestError)
     }
 }

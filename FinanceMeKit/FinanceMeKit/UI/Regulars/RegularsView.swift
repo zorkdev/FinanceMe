@@ -24,9 +24,12 @@ public struct RegularsView: View {
         }
     }
 
-    public init(appState: AppState, loadingState: LoadingState) {
+    public init(appState: AppState,
+                loadingState: LoadingState,
+                errorViewModel: ErrorViewModel) {
         self.appState = appState
         self.viewModel = RegularsViewModel(loadingState: loadingState,
+                                           errorViewModel: errorViewModel,
                                            userBusinessLogic: appState.userBusinessLogic,
                                            transactionBusinessLogic: appState.transactionBusinessLogic,
                                            summaryBusinessLogic: appState.summaryBusinessLogic)
@@ -37,7 +40,7 @@ public struct RegularsView: View {
 // swiftlint:disable unused_declaration
 struct RegularsViewPreviews: PreviewProvider {
     static var previews: some View {
-        RegularsView(appState: AppState.stub, loadingState: LoadingState())
+        RegularsView(appState: AppState.stub, loadingState: LoadingState(), errorViewModel: ErrorViewModel())
             .previewLayout(.sizeThatFits)
     }
 }

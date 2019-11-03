@@ -5,11 +5,13 @@ public class FeedViewModel: ObservableObject {
     private let transactionBusinessLogic: TransactionBusinessLogicType
     private let summaryBusinessLogic: SummaryBusinessLogicType
     private let loadingState: LoadingState
+    private let errorViewModel: ErrorViewModel
     private var cancellables: Set<AnyCancellable> = []
 
     @Published public var sections: [ListSection<Transaction>] = []
 
     public init(loadingState: LoadingState,
+                errorViewModel: ErrorViewModel,
                 userBusinessLogic: UserBusinessLogicType,
                 transactionBusinessLogic: TransactionBusinessLogicType,
                 summaryBusinessLogic: SummaryBusinessLogicType) {
@@ -17,6 +19,7 @@ public class FeedViewModel: ObservableObject {
         self.transactionBusinessLogic = transactionBusinessLogic
         self.summaryBusinessLogic = summaryBusinessLogic
         self.loadingState = loadingState
+        self.errorViewModel = errorViewModel
         setupBindings()
     }
 
@@ -39,8 +42,6 @@ public class FeedViewModel: ObservableObject {
             .flatMap { transactionBusinessLogic.delete(transaction: section.rows[$0]) }?
             .flatMap { self.userBusinessLogic.getUser() }
             .flatMap { self.summaryBusinessLogic.getSummary() }
-            .receive(on: DispatchQueue.main)
-            .sink(receiveCompletion: { _ in self.loadingState.isLoading = false }, receiveValue: {})
-            .store(in: &cancellables)
+            .handleResult(loadingState: loadingState, errorViewModel: errorViewModel, cancellables: &cancellables)
     }
 }

@@ -11,19 +11,14 @@ public extension Publisher {
                 done()
             }
 
-            cancellable = self.receive(on: DispatchQueue.main)
+            cancellable = self
+                .receive(on: DispatchQueue.main)
                 .mapError { error -> Failure in
                     XCTFail("Should not have failed.")
                     action()
                     return error
                 }
-                .sink(receiveCompletion: { completion in
-                    if case .failure(let error) = completion {
-                        XCTFail(error.localizedDescription)
-                        action()
-                        return
-                    }
-                }, receiveValue: { output in
+                .sink(receiveCompletion: { _ in }, receiveValue: { output in
                     assertion(output)
                     action()
                 })

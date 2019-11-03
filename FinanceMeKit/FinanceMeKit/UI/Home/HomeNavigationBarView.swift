@@ -59,10 +59,13 @@ public struct HomeNavigationBarView: View {
         .padding(.bottom, 8)
     }
 
-    public init(appState: AppState, loadingState: LoadingState) {
+    public init(appState: AppState,
+                loadingState: LoadingState,
+                errorViewModel: ErrorViewModel) {
         self.appState = appState
         self.loadingState = loadingState
         self.viewModel = HomeViewModel(loadingState: loadingState,
+                                       errorViewModel: errorViewModel,
                                        userBusinessLogic: appState.userBusinessLogic,
                                        transactionBusinessLogic: appState.transactionBusinessLogic,
                                        summaryBusinessLogic: appState.summaryBusinessLogic)
@@ -73,7 +76,9 @@ public struct HomeNavigationBarView: View {
 // swiftlint:disable unused_declaration
 struct HomeNavigationBarViewPreviews: PreviewProvider {
     static var previews: some View {
-        HomeNavigationBarView(appState: AppState.stub, loadingState: LoadingState())
+        HomeNavigationBarView(appState: AppState.stub,
+                              loadingState: LoadingState(),
+                              errorViewModel: ErrorViewModel())
             .previewLayout(.sizeThatFits)
     }
 }

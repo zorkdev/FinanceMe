@@ -6,6 +6,7 @@ class RegularsViewModelTests: XCTestCase {
     var userBusinessLogic: MockUserBusinessLogic!
     var transactionBusinessLogic: MockTransactionBusinessLogic!
     var summaryBusinessLogic: MockSummaryBusinessLogic!
+    var errorViewModel: ErrorViewModel!
     var viewModel: RegularsViewModel!
 
     override func setUp() {
@@ -13,7 +14,9 @@ class RegularsViewModelTests: XCTestCase {
         userBusinessLogic = MockUserBusinessLogic()
         transactionBusinessLogic = MockTransactionBusinessLogic()
         summaryBusinessLogic = MockSummaryBusinessLogic()
+        errorViewModel = ErrorViewModel()
         viewModel = RegularsViewModel(loadingState: LoadingState(),
+                                      errorViewModel: errorViewModel,
                                       userBusinessLogic: userBusinessLogic,
                                       transactionBusinessLogic: transactionBusinessLogic,
                                       summaryBusinessLogic: summaryBusinessLogic)
@@ -57,7 +60,7 @@ class RegularsViewModelTests: XCTestCase {
         }
     }
 
-    func testOnDelete() {
+    func testOnDelete_Success() {
         let transaction = Transaction(id: UUID(),
                                       amount: 210.42,
                                       direction: .inbound,
@@ -79,5 +82,25 @@ class RegularsViewModelTests: XCTestCase {
         XCTAssertEqual(transactionBusinessLogic.lastDeleteParam, transaction)
         XCTAssertTrue(userBusinessLogic.didCallGetUser)
         XCTAssertTrue(summaryBusinessLogic.didCallGetSummary)
+    }
+
+    func testOnDelete_Failure() {
+        let transaction = Transaction(id: UUID(),
+                                      amount: 210.42,
+                                      direction: .inbound,
+                                      created: ISO8601DateFormatter().date(from: "2019-01-01T00:00:00Z")!,
+                                      narrative: "Transaction",
+                                      source: .externalRegularInbound)
+
+        transactionBusinessLogic.transactionsReturnValue = [transaction]
+        transactionBusinessLogic.deleteReturnValue = .failure(TestError())
+
+        waitForEvent {}
+
+        viewModel.onDelete(section: viewModel.incomingSection, row: IndexSet(integer: 0))
+
+        waitForEvent {}
+
+        XCTAssertTrue(errorViewModel.error is TestError)
     }
 }

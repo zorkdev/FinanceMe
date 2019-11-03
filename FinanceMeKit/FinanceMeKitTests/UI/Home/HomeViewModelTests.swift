@@ -6,6 +6,7 @@ class HomeViewModelTests: XCTestCase {
     var userBusinessLogic: MockUserBusinessLogic!
     var transactionBusinessLogic: MockTransactionBusinessLogic!
     var summaryBusinessLogic: MockSummaryBusinessLogic!
+    var errorViewModel: ErrorViewModel!
     var viewModel: HomeViewModel!
 
     override func setUp() {
@@ -13,7 +14,9 @@ class HomeViewModelTests: XCTestCase {
         userBusinessLogic = MockUserBusinessLogic()
         transactionBusinessLogic = MockTransactionBusinessLogic()
         summaryBusinessLogic = MockSummaryBusinessLogic()
+        errorViewModel = ErrorViewModel()
         viewModel = HomeViewModel(loadingState: LoadingState(),
+                                  errorViewModel: errorViewModel,
                                   userBusinessLogic: userBusinessLogic,
                                   transactionBusinessLogic: transactionBusinessLogic,
                                   summaryBusinessLogic: summaryBusinessLogic)
@@ -26,7 +29,7 @@ class HomeViewModelTests: XCTestCase {
         XCTAssertTrue(summaryBusinessLogic.didCallFetchSummary)
     }
 
-    func testOnRefresh() {
+    func testOnRefresh_Success() {
         userBusinessLogic.getUserReturnValue = .success(())
         transactionBusinessLogic.getTransactionsReturnValue = .success(())
         summaryBusinessLogic.getSummaryReturnValue = .success(())
@@ -38,5 +41,17 @@ class HomeViewModelTests: XCTestCase {
         XCTAssertTrue(userBusinessLogic.didCallGetUser)
         XCTAssertTrue(transactionBusinessLogic.didCallGetTransactions)
         XCTAssertTrue(summaryBusinessLogic.didCallGetSummary)
+    }
+
+    func testOnRefresh_Failure() {
+        userBusinessLogic.getUserReturnValue = .success(())
+        transactionBusinessLogic.getTransactionsReturnValue = .success(())
+        summaryBusinessLogic.getSummaryReturnValue = .failure(TestError())
+
+        viewModel.onRefresh()
+
+        waitForEvent {}
+
+        XCTAssertTrue(errorViewModel.error is TestError)
     }
 }

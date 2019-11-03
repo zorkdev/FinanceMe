@@ -6,6 +6,7 @@ class TransactionDetailViewModelTests: XCTestCase {
     var userBusinessLogic: MockUserBusinessLogic!
     var transactionBusinessLogic: MockTransactionBusinessLogic!
     var summaryBusinessLogic: MockSummaryBusinessLogic!
+    var errorViewModel: ErrorViewModel!
     var viewModel: TransactionDetailViewModel!
 
     override func setUp() {
@@ -13,7 +14,10 @@ class TransactionDetailViewModelTests: XCTestCase {
         userBusinessLogic = MockUserBusinessLogic()
         transactionBusinessLogic = MockTransactionBusinessLogic()
         summaryBusinessLogic = MockSummaryBusinessLogic()
+        errorViewModel = ErrorViewModel()
         viewModel = TransactionDetailViewModel(transaction: Transaction.stub,
+                                               loadingState: LoadingState(),
+                                               errorViewModel: errorViewModel,
                                                userBusinessLogic: userBusinessLogic,
                                                transactionBusinessLogic: transactionBusinessLogic,
                                                summaryBusinessLogic: summaryBusinessLogic)
@@ -70,6 +74,8 @@ class TransactionDetailViewModelTests: XCTestCase {
         summaryBusinessLogic.getSummaryReturnValue = .success(())
 
         viewModel = TransactionDetailViewModel(transaction: nil,
+                                               loadingState: LoadingState(),
+                                               errorViewModel: errorViewModel,
                                                userBusinessLogic: userBusinessLogic,
                                                transactionBusinessLogic: transactionBusinessLogic,
                                                summaryBusinessLogic: summaryBusinessLogic)
@@ -101,5 +107,17 @@ class TransactionDetailViewModelTests: XCTestCase {
 
         XCTAssertTrue(userBusinessLogic.didCallGetUser)
         XCTAssertTrue(summaryBusinessLogic.didCallGetSummary)
+    }
+
+    func testOnSave_Failure() {
+        transactionBusinessLogic.updateReturnValue = .failure(TestError())
+
+        viewModel.narrative = "Test Narrative"
+        waitForEvent {}
+
+        viewModel.onSave()
+        waitForEvent {}
+
+        XCTAssertTrue(errorViewModel.error is TestError)
     }
 }

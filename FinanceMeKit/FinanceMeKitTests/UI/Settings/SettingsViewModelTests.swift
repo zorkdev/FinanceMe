@@ -7,6 +7,7 @@ class SettingsViewModelTests: XCTestCase {
     var userBusinessLogic: MockUserBusinessLogic!
     var transactionBusinessLogic: MockTransactionBusinessLogic!
     var summaryBusinessLogic: MockSummaryBusinessLogic!
+    var errorViewModel: ErrorViewModel!
     var viewModel: SettingsViewModel!
 
     override func setUp() {
@@ -15,10 +16,13 @@ class SettingsViewModelTests: XCTestCase {
         userBusinessLogic = MockUserBusinessLogic()
         transactionBusinessLogic = MockTransactionBusinessLogic()
         summaryBusinessLogic = MockSummaryBusinessLogic()
+        errorViewModel = ErrorViewModel()
         viewModel = SettingsViewModel(sessionBusinessLogic: sessionBusinessLogic,
                                       userBusinessLogic: userBusinessLogic,
                                       transactionBusinessLogic: transactionBusinessLogic,
-                                      summaryBusinessLogic: summaryBusinessLogic)
+                                      summaryBusinessLogic: summaryBusinessLogic,
+                                      loadingState: LoadingState(),
+                                      errorViewModel: errorViewModel)
     }
 
     func testIsEditing() {
@@ -37,7 +41,7 @@ class SettingsViewModelTests: XCTestCase {
         XCTAssertEqual(viewModel.name, User.stub.name)
     }
 
-    func testSave() {
+    func testSave_Success() {
         userBusinessLogic.userReturnValue = User.stub
         userBusinessLogic.updateReturnValue = .success(())
         summaryBusinessLogic.getSummaryReturnValue = .success(())
@@ -82,7 +86,21 @@ class SettingsViewModelTests: XCTestCase {
         XCTAssertTrue(viewModel.shouldDismiss)
     }
 
-    func testReconcile() {
+    func testSave_Failure() {
+        userBusinessLogic.userReturnValue = User.stub
+        userBusinessLogic.updateReturnValue = .failure(TestError())
+        waitForEvent {}
+
+        viewModel.name = "Test Name"
+        waitForEvent {}
+
+        viewModel.onSave()
+        waitForEvent {}
+
+        XCTAssertTrue(errorViewModel.error is TestError)
+    }
+
+    func testReconcile_Success() {
         transactionBusinessLogic.reconcileReturnValue = .success(())
 
         viewModel.onReconcile()
@@ -90,6 +108,16 @@ class SettingsViewModelTests: XCTestCase {
         waitForEvent {}
 
         XCTAssertTrue(transactionBusinessLogic.didCallReconcile)
+    }
+
+    func testReconcile_Failure() {
+        transactionBusinessLogic.reconcileReturnValue = .failure(TestError())
+
+        viewModel.onReconcile()
+
+        waitForEvent {}
+
+        XCTAssertTrue(errorViewModel.error is TestError)
     }
 
     func testLogOut() {

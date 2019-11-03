@@ -1,6 +1,8 @@
 import SwiftUI
 
 public struct SettingsView: View {
+    private let loadingState = LoadingState()
+    private let errorViewModel = ErrorViewModel()
     @Environment(\.presentationMode) private var presentationMode
     @ObservedObject private var viewModel: SettingsViewModel
 
@@ -34,7 +36,8 @@ public struct SettingsView: View {
         }
         .padding()
         .frame(idealWidth: 350)
-        .loading(isLoading: $viewModel.isLoading)
+        .loading(loadingState)
+        .errorBanner(errorViewModel)
         .dismiss(shouldDismiss: $viewModel.shouldDismiss)
     }
 
@@ -42,7 +45,9 @@ public struct SettingsView: View {
         self.viewModel = SettingsViewModel(sessionBusinessLogic: appState.sessionBusinessLogic,
                                            userBusinessLogic: appState.userBusinessLogic,
                                            transactionBusinessLogic: appState.transactionBusinessLogic,
-                                           summaryBusinessLogic: appState.summaryBusinessLogic)
+                                           summaryBusinessLogic: appState.summaryBusinessLogic,
+                                           loadingState: loadingState,
+                                           errorViewModel: errorViewModel)
     }
 }
 

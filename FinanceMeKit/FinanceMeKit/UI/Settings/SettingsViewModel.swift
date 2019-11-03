@@ -7,6 +7,8 @@ public class SettingsViewModel: ObservableObject {
     private let userBusinessLogic: UserBusinessLogicType
     private let transactionBusinessLogic: TransactionBusinessLogicType
     private let summaryBusinessLogic: SummaryBusinessLogicType
+    private let loadingState: LoadingState
+    private let errorViewModel: ErrorViewModel
     private var user: User?
     private var cancellables: Set<AnyCancellable> = []
 
@@ -17,7 +19,6 @@ public class SettingsViewModel: ObservableObject {
     @Published public var isEditing = false
     @Published public var isDisabled = true
     @Published public var shouldDismiss = false
-    @Published public var isLoading = false
 
     public let paydays = Array(1...28)
 
@@ -38,11 +39,15 @@ public class SettingsViewModel: ObservableObject {
     public init(sessionBusinessLogic: SessionBusinessLogicType,
                 userBusinessLogic: UserBusinessLogicType,
                 transactionBusinessLogic: TransactionBusinessLogicType,
-                summaryBusinessLogic: SummaryBusinessLogicType) {
+                summaryBusinessLogic: SummaryBusinessLogicType,
+                loadingState: LoadingState,
+                errorViewModel: ErrorViewModel) {
         self.sessionBusinessLogic = sessionBusinessLogic
         self.userBusinessLogic = userBusinessLogic
         self.transactionBusinessLogic = transactionBusinessLogic
         self.summaryBusinessLogic = summaryBusinessLogic
+        self.loadingState = loadingState
+        self.errorViewModel = errorViewModel
         setupBindings()
     }
 
@@ -89,23 +94,20 @@ public class SettingsViewModel: ObservableObject {
     func onSave() {
         guard let newUser = newUser else { return }
 
-        isLoading = true
+        loadingState.isLoading = true
 
         userBusinessLogic.update(user: newUser)
             .flatMap { self.summaryBusinessLogic.getSummary() }
-            .receive(on: DispatchQueue.main)
-            .sink(receiveCompletion: { _ in self.isLoading = false },
-                  receiveValue: { self.shouldDismiss = true })
-            .store(in: &cancellables)
+            .handleResult(loadingState: loadingState, errorViewModel: errorViewModel, cancellables: &cancellables) {
+                self.shouldDismiss = true
+            }
     }
 
     func onReconcile() {
-        isLoading = true
+        loadingState.isLoading = true
 
         transactionBusinessLogic.reconcile()
-            .receive(on: DispatchQueue.main)
-            .sink(receiveCompletion: { _ in self.isLoading = false }, receiveValue: {})
-            .store(in: &cancellables)
+            .handleResult(loadingState: loadingState, errorViewModel: errorViewModel, cancellables: &cancellables)
     }
 
     func onLogOut() {

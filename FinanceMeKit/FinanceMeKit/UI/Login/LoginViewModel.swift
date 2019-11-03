@@ -2,6 +2,8 @@ import Combine
 
 public class LoginViewModel: ObservableObject {
     private let businessLogic: SessionBusinessLogicType
+    private let loadingState: LoadingState
+    private let errorViewModel: ErrorViewModel
     private var cancellables: Set<AnyCancellable> = []
 
     @Published public var email: String = ""
@@ -9,8 +11,12 @@ public class LoginViewModel: ObservableObject {
     @Published public var isDisabled = true
     @Published public var isLoading = false
 
-    public init(businessLogic: SessionBusinessLogicType) {
+    public init(businessLogic: SessionBusinessLogicType,
+                loadingState: LoadingState,
+                errorViewModel: ErrorViewModel) {
         self.businessLogic = businessLogic
+        self.loadingState = loadingState
+        self.errorViewModel = errorViewModel
         setupBindings()
     }
 
@@ -18,9 +24,7 @@ public class LoginViewModel: ObservableObject {
         isLoading = true
 
         businessLogic.login(credentials: Credentials(email: email, password: password))
-            .receive(on: DispatchQueue.main)
-            .sink(receiveCompletion: { _ in self.isLoading = false }, receiveValue: {})
-            .store(in: &cancellables)
+            .handleResult(loadingState: loadingState, errorViewModel: errorViewModel, cancellables: &cancellables)
     }
 
     private func setupBindings() {

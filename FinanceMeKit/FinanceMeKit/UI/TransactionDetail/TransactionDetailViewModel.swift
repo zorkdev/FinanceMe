@@ -7,6 +7,8 @@ public class TransactionDetailViewModel: ObservableObject {
     private let transactionBusinessLogic: TransactionBusinessLogicType
     private let summaryBusinessLogic: SummaryBusinessLogicType
     private let transaction: Transaction?
+    private let loadingState: LoadingState
+    private let errorViewModel: ErrorViewModel
     private var cancellables: Set<AnyCancellable> = []
     private let id = UUID()
 
@@ -16,7 +18,6 @@ public class TransactionDetailViewModel: ObservableObject {
     @Published public var date: Date
     @Published public var isDisabled = true
     @Published public var shouldDismiss = false
-    @Published public var isLoading = false
 
     private var amountValue: Decimal? { Self.formatter.decimal(from: amount) }
 
@@ -40,6 +41,8 @@ public class TransactionDetailViewModel: ObservableObject {
     }
 
     public init(transaction: Transaction?,
+                loadingState: LoadingState,
+                errorViewModel: ErrorViewModel,
                 userBusinessLogic: UserBusinessLogicType,
                 transactionBusinessLogic: TransactionBusinessLogicType,
                 summaryBusinessLogic: SummaryBusinessLogicType) {
@@ -47,6 +50,8 @@ public class TransactionDetailViewModel: ObservableObject {
         self.transactionBusinessLogic = transactionBusinessLogic
         self.summaryBusinessLogic = summaryBusinessLogic
         self.transaction = transaction
+        self.loadingState = loadingState
+        self.errorViewModel = errorViewModel
 
         if let amount = transaction?.amount {
             self.amount = Self.formatter.string(from: abs(amount))
@@ -56,35 +61,6 @@ public class TransactionDetailViewModel: ObservableObject {
         self.category = transaction?.source ?? .externalOutbound
         self.date = transaction?.created ?? Date()
         setupBindings()
-    }
-
-    func onAmountEditingChanged(isEditing: Bool) {
-        if let amountValue = amountValue {
-            amount = Self.formatter.string(from: amountValue)
-        } else {
-            amount = ""
-        }
-    }
-
-    func onSave() {
-        guard let newTransaction = newTransaction else { return }
-
-        isLoading = true
-
-        let publisher: AnyPublisher<Void, Error>
-        if transaction != nil {
-            publisher = transactionBusinessLogic.update(transaction: newTransaction)
-        } else {
-            publisher = transactionBusinessLogic.create(transaction: newTransaction)
-        }
-
-        publisher
-            .flatMap { self.userBusinessLogic.getUser() }
-            .flatMap { self.summaryBusinessLogic.getSummary() }
-            .receive(on: DispatchQueue.main)
-            .sink(receiveCompletion: { _ in self.isLoading = false },
-                  receiveValue: { self.shouldDismiss = true })
-            .store(in: &cancellables)
     }
 
     private func setupBindings() {
@@ -100,5 +76,33 @@ public class TransactionDetailViewModel: ObservableObject {
                 return false
             }.assign(to: \.isDisabled, on: self)
             .store(in: &cancellables)
+    }
+
+    func onAmountEditingChanged(isEditing: Bool) {
+        if let amountValue = amountValue {
+            amount = Self.formatter.string(from: amountValue)
+        } else {
+            amount = ""
+        }
+    }
+
+    func onSave() {
+        guard let newTransaction = newTransaction else { return }
+
+        loadingState.isLoading = true
+
+        let publisher: AnyPublisher<Void, Error>
+        if transaction != nil {
+            publisher = transactionBusinessLogic.update(transaction: newTransaction)
+        } else {
+            publisher = transactionBusinessLogic.create(transaction: newTransaction)
+        }
+
+        publisher
+            .flatMap { self.userBusinessLogic.getUser() }
+            .flatMap { self.summaryBusinessLogic.getSummary() }
+            .handleResult(loadingState: loadingState, errorViewModel: errorViewModel, cancellables: &cancellables) {
+                self.shouldDismiss = true
+            }
     }
 }

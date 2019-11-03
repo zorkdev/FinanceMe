@@ -5,9 +5,11 @@ public class HomeViewModel: ObservableObject {
     private let transactionBusinessLogic: TransactionBusinessLogicType
     private let summaryBusinessLogic: SummaryBusinessLogicType
     private let loadingState: LoadingState
+    private let errorViewModel: ErrorViewModel
     private var cancellables: Set<AnyCancellable> = []
 
     public init(loadingState: LoadingState,
+                errorViewModel: ErrorViewModel,
                 userBusinessLogic: UserBusinessLogicType,
                 transactionBusinessLogic: TransactionBusinessLogicType,
                 summaryBusinessLogic: SummaryBusinessLogicType) {
@@ -15,6 +17,7 @@ public class HomeViewModel: ObservableObject {
         self.transactionBusinessLogic = transactionBusinessLogic
         self.summaryBusinessLogic = summaryBusinessLogic
         self.loadingState = loadingState
+        self.errorViewModel = errorViewModel
     }
 
     func onAppear() {
@@ -28,8 +31,6 @@ public class HomeViewModel: ObservableObject {
         userBusinessLogic.getUser()
             .flatMap { self.transactionBusinessLogic.getTransactions() }
             .flatMap { self.summaryBusinessLogic.getSummary() }
-            .receive(on: DispatchQueue.main)
-            .sink(receiveCompletion: { _ in self.loadingState.isLoading = false }, receiveValue: {})
-            .store(in: &cancellables)
+            .handleResult(loadingState: loadingState, errorViewModel: errorViewModel, cancellables: &cancellables)
     }
 }
