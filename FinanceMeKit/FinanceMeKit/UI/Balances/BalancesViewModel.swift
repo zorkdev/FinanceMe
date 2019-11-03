@@ -1,20 +1,20 @@
 import Combine
 
-public class BalancesViewModel: ObservableObject {
-    public struct Summary: Identifiable, Equatable {
-        public let summary: EndOfMonthSummary
-        public var narrative: String { Formatters.month.string(from: summary.created) }
-        public var amount: Decimal { summary.balance }
-        public var id: Date { summary.created }
+class BalancesViewModel: ObservableObject {
+    struct Summary: Identifiable, Equatable {
+        let summary: EndOfMonthSummary
+        var narrative: String { Formatters.month.string(from: summary.created) }
+        var amount: Decimal { summary.balance }
+        var id: Date { summary.created }
     }
 
     private let businessLogic: SummaryBusinessLogicType
     private var cancellables: Set<AnyCancellable> = []
 
-    @Published public var currentMonth = CurrentMonthSummary(allowance: 0, forecast: 0, spending: 0)
-    @Published public var summarySections: [ListSection<Summary>] = []
+    @Published var currentMonth = CurrentMonthSummary(allowance: 0, forecast: 0, spending: 0)
+    @Published var summarySections: [ListSection<Summary>] = []
 
-    public init(businessLogic: SummaryBusinessLogicType) {
+    init(businessLogic: SummaryBusinessLogicType) {
         self.businessLogic = businessLogic
         setupBindings()
     }

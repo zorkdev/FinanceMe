@@ -1,11 +1,11 @@
 import SwiftUI
 
-public struct Dismiss<Presenting: View>: View {
+struct Dismiss<Presenting: View>: View {
     private let presenting: Presenting
     @Environment(\.presentationMode) private var presentationMode
     @Binding private var shouldDismiss: Bool
 
-    public var body: some View {
+    var body: some View {
         Group {
             presenting
 
@@ -17,13 +17,13 @@ public struct Dismiss<Presenting: View>: View {
         }
     }
 
-    public init(_ shouldDismiss: Binding<Bool>, presenting: Presenting) {
+    init(_ shouldDismiss: Binding<Bool>, presenting: Presenting) {
         self._shouldDismiss = shouldDismiss
         self.presenting = presenting
     }
 }
 
-public extension View {
+extension View {
     func dismiss(shouldDismiss: Binding<Bool>) -> some View {
         Dismiss(shouldDismiss, presenting: self)
     }

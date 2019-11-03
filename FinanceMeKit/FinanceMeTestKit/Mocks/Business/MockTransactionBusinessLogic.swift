@@ -1,5 +1,5 @@
 import Combine
-import FinanceMeKit
+@testable import FinanceMeKit
 
 public class MockTransactionBusinessLogic: TransactionBusinessLogicType {
     @Published public var transactionsReturnValue: [Transaction] = [Transaction.stub]

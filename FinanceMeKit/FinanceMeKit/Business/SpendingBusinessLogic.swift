@@ -1,7 +1,5 @@
-public struct SpendingBusinessLogic {
-    public init() {}
-
-    public func icon(for allowance: Decimal) -> String {
+struct SpendingBusinessLogic {
+    func icon(for allowance: Decimal) -> String {
         switch allowance {
         case -.greatestFiniteMagnitude ... -100: return "😱"
         case -100 ... -50: return "😨"

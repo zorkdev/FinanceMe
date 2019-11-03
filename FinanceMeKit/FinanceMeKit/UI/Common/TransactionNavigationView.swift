@@ -1,11 +1,11 @@
 import SwiftUI
 
-public struct TransactionNavigationView: View {
+struct TransactionNavigationView: View {
     private let appState: AppState
     private let transaction: Transaction
     @State private var isDetailPresented = false
 
-    public var body: some View {
+    var body: some View {
         TransactionView(viewModel: TransactionViewModel(narrative: transaction.narrative,
                                                         amount: transaction.amount))
             .onTapGesture { self.isDetailPresented = true }

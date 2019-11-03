@@ -1,10 +1,10 @@
 import SwiftUI
 
-public struct FeedView: View {
+struct FeedView: View {
     private let appState: AppState
     @ObservedObject private var viewModel: FeedViewModel
 
-    public var body: some View {
+    var body: some View {
         List {
             ForEach(viewModel.sections) { section in
                 Section(header: Text(section.title.uppercased())) {
@@ -17,9 +17,9 @@ public struct FeedView: View {
         }
     }
 
-    public init(appState: AppState,
-                loadingState: LoadingState,
-                errorViewModel: ErrorViewModel) {
+    init(appState: AppState,
+         loadingState: LoadingState,
+         errorViewModel: ErrorViewModel) {
         self.appState = appState
         self.viewModel = FeedViewModel(loadingState: loadingState,
                                        errorViewModel: errorViewModel,

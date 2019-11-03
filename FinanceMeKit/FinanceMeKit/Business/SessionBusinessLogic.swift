@@ -1,6 +1,6 @@
 import Combine
 
-public protocol SessionBusinessLogicType {
+protocol SessionBusinessLogicType {
     var isLoggedIn: AnyPublisher<Bool, Never> { get }
     func login(credentials: Credentials) -> AnyPublisher<Void, Error>
     func logOut()

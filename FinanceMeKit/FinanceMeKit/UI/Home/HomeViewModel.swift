@@ -1,6 +1,6 @@
 import Combine
 
-public class HomeViewModel: ObservableObject {
+class HomeViewModel: ObservableObject {
     private let userBusinessLogic: UserBusinessLogicType
     private let transactionBusinessLogic: TransactionBusinessLogicType
     private let summaryBusinessLogic: SummaryBusinessLogicType
@@ -8,11 +8,11 @@ public class HomeViewModel: ObservableObject {
     private let errorViewModel: ErrorViewModel
     private var cancellables: Set<AnyCancellable> = []
 
-    public init(loadingState: LoadingState,
-                errorViewModel: ErrorViewModel,
-                userBusinessLogic: UserBusinessLogicType,
-                transactionBusinessLogic: TransactionBusinessLogicType,
-                summaryBusinessLogic: SummaryBusinessLogicType) {
+    init(loadingState: LoadingState,
+         errorViewModel: ErrorViewModel,
+         userBusinessLogic: UserBusinessLogicType,
+         transactionBusinessLogic: TransactionBusinessLogicType,
+         summaryBusinessLogic: SummaryBusinessLogicType) {
         self.userBusinessLogic = userBusinessLogic
         self.transactionBusinessLogic = transactionBusinessLogic
         self.summaryBusinessLogic = summaryBusinessLogic

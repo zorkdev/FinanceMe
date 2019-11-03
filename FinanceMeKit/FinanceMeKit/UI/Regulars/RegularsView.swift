@@ -1,10 +1,10 @@
 import SwiftUI
 
-public struct RegularsView: View {
+struct RegularsView: View {
     private let appState: AppState
     @ObservedObject private var viewModel: RegularsViewModel
 
-    public var body: some View {
+    var body: some View {
         List {
             Section(header: Text("MONTHLY BALANCE")) {
                 MonthlyBalanceView(monthlyBalance: viewModel.monthlyBalance)
@@ -24,9 +24,9 @@ public struct RegularsView: View {
         }
     }
 
-    public init(appState: AppState,
-                loadingState: LoadingState,
-                errorViewModel: ErrorViewModel) {
+    init(appState: AppState,
+         loadingState: LoadingState,
+         errorViewModel: ErrorViewModel) {
         self.appState = appState
         self.viewModel = RegularsViewModel(loadingState: loadingState,
                                            errorViewModel: errorViewModel,

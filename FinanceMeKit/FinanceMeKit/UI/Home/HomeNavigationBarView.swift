@@ -1,13 +1,13 @@
 import SwiftUI
 
-public struct HomeNavigationBarView: View {
+struct HomeNavigationBarView: View {
     private let appState: AppState
     @State private var isSettingsPresented = false
     @State private var isTransactionDetailPresented = false
     @ObservedObject private var loadingState: LoadingState
     @ObservedObject private var viewModel: HomeViewModel
 
-    public var body: some View {
+    var body: some View {
         HStack {
             Text("FinanceMe").font(.largeTitle).bold()
 
@@ -59,9 +59,9 @@ public struct HomeNavigationBarView: View {
         .padding(.bottom, 8)
     }
 
-    public init(appState: AppState,
-                loadingState: LoadingState,
-                errorViewModel: ErrorViewModel) {
+    init(appState: AppState,
+         loadingState: LoadingState,
+         errorViewModel: ErrorViewModel) {
         self.appState = appState
         self.loadingState = loadingState
         self.viewModel = HomeViewModel(loadingState: loadingState,

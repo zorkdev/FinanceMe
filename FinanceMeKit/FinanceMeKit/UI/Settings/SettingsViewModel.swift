@@ -1,6 +1,6 @@
 import Combine
 
-public class SettingsViewModel: ObservableObject {
+class SettingsViewModel: ObservableObject {
     private static let formatter = Formatters.currency
 
     private let sessionBusinessLogic: SessionBusinessLogicType
@@ -12,15 +12,15 @@ public class SettingsViewModel: ObservableObject {
     private var user: User?
     private var cancellables: Set<AnyCancellable> = []
 
-    @Published public var name = ""
-    @Published public var limit = ""
-    @Published public var payday = 1
-    @Published public var date = Date()
-    @Published public var isEditing = false
-    @Published public var isDisabled = true
-    @Published public var shouldDismiss = false
+    @Published var name = ""
+    @Published var limit = ""
+    @Published var payday = 1
+    @Published var date = Date()
+    @Published var isEditing = false
+    @Published var isDisabled = true
+    @Published var shouldDismiss = false
 
-    public let paydays = Array(1...28)
+    let paydays = Array(1...28)
 
     private var limitValue: Decimal? { Self.formatter.decimal(from: limit) }
 
@@ -36,12 +36,12 @@ public class SettingsViewModel: ObservableObject {
                     balance: user.balance)
     }
 
-    public init(sessionBusinessLogic: SessionBusinessLogicType,
-                userBusinessLogic: UserBusinessLogicType,
-                transactionBusinessLogic: TransactionBusinessLogicType,
-                summaryBusinessLogic: SummaryBusinessLogicType,
-                loadingState: LoadingState,
-                errorViewModel: ErrorViewModel) {
+    init(sessionBusinessLogic: SessionBusinessLogicType,
+         userBusinessLogic: UserBusinessLogicType,
+         transactionBusinessLogic: TransactionBusinessLogicType,
+         summaryBusinessLogic: SummaryBusinessLogicType,
+         loadingState: LoadingState,
+         errorViewModel: ErrorViewModel) {
         self.sessionBusinessLogic = sessionBusinessLogic
         self.userBusinessLogic = userBusinessLogic
         self.transactionBusinessLogic = transactionBusinessLogic

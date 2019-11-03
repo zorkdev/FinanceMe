@@ -1,5 +1,5 @@
 import Combine
-import FinanceMeKit
+@testable import FinanceMeKit
 
 public class MockAuthenticationBusinessLogic: AuthenticationBusinessLogicType {
     @Published public var isAuthenticatedReturnValue = false

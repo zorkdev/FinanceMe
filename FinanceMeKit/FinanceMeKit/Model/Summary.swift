@@ -1,15 +1,15 @@
-public struct EndOfMonthSummary: Codable, Equatable {
-    public let balance: Decimal
-    public let created: Date
+struct EndOfMonthSummary: Codable, Equatable {
+    let balance: Decimal
+    let created: Date
 }
 
-public struct CurrentMonthSummary: Codable, Equatable {
-    public let allowance: Decimal
-    public let forecast: Decimal
-    public let spending: Decimal
+struct CurrentMonthSummary: Codable, Equatable {
+    let allowance: Decimal
+    let forecast: Decimal
+    let spending: Decimal
 }
 
-public struct Summary: Storeable, Equatable {
-    public let currentMonthSummary: CurrentMonthSummary
-    public let endOfMonthSummaries: [EndOfMonthSummary]
+struct Summary: Storeable, Equatable {
+    let currentMonthSummary: CurrentMonthSummary
+    let endOfMonthSummaries: [EndOfMonthSummary]
 }

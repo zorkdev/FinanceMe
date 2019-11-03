@@ -1,5 +1,5 @@
-public class ErrorViewModel: ObservableObject {
-    @Published public var error: Error? {
+class ErrorViewModel: ObservableObject {
+    @Published var error: Error? {
         didSet {
             icon = newIcon
         }
@@ -9,6 +9,6 @@ public class ErrorViewModel: ObservableObject {
         ["🤔", "😳", "🙄", "😶", "😱"].randomElement()!
     }
 
-    public var icon: String?
-    public var description: String? { error?.localizedDescription }
+    var icon: String?
+    var description: String? { error?.localizedDescription }
 }

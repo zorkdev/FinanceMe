@@ -1,5 +1,5 @@
-public struct ListSection<T: Identifiable>: Identifiable {
-    public let title: String
-    public let rows: [T]
-    public var id: String { title }
+struct ListSection<T: Identifiable>: Identifiable {
+    let title: String
+    let rows: [T]
+    var id: String { title }
 }

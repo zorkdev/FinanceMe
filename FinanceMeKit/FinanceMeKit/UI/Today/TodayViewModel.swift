@@ -1,20 +1,20 @@
 import Combine
 
-public class TodayViewModel: ObservableObject {
+class TodayViewModel: ObservableObject {
     private let businessLogic: UserBusinessLogicType
     private let spendingBusinessLogic = SpendingBusinessLogic()
     private var cancellables: Set<AnyCancellable> = []
 
-    @Published public private(set) var balance = AmountViewModel(value: 0)
-    @Published public private(set) var allowance = AmountViewModel(value: 0)
-    @Published public private(set) var icon = ""
+    @Published private(set) var balance = AmountViewModel(value: 0)
+    @Published private(set) var allowance = AmountViewModel(value: 0)
+    @Published private(set) var icon = ""
 
-    public init(businessLogic: UserBusinessLogicType) {
+    init(businessLogic: UserBusinessLogicType) {
         self.businessLogic = businessLogic
         setupBindings()
     }
 
-    public func onAppear() {
+    func onAppear() {
         businessLogic.fetchUser()
     }
 

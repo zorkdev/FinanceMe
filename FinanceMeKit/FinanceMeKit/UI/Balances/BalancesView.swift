@@ -1,9 +1,9 @@
 import SwiftUI
 
-public struct BalancesView: View {
+struct BalancesView: View {
     @ObservedObject private var viewModel: BalancesViewModel
 
-    public var body: some View {
+    var body: some View {
         List {
             Section(header: Text("THIS MONTH")) {
                 CurrentMonthView(currentMonth: viewModel.currentMonth)
@@ -20,7 +20,7 @@ public struct BalancesView: View {
         }
     }
 
-    public init(appState: AppState) {
+    init(appState: AppState) {
         self.viewModel = BalancesViewModel(businessLogic: appState.summaryBusinessLogic)
     }
 }

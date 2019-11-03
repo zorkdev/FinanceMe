@@ -1,6 +1,6 @@
 import Combine
 
-public class TransactionDetailViewModel: ObservableObject {
+class TransactionDetailViewModel: ObservableObject {
     private static let formatter = Formatters.currency
 
     private let userBusinessLogic: UserBusinessLogicType
@@ -12,12 +12,12 @@ public class TransactionDetailViewModel: ObservableObject {
     private var cancellables: Set<AnyCancellable> = []
     private let id = UUID()
 
-    @Published public var amount = ""
-    @Published public var narrative: String
-    @Published public var category: Transaction.Source
-    @Published public var date: Date
-    @Published public var isDisabled = true
-    @Published public var shouldDismiss = false
+    @Published var amount = ""
+    @Published var narrative: String
+    @Published var category: Transaction.Source
+    @Published var date: Date
+    @Published var isDisabled = true
+    @Published var shouldDismiss = false
 
     private var amountValue: Decimal? { Self.formatter.decimal(from: amount) }
 
@@ -40,12 +40,12 @@ public class TransactionDetailViewModel: ObservableObject {
                            source: category)
     }
 
-    public init(transaction: Transaction?,
-                loadingState: LoadingState,
-                errorViewModel: ErrorViewModel,
-                userBusinessLogic: UserBusinessLogicType,
-                transactionBusinessLogic: TransactionBusinessLogicType,
-                summaryBusinessLogic: SummaryBusinessLogicType) {
+    init(transaction: Transaction?,
+         loadingState: LoadingState,
+         errorViewModel: ErrorViewModel,
+         userBusinessLogic: UserBusinessLogicType,
+         transactionBusinessLogic: TransactionBusinessLogicType,
+         summaryBusinessLogic: SummaryBusinessLogicType) {
         self.userBusinessLogic = userBusinessLogic
         self.transactionBusinessLogic = transactionBusinessLogic
         self.summaryBusinessLogic = summaryBusinessLogic

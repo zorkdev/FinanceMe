@@ -5,10 +5,10 @@ public class AppState: ObservableObject {
     let loggingService: LoggingService
     let configService: ConfigService
 
-    public let sessionBusinessLogic: SessionBusinessLogicType
-    public let userBusinessLogic: UserBusinessLogicType
-    public let transactionBusinessLogic: TransactionBusinessLogicType
-    public let summaryBusinessLogic: SummaryBusinessLogicType
+    let sessionBusinessLogic: SessionBusinessLogicType
+    let userBusinessLogic: UserBusinessLogicType
+    let transactionBusinessLogic: TransactionBusinessLogicType
+    let summaryBusinessLogic: SummaryBusinessLogicType
 
     public init() {
         configService = DefaultConfigService()
@@ -47,7 +47,7 @@ public class AppState: ObservableObject {
 }
 
 #if DEBUG
-public extension AppState {
+extension AppState {
     static var stub: AppState {
         return AppState(networkService: Stub.StubNetworkService(),
                         sessionService: Stub.StubSessionService(),

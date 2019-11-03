@@ -1,12 +1,12 @@
 import Combine
 
-public class RootViewModel: ObservableObject {
+class RootViewModel: ObservableObject {
     private let businessLogic: SessionBusinessLogicType
     private var cancellables: Set<AnyCancellable> = []
 
-    @Published public var isLoggedIn = true
+    @Published var isLoggedIn = true
 
-    public init(businessLogic: SessionBusinessLogicType) {
+    init(businessLogic: SessionBusinessLogicType) {
         self.businessLogic = businessLogic
         setupBindings()
     }

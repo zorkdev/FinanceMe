@@ -1,6 +1,6 @@
 import Combine
 
-public protocol TransactionBusinessLogicType {
+protocol TransactionBusinessLogicType {
     var transactions: AnyPublisher<[Transaction], Never> { get }
     func fetchTransactions()
     func getTransactions() -> AnyPublisher<Void, Error>

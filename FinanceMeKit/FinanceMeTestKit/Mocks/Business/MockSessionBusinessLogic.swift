@@ -1,5 +1,5 @@
 import Combine
-import FinanceMeKit
+@testable import FinanceMeKit
 
 public class MockSessionBusinessLogic: SessionBusinessLogicType {
     @Published public var isLoggedInReturnValue = false

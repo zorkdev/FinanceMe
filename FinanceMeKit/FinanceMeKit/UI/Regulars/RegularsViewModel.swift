@@ -1,9 +1,9 @@
 import Combine
 
-public class RegularsViewModel: ObservableObject {
-    public struct MonthlyBalance {
-        public let allowance: Decimal
-        public let outgoings: Decimal
+class RegularsViewModel: ObservableObject {
+    struct MonthlyBalance {
+        let allowance: Decimal
+        let outgoings: Decimal
     }
 
     private let userBusinessLogic: UserBusinessLogicType
@@ -13,15 +13,15 @@ public class RegularsViewModel: ObservableObject {
     private let errorViewModel: ErrorViewModel
     private var cancellables: Set<AnyCancellable> = []
 
-    @Published public var monthlyBalance = MonthlyBalance(allowance: 0, outgoings: 0)
-    @Published public var incomingSection = ListSection<Transaction>(title: "", rows: [])
-    @Published public var outgoingSection = ListSection<Transaction>(title: "", rows: [])
+    @Published var monthlyBalance = MonthlyBalance(allowance: 0, outgoings: 0)
+    @Published var incomingSection = ListSection<Transaction>(title: "", rows: [])
+    @Published var outgoingSection = ListSection<Transaction>(title: "", rows: [])
 
-    public init(loadingState: LoadingState,
-                errorViewModel: ErrorViewModel,
-                userBusinessLogic: UserBusinessLogicType,
-                transactionBusinessLogic: TransactionBusinessLogicType,
-                summaryBusinessLogic: SummaryBusinessLogicType) {
+    init(loadingState: LoadingState,
+         errorViewModel: ErrorViewModel,
+         userBusinessLogic: UserBusinessLogicType,
+         transactionBusinessLogic: TransactionBusinessLogicType,
+         summaryBusinessLogic: SummaryBusinessLogicType) {
         self.userBusinessLogic = userBusinessLogic
         self.transactionBusinessLogic = transactionBusinessLogic
         self.summaryBusinessLogic = summaryBusinessLogic

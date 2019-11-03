@@ -1,6 +1,6 @@
 import SwiftUI
 
-public struct ErrorBannerView: View {
+struct ErrorBannerView: View {
     @ObservedObject private var errorViewModel: ErrorViewModel
     @State private var offset: CGSize = .zero
 
@@ -15,7 +15,7 @@ public struct ErrorBannerView: View {
             }
     }
 
-    public var body: some View {
+    var body: some View {
         Group {
             if errorViewModel.error != nil {
                 VStack(spacing: .zero) {
@@ -42,29 +42,29 @@ public struct ErrorBannerView: View {
         }
     }
 
-    public init(_ errorViewModel: ErrorViewModel) {
+    init(_ errorViewModel: ErrorViewModel) {
         self.errorViewModel = errorViewModel
     }
 }
 
-public struct ErrorBannerContainerView<Presenting: View>: View {
+struct ErrorBannerContainerView<Presenting: View>: View {
     private let presenting: Presenting
     private let errorViewModel: ErrorViewModel
 
-    public var body: some View {
+    var body: some View {
         ZStack {
             presenting
             ErrorBannerView(errorViewModel)
         }
     }
 
-    public init(_ errorViewModel: ErrorViewModel, presenting: Presenting) {
+    init(_ errorViewModel: ErrorViewModel, presenting: Presenting) {
         self.errorViewModel = errorViewModel
         self.presenting = presenting
     }
 }
 
-public extension View {
+extension View {
     func errorBanner(_ errorViewModel: ErrorViewModel) -> some View {
         ErrorBannerContainerView(errorViewModel, presenting: self)
     }

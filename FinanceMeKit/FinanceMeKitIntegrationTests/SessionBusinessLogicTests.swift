@@ -1,5 +1,5 @@
 import XCTest
-import FinanceMeKit
+@testable import FinanceMeKit
 
 class SessionBusinessLogicTests: IntegrationTestCase {
     func testGetUpdateUser() {

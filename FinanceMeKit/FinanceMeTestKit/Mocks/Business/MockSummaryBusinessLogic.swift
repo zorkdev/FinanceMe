@@ -1,5 +1,5 @@
 import Combine
-import FinanceMeKit
+@testable import FinanceMeKit
 
 public class MockSummaryBusinessLogic: SummaryBusinessLogicType {
     @Published public var summaryReturnValue: Summary?

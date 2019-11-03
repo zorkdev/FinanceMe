@@ -1,10 +1,10 @@
 import SwiftUI
 
-public struct RoundedButton: View {
+struct RoundedButton: View {
     private let title: String
     private let action: () -> Void
 
-    public var body: some View {
+    var body: some View {
         Button(action: self.action) {
             Text(self.title)
                 .foregroundColor(Color.white)
@@ -17,7 +17,7 @@ public struct RoundedButton: View {
         .padding([.leading, .trailing])
     }
 
-    public init(_ title: String, action: @escaping () -> Void) {
+    init(_ title: String, action: @escaping () -> Void) {
         self.title = title
         self.action = action
     }

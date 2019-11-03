@@ -1,6 +1,6 @@
 import Combine
 
-public protocol SummaryBusinessLogicType {
+protocol SummaryBusinessLogicType {
     var summary: AnyPublisher<Summary?, Never> { get }
     func fetchSummary()
     func getSummary() -> AnyPublisher<Void, Error>

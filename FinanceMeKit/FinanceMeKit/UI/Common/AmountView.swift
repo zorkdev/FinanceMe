@@ -1,10 +1,10 @@
 import SwiftUI
 
-public struct AmountView: View {
+struct AmountView: View {
     private let viewModel: AmountViewModel
     private let isLargeDisplay: Bool
 
-    public var body: some View {
+    var body: some View {
         (smallText(viewModel.sign)
             + smallText(viewModel.currencySymbol)
             + largeText(viewModel.integer)
@@ -13,7 +13,7 @@ public struct AmountView: View {
             .foregroundColor(viewModel.color)
     }
 
-    public init(viewModel: AmountViewModel, isLargeDisplay: Bool = false) {
+    init(viewModel: AmountViewModel, isLargeDisplay: Bool = false) {
         self.viewModel = viewModel
         self.isLargeDisplay = isLargeDisplay
     }

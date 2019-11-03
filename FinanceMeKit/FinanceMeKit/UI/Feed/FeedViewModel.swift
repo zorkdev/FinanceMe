@@ -1,6 +1,6 @@
 import Combine
 
-public class FeedViewModel: ObservableObject {
+class FeedViewModel: ObservableObject {
     private let userBusinessLogic: UserBusinessLogicType
     private let transactionBusinessLogic: TransactionBusinessLogicType
     private let summaryBusinessLogic: SummaryBusinessLogicType
@@ -8,13 +8,13 @@ public class FeedViewModel: ObservableObject {
     private let errorViewModel: ErrorViewModel
     private var cancellables: Set<AnyCancellable> = []
 
-    @Published public var sections: [ListSection<Transaction>] = []
+    @Published var sections: [ListSection<Transaction>] = []
 
-    public init(loadingState: LoadingState,
-                errorViewModel: ErrorViewModel,
-                userBusinessLogic: UserBusinessLogicType,
-                transactionBusinessLogic: TransactionBusinessLogicType,
-                summaryBusinessLogic: SummaryBusinessLogicType) {
+    init(loadingState: LoadingState,
+         errorViewModel: ErrorViewModel,
+         userBusinessLogic: UserBusinessLogicType,
+         transactionBusinessLogic: TransactionBusinessLogicType,
+         summaryBusinessLogic: SummaryBusinessLogicType) {
         self.userBusinessLogic = userBusinessLogic
         self.transactionBusinessLogic = transactionBusinessLogic
         self.summaryBusinessLogic = summaryBusinessLogic

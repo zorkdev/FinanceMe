@@ -1,7 +1,7 @@
 import SwiftUI
 
-public struct AmountViewModel {
-    public enum Sign {
+struct AmountViewModel {
+    enum Sign {
         case plus
         case minus
     }
@@ -24,19 +24,19 @@ public struct AmountViewModel {
         return formatter
     }()
 
-    public let value: Decimal
+    let value: Decimal
 
-    public let sign: String
-    public let currencySymbol: String
-    public let integer: String
-    public let decimalSeparator: String
-    public let fraction: String
-    public let string: String
-    public let integerString: String
-    public let isNegative: Bool
-    public let color: Color?
+    let sign: String
+    let currencySymbol: String
+    let integer: String
+    let decimalSeparator: String
+    let fraction: String
+    let string: String
+    let integerString: String
+    let isNegative: Bool
+    let color: Color?
 
-    public init(value: Decimal, signs: [Sign] = [.minus]) {
+    init(value: Decimal, signs: [Sign] = [.minus]) {
         self.value = value
 
         if value.isSignMinus, signs.contains(.minus) {

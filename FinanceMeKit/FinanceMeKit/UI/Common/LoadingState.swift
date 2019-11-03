@@ -1,3 +1,3 @@
-public class LoadingState: ObservableObject {
-    @Published public var isLoading = false
+class LoadingState: ObservableObject {
+    @Published var isLoading = false
 }

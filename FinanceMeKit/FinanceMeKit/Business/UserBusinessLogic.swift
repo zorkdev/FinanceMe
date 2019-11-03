@@ -1,6 +1,6 @@
 import Combine
 
-public protocol UserBusinessLogicType {
+protocol UserBusinessLogicType {
     var user: AnyPublisher<User?, Never> { get }
     func fetchUser()
     func getUser() -> AnyPublisher<Void, Error>

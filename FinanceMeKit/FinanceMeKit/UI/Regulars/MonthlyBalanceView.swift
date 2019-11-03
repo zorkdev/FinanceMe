@@ -1,9 +1,9 @@
 import SwiftUI
 
-public struct MonthlyBalanceView: View {
+struct MonthlyBalanceView: View {
     private let monthlyBalance: RegularsViewModel.MonthlyBalance
 
-    public var body: some View {
+    var body: some View {
         HStack {
             VStack(alignment: .leading) {
                 AmountView(viewModel: AmountViewModel(value: monthlyBalance.allowance,
@@ -21,7 +21,7 @@ public struct MonthlyBalanceView: View {
         .padding([.top, .bottom])
     }
 
-    public init(monthlyBalance: RegularsViewModel.MonthlyBalance) {
+    init(monthlyBalance: RegularsViewModel.MonthlyBalance) {
         self.monthlyBalance = monthlyBalance
     }
 }

@@ -1,9 +1,9 @@
 import SwiftUI
 
-public struct TransactionView: View {
+struct TransactionView: View {
     private let viewModel: TransactionViewModel
 
-    public var body: some View {
+    var body: some View {
         HStack {
             Text(viewModel.narrative)
             Spacer()
@@ -12,7 +12,7 @@ public struct TransactionView: View {
         }
     }
 
-    public init(viewModel: TransactionViewModel) {
+    init(viewModel: TransactionViewModel) {
         self.viewModel = viewModel
     }
 }

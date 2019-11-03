@@ -1,5 +1,5 @@
 import Combine
-import FinanceMeKit
+@testable import FinanceMeKit
 
 public class MockUserBusinessLogic: UserBusinessLogicType {
     @Published public var userReturnValue: User?

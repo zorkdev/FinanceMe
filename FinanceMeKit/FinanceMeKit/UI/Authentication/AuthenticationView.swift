@@ -1,9 +1,9 @@
 import SwiftUI
 
-public struct AuthenticationView: View {
+struct AuthenticationView: View {
     @ObservedObject private var viewModel: AuthenticationViewModel
 
-    public var body: some View {
+    var body: some View {
         Group {
             if viewModel.isAuthenticated == false {
                 VStack(spacing: 32) {
@@ -20,7 +20,7 @@ public struct AuthenticationView: View {
         }
     }
 
-    public init(appState: AppState) {
+    init(appState: AppState) {
         self.viewModel = AuthenticationViewModel(businessLogic: appState.authenticationBusinessLogic)
     }
 }

@@ -1,12 +1,12 @@
 import SwiftUI
 
-public struct SettingsView: View {
+struct SettingsView: View {
     private let loadingState = LoadingState()
     private let errorViewModel = ErrorViewModel()
     @Environment(\.presentationMode) private var presentationMode
     @ObservedObject private var viewModel: SettingsViewModel
 
-    public var body: some View {
+    var body: some View {
         Form {
             VStack {
                 HStack {
@@ -41,7 +41,7 @@ public struct SettingsView: View {
         .dismiss(shouldDismiss: $viewModel.shouldDismiss)
     }
 
-    public init(appState: AppState) {
+    init(appState: AppState) {
         self.viewModel = SettingsViewModel(sessionBusinessLogic: appState.sessionBusinessLogic,
                                            userBusinessLogic: appState.userBusinessLogic,
                                            transactionBusinessLogic: appState.transactionBusinessLogic,

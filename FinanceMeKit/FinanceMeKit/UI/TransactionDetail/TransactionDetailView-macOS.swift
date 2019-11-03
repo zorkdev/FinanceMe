@@ -1,12 +1,12 @@
 import SwiftUI
 
-public struct TransactionDetailView: View {
+struct TransactionDetailView: View {
     private let loadingState = LoadingState()
     private let errorViewModel = ErrorViewModel()
     @Environment(\.presentationMode) private var presentationMode
     @ObservedObject private var viewModel: TransactionDetailViewModel
 
-    public var body: some View {
+    var body: some View {
         Form {
             VStack {
                 HStack {
@@ -36,7 +36,7 @@ public struct TransactionDetailView: View {
         .dismiss(shouldDismiss: $viewModel.shouldDismiss)
     }
 
-    public init(transaction: Transaction?, appState: AppState) {
+    init(transaction: Transaction?, appState: AppState) {
         self.viewModel = TransactionDetailViewModel(transaction: transaction,
                                                     loadingState: loadingState,
                                                     errorViewModel: errorViewModel,

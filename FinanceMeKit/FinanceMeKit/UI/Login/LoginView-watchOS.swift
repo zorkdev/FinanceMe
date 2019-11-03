@@ -1,11 +1,11 @@
 import SwiftUI
 
-public struct LoginView: View {
+struct LoginView: View {
     private let loadingState = LoadingState()
     private let errorViewModel = ErrorViewModel()
     @ObservedObject private var viewModel: LoginViewModel
 
-    public var body: some View {
+    var body: some View {
         Form {
             Section {
                 TextField("Email", text: $viewModel.email)
@@ -20,7 +20,7 @@ public struct LoginView: View {
         }
     }
 
-    public init(appState: AppState) {
+    init(appState: AppState) {
         self.viewModel = LoginViewModel(businessLogic: appState.sessionBusinessLogic,
                                         loadingState: loadingState,
                                         errorViewModel: errorViewModel)

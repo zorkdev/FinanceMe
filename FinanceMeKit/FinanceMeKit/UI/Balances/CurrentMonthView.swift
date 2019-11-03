@@ -1,9 +1,9 @@
 import SwiftUI
 
-public struct CurrentMonthView: View {
+struct CurrentMonthView: View {
     private let currentMonth: CurrentMonthSummary
 
-    public var body: some View {
+    var body: some View {
         HStack(spacing: .zero) {
             VStack(alignment: .leading) {
                 AmountView(viewModel: AmountViewModel(value: currentMonth.forecast,
@@ -26,7 +26,7 @@ public struct CurrentMonthView: View {
         .padding([.top, .bottom])
     }
 
-    public init(currentMonth: CurrentMonthSummary) {
+    init(currentMonth: CurrentMonthSummary) {
         self.currentMonth = currentMonth
     }
 }

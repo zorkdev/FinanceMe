@@ -1,6 +1,6 @@
 import Combine
 
-public protocol AuthenticationBusinessLogicType {
+protocol AuthenticationBusinessLogicType {
     var isAuthenticated: AnyPublisher<Bool, Never> { get }
     func authenticate()
 }

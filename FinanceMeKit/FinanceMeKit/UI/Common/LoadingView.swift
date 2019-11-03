@@ -1,10 +1,10 @@
 import SwiftUI
 
-public struct LoadingView<Presenting: View>: View {
+struct LoadingView<Presenting: View>: View {
     private let presenting: Presenting
     @ObservedObject private var loadingState: LoadingState
 
-    public var body: some View {
+    var body: some View {
         ZStack {
             presenting
                 .blur(radius: loadingState.isLoading ? 4 : 0)
@@ -20,14 +20,13 @@ public struct LoadingView<Presenting: View>: View {
         .animation(.easeInOut)
     }
 
-    public init(_ loadingState: LoadingState, presenting: Presenting) {
+    init(_ loadingState: LoadingState, presenting: Presenting) {
         self.loadingState = loadingState
         self.presenting = presenting
     }
 }
 
-// swiftlint:disable unused_declaration
-public extension View {
+extension View {
     func loading(_ loadingState: LoadingState) -> some View {
         LoadingView(loadingState, presenting: self)
     }

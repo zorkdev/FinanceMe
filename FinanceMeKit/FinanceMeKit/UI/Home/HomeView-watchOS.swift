@@ -1,13 +1,13 @@
 import SwiftUI
 
-public struct HomeView: View {
+struct HomeView: View {
     private let appState: AppState
 
-    public var body: some View {
+    var body: some View {
         TodayView(appState: appState)
     }
 
-    public init(appState: AppState) {
+    init(appState: AppState) {
         self.appState = appState
     }
 }

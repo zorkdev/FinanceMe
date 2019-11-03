@@ -1,12 +1,12 @@
 import SwiftUI
 
-public struct HomeView: View {
+struct HomeView: View {
     private let appState: AppState
     private let loadingState = LoadingState()
     private let errorViewModel = ErrorViewModel()
     @ObservedObject private var viewModel: HomeViewModel
 
-    public var body: some View {
+    var body: some View {
         ZStack {
             VStack(spacing: .zero) {
                 HomeNavigationBarView(appState: appState,
@@ -43,7 +43,7 @@ public struct HomeView: View {
         }
     }
 
-    public init(appState: AppState) {
+    init(appState: AppState) {
         self.appState = appState
         self.viewModel = HomeViewModel(loadingState: loadingState,
                                        errorViewModel: errorViewModel,

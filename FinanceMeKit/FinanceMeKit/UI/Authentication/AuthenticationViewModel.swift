@@ -1,12 +1,12 @@
 import Combine
 
-public class AuthenticationViewModel: ObservableObject {
+class AuthenticationViewModel: ObservableObject {
     private let businessLogic: AuthenticationBusinessLogicType
     private var cancellables: Set<AnyCancellable> = []
 
-    @Published public var isAuthenticated: Bool = false
+    @Published var isAuthenticated: Bool = false
 
-    public init(businessLogic: AuthenticationBusinessLogicType) {
+    init(businessLogic: AuthenticationBusinessLogicType) {
         self.businessLogic = businessLogic
         setupBindings()
     }
