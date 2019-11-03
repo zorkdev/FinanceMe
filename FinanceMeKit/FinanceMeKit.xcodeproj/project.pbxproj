@@ -11,26 +11,20 @@
 		9A00349C234A2E9F0082DC88 /* AppState-watchOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A00349B234A2E9F0082DC88 /* AppState-watchOS.swift */; };
 		9A00349E234A35B40082DC88 /* PushNotificationBusinessLogic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A00349D234A35B40082DC88 /* PushNotificationBusinessLogic.swift */; };
 		9A0034A0234A383A0082DC88 /* DeviceToken.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A00349F234A383A0082DC88 /* DeviceToken.swift */; };
-		9A0034A1234A383F0082DC88 /* DeviceToken.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A00349F234A383A0082DC88 /* DeviceToken.swift */; };
-		9A0034A2234A383F0082DC88 /* DeviceToken.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A00349F234A383A0082DC88 /* DeviceToken.swift */; };
-		9A0034A3234A38400082DC88 /* DeviceToken.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A00349F234A383A0082DC88 /* DeviceToken.swift */; };
 		9A0034A5234A3D9D0082DC88 /* DeviceTokenTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A0034A4234A3D9D0082DC88 /* DeviceTokenTests.swift */; };
 		9A0034A6234A3D9D0082DC88 /* DeviceTokenTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A0034A4234A3D9D0082DC88 /* DeviceTokenTests.swift */; };
 		9A0034A7234A3D9D0082DC88 /* DeviceTokenTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A0034A4234A3D9D0082DC88 /* DeviceTokenTests.swift */; };
 		9A010CE0234FC2FF00AF9613 /* FeedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A1DAAC5234FBD720037E581 /* FeedView.swift */; };
 		9A071434236DAD3100D97DFF /* LoadingState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A071433236DAD3100D97DFF /* LoadingState.swift */; };
-		9A071435236DAD3100D97DFF /* LoadingState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A071433236DAD3100D97DFF /* LoadingState.swift */; };
 		9A071436236DAD3100D97DFF /* LoadingState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A071433236DAD3100D97DFF /* LoadingState.swift */; };
 		9A071437236DAD3100D97DFF /* LoadingState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A071433236DAD3100D97DFF /* LoadingState.swift */; };
 		9A071439236DAF8E00D97DFF /* ActivityIndicatorViewStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A071438236DAF8E00D97DFF /* ActivityIndicatorViewStyle.swift */; };
 		9A07143A236DAF8E00D97DFF /* ActivityIndicatorViewStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A071438236DAF8E00D97DFF /* ActivityIndicatorViewStyle.swift */; };
 		9A07143B236DB4C700D97DFF /* ActivityIndicatorViewStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A071438236DAF8E00D97DFF /* ActivityIndicatorViewStyle.swift */; };
 		9A0DF5F023671D1300884090 /* CurrentMonthView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A0DF5EF23671D1300884090 /* CurrentMonthView.swift */; };
-		9A0DF5F123671D1300884090 /* CurrentMonthView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A0DF5EF23671D1300884090 /* CurrentMonthView.swift */; };
 		9A0DF5F223671D1300884090 /* CurrentMonthView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A0DF5EF23671D1300884090 /* CurrentMonthView.swift */; };
 		9A0DF5F323671D1300884090 /* CurrentMonthView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A0DF5EF23671D1300884090 /* CurrentMonthView.swift */; };
 		9A0DF5F523671E0300884090 /* MonthlyBalanceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A0DF5F423671E0300884090 /* MonthlyBalanceView.swift */; };
-		9A0DF5F623671E0300884090 /* MonthlyBalanceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A0DF5F423671E0300884090 /* MonthlyBalanceView.swift */; };
 		9A0DF5F723671E0300884090 /* MonthlyBalanceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A0DF5F423671E0300884090 /* MonthlyBalanceView.swift */; };
 		9A0DF5F823671E0300884090 /* MonthlyBalanceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A0DF5F423671E0300884090 /* MonthlyBalanceView.swift */; };
 		9A0DF5FE23671ECB00884090 /* MonthlyBalanceViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A0DF5F923671EC400884090 /* MonthlyBalanceViewTests.swift */; };
@@ -40,13 +34,11 @@
 		9A0DF60323671F2200884090 /* CurrentMonthViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A0DF60123671F2200884090 /* CurrentMonthViewTests.swift */; };
 		9A0DF60423671F2200884090 /* CurrentMonthViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A0DF60123671F2200884090 /* CurrentMonthViewTests.swift */; };
 		9A0DF6072367202E00884090 /* TransactionDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A0DF6062367202E00884090 /* TransactionDetailViewModel.swift */; };
-		9A0DF6082367202E00884090 /* TransactionDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A0DF6062367202E00884090 /* TransactionDetailViewModel.swift */; };
 		9A0DF6092367202E00884090 /* TransactionDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A0DF6062367202E00884090 /* TransactionDetailViewModel.swift */; };
 		9A0DF60A2367202E00884090 /* TransactionDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A0DF6062367202E00884090 /* TransactionDetailViewModel.swift */; };
 		9A0DF60C2367233B00884090 /* TransactionDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A0DF60B2367233B00884090 /* TransactionDetailView.swift */; };
 		9A1DAAC6234FBD720037E581 /* FeedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A1DAAC5234FBD720037E581 /* FeedView.swift */; };
 		9A1DAACB234FBE3E0037E581 /* FeedViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A1DAACA234FBE3E0037E581 /* FeedViewModel.swift */; };
-		9A1DAACC234FBE3E0037E581 /* FeedViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A1DAACA234FBE3E0037E581 /* FeedViewModel.swift */; };
 		9A1DAACD234FBE3E0037E581 /* FeedViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A1DAACA234FBE3E0037E581 /* FeedViewModel.swift */; };
 		9A1DAACE234FBE3E0037E581 /* FeedViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A1DAACA234FBE3E0037E581 /* FeedViewModel.swift */; };
 		9A1F416D233FF0A400343AD9 /* UserBusinessLogicTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A1F416C233FF0A400343AD9 /* UserBusinessLogicTests.swift */; };
@@ -66,7 +58,6 @@
 		9A1F418E23400CAB00343AD9 /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A1F418D23400CAB00343AD9 /* RootView.swift */; };
 		9A1F419023400CAB00343AD9 /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A1F418D23400CAB00343AD9 /* RootView.swift */; };
 		9A1F419123400CAB00343AD9 /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A1F418D23400CAB00343AD9 /* RootView.swift */; };
-		9A2FB3B4235E1F4100CF3525 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A2FB3B2235E1F4100CF3525 /* HomeViewModel.swift */; };
 		9A2FB3B5235E1F4100CF3525 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A2FB3B2235E1F4100CF3525 /* HomeViewModel.swift */; };
 		9A2FB3B6235E1F4100CF3525 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A2FB3B2235E1F4100CF3525 /* HomeViewModel.swift */; };
 		9A2FB3B8235E208900CF3525 /* HomeView-iOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A2FB3B7235E208900CF3525 /* HomeView-iOS.swift */; };
@@ -96,11 +87,9 @@
 		9A375B1C22F7AEF600E598AB /* Data+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A375B1922F7AEF600E598AB /* Data+Extensions.swift */; };
 		9A375B1D22F7AEF600E598AB /* Data+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A375B1922F7AEF600E598AB /* Data+Extensions.swift */; };
 		9A3B182F2340F7E900FF27D8 /* TransactionBusinessLogic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A3B182E2340F7E900FF27D8 /* TransactionBusinessLogic.swift */; };
-		9A3B18302340F7E900FF27D8 /* TransactionBusinessLogic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A3B182E2340F7E900FF27D8 /* TransactionBusinessLogic.swift */; };
 		9A3B18312340F7E900FF27D8 /* TransactionBusinessLogic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A3B182E2340F7E900FF27D8 /* TransactionBusinessLogic.swift */; };
 		9A3B18322340F7E900FF27D8 /* TransactionBusinessLogic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A3B182E2340F7E900FF27D8 /* TransactionBusinessLogic.swift */; };
 		9A3B18342340F80F00FF27D8 /* Transaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A3B18332340F80F00FF27D8 /* Transaction.swift */; };
-		9A3B18352340F80F00FF27D8 /* Transaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A3B18332340F80F00FF27D8 /* Transaction.swift */; };
 		9A3B18362340F80F00FF27D8 /* Transaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A3B18332340F80F00FF27D8 /* Transaction.swift */; };
 		9A3B18372340F80F00FF27D8 /* Transaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A3B18332340F80F00FF27D8 /* Transaction.swift */; };
 		9A3B18392340F9FF00FF27D8 /* TransactionBusinessLogicTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A3B18382340F9FF00FF27D8 /* TransactionBusinessLogicTests.swift */; };
@@ -118,13 +107,11 @@
 		9A4A3D8B235F856A006BD7FF /* FeedViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A4A3D89235F856A006BD7FF /* FeedViewModelTests.swift */; };
 		9A4A3D8C235F856A006BD7FF /* FeedViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A4A3D89235F856A006BD7FF /* FeedViewModelTests.swift */; };
 		9A4A3D8F235F8807006BD7FF /* RegularsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A4A3D8E235F8807006BD7FF /* RegularsViewModel.swift */; };
-		9A4A3D90235F8807006BD7FF /* RegularsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A4A3D8E235F8807006BD7FF /* RegularsViewModel.swift */; };
 		9A4A3D91235F8807006BD7FF /* RegularsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A4A3D8E235F8807006BD7FF /* RegularsViewModel.swift */; };
 		9A4A3D92235F8807006BD7FF /* RegularsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A4A3D8E235F8807006BD7FF /* RegularsViewModel.swift */; };
 		9A4A3D94235F8FC8006BD7FF /* RegularsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A4A3D93235F8FC8006BD7FF /* RegularsView.swift */; };
 		9A4A3D97235F8FC8006BD7FF /* RegularsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A4A3D93235F8FC8006BD7FF /* RegularsView.swift */; };
 		9A4A3D99235F98F0006BD7FF /* TransactionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A4A3D98235F98F0006BD7FF /* TransactionView.swift */; };
-		9A4A3D9A235F98F0006BD7FF /* TransactionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A4A3D98235F98F0006BD7FF /* TransactionView.swift */; };
 		9A4A3D9B235F98F0006BD7FF /* TransactionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A4A3D98235F98F0006BD7FF /* TransactionView.swift */; };
 		9A4A3D9C235F98F0006BD7FF /* TransactionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A4A3D98235F98F0006BD7FF /* TransactionView.swift */; };
 		9A4A3D9E235F9EFA006BD7FF /* TransactionViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A4A3D9D235F9EFA006BD7FF /* TransactionViewTests.swift */; };
@@ -170,14 +157,12 @@
 		9A6F3196234207A9005F405D /* TransactionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A6F3194234207A9005F405D /* TransactionTests.swift */; };
 		9A6F3197234207A9005F405D /* TransactionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A6F3194234207A9005F405D /* TransactionTests.swift */; };
 		9A6F319923421711005F405D /* Summary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A6F319823421711005F405D /* Summary.swift */; };
-		9A6F319A23421711005F405D /* Summary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A6F319823421711005F405D /* Summary.swift */; };
 		9A6F319B23421711005F405D /* Summary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A6F319823421711005F405D /* Summary.swift */; };
 		9A6F319C23421711005F405D /* Summary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A6F319823421711005F405D /* Summary.swift */; };
 		9A6F319E234217B0005F405D /* SummaryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A6F319D234217B0005F405D /* SummaryTests.swift */; };
 		9A6F319F234217B0005F405D /* SummaryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A6F319D234217B0005F405D /* SummaryTests.swift */; };
 		9A6F31A0234217B0005F405D /* SummaryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A6F319D234217B0005F405D /* SummaryTests.swift */; };
 		9A6F31A223422197005F405D /* SummaryBusinessLogic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A6F31A123422197005F405D /* SummaryBusinessLogic.swift */; };
-		9A6F31A323422197005F405D /* SummaryBusinessLogic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A6F31A123422197005F405D /* SummaryBusinessLogic.swift */; };
 		9A6F31A423422197005F405D /* SummaryBusinessLogic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A6F31A123422197005F405D /* SummaryBusinessLogic.swift */; };
 		9A6F31A523422197005F405D /* SummaryBusinessLogic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A6F31A123422197005F405D /* SummaryBusinessLogic.swift */; };
 		9A6F31A723422420005F405D /* SummaryBusinessLogicTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A6F31A623422420005F405D /* SummaryBusinessLogicTests.swift */; };
@@ -188,7 +173,6 @@
 		9A6F31AD23422586005F405D /* MockSummaryBusinessLogic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A6F31AA23422586005F405D /* MockSummaryBusinessLogic.swift */; };
 		9A6F31AF2342275C005F405D /* SummaryBusinessLogicTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A6F31AE2342275C005F405D /* SummaryBusinessLogicTests.swift */; };
 		9A6F31B123422E95005F405D /* SpendingBusinessLogic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A6F31B023422E95005F405D /* SpendingBusinessLogic.swift */; };
-		9A6F31B223422E95005F405D /* SpendingBusinessLogic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A6F31B023422E95005F405D /* SpendingBusinessLogic.swift */; };
 		9A6F31B323422E95005F405D /* SpendingBusinessLogic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A6F31B023422E95005F405D /* SpendingBusinessLogic.swift */; };
 		9A6F31B423422E95005F405D /* SpendingBusinessLogic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A6F31B023422E95005F405D /* SpendingBusinessLogic.swift */; };
 		9A6F31B7234230E1005F405D /* SpendingBusinessLogicTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A6F31B6234230E1005F405D /* SpendingBusinessLogicTests.swift */; };
@@ -214,14 +198,12 @@
 		9A7054052367A0D80070803C /* TransactionDetailViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A7054032367A0D80070803C /* TransactionDetailViewModelTests.swift */; };
 		9A7054062367A82A0070803C /* TransactionDetailViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A7054032367A0D80070803C /* TransactionDetailViewModelTests.swift */; };
 		9A7054092367A88F0070803C /* SettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A7054082367A88F0070803C /* SettingsViewModel.swift */; };
-		9A70540A2367A88F0070803C /* SettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A7054082367A88F0070803C /* SettingsViewModel.swift */; };
 		9A70540B2367A88F0070803C /* SettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A7054082367A88F0070803C /* SettingsViewModel.swift */; };
 		9A70540C2367A88F0070803C /* SettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A7054082367A88F0070803C /* SettingsViewModel.swift */; };
 		9A7054102367A9100070803C /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A70540F2367A9100070803C /* SettingsView.swift */; };
 		9A7054152367AE890070803C /* SettingsView-macOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A7054142367AE890070803C /* SettingsView-macOS.swift */; };
 		9A7054172367B67D0070803C /* RoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A7054162367B67D0070803C /* RoundedButton.swift */; };
 		9A75CF722360CCAD00991320 /* BalancesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A75CF712360CCAD00991320 /* BalancesViewModel.swift */; };
-		9A75CF732360CCAD00991320 /* BalancesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A75CF712360CCAD00991320 /* BalancesViewModel.swift */; };
 		9A75CF742360CCAD00991320 /* BalancesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A75CF712360CCAD00991320 /* BalancesViewModel.swift */; };
 		9A75CF752360CCAD00991320 /* BalancesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A75CF712360CCAD00991320 /* BalancesViewModel.swift */; };
 		9A78CEB32338F9B2009B5994 /* SessionBusinessLogicTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A78CEB22338F9B2009B5994 /* SessionBusinessLogicTests.swift */; };
@@ -257,15 +239,12 @@
 		9A99D0D623020D5E00D735A2 /* TestConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AFA47C022F85FD3003B2992 /* TestConfig.swift */; };
 		9A99D0D723020D5F00D735A2 /* TestConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AFA47C022F85FD3003B2992 /* TestConfig.swift */; };
 		9A9A869F2360D2C100E135DF /* BalancesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A9A869E2360D2C100E135DF /* BalancesView.swift */; };
-		9A9A86A02360D37000E135DF /* BalancesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A9A869E2360D2C100E135DF /* BalancesView.swift */; };
 		9A9A86A12360D37100E135DF /* BalancesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A9A869E2360D2C100E135DF /* BalancesView.swift */; };
 		9A9A86A22360D37100E135DF /* BalancesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A9A869E2360D2C100E135DF /* BalancesView.swift */; };
 		9A9A86A42360DE0E00E135DF /* TransactionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A9A86A32360DE0E00E135DF /* TransactionViewModel.swift */; };
-		9A9A86A52360DE0E00E135DF /* TransactionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A9A86A32360DE0E00E135DF /* TransactionViewModel.swift */; };
 		9A9A86A62360DE0E00E135DF /* TransactionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A9A86A32360DE0E00E135DF /* TransactionViewModel.swift */; };
 		9A9A86A72360DE0E00E135DF /* TransactionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A9A86A32360DE0E00E135DF /* TransactionViewModel.swift */; };
 		9A9B12892368E5D0002A045B /* Dismiss.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A9B12882368E5D0002A045B /* Dismiss.swift */; };
-		9A9B128A2368E5D0002A045B /* Dismiss.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A9B12882368E5D0002A045B /* Dismiss.swift */; };
 		9A9B128B2368E5D0002A045B /* Dismiss.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A9B12882368E5D0002A045B /* Dismiss.swift */; };
 		9A9B128C2368E5D0002A045B /* Dismiss.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A9B12882368E5D0002A045B /* Dismiss.swift */; };
 		9A9B128E2368F202002A045B /* DismissTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A9B128D2368F202002A045B /* DismissTests.swift */; };
@@ -347,7 +326,6 @@
 		9ABFBCA522EFD3D100E01785 /* AmountViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ABFBCA222EFD3D100E01785 /* AmountViewModel.swift */; };
 		9ABFBCA622EFD3D100E01785 /* AmountViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ABFBCA222EFD3D100E01785 /* AmountViewModel.swift */; };
 		9ABFBCA822EFD60200E01785 /* Formatters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ABFBCA722EFD60200E01785 /* Formatters.swift */; };
-		9ABFBCA922EFD60200E01785 /* Formatters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ABFBCA722EFD60200E01785 /* Formatters.swift */; };
 		9ABFBCAA22EFD60200E01785 /* Formatters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ABFBCA722EFD60200E01785 /* Formatters.swift */; };
 		9ABFBCAB22EFD60200E01785 /* Formatters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ABFBCA722EFD60200E01785 /* Formatters.swift */; };
 		9ABFBCAF22EFD73900E01785 /* Codable+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ABFBCAE22EFD73900E01785 /* Codable+Extensions.swift */; };
@@ -355,7 +333,6 @@
 		9ABFBCB122EFD73900E01785 /* Codable+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ABFBCAE22EFD73900E01785 /* Codable+Extensions.swift */; };
 		9ABFBCB222EFD73900E01785 /* Codable+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ABFBCAE22EFD73900E01785 /* Codable+Extensions.swift */; };
 		9ABFBCB422EFDE4C00E01785 /* NumberFormatter+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ABFBCB322EFDE4C00E01785 /* NumberFormatter+Extensions.swift */; };
-		9ABFBCB522EFDE4C00E01785 /* NumberFormatter+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ABFBCB322EFDE4C00E01785 /* NumberFormatter+Extensions.swift */; };
 		9ABFBCB622EFDE4C00E01785 /* NumberFormatter+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ABFBCB322EFDE4C00E01785 /* NumberFormatter+Extensions.swift */; };
 		9ABFBCB722EFDE4C00E01785 /* NumberFormatter+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ABFBCB322EFDE4C00E01785 /* NumberFormatter+Extensions.swift */; };
 		9AD73D1E230028D4003B16C3 /* UserBusinessLogic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AD73D1D230028D4003B16C3 /* UserBusinessLogic.swift */; };
@@ -451,7 +428,6 @@
 		9AE822ED2340CA83002FF0F5 /* LoginViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AE822EA2340CA83002FF0F5 /* LoginViewTests.swift */; };
 		9AE822EF2340D6FE002FF0F5 /* config.json in Resources */ = {isa = PBXBuildFile; fileRef = 9AE822EE2340D6FE002FF0F5 /* config.json */; };
 		9AE9984F234FD3E3005C17CC /* ListSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AE9984E234FD3E3005C17CC /* ListSection.swift */; };
-		9AE99850234FD3E3005C17CC /* ListSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AE9984E234FD3E3005C17CC /* ListSection.swift */; };
 		9AE99851234FD3E3005C17CC /* ListSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AE9984E234FD3E3005C17CC /* ListSection.swift */; };
 		9AE99852234FD3E3005C17CC /* ListSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AE9984E234FD3E3005C17CC /* ListSection.swift */; };
 		9AED5C91236B665400112F61 /* ActivityIndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AED5C90236B665400112F61 /* ActivityIndicatorView.swift */; };
@@ -466,7 +442,6 @@
 		9AF20D73236EFC5700290B9A /* ErrorViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AF20D71236EFC5700290B9A /* ErrorViewModelTests.swift */; };
 		9AF20D74236EFC5700290B9A /* ErrorViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AF20D71236EFC5700290B9A /* ErrorViewModelTests.swift */; };
 		9AF20D76236F000600290B9A /* Publisher+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AF20D75236F000600290B9A /* Publisher+Extensions.swift */; };
-		9AF20D77236F000600290B9A /* Publisher+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AF20D75236F000600290B9A /* Publisher+Extensions.swift */; };
 		9AF20D78236F000600290B9A /* Publisher+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AF20D75236F000600290B9A /* Publisher+Extensions.swift */; };
 		9AF20D79236F000600290B9A /* Publisher+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AF20D75236F000600290B9A /* Publisher+Extensions.swift */; };
 		9AF20D7D236F103F00290B9A /* LoginView-tvOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AF20D7C236F103F00290B9A /* LoginView-tvOS.swift */; };
@@ -474,6 +449,10 @@
 		9AF20D7F236F13FB00290B9A /* ErrorBannerViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AF20D6F236EFADC00290B9A /* ErrorBannerViewTests.swift */; };
 		9AF20D81236F2AB500290B9A /* Link.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AF20D80236F2AB500290B9A /* Link.swift */; };
 		9AF20D83236F2B3500290B9A /* LinkTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AF20D82236F2B3500290B9A /* LinkTests.swift */; };
+		9AF20D84236F2D1E00290B9A /* LoadingState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A071433236DAD3100D97DFF /* LoadingState.swift */; };
+		9AF20D85236F2D5100290B9A /* Publisher+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AF20D75236F000600290B9A /* Publisher+Extensions.swift */; };
+		9AF20D86236F2E6A00290B9A /* Formatters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ABFBCA722EFD60200E01785 /* Formatters.swift */; };
+		9AF20D87236F2EF400290B9A /* SpendingBusinessLogic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A6F31B023422E95005F405D /* SpendingBusinessLogic.swift */; };
 		9AFA47B922F84AEF003B2992 /* Publisher+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AFA47B822F84AEF003B2992 /* Publisher+Extensions.swift */; };
 		9AFA47BA22F84AEF003B2992 /* Publisher+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AFA47B822F84AEF003B2992 /* Publisher+Extensions.swift */; };
 		9AFA47BB22F84AEF003B2992 /* Publisher+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AFA47B822F84AEF003B2992 /* Publisher+Extensions.swift */; };
@@ -2068,7 +2047,6 @@
 				9AADABF522F7008300C6C290 /* LoggingService.swift in Sources */,
 				9AD73D28230029C0003B16C3 /* User.swift in Sources */,
 				9A0DF60C2367233B00884090 /* TransactionDetailView.swift in Sources */,
-				9A0034A1234A383F0082DC88 /* DeviceToken.swift in Sources */,
 				9A5BDDAB230044D500F376C6 /* TodayView.swift in Sources */,
 				9A9B12892368E5D0002A045B /* Dismiss.swift in Sources */,
 				9A7053F5236783350070803C /* TransactionNavigationView.swift in Sources */,
@@ -2164,7 +2142,6 @@
 				9A75CF742360CCAD00991320 /* BalancesViewModel.swift in Sources */,
 				9AF20D78236F000600290B9A /* Publisher+Extensions.swift in Sources */,
 				9A70540B2367A88F0070803C /* SettingsViewModel.swift in Sources */,
-				9A0034A2234A383F0082DC88 /* DeviceToken.swift in Sources */,
 				9ABFBCB122EFD73900E01785 /* Codable+Extensions.swift in Sources */,
 				9AE99851234FD3E3005C17CC /* ListSection.swift in Sources */,
 				9ADD21D422F71D12006F98CA /* Session.swift in Sources */,
@@ -2195,59 +2172,41 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9A9B128A2368E5D0002A045B /* Dismiss.swift in Sources */,
-				9A6F31B223422E95005F405D /* SpendingBusinessLogic.swift in Sources */,
 				9AADAC0A22F7037E00C6C290 /* DataService.swift in Sources */,
-				9A0DF5F123671D1300884090 /* CurrentMonthView.swift in Sources */,
-				9AF20D77236F000600290B9A /* Publisher+Extensions.swift in Sources */,
-				9AE99850234FD3E3005C17CC /* ListSection.swift in Sources */,
 				9AADABF622F7008300C6C290 /* LoggingService.swift in Sources */,
 				9A2FB3BC235E209800CF3525 /* HomeView-watchOS.swift in Sources */,
 				9ABFBCA422EFD3D100E01785 /* AmountViewModel.swift in Sources */,
-				9ABFBCB522EFDE4C00E01785 /* NumberFormatter+Extensions.swift in Sources */,
-				9A70540A2367A88F0070803C /* SettingsViewModel.swift in Sources */,
-				9ABFBCA922EFD60200E01785 /* Formatters.swift in Sources */,
 				9AD73D1F230028D4003B16C3 /* UserBusinessLogic.swift in Sources */,
 				9A0034A0234A383A0082DC88 /* DeviceToken.swift in Sources */,
-				9A0DF5F623671E0300884090 /* MonthlyBalanceView.swift in Sources */,
 				9AADAC1422F7052700C6C290 /* KeychainDataService.swift in Sources */,
 				9ADD21E922F7248B006F98CA /* NetworkService.swift in Sources */,
 				9A1F418A23400C4F00343AD9 /* RootViewModel.swift in Sources */,
+				9AF20D87236F2EF400290B9A /* SpendingBusinessLogic.swift in Sources */,
 				9AADAAFE22F63A1800C6C290 /* ConfigService.swift in Sources */,
-				9A071435236DAD3100D97DFF /* LoadingState.swift in Sources */,
 				9ADD21F322F735C8006F98CA /* URLSession+Extensions.swift in Sources */,
-				9A4A3D9A235F98F0006BD7FF /* TransactionView.swift in Sources */,
 				9A5BDDA5230042A400F376C6 /* TodayViewModel.swift in Sources */,
 				9ADD21D822F71D3F006F98CA /* SessionService.swift in Sources */,
+				9AF20D85236F2D5100290B9A /* Publisher+Extensions.swift in Sources */,
 				9A98B747233E85DE002DE7FA /* TodayView-watchOS.swift in Sources */,
-				9A9A86A52360DE0E00E135DF /* TransactionViewModel.swift in Sources */,
 				9ABFBCB022EFD73900E01785 /* Codable+Extensions.swift in Sources */,
 				9A2FB3BD235E218400CF3525 /* RootView.swift in Sources */,
 				9AD73D24230029AB003B16C3 /* Credentials.swift in Sources */,
 				9ADD21D322F71D11006F98CA /* Session.swift in Sources */,
-				9A4A3D90235F8807006BD7FF /* RegularsViewModel.swift in Sources */,
-				9A3B18352340F80F00FF27D8 /* Transaction.swift in Sources */,
-				9A2FB3B4235E1F4100CF3525 /* HomeViewModel.swift in Sources */,
-				9A6F31A323422197005F405D /* SummaryBusinessLogic.swift in Sources */,
-				9A0DF6082367202E00884090 /* TransactionDetailViewModel.swift in Sources */,
 				9A99D0D623020D5E00D735A2 /* TestConfig.swift in Sources */,
 				9A6183CE2304A9F1001825A6 /* AmountView.swift in Sources */,
-				9A3B18302340F7E900FF27D8 /* TransactionBusinessLogic.swift in Sources */,
 				9A375B1B22F7AEF600E598AB /* Data+Extensions.swift in Sources */,
-				9A9A86A02360D37000E135DF /* BalancesView.swift in Sources */,
-				9A75CF732360CCAD00991320 /* BalancesViewModel.swift in Sources */,
 				9A00349C234A2E9F0082DC88 /* AppState-watchOS.swift in Sources */,
 				9A1F4184233FFC8600343AD9 /* LoginViewModel.swift in Sources */,
 				9A6183C92304A943001825A6 /* Decimal+Extensions.swift in Sources */,
 				9A00349A234A2A7A0082DC88 /* ComplicationBusinessLogic.swift in Sources */,
-				9A1DAACC234FBE3E0037E581 /* FeedViewModel.swift in Sources */,
 				9A00349E234A35B40082DC88 /* PushNotificationBusinessLogic.swift in Sources */,
-				9A6F319A23421711005F405D /* Summary.swift in Sources */,
 				9AD73D29230029C0003B16C3 /* User.swift in Sources */,
 				9AF20D6C236DFE1F00290B9A /* ErrorViewModel.swift in Sources */,
 				9AADAC0F22F7046C00C6C290 /* Error.swift in Sources */,
 				9ADD21EE22F7288B006F98CA /* API.swift in Sources */,
 				9AADAC0522F7033B00C6C290 /* StringRepresentable.swift in Sources */,
+				9AF20D86236F2E6A00290B9A /* Formatters.swift in Sources */,
+				9AF20D84236F2D1E00290B9A /* LoadingState.swift in Sources */,
 				9A90A9A62301DD4500AE4E25 /* SessionBusinessLogic.swift in Sources */,
 				9AE822D92340BA85002FF0F5 /* LoginView-watchOS.swift in Sources */,
 			);
@@ -2293,7 +2252,6 @@
 				9A071437236DAD3100D97DFF /* LoadingState.swift in Sources */,
 				9A4A3D97235F8FC8006BD7FF /* RegularsView.swift in Sources */,
 				9AF20D7E236F120100290B9A /* ErrorBannerView.swift in Sources */,
-				9A0034A3234A38400082DC88 /* DeviceToken.swift in Sources */,
 				9AF20D79236F000600290B9A /* Publisher+Extensions.swift in Sources */,
 				9AE99852234FD3E3005C17CC /* ListSection.swift in Sources */,
 				9AD73D26230029AB003B16C3 /* Credentials.swift in Sources */,
