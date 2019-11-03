@@ -4,7 +4,7 @@ public struct CurrentMonthView: View {
     private let currentMonth: CurrentMonthSummary
 
     public var body: some View {
-        HStack {
+        HStack(spacing: .zero) {
             VStack(alignment: .leading) {
                 AmountView(viewModel: AmountViewModel(value: currentMonth.forecast,
                                                       signs: [.plus, .minus]))

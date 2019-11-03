@@ -26,6 +26,7 @@ public struct LoadingView<Presenting: View>: View {
     }
 }
 
+// swiftlint:disable unused_declaration
 public extension View {
     func loading(_ loadingState: LoadingState) -> some View {
         LoadingView(loadingState, presenting: self)

@@ -1,5 +1,6 @@
 import Combine
 
+// swiftlint:disable unused_declaration
 public extension Publisher {
     func handleResult(loadingState: LoadingState,
                       errorViewModel: ErrorViewModel,
