@@ -1,4 +1,3 @@
-import UIKit
 import SwiftUI
 import NotificationCenter
 import FinanceMeKit
@@ -21,6 +20,6 @@ class TodayViewController: UIHostingController<AnyView>, NCWidgetProviding {
 
     @objc
     private func onTap() {
-        extensionContext?.open(appState.configService.urlScheme, completionHandler: nil)
+        extensionContext?.open(Link.urlScheme, completionHandler: nil)
     }
 }

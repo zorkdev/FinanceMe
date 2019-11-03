@@ -472,6 +472,8 @@
 		9AF20D7D236F103F00290B9A /* LoginView-tvOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AF20D7C236F103F00290B9A /* LoginView-tvOS.swift */; };
 		9AF20D7E236F120100290B9A /* ErrorBannerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AF20D68236DF97400290B9A /* ErrorBannerView.swift */; };
 		9AF20D7F236F13FB00290B9A /* ErrorBannerViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AF20D6F236EFADC00290B9A /* ErrorBannerViewTests.swift */; };
+		9AF20D81236F2AB500290B9A /* Link.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AF20D80236F2AB500290B9A /* Link.swift */; };
+		9AF20D83236F2B3500290B9A /* LinkTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AF20D82236F2B3500290B9A /* LinkTests.swift */; };
 		9AFA47B922F84AEF003B2992 /* Publisher+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AFA47B822F84AEF003B2992 /* Publisher+Extensions.swift */; };
 		9AFA47BA22F84AEF003B2992 /* Publisher+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AFA47B822F84AEF003B2992 /* Publisher+Extensions.swift */; };
 		9AFA47BB22F84AEF003B2992 /* Publisher+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AFA47B822F84AEF003B2992 /* Publisher+Extensions.swift */; };
@@ -748,6 +750,8 @@
 		9AF20D71236EFC5700290B9A /* ErrorViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorViewModelTests.swift; sourceTree = "<group>"; };
 		9AF20D75236F000600290B9A /* Publisher+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Publisher+Extensions.swift"; sourceTree = "<group>"; };
 		9AF20D7C236F103F00290B9A /* LoginView-tvOS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LoginView-tvOS.swift"; sourceTree = "<group>"; };
+		9AF20D80236F2AB500290B9A /* Link.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Link.swift; sourceTree = "<group>"; };
+		9AF20D82236F2B3500290B9A /* LinkTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinkTests.swift; sourceTree = "<group>"; };
 		9AFA47B822F84AEF003B2992 /* Publisher+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Publisher+Extensions.swift"; sourceTree = "<group>"; };
 		9AFA47C022F85FD3003B2992 /* TestConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestConfig.swift; sourceTree = "<group>"; };
 		9AFA47CA22F87440003B2992 /* DataExtensionsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataExtensionsTests.swift; sourceTree = "<group>"; };
@@ -1276,6 +1280,7 @@
 			isa = PBXGroup;
 			children = (
 				9AADAC0D22F7046C00C6C290 /* Error.swift */,
+				9AF20D80236F2AB500290B9A /* Link.swift */,
 				9ADD21EC22F7288B006F98CA /* API.swift */,
 				9AD73D22230029AB003B16C3 /* Credentials.swift */,
 				9ADD21CE22F71CE8006F98CA /* Session.swift */,
@@ -1383,6 +1388,7 @@
 			isa = PBXGroup;
 			children = (
 				9AFA47D222F87663003B2992 /* ErrorTests.swift */,
+				9AF20D82236F2B3500290B9A /* LinkTests.swift */,
 				9AFA47D622F87712003B2992 /* APITests.swift */,
 				9A956DBA2300373600CC848D /* CredentialsTests.swift */,
 				9ADD21E322F722E8006F98CA /* SessionTests.swift */,
@@ -2078,6 +2084,7 @@
 				9A2FB3B8235E208900CF3525 /* HomeView-iOS.swift in Sources */,
 				9A1DAAC6234FBD720037E581 /* FeedView.swift in Sources */,
 				9A1F418923400C4F00343AD9 /* RootViewModel.swift in Sources */,
+				9AF20D81236F2AB500290B9A /* Link.swift in Sources */,
 				9A9A86A42360DE0E00E135DF /* TransactionViewModel.swift in Sources */,
 				9A5AB5DC2365D84C00B691FF /* MetricService.swift in Sources */,
 				9A3B182F2340F7E900FF27D8 /* TransactionBusinessLogic.swift in Sources */,
@@ -2348,6 +2355,7 @@
 				9A6F319E234217B0005F405D /* SummaryTests.swift in Sources */,
 				9A5AB5F5236604DD00B691FF /* AuthenticationViewTests.swift in Sources */,
 				9A0DF60223671F2200884090 /* CurrentMonthViewTests.swift in Sources */,
+				9AF20D83236F2B3500290B9A /* LinkTests.swift in Sources */,
 				9A6F3191234204CB005F405D /* TransactionBusinessLogicTests.swift in Sources */,
 				9A9B12922368F587002A045B /* RoundedButtonTests.swift in Sources */,
 				9AE4E4B422F4C36B00B34E81 /* FormattersTests.swift in Sources */,

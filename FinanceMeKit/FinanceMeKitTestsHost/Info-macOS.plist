@@ -34,18 +34,5 @@
 	<true/>
 	<key>TeamID</key>
 	<string>$(AppIdentifierPrefix)</string>
-	<key>CFBundleURLTypes</key>
-	<array>
-		<dict>
-			<key>CFBundleTypeRole</key>
-			<string>Editor</string>
-			<key>CFBundleURLName</key>
-			<string>com.zorkdev.FinanceMe</string>
-			<key>CFBundleURLSchemes</key>
-			<array>
-				<string>urlscheme</string>
-			</array>
-		</dict>
-	</array>
 </dict>
 </plist>
