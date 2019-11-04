@@ -25,6 +25,12 @@ class DefaultNetworkServiceTests: XCTestCase {
                                       statusCode: 200,
                                       httpVersion: nil,
                                       headerFields: nil)!
+    let errorJSON =
+        """
+        {
+            "reason": "Test error"
+        }
+        """.data(using: .utf8)!
 
     override func setUp() {
         super.setUp()
@@ -152,7 +158,7 @@ class DefaultNetworkServiceTests: XCTestCase {
     }
 
     func testPerformHTTPURLResponseError_Failure() {
-        let expectedError = HTTPError(code: 1)!
+        let expectedError = APIError(code: 1, response: Data())!
         let urlResponse = URLResponse(url: api.url,
                                       mimeType: nil,
                                       expectedContentLength: 0,
@@ -162,22 +168,22 @@ class DefaultNetworkServiceTests: XCTestCase {
         networkService.perform(api: api, method: .get, body: nil).assertFailure(self) { error in
             XCTAssertNotNil(self.networkRequestable.lastPerformParam)
             XCTAssertNotNil(self.loggingService.lastLogParams)
-            XCTAssertEqual(error as? HTTPError, expectedError)
+            XCTAssertEqual(error as? APIError, expectedError)
         }
     }
 
     func testPerformHTTPError_Failure() {
-        let expectedError = HTTPError(code: 400)!
+        let expectedError = APIError(code: 400, response: errorJSON)!
         let urlResponse = HTTPURLResponse(url: api.url,
                                           statusCode: expectedError.code,
                                           httpVersion: nil,
                                           headerFields: nil)!
-        networkRequestable.performReturnValue = .success((data: Data(), response: urlResponse))
+        networkRequestable.performReturnValue = .success((data: errorJSON, response: urlResponse))
 
         networkService.perform(api: api, method: .get, body: nil).assertFailure(self) { error in
             XCTAssertNotNil(self.networkRequestable.lastPerformParam)
             XCTAssertNotNil(self.loggingService.lastLogParams)
-            XCTAssertEqual(error as? HTTPError, expectedError)
+            XCTAssertEqual(error as? APIError, expectedError)
         }
     }
 

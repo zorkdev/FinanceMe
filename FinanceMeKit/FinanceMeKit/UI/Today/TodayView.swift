@@ -10,12 +10,14 @@ public struct TodayView: View {
                     .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
                 Text("BALANCE").font(.caption).foregroundColor(Color.secondary)
             }
+            .accessibilityElement(children: .combine)
             Text(viewModel.icon).font(.largeTitle)
             VStack(alignment: .trailing) {
                 AmountView(viewModel: viewModel.allowance, isLargeDisplay: true)
                     .frame(minWidth: 0, maxWidth: .infinity, alignment: .trailing)
                 Text("ALLOWANCE").font(.caption).foregroundColor(Color.secondary)
             }
+            .accessibilityElement(children: .combine)
         }
         .padding([.leading, .trailing])
         .onAppear(perform: viewModel.onAppear)

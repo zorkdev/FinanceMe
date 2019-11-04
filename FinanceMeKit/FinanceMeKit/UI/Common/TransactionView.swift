@@ -10,6 +10,7 @@ struct TransactionView: View {
             Text(viewModel.amountViewModel.string)
                 .foregroundColor(viewModel.amountViewModel.color)
         }
+        .accessibilityElement(children: .combine)
     }
 
     init(viewModel: TransactionViewModel) {

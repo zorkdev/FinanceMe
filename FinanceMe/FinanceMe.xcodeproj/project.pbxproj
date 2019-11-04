@@ -20,9 +20,12 @@
 		9A12DBEA22EF675A000226A9 /* TodayViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9A12DBE822EF675A000226A9 /* TodayViewController.xib */; };
 		9A12DBEE22EF675A000226A9 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9A12DBEC22EF675A000226A9 /* InfoPlist.strings */; };
 		9A12DBF222EF675A000226A9 /* FinanceMeExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 9A12DBE322EF675A000226A9 /* FinanceMeExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		9A12DBFE22EF69A8000226A9 /* FinanceMeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A12DBFD22EF69A8000226A9 /* FinanceMeUITests.swift */; };
+		9A12DBFE22EF69A8000226A9 /* PerformanceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A12DBFD22EF69A8000226A9 /* PerformanceTests.swift */; };
 		9A12DC0C22EF6A25000226A9 /* FinanceMeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A12DC0B22EF6A25000226A9 /* FinanceMeUITests.swift */; };
 		9A12DC1A22EF6A65000226A9 /* FinanceMeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A12DC1922EF6A65000226A9 /* FinanceMeUITests.swift */; };
+		9A25E13823705A1B00F48D37 /* PerformanceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A12DBFD22EF69A8000226A9 /* PerformanceTests.swift */; };
+		9A25E13923705A1C00F48D37 /* PerformanceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A12DBFD22EF69A8000226A9 /* PerformanceTests.swift */; };
+		9A25E13F23705A9500F48D37 /* SettingsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A25E13E23705A9500F48D37 /* SettingsUITests.swift */; };
 		9A35A89322EDD55B0086BD2A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A35A89222EDD55B0086BD2A /* AppDelegate.swift */; };
 		9A35A89522EDD55B0086BD2A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A35A89422EDD55B0086BD2A /* SceneDelegate.swift */; };
 		9A35A89922EDD55C0086BD2A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9A35A89822EDD55C0086BD2A /* Assets.xcassets */; };
@@ -33,6 +36,10 @@
 		9A35A90522EDDD5A0086BD2A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9A35A90422EDDD5A0086BD2A /* Assets.xcassets */; };
 		9A35A91F22EDDFB90086BD2A /* FinanceMeKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A35A91E22EDDFB90086BD2A /* FinanceMeKit.framework */; };
 		9A35A92022EDDFB90086BD2A /* FinanceMeKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9A35A91E22EDDFB90086BD2A /* FinanceMeKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		9A47DFE123702D7300B6B0C8 /* BaseTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A47DFE023702D7300B6B0C8 /* BaseTestCase.swift */; };
+		9A47DFEB237035B200B6B0C8 /* LoginUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A47DFEA237035B200B6B0C8 /* LoginUITests.swift */; };
+		9A47DFED2370368800B6B0C8 /* HomeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A47DFEC2370368800B6B0C8 /* HomeUITests.swift */; };
+		9A47DFEF2370380E00B6B0C8 /* XCUIElement+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A47DFEE2370380E00B6B0C8 /* XCUIElement+Extensions.swift */; };
 		9A48AADD23491C5C000C7AA2 /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9A48AADB23491C5C000C7AA2 /* Interface.storyboard */; };
 		9A48AADF23491C5D000C7AA2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9A48AADE23491C5D000C7AA2 /* Assets.xcassets */; };
 		9A48AAE623491C5E000C7AA2 /* FinanceMeExtension_watchOS.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 9A48AAE523491C5E000C7AA2 /* FinanceMeExtension_watchOS.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
@@ -48,6 +55,7 @@
 		9AADAAEC22F632B500C6C290 /* FinanceMeTestKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AADAAEB22F632B500C6C290 /* FinanceMeTestKit.framework */; };
 		9AADAAEE22F632D600C6C290 /* FinanceMeTestKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AADAAED22F632D600C6C290 /* FinanceMeTestKit.framework */; };
 		9AADAAF522F6360900C6C290 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AADAAF422F6360900C6C290 /* main.swift */; };
+		9AB86D85237045B80098C150 /* TestUser.json in Resources */ = {isa = PBXBuildFile; fileRef = 9A47DFE423702F1500B6B0C8 /* TestUser.json */; };
 		9AE4E4C622F4CC0600B34E81 /* ContentViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AE4E4C522F4CC0600B34E81 /* ContentViewTests.swift */; };
 		9AE4E4C822F4CD2500B34E81 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AE4E4C722F4CD2500B34E81 /* main.swift */; };
 		9AF87EDD22EF9B30009E786C /* FinanceMeKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AF87EDC22EF9B30009E786C /* FinanceMeKit.framework */; };
@@ -257,7 +265,7 @@
 		9A12DBED22EF675A000226A9 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		9A12DBEF22EF675A000226A9 /* FinanceMeExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = FinanceMeExtension.entitlements; sourceTree = "<group>"; };
 		9A12DBFB22EF69A8000226A9 /* FinanceMeUITests-iOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "FinanceMeUITests-iOS.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		9A12DBFD22EF69A8000226A9 /* FinanceMeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinanceMeUITests.swift; sourceTree = "<group>"; };
+		9A12DBFD22EF69A8000226A9 /* PerformanceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PerformanceTests.swift; sourceTree = "<group>"; };
 		9A12DBFF22EF69A8000226A9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9A12DC0922EF6A25000226A9 /* FinanceMeUITests-tvOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "FinanceMeUITests-tvOS.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9A12DC0B22EF6A25000226A9 /* FinanceMeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinanceMeUITests.swift; sourceTree = "<group>"; };
@@ -267,6 +275,7 @@
 		9A12DC1B22EF6A65000226A9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9A12DC2422EF6C05000226A9 /* FinanceMe-tvOS.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = "FinanceMe-tvOS.xctestplan"; sourceTree = "<group>"; };
 		9A12DC2522EF6C47000226A9 /* FinanceMe-macOS.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = "FinanceMe-macOS.xctestplan"; sourceTree = "<group>"; };
+		9A25E13E23705A9500F48D37 /* SettingsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsUITests.swift; sourceTree = "<group>"; };
 		9A35A88F22EDD55B0086BD2A /* FinanceMe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FinanceMe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9A35A89222EDD55B0086BD2A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9A35A89422EDD55B0086BD2A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -287,11 +296,16 @@
 		9A35A93822EDE5FC0086BD2A /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text; name = .swiftlint.yml; path = ../.swiftlint.yml; sourceTree = "<group>"; };
 		9A35A93922EDE5FC0086BD2A /* ExportOptions.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = ExportOptions.plist; path = ../ExportOptions.plist; sourceTree = "<group>"; };
 		9A35A93A22EDE5FC0086BD2A /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
-		9A35A93B22EDE5FC0086BD2A /* config.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = config.json; path = ../config.json; sourceTree = "<group>"; };
 		9A35A93C22EDE5FC0086BD2A /* CODE_OF_CONDUCT.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; name = CODE_OF_CONDUCT.md; path = ../CODE_OF_CONDUCT.md; sourceTree = "<group>"; };
 		9A35A93D22EDE5FC0086BD2A /* LICENSE */ = {isa = PBXFileReference; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		9A35A93E22EDE70C0086BD2A /* Mintfile */ = {isa = PBXFileReference; lastKnownFileType = text; name = Mintfile; path = ../Mintfile; sourceTree = "<group>"; };
 		9A35A93F22EDE7B90086BD2A /* .swiftlint_analyze.yml */ = {isa = PBXFileReference; lastKnownFileType = text; name = .swiftlint_analyze.yml; path = ../.swiftlint_analyze.yml; sourceTree = "<group>"; };
+		9A47DFE023702D7300B6B0C8 /* BaseTestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTestCase.swift; sourceTree = "<group>"; };
+		9A47DFE423702F1500B6B0C8 /* TestUser.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = TestUser.json; path = ../TestUser.json; sourceTree = "<group>"; };
+		9A47DFE523702F6D00B6B0C8 /* TestSession.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = TestSession.json; path = ../TestSession.json; sourceTree = "<group>"; };
+		9A47DFEA237035B200B6B0C8 /* LoginUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginUITests.swift; sourceTree = "<group>"; };
+		9A47DFEC2370368800B6B0C8 /* HomeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeUITests.swift; sourceTree = "<group>"; };
+		9A47DFEE2370380E00B6B0C8 /* XCUIElement+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "XCUIElement+Extensions.swift"; sourceTree = "<group>"; };
 		9A48AAAA23491B2B000C7AA2 /* ExportOptions-macOS.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "ExportOptions-macOS.plist"; path = "../ExportOptions-macOS.plist"; sourceTree = "<group>"; };
 		9A48AAD923491C5C000C7AA2 /* FinanceMe_watchOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FinanceMe_watchOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9A48AADC23491C5C000C7AA2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
@@ -494,8 +508,12 @@
 		9A12DBFC22EF69A8000226A9 /* FinanceMeUITests-iOS */ = {
 			isa = PBXGroup;
 			children = (
+				9A25E13723705A0800F48D37 /* Common */,
 				9A12DBFF22EF69A8000226A9 /* Info.plist */,
-				9A12DBFD22EF69A8000226A9 /* FinanceMeUITests.swift */,
+				9A47DFEA237035B200B6B0C8 /* LoginUITests.swift */,
+				9A47DFEC2370368800B6B0C8 /* HomeUITests.swift */,
+				9A25E13E23705A9500F48D37 /* SettingsUITests.swift */,
+				9A12DBFD22EF69A8000226A9 /* PerformanceTests.swift */,
 			);
 			path = "FinanceMeUITests-iOS";
 			sourceTree = "<group>";
@@ -516,6 +534,15 @@
 				9A12DC1922EF6A65000226A9 /* FinanceMeUITests.swift */,
 			);
 			path = "FinanceMeUITests-macOS";
+			sourceTree = "<group>";
+		};
+		9A25E13723705A0800F48D37 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				9A47DFEE2370380E00B6B0C8 /* XCUIElement+Extensions.swift */,
+				9A47DFE023702D7300B6B0C8 /* BaseTestCase.swift */,
+			);
+			path = Common;
 			sourceTree = "<group>";
 		};
 		9A35A88622EDD55B0086BD2A = {
@@ -612,9 +639,9 @@
 		9A35A92A22EDE1140086BD2A /* FinanceMeTests-iOS */ = {
 			isa = PBXGroup;
 			children = (
-				9AE4E4C422F4CBC800B34E81 /* UI */,
-				9A35A93322EDE1A10086BD2A /* FinanceMe-iOS.xctestplan */,
 				9A35A92D22EDE1140086BD2A /* Info.plist */,
+				9A35A93322EDE1A10086BD2A /* FinanceMe-iOS.xctestplan */,
+				9AE4E4C522F4CC0600B34E81 /* ContentViewTests.swift */,
 			);
 			path = "FinanceMeTests-iOS";
 			sourceTree = "<group>";
@@ -630,7 +657,8 @@
 				9A35A93722EDE54C0086BD2A /* .gitignore */,
 				9A35A93822EDE5FC0086BD2A /* .swiftlint.yml */,
 				9A35A93F22EDE7B90086BD2A /* .swiftlint_analyze.yml */,
-				9A35A93B22EDE5FC0086BD2A /* config.json */,
+				9A47DFE523702F6D00B6B0C8 /* TestSession.json */,
+				9A47DFE423702F1500B6B0C8 /* TestUser.json */,
 				9A35A93922EDE5FC0086BD2A /* ExportOptions.plist */,
 				9A48AAAA23491B2B000C7AA2 /* ExportOptions-macOS.plist */,
 			);
@@ -706,14 +734,6 @@
 				9A35A89822EDD55C0086BD2A /* Assets.xcassets */,
 			);
 			path = Resources;
-			sourceTree = "<group>";
-		};
-		9AE4E4C422F4CBC800B34E81 /* UI */ = {
-			isa = PBXGroup;
-			children = (
-				9AE4E4C522F4CC0600B34E81 /* ContentViewTests.swift */,
-			);
-			path = UI;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -1088,6 +1108,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9AB86D85237045B80098C150 /* TestUser.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1193,7 +1214,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9A12DBFE22EF69A8000226A9 /* FinanceMeUITests.swift in Sources */,
+				9A47DFE123702D7300B6B0C8 /* BaseTestCase.swift in Sources */,
+				9A12DBFE22EF69A8000226A9 /* PerformanceTests.swift in Sources */,
+				9A47DFED2370368800B6B0C8 /* HomeUITests.swift in Sources */,
+				9A47DFEB237035B200B6B0C8 /* LoginUITests.swift in Sources */,
+				9A25E13F23705A9500F48D37 /* SettingsUITests.swift in Sources */,
+				9A47DFEF2370380E00B6B0C8 /* XCUIElement+Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1201,6 +1227,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9A25E13823705A1B00F48D37 /* PerformanceTests.swift in Sources */,
 				9A12DC0C22EF6A25000226A9 /* FinanceMeUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1209,6 +1236,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9A25E13923705A1C00F48D37 /* PerformanceTests.swift in Sources */,
 				9A12DC1A22EF6A65000226A9 /* FinanceMeUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

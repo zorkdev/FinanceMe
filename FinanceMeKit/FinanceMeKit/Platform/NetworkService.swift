@@ -67,7 +67,7 @@ class DefaultNetworkService: NetworkService {
         return networkRequestable.perform(request: request)
             .tryMap { response in
                 guard let urlResponse = response.response as? HTTPURLResponse else {
-                    let error = HTTPError(code: 1)!
+                    let error = APIError(code: 1, response: response.data)!
                     self.loggingService.log(
                         title: "API Error",
                         content: Self.createResponseString(error, data: response.data, response: nil),
@@ -75,7 +75,7 @@ class DefaultNetworkService: NetworkService {
                     throw error
                 }
 
-                if let error = HTTPError(code: urlResponse.statusCode) {
+                if let error = APIError(code: urlResponse.statusCode, response: response.data) {
                     self.loggingService.log(
                         title: "API Error",
                         content: Self.createResponseString(error, data: response.data, response: urlResponse),

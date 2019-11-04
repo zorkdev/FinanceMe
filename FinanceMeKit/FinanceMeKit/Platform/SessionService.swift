@@ -3,9 +3,7 @@ protocol SessionService {
     var session: Session? { get }
 
     func save(session: Session) -> Result<Void, Error>
-    #if os(iOS) || os(macOS)
     func logOut()
-    #endif
 }
 
 class DefaultSessionService: SessionService {
@@ -16,17 +14,18 @@ class DefaultSessionService: SessionService {
 
     init(dataService: DataService) {
         self.dataService = dataService
+        #if DEBUG
+        setupForTesting()
+        #endif
     }
 
     func save(session: Session) -> Result<Void, Error> {
         session.save(dataService: dataService)
     }
 
-    #if os(iOS) || os(macOS)
     func logOut() {
         dataService.removeAll()
     }
-    #endif
 }
 
 #if DEBUG
@@ -35,9 +34,23 @@ extension Stub {
         let hasSession = true
         let session: Session? = nil
         func save(session: Session) -> Result<Void, Error> { .success(()) }
-        #if os(iOS) || os(macOS)
         func logOut() {}
-        #endif
+    }
+}
+
+extension DefaultSessionService {
+    func setupForTesting(isTesting: Bool = isTesting,
+                         isLoggedIn: Bool = isLoggedIn,
+                         isLoggedOut: Bool = isLoggedOut) {
+        if isTesting, isLoggedIn {
+            let bundle = Bundle(for: Self.self)
+            guard let configURL = bundle.url(forResource: "TestSession", withExtension: "json"),
+                let data = try? Data(contentsOf: configURL),
+                let session = try? Session(from: data) else { return }
+            _ = save(session: session)
+        }
+
+        if isTesting, isLoggedOut { logOut() }
     }
 }
 #endif

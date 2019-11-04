@@ -8,12 +8,7 @@ enum API: APIType, Equatable {
     case deviceToken
     case metrics
 
-    private static let baseURL: String = {
-        #if DEBUG
-        if isTesting { return "http://localhost:8008/api/" }
-        #endif
-        return "https://zorkdev.herokuapp.com/api/"
-    }()
+    private static let baseURL = "https://zorkdev.herokuapp.com/api/"
 
     private var path: String {
         switch self {

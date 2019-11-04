@@ -9,7 +9,10 @@ struct HomeNavigationBarView: View {
 
     var body: some View {
         HStack {
-            Text("FinanceMe").font(.largeTitle).bold()
+            Text("FinanceMe")
+                .font(.largeTitle)
+                .bold()
+                .accessibility(addTraits: .isHeader)
 
             Spacer()
 
@@ -21,7 +24,9 @@ struct HomeNavigationBarView: View {
                         #if os(macOS)
                         Text("Refresh")
                         #else
-                        Image(systemName: "arrow.clockwise.circle.fill").font(.title)
+                        Image(systemName: "arrow.clockwise.circle.fill")
+                            .font(.title)
+                            .accessibility(label: Text("Refresh"))
                         #endif
                     }
                 }
@@ -34,7 +39,9 @@ struct HomeNavigationBarView: View {
                 #if os(macOS)
                 Text("Settings")
                 #else
-                Image(systemName: "ellipsis.circle.fill").font(.title)
+                Image(systemName: "ellipsis.circle.fill")
+                    .font(.title)
+                    .accessibility(label: Text("Settings"))
                 #endif
             })
             .padding([.trailing], 4)
@@ -48,7 +55,9 @@ struct HomeNavigationBarView: View {
                 #if os(macOS)
                 Text("＋")
                 #else
-                Image(systemName: "plus.circle.fill").font(.title)
+                Image(systemName: "plus.circle.fill")
+                    .font(.title)
+                    .accessibility(label: Text("Add"))
                 #endif
             })
             .sheet(isPresented: self.$isTransactionDetailPresented) {

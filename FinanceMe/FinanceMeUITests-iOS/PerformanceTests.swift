@@ -1,11 +1,6 @@
 import XCTest
 
-class FinanceMeUITests: XCTestCase {
-    func testExample() {
-        let app = XCUIApplication()
-        app.launch()
-    }
-
+class PerformanceTests: XCTestCase {
     func testLaunchPerformance() {
         measure(metrics: [XCTOSSignpostMetric.applicationLaunch]) {
             XCUIApplication().launch()

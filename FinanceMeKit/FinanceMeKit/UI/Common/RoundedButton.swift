@@ -9,8 +9,8 @@ struct RoundedButton: View {
             Text(self.title)
                 .foregroundColor(Color.white)
                 .bold()
+                .padding()
         }
-        .padding()
         .frame(width: min(UIScreen.main.bounds.width - 32, 500))
         .background(Color(.link))
         .cornerRadius(12)

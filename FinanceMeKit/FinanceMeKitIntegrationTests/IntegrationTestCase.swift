@@ -6,17 +6,27 @@ class IntegrationTestCase: XCTestCase {
     var appState: AppState!
 
     let credentials: Credentials = {
-        let bundle = Bundle(for: IntegrationTestCase.self)
-        guard let configURL = bundle.url(forResource: "config", withExtension: "json"),
-            let data = try? Data(contentsOf: configURL),
-            let credentials = try? Credentials(from: data) else { preconditionFailure() }
-        return credentials
+        loadFromBundle(model: Credentials.self, resource: "TestUser", extension: "json")
     }()
+
+    let session: Session = {
+        loadFromBundle(model: Session.self, resource: "TestSession", extension: "json")
+    }()
+
+    private static func loadFromBundle<T: Decodable>(model: T.Type,
+                                                     resource: String,
+                                                     extension: String) -> T {
+        let bundle = Bundle(for: Self.self)
+        guard let configURL = bundle.url(forResource: resource, withExtension: `extension`),
+            let data = try? Data(contentsOf: configURL),
+            let model = try? T(from: data) else { preconditionFailure() }
+        return model
+    }
 
     override func setUp() {
         super.setUp()
         appState = AppState()
-        appState.sessionBusinessLogic.login(credentials: credentials).assertSuccess(self) { _ in }
+        _ = appState.sessionService.save(session: session)
     }
 
     override func tearDown() {

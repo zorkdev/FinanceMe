@@ -83,6 +83,10 @@
 		9A3B18392340F9FF00FF27D8 /* TransactionBusinessLogicTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A3B18382340F9FF00FF27D8 /* TransactionBusinessLogicTests.swift */; };
 		9A3B183B2340FD5C00FF27D8 /* MockTransactionBusinessLogic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A3B183A2340FD5C00FF27D8 /* MockTransactionBusinessLogic.swift */; };
 		9A3B183D2340FD5C00FF27D8 /* MockTransactionBusinessLogic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A3B183A2340FD5C00FF27D8 /* MockTransactionBusinessLogic.swift */; };
+		9A47DFE323702EFA00B6B0C8 /* TestUser.json in Resources */ = {isa = PBXBuildFile; fileRef = 9A47DFE223702EFA00B6B0C8 /* TestUser.json */; };
+		9A47DFE72370345D00B6B0C8 /* TestSession.json in Resources */ = {isa = PBXBuildFile; fileRef = 9A47DFE62370345D00B6B0C8 /* TestSession.json */; };
+		9A47DFE82370345D00B6B0C8 /* TestSession.json in Resources */ = {isa = PBXBuildFile; fileRef = 9A47DFE62370345D00B6B0C8 /* TestSession.json */; };
+		9A47DFE92370345D00B6B0C8 /* TestSession.json in Resources */ = {isa = PBXBuildFile; fileRef = 9A47DFE62370345D00B6B0C8 /* TestSession.json */; };
 		9A4A3D7F235F83D3006BD7FF /* HomeViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A4A3D7C235F83D3006BD7FF /* HomeViewModelTests.swift */; };
 		9A4A3D81235F8452006BD7FF /* HomeViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A4A3D80235F8452006BD7FF /* HomeViewTests.swift */; };
 		9A4A3D82235F8452006BD7FF /* HomeViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A4A3D80235F8452006BD7FF /* HomeViewTests.swift */; };
@@ -188,6 +192,7 @@
 		9A78CEC12339081B009B5994 /* TodayViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A78CEC02339081B009B5994 /* TodayViewModelTests.swift */; };
 		9A78CEC22339081B009B5994 /* TodayViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A78CEC02339081B009B5994 /* TodayViewModelTests.swift */; };
 		9A78CEC32339081B009B5994 /* TodayViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A78CEC02339081B009B5994 /* TodayViewModelTests.swift */; };
+		9A84286323709DCD00116758 /* TestSession.json in Resources */ = {isa = PBXBuildFile; fileRef = 9A47DFE62370345D00B6B0C8 /* TestSession.json */; };
 		9A90A9A52301DD4500AE4E25 /* SessionBusinessLogic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A90A9A42301DD4500AE4E25 /* SessionBusinessLogic.swift */; };
 		9A90A9A62301DD4500AE4E25 /* SessionBusinessLogic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A90A9A42301DD4500AE4E25 /* SessionBusinessLogic.swift */; };
 		9A90A9A72301DD4500AE4E25 /* SessionBusinessLogic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A90A9A42301DD4500AE4E25 /* SessionBusinessLogic.swift */; };
@@ -384,7 +389,6 @@
 		9AE822EB2340CA83002FF0F5 /* LoginViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AE822EA2340CA83002FF0F5 /* LoginViewTests.swift */; };
 		9AE822EC2340CA83002FF0F5 /* LoginViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AE822EA2340CA83002FF0F5 /* LoginViewTests.swift */; };
 		9AE822ED2340CA83002FF0F5 /* LoginViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AE822EA2340CA83002FF0F5 /* LoginViewTests.swift */; };
-		9AE822EF2340D6FE002FF0F5 /* config.json in Resources */ = {isa = PBXBuildFile; fileRef = 9AE822EE2340D6FE002FF0F5 /* config.json */; };
 		9AE9984F234FD3E3005C17CC /* ListSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AE9984E234FD3E3005C17CC /* ListSection.swift */; };
 		9AE99852234FD3E3005C17CC /* ListSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AE9984E234FD3E3005C17CC /* ListSection.swift */; };
 		9AED5C91236B665400112F61 /* ActivityIndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AED5C90236B665400112F61 /* ActivityIndicatorView.swift */; };
@@ -548,6 +552,8 @@
 		9A3B18332340F80F00FF27D8 /* Transaction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Transaction.swift; sourceTree = "<group>"; };
 		9A3B18382340F9FF00FF27D8 /* TransactionBusinessLogicTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionBusinessLogicTests.swift; sourceTree = "<group>"; };
 		9A3B183A2340FD5C00FF27D8 /* MockTransactionBusinessLogic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockTransactionBusinessLogic.swift; sourceTree = "<group>"; };
+		9A47DFE223702EFA00B6B0C8 /* TestUser.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = TestUser.json; path = ../../TestUser.json; sourceTree = "<group>"; };
+		9A47DFE62370345D00B6B0C8 /* TestSession.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = TestSession.json; path = ../../../TestSession.json; sourceTree = "<group>"; };
 		9A4A3D7C235F83D3006BD7FF /* HomeViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModelTests.swift; sourceTree = "<group>"; };
 		9A4A3D80235F8452006BD7FF /* HomeViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewTests.swift; sourceTree = "<group>"; };
 		9A4A3D85235F84B9006BD7FF /* FeedViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewTests.swift; sourceTree = "<group>"; };
@@ -679,7 +685,6 @@
 		9AE822E12340C90E002FF0F5 /* RootViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewTests.swift; sourceTree = "<group>"; };
 		9AE822E62340C943002FF0F5 /* LoginViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModelTests.swift; sourceTree = "<group>"; };
 		9AE822EA2340CA83002FF0F5 /* LoginViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewTests.swift; sourceTree = "<group>"; };
-		9AE822EE2340D6FE002FF0F5 /* config.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = config.json; path = ../../config.json; sourceTree = "<group>"; };
 		9AE9984E234FD3E3005C17CC /* ListSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListSection.swift; sourceTree = "<group>"; };
 		9AED5C90236B665400112F61 /* ActivityIndicatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityIndicatorView.swift; sourceTree = "<group>"; };
 		9AED5C92236B666500112F61 /* ActivityIndicatorView-macOS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ActivityIndicatorView-macOS.swift"; sourceTree = "<group>"; };
@@ -848,7 +853,7 @@
 				9A1F416C233FF0A400343AD9 /* UserBusinessLogicTests.swift */,
 				9A3B18382340F9FF00FF27D8 /* TransactionBusinessLogicTests.swift */,
 				9A6F31AE2342275C005F405D /* SummaryBusinessLogicTests.swift */,
-				9AE822EE2340D6FE002FF0F5 /* config.json */,
+				9A47DFE223702EFA00B6B0C8 /* TestUser.json */,
 				9A1F416E233FF0A400343AD9 /* Info.plist */,
 			);
 			path = FinanceMeKitIntegrationTests;
@@ -1185,6 +1190,7 @@
 				9ABFBCA722EFD60200E01785 /* Formatters.swift */,
 				9AADAC0322F7033B00C6C290 /* StringRepresentable.swift */,
 				9AFA47C022F85FD3003B2992 /* TestConfig.swift */,
+				9A47DFE62370345D00B6B0C8 /* TestSession.json */,
 			);
 			path = Platform;
 			sourceTree = "<group>";
@@ -1817,7 +1823,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9AE822EF2340D6FE002FF0F5 /* config.json in Resources */,
+				9A84286323709DCD00116758 /* TestSession.json in Resources */,
+				9A47DFE323702EFA00B6B0C8 /* TestUser.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1825,6 +1832,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9A47DFE72370345D00B6B0C8 /* TestSession.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1832,6 +1840,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9A47DFE82370345D00B6B0C8 /* TestSession.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1846,6 +1855,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9A47DFE92370345D00B6B0C8 /* TestSession.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

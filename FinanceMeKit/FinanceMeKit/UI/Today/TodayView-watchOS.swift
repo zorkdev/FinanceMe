@@ -5,11 +5,17 @@ public struct TodayView: View {
 
     public var body: some View {
         VStack {
-            AmountView(viewModel: viewModel.balance, isLargeDisplay: true)
-            Text("BALANCE").font(.caption)
+            VStack {
+                AmountView(viewModel: viewModel.balance, isLargeDisplay: true)
+                Text("BALANCE").font(.caption)
+            }
+            .accessibilityElement(children: .combine)
             Text("😨").font(.largeTitle)
-            AmountView(viewModel: viewModel.allowance, isLargeDisplay: true)
-            Text("ALLOWANCE").font(.caption)
+            VStack {
+                AmountView(viewModel: viewModel.allowance, isLargeDisplay: true)
+                Text("ALLOWANCE").font(.caption)
+            }
+            .accessibilityElement(children: .combine)
         }
         .onAppear(perform: viewModel.onAppear)
         .onTapGesture(perform: viewModel.onAppear)

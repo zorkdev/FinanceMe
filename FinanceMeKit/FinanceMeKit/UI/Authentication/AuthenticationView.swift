@@ -8,7 +8,9 @@ struct AuthenticationView: View {
             if viewModel.isAuthenticated == false {
                 VStack(spacing: 32) {
                     Button(action: viewModel.onAppear) {
-                        Image(systemName: "faceid").font(.system(size: 60))
+                        Image(systemName: "faceid")
+                            .font(.system(size: 60))
+                            .accessibility(label: Text("Authenticate"))
                     }
                     Text("Please authenticate").font(.title).bold()
                 }

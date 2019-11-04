@@ -11,12 +11,14 @@ struct MonthlyBalanceView: View {
                     .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
                 Text("ALLOWANCE").font(.caption).foregroundColor(Color.secondary)
             }
+            .accessibilityElement(children: .combine)
             VStack(alignment: .trailing) {
                 AmountView(viewModel: AmountViewModel(value: monthlyBalance.outgoings,
                                                       signs: [.plus, .minus]))
                     .frame(minWidth: 0, maxWidth: .infinity, alignment: .trailing)
                 Text("OUTGOINGS").font(.caption).foregroundColor(Color.secondary)
             }
+            .accessibilityElement(children: .combine)
         }
         .padding([.top, .bottom])
     }

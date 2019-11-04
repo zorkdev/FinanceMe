@@ -3,9 +3,8 @@ import Combine
 protocol SessionBusinessLogicType {
     var isLoggedIn: AnyPublisher<Bool, Never> { get }
     func login(credentials: Credentials) -> AnyPublisher<Void, Error>
-    #if os(iOS) || os(macOS)
+    // swiftlint:disable:next unused_declaration
     func logOut()
-    #endif
 }
 
 class SessionBusinessLogic: SessionBusinessLogicType {
@@ -33,12 +32,10 @@ class SessionBusinessLogic: SessionBusinessLogicType {
             }.eraseToAnyPublisher()
     }
 
-    #if os(iOS) || os(macOS)
     func logOut() {
         sessionService.logOut()
         internalIsLoggedIn = sessionService.hasSession
     }
-    #endif
 }
 
 #if DEBUG
@@ -46,9 +43,7 @@ extension Stub {
     class StubSessionBusinessLogic: SessionBusinessLogicType {
         let isLoggedIn: AnyPublisher<Bool, Never> = Just(true).eraseToAnyPublisher()
         func login(credentials: Credentials) -> AnyPublisher<Void, Error> { Empty().eraseToAnyPublisher() }
-        #if os(iOS) || os(macOS)
         func logOut() {}
-        #endif
     }
 }
 #endif

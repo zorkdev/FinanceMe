@@ -11,17 +11,20 @@ struct CurrentMonthView: View {
                     .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
                 Text("FORECAST").font(.caption).foregroundColor(Color.secondary)
             }
+            .accessibilityElement(children: .combine)
             VStack {
                 AmountView(viewModel: AmountViewModel(value: currentMonth.spending,
                                                       signs: [.plus, .minus]))
                 Text("SPENDING").font(.caption).foregroundColor(Color.secondary)
             }
+            .accessibilityElement(children: .combine)
             VStack(alignment: .trailing) {
                 AmountView(viewModel: AmountViewModel(value: currentMonth.allowance,
                                                       signs: [.plus, .minus]))
                     .frame(minWidth: 0, maxWidth: .infinity, alignment: .trailing)
                 Text("ALLOWANCE").font(.caption).foregroundColor(Color.secondary)
             }
+            .accessibilityElement(children: .combine)
         }
         .padding([.top, .bottom])
     }
