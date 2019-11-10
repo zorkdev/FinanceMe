@@ -1,9 +1,10 @@
 import XCTest
+import FinanceMeTestKit
 @testable import FinanceMeKit
 
-class URLSessionExtensionsTests: XCTestCase {
+class URLSessionExtensionsTests: AsyncTestCase {
     func testPerform() {
         let request = URLRequest(url: URL(string: "https://www.apple.com")!)
-        URLSession.shared.perform(request: request).assertSuccess(self) { _ in }
+        URLSession.shared.perform(request: request).assertSuccess(self, once: false) { _ in }
     }
 }

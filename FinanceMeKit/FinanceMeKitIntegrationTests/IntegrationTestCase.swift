@@ -2,7 +2,7 @@ import XCTest
 import FinanceMeTestKit
 @testable import FinanceMeKit
 
-class IntegrationTestCase: XCTestCase {
+class IntegrationTestCase: AsyncTestCase {
     var appState: AppState!
 
     let credentials: Credentials = {

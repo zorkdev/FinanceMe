@@ -3,7 +3,7 @@ import XCTest
 
 class UserBusinessLogicTests: IntegrationTestCase {
     func testGetUpdateUser() {
-        appState.userBusinessLogic.getUser().assertSuccess(self) {}
+        appState.userBusinessLogic.getUser().assertSuccess(self, once: false) {}
         var userExpectation: User?
         appState.userBusinessLogic.user.assertSuccess(self) { userExpectation = $0 }
 
@@ -12,6 +12,6 @@ class UserBusinessLogicTests: IntegrationTestCase {
             return
         }
 
-        appState.userBusinessLogic.update(user: user).assertSuccess(self) {}
+        appState.userBusinessLogic.update(user: user).assertSuccess(self, once: false) {}
     }
 }
