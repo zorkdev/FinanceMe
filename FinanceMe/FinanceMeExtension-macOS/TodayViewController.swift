@@ -11,6 +11,7 @@ class TodayViewController: NSViewController, NCWidgetProviding {
 
         let todayView = NSHostingView(rootView: TodayView(appState: appState))
         todayView.translatesAutoresizingMaskIntoConstraints = false
+        todayView.addGestureRecognizer(NSClickGestureRecognizer(target: self, action: #selector(onTap)))
         view.addSubview(todayView)
 
         NSLayoutConstraint.activate([
@@ -26,5 +27,10 @@ class TodayViewController: NSViewController, NCWidgetProviding {
 
     func widgetPerformUpdate(completionHandler: (@escaping (NCUpdateResult) -> Void)) {
         completionHandler(.newData)
+    }
+
+    @objc
+    private func onTap() {
+        NSWorkspace.shared.open(Link.urlScheme)
     }
 }

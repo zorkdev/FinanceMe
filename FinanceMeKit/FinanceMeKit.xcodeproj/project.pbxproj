@@ -49,6 +49,8 @@
 		9A1F418E23400CAB00343AD9 /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A1F418D23400CAB00343AD9 /* RootView.swift */; };
 		9A1F419023400CAB00343AD9 /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A1F418D23400CAB00343AD9 /* RootView.swift */; };
 		9A1F419123400CAB00343AD9 /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A1F418D23400CAB00343AD9 /* RootView.swift */; };
+		9A260C92237B5116005E995F /* Link.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AF20D80236F2AB500290B9A /* Link.swift */; };
+		9A260C93237B511D005E995F /* LinkTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AF20D82236F2B3500290B9A /* LinkTests.swift */; };
 		9A2FB3B6235E1F4100CF3525 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A2FB3B2235E1F4100CF3525 /* HomeViewModel.swift */; };
 		9A2FB3B8235E208900CF3525 /* HomeView-iOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A2FB3B7235E208900CF3525 /* HomeView-iOS.swift */; };
 		9A2FB3BC235E209800CF3525 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A2FB3BB235E209800CF3525 /* HomeView.swift */; };
@@ -2198,6 +2200,7 @@
 				9A4A3D9C235F98F0006BD7FF /* TransactionView.swift in Sources */,
 				9AFB07B3236A1E1B007E5EA1 /* LoadingView.swift in Sources */,
 				9A0DF60A2367202E00884090 /* TransactionDetailViewModel.swift in Sources */,
+				9A260C92237B5116005E995F /* Link.swift in Sources */,
 				9AD73D21230028D4003B16C3 /* UserBusinessLogic.swift in Sources */,
 				9A7053F723678CB50070803C /* HomeNavigationBarView.swift in Sources */,
 				9A4A3D92235F8807006BD7FF /* RegularsViewModel.swift in Sources */,
@@ -2395,6 +2398,7 @@
 				9A6F31B9234230E1005F405D /* SpendingBusinessLogicTests.swift in Sources */,
 				9A78CEBF233903FA009B5994 /* TodayViewTests.swift in Sources */,
 				9AADAB3E22F643DC00C6C290 /* DefaultConfigServiceTests.swift in Sources */,
+				9A260C93237B511D005E995F /* LinkTests.swift in Sources */,
 				9AFA47D522F87663003B2992 /* ErrorTests.swift in Sources */,
 				9A956DBD2300373600CC848D /* CredentialsTests.swift in Sources */,
 				9A0DF60423671F2200884090 /* CurrentMonthViewTests.swift in Sources */,
