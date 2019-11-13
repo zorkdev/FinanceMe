@@ -64,7 +64,6 @@ extension BaseTestCase {
             app.launchArguments = ["isTesting", "isLoggedIn"]
             app.launch()
             thenIShouldSeeAuthenticationScreen()
-            sleep(1)
         }
     }
 
@@ -90,6 +89,7 @@ extension BaseTestCase {
 
     func whenIEnterPasscode() {
         XCTContext.runActivity(named: #function) { _ in
+            sleep(1)
             passcodeTextField.clearAndTypeText("a\r")
             sleep(1)
         }
@@ -97,6 +97,7 @@ extension BaseTestCase {
 
     func whenIEnterWrongPasscode() {
         XCTContext.runActivity(named: #function) { _ in
+            sleep(1)
             passcodeTextField.clearAndTypeText("\r")
             sleep(1)
         }
