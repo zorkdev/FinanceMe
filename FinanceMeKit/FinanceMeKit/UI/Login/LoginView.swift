@@ -23,6 +23,7 @@ struct LoginView: View {
             }
             .navigationBarTitle("Login")
         }
+        .navigationViewStyle(StackNavigationViewStyle())
         .loading(loadingState)
         .errorBanner(errorViewModel)
     }

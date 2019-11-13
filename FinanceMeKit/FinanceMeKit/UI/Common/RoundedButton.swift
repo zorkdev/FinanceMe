@@ -11,7 +11,7 @@ struct RoundedButton: View {
                 .bold()
                 .padding()
         }
-        .frame(width: min(UIScreen.main.bounds.width - 32, 500))
+        .frame(width: min(UIScreen.main.bounds.width - 32, 400))
         .background(Color(.link))
         .cornerRadius(12)
         .padding([.leading, .trailing])

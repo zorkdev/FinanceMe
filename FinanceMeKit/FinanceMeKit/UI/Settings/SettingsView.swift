@@ -50,6 +50,7 @@ struct SettingsView: View {
                 self.viewModel.isEditing ? self.viewModel.onSave() : self.presentationMode.wrappedValue.dismiss()
             }.disabled(viewModel.isEditing ? viewModel.isDisabled : false))
         }
+        .navigationViewStyle(StackNavigationViewStyle())
         .loading(loadingState)
         .errorBanner(errorViewModel)
         .dismiss(shouldDismiss: $viewModel.shouldDismiss)

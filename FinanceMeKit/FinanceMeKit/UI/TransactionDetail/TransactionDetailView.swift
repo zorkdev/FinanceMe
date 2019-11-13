@@ -32,6 +32,7 @@ struct TransactionDetailView: View {
             .navigationBarItems(leading: Button("Cancel") { self.presentationMode.wrappedValue.dismiss() },
                                 trailing: Button("Save", action: viewModel.onSave).disabled(viewModel.isDisabled))
         }
+        .navigationViewStyle(StackNavigationViewStyle())
         .loading(loadingState)
         .errorBanner(errorViewModel)
         .dismiss(shouldDismiss: $viewModel.shouldDismiss)
