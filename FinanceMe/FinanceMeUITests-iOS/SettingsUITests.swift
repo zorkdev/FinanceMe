@@ -21,7 +21,7 @@ class SettingsUITests: BaseTestCase, Settings {
 
         let previousName = nameTextField.value as? String ?? ""
 
-        whenIEnter(name: "Test User")
+        whenIEnter(name: "Test")
         thenSaveButtonShouldBe(enabled: true)
 
         whenITapSaveButton()
