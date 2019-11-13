@@ -64,6 +64,7 @@ extension BaseTestCase {
             app.launchArguments = ["isTesting", "isLoggedIn"]
             app.launch()
             thenIShouldSeeAuthenticationScreen()
+            sleep(1)
         }
     }
 
