@@ -20,7 +20,8 @@
     },
     "language" : "en-GB",
     "region" : "GB",
-    "testExecutionOrdering" : "random"
+    "testExecutionOrdering" : "random",
+    "threadSanitizerEnabled" : true
   },
   "testTargets" : [
     {
