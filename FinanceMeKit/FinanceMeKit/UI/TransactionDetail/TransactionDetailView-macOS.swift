@@ -1,6 +1,8 @@
 import SwiftUI
 
 struct TransactionDetailView: View {
+    private static let width: CGFloat = 80
+
     private let loadingState = LoadingState()
     private let errorViewModel = ErrorViewModel()
     @Environment(\.presentationMode) private var presentationMode
@@ -10,17 +12,21 @@ struct TransactionDetailView: View {
         Form {
             VStack {
                 HStack {
-                    Text("Amount")
+                    Text("Amount:").frame(minWidth: Self.width, alignment: .trailing)
                     TextField("£0.00", text: $viewModel.amount, onEditingChanged: viewModel.onAmountEditingChanged)
                 }
                 HStack {
-                    Text("Description")
+                    Text("Description:").frame(minWidth: Self.width, alignment: .trailing)
                     TextField("Groceries", text: $viewModel.narrative)
                 }
-                Picker("Category", selection: $viewModel.category) {
+                Picker(selection: $viewModel.category,
+                       label: Text("Category:").frame(minWidth: Self.width, alignment: .trailing)) {
                     ForEach(Transaction.Source.allCases, id: \.self) { Text($0.displayString) }
                 }
-                DatePicker("Date", selection: $viewModel.date)
+                DatePicker(selection: $viewModel.date) {
+                    Text("Date:").frame(minWidth: Self.width, alignment: .trailing)
+                }
+                Divider()
                 HStack {
                     Button("Cancel") { self.presentationMode.wrappedValue.dismiss() }
                     Spacer()

@@ -1,6 +1,8 @@
 import SwiftUI
 
 struct SettingsView: View {
+    private static let width: CGFloat = 90
+
     private let loadingState = LoadingState()
     private let errorViewModel = ErrorViewModel()
     @Environment(\.presentationMode) private var presentationMode
@@ -10,20 +12,21 @@ struct SettingsView: View {
         Form {
             VStack {
                 HStack {
-                    Text("Name")
+                    Text("Name:").frame(minWidth: Self.width, alignment: .trailing)
                     TextField("Your Name", text: $viewModel.name)
                 }
                 HStack {
-                    Text("Amount Limit")
+                    Text("Amount Limit:").frame(minWidth: Self.width, alignment: .trailing)
                     TextField("£0.00", text: $viewModel.limit, onEditingChanged: viewModel.onLimitEditingChanged)
                 }
-                Picker("Payday", selection: $viewModel.payday) {
+                Picker(selection: $viewModel.payday,
+                       label: Text("Payday:").frame(minWidth: Self.width, alignment: .trailing)) {
                     ForEach(viewModel.paydays, id: \.self) { Text("\($0)") }
                 }
-                DatePicker("Start Date",
-                           selection: $viewModel.date,
-                           in: ...Date(),
-                           displayedComponents: [.date])
+                DatePicker(selection: $viewModel.date, in: ...Date(), displayedComponents: [.date]) {
+                    Text("Start Date:").frame(minWidth: Self.width, alignment: .trailing)
+                }
+                Divider()
                 HStack {
                     Button("Reconcile", action: viewModel.onReconcile)
                     Button("Log Out", action: viewModel.onLogOut)
