@@ -10,10 +10,13 @@ struct RegularsView: View {
                 MonthlyBalanceView(monthlyBalance: viewModel.monthlyBalance)
             }
             Section(header: Text(viewModel.savingsSection.title.uppercased())) {
-                ForEach(viewModel.savingsSection.rows) {
-                    TransactionNavigationView(transaction: $0, appState: self.appState)
+                // SwiftUI bug: One more ForEach in a View crashes
+                // ForEach(viewModel.savingsSection.rows) {
+                if viewModel.savingsSection.rows.first != nil {
+                    TransactionNavigationView(transaction: self.viewModel.savingsSection.rows.first!,
+                                              appState: self.appState)
                 }
-                .onDelete { self.viewModel.onDelete(section: self.viewModel.savingsSection, row: $0) }
+                // .onDelete { self.viewModel.onDelete(section: self.viewModel.savingsSection, row: $0) }
             }
             Section(header: Text(viewModel.incomingSection.title.uppercased())) {
                 ForEach(viewModel.incomingSection.rows) {
