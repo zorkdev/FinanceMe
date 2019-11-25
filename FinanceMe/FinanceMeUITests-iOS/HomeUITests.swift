@@ -67,6 +67,15 @@ class HomeUITests: BaseTestCase, Home {
         thenIShouldSeeLoadingViewDisappear()
         thenIShouldSeeHomeScreen()
         thenICanDeleteTransaction(description: "Transaction", amount: "£100.00")
+
+        whenITapAddButton()
+        whenIEnter(amount: "100")
+        whenIEnter(description: "Transaction")
+        whenISelect(category: "Savings")
+        whenITapSaveButton()
+        thenIShouldSeeLoadingViewDisappear()
+        thenIShouldSeeHomeScreen()
+        thenICanDeleteTransaction(description: "Transaction", amount: "£100.00")
     }
 }
 

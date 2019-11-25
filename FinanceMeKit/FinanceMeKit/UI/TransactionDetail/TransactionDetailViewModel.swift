@@ -26,7 +26,7 @@ class TransactionDetailViewModel: ObservableObject {
 
         let direction: Transaction.Direction
         switch category {
-        case .externalOutbound, .externalRegularOutbound: direction = .outbound
+        case .externalOutbound, .externalRegularOutbound, .externalSavings: direction = .outbound
         case .externalInbound, .externalRegularInbound: direction = .inbound
         }
 

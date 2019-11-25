@@ -9,6 +9,12 @@ struct RegularsView: View {
             Section(header: Text("MONTHLY BALANCE")) {
                 MonthlyBalanceView(monthlyBalance: viewModel.monthlyBalance)
             }
+            Section(header: Text(viewModel.savingsSection.title.uppercased())) {
+                ForEach(viewModel.savingsSection.rows) {
+                    TransactionNavigationView(transaction: $0, appState: self.appState)
+                }
+                .onDelete { self.viewModel.onDelete(section: self.viewModel.savingsSection, row: $0) }
+            }
             Section(header: Text(viewModel.incomingSection.title.uppercased())) {
                 ForEach(viewModel.incomingSection.rows) {
                     TransactionNavigationView(transaction: $0, appState: self.appState)

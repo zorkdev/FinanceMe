@@ -9,11 +9,9 @@ struct BalancesView: View {
                 CurrentMonthView(currentMonth: viewModel.currentMonth)
             }
             ForEach(viewModel.summarySections) { section in
-                Section(header: Text(section.title)) {
+                Section(header: self.summaryHeader(title: section.title)) {
                     ForEach(section.rows) {
-                        TransactionView(viewModel: TransactionViewModel(narrative: $0.narrative,
-                                                                        amount: $0.amount,
-                                                                        signs: [.plus, .minus]))
+                        EndOfMonthSummaryView(viewModel: $0)
                     }
                 }
             }
@@ -22,6 +20,16 @@ struct BalancesView: View {
 
     init(appState: AppState) {
         self.viewModel = BalancesViewModel(businessLogic: appState.summaryBusinessLogic)
+    }
+
+    private func summaryHeader(title: String) -> some View {
+        HStack(spacing: .zero) {
+            Text(title)
+                .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
+            Text("Balance".uppercased())
+            Text("Savings".uppercased())
+                .frame(minWidth: 0, maxWidth: .infinity, alignment: .trailing)
+        }
     }
 }
 

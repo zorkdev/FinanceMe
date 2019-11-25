@@ -47,6 +47,7 @@ extension Stub {
             currentMonthSummary: CurrentMonthSummary(allowance: 90.30, forecast: -65.50, spending: 250.71),
             endOfMonthSummaries: [
                 EndOfMonthSummary(balance: 41.90,
+                                  savings: 110.32,
                                   created: ISO8601DateFormatter().date(from: "2019-01-01T00:00:00Z")!)
             ])).eraseToAnyPublisher()
         func fetchSummary() {}

@@ -393,6 +393,14 @@
 		9AE822ED2340CA83002FF0F5 /* LoginViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AE822EA2340CA83002FF0F5 /* LoginViewTests.swift */; };
 		9AE9984F234FD3E3005C17CC /* ListSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AE9984E234FD3E3005C17CC /* ListSection.swift */; };
 		9AE99852234FD3E3005C17CC /* ListSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AE9984E234FD3E3005C17CC /* ListSection.swift */; };
+		9AEBFEF4238B733A00B8D050 /* EndOfMonthSummaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AEBFEF3238B733A00B8D050 /* EndOfMonthSummaryView.swift */; };
+		9AEBFEF5238B733A00B8D050 /* EndOfMonthSummaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AEBFEF3238B733A00B8D050 /* EndOfMonthSummaryView.swift */; };
+		9AEBFEF7238B73CF00B8D050 /* EndOfMonthSummaryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AEBFEF6238B73CF00B8D050 /* EndOfMonthSummaryViewModel.swift */; };
+		9AEBFEF8238B73CF00B8D050 /* EndOfMonthSummaryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AEBFEF6238B73CF00B8D050 /* EndOfMonthSummaryViewModel.swift */; };
+		9AEBFEFA238B77E900B8D050 /* EndOfMonthSummaryViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AEBFEF9238B77E900B8D050 /* EndOfMonthSummaryViewTests.swift */; };
+		9AEBFEFB238B77E900B8D050 /* EndOfMonthSummaryViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AEBFEF9238B77E900B8D050 /* EndOfMonthSummaryViewTests.swift */; };
+		9AEBFEFD238B784E00B8D050 /* EndOfMonthSummaryViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AEBFEFC238B784E00B8D050 /* EndOfMonthSummaryViewModelTests.swift */; };
+		9AEBFEFE238B784E00B8D050 /* EndOfMonthSummaryViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AEBFEFC238B784E00B8D050 /* EndOfMonthSummaryViewModelTests.swift */; };
 		9AED5C91236B665400112F61 /* ActivityIndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AED5C90236B665400112F61 /* ActivityIndicatorView.swift */; };
 		9AED5C93236B666500112F61 /* ActivityIndicatorView-macOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AED5C92236B666500112F61 /* ActivityIndicatorView-macOS.swift */; };
 		9AF20D69236DF97400290B9A /* ErrorBannerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AF20D68236DF97400290B9A /* ErrorBannerView.swift */; };
@@ -688,6 +696,10 @@
 		9AE822E62340C943002FF0F5 /* LoginViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModelTests.swift; sourceTree = "<group>"; };
 		9AE822EA2340CA83002FF0F5 /* LoginViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewTests.swift; sourceTree = "<group>"; };
 		9AE9984E234FD3E3005C17CC /* ListSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListSection.swift; sourceTree = "<group>"; };
+		9AEBFEF3238B733A00B8D050 /* EndOfMonthSummaryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndOfMonthSummaryView.swift; sourceTree = "<group>"; };
+		9AEBFEF6238B73CF00B8D050 /* EndOfMonthSummaryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndOfMonthSummaryViewModel.swift; sourceTree = "<group>"; };
+		9AEBFEF9238B77E900B8D050 /* EndOfMonthSummaryViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndOfMonthSummaryViewTests.swift; sourceTree = "<group>"; };
+		9AEBFEFC238B784E00B8D050 /* EndOfMonthSummaryViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndOfMonthSummaryViewModelTests.swift; sourceTree = "<group>"; };
 		9AED5C90236B665400112F61 /* ActivityIndicatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityIndicatorView.swift; sourceTree = "<group>"; };
 		9AED5C92236B666500112F61 /* ActivityIndicatorView-macOS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ActivityIndicatorView-macOS.swift"; sourceTree = "<group>"; };
 		9AF20D68236DF97400290B9A /* ErrorBannerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorBannerView.swift; sourceTree = "<group>"; };
@@ -1068,6 +1080,8 @@
 			isa = PBXGroup;
 			children = (
 				9A0DF5EF23671D1300884090 /* CurrentMonthView.swift */,
+				9AEBFEF3238B733A00B8D050 /* EndOfMonthSummaryView.swift */,
+				9AEBFEF6238B73CF00B8D050 /* EndOfMonthSummaryViewModel.swift */,
 				9A9A869E2360D2C100E135DF /* BalancesView.swift */,
 				9A75CF712360CCAD00991320 /* BalancesViewModel.swift */,
 			);
@@ -1113,6 +1127,8 @@
 			isa = PBXGroup;
 			children = (
 				9A0DF60123671F2200884090 /* CurrentMonthViewTests.swift */,
+				9AEBFEF9238B77E900B8D050 /* EndOfMonthSummaryViewTests.swift */,
+				9AEBFEFC238B784E00B8D050 /* EndOfMonthSummaryViewModelTests.swift */,
 				9AA5837D2363A4C700DD9B72 /* BalancesViewTests.swift */,
 				9AA583812363A67900DD9B72 /* BalancesViewModelTests.swift */,
 			);
@@ -2069,6 +2085,7 @@
 				9ABFBCAF22EFD73900E01785 /* Codable+Extensions.swift in Sources */,
 				9A5AB5EC2365F6EE00B691FF /* AuthenticationViewModel.swift in Sources */,
 				9A9A869F2360D2C100E135DF /* BalancesView.swift in Sources */,
+				9AEBFEF4238B733A00B8D050 /* EndOfMonthSummaryView.swift in Sources */,
 				9A7054102367A9100070803C /* SettingsView.swift in Sources */,
 				9A75CF722360CCAD00991320 /* BalancesViewModel.swift in Sources */,
 				9A5BDDA4230042A400F376C6 /* TodayViewModel.swift in Sources */,
@@ -2084,6 +2101,7 @@
 				9A071434236DAD3100D97DFF /* LoadingState.swift in Sources */,
 				9AD73D23230029AB003B16C3 /* Credentials.swift in Sources */,
 				9A7054172367B67D0070803C /* RoundedButton.swift in Sources */,
+				9AEBFEF7238B73CF00B8D050 /* EndOfMonthSummaryViewModel.swift in Sources */,
 				9AED5C91236B665400112F61 /* ActivityIndicatorView.swift in Sources */,
 				9AADAC0E22F7046C00C6C290 /* Error.swift in Sources */,
 				9ADD21ED22F7288B006F98CA /* API.swift in Sources */,
@@ -2202,6 +2220,7 @@
 				9A0DF60A2367202E00884090 /* TransactionDetailViewModel.swift in Sources */,
 				9A260C92237B5116005E995F /* Link.swift in Sources */,
 				9AD73D21230028D4003B16C3 /* UserBusinessLogic.swift in Sources */,
+				9AEBFEF5238B733A00B8D050 /* EndOfMonthSummaryView.swift in Sources */,
 				9A7053F723678CB50070803C /* HomeNavigationBarView.swift in Sources */,
 				9A4A3D92235F8807006BD7FF /* RegularsViewModel.swift in Sources */,
 				9ABFBCAB22EFD60200E01785 /* Formatters.swift in Sources */,
@@ -2232,6 +2251,7 @@
 				9A7053F6236783350070803C /* TransactionNavigationView.swift in Sources */,
 				9ADD21D522F71D12006F98CA /* Session.swift in Sources */,
 				9A99D0D423020D5D00D735A2 /* TestConfig.swift in Sources */,
+				9AEBFEF8238B73CF00B8D050 /* EndOfMonthSummaryViewModel.swift in Sources */,
 				9A3B18322340F7E900FF27D8 /* TransactionBusinessLogic.swift in Sources */,
 				9AED5C93236B666500112F61 /* ActivityIndicatorView-macOS.swift in Sources */,
 				9A6183D02304A9F1001825A6 /* AmountView.swift in Sources */,
@@ -2256,6 +2276,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9A375B0622F7A44F00E598AB /* DefaultNetworkServiceTests.swift in Sources */,
+				9AEBFEFA238B77E900B8D050 /* EndOfMonthSummaryViewTests.swift in Sources */,
 				9AF20D72236EFC5700290B9A /* ErrorViewModelTests.swift in Sources */,
 				9AA805A222F8C17400B40516 /* AppStateTests-iOS.swift in Sources */,
 				9ADD21E422F722E9006F98CA /* SessionTests.swift in Sources */,
@@ -2317,6 +2338,7 @@
 				9A4A3D9E235F9EFA006BD7FF /* TransactionViewTests.swift in Sources */,
 				9A5BDDA02300405600F376C6 /* UserBusinessLogicTests.swift in Sources */,
 				9A4A3D86235F84B9006BD7FF /* FeedViewTests.swift in Sources */,
+				9AEBFEFD238B784E00B8D050 /* EndOfMonthSummaryViewModelTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2376,6 +2398,7 @@
 				9A5BDDA22300405600F376C6 /* UserBusinessLogicTests.swift in Sources */,
 				9AF20D7F236F13FB00290B9A /* ErrorBannerViewTests.swift in Sources */,
 				9A78CEB52338F9B2009B5994 /* SessionBusinessLogicTests.swift in Sources */,
+				9AEBFEFE238B784E00B8D050 /* EndOfMonthSummaryViewModelTests.swift in Sources */,
 				9AE822E02340C873002FF0F5 /* RootViewModelTests.swift in Sources */,
 				9AE4E25722F4BC3200B34E81 /* CodableExtensionsTests.swift in Sources */,
 				9ADD21DE22F720E6006F98CA /* DefaultSessionServiceTests.swift in Sources */,
@@ -2406,6 +2429,7 @@
 				9A6F31A923422420005F405D /* SummaryBusinessLogicTests.swift in Sources */,
 				9AADABFC22F7018D00C6C290 /* DefaultLoggingServiceTests.swift in Sources */,
 				9A0DF60023671ECC00884090 /* MonthlyBalanceViewTests.swift in Sources */,
+				9AEBFEFB238B77E900B8D050 /* EndOfMonthSummaryViewTests.swift in Sources */,
 				9AA805A422F8C17B00B40516 /* AppStateTests-macOS.swift in Sources */,
 				9AA583802363A4C700DD9B72 /* BalancesViewTests.swift in Sources */,
 				9AFA47CD22F87440003B2992 /* DataExtensionsTests.swift in Sources */,

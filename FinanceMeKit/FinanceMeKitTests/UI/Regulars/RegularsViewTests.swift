@@ -18,7 +18,13 @@ class RegularsViewTests: XCTestCase {
                         direction: .outbound,
                         created: ISO8601DateFormatter().date(from: "2019-01-02T00:00:00Z")!,
                         narrative: "Transaction",
-                        source: .externalRegularOutbound)
+                        source: .externalRegularOutbound),
+            Transaction(id: UUID(),
+                        amount: -100.45,
+                        direction: .outbound,
+                        created: ISO8601DateFormatter().date(from: "2019-01-03T00:00:00Z")!,
+                        narrative: "Transaction",
+                        source: .externalSavings)
         ]
 
         assert(view: RegularsView(appState: appState, loadingState: LoadingState(), errorViewModel: ErrorViewModel()),

@@ -1,5 +1,6 @@
 struct EndOfMonthSummary: Codable, Equatable {
     let balance: Decimal
+    let savings: Decimal
     let created: Date
 }
 

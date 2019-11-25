@@ -14,6 +14,7 @@ class RegularsViewModel: ObservableObject {
     private var cancellables: Set<AnyCancellable> = []
 
     @Published var monthlyBalance = MonthlyBalance(allowance: 0, outgoings: 0)
+    @Published var savingsSection = ListSection<Transaction>(title: "", rows: [])
     @Published var incomingSection = ListSection<Transaction>(title: "", rows: [])
     @Published var outgoingSection = ListSection<Transaction>(title: "", rows: [])
 
@@ -32,6 +33,7 @@ class RegularsViewModel: ObservableObject {
 
     private func setupBindings() {
         setupMonthlyBalance()
+        setupSavingsSection()
         setupIncomingSection()
         setupOutgoingSection()
     }
@@ -50,6 +52,16 @@ class RegularsViewModel: ObservableObject {
                 return MonthlyBalance(allowance: allowance, outgoings: outgoings)
             }.receive(on: DispatchQueue.main)
             .assign(to: \.monthlyBalance, on: self)
+            .store(in: &cancellables)
+    }
+
+    private func setupSavingsSection() {
+        transactionBusinessLogic.transactions
+            .map { $0.filter { $0.source == .externalSavings } }
+            .map { $0.sorted { $0.amount < $1.amount } }
+            .map { ListSection(title: "Savings", rows: $0) }
+            .receive(on: DispatchQueue.main)
+            .assign(to: \.savingsSection, on: self)
             .store(in: &cancellables)
     }
 

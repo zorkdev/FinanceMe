@@ -40,8 +40,10 @@ extension Summary: Stubable {
         Summary(currentMonthSummary: CurrentMonthSummary(allowance: 90.30, forecast: -65.50, spending: 250.71),
                 endOfMonthSummaries: [
                     EndOfMonthSummary(balance: 41.90,
+                                      savings: 100.34,
                                       created: ISO8601DateFormatter().date(from: "2018-01-01T00:00:00Z")!),
                     EndOfMonthSummary(balance: 66.90,
+                                      savings: 20.45,
                                       created: ISO8601DateFormatter().date(from: "2019-02-01T00:00:00Z")!)
                 ])
     }

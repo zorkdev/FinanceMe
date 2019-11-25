@@ -10,6 +10,7 @@ struct Transaction: Storeable, Identifiable, Equatable {
         case externalInbound = "EXTERNAL_INBOUND"
         case externalRegularOutbound = "EXTERNAL_REGULAR_OUTBOUND"
         case externalRegularInbound = "EXTERNAL_REGULAR_INBOUND"
+        case externalSavings = "EXTERNAL_SAVINGS"
 
         var displayString: String {
             switch self {
@@ -17,6 +18,7 @@ struct Transaction: Storeable, Identifiable, Equatable {
             case .externalInbound: return "Incoming"
             case .externalRegularOutbound: return "Regular Outgoing"
             case .externalRegularInbound: return "Regular Incoming"
+            case .externalSavings: return "Savings"
             }
         }
     }

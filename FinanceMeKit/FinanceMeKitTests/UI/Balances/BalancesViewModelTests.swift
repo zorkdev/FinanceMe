@@ -18,9 +18,9 @@ class BalancesViewModelTests: XCTestCase {
         waitForEvent {
             XCTAssertEqual(self.viewModel.currentMonth, Summary.stub.currentMonthSummary)
             XCTAssertEqual(self.viewModel.summarySections.first?.rows,
-                           [BalancesViewModel.Summary(summary: Summary.stub.endOfMonthSummaries[1])])
+                           [EndOfMonthSummaryViewModel(summary: Summary.stub.endOfMonthSummaries[1])])
             XCTAssertEqual(self.viewModel.summarySections.last?.rows,
-                           [BalancesViewModel.Summary(summary: Summary.stub.endOfMonthSummaries[0])])
+                           [EndOfMonthSummaryViewModel(summary: Summary.stub.endOfMonthSummaries[0])])
         }
     }
 }
