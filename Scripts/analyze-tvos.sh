@@ -10,7 +10,7 @@ xcodebuild build \
     -destination 'platform=tvOS Simulator,name=Apple TV 4K' \
     > build.log
 
-/usr/local/bin/mint run swiftlint swiftlint analyze \
+swift run -c release swiftlint analyze \
     --config .swiftlint_analyze.yml \
     --compiler-log-path build.log \
     --reporter emoji

@@ -1,3 +1,6 @@
+excluded:
+  - .build
+
 identifier_name:
   min_length: 2
 nesting:

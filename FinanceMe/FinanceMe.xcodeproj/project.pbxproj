@@ -275,6 +275,7 @@
 		9A12DC1B22EF6A65000226A9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9A12DC2422EF6C05000226A9 /* FinanceMe-tvOS.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = "FinanceMe-tvOS.xctestplan"; sourceTree = "<group>"; };
 		9A12DC2522EF6C47000226A9 /* FinanceMe-macOS.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = "FinanceMe-macOS.xctestplan"; sourceTree = "<group>"; };
+		9A1A688E239BED420036A895 /* Package.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Package.swift; path = ../Package.swift; sourceTree = "<group>"; };
 		9A25E13E23705A9500F48D37 /* SettingsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsUITests.swift; sourceTree = "<group>"; };
 		9A35A88F22EDD55B0086BD2A /* FinanceMe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FinanceMe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9A35A89222EDD55B0086BD2A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -298,7 +299,6 @@
 		9A35A93A22EDE5FC0086BD2A /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		9A35A93C22EDE5FC0086BD2A /* CODE_OF_CONDUCT.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; name = CODE_OF_CONDUCT.md; path = ../CODE_OF_CONDUCT.md; sourceTree = "<group>"; };
 		9A35A93D22EDE5FC0086BD2A /* LICENSE */ = {isa = PBXFileReference; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
-		9A35A93E22EDE70C0086BD2A /* Mintfile */ = {isa = PBXFileReference; lastKnownFileType = text; name = Mintfile; path = ../Mintfile; sourceTree = "<group>"; };
 		9A35A93F22EDE7B90086BD2A /* .swiftlint_analyze.yml */ = {isa = PBXFileReference; lastKnownFileType = text; name = .swiftlint_analyze.yml; path = ../.swiftlint_analyze.yml; sourceTree = "<group>"; };
 		9A47DFE023702D7300B6B0C8 /* BaseTestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTestCase.swift; sourceTree = "<group>"; };
 		9A47DFE423702F1500B6B0C8 /* TestUser.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = TestUser.json; path = ../TestUser.json; sourceTree = "<group>"; };
@@ -653,7 +653,6 @@
 				9A35A93A22EDE5FC0086BD2A /* README.md */,
 				9A35A93C22EDE5FC0086BD2A /* CODE_OF_CONDUCT.md */,
 				9A35A93D22EDE5FC0086BD2A /* LICENSE */,
-				9A35A93E22EDE70C0086BD2A /* Mintfile */,
 				9A35A93722EDE54C0086BD2A /* .gitignore */,
 				9A35A93822EDE5FC0086BD2A /* .swiftlint.yml */,
 				9A35A93F22EDE7B90086BD2A /* .swiftlint_analyze.yml */,
@@ -661,6 +660,7 @@
 				9A47DFE423702F1500B6B0C8 /* TestUser.json */,
 				9A35A93922EDE5FC0086BD2A /* ExportOptions.plist */,
 				9A48AAAA23491B2B000C7AA2 /* ExportOptions-macOS.plist */,
+				9A1A688E239BED420036A895 /* Package.swift */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";

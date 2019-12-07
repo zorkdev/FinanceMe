@@ -1961,7 +1961,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "cd $SRCROOT/..\n/usr/local/bin/mint run swiftlint\n";
+			shellScript = "cd $SRCROOT/..\nswift run -c release swiftlint\n";
 		};
 		9AF87EF122EF9DAE009E786C /* SwiftLint */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -1979,7 +1979,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "cd $SRCROOT/..\n/usr/local/bin/mint run swiftlint\n";
+			shellScript = "cd $SRCROOT/..\nswift run -c release swiftlint\n";
 		};
 		9AF87EF222EF9E31009E786C /* SwiftLint */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -1997,7 +1997,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "cd $SRCROOT/..\n/usr/local/bin/mint run swiftlint\n";
+			shellScript = "cd $SRCROOT/..\nswift run -c release swiftlint\n";
 		};
 		9AF87EF322EF9E46009E786C /* SwiftLint */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -2015,7 +2015,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "cd $SRCROOT/..\n/usr/local/bin/mint run swiftlint\n";
+			shellScript = "cd $SRCROOT/..\nswift run -c release swiftlint\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 

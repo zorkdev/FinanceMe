@@ -1,4 +1,5 @@
 excluded:
+  - .build
   - FinanceMe/FinanceMeTests-iOS
   - FinanceMe/FinanceMeTests-tvOS
   - FinanceMe/FinanceMeTests-macOS

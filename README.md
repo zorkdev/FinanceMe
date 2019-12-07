@@ -9,15 +9,11 @@ Use `develop` branch for development and `master` for release.
 
 ## 🚀 Build Instructions
 
-This project uses [Mint](https://github.com/yonaskolb/Mint). Build instructions:
+This project uses the [Swift Package Manager](https://github.com/apple/swift-package-manager) for dependencies. Build instructions:
 
 ``` bash
-$ git clone https://github.com/yonaskolb/Mint.git
-$ cd Mint
-$ swift run mint install yonaskolb/mint
 $ git clone https://github.com/zorkdev/FinanceMe.git
 $ cd FinanceMe
-$ mint bootstrap
 $ open FinanceMe.xcworkspace
 ```
 
