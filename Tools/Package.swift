@@ -5,5 +5,8 @@ let package = Package(
     name: "Tools",
     dependencies: [
         .package(url: "https://github.com/realm/SwiftLint.git", .upToNextMajor(from: "0.38.0"))
+    ],
+    targets: [
+        .target(name: "Tools", dependencies: ["swiftlint"])
     ]
 )

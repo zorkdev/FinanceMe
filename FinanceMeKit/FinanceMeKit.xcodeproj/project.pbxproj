@@ -1547,7 +1547,6 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 9A35A94F22EDEB590086BD2A /* Build configuration list for PBXNativeTarget "FinanceMeKit-watchOS" */;
 			buildPhases = (
-				9AF87EF122EF9DAE009E786C /* SwiftLint */,
 				9A35A94322EDEB590086BD2A /* Headers */,
 				9A35A94422EDEB590086BD2A /* Sources */,
 				9A35A94522EDEB590086BD2A /* Frameworks */,
@@ -1961,25 +1960,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "cd $SRCROOT/..\nswift run -c release swiftlint\n";
-		};
-		9AF87EF122EF9DAE009E786C /* SwiftLint */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-			);
-			name = SwiftLint;
-			outputFileListPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "cd $SRCROOT/..\nswift run -c release swiftlint\n";
+			shellScript = "cd ..\nsh Scripts/swiftlint.sh\n";
 		};
 		9AF87EF222EF9E31009E786C /* SwiftLint */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -1997,7 +1978,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "cd $SRCROOT/..\nswift run -c release swiftlint\n";
+			shellScript = "cd ..\nsh Scripts/swiftlint.sh\n";
 		};
 		9AF87EF322EF9E46009E786C /* SwiftLint */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -2015,7 +1996,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "cd $SRCROOT/..\nswift run -c release swiftlint\n";
+			shellScript = "cd ..\nsh Scripts/swiftlint.sh\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 

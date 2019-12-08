@@ -1,4 +1,4 @@
 #!/bin/sh
 
 cd $XCS_PRIMARY_REPO_DIR
-sh Scripts/analyze-macos.sh
+sh Scripts/analyze.sh macOS

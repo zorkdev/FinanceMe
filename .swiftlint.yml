@@ -1,5 +1,5 @@
 excluded:
-  - .build
+  - Tools
 
 identifier_name:
   min_length: 2

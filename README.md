@@ -20,9 +20,7 @@ $ open FinanceMe.xcworkspace
 To run static analysis on the project, use the analyze script:
 
 ``` bash
-$ sh Scripts/analyze-ios.sh
-$ sh Scripts/analyze-tvos.sh
-$ sh Scripts/analyze-macos.sh
+$ sh Scripts/analyze.sh {iOS|tvOS|macOS}
 ```
 
 Environment variables required for build scripts:

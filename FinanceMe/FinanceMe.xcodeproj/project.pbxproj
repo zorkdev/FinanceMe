@@ -275,7 +275,6 @@
 		9A12DC1B22EF6A65000226A9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9A12DC2422EF6C05000226A9 /* FinanceMe-tvOS.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = "FinanceMe-tvOS.xctestplan"; sourceTree = "<group>"; };
 		9A12DC2522EF6C47000226A9 /* FinanceMe-macOS.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = "FinanceMe-macOS.xctestplan"; sourceTree = "<group>"; };
-		9A1A688E239BED420036A895 /* Package.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Package.swift; path = ../Package.swift; sourceTree = "<group>"; };
 		9A25E13E23705A9500F48D37 /* SettingsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsUITests.swift; sourceTree = "<group>"; };
 		9A35A88F22EDD55B0086BD2A /* FinanceMe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FinanceMe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9A35A89222EDD55B0086BD2A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -322,6 +321,10 @@
 		9A48AB072349253C000C7AA2 /* FinanceMeKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = FinanceMeKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9A48AB0B234926FD000C7AA2 /* FinanceMeKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = FinanceMeKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9A48AB0F23492706000C7AA2 /* FinanceMeKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = FinanceMeKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9A4F8647239DA10500F55DD2 /* Package.resolved */ = {isa = PBXFileReference; lastKnownFileType = text; name = Package.resolved; path = ../Tools/Package.resolved; sourceTree = "<group>"; };
+		9A4F8648239DA10500F55DD2 /* Package.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Package.swift; path = ../Tools/Package.swift; sourceTree = "<group>"; };
+		9A4F8649239DA76E00F55DD2 /* analyze.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = analyze.sh; sourceTree = "<group>"; };
+		9A4F864A239DB13D00F55DD2 /* swiftlint.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = swiftlint.sh; sourceTree = "<group>"; };
 		9A5AB5CD2365B33300B691FF /* upload.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = upload.sh; sourceTree = "<group>"; };
 		9A5AB5CE2365B33300B691FF /* build_number.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = build_number.sh; sourceTree = "<group>"; };
 		9A5AB5CF2365B33300B691FF /* config.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = config.sh; sourceTree = "<group>"; };
@@ -329,9 +332,6 @@
 		9A5AB5D12365B33300B691FF /* dependencies.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = dependencies.sh; sourceTree = "<group>"; };
 		9A5AB5D22365B33300B691FF /* notarization.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = notarization.sh; sourceTree = "<group>"; };
 		9A5AB5D32365B33300B691FF /* keychain.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = keychain.sh; sourceTree = "<group>"; };
-		9A5AB5F623663AC500B691FF /* analyze-macos.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = "analyze-macos.sh"; sourceTree = "<group>"; };
-		9A5AB5F723663AC500B691FF /* analyze-ios.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = "analyze-ios.sh"; sourceTree = "<group>"; };
-		9A5AB5F823663AC500B691FF /* analyze-tvos.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = "analyze-tvos.sh"; sourceTree = "<group>"; };
 		9A5AB5F9236645F400B691FF /* swiftlint-tvos.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = "swiftlint-tvos.sh"; sourceTree = "<group>"; };
 		9A5AB5FA236645F400B691FF /* swiftlint-macos.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = "swiftlint-macos.sh"; sourceTree = "<group>"; };
 		9AA805AC22F8DC2200B40516 /* FinanceMeExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = FinanceMeExtension.entitlements; sourceTree = "<group>"; };
@@ -660,7 +660,8 @@
 				9A47DFE423702F1500B6B0C8 /* TestUser.json */,
 				9A35A93922EDE5FC0086BD2A /* ExportOptions.plist */,
 				9A48AAAA23491B2B000C7AA2 /* ExportOptions-macOS.plist */,
-				9A1A688E239BED420036A895 /* Package.swift */,
+				9A4F8648239DA10500F55DD2 /* Package.swift */,
+				9A4F8647239DA10500F55DD2 /* Package.resolved */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -691,9 +692,8 @@
 		9A5AB5CB2365AF9900B691FF /* Scripts */ = {
 			isa = PBXGroup;
 			children = (
-				9A5AB5F723663AC500B691FF /* analyze-ios.sh */,
-				9A5AB5F823663AC500B691FF /* analyze-tvos.sh */,
-				9A5AB5F623663AC500B691FF /* analyze-macos.sh */,
+				9A4F864A239DB13D00F55DD2 /* swiftlint.sh */,
+				9A4F8649239DA76E00F55DD2 /* analyze.sh */,
 				9A5AB5D32365B33300B691FF /* keychain.sh */,
 				9A5AB5D12365B33300B691FF /* dependencies.sh */,
 				9A5AB5CF2365B33300B691FF /* config.sh */,
