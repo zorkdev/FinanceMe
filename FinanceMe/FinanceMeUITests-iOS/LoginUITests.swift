@@ -1,6 +1,6 @@
 import XCTest
 
-class LoginUITests: BaseTestCase, Login {
+final class LoginUITests: BaseTestCase, Login {
     func testLoginJourney() {
         givenIAmLoggedOut()
         thenLoginButtonShouldBe(enabled: false)

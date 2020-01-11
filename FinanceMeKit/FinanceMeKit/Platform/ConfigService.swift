@@ -3,7 +3,7 @@ protocol ConfigService {
     var accessGroup: String { get }
 }
 
-class DefaultConfigService: ConfigService {
+final class DefaultConfigService: ConfigService {
     // swiftlint:disable force_cast
     private let teamID: String = { Bundle.main.infoDictionary!["TeamID"] as! String }()
 
@@ -15,7 +15,7 @@ class DefaultConfigService: ConfigService {
 
 #if DEBUG
 extension Stub {
-    class StubConfigService: ConfigService {
+    final class StubConfigService: ConfigService {
         let productName = ""
         let accessGroup = ""
     }

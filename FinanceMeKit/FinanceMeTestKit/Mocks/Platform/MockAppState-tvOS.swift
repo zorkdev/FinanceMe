@@ -1,7 +1,7 @@
 @testable import FinanceMeKit
 
 // swiftlint:disable force_cast
-public class MockAppState: AppState {
+public final class MockAppState: AppState {
     public var mockNetworkService: MockNetworkService { networkService as! MockNetworkService }
     public var mockSessionService: MockSessionService { sessionService as! MockSessionService }
     public var mockDataService: MockDataService { dataService as! MockDataService }

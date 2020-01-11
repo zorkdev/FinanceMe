@@ -3,7 +3,7 @@ import MetricKit
 import FinanceMeTestKit
 @testable import FinanceMeKit
 
-class DefaultMetricServiceTests: XCTestCase {
+final class DefaultMetricServiceTests: XCTestCase {
     var networkService: MockNetworkService!
     var metricManager: MockMetricManager!
     var metricService: DefaultMetricService!

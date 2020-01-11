@@ -3,7 +3,7 @@ import FinanceMeTestKit
 @testable import FinanceMeKit
 
 // swiftlint:disable type_body_length
-class DefaultNetworkServiceTests: AsyncTestCase {
+final class DefaultNetworkServiceTests: AsyncTestCase {
     struct MockAPI: APIType {
         var url = URL(string: "https://www.apple.com")!
 

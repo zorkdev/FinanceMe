@@ -1,7 +1,7 @@
 import XCTest
 @testable import FinanceMeKit
 
-class SpendingBusinessLogicTests: XCTestCase {
+final class SpendingBusinessLogicTests: XCTestCase {
     func testIcon() {
         let spendingBusinessLogic = SpendingBusinessLogic()
 

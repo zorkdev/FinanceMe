@@ -1,7 +1,7 @@
 import XCTest
 @testable import FinanceMeKit
 
-class KeychainDataServiceTests: XCTestCase {
+final class KeychainDataServiceTests: XCTestCase {
     struct Model: Storeable, Equatable {
         let variable: String
     }

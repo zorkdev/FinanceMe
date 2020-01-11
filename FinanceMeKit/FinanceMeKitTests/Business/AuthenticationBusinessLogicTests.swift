@@ -2,7 +2,7 @@ import XCTest
 import FinanceMeTestKit
 @testable import FinanceMeKit
 
-class AuthenticationBusinessLogicTests: AsyncTestCase {
+final class AuthenticationBusinessLogicTests: AsyncTestCase {
     var authenticationService: MockAuthenticationService!
     var businessLogic: AuthenticationBusinessLogic!
 

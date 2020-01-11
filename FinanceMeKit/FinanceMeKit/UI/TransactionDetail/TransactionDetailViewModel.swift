@@ -1,6 +1,6 @@
 import Combine
 
-class TransactionDetailViewModel: ObservableObject {
+final class TransactionDetailViewModel: ObservableObject {
     private static let formatter = Formatters.currency
 
     private let userBusinessLogic: UserBusinessLogicType

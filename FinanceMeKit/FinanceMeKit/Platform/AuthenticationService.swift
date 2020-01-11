@@ -13,7 +13,7 @@ protocol AuthenticationService {
     func authenticate(reason: String) -> AnyPublisher<Void, Error>
 }
 
-class LAContextAuthenticationService: AuthenticationService {
+final class LAContextAuthenticationService: AuthenticationService {
     enum AuthenticationError: Error {
         case missingSession
     }
@@ -53,7 +53,7 @@ class LAContextAuthenticationService: AuthenticationService {
 
 #if DEBUG
 extension Stub {
-    class StubAuthenticationService: AuthenticationService {
+    final class StubAuthenticationService: AuthenticationService {
         func authenticate(reason: String) -> AnyPublisher<Void, Error> { Empty().eraseToAnyPublisher() }
     }
 }

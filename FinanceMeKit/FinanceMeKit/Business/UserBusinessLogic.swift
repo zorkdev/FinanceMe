@@ -11,7 +11,7 @@ protocol UserBusinessLogicType {
     #endif
 }
 
-class UserBusinessLogic: UserBusinessLogicType {
+final class UserBusinessLogic: UserBusinessLogicType {
     private let networkService: NetworkService
     private let dataService: DataService
     private var cancellables: Set<AnyCancellable> = []
@@ -60,7 +60,7 @@ class UserBusinessLogic: UserBusinessLogicType {
 
 #if DEBUG
 extension Stub {
-    class StubUserBusinessLogic: UserBusinessLogicType {
+    final class StubUserBusinessLogic: UserBusinessLogicType {
         let user: AnyPublisher<User?, Never> = Just(User(
             name: "Name",
             payday: 10,

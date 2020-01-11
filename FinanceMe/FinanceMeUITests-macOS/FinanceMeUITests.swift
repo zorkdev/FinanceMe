@@ -1,6 +1,6 @@
 import XCTest
 
-class FinanceMeUITests: XCTestCase {
+final class FinanceMeUITests: XCTestCase {
     func testExample() {
         XCUIApplication().launch()
     }

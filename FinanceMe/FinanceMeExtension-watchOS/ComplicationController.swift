@@ -2,7 +2,7 @@ import WatchKit
 import FinanceMeKit
 
 // swiftlint:disable unused_declaration
-class ComplicationController: NSObject, CLKComplicationDataSource {
+final class ComplicationController: NSObject, CLKComplicationDataSource {
     private let viewModel: ComplicationViewModel = {
         let appState = (WKExtension.shared().delegate as? ExtensionDelegate)!.appState
         return ComplicationViewModel(appState: appState)

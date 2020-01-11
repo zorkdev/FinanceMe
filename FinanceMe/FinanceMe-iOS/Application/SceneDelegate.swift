@@ -2,7 +2,7 @@ import SwiftUI
 import FinanceMeKit
 
 // swiftlint:disable unused_declaration
-class SceneDelegate: UIResponder, UIWindowSceneDelegate {
+final class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     private let appState = AppState()
     var window: UIWindow?
 

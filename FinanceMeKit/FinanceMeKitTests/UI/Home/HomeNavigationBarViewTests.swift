@@ -2,7 +2,7 @@ import XCTest
 import FinanceMeTestKit
 @testable import FinanceMeKit
 
-class HomeNavigationBarViewTests: XCTestCase {
+final class HomeNavigationBarViewTests: XCTestCase {
     func testView() {
         let loadingState = LoadingState()
         assert(view: HomeNavigationBarView(appState: MockAppState(),

@@ -6,7 +6,7 @@ protocol SummaryBusinessLogicType {
     func getSummary() -> AnyPublisher<Void, Error>
 }
 
-class SummaryBusinessLogic: SummaryBusinessLogicType {
+final class SummaryBusinessLogic: SummaryBusinessLogicType {
     private let networkService: NetworkService
     private let dataService: DataService
     private var cancellables: Set<AnyCancellable> = []
@@ -42,7 +42,7 @@ class SummaryBusinessLogic: SummaryBusinessLogicType {
 
 #if DEBUG
 extension Stub {
-    class StubSummaryBusinessLogic: SummaryBusinessLogicType {
+    final class StubSummaryBusinessLogic: SummaryBusinessLogicType {
         let summary: AnyPublisher<Summary?, Never> = Just(Summary(
             currentMonthSummary: CurrentMonthSummary(allowance: 90.30, forecast: -65.50, spending: 250.71),
             endOfMonthSummaries: [

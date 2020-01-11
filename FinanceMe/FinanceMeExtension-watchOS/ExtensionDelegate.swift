@@ -1,6 +1,6 @@
 import WatchKit
 import FinanceMeKit
 
-class ExtensionDelegate: NSObject, WKExtensionDelegate {
+final class ExtensionDelegate: NSObject, WKExtensionDelegate {
     let appState = AppState()
 }

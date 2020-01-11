@@ -1,7 +1,7 @@
 import XCTest
 @testable import FinanceMeKit
 
-class ErrorTests: XCTestCase {
+final class ErrorTests: XCTestCase {
     func testAPIError() {
         let json =
             """

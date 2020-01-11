@@ -29,7 +29,7 @@ extension NetworkService {
     }
 }
 
-class DefaultNetworkService: NetworkService {
+final class DefaultNetworkService: NetworkService {
     private enum Constants {
         static let authHeaderKey = "Authorization"
         static let contentKey = "Accept"
@@ -163,6 +163,6 @@ extension DefaultNetworkService {
 
 #if DEBUG
 extension Stub {
-    class StubNetworkService: NetworkService {}
+    final class StubNetworkService: NetworkService {}
 }
 #endif

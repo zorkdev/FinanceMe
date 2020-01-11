@@ -3,7 +3,7 @@ import PushKit
 
 protocol PushNotificationBusinessLogicType {}
 
-class PushNotificationBusinessLogic: NSObject, PushNotificationBusinessLogicType {
+final class PushNotificationBusinessLogic: NSObject, PushNotificationBusinessLogicType {
     private let networkService: NetworkService
     private let businessLogic: UserBusinessLogicType
     private let pushRegistry: PKPushRegistry
@@ -65,6 +65,6 @@ extension PushNotificationBusinessLogic: PKPushRegistryDelegate {
 
 #if DEBUG
 extension Stub {
-    class StubPushNotificationBusinessLogic: PushNotificationBusinessLogicType {}
+    final class StubPushNotificationBusinessLogic: PushNotificationBusinessLogicType {}
 }
 #endif

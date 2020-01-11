@@ -1,7 +1,7 @@
 import XCTest
 @testable import FinanceMeKit
 
-class NumberFormatterExtensionsTests: XCTestCase {
+final class NumberFormatterExtensionsTests: XCTestCase {
     func testStringFromDecimal() {
         let formatter = NumberFormatter()
         formatter.numberStyle = .decimal

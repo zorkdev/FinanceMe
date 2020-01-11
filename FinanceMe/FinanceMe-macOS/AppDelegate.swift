@@ -3,7 +3,7 @@ import FinanceMeKit
 
 // swiftlint:disable unused_declaration
 @NSApplicationMain
-class AppDelegate: NSObject, NSApplicationDelegate {
+final class AppDelegate: NSObject, NSApplicationDelegate {
     private let appState = AppState()
     var window: NSWindow!
 

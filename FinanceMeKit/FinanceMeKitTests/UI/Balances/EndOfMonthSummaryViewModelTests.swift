@@ -1,7 +1,7 @@
 import XCTest
 @testable import FinanceMeKit
 
-class EndOfMonthSummaryViewModelTests: XCTestCase {
+final class EndOfMonthSummaryViewModelTests: XCTestCase {
     func testViewModel() {
         let summary = Summary.stub.endOfMonthSummaries[0]
         let viewModel = EndOfMonthSummaryViewModel(summary: summary)

@@ -2,7 +2,7 @@ import XCTest
 import FinanceMeTestKit
 @testable import FinanceMeKit
 
-class APITests: XCTestCase {
+final class APITests: XCTestCase {
     func testAPI() {
         XCTAssertEqual(API.login.url.absoluteString,
                        "https://zorkdev-staging.herokuapp.com/api/login")

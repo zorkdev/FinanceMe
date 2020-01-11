@@ -1,9 +1,9 @@
 import XCTest
 @testable import FinanceMeKit
 
-class StringRepresentableTests: XCTestCase {
+final class StringRepresentableTests: XCTestCase {
     class TestModel: StringRepresentable {}
-    class TestModelSubclass: TestModel {}
+    final class TestModelSubclass: TestModel {}
 
     func testStaticStringRepresentable() {
         XCTAssertEqual(TestModel.instanceName, "TestModel")

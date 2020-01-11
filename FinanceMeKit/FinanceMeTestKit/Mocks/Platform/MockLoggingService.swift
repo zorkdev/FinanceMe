@@ -1,6 +1,6 @@
 @testable import FinanceMeKit
 
-public class MockLoggingService: LoggingService {
+public final class MockLoggingService: LoggingService {
     public init() {}
 
     // swiftlint:disable large_tuple

@@ -9,7 +9,7 @@ extension MXMetricManager: MetricManager {}
 
 protocol MetricService {}
 
-class DefaultMetricService: NSObject, MetricService {
+final class DefaultMetricService: NSObject, MetricService {
     private let networkService: NetworkService
     private var cancellables: Set<AnyCancellable> = []
 
@@ -42,6 +42,6 @@ extension DefaultMetricService: MXMetricManagerSubscriber {
 
 #if DEBUG
 extension Stub {
-    class StubMetricService: MetricService {}
+    final class StubMetricService: MetricService {}
 }
 #endif

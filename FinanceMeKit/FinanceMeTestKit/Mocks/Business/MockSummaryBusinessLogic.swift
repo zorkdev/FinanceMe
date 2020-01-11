@@ -1,7 +1,7 @@
 import Combine
 @testable import FinanceMeKit
 
-public class MockSummaryBusinessLogic: SummaryBusinessLogicType {
+public final class MockSummaryBusinessLogic: SummaryBusinessLogicType {
     @Published public var summaryReturnValue: Summary?
     public var summary: AnyPublisher<Summary?, Never> { $summaryReturnValue.eraseToAnyPublisher() }
 

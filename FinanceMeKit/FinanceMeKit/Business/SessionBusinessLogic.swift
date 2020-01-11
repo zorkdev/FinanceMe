@@ -7,7 +7,7 @@ protocol SessionBusinessLogicType {
     func logOut()
 }
 
-class SessionBusinessLogic: SessionBusinessLogicType {
+final class SessionBusinessLogic: SessionBusinessLogicType {
     private let networkService: NetworkService
     private let sessionService: SessionService
 
@@ -40,7 +40,7 @@ class SessionBusinessLogic: SessionBusinessLogicType {
 
 #if DEBUG
 extension Stub {
-    class StubSessionBusinessLogic: SessionBusinessLogicType {
+    final class StubSessionBusinessLogic: SessionBusinessLogicType {
         let isLoggedIn: AnyPublisher<Bool, Never> = Just(true).eraseToAnyPublisher()
         func login(credentials: Credentials) -> AnyPublisher<Void, Error> { Empty().eraseToAnyPublisher() }
         func logOut() {}

@@ -3,7 +3,7 @@ import ClockKit
 
 protocol ComplicationBusinessLogicType {}
 
-class ComplicationBusinessLogic: ComplicationBusinessLogicType {
+final class ComplicationBusinessLogic: ComplicationBusinessLogicType {
     private let businessLogic: UserBusinessLogicType
     private var cancellables: Set<AnyCancellable> = []
 
@@ -28,6 +28,6 @@ class ComplicationBusinessLogic: ComplicationBusinessLogicType {
 
 #if DEBUG
 extension Stub {
-    class StubComplicationBusinessLogic: ComplicationBusinessLogicType {}
+    final class StubComplicationBusinessLogic: ComplicationBusinessLogicType {}
 }
 #endif

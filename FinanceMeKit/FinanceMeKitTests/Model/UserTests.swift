@@ -2,7 +2,7 @@ import XCTest
 import FinanceMeTestKit
 @testable import FinanceMeKit
 
-class UserTests: XCTestCase {
+final class UserTests: XCTestCase {
     func testCoding() throws {
         try assert(model: User.self, json:
             """

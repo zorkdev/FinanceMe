@@ -1,7 +1,7 @@
 import Combine
 @testable import FinanceMeKit
 
-public class MockNetworkService: NetworkService {
+public final class MockNetworkService: NetworkService {
     public init() {}
 
     // swiftlint:disable large_tuple

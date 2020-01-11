@@ -1,6 +1,6 @@
 import XCTest
 
-class HomeUITests: BaseTestCase, Home {
+final class HomeUITests: BaseTestCase, Home {
     func testHomeJourney() {
         givenIAmOnHomeScreen()
 

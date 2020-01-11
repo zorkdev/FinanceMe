@@ -1,6 +1,6 @@
 @testable import FinanceMeKit
 
-public class MockSessionService: SessionService {
+public final class MockSessionService: SessionService {
     public var hasSession: Bool = false
     public var session: Session?
 

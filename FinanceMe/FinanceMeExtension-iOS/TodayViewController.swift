@@ -3,7 +3,7 @@ import NotificationCenter
 import FinanceMeKit
 
 // swiftlint:disable unused_declaration
-class TodayViewController: UIHostingController<AnyView>, NCWidgetProviding {
+final class TodayViewController: UIHostingController<AnyView>, NCWidgetProviding {
     private let appState = AppState()
 
     override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {

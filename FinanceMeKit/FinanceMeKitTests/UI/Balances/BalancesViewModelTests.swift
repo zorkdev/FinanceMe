@@ -2,7 +2,7 @@ import XCTest
 import FinanceMeTestKit
 @testable import FinanceMeKit
 
-class BalancesViewModelTests: XCTestCase {
+final class BalancesViewModelTests: XCTestCase {
     var businessLogic: MockSummaryBusinessLogic!
     var viewModel: BalancesViewModel!
 

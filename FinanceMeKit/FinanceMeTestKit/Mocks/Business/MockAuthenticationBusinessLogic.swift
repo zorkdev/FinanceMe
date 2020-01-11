@@ -1,7 +1,7 @@
 import Combine
 @testable import FinanceMeKit
 
-public class MockAuthenticationBusinessLogic: AuthenticationBusinessLogicType {
+public final class MockAuthenticationBusinessLogic: AuthenticationBusinessLogicType {
     @Published public var isAuthenticatedReturnValue = false
     public var isAuthenticated: AnyPublisher<Bool, Never> { $isAuthenticatedReturnValue.eraseToAnyPublisher() }
 

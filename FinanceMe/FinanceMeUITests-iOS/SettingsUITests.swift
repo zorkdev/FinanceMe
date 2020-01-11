@@ -1,6 +1,6 @@
 import XCTest
 
-class SettingsUITests: BaseTestCase, Settings {
+final class SettingsUITests: BaseTestCase, Settings {
     func testSettingsJourney() {
         givenIAmOnHomeScreen()
         whenITapSettingsButton()

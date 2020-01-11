@@ -1,4 +1,4 @@
-class KeychainDataService: DataService {
+final class KeychainDataService: DataService {
     private let service: String
     private let accessGroup: String
 

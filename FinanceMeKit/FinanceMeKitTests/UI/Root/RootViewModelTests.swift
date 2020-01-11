@@ -2,7 +2,7 @@ import XCTest
 import FinanceMeTestKit
 @testable import FinanceMeKit
 
-class RootViewModelTests: XCTestCase {
+final class RootViewModelTests: XCTestCase {
     var businessLogic: MockSessionBusinessLogic!
     var viewModel: RootViewModel!
 

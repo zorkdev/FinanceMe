@@ -1,6 +1,6 @@
 import Combine
 
-class FeedViewModel: ObservableObject {
+final class FeedViewModel: ObservableObject {
     private let userBusinessLogic: UserBusinessLogicType
     private let transactionBusinessLogic: TransactionBusinessLogicType
     private let summaryBusinessLogic: SummaryBusinessLogicType

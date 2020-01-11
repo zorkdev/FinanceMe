@@ -2,7 +2,7 @@ import XCTest
 import FinanceMeTestKit
 @testable import FinanceMeKit
 
-class SettingsViewModelTests: XCTestCase {
+final class SettingsViewModelTests: XCTestCase {
     var sessionBusinessLogic: MockSessionBusinessLogic!
     var userBusinessLogic: MockUserBusinessLogic!
     var transactionBusinessLogic: MockTransactionBusinessLogic!

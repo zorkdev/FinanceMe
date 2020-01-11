@@ -2,7 +2,7 @@ import XCTest
 import FinanceMeTestKit
 @testable import FinanceMeKit
 
-class UserBusinessLogicTests: AsyncTestCase {
+final class UserBusinessLogicTests: AsyncTestCase {
     var networkService: MockNetworkService!
     var dataService: MockDataService!
     var businessLogic: UserBusinessLogic!

@@ -1,7 +1,7 @@
 import XCTest
 @testable import FinanceMeKit
 
-class AmountViewModelTests: XCTestCase {
+final class AmountViewModelTests: XCTestCase {
     func testDefault() {
         let viewModel1 = AmountViewModel(value: 1200.34)
 

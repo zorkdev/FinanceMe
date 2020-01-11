@@ -2,7 +2,7 @@ import XCTest
 import FinanceMeTestKit
 @testable import FinanceMeKit
 
-class AppStateTests: XCTestCase {
+final class AppStateTests: XCTestCase {
     func testInit() {
         let appState = AppState()
 

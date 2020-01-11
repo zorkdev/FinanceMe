@@ -1,7 +1,7 @@
 import XCTest
 @testable import FinanceMeKit
 
-class CodableExtensionsTests: XCTestCase {
+final class CodableExtensionsTests: XCTestCase {
     struct Model: Codable {
         var string: String
         var date: Date

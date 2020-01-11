@@ -2,7 +2,7 @@ import XCTest
 import FinanceMeTestKit
 @testable import FinanceMeKit
 
-class DefaultLoggingServiceTests: XCTestCase {
+final class DefaultLoggingServiceTests: XCTestCase {
     func testLogging() {
         let configService = MockConfigService()
         let loggingService = DefaultLoggingService(configService: configService)

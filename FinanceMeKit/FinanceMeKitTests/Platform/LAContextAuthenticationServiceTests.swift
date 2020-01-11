@@ -2,7 +2,7 @@ import XCTest
 import FinanceMeTestKit
 @testable import FinanceMeKit
 
-class LAContextAuthenticationServiceTests: AsyncTestCase {
+final class LAContextAuthenticationServiceTests: AsyncTestCase {
     var sessionService: MockSessionService!
     var authenticationService: LAContextAuthenticationService!
 

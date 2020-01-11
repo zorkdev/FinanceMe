@@ -3,7 +3,7 @@ import SwiftUI
 import FinanceMeTestKit
 @testable import FinanceMeKit
 
-class ErrorBannerViewTests: XCTestCase {
+final class ErrorBannerViewTests: XCTestCase {
     struct TestView: View {
         let errorViewModel: ErrorViewModel
 

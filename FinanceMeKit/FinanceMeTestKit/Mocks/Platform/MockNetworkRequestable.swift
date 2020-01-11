@@ -1,7 +1,7 @@
 import Combine
 @testable import FinanceMeKit
 
-public class MockNetworkRequestable: NetworkRequestable {
+public final class MockNetworkRequestable: NetworkRequestable {
     public init() {}
 
     public var lastPerformParam: URLRequest?

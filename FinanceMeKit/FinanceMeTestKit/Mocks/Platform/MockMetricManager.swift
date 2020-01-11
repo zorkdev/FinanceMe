@@ -1,7 +1,7 @@
 import MetricKit
 @testable import FinanceMeKit
 
-public class MockMetricManager: MetricManager {
+public final class MockMetricManager: MetricManager {
     public init() {}
 
     public var lastAddParam: MXMetricManagerSubscriber?

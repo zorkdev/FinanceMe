@@ -1,6 +1,6 @@
 import Combine
 
-class RegularsViewModel: ObservableObject {
+final class RegularsViewModel: ObservableObject {
     struct MonthlyBalance {
         let allowance: Decimal
         let outgoings: Decimal

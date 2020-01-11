@@ -1,7 +1,7 @@
 import XCTest
 @testable import FinanceMeKit
 
-class FormattersTests: XCTestCase {
+final class FormattersTests: XCTestCase {
     func testLocale() {
         XCTAssertEqual(Formatters.locale.identifier, "en_GB")
     }

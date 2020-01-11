@@ -2,7 +2,7 @@ import XCTest
 import FinanceMeTestKit
 @testable import FinanceMeKit
 
-class RegularsViewTests: XCTestCase {
+final class RegularsViewTests: XCTestCase {
     func testView() {
         let appState = MockAppState()
 

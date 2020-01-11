@@ -15,7 +15,7 @@ extension LoggingService {
     }
 }
 
-class DefaultLoggingService: LoggingService {
+final class DefaultLoggingService: LoggingService {
     private let log: OSLog
 
     init(configService: ConfigService) {
@@ -40,7 +40,7 @@ class DefaultLoggingService: LoggingService {
 
 #if DEBUG
 extension Stub {
-    class StubLoggingService: LoggingService {
+    final class StubLoggingService: LoggingService {
         func log(title: String, content: String, type: LogType) {}
     }
 }

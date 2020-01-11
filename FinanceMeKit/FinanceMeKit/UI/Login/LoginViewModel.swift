@@ -1,6 +1,6 @@
 import Combine
 
-class LoginViewModel: ObservableObject {
+final class LoginViewModel: ObservableObject {
     private let businessLogic: SessionBusinessLogicType
     private let loadingState: LoadingState
     private let errorViewModel: ErrorViewModel

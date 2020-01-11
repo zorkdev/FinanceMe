@@ -1,7 +1,7 @@
 import Combine
 @testable import FinanceMeKit
 
-public class MockSessionBusinessLogic: SessionBusinessLogicType {
+public final class MockSessionBusinessLogic: SessionBusinessLogicType {
     @Published public var isLoggedInReturnValue = false
     public var isLoggedIn: AnyPublisher<Bool, Never> { $isLoggedInReturnValue.eraseToAnyPublisher() }
 

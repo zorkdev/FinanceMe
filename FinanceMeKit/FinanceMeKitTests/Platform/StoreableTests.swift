@@ -2,7 +2,7 @@ import XCTest
 import FinanceMeTestKit
 @testable import FinanceMeKit
 
-class StoreableTests: XCTestCase {
+final class StoreableTests: XCTestCase {
     struct Model: Storeable, Equatable {
         let variable: String
     }

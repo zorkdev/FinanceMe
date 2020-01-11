@@ -2,7 +2,7 @@ import XCTest
 import FinanceMeTestKit
 @testable import FinanceMeKit
 
-class HomeViewModelTests: XCTestCase {
+final class HomeViewModelTests: XCTestCase {
     var userBusinessLogic: MockUserBusinessLogic!
     var transactionBusinessLogic: MockTransactionBusinessLogic!
     var summaryBusinessLogic: MockSummaryBusinessLogic!

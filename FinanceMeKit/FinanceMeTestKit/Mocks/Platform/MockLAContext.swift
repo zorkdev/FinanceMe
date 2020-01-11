@@ -1,7 +1,7 @@
 import LocalAuthentication
 @testable import FinanceMeKit
 
-public class MockLAContext: LAContextType {
+public final class MockLAContext: LAContextType {
     public required init() {}
 
     public static var canEvaluatePolicyReturnValue = true

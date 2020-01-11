@@ -25,7 +25,7 @@ protocol DataService {
 
 #if DEBUG
 extension Stub {
-    class StubDataService: DataService {
+    final class StubDataService: DataService {
         func save(value: Encodable, key: String) -> Result<Void, Error> { .success(()) }
         func load<T: Decodable>(key: String) -> T? { nil }
         func removeAll() {}

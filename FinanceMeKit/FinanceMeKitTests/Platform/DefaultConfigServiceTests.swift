@@ -1,7 +1,7 @@
 import XCTest
 @testable import FinanceMeKit
 
-class DefaultConfigServiceTests: XCTestCase {
+final class DefaultConfigServiceTests: XCTestCase {
     func testInit() {
         let configService = DefaultConfigService()
 

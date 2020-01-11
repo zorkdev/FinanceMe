@@ -1,7 +1,7 @@
 import XCTest
 @testable import FinanceMeKit
 
-class DataExtensionsTests: XCTestCase {
+final class DataExtensionsTests: XCTestCase {
     func testPrettyPrinted_Success() {
         let data =
             """

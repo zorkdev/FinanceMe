@@ -1,7 +1,7 @@
 import ClockKit
 import Combine
 
-public class ComplicationViewModel {
+public final class ComplicationViewModel {
     private let businessLogic: UserBusinessLogicType
     private var cancellables: Set<AnyCancellable> = []
 

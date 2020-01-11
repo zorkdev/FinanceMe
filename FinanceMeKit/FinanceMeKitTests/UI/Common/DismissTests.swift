@@ -2,7 +2,7 @@ import XCTest
 import SwiftUI
 @testable import FinanceMeKit
 
-class DismissTests: XCTestCase {
+final class DismissTests: XCTestCase {
     struct DismissingTestView: View {
         @State var shouldDismiss = true
         @Environment(\.presentationMode) private var presentationMode

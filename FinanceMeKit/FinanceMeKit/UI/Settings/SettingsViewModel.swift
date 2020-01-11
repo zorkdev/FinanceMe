@@ -1,6 +1,6 @@
 import Combine
 
-class SettingsViewModel: ObservableObject {
+final class SettingsViewModel: ObservableObject {
     private static let formatter = Formatters.currency
 
     private let sessionBusinessLogic: SessionBusinessLogicType

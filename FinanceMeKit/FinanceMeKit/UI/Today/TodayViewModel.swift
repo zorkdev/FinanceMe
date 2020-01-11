@@ -1,6 +1,6 @@
 import Combine
 
-class TodayViewModel: ObservableObject {
+final class TodayViewModel: ObservableObject {
     private let businessLogic: UserBusinessLogicType
     private let spendingBusinessLogic = SpendingBusinessLogic()
     private var cancellables: Set<AnyCancellable> = []

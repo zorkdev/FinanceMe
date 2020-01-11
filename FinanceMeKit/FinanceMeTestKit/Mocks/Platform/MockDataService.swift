@@ -1,6 +1,6 @@
 @testable import FinanceMeKit
 
-public class MockDataService: DataService {
+public final class MockDataService: DataService {
     public init() {}
 
     public var savedValues = [Encodable]()

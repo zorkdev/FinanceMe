@@ -1,4 +1,4 @@
-public class AppState: ObservableObject {
+public final class AppState: ObservableObject {
     let networkService: NetworkService
     let sessionService: SessionService
     let dataService: DataService

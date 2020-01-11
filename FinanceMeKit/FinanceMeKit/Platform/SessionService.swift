@@ -6,7 +6,7 @@ protocol SessionService {
     func logOut()
 }
 
-class DefaultSessionService: SessionService {
+final class DefaultSessionService: SessionService {
     private let dataService: DataService
 
     var hasSession: Bool { session != nil }
@@ -30,7 +30,7 @@ class DefaultSessionService: SessionService {
 
 #if DEBUG
 extension Stub {
-    class StubSessionService: SessionService {
+    final class StubSessionService: SessionService {
         let hasSession = true
         let session: Session? = nil
         func save(session: Session) -> Result<Void, Error> { .success(()) }

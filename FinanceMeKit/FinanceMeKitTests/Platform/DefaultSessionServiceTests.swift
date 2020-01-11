@@ -2,7 +2,7 @@ import XCTest
 import FinanceMeTestKit
 @testable import FinanceMeKit
 
-class DefaultSessionServiceTests: XCTestCase {
+final class DefaultSessionServiceTests: XCTestCase {
     var dataService: MockDataService!
     var sessionService: DefaultSessionService!
 

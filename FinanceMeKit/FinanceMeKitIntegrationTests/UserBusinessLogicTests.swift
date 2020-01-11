@@ -1,7 +1,7 @@
 import XCTest
 @testable import FinanceMeKit
 
-class UserBusinessLogicTests: IntegrationTestCase {
+final class UserBusinessLogicTests: IntegrationTestCase {
     func testGetUpdateUser() {
         appState.userBusinessLogic.getUser().assertSuccess(self, once: false) {}
         var userExpectation: User?

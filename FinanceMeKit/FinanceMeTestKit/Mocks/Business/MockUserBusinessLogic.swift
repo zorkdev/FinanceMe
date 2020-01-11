@@ -1,7 +1,7 @@
 import Combine
 @testable import FinanceMeKit
 
-public class MockUserBusinessLogic: UserBusinessLogicType {
+public final class MockUserBusinessLogic: UserBusinessLogicType {
     @Published public var userReturnValue: User?
     public var user: AnyPublisher<User?, Never> { $userReturnValue.eraseToAnyPublisher() }
 

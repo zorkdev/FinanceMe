@@ -27,3 +27,5 @@ swift run -c release swiftlint analyze \
     --config .swiftlint_analyze.yml \
     --compiler-log-path ../build.log \
     --reporter emoji
+
+rm ../build.log

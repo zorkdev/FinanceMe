@@ -1,7 +1,7 @@
 import XCTest
 @testable import FinanceMeKit
 
-class TransactionViewTests: XCTestCase {
+final class TransactionViewTests: XCTestCase {
     func testView() {
         assert(view: TransactionView(viewModel: TransactionViewModel(narrative: "Test",
                                                                      amount: 10)),

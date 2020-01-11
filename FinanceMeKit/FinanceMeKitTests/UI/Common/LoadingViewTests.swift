@@ -2,7 +2,7 @@ import XCTest
 import SwiftUI
 @testable import FinanceMeKit
 
-class LoadingViewTests: XCTestCase {
+final class LoadingViewTests: XCTestCase {
     struct TestView: View {
         let loadingState: LoadingState
 

@@ -1,5 +1,5 @@
 @testable import FinanceMeKit
 
-public class MockMetricService: MetricService {
+public final class MockMetricService: MetricService {
     public init() {}
 }

@@ -1,6 +1,6 @@
 import Combine
 
-class HomeViewModel: ObservableObject {
+final class HomeViewModel: ObservableObject {
     private let userBusinessLogic: UserBusinessLogicType
     private let transactionBusinessLogic: TransactionBusinessLogicType
     private let summaryBusinessLogic: SummaryBusinessLogicType

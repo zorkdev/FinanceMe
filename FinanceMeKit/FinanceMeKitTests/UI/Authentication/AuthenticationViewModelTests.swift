@@ -2,7 +2,7 @@ import XCTest
 import FinanceMeTestKit
 @testable import FinanceMeKit
 
-class AuthenticationViewModelTests: XCTestCase {
+final class AuthenticationViewModelTests: XCTestCase {
     var businessLogic: MockAuthenticationBusinessLogic!
     var viewModel: AuthenticationViewModel!
 

@@ -2,7 +2,7 @@ import XCTest
 import FinanceMeTestKit
 @testable import FinanceMeKit
 
-class ErrorViewModelTests: XCTestCase {
+final class ErrorViewModelTests: XCTestCase {
     var viewModel: ErrorViewModel!
 
     override func setUp() {

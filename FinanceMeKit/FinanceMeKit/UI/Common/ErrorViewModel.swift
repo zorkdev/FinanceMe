@@ -1,5 +1,5 @@
 // swiftlint:disable unused_declaration
-class ErrorViewModel: ObservableObject {
+final class ErrorViewModel: ObservableObject {
     @Published var error: Error? {
         didSet {
             icon = newIcon

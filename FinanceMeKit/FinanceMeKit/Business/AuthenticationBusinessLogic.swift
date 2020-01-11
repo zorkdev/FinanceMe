@@ -5,7 +5,7 @@ protocol AuthenticationBusinessLogicType {
     func authenticate()
 }
 
-class AuthenticationBusinessLogic: AuthenticationBusinessLogicType {
+final class AuthenticationBusinessLogic: AuthenticationBusinessLogicType {
     private static let reason = "Please authenticate to unlock this app."
 
     private let authenticationService: AuthenticationService
@@ -33,7 +33,7 @@ class AuthenticationBusinessLogic: AuthenticationBusinessLogicType {
 
 #if DEBUG
 extension Stub {
-    class StubAuthenticationBusinessLogic: AuthenticationBusinessLogicType {
+    final class StubAuthenticationBusinessLogic: AuthenticationBusinessLogicType {
         let isAuthenticated: AnyPublisher<Bool, Never> = Just(true).eraseToAnyPublisher()
         func authenticate() {}
     }

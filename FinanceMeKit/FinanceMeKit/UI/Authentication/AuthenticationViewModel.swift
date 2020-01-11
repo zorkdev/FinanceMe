@@ -1,6 +1,6 @@
 import Combine
 
-class AuthenticationViewModel: ObservableObject {
+final class AuthenticationViewModel: ObservableObject {
     private let businessLogic: AuthenticationBusinessLogicType
     private var cancellables: Set<AnyCancellable> = []
 

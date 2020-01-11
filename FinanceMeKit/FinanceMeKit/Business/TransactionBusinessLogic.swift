@@ -10,7 +10,7 @@ protocol TransactionBusinessLogicType {
     func reconcile() -> AnyPublisher<Void, Error>
 }
 
-class TransactionBusinessLogic: TransactionBusinessLogicType {
+final class TransactionBusinessLogic: TransactionBusinessLogicType {
     private let networkService: NetworkService
     private let dataService: DataService
     private var cancellables: Set<AnyCancellable> = []
@@ -99,7 +99,7 @@ class TransactionBusinessLogic: TransactionBusinessLogicType {
 
 #if DEBUG
 extension Stub {
-    class StubTransactionBusinessLogic: TransactionBusinessLogicType {
+    final class StubTransactionBusinessLogic: TransactionBusinessLogicType {
         let transactions: AnyPublisher<[Transaction], Never> = Just([]).eraseToAnyPublisher()
         func fetchTransactions() {}
         func getTransactions() -> AnyPublisher<Void, Error> { Empty().eraseToAnyPublisher() }

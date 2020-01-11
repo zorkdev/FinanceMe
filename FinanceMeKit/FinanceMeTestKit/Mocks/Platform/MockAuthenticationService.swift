@@ -1,7 +1,7 @@
 import Combine
 @testable import FinanceMeKit
 
-public class MockAuthenticationService: AuthenticationService {
+public final class MockAuthenticationService: AuthenticationService {
     public init() {}
 
     public var lastAuthenticateParam: String?
