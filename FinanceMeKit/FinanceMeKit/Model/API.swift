@@ -10,9 +10,9 @@ enum API: APIType, Equatable {
 
     private static let baseURL: String = {
         #if DEBUG
-        return "https://zorkdev-staging.herokuapp.com/api/"
+        return "https://financeme-staging.herokuapp.com/api/"
         #else
-        return "https://zorkdev.herokuapp.com/api/"
+        return "https://financeme-prod.herokuapp.com/api/"
         #endif
     }()
 
