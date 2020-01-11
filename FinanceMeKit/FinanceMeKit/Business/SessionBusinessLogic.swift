@@ -13,7 +13,7 @@ class SessionBusinessLogic: SessionBusinessLogicType {
 
     @Published private var internalIsLoggedIn: Bool
 
-    var isLoggedIn: AnyPublisher<Bool, Never> { $internalIsLoggedIn.eraseToAnyPublisher() }
+    var isLoggedIn: AnyPublisher<Bool, Never> { $internalIsLoggedIn.removeDuplicates().eraseToAnyPublisher() }
 
     init(networkService: NetworkService, sessionService: SessionService) {
         self.networkService = networkService

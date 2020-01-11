@@ -13,7 +13,7 @@ class SummaryBusinessLogic: SummaryBusinessLogicType {
 
     @Published private var internalSummary: Summary?
 
-    var summary: AnyPublisher<Summary?, Never> { $internalSummary.eraseToAnyPublisher() }
+    var summary: AnyPublisher<Summary?, Never> { $internalSummary.removeDuplicates().eraseToAnyPublisher() }
 
     init(networkService: NetworkService, dataService: DataService) {
         self.networkService = networkService

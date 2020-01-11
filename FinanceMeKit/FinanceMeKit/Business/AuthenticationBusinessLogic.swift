@@ -13,7 +13,7 @@ class AuthenticationBusinessLogic: AuthenticationBusinessLogicType {
 
     @Published private var internalIsAuthenticated: Bool = false
 
-    var isAuthenticated: AnyPublisher<Bool, Never> { $internalIsAuthenticated.eraseToAnyPublisher() }
+    var isAuthenticated: AnyPublisher<Bool, Never> { $internalIsAuthenticated.removeDuplicates().eraseToAnyPublisher() }
 
     init(authenticationService: AuthenticationService) {
         self.authenticationService = authenticationService

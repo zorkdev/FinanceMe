@@ -17,7 +17,7 @@ class TransactionBusinessLogic: TransactionBusinessLogicType {
 
     @Published private var internalTransactions: [Transaction]
 
-    var transactions: AnyPublisher<[Transaction], Never> { $internalTransactions.eraseToAnyPublisher() }
+    var transactions: AnyPublisher<[Transaction], Never> { $internalTransactions.removeDuplicates().eraseToAnyPublisher() }
 
     init(networkService: NetworkService, dataService: DataService) {
         self.networkService = networkService

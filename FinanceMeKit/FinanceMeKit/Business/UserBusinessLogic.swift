@@ -18,7 +18,7 @@ class UserBusinessLogic: UserBusinessLogicType {
 
     @Published private var internalUser: User?
 
-    var user: AnyPublisher<User?, Never> { $internalUser.eraseToAnyPublisher() }
+    var user: AnyPublisher<User?, Never> { $internalUser.removeDuplicates().eraseToAnyPublisher() }
 
     init(networkService: NetworkService, dataService: DataService) {
         self.networkService = networkService
