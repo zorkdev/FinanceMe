@@ -1,5 +1,5 @@
 excluded:
-  - Tools
+  - Tools/.build
 
 identifier_name:
   min_length: 2
@@ -26,6 +26,7 @@ opt_in_rules:
   - empty_count
   - empty_string
   - empty_xctest_method
+  - enum_case_associated_value_count
   - expiring_todo
   - explicit_init
   - extension_access_modifier
@@ -47,8 +48,10 @@ opt_in_rules:
   - nslocalizedstring_key
   - nslocalizedstring_require_bundle
   - operator_usage_whitespace
+  - optional_enum_case_matching
   - overridden_super_call
   - pattern_matching_keywords
+  - prefer_self_type_over_type_of_self
   - prohibited_super_call
   - raw_value_for_camel_cased_codable_enum
   - reduce_into

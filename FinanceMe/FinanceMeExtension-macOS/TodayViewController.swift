@@ -23,7 +23,7 @@ class TodayViewController: NSViewController, NCWidgetProviding {
     }
 
     @objc
-    dynamic required init?(coder: NSCoder) { return nil }
+    dynamic required init?(coder: NSCoder) { nil }
 
     func widgetPerformUpdate(completionHandler: (@escaping (NCUpdateResult) -> Void)) {
         completionHandler(.newData)

@@ -51,15 +51,15 @@ public class AppState: ObservableObject {
 #if DEBUG
 extension AppState {
     static var stub: AppState {
-        return AppState(networkService: Stub.StubNetworkService(),
-                        sessionService: Stub.StubSessionService(),
-                        dataService: Stub.StubDataService(),
-                        loggingService: Stub.StubLoggingService(),
-                        configService: Stub.StubConfigService(),
-                        sessionBusinessLogic: Stub.StubSessionBusinessLogic(),
-                        userBusinessLogic: Stub.StubUserBusinessLogic(),
-                        complicationBusinessLogic: Stub.StubComplicationBusinessLogic(),
-                        pushNotificationBusinessLogic: Stub.StubPushNotificationBusinessLogic())
+        AppState(networkService: Stub.StubNetworkService(),
+                 sessionService: Stub.StubSessionService(),
+                 dataService: Stub.StubDataService(),
+                 loggingService: Stub.StubLoggingService(),
+                 configService: Stub.StubConfigService(),
+                 sessionBusinessLogic: Stub.StubSessionBusinessLogic(),
+                 userBusinessLogic: Stub.StubUserBusinessLogic(),
+                 complicationBusinessLogic: Stub.StubComplicationBusinessLogic(),
+                 pushNotificationBusinessLogic: Stub.StubPushNotificationBusinessLogic())
     }
 }
 #endif

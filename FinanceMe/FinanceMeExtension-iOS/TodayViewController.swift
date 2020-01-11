@@ -12,7 +12,7 @@ class TodayViewController: UIHostingController<AnyView>, NCWidgetProviding {
         view.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(onTap)))
     }
 
-    required init?(coder aDecoder: NSCoder) { return nil }
+    required init?(coder aDecoder: NSCoder) { nil }
 
     func widgetPerformUpdate(completionHandler: (@escaping (NCUpdateResult) -> Void)) {
         completionHandler(.newData)
