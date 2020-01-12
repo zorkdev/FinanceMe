@@ -24,7 +24,7 @@ struct Transaction: Storeable, Identifiable, Equatable {
     }
 
     let id: UUID
-    let amount: Decimal
+    let amount: Double
     let direction: Direction
     let created: Date
     let narrative: String

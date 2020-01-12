@@ -2,8 +2,8 @@ import Combine
 
 final class RegularsViewModel: ObservableObject {
     struct MonthlyBalance {
-        let allowance: Decimal
-        let outgoings: Decimal
+        let allowance: Double
+        let outgoings: Double
     }
 
     private let userBusinessLogic: UserBusinessLogicType

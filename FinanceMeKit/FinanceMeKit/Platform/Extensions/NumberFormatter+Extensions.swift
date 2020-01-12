@@ -1,9 +1,9 @@
 extension NumberFormatter {
-    func string(from decimal: Decimal) -> String {
-        string(from: decimal as NSDecimalNumber)!
+    func string(from double: Double) -> String {
+        string(from: NSNumber(value: double))!
     }
 
-    func decimal(from string: String) -> Decimal? {
-        number(from: string)?.decimalValue
+    func double(from string: String) -> Double? {
+        number(from: string)?.doubleValue
     }
 }

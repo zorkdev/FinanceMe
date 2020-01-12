@@ -7,7 +7,7 @@ final class UserTests: XCTestCase {
         try assert(model: User.self, json:
             """
             {
-              "balance" : 211.2,
+              "balance" : 211.34,
               "allowance" : 100.22,
               "startDate" : "2019-01-01T00:00:00Z",
               "name" : "Name",

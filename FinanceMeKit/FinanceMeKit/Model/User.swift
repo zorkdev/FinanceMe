@@ -2,16 +2,16 @@ struct User: Storeable, Equatable {
     let name: String
     let payday: Int
     let startDate: Date
-    let largeTransaction: Decimal
-    let allowance: Decimal
-    let balance: Decimal
+    let largeTransaction: Double
+    let allowance: Double
+    let balance: Double
 
     init(name: String,
          payday: Int,
          startDate: Date,
-         largeTransaction: Decimal,
-         allowance: Decimal = 0,
-         balance: Decimal = 0) {
+         largeTransaction: Double,
+         allowance: Double = 0,
+         balance: Double = 0) {
         self.name = name
         self.payday = payday
         self.startDate = startDate

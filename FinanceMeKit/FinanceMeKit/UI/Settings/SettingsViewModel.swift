@@ -22,7 +22,7 @@ final class SettingsViewModel: ObservableObject {
 
     let paydays = Array(1...28)
 
-    private var limitValue: Decimal? { Self.formatter.decimal(from: limit) }
+    private var limitValue: Double? { Self.formatter.double(from: limit) }
 
     private var newUser: User? {
         guard let user = user,

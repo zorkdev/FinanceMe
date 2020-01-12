@@ -1,5 +1,5 @@
 struct SpendingBusinessLogic {
-    func icon(for allowance: Decimal) -> String {
+    func icon(for allowance: Double) -> String {
         switch allowance {
         case -.greatestFiniteMagnitude ... -100: return "😱"
         case -100 ... -50: return "😨"

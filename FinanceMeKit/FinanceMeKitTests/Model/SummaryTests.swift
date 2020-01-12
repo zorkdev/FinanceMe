@@ -8,19 +8,19 @@ final class SummaryTests: XCTestCase {
             """
             {
               "currentMonthSummary" : {
-                "forecast" : -65.5,
-                "spending" : 250.71,
-                "allowance" : 90.3
+                "forecast" : -110.42,
+                "spending" : 250.62,
+                "allowance" : 100.34
               },
               "endOfMonthSummaries" : [
                 {
-                  "balance" : 41.9,
+                  "balance" : 250.62,
                   "savings" : 100.34,
                   "created" : "2018-01-01T00:00:00Z"
                 },
                 {
-                  "balance" : 66.9,
-                  "savings" : 20.45,
+                  "balance" : 110.42,
+                  "savings" : 1000.22,
                   "created" : "2019-02-01T00:00:00Z"
                 }
               ]

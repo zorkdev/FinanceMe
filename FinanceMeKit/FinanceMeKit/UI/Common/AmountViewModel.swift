@@ -6,25 +6,16 @@ struct AmountViewModel {
         case minus
     }
 
-    private static let integerFormatter: NumberFormatter = {
+    private static let formatter: NumberFormatter = {
         let formatter = NumberFormatter()
         formatter.locale = Formatters.locale
         formatter.numberStyle = .decimal
-        formatter.maximumFractionDigits = 0
-        formatter.roundingMode = .floor
+        formatter.minimumFractionDigits = 2
+        formatter.maximumFractionDigits = 2
         return formatter
     }()
 
-    private static let fractionFormatter: NumberFormatter = {
-        let formatter = NumberFormatter()
-        formatter.locale = Formatters.locale
-        formatter.numberStyle = .decimal
-        formatter.minimumIntegerDigits = 2
-        formatter.maximumFractionDigits = 0
-        return formatter
-    }()
-
-    let value: Decimal
+    let value: Double
 
     let sign: String
     let currencySymbol: String
@@ -33,29 +24,36 @@ struct AmountViewModel {
     let fraction: String
     let string: String
     let integerString: String
-    let isNegative: Bool
     let color: Color?
 
-    init(value: Decimal, signs: [Sign] = [.minus]) {
+    init(value: Double, signs: [Sign] = [.minus]) {
         self.value = value
 
-        if value.isSignMinus, signs.contains(.minus) {
-            sign = Self.integerFormatter.minusSign
+        if value.sign == .minus, signs.contains(.minus) {
+            sign = Self.formatter.minusSign
             color = .red
-        } else if value.isSignMinus == false, signs.contains(.plus) {
-            sign = Self.integerFormatter.plusSign
+        } else if value.sign == .plus, signs.contains(.plus) {
+            sign = Self.formatter.plusSign
             color = .green
         } else {
             sign = ""
             color = nil
         }
 
-        currencySymbol = Formatters.locale.currencySymbol!
-        integer = Self.integerFormatter.string(for: value.integer)!
-        decimalSeparator = Formatters.locale.decimalSeparator!
-        fraction = Self.fractionFormatter.string(for: value.fraction)!
+        let components = Self.components(value: value)
+
+        currencySymbol = Self.formatter.currencySymbol
+        integer = components.integer
+        decimalSeparator = Self.formatter.decimalSeparator
+        fraction = components.fraction
         string = sign + currencySymbol + integer + decimalSeparator + fraction
         integerString = sign + integer
-        isNegative = value < 0
+    }
+
+    static func components(value: Double) -> (integer: String, fraction: String) {
+        let components = formatter
+            .string(from: abs(value))
+            .components(separatedBy: formatter.decimalSeparator)
+        return (components[0], components[1])
     }
 }

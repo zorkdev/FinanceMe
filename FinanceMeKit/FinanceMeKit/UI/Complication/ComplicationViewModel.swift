@@ -28,7 +28,7 @@ public final class ComplicationViewModel {
     }
 
     private func createComplicationTemplate(family: CLKComplicationFamily,
-                                            allowance: Decimal) -> CLKComplicationTemplate? {
+                                            allowance: Double) -> CLKComplicationTemplate? {
         let viewModel = AmountViewModel(value: allowance)
 
         switch family {

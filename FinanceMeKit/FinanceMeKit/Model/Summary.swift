@@ -1,13 +1,13 @@
 struct EndOfMonthSummary: Codable, Equatable {
-    let balance: Decimal
-    let savings: Decimal
+    let balance: Double
+    let savings: Double
     let created: Date
 }
 
 struct CurrentMonthSummary: Codable, Equatable {
-    let allowance: Decimal
-    let forecast: Decimal
-    let spending: Decimal
+    let allowance: Double
+    let forecast: Double
+    let spending: Double
 }
 
 struct Summary: Storeable, Equatable {

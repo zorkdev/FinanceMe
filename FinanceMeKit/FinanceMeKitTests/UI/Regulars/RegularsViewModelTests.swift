@@ -65,8 +65,8 @@ final class RegularsViewModelTests: XCTestCase {
         transactionBusinessLogic.transactionsReturnValue = transactions
 
         waitForEvent {
-            XCTAssertEqual(self.viewModel.monthlyBalance.allowance.rounded(scale: 2, mode: .plain), 180.60)
-            XCTAssertEqual(self.viewModel.monthlyBalance.outgoings.rounded(scale: 2, mode: .plain), -340.24)
+            XCTAssertTrue(self.viewModel.monthlyBalance.allowance.distance(to: 180.60).isLess(than: 0.01))
+            XCTAssertTrue(self.viewModel.monthlyBalance.outgoings.distance(to: -340.24).isLess(than: 0.01))
             XCTAssertEqual(self.viewModel.savingsSection.rows, [self.transactions[5], self.transactions[4]])
             XCTAssertEqual(self.viewModel.incomingSection.rows, [self.transactions[1], self.transactions[0]])
             XCTAssertEqual(self.viewModel.outgoingSection.rows, [self.transactions[3], self.transactions[2]])

@@ -19,7 +19,7 @@ extension User: Stubable {
              startDate: ISO8601DateFormatter().date(from: "2019-01-01T00:00:00Z")!,
              largeTransaction: 10,
              allowance: 100.22,
-             balance: 211.20)
+             balance: 211.34)
     }
 }
 
@@ -37,13 +37,13 @@ extension Transaction: Stubable {
 
 extension Summary: Stubable {
     public static var stub: Summary {
-        Summary(currentMonthSummary: CurrentMonthSummary(allowance: 90.30, forecast: -65.50, spending: 250.71),
+        Summary(currentMonthSummary: CurrentMonthSummary(allowance: 100.34, forecast: -110.42, spending: 250.62),
                 endOfMonthSummaries: [
-                    EndOfMonthSummary(balance: 41.90,
+                    EndOfMonthSummary(balance: 250.62,
                                       savings: 100.34,
                                       created: ISO8601DateFormatter().date(from: "2018-01-01T00:00:00Z")!),
-                    EndOfMonthSummary(balance: 66.90,
-                                      savings: 20.45,
+                    EndOfMonthSummary(balance: 110.42,
+                                      savings: 1000.22,
                                       created: ISO8601DateFormatter().date(from: "2019-02-01T00:00:00Z")!)
                 ])
     }

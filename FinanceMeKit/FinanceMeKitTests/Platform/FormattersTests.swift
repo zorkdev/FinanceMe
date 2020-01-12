@@ -8,8 +8,8 @@ final class FormattersTests: XCTestCase {
 
     #if os(iOS) || os(macOS)
     func testCurrency() {
-        XCTAssertEqual(Formatters.currency.string(from: Decimal(1000.10)), "£1,000.10")
-        XCTAssertEqual(Formatters.currency.string(from: Decimal(-1000.10)), "-£1,000.10")
+        XCTAssertEqual(Formatters.currency.string(from: 1000.10), "£1,000.10")
+        XCTAssertEqual(Formatters.currency.string(from: -1000.10), "-£1,000.10")
     }
 
     func testRelativeDateFormatter() {

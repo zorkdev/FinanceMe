@@ -19,7 +19,7 @@ final class TransactionDetailViewModel: ObservableObject {
     @Published var isDisabled = true
     @Published var shouldDismiss = false
 
-    private var amountValue: Decimal? { Self.formatter.decimal(from: amount) }
+    private var amountValue: Double? { Self.formatter.double(from: amount) }
 
     private var newTransaction: Transaction? {
         guard let amountValue = amountValue else { return nil }
