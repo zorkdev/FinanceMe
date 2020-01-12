@@ -26,7 +26,7 @@ opt_in_rules:
   - empty_count
   - empty_string
   - empty_xctest_method
-  - enum_case_associated_value_count
+  - enum_case_associated_values_count
   - expiring_todo
   - explicit_init
   - extension_access_modifier
