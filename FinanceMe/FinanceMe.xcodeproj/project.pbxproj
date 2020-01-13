@@ -328,12 +328,12 @@
 		9A5AB5CD2365B33300B691FF /* upload.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = upload.sh; sourceTree = "<group>"; };
 		9A5AB5CE2365B33300B691FF /* build_number.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = build_number.sh; sourceTree = "<group>"; };
 		9A5AB5CF2365B33300B691FF /* config.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = config.sh; sourceTree = "<group>"; };
-		9A5AB5D02365B33300B691FF /* swiftlint-ios.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = "swiftlint-ios.sh"; sourceTree = "<group>"; };
-		9A5AB5D12365B33300B691FF /* dependencies.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = dependencies.sh; sourceTree = "<group>"; };
 		9A5AB5D22365B33300B691FF /* notarization.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = notarization.sh; sourceTree = "<group>"; };
 		9A5AB5D32365B33300B691FF /* keychain.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = keychain.sh; sourceTree = "<group>"; };
-		9A5AB5F9236645F400B691FF /* swiftlint-tvos.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = "swiftlint-tvos.sh"; sourceTree = "<group>"; };
-		9A5AB5FA236645F400B691FF /* swiftlint-macos.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = "swiftlint-macos.sh"; sourceTree = "<group>"; };
+		9A6E2A4323CCDD9B008BDA24 /* post-integration-macos.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = "post-integration-macos.sh"; sourceTree = "<group>"; };
+		9A6E2A4423CCDD9B008BDA24 /* pre-integration.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = "pre-integration.sh"; sourceTree = "<group>"; };
+		9A6E2A4623CCDD9B008BDA24 /* post-integration-tvos.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = "post-integration-tvos.sh"; sourceTree = "<group>"; };
+		9A6E2A4723CCDD9B008BDA24 /* post-integration-ios.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = "post-integration-ios.sh"; sourceTree = "<group>"; };
 		9AA805AC22F8DC2200B40516 /* FinanceMeExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = FinanceMeExtension.entitlements; sourceTree = "<group>"; };
 		9AA805AD22F8DC4000B40516 /* FinanceMe.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = FinanceMe.entitlements; sourceTree = "<group>"; };
 		9AADAACD22F62F7800C6C290 /* FinanceMeTestKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = FinanceMeTestKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -693,16 +693,16 @@
 			isa = PBXGroup;
 			children = (
 				9A4F864A239DB13D00F55DD2 /* swiftlint.sh */,
-				9A4F8649239DA76E00F55DD2 /* analyze.sh */,
 				9A5AB5D32365B33300B691FF /* keychain.sh */,
-				9A5AB5D12365B33300B691FF /* dependencies.sh */,
 				9A5AB5CF2365B33300B691FF /* config.sh */,
 				9A5AB5CE2365B33300B691FF /* build_number.sh */,
-				9A5AB5D02365B33300B691FF /* swiftlint-ios.sh */,
-				9A5AB5F9236645F400B691FF /* swiftlint-tvos.sh */,
-				9A5AB5FA236645F400B691FF /* swiftlint-macos.sh */,
-				9A5AB5D22365B33300B691FF /* notarization.sh */,
+				9A4F8649239DA76E00F55DD2 /* analyze.sh */,
 				9A5AB5CD2365B33300B691FF /* upload.sh */,
+				9A5AB5D22365B33300B691FF /* notarization.sh */,
+				9A6E2A4423CCDD9B008BDA24 /* pre-integration.sh */,
+				9A6E2A4723CCDD9B008BDA24 /* post-integration-ios.sh */,
+				9A6E2A4623CCDD9B008BDA24 /* post-integration-tvos.sh */,
+				9A6E2A4323CCDD9B008BDA24 /* post-integration-macos.sh */,
 			);
 			name = Scripts;
 			path = ../Scripts;

@@ -3,7 +3,9 @@ extension NumberFormatter {
         string(from: NSNumber(value: double))!
     }
 
+    #if os(iOS) || os(macOS)
     func double(from string: String) -> Double? {
         number(from: string)?.doubleValue
     }
+    #endif
 }
