@@ -4,6 +4,8 @@ struct AmountViewModel {
     enum Sign {
         case plus
         case minus
+
+        static func ~= (pattern: Self, value: [Self]) -> Bool { value.contains(pattern) }
     }
 
     private static let formatter: NumberFormatter = {
@@ -29,13 +31,17 @@ struct AmountViewModel {
     init(value: Double, signs: [Sign] = [.minus]) {
         self.value = value
 
-        if value.sign == .minus, signs.contains(.minus) {
+        switch (value.sign, signs) {
+        case _ where value == .zero:
+            sign = ""
+            color = nil
+        case (.minus, .minus):
             sign = Self.formatter.minusSign
             color = .red
-        } else if value.sign == .plus, signs.contains(.plus) {
+        case (.plus, .plus):
             sign = Self.formatter.plusSign
             color = .green
-        } else {
+        default:
             sign = ""
             color = nil
         }
@@ -50,7 +56,7 @@ struct AmountViewModel {
         integerString = sign + integer
     }
 
-    static func components(value: Double) -> (integer: String, fraction: String) {
+    private static func components(value: Double) -> (integer: String, fraction: String) {
         let components = formatter
             .string(from: abs(value))
             .components(separatedBy: formatter.decimalSeparator)
