@@ -33,6 +33,7 @@ struct HomeView: View {
         }
         .onAppear(perform: viewModel.onAppear)
         .errorBanner(errorViewModel)
+        .frame(minHeight: 600)
     }
 
     init(appState: AppState) {
