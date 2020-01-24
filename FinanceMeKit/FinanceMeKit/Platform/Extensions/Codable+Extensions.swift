@@ -14,9 +14,8 @@ extension Decodable {
 
 extension Encodable {
     var prettyPrinted: String {
-        guard let data = try? self.jsonEncoded(prettyPrinted: true).get(),
-            let string = String(data: data, encoding: .utf8) else { return "nil" }
-        return string.replacingOccurrences(of: "\\", with: "")
+        guard let data = try? self.jsonEncoded(prettyPrinted: true).get() else { return "nil" }
+        return data.utf8String
     }
 
     func jsonEncoded(prettyPrinted: Bool = false) -> Result<Data, Error> {

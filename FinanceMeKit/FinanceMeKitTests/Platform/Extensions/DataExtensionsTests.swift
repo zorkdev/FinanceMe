@@ -1,4 +1,5 @@
 import XCTest
+import FinanceMeTestKit
 @testable import FinanceMeKit
 
 final class DataExtensionsTests: XCTestCase {
@@ -6,7 +7,7 @@ final class DataExtensionsTests: XCTestCase {
         let data =
             """
             {"key":"value"}
-            """.data(using: .utf8)
+            """.utf8Data
 
         let expectedValue =
             """
@@ -15,13 +16,13 @@ final class DataExtensionsTests: XCTestCase {
             }
             """
 
-        XCTAssertEqual(data?.prettyPrinted, expectedValue)
+        XCTAssertEqual(data.prettyPrinted, expectedValue)
     }
 
     func testPrettyPrinted_Failure() {
-        let data = ".......".data(using: .utf8)
+        let data = ".......".utf8Data
         let expectedValue = "nil"
 
-        XCTAssertEqual(data?.prettyPrinted, expectedValue)
+        XCTAssertEqual(data.prettyPrinted, expectedValue)
     }
 }

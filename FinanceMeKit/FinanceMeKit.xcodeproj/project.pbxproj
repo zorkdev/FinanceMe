@@ -179,6 +179,9 @@
 		9A7054102367A9100070803C /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A70540F2367A9100070803C /* SettingsView.swift */; };
 		9A7054152367AE890070803C /* SettingsView-macOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A7054142367AE890070803C /* SettingsView-macOS.swift */; };
 		9A7054172367B67D0070803C /* RoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A7054162367B67D0070803C /* RoundedButton.swift */; };
+		9A71A09C23DB8B6A00F3277C /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A71A09B23DB8B6A00F3277C /* String+Extensions.swift */; };
+		9A71A09D23DB8B6A00F3277C /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A71A09B23DB8B6A00F3277C /* String+Extensions.swift */; };
+		9A71A09E23DB8B6A00F3277C /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A71A09B23DB8B6A00F3277C /* String+Extensions.swift */; };
 		9A75CF722360CCAD00991320 /* BalancesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A75CF712360CCAD00991320 /* BalancesViewModel.swift */; };
 		9A75CF752360CCAD00991320 /* BalancesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A75CF712360CCAD00991320 /* BalancesViewModel.swift */; };
 		9A78CEB32338F9B2009B5994 /* SessionBusinessLogicTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A78CEB22338F9B2009B5994 /* SessionBusinessLogicTests.swift */; };
@@ -610,6 +613,7 @@
 		9A70540F2367A9100070803C /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		9A7054142367AE890070803C /* SettingsView-macOS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SettingsView-macOS.swift"; sourceTree = "<group>"; };
 		9A7054162367B67D0070803C /* RoundedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedButton.swift; sourceTree = "<group>"; };
+		9A71A09B23DB8B6A00F3277C /* String+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extensions.swift"; sourceTree = "<group>"; };
 		9A75CF712360CCAD00991320 /* BalancesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BalancesViewModel.swift; sourceTree = "<group>"; };
 		9A78CEB22338F9B2009B5994 /* SessionBusinessLogicTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionBusinessLogicTests.swift; sourceTree = "<group>"; };
 		9A78CEB82339033D009B5994 /* AmountViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AmountViewTests.swift; sourceTree = "<group>"; };
@@ -1173,6 +1177,7 @@
 			children = (
 				9AADAAC722F62D5C00C6C290 /* XCTestCase+Extensions.swift */,
 				9AFA47B822F84AEF003B2992 /* Publisher+Extensions.swift */,
+				9A71A09B23DB8B6A00F3277C /* String+Extensions.swift */,
 				9A375B1522F7A92D00E598AB /* Error.swift */,
 			);
 			path = Utilities;
@@ -2428,6 +2433,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9AA805A622F8D01C00B40516 /* MockNetworkService.swift in Sources */,
+				9A71A09C23DB8B6A00F3277C /* String+Extensions.swift in Sources */,
 				9A375B1622F7A92D00E598AB /* Error.swift in Sources */,
 				9A6F31AB23422586005F405D /* MockSummaryBusinessLogic.swift in Sources */,
 				9A375B0A22F7A4B800E598AB /* MockLoggingService.swift in Sources */,
@@ -2462,6 +2468,7 @@
 				9AADAAE922F6329C00C6C290 /* XCTestCase+Extensions.swift in Sources */,
 				9AD73D34230032DF003B16C3 /* MockUserBusinessLogic.swift in Sources */,
 				9AADAC0122F7020700C6C290 /* MockConfigService.swift in Sources */,
+				9A71A09D23DB8B6A00F3277C /* String+Extensions.swift in Sources */,
 				9ADD21CC22F71A94006F98CA /* MockDataService.swift in Sources */,
 				9AF20D93236F672C00290B9A /* MockAppState-tvOS.swift in Sources */,
 				9AFA47BA22F84AEF003B2992 /* Publisher+Extensions.swift in Sources */,
@@ -2478,6 +2485,7 @@
 				9A375B1822F7A92D00E598AB /* Error.swift in Sources */,
 				9A956DC8230039FD00CC848D /* MockAppState-macOS.swift in Sources */,
 				9A375B0C22F7A4B800E598AB /* MockLoggingService.swift in Sources */,
+				9A71A09E23DB8B6A00F3277C /* String+Extensions.swift in Sources */,
 				9ADD21E222F721C8006F98CA /* Stubable.swift in Sources */,
 				9A375B1022F7A4EF00E598AB /* MockSessionService.swift in Sources */,
 				9A3B183D2340FD5C00FF27D8 /* MockTransactionBusinessLogic.swift in Sources */,

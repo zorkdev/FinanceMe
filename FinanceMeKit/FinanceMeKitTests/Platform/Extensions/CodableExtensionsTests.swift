@@ -25,7 +25,7 @@ final class CodableExtensionsTests: XCTestCase {
                 "string": "value",
                 "date": "\(dateString)"
             }
-            """.data(using: .utf8)!
+            """.utf8Data
 
         let model = try Model(from: jsonData)
         XCTAssertEqual(model.string, "value")
@@ -39,7 +39,7 @@ final class CodableExtensionsTests: XCTestCase {
                 "string": 1,
                 "date": "2019-01-01T00:00:00Z"
             }
-            """.data(using: .utf8)!
+            """.utf8Data
 
         XCTAssertThrowsError(try Model(from: jsonData))
     }
@@ -55,8 +55,7 @@ final class CodableExtensionsTests: XCTestCase {
         let model = Model(string: "value",
                           date: date)
 
-        let data = try model.jsonEncoded().get()
-        let string = String(data: data, encoding: .utf8)!
+        let string = try model.jsonEncoded().get().utf8String
         XCTAssertEqual(string, expectedValue)
     }
 
@@ -73,8 +72,7 @@ final class CodableExtensionsTests: XCTestCase {
             }
             """
 
-        let data = try dict.jsonEncoded(prettyPrinted: true).get()
-        let string = String(data: data, encoding: .utf8)!
+        let string = try dict.jsonEncoded(prettyPrinted: true).get().utf8String
         XCTAssertEqual(string, expectedValue)
     }
 

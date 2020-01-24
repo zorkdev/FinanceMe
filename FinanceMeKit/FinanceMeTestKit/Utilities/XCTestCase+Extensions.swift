@@ -39,11 +39,10 @@ public extension XCTestCase {
     }
 
     func assert<T: Codable & Equatable & Stubable>(model: T.Type, json: String) throws {
-        let value = try T(from: json.data(using: .utf8)!)
+        let value = try T(from: json.utf8Data)
         XCTAssertEqual(value, T.stub)
 
-        let data = try T.stub.jsonEncoded(prettyPrinted: true).get()
-        let string = String(data: data, encoding: .utf8)!
+        let string = try T.stub.jsonEncoded(prettyPrinted: true).get().utf8String
         XCTAssertEqual(string, json)
     }
 }

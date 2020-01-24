@@ -8,7 +8,7 @@ final class ErrorTests: XCTestCase {
             {
                 "reason" : "Test error"
             }
-            """.data(using: .utf8)!
+            """.utf8Data
 
         XCTAssertEqual(APIError(code: 100, response: json)?.code, 100)
         XCTAssertEqual(APIError(code: 300, response: json)?.code, 300)

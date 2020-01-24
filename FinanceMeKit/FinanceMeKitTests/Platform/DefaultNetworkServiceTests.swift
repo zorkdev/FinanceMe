@@ -30,7 +30,7 @@ final class DefaultNetworkServiceTests: AsyncTestCase {
         {
             "reason": "Test error"
         }
-        """.data(using: .utf8)!
+        """.utf8Data
 
     override func setUp() {
         super.setUp()
@@ -74,7 +74,7 @@ final class DefaultNetworkServiceTests: AsyncTestCase {
         let expectedBody =
             """
             {"body":"body"}
-            """.data(using: .utf8)!
+            """.utf8Data
 
         networkService.perform(api: api, method: .post, body: body).assertSuccess(self) { response in
             let request = self.networkRequestable.lastPerformParam!
@@ -216,7 +216,7 @@ final class DefaultNetworkServiceTests: AsyncTestCase {
         request.httpBody =
             """
             {"body":"body"}
-            """.data(using: .utf8)!
+            """.utf8Data
 
         let expectedValue =
             """
@@ -240,7 +240,7 @@ final class DefaultNetworkServiceTests: AsyncTestCase {
             {
               "key" : "value"
             }
-            """.data(using: .utf8)!
+            """.utf8Data
 
         let response = HTTPURLResponse(url: URL(string: "https://www.apple.com")!,
                                        statusCode: 200,
@@ -275,7 +275,7 @@ final class DefaultNetworkServiceTests: AsyncTestCase {
             {
               "key" : "value"
             }
-            """.data(using: .utf8)!
+            """.utf8Data
 
         let response = HTTPURLResponse(url: URL(string: "https://ww.apple.com")!,
                                        statusCode: 500,
