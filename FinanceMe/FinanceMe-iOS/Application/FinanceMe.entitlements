@@ -6,7 +6,7 @@
 	<string>development</string>
 	<key>com.apple.developer.associated-domains</key>
 	<array>
-		<string>webcredentials:attilanemet.com</string>
+		<string>webcredentials:financeme.attilanemet.com</string>
 	</array>
 	<key>com.apple.security.app-sandbox</key>
 	<true/>
