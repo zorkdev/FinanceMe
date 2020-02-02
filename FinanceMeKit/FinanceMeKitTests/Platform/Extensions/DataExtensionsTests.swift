@@ -20,8 +20,8 @@ final class DataExtensionsTests: XCTestCase {
     }
 
     func testPrettyPrinted_Failure() {
-        let data = ".......".utf8Data
-        let expectedValue = "nil"
+        let expectedValue = "Non-JSON string"
+        let data = expectedValue.utf8Data
 
         XCTAssertEqual(data.prettyPrinted, expectedValue)
     }

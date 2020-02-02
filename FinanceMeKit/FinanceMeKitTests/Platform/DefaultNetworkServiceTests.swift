@@ -267,6 +267,32 @@ final class DefaultNetworkServiceTests: AsyncTestCase {
         XCTAssertEqual(DefaultNetworkService.createResponseString(data, response: response, time: 1), expectedValue)
     }
 
+    func testPrintNonJSONDataResponse() {
+        let data = "Non-JSON response".utf8Data
+
+        let response = HTTPURLResponse(url: URL(string: "https://www.apple.com")!,
+                                       statusCode: 200,
+                                       httpVersion: nil,
+                                       headerFields: ["Header": "Value"])!
+
+        let expectedValue =
+            """
+            Response time: 1000ms
+            ----- URL -----
+            https://www.apple.com
+            --- Status ----
+            200
+            --- Headers ---
+            {
+              "Header" : "Value"
+            }
+            ---- Body -----
+            Non-JSON response
+            """
+
+        XCTAssertEqual(DefaultNetworkService.createResponseString(data, response: response, time: 1), expectedValue)
+    }
+
     func testPrintErrorResponse() {
         let error = URLError(.notConnectedToInternet)
 
