@@ -94,7 +94,7 @@ private extension KeychainDataService {
         return query
     }
 
-    private func log(error: OSStatus) {
+    func log(error: OSStatus) {
         loggingService.log(title: "Keychain Error",
                            content: KeychainError(status: error).localizedDescription,
                            type: .error)

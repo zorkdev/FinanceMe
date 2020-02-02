@@ -26,9 +26,10 @@ public final class ComplicationViewModel {
                 handler(timelineEntry)
             }.store(in: &cancellables)
     }
+}
 
-    private func createComplicationTemplate(family: CLKComplicationFamily,
-                                            allowance: Double) -> CLKComplicationTemplate? {
+private extension ComplicationViewModel {
+    func createComplicationTemplate(family: CLKComplicationFamily, allowance: Double) -> CLKComplicationTemplate? {
         let viewModel = AmountViewModel(value: allowance)
 
         switch family {

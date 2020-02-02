@@ -22,20 +22,6 @@ final class SettingsViewModel: ObservableObject {
 
     let paydays = Array(1...28)
 
-    private var limitValue: Double? { Self.formatter.double(from: limit) }
-
-    private var newUser: User? {
-        guard let user = user,
-            let limitValue = limitValue else { return nil }
-
-        return User(name: name,
-                    payday: payday,
-                    startDate: date,
-                    largeTransaction: limitValue,
-                    allowance: user.allowance,
-                    balance: user.balance)
-    }
-
     init(sessionBusinessLogic: SessionBusinessLogicType,
          userBusinessLogic: UserBusinessLogicType,
          transactionBusinessLogic: TransactionBusinessLogicType,
@@ -49,38 +35,6 @@ final class SettingsViewModel: ObservableObject {
         self.loadingState = loadingState
         self.errorViewModel = errorViewModel
         setupBindings()
-    }
-
-    private func setupBindings() {
-        userBusinessLogic.user
-            .receive(on: DispatchQueue.main)
-            .sink { user in
-                guard let user = user else { return }
-                self.user = user
-                self.name = user.name
-                self.limit = Self.formatter.string(from: user.largeTransaction)
-                self.payday = user.payday
-                self.date = user.startDate
-            }.store(in: &cancellables)
-
-        $isEditing
-            .receive(on: DispatchQueue.main)
-            .sink { isEditing in
-                guard isEditing == false,
-                    let user = self.user else { return }
-                self.name = user.name
-                self.limit = Self.formatter.string(from: user.largeTransaction)
-                self.payday = user.payday
-                self.date = user.startDate
-            }.store(in: &cancellables)
-
-        Publishers.CombineLatest4($name, $limit, $payday, $date)
-            .receive(on: DispatchQueue.main)
-            .map { _ in
-                guard let newUser = self.newUser else { return true }
-                return newUser == self.user
-            }.assign(to: \.isDisabled, on: self)
-            .store(in: &cancellables)
     }
 
     func onLimitEditingChanged(isEditing: Bool) {
@@ -112,5 +66,53 @@ final class SettingsViewModel: ObservableObject {
 
     func onLogOut() {
         sessionBusinessLogic.logOut()
+    }
+}
+
+private extension SettingsViewModel {
+    var limitValue: Double? { Self.formatter.double(from: limit) }
+
+    var newUser: User? {
+        guard let user = user,
+            let limitValue = limitValue else { return nil }
+
+        return User(name: name,
+                    payday: payday,
+                    startDate: date,
+                    largeTransaction: limitValue,
+                    allowance: user.allowance,
+                    balance: user.balance)
+    }
+
+    func setupBindings() {
+        userBusinessLogic.user
+            .receive(on: DispatchQueue.main)
+            .sink { user in
+                guard let user = user else { return }
+                self.user = user
+                self.name = user.name
+                self.limit = Self.formatter.string(from: user.largeTransaction)
+                self.payday = user.payday
+                self.date = user.startDate
+            }.store(in: &cancellables)
+
+        $isEditing
+            .receive(on: DispatchQueue.main)
+            .sink { isEditing in
+                guard isEditing == false,
+                    let user = self.user else { return }
+                self.name = user.name
+                self.limit = Self.formatter.string(from: user.largeTransaction)
+                self.payday = user.payday
+                self.date = user.startDate
+            }.store(in: &cancellables)
+
+        Publishers.CombineLatest4($name, $limit, $payday, $date)
+            .receive(on: DispatchQueue.main)
+            .map { _ in
+                guard let newUser = self.newUser else { return true }
+                return newUser == self.user
+            }.assign(to: \.isDisabled, on: self)
+            .store(in: &cancellables)
     }
 }

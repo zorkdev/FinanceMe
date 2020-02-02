@@ -11,13 +11,15 @@ final class BalancesViewModel: ObservableObject {
         self.businessLogic = businessLogic
         setupBindings()
     }
+}
 
-    private func setupBindings() {
+private extension BalancesViewModel {
+    func setupBindings() {
         setupCurrentMonth()
         setupSummarySections()
     }
 
-    private func setupCurrentMonth() {
+    func setupCurrentMonth() {
         businessLogic.summary
             .compactMap { $0?.currentMonthSummary }
             .receive(on: DispatchQueue.main)
@@ -25,7 +27,7 @@ final class BalancesViewModel: ObservableObject {
             .store(in: &cancellables)
     }
 
-    private func setupSummarySections() {
+    func setupSummarySections() {
         businessLogic.summary
             .compactMap { $0?.endOfMonthSummaries }
             .map {

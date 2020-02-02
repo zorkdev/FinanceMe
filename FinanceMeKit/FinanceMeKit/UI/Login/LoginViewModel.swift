@@ -26,8 +26,10 @@ final class LoginViewModel: ObservableObject {
         businessLogic.login(credentials: Credentials(email: email, password: password))
             .handleResult(loadingState: loadingState, errorViewModel: errorViewModel, cancellables: &cancellables)
     }
+}
 
-    private func setupBindings() {
+private extension LoginViewModel {
+    func setupBindings() {
         Publishers.CombineLatest($email, $password)
             .map { $0.isEmpty || $1.isEmpty }
             .receive(on: DispatchQueue.main)

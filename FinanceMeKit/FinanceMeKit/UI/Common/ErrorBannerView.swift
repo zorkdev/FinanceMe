@@ -4,17 +4,6 @@ struct ErrorBannerView: View {
     @ObservedObject private var errorViewModel: ErrorViewModel
     @State private var offset: CGSize = .zero
 
-    private var dragGesture: some Gesture {
-        DragGesture()
-            .onChanged { self.offset = $0.translation }
-            .onEnded {
-                if $0.translation.height < -10 {
-                    self.errorViewModel.error = nil
-                }
-                self.offset = .zero
-            }
-    }
-
     var body: some View {
         Group {
             if errorViewModel.error != nil {
@@ -44,6 +33,19 @@ struct ErrorBannerView: View {
 
     init(_ errorViewModel: ErrorViewModel) {
         self.errorViewModel = errorViewModel
+    }
+}
+
+private extension ErrorBannerView {
+    var dragGesture: some Gesture {
+        DragGesture()
+            .onChanged { self.offset = $0.translation }
+            .onEnded {
+                if $0.translation.height < -10 {
+                    self.errorViewModel.error = nil
+                }
+                self.offset = .zero
+            }
     }
 }
 

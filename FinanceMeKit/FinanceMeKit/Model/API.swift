@@ -8,7 +8,11 @@ enum API: APIType, Equatable {
     case deviceToken
     case metrics
 
-    private static let baseURL: String = {
+    var url: URL { URL(string: Self.baseURL + path)! }
+}
+
+private extension API {
+    static let baseURL: String = {
         #if DEBUG
         return "https://financeme-staging.attilanemet.com/api/"
         #else
@@ -16,7 +20,7 @@ enum API: APIType, Equatable {
         #endif
     }()
 
-    private var path: String {
+    var path: String {
         switch self {
         case .login: return "login"
         case .user: return "users/me"
@@ -28,6 +32,4 @@ enum API: APIType, Equatable {
         case .metrics: return "metrics"
         }
     }
-
-    var url: URL { URL(string: Self.baseURL + path)! }
 }

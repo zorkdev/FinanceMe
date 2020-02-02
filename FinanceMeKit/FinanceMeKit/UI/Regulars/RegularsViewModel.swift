@@ -31,14 +31,26 @@ final class RegularsViewModel: ObservableObject {
         setupBindings()
     }
 
-    private func setupBindings() {
+    func onDelete(section: ListSection<Transaction>, row: IndexSet) {
+        loadingState.isLoading = true
+
+        row.first
+            .flatMap { transactionBusinessLogic.delete(transaction: section.rows[$0]) }?
+            .flatMap { self.userBusinessLogic.getUser() }
+            .flatMap { self.summaryBusinessLogic.getSummary() }
+            .handleResult(loadingState: loadingState, errorViewModel: errorViewModel, cancellables: &cancellables)
+    }
+}
+
+private extension RegularsViewModel {
+    func setupBindings() {
         setupMonthlyBalance()
         setupSavingsSection()
         setupIncomingSection()
         setupOutgoingSection()
     }
 
-    private func setupMonthlyBalance() {
+    func setupMonthlyBalance() {
         transactionBusinessLogic.transactions
             .map { $0.filter { $0.source == .externalRegularInbound || $0.source == .externalRegularOutbound } }
             .map {
@@ -55,7 +67,7 @@ final class RegularsViewModel: ObservableObject {
             .store(in: &cancellables)
     }
 
-    private func setupSavingsSection() {
+    func setupSavingsSection() {
         transactionBusinessLogic.transactions
             .map { $0.filter { $0.source == .externalSavings } }
             .map { $0.sorted { $0.amount < $1.amount } }
@@ -65,7 +77,7 @@ final class RegularsViewModel: ObservableObject {
             .store(in: &cancellables)
     }
 
-    private func setupIncomingSection() {
+    func setupIncomingSection() {
         transactionBusinessLogic.transactions
             .map { $0.filter { $0.source == .externalRegularInbound } }
             .map { $0.sorted { $0.amount > $1.amount } }
@@ -75,7 +87,7 @@ final class RegularsViewModel: ObservableObject {
             .store(in: &cancellables)
     }
 
-    private func setupOutgoingSection() {
+    func setupOutgoingSection() {
         transactionBusinessLogic.transactions
             .map { $0.filter { $0.source == .externalRegularOutbound } }
             .map { $0.sorted { $0.amount < $1.amount } }
@@ -83,15 +95,5 @@ final class RegularsViewModel: ObservableObject {
             .receive(on: DispatchQueue.main)
             .assign(to: \.outgoingSection, on: self)
             .store(in: &cancellables)
-    }
-
-    func onDelete(section: ListSection<Transaction>, row: IndexSet) {
-        loadingState.isLoading = true
-
-        row.first
-            .flatMap { transactionBusinessLogic.delete(transaction: section.rows[$0]) }?
-            .flatMap { self.userBusinessLogic.getUser() }
-            .flatMap { self.summaryBusinessLogic.getSummary() }
-            .handleResult(loadingState: loadingState, errorViewModel: errorViewModel, cancellables: &cancellables)
     }
 }

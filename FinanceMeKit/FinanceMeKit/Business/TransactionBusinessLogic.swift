@@ -91,8 +91,10 @@ final class TransactionBusinessLogic: TransactionBusinessLogicType {
             .map { _ in }
             .eraseToAnyPublisher()
     }
+}
 
-    private static func loadTransactions(dataService: DataService) -> [Transaction] {
+private extension TransactionBusinessLogic {
+    static func loadTransactions(dataService: DataService) -> [Transaction] {
         [Transaction].load(dataService: dataService) ?? []
     }
 }

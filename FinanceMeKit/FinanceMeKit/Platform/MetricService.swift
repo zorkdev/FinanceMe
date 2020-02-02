@@ -18,8 +18,10 @@ final class DefaultMetricService: NSObject, MetricService {
         super.init()
         metricManager.add(self)
     }
+}
 
-    private func handle(payloads: [MXMetricPayload]) {
+private extension DefaultMetricService {
+    func handle(payloads: [MXMetricPayload]) {
         payloads
             .map { $0.jsonRepresentation() }
             .forEach { data in

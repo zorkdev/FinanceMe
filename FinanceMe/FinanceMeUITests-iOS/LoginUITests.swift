@@ -35,22 +35,6 @@ final class LoginUITests: BaseTestCase, Login {
 protocol Login {}
 
 extension Login where Self: BaseTestCase {
-    private var emailTextField: XCUIElement {
-        app.textFields["Email"].firstMatch
-    }
-
-    private var passwordTextField: XCUIElement {
-        app.secureTextFields["Password"].firstMatch
-    }
-
-    private var loginButton: XCUIElement {
-        app.buttons["Log In"].firstMatch
-    }
-
-    private var authenticateButton: XCUIElement {
-        app.buttons["Authenticate"].firstMatch
-    }
-
     func whenIEnter(email: String) {
         XCTContext.runActivity(named: #function) { _ in
             emailTextField.clearAndTypeText(email)
@@ -79,5 +63,23 @@ extension Login where Self: BaseTestCase {
         XCTContext.runActivity(named: #function) { _ in
             XCTAssertEqual(loginButton.isEnabled, enabled, "Login button is not \(enabled ? "enabled" : "disabled")")
         }
+    }
+}
+
+private extension Login where Self: BaseTestCase {
+    var emailTextField: XCUIElement {
+        app.textFields["Email"].firstMatch
+    }
+
+    var passwordTextField: XCUIElement {
+        app.secureTextFields["Password"].firstMatch
+    }
+
+    var loginButton: XCUIElement {
+        app.buttons["Log In"].firstMatch
+    }
+
+    var authenticateButton: XCUIElement {
+        app.buttons["Authenticate"].firstMatch
     }
 }

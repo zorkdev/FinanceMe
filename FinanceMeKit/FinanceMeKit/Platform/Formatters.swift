@@ -29,13 +29,17 @@ enum Formatters {
         formatter.dateFormat = "MMMM"
         return formatter
     }()
+    #endif
+}
 
-    private static func createDateFormatter() -> DateFormatter {
+#if os(iOS) || os(macOS)
+private extension Formatters {
+    static func createDateFormatter() -> DateFormatter {
         let formatter = DateFormatter()
         formatter.locale = locale
         formatter.calendar = locale.calendar
         formatter.timeZone = locale.calendar.timeZone
         return formatter
     }
-    #endif
 }
+#endif

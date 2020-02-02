@@ -17,12 +17,14 @@ struct AmountView: View {
         self.viewModel = viewModel
         self.isLargeDisplay = isLargeDisplay
     }
+}
 
-    private func smallText(_ content: String) -> Text {
+private extension AmountView {
+    func smallText(_ content: String) -> Text {
         Text(content).font(.system(.callout, design: .rounded))
     }
 
-    private func largeText(_ content: String) -> Text {
+    func largeText(_ content: String) -> Text {
         Text(content).font(.system(isLargeDisplay ? .largeTitle : .title, design: .rounded))
     }
 }

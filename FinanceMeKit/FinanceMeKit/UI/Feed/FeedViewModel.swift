@@ -23,7 +23,19 @@ final class FeedViewModel: ObservableObject {
         setupBindings()
     }
 
-    private func setupBindings() {
+    func onDelete(section: ListSection<Transaction>, row: IndexSet) {
+        loadingState.isLoading = true
+
+        row.first
+            .flatMap { transactionBusinessLogic.delete(transaction: section.rows[$0]) }?
+            .flatMap { self.userBusinessLogic.getUser() }
+            .flatMap { self.summaryBusinessLogic.getSummary() }
+            .handleResult(loadingState: loadingState, errorViewModel: errorViewModel, cancellables: &cancellables)
+    }
+}
+
+private extension FeedViewModel {
+    func setupBindings() {
         transactionBusinessLogic.transactions
             .map { $0.filter { $0.source == .externalInbound || $0.source == .externalOutbound } }
             .map {
@@ -33,15 +45,5 @@ final class FeedViewModel: ObservableObject {
             }.receive(on: DispatchQueue.main)
             .assign(to: \.sections, on: self)
             .store(in: &cancellables)
-    }
-
-    func onDelete(section: ListSection<Transaction>, row: IndexSet) {
-        loadingState.isLoading = true
-
-        row.first
-            .flatMap { transactionBusinessLogic.delete(transaction: section.rows[$0]) }?
-            .flatMap { self.userBusinessLogic.getUser() }
-            .flatMap { self.summaryBusinessLogic.getSummary() }
-            .handleResult(loadingState: loadingState, errorViewModel: errorViewModel, cancellables: &cancellables)
     }
 }

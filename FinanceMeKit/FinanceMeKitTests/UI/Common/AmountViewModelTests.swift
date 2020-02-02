@@ -102,17 +102,19 @@ final class AmountViewModelTests: XCTestCase {
                integerString: "12",
                color: nil)
     }
+}
 
+private extension AmountViewModelTests {
     // swiftlint:disable:next function_parameter_count
-    private func assert(_ viewModel: AmountViewModel,
-                        sign: String,
-                        currencySymbol: String,
-                        integer: String,
-                        decimalSeparator: String,
-                        fraction: String,
-                        string: String,
-                        integerString: String,
-                        color: Color?) {
+    func assert(_ viewModel: AmountViewModel,
+                sign: String,
+                currencySymbol: String,
+                integer: String,
+                decimalSeparator: String,
+                fraction: String,
+                string: String,
+                integerString: String,
+                color: Color?) {
         XCTAssertEqual(viewModel.sign, sign)
         XCTAssertEqual(viewModel.currencySymbol, currencySymbol)
         XCTAssertEqual(viewModel.integer, integer)

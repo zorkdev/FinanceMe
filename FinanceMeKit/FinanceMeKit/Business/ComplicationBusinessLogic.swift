@@ -11,15 +11,17 @@ final class ComplicationBusinessLogic: ComplicationBusinessLogicType {
         self.businessLogic = businessLogic
         setupBindings()
     }
+}
 
-    private func setupBindings() {
+private extension ComplicationBusinessLogic {
+    func setupBindings() {
         businessLogic.user
             .receive(on: DispatchQueue.main)
             .sink { _ in self.updateComplications() }
             .store(in: &cancellables)
     }
 
-    private func updateComplications() {
+    func updateComplications() {
         let complicationServer = CLKComplicationServer.sharedInstance()
         guard let activeComplications = complicationServer.activeComplications else { return }
         activeComplications.forEach { complicationServer.reloadTimeline(for: $0) }

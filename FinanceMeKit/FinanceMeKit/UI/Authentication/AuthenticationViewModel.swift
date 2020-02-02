@@ -14,8 +14,10 @@ final class AuthenticationViewModel: ObservableObject {
     func onAppear() {
         businessLogic.authenticate()
     }
+}
 
-    private func setupBindings() {
+private extension AuthenticationViewModel {
+    func setupBindings() {
         businessLogic.isAuthenticated
             .receive(on: DispatchQueue.main)
             .assign(to: \.isAuthenticated, on: self)

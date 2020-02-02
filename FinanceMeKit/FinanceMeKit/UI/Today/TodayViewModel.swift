@@ -17,8 +17,10 @@ final class TodayViewModel: ObservableObject {
     func onAppear() {
         businessLogic.fetchUser()
     }
+}
 
-    private func setupBindings() {
+private extension TodayViewModel {
+    func setupBindings() {
         businessLogic.user
             .compactMap { $0?.balance }
             .map { AmountViewModel(value: $0) }

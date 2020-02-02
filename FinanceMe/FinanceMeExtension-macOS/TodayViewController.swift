@@ -28,9 +28,11 @@ final class TodayViewController: NSViewController, NCWidgetProviding {
     func widgetPerformUpdate(completionHandler: (@escaping (NCUpdateResult) -> Void)) {
         completionHandler(.newData)
     }
+}
 
+private extension TodayViewController {
     @objc
-    private func onTap() {
+    func onTap() {
         NSWorkspace.shared.open(Link.urlScheme)
     }
 }

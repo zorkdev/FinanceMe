@@ -55,8 +55,10 @@ struct AmountViewModel {
         string = sign + currencySymbol + integer + decimalSeparator + fraction
         integerString = sign + integer
     }
+}
 
-    private static func components(value: Double) -> (integer: String, fraction: String) {
+private extension AmountViewModel {
+    static func components(value: Double) -> (integer: String, fraction: String) {
         let components = formatter
             .string(from: abs(value))
             .components(separatedBy: formatter.decimalSeparator)

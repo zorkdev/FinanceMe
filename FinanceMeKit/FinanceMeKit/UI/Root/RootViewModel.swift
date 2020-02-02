@@ -10,8 +10,10 @@ final class RootViewModel: ObservableObject {
         self.businessLogic = businessLogic
         setupBindings()
     }
+}
 
-    private func setupBindings() {
+private extension RootViewModel {
+    func setupBindings() {
         businessLogic.isLoggedIn
             .receive(on: DispatchQueue.main)
             .assign(to: \.isLoggedIn, on: self)

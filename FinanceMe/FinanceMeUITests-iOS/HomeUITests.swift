@@ -83,46 +83,6 @@ final class HomeUITests: BaseTestCase, Home {
 protocol Home {}
 
 extension Home where Self: BaseTestCase {
-    private var transactionDetailsScreen: XCUIElement {
-        app.staticTexts["Transaction Details"].firstMatch
-    }
-
-    private var feedTab: XCUIElement {
-        app.tabBars.buttons["Feed"].firstMatch
-    }
-
-    private var regularsTab: XCUIElement {
-        app.tabBars.buttons["Regulars"].firstMatch
-    }
-
-    private var balancesTab: XCUIElement {
-        app.tabBars.buttons["Balances"].firstMatch
-    }
-
-    private var refreshButton: XCUIElement {
-        app.buttons["Refresh"].firstMatch
-    }
-
-    private var addButton: XCUIElement {
-        app.buttons["Add"].firstMatch
-    }
-
-    private var amountTextField: XCUIElement {
-        app.textFields["£0.00"].firstMatch
-    }
-
-    private var descriptionTextField: XCUIElement {
-        app.textFields["Groceries"].firstMatch
-    }
-
-    private var categoryButton: XCUIElement {
-        app.buttons["Category"].firstMatch
-    }
-
-    private func transactionCell(description: String, amount: String) -> XCUIElement {
-        app.staticTexts["\(description)\n\(amount)"].firstMatch
-    }
-
     func whenITapAddButton() {
         XCTContext.runActivity(named: #function) { _ in
             addButton.tap()
@@ -197,5 +157,47 @@ extension Home where Self: BaseTestCase {
             app.buttons["Delete"].tap()
             sleep(5)
         }
+    }
+}
+
+private extension Home where Self: BaseTestCase {
+    var transactionDetailsScreen: XCUIElement {
+        app.staticTexts["Transaction Details"].firstMatch
+    }
+
+    var feedTab: XCUIElement {
+        app.tabBars.buttons["Feed"].firstMatch
+    }
+
+    var regularsTab: XCUIElement {
+        app.tabBars.buttons["Regulars"].firstMatch
+    }
+
+    var balancesTab: XCUIElement {
+        app.tabBars.buttons["Balances"].firstMatch
+    }
+
+    var refreshButton: XCUIElement {
+        app.buttons["Refresh"].firstMatch
+    }
+
+    var addButton: XCUIElement {
+        app.buttons["Add"].firstMatch
+    }
+
+    var amountTextField: XCUIElement {
+        app.textFields["£0.00"].firstMatch
+    }
+
+    var descriptionTextField: XCUIElement {
+        app.textFields["Groceries"].firstMatch
+    }
+
+    var categoryButton: XCUIElement {
+        app.buttons["Category"].firstMatch
+    }
+
+    func transactionCell(description: String, amount: String) -> XCUIElement {
+        app.staticTexts["\(description)\n\(amount)"].firstMatch
     }
 }

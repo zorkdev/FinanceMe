@@ -17,9 +17,11 @@ final class TodayViewController: UIHostingController<AnyView>, NCWidgetProviding
     func widgetPerformUpdate(completionHandler: (@escaping (NCUpdateResult) -> Void)) {
         completionHandler(.newData)
     }
+}
 
+private extension TodayViewController {
     @objc
-    private func onTap() {
+    func onTap() {
         extensionContext?.open(Link.urlScheme, completionHandler: nil)
     }
 }

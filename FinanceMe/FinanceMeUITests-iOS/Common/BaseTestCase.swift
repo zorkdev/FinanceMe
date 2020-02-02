@@ -23,32 +23,12 @@ class BaseTestCase: XCTestCase {
 }
 
 extension BaseTestCase {
-    private var loginScreen: XCUIElement {
-        app.staticTexts["Login"].firstMatch
-    }
-
-    private var authenticationScreen: XCUIElement {
-        app.staticTexts["Please authenticate"].firstMatch
-    }
-
-    private var homeScreen: XCUIElement {
-        app.staticTexts["FinanceMe"].firstMatch
-    }
-
     var cancelButton: XCUIElement {
         app.buttons["Cancel"].firstMatch
     }
 
-    private var saveButton: XCUIElement {
-        app.buttons["Save"].firstMatch
-    }
-
     var loadingView: XCUIElement {
         app.staticTexts["Doing some magic... 😬"].firstMatch
-    }
-
-    private var passcodeTextField: XCUIElement {
-        XCUIApplication(bundleIdentifier: "com.apple.springboard").secureTextFields["Passcode field"]
     }
 
     func givenIAmLoggedOut() {
@@ -153,5 +133,27 @@ extension BaseTestCase {
         XCTContext.runActivity(named: #function) { _ in
             loadingView.waitForDisappearance()
         }
+    }
+}
+
+private extension BaseTestCase {
+    var loginScreen: XCUIElement {
+        app.staticTexts["Login"].firstMatch
+    }
+
+    var authenticationScreen: XCUIElement {
+        app.staticTexts["Please authenticate"].firstMatch
+    }
+
+    var homeScreen: XCUIElement {
+        app.staticTexts["FinanceMe"].firstMatch
+    }
+
+    var saveButton: XCUIElement {
+        app.buttons["Save"].firstMatch
+    }
+
+    var passcodeTextField: XCUIElement {
+        XCUIApplication(bundleIdentifier: "com.apple.springboard").secureTextFields["Passcode field"]
     }
 }

@@ -21,8 +21,10 @@ struct BalancesView: View {
     init(appState: AppState) {
         self.viewModel = BalancesViewModel(businessLogic: appState.summaryBusinessLogic)
     }
+}
 
-    private func summaryHeader(title: String) -> some View {
+private extension BalancesView {
+    func summaryHeader(title: String) -> some View {
         HStack(spacing: .zero) {
             Text(title)
                 .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)

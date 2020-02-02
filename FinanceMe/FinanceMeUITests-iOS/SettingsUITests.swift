@@ -46,30 +46,6 @@ final class SettingsUITests: BaseTestCase, Settings {
 protocol Settings {}
 
 extension Settings where Self: BaseTestCase {
-    private var settingsScreen: XCUIElement {
-        app.staticTexts["Settings"].firstMatch
-    }
-
-    private var settingsButton: XCUIElement {
-        app.buttons["Settings"].firstMatch
-    }
-
-    private var editButton: XCUIElement {
-        app.buttons["Edit"].firstMatch
-    }
-
-    private var doneButton: XCUIElement {
-        app.buttons["Done"].firstMatch
-    }
-
-    private var reconcileButton: XCUIElement {
-        app.buttons["Reconcile"].firstMatch
-    }
-
-    private var logOutButton: XCUIElement {
-        app.buttons["Log Out"].firstMatch
-    }
-
     var nameTextField: XCUIElement {
         app.textFields["Your Name"].firstMatch
     }
@@ -127,5 +103,31 @@ extension Settings where Self: BaseTestCase {
             reconcileButton.tap()
             sleep(5)
         }
+    }
+}
+
+private extension Settings where Self: BaseTestCase {
+    var settingsScreen: XCUIElement {
+        app.staticTexts["Settings"].firstMatch
+    }
+
+    var settingsButton: XCUIElement {
+        app.buttons["Settings"].firstMatch
+    }
+
+    var editButton: XCUIElement {
+        app.buttons["Edit"].firstMatch
+    }
+
+    var doneButton: XCUIElement {
+        app.buttons["Done"].firstMatch
+    }
+
+    var reconcileButton: XCUIElement {
+        app.buttons["Reconcile"].firstMatch
+    }
+
+    var logOutButton: XCUIElement {
+        app.buttons["Log Out"].firstMatch
     }
 }
