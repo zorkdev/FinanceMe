@@ -16,9 +16,7 @@ extension Storeable {
 extension Array: Storeable where Element: Codable {}
 
 protocol DataService {
-    @discardableResult
     func save(value: Encodable, key: String) -> Result<Void, Error>
-
     func load<T: Decodable>(key: String) -> T?
     func removeAll()
 }

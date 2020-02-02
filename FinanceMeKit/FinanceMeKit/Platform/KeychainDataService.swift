@@ -1,13 +1,20 @@
 final class KeychainDataService: DataService {
+    private struct KeychainError: Error, LocalizedError {
+        let status: OSStatus
+        var message: String { String(SecCopyErrorMessageString(status, nil)!) }
+        var errorDescription: String? { "\(message) (\(status))" }
+    }
+
+    private let loggingService: LoggingService
     private let service: String
     private let accessGroup: String
 
-    init(configService: ConfigService) {
+    init(configService: ConfigService, loggingService: LoggingService) {
+        self.loggingService = loggingService
         self.service = configService.productName
         self.accessGroup = configService.accessGroup
     }
 
-    @discardableResult
     func save(value: Encodable, key: String) -> Result<Void, Error> {
         let data: Data
         switch value.jsonEncoded() {
@@ -22,9 +29,13 @@ final class KeychainDataService: DataService {
         let status = SecItemAdd(query as CFDictionary, nil)
 
         switch status {
-        case errSecSuccess: return .success(())
-        case errSecDuplicateItem: return update(value: data, key: key)
-        default: return .failure(NSError(domain: NSOSStatusErrorDomain, code: Int(status), userInfo: nil))
+        case errSecSuccess:
+            return .success(())
+        case errSecDuplicateItem:
+            return update(value: data, key: key)
+        default:
+            log(error: status)
+            return .failure(KeychainError(status: status))
         }
     }
 
@@ -36,40 +47,43 @@ final class KeychainDataService: DataService {
         var result: AnyObject?
         let status = SecItemCopyMatching(query as CFDictionary, &result)
 
-        guard status == noErr,
-            let data = result as? Data,
-            let value = try? T(from: data) else { return nil }
-
-        return value
+        switch status {
+        case errSecItemNotFound:
+            return nil
+        case errSecSuccess:
+            guard let data = result as? Data else { return nil }
+            return try? T(from: data)
+        default:
+            log(error: status)
+            return nil
+        }
     }
 
     func removeAll() {
-        let secClasses = [kSecClassGenericPassword,
-                          kSecClassGenericPassword,
-                          kSecClassCertificate,
-                          kSecClassKey,
-                          kSecClassIdentity]
-
-        for secClass in secClasses {
-            let query = [kSecClass: secClass,
-                         kSecAttrSynchronizable: kCFBooleanTrue!] as CFDictionary
-            _ = SecItemDelete(query)
-        }
+        let query = [kSecClass: kSecClassGenericPassword,
+                     kSecAttrService: service,
+                     kSecAttrAccessGroup: accessGroup,
+                     kSecAttrSynchronizable: kCFBooleanTrue!] as CFDictionary
+        let status = SecItemDelete(query)
+        if status != errSecSuccess, status != errSecItemNotFound { log(error: status) }
     }
-}
 
-private extension KeychainDataService {
     func update(value: Data, key: String) -> Result<Void, Error> {
         let query = createQuery(key: key) as CFDictionary
         let updateDictionary = [kSecValueData: value] as CFDictionary
         let status = SecItemUpdate(query, updateDictionary)
 
         switch status {
-        case errSecSuccess: return .success(())
-        default: return .failure(NSError(domain: NSOSStatusErrorDomain, code: Int(status), userInfo: nil))
+        case errSecSuccess:
+            return .success(())
+        default:
+            log(error: status)
+            return .failure(KeychainError(status: status))
         }
     }
+}
 
+private extension KeychainDataService {
     func createQuery(key: String) -> [CFString: Any] {
         var query: [CFString: Any] = [kSecClass: kSecClassGenericPassword]
         query[kSecAttrService] = service
@@ -78,5 +92,11 @@ private extension KeychainDataService {
         query[kSecAttrGeneric] = key
         query[kSecAttrAccount] = key
         return query
+    }
+
+    private func log(error: OSStatus) {
+        loggingService.log(title: "Keychain Error",
+                           content: KeychainError(status: error).localizedDescription,
+                           type: .error)
     }
 }

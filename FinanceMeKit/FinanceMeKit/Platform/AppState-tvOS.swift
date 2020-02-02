@@ -11,7 +11,7 @@ public class AppState: ObservableObject {
     public init() {
         configService = DefaultConfigService()
         loggingService = DefaultLoggingService(configService: configService)
-        dataService = KeychainDataService(configService: configService)
+        dataService = KeychainDataService(configService: configService, loggingService: loggingService)
         sessionService = DefaultSessionService(dataService: dataService)
         networkService = DefaultNetworkService(networkRequestable: URLSession.shared,
                                                loggingService: loggingService,

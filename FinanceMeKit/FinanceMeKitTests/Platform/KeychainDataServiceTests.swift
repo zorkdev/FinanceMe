@@ -1,4 +1,5 @@
 import XCTest
+import FinanceMeTestKit
 @testable import FinanceMeKit
 
 final class KeychainDataServiceTests: XCTestCase {
@@ -6,11 +7,13 @@ final class KeychainDataServiceTests: XCTestCase {
         let variable: String
     }
 
+    var loggingService: MockLoggingService!
     var dataService: KeychainDataService!
 
     override func setUp() {
         super.setUp()
-        dataService = KeychainDataService(configService: DefaultConfigService())
+        loggingService = MockLoggingService()
+        dataService = KeychainDataService(configService: DefaultConfigService(), loggingService: loggingService)
     }
 
     override func tearDown() {
@@ -27,6 +30,7 @@ final class KeychainDataServiceTests: XCTestCase {
 
         XCTAssertNotNil(retrievedValue)
         XCTAssertEqual(retrievedValue!, model)
+        XCTAssertNil(loggingService.lastLogParams)
     }
 
     func testUpdate() throws {
@@ -46,21 +50,53 @@ final class KeychainDataServiceTests: XCTestCase {
 
         XCTAssertNotNil(retrievedAgainValue)
         XCTAssertEqual(retrievedAgainValue!, model2)
+        XCTAssertNil(loggingService.lastLogParams)
     }
 
-    func testSave_Failure() {
+    func testUpdate_Failure() throws {
+        let key = "key"
+        let data = Data()
+
+        XCTAssertThrowsError(try dataService.update(value: data, key: key).get())
+        XCTAssertEqual(loggingService.lastLogParams?.content,
+                       "The specified item could not be found in the keychain. (-25300)")
+    }
+
+    func testSaveEncoding_Failure() {
         let key = "key"
         let nan = Double.nan
 
         XCTAssertThrowsError(try dataService.save(value: nan, key: key).get())
+        XCTAssertNil(loggingService.lastLogParams)
     }
 
-    func testLoad_Failure() {
+    func testSaveKeychain_Failure() {
+        dataService = KeychainDataService(configService: MockConfigService(), loggingService: loggingService)
+
+        let key = "key"
+        let model = Model(variable: "value")
+
+        XCTAssertThrowsError(try dataService.save(value: model, key: key).get())
+        XCTAssertEqual(loggingService.lastLogParams?.content, "A required entitlement isn't present. (-34018)")
+    }
+
+    func testLoadDecoding_Failure() {
         let key = "nonExistantKey"
 
         let loadedItem: Model? = dataService.load(key: key)
 
         XCTAssertNil(loadedItem)
+        XCTAssertNil(loggingService.lastLogParams)
+    }
+
+    func testLoadKeychain_Failure() {
+        dataService = KeychainDataService(configService: MockConfigService(), loggingService: loggingService)
+        let key = "nonExistantKey"
+
+        let loadedItem: Model? = dataService.load(key: key)
+
+        XCTAssertNil(loadedItem)
+        XCTAssertEqual(loggingService.lastLogParams?.content, "A required entitlement isn't present. (-34018)")
     }
 
     func testRemoveAll() throws {
@@ -76,6 +112,15 @@ final class KeychainDataServiceTests: XCTestCase {
         let retrievedAgainValue: Model? = dataService.load(key: key)
 
         XCTAssertNil(retrievedAgainValue)
+        XCTAssertNil(loggingService.lastLogParams)
+    }
+
+    func testRemoveAll_Failure() {
+        dataService = KeychainDataService(configService: MockConfigService(), loggingService: loggingService)
+
+        dataService.removeAll()
+
+        XCTAssertEqual(loggingService.lastLogParams?.content, "A required entitlement isn't present. (-34018)")
     }
 
     func testStub() {
