@@ -4,7 +4,7 @@ final class BalancesViewModel: ObservableObject {
     private let businessLogic: SummaryBusinessLogicType
     private var cancellables: Set<AnyCancellable> = []
 
-    @Published var currentMonth = CurrentMonthSummary(allowance: 0, forecast: 0, spending: 0)
+    @Published var currentMonth = CurrentMonthSummary(allowance: .zero, forecast: .zero, spending: .zero)
     @Published var summarySections: [ListSection<EndOfMonthSummaryViewModel>] = []
 
     init(businessLogic: SummaryBusinessLogicType) {

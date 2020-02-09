@@ -3,9 +3,9 @@ import SwiftUI
 struct TransactionDetailView: View {
     private static let width: CGFloat = 80
 
+    private weak var window: NSWindow?
     private let loadingState = LoadingState()
     private let errorViewModel = ErrorViewModel()
-    @Environment(\.presentationMode) private var presentationMode
     @ObservedObject private var viewModel: TransactionDetailViewModel
 
     var body: some View {
@@ -28,8 +28,8 @@ struct TransactionDetailView: View {
                 }
                 Divider()
                 HStack {
-                    Button("Cancel") { self.presentationMode.wrappedValue.dismiss() }
                     Spacer()
+                    LoadingView(loadingState)
                     Button("Save", action: self.viewModel.onSave)
                         .disabled(viewModel.isDisabled)
                 }
@@ -37,9 +37,8 @@ struct TransactionDetailView: View {
         }
         .padding()
         .frame(idealWidth: 350)
-        .loading(loadingState)
         .errorBanner(errorViewModel)
-        .dismiss(shouldDismiss: $viewModel.shouldDismiss)
+        .dismiss(shouldDismiss: $viewModel.shouldDismiss, window: window)
     }
 
     init(transaction: Transaction?, appState: AppState) {
@@ -49,6 +48,10 @@ struct TransactionDetailView: View {
                                                     userBusinessLogic: appState.userBusinessLogic,
                                                     transactionBusinessLogic: appState.transactionBusinessLogic,
                                                     summaryBusinessLogic: appState.summaryBusinessLogic)
+        let window = NSWindow(width: 350, height: 212, title: "Transaction Details")
+        self.window = window
+        window.contentView = NSHostingView(rootView: self)
+        window.makeKeyAndOrderFront(nil)
     }
 }
 

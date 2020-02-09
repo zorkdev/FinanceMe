@@ -6,7 +6,7 @@ struct ErrorBannerView: View {
 
     var body: some View {
         Group {
-            if errorViewModel.error != nil {
+            if errorViewModel.isError {
                 VStack(spacing: .zero) {
                     HStack {
                         Text(errorViewModel.icon!).font(.largeTitle)

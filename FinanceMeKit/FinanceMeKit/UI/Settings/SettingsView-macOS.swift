@@ -5,8 +5,9 @@ struct SettingsView: View {
 
     private let loadingState = LoadingState()
     private let errorViewModel = ErrorViewModel()
-    @Environment(\.presentationMode) private var presentationMode
     @ObservedObject private var viewModel: SettingsViewModel
+
+    weak var window: NSWindow?
 
     var body: some View {
         Form {
@@ -31,7 +32,7 @@ struct SettingsView: View {
                     Button("Reconcile", action: viewModel.onReconcile)
                     Button("Log Out", action: viewModel.onLogOut)
                     Spacer()
-                    Button("Cancel") { self.presentationMode.wrappedValue.dismiss() }
+                    LoadingView(loadingState)
                     Button("Save", action: self.viewModel.onSave)
                         .disabled(viewModel.isDisabled)
                 }
@@ -39,9 +40,7 @@ struct SettingsView: View {
         }
         .padding()
         .frame(idealWidth: 350)
-        .loading(loadingState)
         .errorBanner(errorViewModel)
-        .dismiss(shouldDismiss: $viewModel.shouldDismiss)
     }
 
     init(appState: AppState) {
@@ -51,6 +50,10 @@ struct SettingsView: View {
                                            summaryBusinessLogic: appState.summaryBusinessLogic,
                                            loadingState: loadingState,
                                            errorViewModel: errorViewModel)
+        let window = NSWindow(width: 350, height: 212, title: "Preferences")
+        self.window = window
+        window.contentView = NSHostingView(rootView: self)
+        window.makeKeyAndOrderFront(nil)
     }
 }
 

@@ -10,8 +10,8 @@ struct User: Storeable, Equatable {
          payday: Int,
          startDate: Date,
          largeTransaction: Double,
-         allowance: Double = 0,
-         balance: Double = 0) {
+         allowance: Double = .zero,
+         balance: Double = .zero) {
         self.name = name
         self.payday = payday
         self.startDate = startDate

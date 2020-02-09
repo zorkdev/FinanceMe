@@ -13,7 +13,7 @@ final class RegularsViewModel: ObservableObject {
     private let errorViewModel: ErrorViewModel
     private var cancellables: Set<AnyCancellable> = []
 
-    @Published var monthlyBalance = MonthlyBalance(allowance: 0, outgoings: 0)
+    @Published var monthlyBalance = MonthlyBalance(allowance: .zero, outgoings: .zero)
     @Published var savingsSection = ListSection<Transaction>(title: "", rows: [])
     @Published var incomingSection = ListSection<Transaction>(title: "", rows: [])
     @Published var outgoingSection = ListSection<Transaction>(title: "", rows: [])
@@ -56,11 +56,11 @@ private extension RegularsViewModel {
             .map {
                 let allowance = $0
                     .map { $0.amount }
-                    .reduce(0, +)
+                    .reduce(.zero, +)
                 let outgoings = $0
                     .filter { $0.source == .externalRegularOutbound }
                     .map { $0.amount }
-                    .reduce(0, +)
+                    .reduce(.zero, +)
                 return MonthlyBalance(allowance: allowance, outgoings: outgoings)
             }.receive(on: DispatchQueue.main)
             .assign(to: \.monthlyBalance, on: self)

@@ -7,7 +7,7 @@ struct LoadingView<Presenting: View>: View {
     var body: some View {
         ZStack {
             presenting
-                .blur(radius: loadingState.isLoading ? 4 : 0)
+                .blur(radius: loadingState.isLoading ? 4 : .zero)
                 .disabled(loadingState.isLoading)
 
             if loadingState.isLoading {

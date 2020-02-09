@@ -1,28 +1,22 @@
-import SwiftUI
+import AppKit
 import FinanceMeKit
 
 // swiftlint:disable unused_declaration
 @NSApplicationMain
 final class AppDelegate: NSObject, NSApplicationDelegate {
     private let appState = AppState()
-    var window: NSWindow!
+
+    @IBOutlet private var preferencesMenuItem: NSMenuItem!
+    @IBOutlet private var newTransactionMenuItem: NSMenuItem!
 
     func applicationDidFinishLaunching(_ aNotification: Notification) {
         #if DEBUG
         guard isUnitTesting == false else { return }
         #endif
 
-        window = NSWindow(contentRect: NSRect(x: 0, y: 0, width: 700, height: 500),
-                          styleMask: [.titled,
-                                      .closable,
-                                      .miniaturizable,
-                                      .resizable,
-                                      .fullSizeContentView],
-                          backing: .buffered,
-                          defer: false)
-        window.center()
-        window.setFrameAutosaveName("Main Window")
-        window.contentView = NSHostingView(rootView: RootView(appState: appState))
-        window.makeKeyAndOrderFront(nil)
+        _ = RootController(application: NSApplication.shared,
+                           appState: appState,
+                           preferencesMenuItem: preferencesMenuItem,
+                           newTransactionMenuItem: newTransactionMenuItem)
     }
 }

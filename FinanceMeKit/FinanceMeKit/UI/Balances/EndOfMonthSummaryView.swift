@@ -6,12 +6,12 @@ struct EndOfMonthSummaryView: View {
     var body: some View {
         HStack(spacing: .zero) {
             Text(viewModel.narrative)
-                .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
+                .frame(minWidth: .zero, maxWidth: .infinity, alignment: .leading)
             Text(viewModel.balanceViewModel.string)
                 .foregroundColor(viewModel.balanceViewModel.color)
             Text(viewModel.savingsViewModel.string)
                 .foregroundColor(viewModel.savingsViewModel.color)
-                .frame(minWidth: 0, maxWidth: .infinity, alignment: .trailing)
+                .frame(minWidth: .zero, maxWidth: .infinity, alignment: .trailing)
         }
         .accessibilityElement(children: .combine)
     }

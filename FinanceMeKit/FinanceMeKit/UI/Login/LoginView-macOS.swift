@@ -6,27 +6,31 @@ struct LoginView: View {
     @ObservedObject private var viewModel: LoginViewModel
 
     var body: some View {
-        NavigationView {
-            Form {
-                Section {
-                    TextField("Email", text: $viewModel.email)
-                    SecureField("Password", text: $viewModel.password)
-                }
-                Section {
+        Form {
+            Section {
+                TextField("Email", text: $viewModel.email)
+                SecureField("Password", text: $viewModel.password)
+            }
+            Section {
+                HStack {
+                    Spacer()
+                    LoadingView(loadingState)
                     Button("Log In", action: viewModel.onTap)
                         .disabled(viewModel.isDisabled)
                 }
             }
-            .padding()
-            .loading(loadingState)
-            .errorBanner(errorViewModel)
         }
+        .padding()
+        .errorBanner(errorViewModel)
     }
 
     init(appState: AppState) {
         self.viewModel = LoginViewModel(businessLogic: appState.sessionBusinessLogic,
                                         loadingState: loadingState,
                                         errorViewModel: errorViewModel)
+        let window = NSWindow(width: 350, height: 133, title: "Login")
+        window.contentView = NSHostingView(rootView: self)
+        window.makeKeyAndOrderFront(nil)
     }
 }
 

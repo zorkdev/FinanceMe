@@ -7,14 +7,14 @@ public struct TodayView: View {
         HStack {
             VStack(alignment: .leading) {
                 AmountView(viewModel: viewModel.balance, isLargeDisplay: true)
-                    .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
+                    .frame(minWidth: .zero, maxWidth: .infinity, alignment: .leading)
                 Text("BALANCE").font(.caption).foregroundColor(Color.secondary)
             }
             .accessibilityElement(children: .combine)
             Text(viewModel.icon).font(.largeTitle)
             VStack(alignment: .trailing) {
                 AmountView(viewModel: viewModel.allowance, isLargeDisplay: true)
-                    .frame(minWidth: 0, maxWidth: .infinity, alignment: .trailing)
+                    .frame(minWidth: .zero, maxWidth: .infinity, alignment: .trailing)
                 Text("ALLOWANCE").font(.caption).foregroundColor(Color.secondary)
             }
             .accessibilityElement(children: .combine)

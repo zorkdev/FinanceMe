@@ -27,10 +27,10 @@ private extension BalancesView {
     func summaryHeader(title: String) -> some View {
         HStack(spacing: .zero) {
             Text(title)
-                .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
+                .frame(minWidth: .zero, maxWidth: .infinity, alignment: .leading)
             Text("Balance".uppercased())
             Text("Savings".uppercased())
-                .frame(minWidth: 0, maxWidth: .infinity, alignment: .trailing)
+                .frame(minWidth: .zero, maxWidth: .infinity, alignment: .trailing)
         }
     }
 }

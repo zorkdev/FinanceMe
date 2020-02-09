@@ -5,8 +5,8 @@ final class TodayViewModel: ObservableObject {
     private let spendingBusinessLogic = SpendingBusinessLogic()
     private var cancellables: Set<AnyCancellable> = []
 
-    @Published private(set) var balance = AmountViewModel(value: 0)
-    @Published private(set) var allowance = AmountViewModel(value: 0)
+    @Published private(set) var balance = AmountViewModel(value: .zero)
+    @Published private(set) var allowance = AmountViewModel(value: .zero)
     @Published private(set) var icon = ""
 
     init(businessLogic: UserBusinessLogicType) {

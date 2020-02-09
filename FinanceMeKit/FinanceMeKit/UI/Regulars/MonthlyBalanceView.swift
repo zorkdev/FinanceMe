@@ -8,14 +8,14 @@ struct MonthlyBalanceView: View {
             VStack(alignment: .leading) {
                 AmountView(viewModel: AmountViewModel(value: monthlyBalance.allowance,
                                                       signs: [.plus, .minus]))
-                    .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
+                    .frame(minWidth: .zero, maxWidth: .infinity, alignment: .leading)
                 Text("ALLOWANCE").font(.caption).foregroundColor(Color.secondary)
             }
             .accessibilityElement(children: .combine)
             VStack(alignment: .trailing) {
                 AmountView(viewModel: AmountViewModel(value: monthlyBalance.outgoings,
                                                       signs: [.plus, .minus]))
-                    .frame(minWidth: 0, maxWidth: .infinity, alignment: .trailing)
+                    .frame(minWidth: .zero, maxWidth: .infinity, alignment: .trailing)
                 Text("OUTGOINGS").font(.caption).foregroundColor(Color.secondary)
             }
             .accessibilityElement(children: .combine)

@@ -2,34 +2,21 @@ import SwiftUI
 
 struct HomeView: View {
     private let appState: AppState
+    private let selectionState = SelectionState()
     private let loadingState = LoadingState()
     private let errorViewModel = ErrorViewModel()
+    private let toolbar: HomeToolbar
     @ObservedObject private var viewModel: HomeViewModel
 
     var body: some View {
         VStack(spacing: .zero) {
-            HomeNavigationBarView(appState: appState,
-                                  loadingState: loadingState,
-                                  errorViewModel: errorViewModel)
             TodayView(appState: appState)
-            TabView {
-                FeedView(appState: appState, loadingState: loadingState, errorViewModel: errorViewModel)
-                    .tabItem {
-                        Text("Feed")
-                    }
-                    .tag(0)
-                RegularsView(appState: appState, loadingState: loadingState, errorViewModel: errorViewModel)
-                    .tabItem {
-                        Text("Regulars")
-                    }
-                    .tag(1)
-                BalancesView(appState: appState)
-                    .tabItem {
-                        Text("Balances")
-                    }
-                    .tag(2)
-            }
-            .padding()
+                .padding([.top, .bottom])
+            Divider()
+            HomeTabView(appState: appState,
+                        loadingState: loadingState,
+                        errorViewModel: errorViewModel,
+                        selectionState: selectionState)
         }
         .onAppear(perform: viewModel.onAppear)
         .errorBanner(errorViewModel)
@@ -43,6 +30,17 @@ struct HomeView: View {
                                        userBusinessLogic: appState.userBusinessLogic,
                                        transactionBusinessLogic: appState.transactionBusinessLogic,
                                        summaryBusinessLogic: appState.summaryBusinessLogic)
+        self.toolbar = HomeToolbar(appState: appState,
+                                   loadingState: loadingState,
+                                   errorViewModel: errorViewModel,
+                                   selectionState: selectionState)
+
+        let window = NSWindow(width: 700, height: 500, title: "FinanceMe")
+        window.titleVisibility = .hidden
+        window.setFrameAutosaveName("Main Window")
+        window.toolbar = toolbar
+        window.contentView = NSHostingView(rootView: self)
+        window.makeKeyAndOrderFront(nil)
     }
 }
 

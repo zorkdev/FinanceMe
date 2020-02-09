@@ -9,7 +9,6 @@ final class LoginViewModel: ObservableObject {
     @Published var email: String = ""
     @Published var password: String = ""
     @Published var isDisabled = true
-    @Published var isLoading = false
 
     init(businessLogic: SessionBusinessLogicType,
          loadingState: LoadingState,
@@ -21,7 +20,7 @@ final class LoginViewModel: ObservableObject {
     }
 
     func onTap() {
-        isLoading = true
+        loadingState.isLoading = true
 
         businessLogic.login(credentials: Credentials(email: email, password: password))
             .handleResult(loadingState: loadingState, errorViewModel: errorViewModel, cancellables: &cancellables)

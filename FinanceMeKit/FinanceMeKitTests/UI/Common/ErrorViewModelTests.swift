@@ -13,6 +13,7 @@ final class ErrorViewModelTests: XCTestCase {
     func testNilError() {
         XCTAssertNil(viewModel.icon)
         XCTAssertNil(viewModel.description)
+        XCTAssertFalse(viewModel.isError)
     }
 
     func testSomeError() {
@@ -20,5 +21,6 @@ final class ErrorViewModelTests: XCTestCase {
 
         XCTAssertNotNil(viewModel.icon)
         XCTAssertEqual(viewModel.description, "Test Error")
+        XCTAssertTrue(viewModel.isError)
     }
 }

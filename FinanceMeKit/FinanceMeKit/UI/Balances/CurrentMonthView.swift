@@ -8,7 +8,7 @@ struct CurrentMonthView: View {
             VStack(alignment: .leading) {
                 AmountView(viewModel: AmountViewModel(value: currentMonth.forecast,
                                                       signs: [.plus, .minus]))
-                    .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
+                    .frame(minWidth: .zero, maxWidth: .infinity, alignment: .leading)
                 Text("FORECAST").font(.caption).foregroundColor(Color.secondary)
             }
             .accessibilityElement(children: .combine)
@@ -21,7 +21,7 @@ struct CurrentMonthView: View {
             VStack(alignment: .trailing) {
                 AmountView(viewModel: AmountViewModel(value: currentMonth.allowance,
                                                       signs: [.plus, .minus]))
-                    .frame(minWidth: 0, maxWidth: .infinity, alignment: .trailing)
+                    .frame(minWidth: .zero, maxWidth: .infinity, alignment: .trailing)
                 Text("ALLOWANCE").font(.caption).foregroundColor(Color.secondary)
             }
             .accessibilityElement(children: .combine)
