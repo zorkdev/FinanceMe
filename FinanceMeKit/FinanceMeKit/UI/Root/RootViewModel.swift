@@ -4,10 +4,11 @@ final class RootViewModel: ObservableObject {
     private let businessLogic: SessionBusinessLogicType
     private var cancellables: Set<AnyCancellable> = []
 
-    @Published var isLoggedIn = true
+    @Published var isLoggedIn: Bool
 
-    init(businessLogic: SessionBusinessLogicType) {
+    init(service: SessionService, businessLogic: SessionBusinessLogicType) {
         self.businessLogic = businessLogic
+        self.isLoggedIn = service.hasSession
         setupBindings()
     }
 }

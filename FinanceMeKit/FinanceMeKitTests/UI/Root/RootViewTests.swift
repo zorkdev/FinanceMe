@@ -4,6 +4,9 @@ import FinanceMeTestKit
 
 final class RootViewTests: XCTestCase {
     func testView() {
-        assert(view: RootView(appState: MockAppState()), previews: RootViewPreviews.self)
+        let appState = MockAppState()
+        assert(view: RootView(appState: appState), previews: RootViewPreviews.self)
+        appState.mockSessionService.hasSession = true
+        assert(view: RootView(appState: appState), previews: RootViewPreviews.self)
     }
 }

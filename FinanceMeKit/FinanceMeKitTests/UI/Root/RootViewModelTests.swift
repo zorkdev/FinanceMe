@@ -3,13 +3,15 @@ import FinanceMeTestKit
 @testable import FinanceMeKit
 
 final class RootViewModelTests: XCTestCase {
+    var service: MockSessionService!
     var businessLogic: MockSessionBusinessLogic!
     var viewModel: RootViewModel!
 
     override func setUp() {
         super.setUp()
+        service = MockSessionService()
         businessLogic = MockSessionBusinessLogic()
-        viewModel = RootViewModel(businessLogic: businessLogic)
+        viewModel = RootViewModel(service: service, businessLogic: businessLogic)
     }
 
     func testBindings() {

@@ -16,7 +16,7 @@ public struct RootView: View {
 
     public init(appState: AppState) {
         self.appState = appState
-        self.viewModel = RootViewModel(businessLogic: appState.sessionBusinessLogic)
+        self.viewModel = RootViewModel(service: appState.sessionService, businessLogic: appState.sessionBusinessLogic)
     }
 }
 
