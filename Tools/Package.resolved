@@ -51,8 +51,8 @@
         "repositoryURL": "https://github.com/jpsim/SourceKitten.git",
         "state": {
           "branch": null,
-          "revision": "97b5848e5692150d75b5cf0b81d7ebef5f4d5071",
-          "version": "0.28.0"
+          "revision": "77a4dbbb477a8110eb8765e3c44c70fb4929098f",
+          "version": "0.29.0"
         }
       },
       {
@@ -60,8 +60,8 @@
         "repositoryURL": "https://github.com/realm/SwiftLint.git",
         "state": {
           "branch": null,
-          "revision": "76d44cff391645a7f4d5ba2bf1853afaf3f5c1fb",
-          "version": "0.38.2"
+          "revision": "8f22943ca1340a95e5aeb5513b62a9f0766c0f74",
+          "version": "0.39.1"
         }
       },
       {
