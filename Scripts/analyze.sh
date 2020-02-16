@@ -20,12 +20,9 @@ xcodebuild build \
     -destination "$DESTINATION" \
     > build.log
 
-cd Tools
-
-swift run -c release swiftlint analyze \
-    --path .. \
+sh Scripts/swiftlint.sh analyze \
     --config .swiftlint_analyze.yml \
-    --compiler-log-path ../build.log \
+    --compiler-log-path build.log \
     --reporter emoji
 
-rm ../build.log
+rm build.log
