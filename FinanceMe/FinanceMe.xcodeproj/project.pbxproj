@@ -321,8 +321,6 @@
 		9A48AB072349253C000C7AA2 /* FinanceMeKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = FinanceMeKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9A48AB0B234926FD000C7AA2 /* FinanceMeKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = FinanceMeKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9A48AB0F23492706000C7AA2 /* FinanceMeKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = FinanceMeKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		9A4F8647239DA10500F55DD2 /* Package.resolved */ = {isa = PBXFileReference; lastKnownFileType = text; name = Package.resolved; path = ../Tools/Package.resolved; sourceTree = "<group>"; };
-		9A4F8648239DA10500F55DD2 /* Package.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Package.swift; path = ../Tools/Package.swift; sourceTree = "<group>"; };
 		9A4F8649239DA76E00F55DD2 /* analyze.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = analyze.sh; sourceTree = "<group>"; };
 		9A4F864A239DB13D00F55DD2 /* swiftlint.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = swiftlint.sh; sourceTree = "<group>"; };
 		9A5AB5CD2365B33300B691FF /* upload.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = upload.sh; sourceTree = "<group>"; };
@@ -660,8 +658,6 @@
 				9A47DFE423702F1500B6B0C8 /* TestUser.json */,
 				9A35A93922EDE5FC0086BD2A /* ExportOptions.plist */,
 				9A48AAAA23491B2B000C7AA2 /* ExportOptions-macOS.plist */,
-				9A4F8648239DA10500F55DD2 /* Package.swift */,
-				9A4F8647239DA10500F55DD2 /* Package.resolved */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
