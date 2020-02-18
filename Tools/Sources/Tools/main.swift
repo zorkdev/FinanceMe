@@ -19,21 +19,13 @@ struct ResolvedPackages: Decodable {
     let object: Object
 }
 
-guard let package = CommandLine.arguments.last else {
-    print("Missing argument for package.")
-    exit(1)
-}
-
-guard let resolvedPackagesData = FileManager.default.contents(atPath: "Tools/Package.resolved"),
-    let resolvedPackages = try? JSONDecoder().decode(ResolvedPackages.self, from: resolvedPackagesData) else {
-        print("Could not find Package.resolved.")
+guard let package = CommandLine.arguments.dropFirst().first,
+    let resolvedPackagesData = FileManager.default.contents(atPath: "Tools/Package.resolved"),
+    let resolvedPackages = try? JSONDecoder().decode(ResolvedPackages.self, from: resolvedPackagesData),
+    let pin = resolvedPackages.object.pins.first(where: { $0.package.lowercased() == package.lowercased() }) else {
+        print("Could not find package in Package.resolved.")
         exit(1)
 }
 
-if let pin = resolvedPackages.object.pins.first(where: { $0.package == package }) {
-    print(pin.state.version)
-    exit(0)
-}
-
-print("Could not find \(package) in Package.resolved.")
-exit(1)
+print(pin.state.version)
+exit(0)

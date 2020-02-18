@@ -1,4 +1,6 @@
-#!/bin/sh
+#!/usr/bin/env sh
+
+set -euo pipefail
 
 /usr/bin/ditto -c -k --keepParent $XCS_PRODUCT $XCS_OUTPUT_DIR/FinanceMe.app.zip
 

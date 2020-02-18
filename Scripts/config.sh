@@ -1,4 +1,6 @@
-#!/bin/sh
+#!/usr/bin/env sh
+
+set -euo pipefail
 
 cat > $XCS_PRIMARY_REPO_DIR/TestSession.json << EOF
 {

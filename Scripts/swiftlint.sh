@@ -1,22 +1,18 @@
-#!/bin/bash
+#!/usr/bin/env sh
 
-build () {
+set -euo pipefail
+
+PACKAGE=swiftlint
+PINNED_VERSION=$(Tools/Sources/Tools/main.swift $PACKAGE)
+PRODUCT_DIR=Tools/.build/cache/$PACKAGE/$PINNED_VERSION
+PRODUCT=$PRODUCT_DIR/$PACKAGE
+
+if [ ! -f $PRODUCT ]; then
     cd Tools
     swift build -c release
     cd ..
-}
-
-SWIFTLINT="Tools/.build/release/swiftlint"
-
-if [ ! -f "$SWIFTLINT" ]; then
-    build
-else
-    PINNED_VERSION=$(Tools/Sources/Tools/main.swift SwiftLint)
-    VERSION=$($SWIFTLINT version)
-
-    if [ $VERSION != $PINNED_VERSION ]; then
-        build
-    fi
+    mkdir -p $PRODUCT_DIR
+    cp Tools/.build/release/$PACKAGE $PRODUCT_DIR/
 fi
 
-$SWIFTLINT "$@"
+$PRODUCT "$@"
