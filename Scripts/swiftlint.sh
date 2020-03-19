@@ -2,6 +2,7 @@
 
 set -euo pipefail
 
+unset SDKROOT
 PACKAGE=swiftlint
 PINNED_VERSION=$(Tools/Sources/Tools/main.swift $PACKAGE)
 PRODUCT_DIR=Tools/.build/cache/$PACKAGE/$PINNED_VERSION
