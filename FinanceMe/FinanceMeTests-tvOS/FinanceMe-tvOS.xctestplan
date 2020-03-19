@@ -36,6 +36,9 @@
       }
     },
     {
+      "skippedTests" : [
+        "PerformanceTests"
+      ],
       "target" : {
         "containerPath" : "container:FinanceMe\/FinanceMe.xcodeproj",
         "identifier" : "9A12DC0822EF6A25000226A9",
