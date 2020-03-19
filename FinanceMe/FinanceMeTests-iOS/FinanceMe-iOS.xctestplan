@@ -44,7 +44,11 @@
     },
     {
       "skippedTests" : [
-        "PerformanceTests"
+        "HomeUITests\/testRegularTransactionJourney()",
+        "HomeUITests\/testTransactionJourney()",
+        "LoginUITests",
+        "PerformanceTests",
+        "SettingsUITests"
       ],
       "target" : {
         "containerPath" : "container:FinanceMe\/FinanceMe.xcodeproj",
