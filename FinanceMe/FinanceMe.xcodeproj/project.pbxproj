@@ -1439,7 +1439,7 @@
 					"@executable_path/../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.15;
-				PRODUCT_BUNDLE_IDENTIFIER = com.zorkdev.FinanceMe.macOS;
+				PRODUCT_BUNDLE_IDENTIFIER = com.zorkdev.FinanceMe;
 				PRODUCT_NAME = FinanceMe;
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = macosx;
@@ -1466,7 +1466,7 @@
 					"@executable_path/../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.15;
-				PRODUCT_BUNDLE_IDENTIFIER = com.zorkdev.FinanceMe.macOS;
+				PRODUCT_BUNDLE_IDENTIFIER = com.zorkdev.FinanceMe;
 				PRODUCT_NAME = FinanceMe;
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = macosx;
