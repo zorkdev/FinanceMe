@@ -10,7 +10,7 @@ PRODUCT=$PRODUCT_DIR/$PACKAGE
 
 if [ ! -f $PRODUCT ]; then
     cd Tools
-    swift build -c release
+    swift build -c release -Xswiftc -suppress-warnings
     cd ..
     mkdir -p $PRODUCT_DIR
     cp Tools/.build/release/$PACKAGE $PRODUCT_DIR/
