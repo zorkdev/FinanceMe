@@ -1,4 +1,4 @@
-// swift-tools-version:5.1
+// swift-tools-version:5.2
 import PackageDescription
 
 let package = Package(
@@ -7,6 +7,8 @@ let package = Package(
         .package(url: "https://github.com/realm/SwiftLint.git", from: "0.39.1")
     ],
     targets: [
-        .target(name: "Tools", dependencies: ["swiftlint"])
+        .target(name: "Tools", dependencies: [
+            .product(name: "swiftlint", package: "SwiftLint")
+        ])
     ]
 )
