@@ -1575,7 +1575,7 @@
 					"@executable_path/../Frameworks",
 					"@executable_path/../../../../Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.zorkdev.FinanceMe.macOS.TodayExtension;
+				PRODUCT_BUNDLE_IDENTIFIER = com.zorkdev.FinanceMe.TodayExtension;
 				PRODUCT_NAME = FinanceMeExtension;
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = macosx;
@@ -1599,7 +1599,7 @@
 					"@executable_path/../Frameworks",
 					"@executable_path/../../../../Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.zorkdev.FinanceMe.macOS.TodayExtension;
+				PRODUCT_BUNDLE_IDENTIFIER = com.zorkdev.FinanceMe.TodayExtension;
 				PRODUCT_NAME = FinanceMeExtension;
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
