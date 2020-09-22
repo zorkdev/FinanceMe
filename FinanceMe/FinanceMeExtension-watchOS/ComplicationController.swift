@@ -1,4 +1,5 @@
 import WatchKit
+import ClockKit
 import FinanceMeKit
 
 // swiftlint:disable unused_declaration
@@ -21,5 +22,27 @@ final class ComplicationController: NSObject, CLKComplicationDataSource {
     func getCurrentTimelineEntry(for complication: CLKComplication,
                                  withHandler handler: @escaping (CLKComplicationTimelineEntry?) -> Void) {
         viewModel.getCurrentTimelineEntry(for: complication, withHandler: handler)
+    }
+
+    func getComplicationDescriptors(handler: @escaping ([CLKComplicationDescriptor]) -> Void) {
+        let complication = CLKComplicationDescriptor(
+            identifier: "FinanceMe",
+            displayName: "FinanceMe",
+            supportedFamilies: [
+                .circularSmall,
+                .extraLarge,
+                .graphicBezel,
+                .graphicCircular,
+                .graphicCorner,
+                .graphicExtraLarge,
+                .graphicRectangular,
+                .modularLarge,
+                .modularSmall,
+                .utilitarianLarge,
+                .utilitarianSmall,
+                .utilitarianSmallFlat
+            ]
+        )
+        handler([complication])
     }
 }

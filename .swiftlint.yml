@@ -36,6 +36,7 @@ opt_in_rules:
   - first_where
   - flatmap_over_map_reduce
   - identical_operands
+  - ibinspectable_in_extension
   - implicit_return
   - joined_default_parameter
   - last_where
@@ -52,6 +53,7 @@ opt_in_rules:
   - overridden_super_call
   - pattern_matching_keywords
   - prefer_self_type_over_type_of_self
+  - prefer_zero_over_explicit_init
   - prohibited_super_call
   - raw_value_for_camel_cased_codable_enum
   - reduce_into

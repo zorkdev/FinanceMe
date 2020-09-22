@@ -34,20 +34,25 @@ private extension ComplicationViewModel {
 
         switch family {
         case .utilitarianLarge:
-            let template = CLKComplicationTemplateUtilitarianLargeFlat()
-            template.textProvider = CLKSimpleTextProvider(text: viewModel.string)
+            let template = CLKComplicationTemplateUtilitarianLargeFlat(
+                textProvider: CLKSimpleTextProvider(text: viewModel.string)
+            )
             return template
         case .utilitarianSmallFlat:
-            let template = CLKComplicationTemplateUtilitarianSmallFlat()
-            template.textProvider = CLKSimpleTextProvider(text: viewModel.string)
+            let template = CLKComplicationTemplateUtilitarianSmallFlat(
+                textProvider: CLKSimpleTextProvider(text: viewModel.string)
+            )
             return template
         case .graphicCircular:
-            let template = CLKComplicationTemplateGraphicCircularOpenGaugeSimpleText()
-            template.centerTextProvider = CLKSimpleTextProvider(text: viewModel.integerString)
-            template.bottomTextProvider = CLKSimpleTextProvider(text: viewModel.currencySymbol)
-            template.gaugeProvider = CLKSimpleGaugeProvider(style: .fill,
-                                                            gaugeColor: .white,
-                                                            fillFraction: 0.5)
+            let template = CLKComplicationTemplateGraphicCircularOpenGaugeSimpleText(
+                gaugeProvider: CLKSimpleGaugeProvider(
+                    style: .fill,
+                    gaugeColor: .white,
+                    fillFraction: 0.5
+                ),
+                bottomTextProvider: CLKSimpleTextProvider(text: viewModel.currencySymbol),
+                centerTextProvider: CLKSimpleTextProvider(text: viewModel.integerString)
+            )
             return template
         default:
             return nil
